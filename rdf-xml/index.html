@@ -1,0 +1,27 @@
+<p>This README is for the W3C RDF Working Group&#8217;s RDF/XML test suite.
+This test suite contains two kinds of tests:</p>
+
+<ul>
+<li><strong>Evaluation</strong> (<code>rdft:TestXMLEval</code>) - a pair of an input RDF/XML file and reference ntriples file.</li>
+<li><strong>Negative syntax</strong> (<code>rdft:TestXMLNegativeSyntax</code>) - an input RDF/XML file with at least one syntax error.</li>
+</ul>
+
+<p>The <a href="manifest.ttl">manifest.ttl</a> file in this directory lists tests in the RDF WG&#8217;s RDF/XML test suite. Each test is one of the above tests. All
+tests have a <em>name</em> (<code>mf:name</code>) and an <em>input</em> (<code>mf:action</code>). The Evaluation
+tests have an <em>expected result</em> (<code>mf:result</code>).</p>
+
+<ul>
+<li>An implementation passes a <em>Evaluation test</em> if it parses the input into a graph, parses the expected result into another graph, and
+  those two graphs are <a href="http://www.w3.org/TR/rdf11-concepts/#graph-isomorphism">isomorphic</a>. </li>
+<li>An implementation passes a <em>negative syntax test</em> if it fails to parse the input.</li>
+</ul>
+
+<p>The home of the test suite is <a href="http://www.w3.org/2013/NQuadsTests/">http://www.w3.org/2013/RDFXMLTests/</a>. Per <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> section 5.1.3, the base IRI for parsing each file is the
+retrieval IRI for that file.  For example, the tests <code>rdf-containers-syntax-vs-schema-test004</code> and
+<code>xmlbase-test014</code> require relative IRI resolution against a base of
+<code>http://www.w3.org/2013/RDFXMLTests/rdf-containers-syntax-vs-schema/test004.rdf</code> and
+<code>http://www.w3.org/2013/RDFXMLTests/xmlbase/test014.rdf</code> respectively</p>
+
+<p>See <a href="http://www.w3.org/2011/rdf-wg/wiki/RDF_Test_Suites">RDF_Test_Suites</a> for more details.</p>
+
+<p>Gregg Kellogg <a href="mailto:gregg@greggkellogg.net">gregg@greggkellogg.net</a> - 23 December 2013.</p>

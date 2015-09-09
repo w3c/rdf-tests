@@ -1,0 +1,49 @@
+<p>This README is for the W3C RDF Working Group&#8217;s RDF Entailment test suite.
+This test suite contains two kinds of tests:</p>
+
+<ul>
+<li><strong>Positive Entailment Tests</strong> (<code>rdft:PositiveEntailmentTest</code>)</li>
+<li><strong>Negative Entailment Tests</strong> (<code>rdft:NegativeEntailmentTest</code>)</li>
+</ul>
+
+<p>The <a href="manifest.ttl">manifest.ttl</a> file in this directory lists all of the approved tests in the RDF WG&#8217;s RDF Entailment test suite. The <a href="manifest-az.ttl">manifest-az.ttl</a> file in this
+directory lists proposed tests.  Please try both sets of tests as
+appropriate, as some of the proposed tests may become approved tests.</p>
+
+Each test is one of the above kinds of tests. All tests have 
+<ul>
+<li>a <em>name</em> (<code>mf:name</code>),</li>
+<li>an <em>input RDF graph URL</em> (<code>mf:action</code>),</li>
+<li>an <em>output RDF graph URL</em> or the special marker false (<code>mf:result</code>),</li>
+<li>an <em>entailment regime</em>, which is "simple", "RDF", or "RDFS" (<code>mf:entailmentRegime</code>),</li>
+<li>a <em>list of recognized datatypes</em> (<code>mf:recognizedDatatypes</code>),</li>
+<li>a <em>list of unrecognized datatypes</em> (<code>mf:unrecognizedDatatypes</code>).</li>
+</ul>
+
+<p>An implementation passes a Positive (Negative) Entailment Test if, when
+configured to</p> 
+<ul>
+<li>perform entailment under the entailment regime of the test or some entailment regime that is stronger (weaker) than the entailment regime and</li>
+<li>recognize all the datatypes in the list of recognized datatypes and none of the datatypes in the list of unrecognized datatypes,</li>
+</ul>
+<ul>
+<li>for tests that have an output graph, determines that the input RDF graph entails (does not entail) the output RDF graph</li>
+<li>for tests that have false as output, either determines that the input RDF graph entails (does not entail) an inconsistent RDF graph or that the input RDF graph is inconsistent (consistent).</li>
+</ul>
+
+<p>An implementation also passes a test if when configured differently from a
+correct configuration as given above nonetheless produces the given result,
+and the result is correct in the configured entailment regime with the
+configured recognized datatypes.</p>
+
+<p>The home of the test suite is <a href="http://www.w3.org/2013/rdf-mt/">http://www.w3.org/2013/rdf-mt/</a>. Per <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> section 5.1.3, the base IRI for parsing each file is the
+retrieval IRI for that file, but changing base IRIs should not affect any
+testing results.</p>
+
+<p>Test results should be submitted as EARL reports.   See
+<a href="http://www.w3.org/TR/EARL10-Schema/">http://www.w3.org/TR/EARL10-Schema/</a> for information on EARL.</p>
+
+<p>A document on the results of the testing is at 
+<a href="reports/index.html">here</a>.
+This document has more information on submitting reports, including examples
+of what the reports should contain.</p>
