@@ -60,7 +60,7 @@
           localBiblio: localBibliography,
 
           // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
-          specStatus:           "unofficial",
+          specStatus:           "base",
           copyrightStart:       "2010",
           doRDFa:               "1.1",
 
