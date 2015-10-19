@@ -384,6 +384,12 @@
       <#trig-turtle-bad-02>
 
       # Tests from N-Triples/N-Quads
+
+    # IRI resolution tests
+    <#IRI-resolution-01>
+    <#IRI-resolution-02>
+    <#IRI-resolution-07>
+    <#IRI-resolution-08>
     ) .
 
 # TriG tests
@@ -2881,3 +2887,36 @@
    rdft:approval rdft:Approved ;
    mf:action    <trig-turtle-bad-02.trig> ;
    .
+
+# IRI resolution tests
+<#IRI-resolution-01>
+	rdf:type rdft:TestTrigEval ;
+	rdfs:comment "IRI resolution (RFC3986 original cases)" ;
+	mf:name "IRI-resolution-01" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-01.trig> ;
+	mf:result <IRI-resolution-01.nt> .
+
+<#IRI-resolution-02>
+	rdf:type rdft:TestTrigEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with trailing slash)" ;
+	mf:name "IRI-resolution-02" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-02.trig> ;
+	mf:result <IRI-resolution-02.nt> .
+
+<#IRI-resolution-07>
+	rdf:type rdft:TestTrigEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with file path)" ;
+	mf:name "IRI-resolution-07" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-07.trig> ;
+	mf:result <IRI-resolution-07.nt> .
+
+<#IRI-resolution-08>
+	rdf:type rdft:TestTrigEval ;
+	rdfs:comment "IRI resolution (miscellaneous cases)" ;
+	mf:name "IRI-resolution-08" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-08.trig> ;
+	mf:result <IRI-resolution-08.nt> .
