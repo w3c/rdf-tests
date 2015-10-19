@@ -323,6 +323,16 @@
     <#turtle-syntax-ln-colons>
     <#turtle-syntax-ln-dots>
     <#turtle-syntax-ns-dots>
+
+    # IRI resolution tests
+    <#IRI-resolution-01>
+    <#IRI-resolution-02>
+    <#IRI-resolution-03>
+    <#IRI-resolution-04>
+    <#IRI-resolution-05>
+    <#IRI-resolution-06>
+    <#IRI-resolution-07>
+    <#IRI-resolution-08>
     ) .
 
 # atomic tests
@@ -2501,3 +2511,68 @@
 	mf:name "turtle-syntax-blank-label" ;
         rdft:approval rdft:Approved ;
 	mf:action <turtle-syntax-blank-label.ttl> .
+
+# IRI resolution tests
+<#IRI-resolution-01>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 original cases)" ;
+	mf:name "IRI-resolution-01" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-01.ttl> ;
+	mf:result <IRI-resolution-01.nt> .
+
+<#IRI-resolution-02>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with trailing slash)" ;
+	mf:name "IRI-resolution-02" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-02.ttl> ;
+	mf:result <IRI-resolution-02.nt> .
+
+<#IRI-resolution-03>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with /.)" ;
+	mf:name "IRI-resolution-03" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-03.ttl> ;
+	mf:result <IRI-resolution-03.nt> .
+
+<#IRI-resolution-04>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with /..)" ;
+	mf:name "IRI-resolution-04" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-04.ttl> ;
+	mf:result <IRI-resolution-04.nt> .
+
+<#IRI-resolution-05>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with trailing /.)" ;
+	mf:name "IRI-resolution-05" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-05.ttl> ;
+	mf:result <IRI-resolution-05.nt> .
+
+<#IRI-resolution-06>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with trailing /..)" ;
+	mf:name "IRI-resolution-06" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-06.ttl> ;
+	mf:result <IRI-resolution-06.nt> .
+
+<#IRI-resolution-07>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (RFC3986 using base IRI with file path)" ;
+	mf:name "IRI-resolution-07" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-07.ttl> ;
+	mf:result <IRI-resolution-07.nt> .
+
+<#IRI-resolution-08>
+	rdf:type rdft:TestTurtleEval ;
+	rdfs:comment "IRI resolution (miscellaneous cases)" ;
+	mf:name "IRI-resolution-08" ;
+	rdft:approval rdft:Proposed ;
+	mf:action <IRI-resolution-08.ttl> ;
+	mf:result <IRI-resolution-08.nt> .
