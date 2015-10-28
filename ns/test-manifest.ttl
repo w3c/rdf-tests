@@ -38,9 +38,20 @@
     rdfs:comment "Connects the manifest resource to rdf:type list of entries" ;
     rdfs:domain	 :Manifest ;
     rdfs:range   rdf:List ;
-
     .
-	
+
+:includedSpecifications rdf:type rdf:Property ;
+    rdfs:comment "References the specifications covered by the manifest" ;
+    rdfs:domain	 :Manifest ;
+    rdfs:range   rdf:List ;
+    .
+
+:conformanceRequirement rdf:type rdf:Property ;
+    rdfs:comment "Identifies manifests testing conformance requirements for the specified specification" ;
+    #rdfs:domain	 :Specification ;
+    rdfs:range   rdf:List ;
+    .
+
 ## ---- Property declarations for each test ----
 
 :name rdf:type rdf:Property ;
