@@ -12,10 +12,12 @@
     ( 
 	:strdt01
 	:strdt02
-	:strdt03
+	# :strdt03 # RDF 1.1 conformance causes this test to fail
+	:strdt03-rdf11
 	:strlang01
 	:strlang02
-	:strlang03
+	# :strlang03 # RDF 1.1 conformance causes this test to fail
+	:strlang03-rdf11
 	:isnumeric01
 	:abs01
 	:ceil01
@@ -107,6 +109,17 @@
     mf:result  <strdt03.srx> ;
 	.
 
+:strdt03-rdf11 rdf:type mf:QueryEvaluationTest ;
+	mf:name    "STRDT() TypeErrors (updated for RDF 1.1)" ;
+	mf:feature sparql:strdt ;
+    dawgt:approval dawgt:NotClassified ;
+    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
+    mf:action
+         [ qt:query  <strdt03.rq> ;
+           qt:data   <data.ttl> ] ;
+    mf:result  <strdt03-rdf11.srx> ;
+	.
+
 :strlang01 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "STRLANG()" ;
 	mf:feature sparql:strlang ;
@@ -138,6 +151,17 @@
          [ qt:query  <strlang03.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <strlang03.srx> ;
+	.
+
+:strlang03-rdf11 rdf:type mf:QueryEvaluationTest ;
+	mf:name    "STRLANG() TypeErrors (updated for RDF 1.1)" ;
+	mf:feature sparql:strlang ;
+    dawgt:approval dawgt:NotClassified ;
+    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
+    mf:action
+         [ qt:query  <strlang03.rq> ;
+           qt:data   <data.ttl> ] ;
+    mf:result  <strlang03-rdf11.srx> ;
 	.
 
 :isnumeric01 rdf:type mf:QueryEvaluationTest ;
