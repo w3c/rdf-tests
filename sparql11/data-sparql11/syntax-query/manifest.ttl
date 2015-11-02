@@ -68,7 +68,6 @@
 :test_50
 :test_51
 
-# :test_52	# obsoleted by decision to allow colons in prefixname local parts, but not allow them to be escaped
 :test_53
 :test_54
 :test_55
@@ -435,12 +434,6 @@
    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2> ;
    mf:name    "syntax-bindings-09.rq" ;
    mf:action  <syntax-bindings-09.rq> ;.
-
-:test_52 rdf:type   mf:PositiveSyntaxTest11 ;
-   dawgt:approval dawgt:Approved ;
-   dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
-   mf:name    "PrefixName with backslash-escaped colons" ;
-   mf:action  <qname-escape-01.rq> ;.
 
 :test_53 rdf:type   mf:PositiveSyntaxTest11 ;
    dawgt:approval dawgt:Approved ;
