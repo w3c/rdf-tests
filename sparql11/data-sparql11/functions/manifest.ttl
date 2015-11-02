@@ -113,7 +113,6 @@
 	mf:name    "STRDT() TypeErrors (updated for RDF 1.1)" ;
 	mf:feature sparql:strdt ;
     dawgt:approval dawgt:NotClassified ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
     mf:action
          [ qt:query  <strdt03.rq> ;
            qt:data   <data.ttl> ] ;
@@ -157,7 +156,6 @@
 	mf:name    "STRLANG() TypeErrors (updated for RDF 1.1)" ;
 	mf:feature sparql:strlang ;
     dawgt:approval dawgt:NotClassified ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
     mf:action
          [ qt:query  <strlang03.rq> ;
            qt:data   <data.ttl> ] ;
