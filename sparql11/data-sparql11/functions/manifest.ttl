@@ -32,8 +32,8 @@
 	:contains01
 	:starts01
 	:ends01
-	:plus-1
-	:plus-2
+	:plus-1-corrected
+	:plus-2-corrected
 	:md5-01
 	:md5-02
 	:sha1-01
@@ -316,25 +316,21 @@
     mf:result  <ends01.srx> ;
 	.
 
-:plus-1 a mf:QueryEvaluationTest ;
-    mf:name    "plus-1" ;
+:plus-1-corrected a mf:QueryEvaluationTest ;
+    mf:name    "plus-1-corrected" ;
     rdfs:comment	"plus operator on ?x + ?y on string and numeric values" ;
     mf:action
-       [ qt:query  <plus-1.rq> ;
+       [ qt:query  <plus-1-corrected.rq> ;
 	 qt:data   <data-builtin-3.ttl> ] ;
-     dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
     mf:result  <plus-1.srx> ;
     .
 
-:plus-2 a mf:QueryEvaluationTest ;
-    mf:name    "plus-2" ;
+:plus-2-corrected a mf:QueryEvaluationTest ;
+    mf:name    "plus-2-corrected" ;
     rdfs:comment	"plus operator in combination with str(), i.e.  str(?x) + str(?y), on string and numeric values" ;
     mf:action
-       [ qt:query  <plus-2.rq> ;
+       [ qt:query  <plus-2-corrected.rq> ;
 	 qt:data   <data-builtin-3.ttl> ] ;
-     dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
     mf:result  <plus-2.srx> ;
     .
 
