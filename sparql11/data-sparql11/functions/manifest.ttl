@@ -12,11 +12,9 @@
     ( 
 	:strdt01
 	:strdt02
-	# :strdt03 # RDF 1.1 conformance causes this test to fail
 	:strdt03-rdf11
 	:strlang01
 	:strlang02
-	# :strlang03 # RDF 1.1 conformance causes this test to fail
 	:strlang03-rdf11
 	:isnumeric01
 	:abs01
@@ -403,27 +401,6 @@
            qt:data   <hash-unicode.ttl> ] ;
     mf:result  <sha1-02.srx> ;
 	.
-
-# These tests are not part of the SPARQL test suite because SHA224 was removed from SPARQL 1.1
-## :sha224-01 rdf:type mf:QueryEvaluationTest ;
-## 	mf:name    "SHA224()" ;
-## 	mf:feature sparql:sha224 ;
-##     dawgt:approval dawgt:NotClassified ;
-##     mf:action
-##          [ qt:query  <sha224-01.rq> ;
-##            qt:data   <data.ttl> ] ;
-##     mf:result  <sha224-01.srx> ;
-## 	.
-## 
-## :sha224-02 rdf:type mf:QueryEvaluationTest ;
-## 	mf:name    "SHA224() on Unicode data" ;
-## 	mf:feature sparql:sha224 ;
-##     dawgt:approval dawgt:NotClassified ;
-##     mf:action
-##          [ qt:query  <sha224-02.rq> ;
-##            qt:data   <hash-unicode.ttl> ] ;
-##     mf:result  <sha224-02.srx> ;
-## 	.
 
 :sha256-01 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "SHA256()" ;
