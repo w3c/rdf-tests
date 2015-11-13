@@ -98,21 +98,21 @@
     mf:result  <strdt02.srx> ;
 	.
 
-:strdt03 rdf:type mf:QueryEvaluationTest ;
-	mf:name    "STRDT() TypeErrors" ;
-	mf:feature sparql:strdt ;
-    dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
-    mf:action
-         [ qt:query  <strdt03.rq> ;
-           qt:data   <data.ttl> ] ;
-    mf:result  <strdt03.srx> ;
-	.
+#:strdt03 rdf:type mf:QueryEvaluationTest ;
+#	mf:name    "STRDT() TypeErrors" ;
+#	mf:feature sparql:strdt ;
+#    dawgt:approval dawgt:Approved ;
+#    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
+#    mf:action
+#         [ qt:query  <strdt03.rq> ;
+#           qt:data   <data.ttl> ] ;
+#    mf:result  <strdt03.srx> ;
+#	.
 
 :strdt03-rdf11 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "STRDT() TypeErrors (updated for RDF 1.1)" ;
 	mf:feature sparql:strdt ;
-    dawgt:approval dawgt:NotClassified ;
+    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <strdt03.rq> ;
            qt:data   <data.ttl> ] ;
@@ -141,21 +141,21 @@
     mf:result  <strlang02.srx> ;
 	.
 
-:strlang03 rdf:type mf:QueryEvaluationTest ;
-	mf:name    "STRLANG() TypeErrors" ;
-	mf:feature sparql:strlang ;
-    dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
-    mf:action
-         [ qt:query  <strlang03.rq> ;
-           qt:data   <data.ttl> ] ;
-    mf:result  <strlang03.srx> ;
-	.
+#:strlang03 rdf:type mf:QueryEvaluationTest ;
+#	mf:name    "STRLANG() TypeErrors" ;
+#	mf:feature sparql:strlang ;
+#    dawgt:approval dawgt:Approved ;
+#    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
+#    mf:action
+#         [ qt:query  <strlang03.rq> ;
+#           qt:data   <data.ttl> ] ;
+#    mf:result  <strlang03.srx> ;
+#	.
 
 :strlang03-rdf11 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "STRLANG() TypeErrors (updated for RDF 1.1)" ;
 	mf:feature sparql:strlang ;
-    dawgt:approval dawgt:NotClassified ;
+    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <strlang03.rq> ;
            qt:data   <data.ttl> ] ;
