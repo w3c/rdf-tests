@@ -341,6 +341,7 @@
 :plus-1-corrected a mf:QueryEvaluationTest ;
     mf:name    "plus-1-corrected" ;
     rdfs:comment	"plus operator on ?x + ?y on string and numeric values" ;
+    dawgt:approval dawgt:Proposed ;
     mf:action
        [ qt:query  <plus-1-corrected.rq> ;
 	 qt:data   <data-builtin-3.ttl> ] ;
@@ -350,6 +351,7 @@
 :plus-2-corrected a mf:QueryEvaluationTest ;
     mf:name    "plus-2-corrected" ;
     rdfs:comment	"plus operator in combination with str(), i.e.  str(?x) + str(?y), on string and numeric values" ;
+    dawgt:approval dawgt:Proposed ;
     mf:action
        [ qt:query  <plus-2-corrected.rq> ;
 	 qt:data   <data-builtin-3.ttl> ] ;
