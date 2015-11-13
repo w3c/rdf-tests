@@ -98,6 +98,10 @@ dawgt:Withdrawn         rdfs:subClassOf dawgt:Status ;
     rdfs:comment        "Class of tests that have been Withdrawn" ;
     rdfs:label          "Withdrawn" .
 
+dawgt:Proposed         rdfs:subClassOf dawgt:Status ;
+    rdfs:comment        "Class of tests that are Proposed" ;
+    rdfs:label          "Proposed" .
+
 
 ## ---- Result forms
 ## The result may still be encoded in RDF - classifying it helps
