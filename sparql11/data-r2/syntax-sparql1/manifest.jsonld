@@ -1,0 +1,792 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "comment": "Syntax tests syntax-sparql1",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-basic-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-basic-06.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-basic-06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-06.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-07",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-07.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-07.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-qname-08",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-qname-08.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-qname-08.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-06.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-07",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-07.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-07.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-08",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-08.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-08.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-09",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-09.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-09.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-10",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-10.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-10.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-11",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-11.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-11.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-12",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-12.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-12.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-13",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-13.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-13.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-14",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-14.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-14.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-15",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-15.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-15.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-16",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-16.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-16.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-17",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-17.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-17.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-18",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-18.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-18.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-19",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-19.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-19.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lit-20",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lit-20.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lit-20.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-06.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-07",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-07.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-07.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-08",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-08.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-08.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-09",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-09.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-09.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-10",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-10.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-10.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-11",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-11.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-11.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-12",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-12.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-12.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-13",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-13.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-13.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-struct-14",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-struct-14.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-struct-14.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lists-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lists-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lists-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lists-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lists-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lists-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lists-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lists-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lists-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lists-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lists-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lists-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-lists-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-lists-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-lists-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-bnodes-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-bnodes-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-bnodes-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-bnodes-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-bnodes-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-bnodes-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-bnodes-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-bnodes-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-bnodes-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-bnodes-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-bnodes-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-bnodes-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-bnodes-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-bnodes-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-bnodes-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-forms-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-forms-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-forms-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-forms-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-forms-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-forms-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-union-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-union-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-union-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-union-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-union-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-union-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-expr-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-expr-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-expr-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-expr-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-expr-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-expr-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-expr-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-expr-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-expr-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-expr-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-expr-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-expr-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-expr-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-expr-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-expr-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-05.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-06.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-order-07",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-order-07.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-order-07.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-limit-offset-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-limit-offset-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-limit-offset-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-limit-offset-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-limit-offset-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-limit-offset-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-limit-offset-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-limit-offset-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-limit-offset-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-limit-offset-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-limit-offset-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JanMar/0047",
+      "name": "syntax-limit-offset-04.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-pat-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-pat-01.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
+      "name": "syntax-pat-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-pat-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-pat-02.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
+      "name": "syntax-pat-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-pat-03",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-pat-03.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
+      "name": "syntax-pat-03.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql1/manifest#syntax-pat-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "action": "syntax-pat-04.rq",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
+      "name": "syntax-pat-04.rq"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "comment": "Bindings",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b7",
+        "data": "data01.ttl",
+        "query": "values01.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with subj-var, 1 row",
+      "result": "values01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b5",
+        "data": "data02.ttl",
+        "query": "values02.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with obj-var, 1 row",
+      "result": "values02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values3",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b8",
+        "data": "data03.ttl",
+        "query": "values03.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with 2 obj-vars, 1 row",
+      "result": "values03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values4",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b6",
+        "data": "data04.ttl",
+        "query": "values04.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with 2 obj-vars, 1 row with UNDEF",
+      "result": "values04.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values5",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b0",
+        "data": "data05.ttl",
+        "query": "values05.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with 2 obj-vars, 2 rows with UNDEF",
+      "result": "values05.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values6",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b3",
+        "data": "data06.ttl",
+        "query": "values06.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with pred-var, 1 row",
+      "result": "values06.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values7",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b9",
+        "data": "data07.ttl",
+        "query": "values07.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": [
+        "http://www.w3.org/2009/sparql/meeting/2011-05-24#resolution_4",
+        "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      ],
+      "name": "Post-query VALUES with (OPTIONAL) obj-var, 1 row",
+      "result": "values07.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values8",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b4",
+        "data": "data08.ttl",
+        "query": "values08.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-query VALUES with subj/obj-vars, 2 rows with UNDEF",
+      "result": "values08.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#inline1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b2",
+        "data": "data01.ttl",
+        "query": "inline01.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Inline VALUES graph pattern",
+      "result": "inline01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#inline2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b1",
+        "data": "data02.ttl",
+        "query": "inline02.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2",
+      "name": "Post-subquery VALUES",
+      "result": "inline02.srx"
+    }
+  ]
+}

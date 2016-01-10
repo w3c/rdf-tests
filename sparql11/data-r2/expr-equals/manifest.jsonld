@@ -1,0 +1,312 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "comment": "Some SPARQL test cases - equality of values",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b9",
+        "data": "data-eq.ttl",
+        "query": "query-eq-1.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "= in FILTER expressions is value equality",
+      "name": "Equality 1-1",
+      "result": "result-eq-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b8",
+        "data": "data-eq.ttl",
+        "query": "query-eq-2.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "= in FILTER expressions is value equality",
+      "name": "Equality 1-2",
+      "result": "result-eq-2.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-3",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b10",
+        "data": "data-eq.ttl",
+        "query": "query-eq-3.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Numerics are not value-equivalent to plain literals",
+      "name": "Equality 1-3",
+      "result": "result-eq-3.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-4",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b0",
+        "data": "data-eq.ttl",
+        "query": "query-eq-4.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "= compares plain literals and unknown types with the same lexical form as false",
+      "name": "Equality 1-4",
+      "result": "result-eq-4.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-5",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b5",
+        "data": "data-eq.ttl",
+        "query": "query-eq-5.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "= on IRI terms",
+      "name": "Equality 1-5",
+      "result": "result-eq-5.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-2-1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b11",
+        "data": "data-eq.ttl",
+        "query": "query-eq2-1.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "= in FILTER is value equality",
+      "name": "Equality - 2 var - test equals",
+      "result": "result-eq2-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-2-2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b7",
+        "data": "data-eq.ttl",
+        "query": "query-eq2-1.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "!= in FILTER is value inequality",
+      "name": "Equality - 2 var - test not equals ",
+      "result": "result-eq2-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-graph-1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b6",
+        "data": "data-eq.ttl",
+        "query": "query-eq-graph-1.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Graph pattern matching matches exact terms, not values",
+      "name": "Equality 1-1 -- graph",
+      "result": "result-eq-graph-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-graph-2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b4",
+        "data": "data-eq.ttl",
+        "query": "query-eq-graph-2.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Graph pattern matching matches exact terms, not values",
+      "name": "Equality 1-2 -- graph",
+      "result": "result-eq-graph-2.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-graph-3",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b3",
+        "data": "data-eq.ttl",
+        "query": "query-eq-graph-3.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Graph pattern matching matches exact terms, not values",
+      "name": "Equality 1-3 -- graph",
+      "result": "result-eq-graph-3.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-graph-4",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b2",
+        "data": "data-eq.ttl",
+        "query": "query-eq-graph-4.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Graph pattern matching matches exact terms, not values",
+      "name": "Equality 1-4 -- graph",
+      "result": "result-eq-graph-4.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-equals/manifest#eq-graph-5",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b1",
+        "data": "data-eq.ttl",
+        "query": "query-eq-graph-5.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2007/06/19-dawg-minutes.html",
+      "comment": "Graph pattern matching matches exact terms, not values",
+      "name": "Equality 1-5 -- graph",
+      "result": "result-eq-graph-5.ttl"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "include": [
+    "aggregates/manifest.jsonld",
+    "bind/manifest.jsonld",
+    "bindings/manifest.jsonld",
+    "construct/manifest.jsonld",
+    "exists/manifest.jsonld",
+    "functions/manifest.jsonld",
+    "grouping/manifest.jsonld",
+    "negation/manifest.jsonld",
+    "project-expression/manifest.jsonld",
+    "property-path/manifest.jsonld",
+    "subquery/manifest.jsonld",
+    "syntax-query/manifest.jsonld",
+    "add/manifest.jsonld",
+    "basic-update/manifest.jsonld",
+    "clear/manifest.jsonld",
+    "copy/manifest.jsonld",
+    "delete-data/manifest.jsonld",
+    "delete-insert/manifest.jsonld",
+    "delete-where/manifest.jsonld",
+    "delete/manifest.jsonld",
+    "drop/manifest.jsonld",
+    "move/manifest.jsonld",
+    "syntax-update-1/manifest.jsonld",
+    "syntax-update-2/manifest.jsonld",
+    "update-silent/manifest.jsonld",
+    "csv-tsv-res/manifest.jsonld",
+    "json-res/manifest.jsonld",
+    "syntax-fed/manifest.jsonld",
+    "service/manifest.jsonld",
+    "entailment/manifest.jsonld",
+    "service-description/manifest.jsonld",
+    "protocol/manifest.jsonld",
+    "http-rdf-update/manifest.jsonld"
+  ],
+  "label": "SPARQL 1.1 tests",
+  "mf:includedSpecifications": {
+    "@list": [
+      {
+        "@id": "http://www.w3.org/TR/sparql11-query/",
+        "label": "SPARQL 1.1 Query Language",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "aggregates/manifest.ttl"
+            },
+            {
+              "@id": "bind/manifest.ttl"
+            },
+            {
+              "@id": "bindings/manifest.ttl"
+            },
+            {
+              "@id": "construct/manifest.ttl"
+            },
+            {
+              "@id": "exists/manifest.ttl"
+            },
+            {
+              "@id": "functions/manifest.ttl"
+            },
+            {
+              "@id": "grouping/manifest.ttl"
+            },
+            {
+              "@id": "negation/manifest.ttl"
+            },
+            {
+              "@id": "project-expression/manifest.ttl"
+            },
+            {
+              "@id": "property-path/manifest.ttl"
+            },
+            {
+              "@id": "subquery/manifest.ttl"
+            },
+            {
+              "@id": "syntax-query/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-update/",
+        "label": "SPARQL 1.1 Update",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "add/manifest.ttl"
+            },
+            {
+              "@id": "basic-update/manifest.ttl"
+            },
+            {
+              "@id": "clear/manifest.ttl"
+            },
+            {
+              "@id": "copy/manifest.ttl"
+            },
+            {
+              "@id": "delete-data/manifest.ttl"
+            },
+            {
+              "@id": "delete-insert/manifest.ttl"
+            },
+            {
+              "@id": "delete-where/manifest.ttl"
+            },
+            {
+              "@id": "delete/manifest.ttl"
+            },
+            {
+              "@id": "drop/manifest.ttl"
+            },
+            {
+              "@id": "move/manifest.ttl"
+            },
+            {
+              "@id": "syntax-update-1/manifest.ttl"
+            },
+            {
+              "@id": "syntax-update-2/manifest.ttl"
+            },
+            {
+              "@id": "update-silent/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-results-csv-tsv/",
+        "label": "SPARQL 1.1 Query Results CSV and TSV Formats",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "csv-tsv-res/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-results-json/",
+        "label": "SPARQL 1.1 Query Results JSON Format",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "json-res/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-federated-query/",
+        "label": "SPARQL 1.1 Federation Extensions",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "syntax-fed/manifest.ttl"
+            },
+            {
+              "@id": "service/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-entailment/",
+        "label": "SPARQL 1.1 Entailment Regimes",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "entailment/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-service-description/",
+        "label": "SPARQL 1.1 Service Description",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "service-description/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-protocol/",
+        "label": "SPARQL 1.1 Protocol",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "protocol/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-http-rdf-update/",
+        "label": "SPARQL 1.1 Graph Store HTTP Protocol",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "http-rdf-update/manifest.ttl"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

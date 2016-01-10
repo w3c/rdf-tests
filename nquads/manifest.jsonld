@@ -1,0 +1,718 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "entries": [
+    {
+      "@id": "#nq-syntax-uri-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with URI triple",
+      "name": "nq-syntax-uri-01"
+    },
+    {
+      "@id": "#nq-syntax-uri-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with BNode subject",
+      "name": "nq-syntax-uri-02"
+    },
+    {
+      "@id": "#nq-syntax-uri-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with BNode object",
+      "name": "nq-syntax-uri-03"
+    },
+    {
+      "@id": "#nq-syntax-uri-04",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-04.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with simple literal",
+      "name": "nq-syntax-uri-04"
+    },
+    {
+      "@id": "#nq-syntax-uri-05",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-05.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with language tagged literal",
+      "name": "nq-syntax-uri-05"
+    },
+    {
+      "@id": "#nq-syntax-uri-06",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-uri-06.nq",
+      "approval": "rdft:Approved",
+      "comment": "URI graph with datatyped literal",
+      "name": "nq-syntax-uri-06"
+    },
+    {
+      "@id": "#nq-syntax-bnode-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with URI triple",
+      "name": "nq-syntax-bnode-01"
+    },
+    {
+      "@id": "#nq-syntax-bnode-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with BNode subject",
+      "name": "nq-syntax-bnode-02"
+    },
+    {
+      "@id": "#nq-syntax-bnode-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with BNode object",
+      "name": "nq-syntax-bnode-03"
+    },
+    {
+      "@id": "#nq-syntax-bnode-04",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-04.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with simple literal",
+      "name": "nq-syntax-bnode-04"
+    },
+    {
+      "@id": "#nq-syntax-bnode-05",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-05.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with language tagged literal",
+      "name": "nq-syntax-bnode-05"
+    },
+    {
+      "@id": "#nq-syntax-bnode-06",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nq-syntax-bnode-06.nq",
+      "approval": "rdft:Approved",
+      "comment": "BNode graph with datatyped literal",
+      "name": "nq-syntax-bnode-06"
+    },
+    {
+      "@id": "#nq-syntax-bad-literal-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nq-syntax-bad-literal-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Graph name may not be a simple literal (negative test)",
+      "name": "nq-syntax-bad-literal-01"
+    },
+    {
+      "@id": "#nq-syntax-bad-literal-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nq-syntax-bad-literal-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "Graph name may not be a language tagged literal (negative test)",
+      "name": "nq-syntax-bad-literal-02"
+    },
+    {
+      "@id": "#nq-syntax-bad-literal-03",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nq-syntax-bad-literal-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "Graph name may not be a datatyped literal (negative test)",
+      "name": "nq-syntax-bad-literal-03"
+    },
+    {
+      "@id": "#nq-syntax-bad-uri-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nq-syntax-bad-uri-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Graph name URI must be absolute (negative test)",
+      "name": "nq-syntax-bad-uri-01"
+    },
+    {
+      "@id": "#nq-syntax-bad-quint-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nq-syntax-bad-quint-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "N-Quads does not have a fifth element (negative test)",
+      "name": "nq-syntax-bad-quint-01"
+    },
+    {
+      "@id": "#nt-syntax-file-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-file-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Empty file",
+      "name": "nt-syntax-file-01"
+    },
+    {
+      "@id": "#nt-syntax-file-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-file-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "Only comment",
+      "name": "nt-syntax-file-02"
+    },
+    {
+      "@id": "#nt-syntax-file-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-file-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "One comment, one empty line",
+      "name": "nt-syntax-file-03"
+    },
+    {
+      "@id": "#nt-syntax-uri-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-uri-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Only IRIs",
+      "name": "nt-syntax-uri-01"
+    },
+    {
+      "@id": "#nt-syntax-uri-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-uri-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "IRIs with Unicode escape",
+      "name": "nt-syntax-uri-02"
+    },
+    {
+      "@id": "#nt-syntax-uri-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-uri-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "IRIs with long Unicode escape",
+      "name": "nt-syntax-uri-03"
+    },
+    {
+      "@id": "#nt-syntax-uri-04",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-uri-04.nq",
+      "approval": "rdft:Approved",
+      "comment": "Legal IRIs",
+      "name": "nt-syntax-uri-04"
+    },
+    {
+      "@id": "#nt-syntax-string-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-string-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal",
+      "name": "nt-syntax-string-01"
+    },
+    {
+      "@id": "#nt-syntax-string-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-string-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "langString literal",
+      "name": "nt-syntax-string-02"
+    },
+    {
+      "@id": "#nt-syntax-string-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-string-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "langString literal with region",
+      "name": "nt-syntax-string-03"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-str-esc-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal with escaped newline",
+      "name": "nt-syntax-str-esc-01"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-str-esc-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal with Unicode escape",
+      "name": "nt-syntax-str-esc-02"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-str-esc-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal with long Unicode escape",
+      "name": "nt-syntax-str-esc-03"
+    },
+    {
+      "@id": "#nt-syntax-bnode-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-bnode-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "bnode subject",
+      "name": "nt-syntax-bnode-01"
+    },
+    {
+      "@id": "#nt-syntax-bnode-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-bnode-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "bnode object",
+      "name": "nt-syntax-bnode-02"
+    },
+    {
+      "@id": "#nt-syntax-bnode-03",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-bnode-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "Blank node labels may start with a digit",
+      "name": "nt-syntax-bnode-03"
+    },
+    {
+      "@id": "#nt-syntax-datatypes-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-datatypes-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "xsd:byte literal",
+      "name": "nt-syntax-datatypes-01"
+    },
+    {
+      "@id": "#nt-syntax-datatypes-02",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-datatypes-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "integer as xsd:string",
+      "name": "nt-syntax-datatypes-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : space (negative test)",
+      "name": "nt-syntax-bad-uri-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : bad escape (negative test)",
+      "name": "nt-syntax-bad-uri-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-03",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : bad long escape (negative test)",
+      "name": "nt-syntax-bad-uri-03"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-04",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-04.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : character escapes not allowed (negative test)",
+      "name": "nt-syntax-bad-uri-04"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-05",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-05.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : character escapes not allowed (2) (negative test)",
+      "name": "nt-syntax-bad-uri-05"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-06",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-06.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : relative IRI not allowed in subject (negative test)",
+      "name": "nt-syntax-bad-uri-06"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-07",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-07.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : relative IRI not allowed in predicate (negative test)",
+      "name": "nt-syntax-bad-uri-07"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-08",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-08.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : relative IRI not allowed in object (negative test)",
+      "name": "nt-syntax-bad-uri-08"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-09",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-uri-09.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad IRI : relative IRI not allowed in datatype (negative test)",
+      "name": "nt-syntax-bad-uri-09"
+    },
+    {
+      "@id": "#nt-syntax-bad-prefix-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-prefix-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "@prefix not allowed in N-Quads (negative test)",
+      "name": "nt-syntax-bad-prefix-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-base-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-base-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "@base not allowed in N-Quads (negative test)",
+      "name": "nt-syntax-bad-base-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-struct-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-struct-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "N-Quads does not have objectList (negative test)",
+      "name": "nt-syntax-bad-struct-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-struct-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-struct-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "N-Quads does not have predicateObjectList (negative test)",
+      "name": "nt-syntax-bad-struct-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-lang-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-lang-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "langString with bad lang (negative test)",
+      "name": "nt-syntax-bad-lang-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-esc-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad string escape (negative test)",
+      "name": "nt-syntax-bad-esc-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-esc-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad string escape (negative test)",
+      "name": "nt-syntax-bad-esc-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-03",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-esc-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "Bad string escape (negative test)",
+      "name": "nt-syntax-bad-esc-03"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "mismatching string literal open/close (negative test)",
+      "name": "nt-syntax-bad-string-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "mismatching string literal open/close (negative test)",
+      "name": "nt-syntax-bad-string-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-03",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "single quotes (negative test)",
+      "name": "nt-syntax-bad-string-03"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-04",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-04.nq",
+      "approval": "rdft:Approved",
+      "comment": "long single string literal (negative test)",
+      "name": "nt-syntax-bad-string-04"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-05",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-05.nq",
+      "approval": "rdft:Approved",
+      "comment": "long double string literal (negative test)",
+      "name": "nt-syntax-bad-string-05"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-06",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-06.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal with no end (negative test)",
+      "name": "nt-syntax-bad-string-06"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-07",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-string-07.nq",
+      "approval": "rdft:Approved",
+      "comment": "string literal with no start (negative test)",
+      "name": "nt-syntax-bad-string-07"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-01",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-num-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "no numbers in N-Quads (integer) (negative test)",
+      "name": "nt-syntax-bad-num-01"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-02",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-num-02.nq",
+      "approval": "rdft:Approved",
+      "comment": "no numbers in N-Quads (decimal) (negative test)",
+      "name": "nt-syntax-bad-num-02"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-03",
+      "@type": "rdft:TestNQuadsNegativeSyntax",
+      "action": "nt-syntax-bad-num-03.nq",
+      "approval": "rdft:Approved",
+      "comment": "no numbers in N-Quads (float) (negative test)",
+      "name": "nt-syntax-bad-num-03"
+    },
+    {
+      "@id": "#nt-syntax-subm-01",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "nt-syntax-subm-01.nq",
+      "approval": "rdft:Approved",
+      "comment": "Submission test from Original RDF Test Cases",
+      "name": "nt-syntax-subm-01"
+    },
+    {
+      "@id": "#comment_following_triple",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "comment_following_triple.nq",
+      "approval": "rdft:Approved",
+      "comment": "Tests comments after a triple",
+      "name": "comment_following_triple"
+    },
+    {
+      "@id": "#literal",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal \"\"\"x\"\"\"",
+      "name": "literal"
+    },
+    {
+      "@id": "#literal_all_controls",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_all_controls.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal_all_controls '\\x00\\x01\\x02\\x03\\x04...'",
+      "name": "literal_all_controls"
+    },
+    {
+      "@id": "#literal_all_punctuation",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_all_punctuation.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal_all_punctuation '!\"#$%&()...'",
+      "name": "literal_all_punctuation"
+    },
+    {
+      "@id": "#literal_ascii_boundaries",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_ascii_boundaries.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal_ascii_boundaries '\\x00\\x26\\x28...'",
+      "name": "literal_ascii_boundaries"
+    },
+    {
+      "@id": "#literal_with_2_dquotes",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_2_dquotes.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with 2 squotes \"\"\"a\"\"b\"\"\"",
+      "name": "literal_with_2_dquotes"
+    },
+    {
+      "@id": "#literal_with_2_squotes",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_2_squotes.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with 2 squotes \"x''y\"",
+      "name": "literal_with_2_squotes"
+    },
+    {
+      "@id": "#literal_with_BACKSPACE",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_BACKSPACE.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with BACKSPACE",
+      "name": "literal_with_BACKSPACE"
+    },
+    {
+      "@id": "#literal_with_CARRIAGE_RETURN",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_CARRIAGE_RETURN.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with CARRIAGE RETURN",
+      "name": "literal_with_CARRIAGE_RETURN"
+    },
+    {
+      "@id": "#literal_with_CHARACTER_TABULATION",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_CHARACTER_TABULATION.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with CHARACTER TABULATION",
+      "name": "literal_with_CHARACTER_TABULATION"
+    },
+    {
+      "@id": "#literal_with_dquote",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_dquote.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with dquote \"x\"y\"",
+      "name": "literal_with_dquote"
+    },
+    {
+      "@id": "#literal_with_FORM_FEED",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_FORM_FEED.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with FORM FEED",
+      "name": "literal_with_FORM_FEED"
+    },
+    {
+      "@id": "#literal_with_LINE_FEED",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_LINE_FEED.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with LINE FEED",
+      "name": "literal_with_LINE_FEED"
+    },
+    {
+      "@id": "#literal_with_numeric_escape4",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_numeric_escape4.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with numeric escape4 \\u",
+      "name": "literal_with_numeric_escape4"
+    },
+    {
+      "@id": "#literal_with_numeric_escape8",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_numeric_escape8.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with numeric escape8 \\U",
+      "name": "literal_with_numeric_escape8"
+    },
+    {
+      "@id": "#literal_with_REVERSE_SOLIDUS",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_REVERSE_SOLIDUS.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with REVERSE SOLIDUS",
+      "name": "literal_with_REVERSE_SOLIDUS"
+    },
+    {
+      "@id": "#literal_with_REVERSE_SOLIDUS2",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_REVERSE_SOLIDUS2.nq",
+      "approval": "rdft:Approved",
+      "comment": "REVERSE SOLIDUS at end of literal",
+      "name": "literal_with_REVERSE_SOLIDUS2"
+    },
+    {
+      "@id": "#literal_with_squote",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_squote.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal with squote \"x'y\"",
+      "name": "literal_with_squote"
+    },
+    {
+      "@id": "#literal_with_UTF8_boundaries",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "literal_with_UTF8_boundaries.nq",
+      "approval": "rdft:Approved",
+      "comment": "literal_with_UTF8_boundaries '\\x80\\x7ff\\x800\\xfff...'",
+      "name": "literal_with_UTF8_boundaries"
+    },
+    {
+      "@id": "#langtagged_string",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "langtagged_string.nq",
+      "approval": "rdft:Approved",
+      "comment": "langtagged string \"x\"@en",
+      "name": "langtagged_string"
+    },
+    {
+      "@id": "#lantag_with_subtag",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "lantag_with_subtag.nq",
+      "approval": "rdft:Approved",
+      "comment": "lantag with subtag \"x\"@en-us",
+      "name": "lantag_with_subtag"
+    },
+    {
+      "@id": "#minimal_whitespace",
+      "@type": "rdft:TestNQuadsPositiveSyntax",
+      "action": "minimal_whitespace.nq",
+      "approval": "rdft:Approved",
+      "comment": "tests absense of whitespace between subject, predicate, object and end-of-statement",
+      "name": "minimal_whitespace"
+    }
+  ],
+  "name": "N-Quads tests"
+}

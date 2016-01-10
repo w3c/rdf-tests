@@ -1,0 +1,429 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-01",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b9",
+        "data": "data-1.ttl",
+        "query": "open-eq-01.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "graph match - no lexical form in data (assumes no value matching)",
+      "name": "open-eq-01",
+      "result": "open-eq-01-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-02",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b8",
+        "data": "data-1.ttl",
+        "query": "open-eq-02.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "graph match - unknown type",
+      "name": "open-eq-02",
+      "result": "open-eq-02-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-03",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b7",
+        "data": "data-1.ttl",
+        "query": "open-eq-03.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Filter(?v=1)",
+      "name": "open-eq-03",
+      "result": "open-eq-03-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-04",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b6",
+        "data": "data-1.ttl",
+        "query": "open-eq-04.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Filter(?v!=1)",
+      "name": "open-eq-04",
+      "result": "open-eq-04-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-05",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b5",
+        "data": "data-1.ttl",
+        "query": "open-eq-05.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "FILTER(?v = unknown type)",
+      "name": "open-eq-05",
+      "result": "open-eq-05-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-06",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b4",
+        "data": "data-1.ttl",
+        "query": "open-eq-06.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "FILTER(?v != unknown type)",
+      "name": "open-eq-06",
+      "result": "open-eq-06-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-07",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b3",
+        "data": "data-2.ttl",
+        "query": "open-eq-07.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Test of '=' ",
+      "name": "open-eq-07",
+      "notable": "IllFormedLiteral",
+      "requires": [
+        "StringSimpleLiteralCmp",
+        "LangTagAwareness"
+      ],
+      "result": "open-eq-07-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-08",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b2",
+        "data": "data-2.ttl",
+        "query": "open-eq-08.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Test of '!='",
+      "name": "open-eq-08",
+      "notable": "IllFormedLiteral",
+      "requires": [
+        "StringSimpleLiteralCmp",
+        "KnownTypesDefault2Neq",
+        "LangTagAwareness"
+      ],
+      "result": "open-eq-08-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-09",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b15",
+        "data": "data-2.ttl",
+        "query": "open-eq-09.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Test of '='",
+      "name": "open-eq-09",
+      "notable": "IllFormedLiteral",
+      "result": "open-eq-09-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-10",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b14",
+        "data": "data-2.ttl",
+        "query": "open-eq-10.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Test of '!='",
+      "name": "open-eq-10",
+      "notable": "IllFormedLiteral",
+      "requires": [
+        "KnownTypesDefault2Neq",
+        "LangTagAwareness"
+      ],
+      "result": "open-eq-10-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-11",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b16",
+        "data": "data-2.ttl",
+        "query": "open-eq-11.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "test of '=' || '!='",
+      "name": "open-eq-11",
+      "notable": "IllFormedLiteral",
+      "requires": [
+        "KnownTypesDefault2Neq"
+      ],
+      "result": "open-eq-11-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-12",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b1",
+        "data": "data-2.ttl",
+        "query": "open-eq-12.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "find pairs that don't value-compare",
+      "name": "open-eq-12",
+      "notable": "IllFormedLiteral",
+      "requires": [
+        "KnownTypesDefault2Neq",
+        "LangTagAwareness"
+      ],
+      "result": "open-eq-12-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b0",
+        "data": "data-3.ttl",
+        "query": "date-1.rq"
+      },
+      "comment": "Added type : xsd:date '='",
+      "name": "date-1",
+      "requires": [
+        "XsdDateOperations"
+      ],
+      "result": "date-1-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b17",
+        "data": "data-3.ttl",
+        "query": "date-2.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Added type : xsd:date '!='",
+      "name": "date-2",
+      "requires": [
+        "XsdDateOperations"
+      ],
+      "result": "date-2-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-3",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b13",
+        "data": "data-3.ttl",
+        "query": "date-3.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Added type : xsd:date '>'",
+      "name": "date-3",
+      "requires": [
+        "XsdDateOperations"
+      ],
+      "result": "date-3-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-4",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b12",
+        "data": "data-3.ttl",
+        "query": "date-4.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "xsd:date ORDER BY",
+      "name": "date-4",
+      "result": "date-4-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-cmp-01",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b11",
+        "data": "data-4.ttl",
+        "query": "open-cmp-01.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Find things that compare with < or >",
+      "name": "open-cmp-01",
+      "result": "open-cmp-01-result.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-cmp-02",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b10",
+        "data": "data-4.ttl",
+        "query": "open-cmp-02.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
+      "comment": "Find things that compare with <= and >",
+      "name": "open-cmp-02",
+      "result": "open-cmp-02-result.srx"
+    }
+  ],
+  "label": "open world value testing tests"
+}

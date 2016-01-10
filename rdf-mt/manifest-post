@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# manifest-post manifest.jsonld
+#
+# Do manifest-specific post-processing on a generated Manifest file
+require 'json/ld'
+
+input, output = ARGV
+man = JSON.parse(File.read(input))
+man['entries'].each do |entry|
+  if res = entry['mf:result'] && entry['mf:result']['@value']
+    entry.delete('mf:result')
+    entry['result'] = res == 'true'
+  end
+
+  # Clean up empty arrays
+  %w(recognizedDatatypes unrecognizedDatatypes).each do |p|
+    if entry["mf:#{p}"].is_a?(Hash) && entry["mf:#{p}"]['@list'] == []
+      entry[p] = []
+      entry.delete("mf:#{p}")
+    end
+  end
+end
+
+out = output ? File.open(output, "w") : $stdout
+out.puts(man.to_json(JSON::LD::JSON_STATE))
