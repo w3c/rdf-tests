@@ -1,0 +1,241 @@
+{
+  "@context": {
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ent": "http://www.w3.org/ns/entailment/",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "pr": "http://www.w3.org/ns/owl-profile/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sd": "http://www.w3.org/ns/sparql-service-description#",
+    "sparql": "http://www.w3.org/ns/sparql#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "endpoint": {
+      "@id": "mq:endpoint",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "serviceData": {
+      "@id": "mq:serviceData",
+      "@type": "@id"
+    },
+    "sd:EntailmentProfile": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "sd:entailmentRegime": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "ut:data": {
+      "@type": "@id"
+    },
+    "ut:graph": {
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@type": "@vocab"
+    },
+    "IllFormedLiteral": {
+      "@id": "mf:IllFormedLiteral"
+    },
+    "XsdDateOperations": {
+      "@id": "mf:XsdDateOperations"
+    },
+    "StringSimpleLiteralCmp": {
+      "@id": "mf:StringSimpleLiteralCmp"
+    },
+    "KnownTypesDefault2Neq": {
+      "@id": "mf:KnownTypesDefault2Neq"
+    },
+    "LangTagAwareness": {
+      "@id": "mf:LangTagAwareness"
+    },
+    "ResultCardinality": {
+      "@id": "mf:ResultCardinality"
+    },
+    "LaxCardinality": {
+      "@id": "mf:LaxCardinality"
+    },
+    "QuerySelect": {
+      "@id": "mq:QuerySelect"
+    },
+    "QueryConstruct": {
+      "@id": "mq:QueryConstruct"
+    },
+    "QueryDescribe": {
+      "@id": "mq:QueryDescribe"
+    },
+    "QueryAsk": {
+      "@id": "mq:QueryAsk"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "comment": "Test of boolean expressions",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-boolean-literal",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b6",
+        "data": "data-1.ttl",
+        "query": "query-boolean-literal.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Test literal 'true'",
+      "result": "result-boolean-literal.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-1",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b5",
+        "data": "data-1.ttl",
+        "query": "query-bev-1.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Non-zero numerics, non-empty strings, and the true boolean have an EBV of true",
+      "name": "Test 'boolean effective value' - true",
+      "result": "result-bev-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-2",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b4",
+        "data": "data-1.ttl",
+        "query": "query-bev-2.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Zero-valued numerics, the empty string, and the false boolean have an EBV of false",
+      "name": "Test 'boolean effective value' - false",
+      "result": "result-bev-2.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-3",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b3",
+        "data": "data-1.ttl",
+        "query": "query-bev-3.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "The && operator takes the EBV of its operands",
+      "name": "Test 'boolean effective value' - &&",
+      "result": "result-bev-3.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-4",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b2",
+        "data": "data-1.ttl",
+        "query": "query-bev-4.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "The || operator takes the EBV of its operands",
+      "name": "Test 'boolean effective value' - ||",
+      "result": "result-bev-4.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-5",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b1",
+        "data": "data-2.ttl",
+        "query": "query-bev-5.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "The EBV of an unbound value  or a literal with an unknown datatype is a type error, which eliminates the solution in question",
+      "name": "Test 'boolean effective value' - optional",
+      "result": "result-bev-5.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/boolean-effective-value/manifest#dawg-bev-6",
+      "@type": "mf:QueryEvaluationTest",
+      "action": {
+        "@id": "_:b0",
+        "data": "data-2.ttl",
+        "query": "query-bev-6.rq"
+      },
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html",
+      "comment": "Negating a type error is still a type error",
+      "name": "Test 'boolean effective value' - unknown types",
+      "result": "result-bev-6.ttl"
+    }
+  ]
+}
