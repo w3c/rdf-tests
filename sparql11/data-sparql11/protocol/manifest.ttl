@@ -6,7 +6,7 @@
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 
 <>  rdf:type mf:Manifest ;
-    rdfs:comment "SPARQL Protocol" ;
+    rdfs:label "SPARQL Protocol" ;
     mf:entries
     (
 		:query_post_form

@@ -14,7 +14,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 <> rdf:type mf:Manifest ;
-  rdfs:comment "Unapproved RDF Semantics tests" ;
+  rdfs:label "Unapproved RDF Semantics tests" ;
   mf:entries (
     <#horst-complete-rules>
     <#ill-formed-string>

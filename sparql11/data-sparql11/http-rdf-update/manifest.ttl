@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest;
-    rdfs:comment "SPARQL Graph Store Protocol";
+    rdfs:label "SPARQL Graph Store Protocol";
     mf:entries ( gsp:put__initial_state 
                  gsp:get_of_put__initial_state 
                  gsp:put__graph_already_in_store 

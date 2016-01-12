@@ -7,7 +7,8 @@
 @prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
 
 <>  rdf:type mf:Manifest ;
-    rdfs:label "Basic SPARQL 1.1 Update test cases" ;
+    rdfs:label "Basic Update" ;
+    rdfs:comment "Basic SPARQL 1.1 Update test cases" ;
     mf:entries
     ( 
       :insert-data-spo1
