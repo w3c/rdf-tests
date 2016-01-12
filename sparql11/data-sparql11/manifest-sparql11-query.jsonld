@@ -148,24 +148,19 @@
   },
   "@id": "",
   "@type": "mf:Manifest",
-  "comment": "Syntax tests syntax-sparql5",
-  "entries": [
-    {
-      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql5/manifest#syntax-reduced-01",
-      "@type": "mf:PositiveSyntaxTest",
-      "action": "syntax-reduced-01.rq",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007OctDec/att-0069/13-dawg-minutes.html",
-      "name": "syntax-reduced-01.rq"
-    },
-    {
-      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql5/manifest#syntax-reduced-02",
-      "@type": "mf:PositiveSyntaxTest",
-      "action": "syntax-reduced-02.rq",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007OctDec/att-0069/13-dawg-minutes.html",
-      "name": "syntax-reduced-02.rq"
-    }
+  "include": [
+    "aggregates/manifest.jsonld",
+    "bind/manifest.jsonld",
+    "bindings/manifest.jsonld",
+    "construct/manifest.jsonld",
+    "exists/manifest.jsonld",
+    "functions/manifest.jsonld",
+    "grouping/manifest.jsonld",
+    "negation/manifest.jsonld",
+    "project-expression/manifest.jsonld",
+    "property-path/manifest.jsonld",
+    "subquery/manifest.jsonld",
+    "syntax-query/manifest.jsonld"
   ],
-  "label": "Syntax 5"
+  "label": "SPARQL 1.1 Query Language"
 }

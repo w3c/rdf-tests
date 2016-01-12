@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,7 +153,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#nested-opt-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b11",
         "data": "two-nested-opt.ttl",
         "query": "two-nested-opt.rq"
       },
@@ -157,7 +167,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#nested-opt-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b10",
         "data": "two-nested-opt.ttl",
         "query": "two-nested-opt-alt.rq"
       },
@@ -171,7 +181,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#opt-filter-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b9",
         "data": "opt-filter-1.ttl",
         "query": "opt-filter-1.rq"
       },
@@ -213,7 +223,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-place-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b6",
         "data": "data-2.ttl",
         "query": "filter-placement-1.rq"
       },
@@ -227,7 +237,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-place-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b5",
         "data": "data-2.ttl",
         "query": "filter-placement-2.rq"
       },
@@ -241,7 +251,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-place-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b4",
         "data": "data-2.ttl",
         "query": "filter-placement-3.rq"
       },
@@ -255,7 +265,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-nested-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b3",
         "data": "data-1.ttl",
         "query": "filter-nested-1.rq"
       },
@@ -269,7 +279,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-nested-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b2",
         "data": "data-1.ttl",
         "query": "filter-nested-2.rq"
       },
@@ -283,7 +293,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#filter-scope-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b1",
         "data": "data-2.ttl",
         "query": "filter-scope-1.rq"
       },
@@ -297,7 +307,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#join-scope-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b0",
         "data": "var-scope-join-1.ttl",
         "query": "var-scope-join-1.rq"
       },
@@ -311,7 +321,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#join-combo-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b13",
         "data": "join-combo-graph-2.ttl",
         "query": "join-combo-1.rq"
       },
@@ -325,7 +335,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/algebra/manifest#join-combo-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b12",
         "data": "join-combo-graph-2.ttl",
         "graphData": "join-combo-graph-1.ttl",
         "query": "join-combo-2.rq"

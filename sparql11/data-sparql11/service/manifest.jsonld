@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -138,17 +148,16 @@
   },
   "@id": "",
   "@type": "mf:Manifest",
-  "comment": "Service",
   "entries": [
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b15",
         "data": "data01.ttl",
         "query": "service01.rq",
         "serviceData": {
-          "@id": "_:b11",
+          "@id": "_:b14",
           "data": "data01endpoint.ttl",
           "endpoint": "http://example.org/sparql"
         }
@@ -163,16 +172,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b13",
         "query": "service02.rq",
         "serviceData": [
           {
-            "@id": "_:b9",
+            "@id": "_:b12",
             "data": "data02endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b8",
+            "@id": "_:b11",
             "data": "data02endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -188,16 +197,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b10",
         "query": "service03.rq",
         "serviceData": [
           {
-            "@id": "_:b6",
+            "@id": "_:b9",
             "data": "data03endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b5",
+            "@id": "_:b8",
             "data": "data03endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -213,11 +222,11 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b7",
         "data": "data04.ttl",
         "query": "service04a.rq",
         "serviceData": {
-          "@id": "_:b3",
+          "@id": "_:b6",
           "data": "data04endpoint.ttl",
           "endpoint": "http://example.org/sparql"
         }
@@ -232,17 +241,17 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b5",
         "data": "data05.ttl",
         "query": "service05.rq",
         "serviceData": [
           {
-            "@id": "_:b1",
+            "@id": "_:b4",
             "data": "data05endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b2",
+            "@id": "_:b3",
             "data": "data05endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -258,10 +267,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b2",
         "query": "service06.rq",
         "serviceData": {
-          "@id": "_:b14",
+          "@id": "_:b1",
           "data": "data06endpoint1.ttl",
           "endpoint": "http://example1.org/sparql"
         }
@@ -276,7 +285,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b0",
         "data": "data07.ttl",
         "query": "service07.rq"
       },
@@ -286,5 +295,6 @@
       "name": "SERVICE test 7",
       "result": "service07.srx"
     }
-  ]
+  ],
+  "label": "SPARQL Service"
 }

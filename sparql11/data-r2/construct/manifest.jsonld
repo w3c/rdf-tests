@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -136,7 +146,7 @@
       "@id": "mq:QueryAsk"
     }
   },
-  "@id": "_:b5",
+  "@id": "_:b1",
   "@type": "mf:Manifest",
   "comment": "Some DAWG test cases on the CONSTRUCT result form",
   "entries": [
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b0",
         "data": "data-ident.ttl",
         "query": "query-ident.rq"
       },
@@ -159,7 +169,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b5",
         "data": "data-ident.ttl",
         "query": "query-subgraph.rq"
       },
@@ -174,7 +184,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b4",
         "data": "data-reif.ttl",
         "query": "query-reif-1.rq"
       },
@@ -189,7 +199,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b3",
         "data": "data-reif.ttl",
         "query": "query-reif-2.rq"
       },
@@ -204,7 +214,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b2",
         "data": "data-opt.ttl",
         "query": "query-construct-optional.rq"
       },
@@ -215,5 +225,6 @@
       "queryForm": "QueryConstruct",
       "result": "result-construct-optional.ttl"
     }
-  ]
+  ],
+  "label": "CONSTRUCT"
 }

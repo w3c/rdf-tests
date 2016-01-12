@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -290,11 +300,11 @@
       "comment": "Test 2 for DELETE DATA only modifying the desired graph",
       "name": "Graph-specific DELETE DATA 2",
       "result": {
-        "@id": "_:b2",
+        "@id": "_:b1",
         "ut:data": "delete-post-01f.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b1",
+            "@id": "_:b2",
             "label": "http://example.org/g2",
             "ut:graph": "delete-post-02s.ttl"
           },
@@ -306,5 +316,6 @@
         ]
       }
     }
-  ]
+  ],
+  "label": "DELETE DATA"
 }

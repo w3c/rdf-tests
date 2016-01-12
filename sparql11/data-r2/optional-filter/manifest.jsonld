@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-001",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b5",
         "data": "data-1.ttl",
         "query": "expr-1.rq"
       },
@@ -158,7 +168,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-002",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b4",
         "data": "data-1.ttl",
         "query": "expr-2.rq"
       },
@@ -172,7 +182,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-003",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b3",
         "data": "data-1.ttl",
         "query": "expr-3.rq"
       },
@@ -186,7 +196,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-004",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b2",
         "data": "data-1.ttl",
         "query": "expr-4.rq"
       },
@@ -200,7 +210,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-005-simplified",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b1",
         "data": "data-1.ttl",
         "query": "expr-5.rq"
       },
@@ -212,7 +222,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional-filter/manifest#dawg-optional-filter-005-not-simplified",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b0",
         "data": "data-1.ttl",
         "query": "expr-5.rq"
       },
@@ -220,5 +230,6 @@
       "name": "dawg-optional-filter-005-not-simplified",
       "result": "expr-5-result-not-simplified.ttl"
     }
-  ]
+  ],
+  "label": "OPTIONAL FILTER"
 }

@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b3",
         "ut:request": "load-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -157,7 +167,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b25",
+        "@id": "_:b2",
         "ut:request": "load-silent-into.ru"
       },
       "approval": "dawgt:Approved",
@@ -170,7 +180,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b24",
+        "@id": "_:b26",
         "ut:data": "spo.ttl",
         "ut:request": "clear-silent.ru"
       },
@@ -179,7 +189,7 @@
       "comment": "Clearing a non-existent named graph",
       "name": "CLEAR SILENT GRAPH iri",
       "result": {
-        "@id": "_:b23",
+        "@id": "_:b25",
         "ut:data": "spo.ttl"
       }
     },
@@ -187,7 +197,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b24",
         "ut:request": "clear-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -200,9 +210,9 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b23",
         "ut:graphData": {
-          "@id": "_:b20",
+          "@id": "_:b22",
           "label": "http://example.org/g1",
           "ut:graph": "spo.ttl"
         },
@@ -213,9 +223,9 @@
       "comment": "Creation of an already existent named graph",
       "name": "CREATE SILENT iri",
       "result": {
-        "@id": "_:b19",
+        "@id": "_:b21",
         "ut:graphData": {
-          "@id": "_:b18",
+          "@id": "_:b20",
           "label": "http://example.org/g1",
           "ut:graph": "spo.ttl"
         }
@@ -225,7 +235,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b19",
         "ut:data": "spo.ttl",
         "ut:request": "drop-silent.ru"
       },
@@ -234,7 +244,7 @@
       "comment": "Clearing a non-existent named graph",
       "name": "DROP SILENT GRAPH iri",
       "result": {
-        "@id": "_:b16",
+        "@id": "_:b18",
         "ut:data": "spo.ttl"
       }
     },
@@ -242,7 +252,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b17",
         "ut:request": "drop-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -255,9 +265,9 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b16",
         "ut:graphData": {
-          "@id": "_:b13",
+          "@id": "_:b15",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         },
@@ -268,9 +278,9 @@
       "comment": "copy a non-existent graph",
       "name": "COPY SILENT",
       "result": {
-        "@id": "_:b12",
+        "@id": "_:b14",
         "ut:graphData": {
-          "@id": "_:b11",
+          "@id": "_:b13",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         }
@@ -280,7 +290,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b12",
         "ut:request": "copy-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -293,9 +303,9 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b11",
         "ut:graphData": {
-          "@id": "_:b8",
+          "@id": "_:b10",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         },
@@ -306,9 +316,9 @@
       "comment": "move a non-existent graph",
       "name": "MOVE SILENT",
       "result": {
-        "@id": "_:b7",
+        "@id": "_:b1",
         "ut:graphData": {
-          "@id": "_:b6",
+          "@id": "_:b0",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         }
@@ -318,7 +328,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b9",
         "ut:request": "move-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -331,9 +341,9 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b8",
         "ut:graphData": {
-          "@id": "_:b3",
+          "@id": "_:b7",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         },
@@ -344,9 +354,9 @@
       "comment": "add a non-existent graph",
       "name": "ADD SILENT",
       "result": {
-        "@id": "_:b2",
+        "@id": "_:b6",
         "ut:graphData": {
-          "@id": "_:b1",
+          "@id": "_:b5",
           "label": "http://example.org/g2",
           "ut:graph": "spo.ttl"
         }
@@ -356,7 +366,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b4",
         "ut:request": "add-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",

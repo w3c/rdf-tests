@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,10 +153,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b35",
+        "@id": "_:b29",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b34",
+          "@id": "_:b28",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         },
@@ -157,10 +167,10 @@
       "comment": "Add the default graph to an existing graph",
       "name": "ADD 1",
       "result": {
-        "@id": "_:b33",
+        "@id": "_:b27",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b32",
+          "@id": "_:b26",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-post.ttl"
         }
@@ -170,7 +180,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add02",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b31",
+        "@id": "_:b25",
         "ut:data": "add-default.ttl",
         "ut:request": "add-01.ru"
       },
@@ -179,10 +189,10 @@
       "comment": "Add the default graph to a non-existing graph",
       "name": "ADD 2",
       "result": {
-        "@id": "_:b30",
+        "@id": "_:b24",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b29",
+          "@id": "_:b23",
           "label": "http://example.org/g1",
           "ut:graph": "add-default.ttl"
         }
@@ -192,16 +202,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add03",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b22",
         "ut:data": "add-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b19",
+            "@id": "_:b21",
             "label": "http://example.org/g1",
             "ut:graph": "add-01-pre.ttl"
           },
           {
-            "@id": "_:b18",
+            "@id": "_:b20",
             "label": "http://example.org/g2",
             "ut:graph": "add-02-pre.ttl"
           }
@@ -213,16 +223,16 @@
       "comment": "Add a named graph to an existing graph",
       "name": "ADD 3",
       "result": {
-        "@id": "_:b17",
+        "@id": "_:b19",
         "ut:data": "add-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b16",
+            "@id": "_:b18",
             "label": "http://example.org/g1",
             "ut:graph": "add-01-pre.ttl"
           },
           {
-            "@id": "_:b15",
+            "@id": "_:b17",
             "label": "http://example.org/g2",
             "ut:graph": "add-02-post.ttl"
           }
@@ -233,10 +243,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add04",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b16",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b13",
+          "@id": "_:b15",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         },
@@ -247,16 +257,16 @@
       "comment": "Add a named graph to a non-existing graph",
       "name": "ADD 4",
       "result": {
-        "@id": "_:b12",
+        "@id": "_:b14",
         "ut:data": "add-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b11",
+            "@id": "_:b13",
             "label": "http://example.org/g1",
             "ut:graph": "add-01-pre.ttl"
           },
           {
-            "@id": "_:b10",
+            "@id": "_:b12",
             "label": "http://example.org/g2",
             "ut:graph": "add-01-pre.ttl"
           }
@@ -267,16 +277,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add05",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b11",
         "ut:data": "add-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b8",
+            "@id": "_:b10",
             "label": "http://example.org/g1",
             "ut:graph": "add-01-pre.ttl"
           },
           {
-            "@id": "_:b7",
+            "@id": "_:b9",
             "label": "http://example.org/g3",
             "ut:graph": "add-03-pre.ttl"
           }
@@ -288,16 +298,16 @@
       "comment": "Add a named graph to an existing graph with overlapping data",
       "name": "ADD 5",
       "result": {
-        "@id": "_:b6",
+        "@id": "_:b8",
         "ut:data": "add-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b5",
+            "@id": "_:b7",
             "label": "http://example.org/g1",
             "ut:graph": "add-01-pre.ttl"
           },
           {
-            "@id": "_:b4",
+            "@id": "_:b6",
             "label": "http://example.org/g3",
             "ut:graph": "add-03-post.ttl"
           }
@@ -308,10 +318,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add06",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b5",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b2",
+          "@id": "_:b4",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         },
@@ -322,10 +332,10 @@
       "comment": "Add a non-existing graph to an existing graph",
       "name": "ADD 6",
       "result": {
-        "@id": "_:b1",
+        "@id": "_:b3",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b0",
+          "@id": "_:b2",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         }
@@ -335,10 +345,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add07",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b0",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b25",
+          "@id": "_:b1",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         },
@@ -349,10 +359,10 @@
       "comment": "Add an existing graph to the default graph",
       "name": "ADD 7",
       "result": {
-        "@id": "_:b24",
+        "@id": "_:b35",
         "ut:data": "add-01-post.ttl",
         "ut:graphData": {
-          "@id": "_:b23",
+          "@id": "_:b34",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         }
@@ -362,10 +372,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/add/manifest#add08",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b33",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b22",
+          "@id": "_:b32",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         },
@@ -376,10 +386,10 @@
       "comment": "Add a graph to itself",
       "name": "ADD 8",
       "result": {
-        "@id": "_:b28",
+        "@id": "_:b31",
         "ut:data": "add-default.ttl",
         "ut:graphData": {
-          "@id": "_:b27",
+          "@id": "_:b30",
           "label": "http://example.org/g1",
           "ut:graph": "add-01-pre.ttl"
         }

@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,16 +154,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-default-01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b23",
         "ut:data": "clear-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b19",
+            "@id": "_:b22",
             "label": "http://example.org/g1",
             "ut:graph": "clear-g1.ttl"
           },
           {
-            "@id": "_:b18",
+            "@id": "_:b21",
             "label": "http://example.org/g2",
             "ut:graph": "clear-g2.ttl"
           }
@@ -165,16 +175,16 @@
       "comment": "This is a CLEAR of the default graph",
       "name": "CLEAR DEFAULT",
       "result": {
-        "@id": "_:b2",
+        "@id": "_:b20",
         "ut:data": "empty.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b1",
+            "@id": "_:b19",
             "label": "http://example.org/g1",
             "ut:graph": "clear-g1.ttl"
           },
           {
-            "@id": "_:b0",
+            "@id": "_:b18",
             "label": "http://example.org/g2",
             "ut:graph": "clear-g2.ttl"
           }
@@ -185,16 +195,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-graph-01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b11",
         "ut:data": "clear-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b22",
+            "@id": "_:b12",
             "label": "http://example.org/g1",
             "ut:graph": "clear-g1.ttl"
           },
           {
-            "@id": "_:b23",
+            "@id": "_:b13",
             "label": "http://example.org/g2",
             "ut:graph": "clear-g2.ttl"
           }
@@ -230,12 +240,12 @@
         "ut:data": "clear-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b13",
+            "@id": "_:b10",
             "label": "http://example.org/g1",
             "ut:graph": "clear-g1.ttl"
           },
           {
-            "@id": "_:b12",
+            "@id": "_:b9",
             "label": "http://example.org/g2",
             "ut:graph": "clear-g2.ttl"
           }
@@ -247,16 +257,16 @@
       "comment": "This is a CLEAR of all the named graphs",
       "name": "CLEAR NAMED",
       "result": {
-        "@id": "_:b11",
+        "@id": "_:b0",
         "ut:data": "clear-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b10",
+            "@id": "_:b1",
             "label": "http://example.org/g1",
             "ut:graph": "empty.ttl"
           },
           {
-            "@id": "_:b9",
+            "@id": "_:b2",
             "label": "http://example.org/g2",
             "ut:graph": "empty.ttl"
           }
@@ -304,5 +314,6 @@
         ]
       }
     }
-  ]
+  ],
+  "label": "CLEAR"
 }

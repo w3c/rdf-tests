@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -138,7 +148,6 @@
   },
   "@id": "",
   "@type": "mf:Manifest",
-  "comment": "SPARQL Protocol",
   "entries": [
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form",
@@ -378,5 +387,6 @@
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "name": "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause"
     }
-  ]
+  ],
+  "label": "SPARQL Protocol"
 }

@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b10",
         "data": "tP.ttl",
         "query": "tP-double-double.rq"
       },
@@ -159,7 +169,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b24",
+        "@id": "_:b8",
         "data": "tP.ttl",
         "query": "tP-double-float.rq"
       },
@@ -174,7 +184,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b6",
         "data": "tP.ttl",
         "query": "tP-double-decimal.rq"
       },
@@ -189,7 +199,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b4",
         "data": "tP.ttl",
         "query": "tP-float-float.rq"
       },
@@ -204,7 +214,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b19",
+        "@id": "_:b2",
         "data": "tP.ttl",
         "query": "tP-float-decimal.rq"
       },
@@ -219,7 +229,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b0",
         "data": "tP.ttl",
         "query": "tP-decimal-decimal.rq"
       },
@@ -234,7 +244,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b28",
         "data": "tP.ttl",
         "query": "tP-integer-short.rq"
       },
@@ -249,7 +259,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b26",
         "data": "tP.ttl",
         "query": "tP-nonPositiveInteger-short.rq"
       },
@@ -264,7 +274,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b25",
         "data": "tP.ttl",
         "query": "tP-negativeInteger-short.rq"
       },
@@ -279,7 +289,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b24",
         "data": "tP.ttl",
         "query": "tP-long-short.rq"
       },
@@ -294,7 +304,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b22",
         "data": "tP.ttl",
         "query": "tP-int-short.rq"
       },
@@ -309,7 +319,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b23",
         "data": "tP.ttl",
         "query": "tP-short-short.rq"
       },
@@ -324,7 +334,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-13",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b21",
         "data": "tP.ttl",
         "query": "tP-byte-short.rq"
       },
@@ -339,7 +349,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-14",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b20",
         "data": "tP.ttl",
         "query": "tP-nonNegativeInteger-short.rq"
       },
@@ -354,7 +364,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-15",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b19",
         "data": "tP.ttl",
         "query": "tP-unsignedLong-short.rq"
       },
@@ -369,7 +379,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-16",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b18",
         "data": "tP.ttl",
         "query": "tP-unsignedInt-short.rq"
       },
@@ -384,7 +394,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-17",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b17",
         "data": "tP.ttl",
         "query": "tP-unsignedShort-short.rq"
       },
@@ -399,7 +409,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-18",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b16",
         "data": "tP.ttl",
         "query": "tP-unsignedByte-short.rq"
       },
@@ -414,7 +424,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-19",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b29",
+        "@id": "_:b15",
         "data": "tP.ttl",
         "query": "tP-positiveInteger-short.rq"
       },
@@ -429,7 +439,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-20",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b28",
+        "@id": "_:b14",
         "data": "tP.ttl",
         "query": "tP-short-double.rq"
       },
@@ -444,7 +454,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-21",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b27",
+        "@id": "_:b13",
         "data": "tP.ttl",
         "query": "tP-short-float.rq"
       },
@@ -459,7 +469,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-22",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b25",
+        "@id": "_:b12",
         "data": "tP.ttl",
         "query": "tP-short-decimal.rq"
       },
@@ -474,7 +484,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-23",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b23",
+        "@id": "_:b11",
         "data": "tP.ttl",
         "query": "tP-short-short-fail.rq"
       },
@@ -489,7 +499,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-24",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b9",
         "data": "tP.ttl",
         "query": "tP-byte-short-fail.rq"
       },
@@ -504,7 +514,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-25",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b7",
         "data": "tP.ttl",
         "query": "tP-short-long-fail.rq"
       },
@@ -519,7 +529,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-26",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b5",
         "data": "tP.ttl",
         "query": "tP-short-int-fail.rq"
       },
@@ -534,7 +544,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-27",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b3",
         "data": "tP.ttl",
         "query": "tP-short-byte-fail.rq"
       },
@@ -549,7 +559,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-28",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b1",
         "data": "tP.ttl",
         "query": "tP-double-float-fail.rq"
       },
@@ -564,7 +574,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-29",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b29",
         "data": "tP.ttl",
         "query": "tP-double-decimal-fail.rq"
       },
@@ -579,7 +589,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-30",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b27",
         "data": "tP.ttl",
         "query": "tP-float-decimal-fail.rq"
       },
@@ -590,5 +600,6 @@
       "queryForm": "QueryAsk",
       "result": "false.ttl"
     }
-  ]
+  ],
+  "label": "Type Promotion"
 }

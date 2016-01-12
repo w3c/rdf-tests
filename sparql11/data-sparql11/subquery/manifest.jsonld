@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,7 +153,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b10",
         "graphData": "sq01.rdf",
         "query": "sq01.rq"
       },
@@ -156,7 +166,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b9",
         "graphData": "sq01.rdf",
         "query": "sq02.rq"
       },
@@ -169,7 +179,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b8",
         "graphData": "sq01.rdf",
         "query": "sq03.rq"
       },
@@ -182,7 +192,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b7",
         "data": "sq04.rdf",
         "graphData": "sq01.rdf",
         "query": "sq04.rq"
@@ -196,7 +206,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b6",
         "graphData": "sq05.rdf",
         "query": "sq05.rq"
       },
@@ -209,7 +219,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b5",
         "data": "sq05.rdf",
         "query": "sq06.rq"
       },
@@ -222,7 +232,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b4",
         "graphData": "sq05.rdf",
         "query": "sq07.rq"
       },
@@ -235,7 +245,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b3",
         "data": "sq08.rdf",
         "query": "sq08.rq"
       },
@@ -248,7 +258,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b2",
         "data": "sq09.rdf",
         "query": "sq09.rq"
       },
@@ -261,7 +271,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b1",
         "data": "sq10.rdf",
         "query": "sq10.rq"
       },
@@ -274,7 +284,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b0",
         "data": "sq11.ttl",
         "query": "sq11.rq"
       },
@@ -288,7 +298,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b13",
         "data": "sq12.ttl",
         "query": "sq12.rq"
       },
@@ -302,7 +312,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery13",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b12",
         "data": "sq11.ttl",
         "query": "sq11.rq"
       },
@@ -316,7 +326,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery14",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b11",
         "data": "sq14.ttl",
         "query": "sq14.rq"
       },

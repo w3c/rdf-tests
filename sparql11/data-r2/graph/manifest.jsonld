@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b3",
         "data": "data-g1.ttl",
         "query": "graph-01.rq"
       },
@@ -158,7 +168,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b10",
         "graphData": "data-g1.ttl",
         "query": "graph-02.rq"
       },
@@ -172,7 +182,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b9",
         "graphData": "data-g1.ttl",
         "query": "graph-03.rq"
       },
@@ -186,7 +196,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b8",
         "data": "data-g1.ttl",
         "query": "graph-04.rq"
       },
@@ -200,7 +210,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b7",
         "data": "data-g1.ttl",
         "graphData": "data-g2.ttl",
         "query": "graph-05.rq"
@@ -215,7 +225,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b6",
         "data": "data-g1.ttl",
         "graphData": "data-g2.ttl",
         "query": "graph-06.rq"
@@ -230,7 +240,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b5",
         "data": "data-g1.ttl",
         "graphData": "data-g2.ttl",
         "query": "graph-07.rq"
@@ -245,7 +255,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b4",
         "data": "data-g1.ttl",
         "graphData": "data-g2.ttl",
         "query": "graph-08.rq"
@@ -260,7 +270,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b2",
         "data": "data-g3.ttl",
         "graphData": "data-g4.ttl",
         "query": "graph-09.rq"
@@ -276,7 +286,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-10b",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b1",
         "data": "data-g3.ttl",
         "graphData": "data-g3-dup.ttl",
         "query": "graph-10.rq"
@@ -291,7 +301,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b0",
         "data": "data-g1.ttl",
         "graphData": [
           "data-g1.ttl",
@@ -307,5 +317,6 @@
       "name": "graph-11",
       "result": "graph-11.ttl"
     }
-  ]
+  ],
+  "label": "GRAPH"
 }

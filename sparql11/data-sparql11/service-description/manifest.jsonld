@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -138,7 +148,6 @@
   },
   "@id": "",
   "@type": "mf:Manifest",
-  "comment": "Service",
   "entries": [
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service-description/manifest#has-endpoint-triple",
@@ -161,5 +170,6 @@
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2",
       "name": "Service description conforms to schema"
     }
-  ]
+  ],
+  "label": "SPARQL Service Description"
 }

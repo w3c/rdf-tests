@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,7 +153,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b13",
         "data": "data-1.ttl",
         "query": "open-eq-01.rq"
       },
@@ -157,7 +167,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b12",
         "data": "data-1.ttl",
         "query": "open-eq-02.rq"
       },
@@ -171,7 +181,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b11",
         "data": "data-1.ttl",
         "query": "open-eq-03.rq"
       },
@@ -185,7 +195,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b10",
         "data": "data-1.ttl",
         "query": "open-eq-04.rq"
       },
@@ -199,7 +209,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b9",
         "data": "data-1.ttl",
         "query": "open-eq-05.rq"
       },
@@ -213,7 +223,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b8",
         "data": "data-1.ttl",
         "query": "open-eq-06.rq"
       },
@@ -227,7 +237,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b7",
         "data": "data-2.ttl",
         "query": "open-eq-07.rq"
       },
@@ -246,7 +256,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b6",
         "data": "data-2.ttl",
         "query": "open-eq-08.rq"
       },
@@ -266,7 +276,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b5",
         "data": "data-2.ttl",
         "query": "open-eq-09.rq"
       },
@@ -281,7 +291,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b4",
         "data": "data-2.ttl",
         "query": "open-eq-10.rq"
       },
@@ -300,7 +310,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b3",
         "data": "data-2.ttl",
         "query": "open-eq-11.rq"
       },
@@ -318,7 +328,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-eq-12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b2",
         "data": "data-2.ttl",
         "query": "open-eq-12.rq"
       },
@@ -337,7 +347,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b1",
         "data": "data-3.ttl",
         "query": "date-1.rq"
       },
@@ -352,7 +362,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b0",
         "data": "data-3.ttl",
         "query": "date-2.rq"
       },
@@ -369,7 +379,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b17",
         "data": "data-3.ttl",
         "query": "date-3.rq"
       },
@@ -386,7 +396,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#date-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b16",
         "data": "data-3.ttl",
         "query": "date-4.rq"
       },
@@ -400,7 +410,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-cmp-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b15",
         "data": "data-4.ttl",
         "query": "open-cmp-01.rq"
       },
@@ -414,7 +424,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/open-world/manifest#open-cmp-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b14",
         "data": "data-4.ttl",
         "query": "open-cmp-02.rq"
       },

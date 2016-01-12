@@ -14,8 +14,7 @@ task index: MANIFESTS.
 
 desc "Build JSON-LD manifests"
 task manifests_jsonld: MANIFESTS.
-  map {|m| m.sub('.ttl', '.jsonld')}.
-  select {|m| File.exist?(m)}
+  map {|m| m.sub('.ttl', '.jsonld')}
 
 MANIFESTS.each do |ttl|
   jsonld = ttl.sub('.ttl', '.jsonld')
@@ -43,7 +42,12 @@ MANIFESTS.each do |ttl|
       man = ::JSON.load(File.read(jsonld))
 
       File.open(html, "w") do |f|
-        f.write Haml::Engine.new(temp, :format => :html5).render(self, man: man)
+        f.write Haml::Engine.new(temp, format: :html5).
+          render(self,
+            man: man,
+            ttl: ttl.split('/').last,
+            jsonld: jsonld.split('/').last
+          )
       end
     end
   end

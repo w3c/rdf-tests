@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,7 +153,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/project-expression/manifest#projexp01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b6",
         "data": "projexp01.ttl",
         "query": "projexp01.rq"
       },
@@ -156,7 +166,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/project-expression/manifest#projexp02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b5",
         "data": "projexp02.ttl",
         "query": "projexp02.rq"
       },
@@ -169,7 +179,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/project-expression/manifest#projexp03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b4",
         "data": "projexp03.ttl",
         "query": "projexp03.rq"
       },
@@ -182,7 +192,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/project-expression/manifest#projexp04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b3",
         "data": "projexp04.ttl",
         "query": "projexp04.rq"
       },

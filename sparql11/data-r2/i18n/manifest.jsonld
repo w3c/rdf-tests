@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -138,13 +148,12 @@
   },
   "@id": "",
   "@type": "mf:Manifest",
-  "comment": "I18N",
   "entries": [
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#kanji-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b2",
         "data": "kanji.ttl",
         "query": "kanji-01.rq"
       },
@@ -157,7 +166,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#kanji-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b1",
         "data": "kanji.ttl",
         "query": "kanji-02.rq"
       },
@@ -170,7 +179,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b0",
         "data": "normalization-01.ttl",
         "query": "normalization-01.rq"
       },
@@ -183,7 +192,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b4",
         "data": "normalization-02.ttl",
         "query": "normalization-02.rq"
       },
@@ -197,7 +206,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b3",
         "data": "normalization-03.ttl",
         "query": "normalization-03.rq"
       },
@@ -207,5 +216,6 @@
       "name": "normalization-03",
       "result": "normalization-03-results.ttl"
     }
-  ]
+  ],
+  "label": "I18N"
 }

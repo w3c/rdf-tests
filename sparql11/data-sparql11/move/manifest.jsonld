@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -143,10 +153,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b3",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b21",
+          "@id": "_:b2",
           "label": "http://example.org/g1",
           "ut:graph": "move-01.ttl"
         },
@@ -157,9 +167,9 @@
       "comment": "Move the default graph to an existing graph",
       "name": "MOVE 1",
       "result": {
-        "@id": "_:b20",
+        "@id": "_:b0",
         "ut:graphData": {
-          "@id": "_:b19",
+          "@id": "_:b1",
           "label": "http://example.org/g1",
           "ut:graph": "move-default.ttl"
         }
@@ -169,7 +179,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move02",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b22",
         "ut:data": "move-default.ttl",
         "ut:request": "move-01.ru"
       },
@@ -178,9 +188,9 @@
       "comment": "Move the default graph to a non-existing graph",
       "name": "MOVE 2",
       "result": {
-        "@id": "_:b15",
+        "@id": "_:b21",
         "ut:graphData": {
-          "@id": "_:b11",
+          "@id": "_:b20",
           "label": "http://example.org/g1",
           "ut:graph": "move-default.ttl"
         }
@@ -190,16 +200,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move03",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b19",
         "ut:data": "move-default.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b9",
+            "@id": "_:b18",
             "label": "http://example.org/g1",
             "ut:graph": "move-01.ttl"
           },
           {
-            "@id": "_:b8",
+            "@id": "_:b17",
             "label": "http://example.org/g2",
             "ut:graph": "move-02.ttl"
           }
@@ -211,10 +221,10 @@
       "comment": "Move a named graph to an existing graph",
       "name": "MOVE 3",
       "result": {
-        "@id": "_:b7",
+        "@id": "_:b16",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b6",
+          "@id": "_:b15",
           "label": "http://example.org/g2",
           "ut:graph": "move-01.ttl"
         }
@@ -224,10 +234,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move04",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b14",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b4",
+          "@id": "_:b13",
           "label": "http://example.org/g1",
           "ut:graph": "move-01.ttl"
         },
@@ -238,10 +248,10 @@
       "comment": "Move a named graph to a non-existing graph",
       "name": "MOVE 4",
       "result": {
-        "@id": "_:b3",
+        "@id": "_:b12",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b2",
+          "@id": "_:b11",
           "label": "http://example.org/g2",
           "ut:graph": "move-01.ttl"
         }
@@ -251,10 +261,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move06",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b10",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b0",
+          "@id": "_:b4",
           "label": "http://example.org/g1",
           "ut:graph": "move-01.ttl"
         },
@@ -265,7 +275,7 @@
       "comment": "Move an existing graph to the default graph",
       "name": "MOVE 6",
       "result": {
-        "@id": "_:b16",
+        "@id": "_:b6",
         "ut:data": "move-01.ttl"
       }
     },
@@ -273,10 +283,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/move/manifest#move07",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b9",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b12",
+          "@id": "_:b8",
           "label": "http://example.org/g1",
           "ut:graph": "move-01.ttl"
         },
@@ -287,10 +297,10 @@
       "comment": "Move a graph to itself",
       "name": "MOVE 7",
       "result": {
-        "@id": "_:b17",
+        "@id": "_:b7",
         "ut:data": "move-default.ttl",
         "ut:graphData": {
-          "@id": "_:b14",
+          "@id": "_:b5",
           "label": "http://example.org/g1",
           "ut:graph": "move-01.ttl"
         }

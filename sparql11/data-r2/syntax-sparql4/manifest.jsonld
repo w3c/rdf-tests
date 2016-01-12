@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -239,5 +249,6 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0063/29-dawg-minutes.htm",
       "name": "syn-leading-digits-in-prefixed-names.rq"
     }
-  ]
+  ],
+  "label": "Syntax 4"
 }

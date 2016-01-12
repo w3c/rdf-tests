@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -144,7 +154,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b8",
         "data": "data-sort-1.ttl",
         "query": "query-sort-1.rq"
       },
@@ -158,7 +168,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b7",
         "data": "data-sort-1.ttl",
         "query": "query-sort-2.rq"
       },
@@ -172,7 +182,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b6",
         "data": "data-sort-3.ttl",
         "query": "query-sort-3.rq"
       },
@@ -186,7 +196,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b5",
         "data": "data-sort-4.ttl",
         "query": "query-sort-4.rq"
       },
@@ -200,7 +210,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b4",
         "data": "data-sort-4.ttl",
         "query": "query-sort-5.rq"
       },
@@ -214,7 +224,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-6",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b3",
         "data": "data-sort-6.ttl",
         "query": "query-sort-6.rq"
       },
@@ -228,7 +238,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-7",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b2",
         "data": "data-sort-7.ttl",
         "query": "query-sort-4.rq"
       },
@@ -270,7 +280,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b12",
         "data": "data-sort-9.ttl",
         "query": "query-sort-10.rq"
       },
@@ -284,7 +294,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-numbers",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b11",
         "data": "data-sort-numbers.ttl",
         "query": "query-sort-numbers.rq"
       },
@@ -298,7 +308,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-builtin",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b10",
         "data": "data-sort-builtin.ttl",
         "query": "query-sort-builtin.rq"
       },
@@ -312,7 +322,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-function",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b9",
         "data": "data-sort-function.ttl",
         "query": "query-sort-function.rq"
       },
@@ -322,5 +332,6 @@
       "name": "Function sort",
       "result": "result-sort-function.ttl"
     }
-  ]
+  ],
+  "label": "SORT"
 }

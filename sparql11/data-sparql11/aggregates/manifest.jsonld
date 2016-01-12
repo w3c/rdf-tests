@@ -25,6 +25,11 @@
     "comment": {
       "@id": "rdfs:comment"
     },
+    "conformanceRequirement": {
+      "@id": "mf:conformanceRequirement",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "data": {
       "@id": "mq:data",
       "@type": "@id"
@@ -48,6 +53,11 @@
     },
     "include": {
       "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "includedSpecifications": {
+      "@id": "mf:includedSpecifications",
       "@container": "@list",
       "@type": "@id"
     },
@@ -158,7 +168,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b18",
         "data": "agg01.ttl",
         "query": "agg02.rq"
       },
@@ -173,7 +183,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b17",
         "data": "agg01.ttl",
         "query": "agg03.rq"
       },
@@ -188,7 +198,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b16",
         "data": "agg01.ttl",
         "query": "agg04.rq"
       },
@@ -203,7 +213,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b15",
         "data": "agg01.ttl",
         "query": "agg05.rq"
       },
@@ -218,7 +228,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b14",
         "data": "agg01.ttl",
         "query": "agg06.rq"
       },
@@ -233,7 +243,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b13",
         "data": "agg01.ttl",
         "query": "agg07.rq"
       },
@@ -258,7 +268,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b12",
         "data": "agg08.ttl",
         "query": "agg08b.rq"
       },
@@ -313,7 +323,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b10",
         "data": "agg-groupconcat-1.ttl",
         "query": "agg-groupconcat-1.rq"
       },
@@ -327,7 +337,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b9",
         "data": "agg-groupconcat-1.ttl",
         "query": "agg-groupconcat-2.rq"
       },
@@ -341,7 +351,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b19",
+        "@id": "_:b8",
         "data": "agg-groupconcat-1.ttl",
         "query": "agg-groupconcat-3.rq"
       },
@@ -355,7 +365,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b1",
         "data": "agg-numeric.ttl",
         "query": "agg-sum-01.rq"
       },
@@ -369,7 +379,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b0",
         "data": "agg-numeric2.ttl",
         "query": "agg-sum-02.rq"
       },
@@ -383,7 +393,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b7",
         "data": "agg-numeric.ttl",
         "query": "agg-avg-01.rq"
       },
@@ -397,7 +407,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b6",
         "data": "agg-numeric2.ttl",
         "query": "agg-avg-02.rq"
       },
@@ -411,7 +421,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b5",
         "data": "agg-numeric.ttl",
         "query": "agg-min-01.rq"
       },
@@ -425,7 +435,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b4",
         "data": "agg-numeric.ttl",
         "query": "agg-min-02.rq"
       },
@@ -439,7 +449,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b3",
         "data": "agg-numeric.ttl",
         "query": "agg-max-01.rq"
       },
@@ -453,7 +463,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b2",
         "data": "agg-numeric.ttl",
         "query": "agg-max-02.rq"
       },
@@ -467,7 +477,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b22",
         "data": "agg-numeric.ttl",
         "query": "agg-sample-01.rq"
       },
@@ -481,7 +491,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b21",
         "data": "agg-err-01.ttl",
         "query": "agg-err-01.rq"
       },
@@ -496,7 +506,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b20",
         "data": "agg-err-02.ttl",
         "query": "agg-err-02.rq"
       },
@@ -511,7 +521,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b19",
         "data": "empty.ttl",
         "query": "agg-empty-group.rq"
       },
