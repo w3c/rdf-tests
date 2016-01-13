@@ -131,7 +131,7 @@
       "@type": "mf:ProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "comment": "\n#### Request\n\n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    User-agent: sparql-client/0.1\n    Content-Type: application/sparql-query\n    Content-Length: XXX\n\n    ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> ?p ?o . <http://kasei.us/2009/09/sparql/data/data2.rdf> ?p ?o }\n    \n#### Response\n\n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml or application/sparql-results+json\n\n    true\n       ",
+      "comment": "\n#### Request\n\n    GET /sparql?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf\n    Host: www.example\n    User-agent: sparql-client/0.1\n    \n#### Response\n\n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml or application/sparql-results+json\n\n    true\n       ",
       "name": "GET query with protocol-specified default graph"
     },
     {
