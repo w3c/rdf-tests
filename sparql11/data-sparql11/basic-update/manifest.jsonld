@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b44",
+        "@id": "_:b21",
         "ut:request": "insert-data-spo1.ru"
       },
       "approval": "dawgt:Approved",
@@ -162,18 +131,16 @@
       "comment": "This is a simple insert of a single triple to the unnamed graph of an empty graph store",
       "name": "Simple insert data 1",
       "result": {
-        "@id": "_:b43",
+        "@id": "_:b20",
         "ut:data": "spo.ttl",
-        "ut:result": {
-          "@id": "ut:success"
-        }
+        "ut:result": "ut:success"
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b42",
+        "@id": "_:b19",
         "ut:request": "insert-data-named1.ru"
       },
       "approval": "dawgt:Approved",
@@ -181,27 +148,29 @@
       "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of an empty graph store",
       "name": "Simple insert data named 1",
       "result": {
-        "@id": "_:b41",
-        "ut:graphData": {
-          "@id": "_:b40",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        },
-        "ut:result": {
-          "@id": "ut:success"
-        }
+        "@id": "_:b18",
+        "ut:graphData": [
+          {
+            "@id": "_:b17",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ],
+        "ut:result": "ut:success"
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b39",
-        "ut:graphData": {
-          "@id": "_:b38",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b16",
+        "ut:graphData": [
+          {
+            "@id": "_:b15",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "insert-data-named2.ru"
       },
       "approval": "dawgt:Approved",
@@ -209,27 +178,29 @@
       "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of a graph store consisting of an empty unnamed graph and the named graph holds one (different) triple already",
       "name": "Simple insert data named 2",
       "result": {
-        "@id": "_:b37",
-        "ut:graphData": {
-          "@id": "_:b36",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo2.ttl"
-        },
-        "ut:result": {
-          "@id": "ut:success"
-        }
+        "@id": "_:b14",
+        "ut:graphData": [
+          {
+            "@id": "_:b13",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo2.ttl"
+          }
+        ],
+        "ut:result": "ut:success"
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b35",
-        "ut:graphData": {
-          "@id": "_:b34",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b12",
+        "ut:graphData": [
+          {
+            "@id": "_:b11",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "insert-data-named1.ru"
       },
       "approval": "dawgt:Approved",
@@ -237,22 +208,22 @@
       "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of a graph store consisting of an empty unnamed graph and the named holds the inserted triple already (using the same query as insert-data-named1)",
       "name": "Simple insert data named 3",
       "result": {
-        "@id": "_:b33",
-        "ut:graphData": {
-          "@id": "_:b32",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        },
-        "ut:result": {
-          "@id": "ut:success"
-        }
+        "@id": "_:b10",
+        "ut:graphData": [
+          {
+            "@id": "_:b9",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ],
+        "ut:result": "ut:success"
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b31",
+        "@id": "_:b8",
         "ut:data": "insert-01-pre.ttl",
         "ut:request": "insert-01.ru"
       },
@@ -261,7 +232,7 @@
       "comment": "This is a INSERT over a dataset with a single triple in the default graph",
       "name": "INSERT 01",
       "result": {
-        "@id": "_:b30",
+        "@id": "_:b7",
         "ut:data": "insert-01-post.ttl"
       }
     },
@@ -269,7 +240,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b29",
+        "@id": "_:b6",
         "ut:data": "insert-02-pre.ttl",
         "ut:request": "insert-02.ru"
       },
@@ -278,26 +249,30 @@
       "comment": "This is a INSERT over a dataset with a single triple in the default graph, inserting into a named graph",
       "name": "INSERT 02",
       "result": {
-        "@id": "_:b28",
+        "@id": "_:b5",
         "ut:data": "insert-02-post.ttl",
-        "ut:graphData": {
-          "@id": "_:b27",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-02-g1-post.ttl"
-        }
+        "ut:graphData": [
+          {
+            "@id": "_:b4",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-02-g1-post.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b3",
         "ut:data": "insert-03-pre.ttl",
-        "ut:graphData": {
-          "@id": "_:b25",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-03-g1-pre.ttl"
-        },
+        "ut:graphData": [
+          {
+            "@id": "_:b2",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-03-g1-pre.ttl"
+          }
+        ],
         "ut:request": "insert-03.ru"
       },
       "approval": "dawgt:Approved",
@@ -305,13 +280,15 @@
       "comment": "This is a INSERT over a dataset with a single triple in a named graph, inserting into the named graph using the WITH keyword",
       "name": "INSERT 03",
       "result": {
-        "@id": "_:b24",
+        "@id": "_:b1",
         "ut:data": "insert-03-post.ttl",
-        "ut:graphData": {
-          "@id": "_:b23",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-03-g1-post.ttl"
-        }
+        "ut:graphData": [
+          {
+            "@id": "_:b0",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-03-g1-post.ttl"
+          }
+        ]
       }
     },
     {
@@ -320,11 +297,13 @@
       "action": {
         "@id": "_:b22",
         "ut:data": "insert-04-pre.ttl",
-        "ut:graphData": {
-          "@id": "_:b21",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-04-g1-pre.ttl"
-        },
+        "ut:graphData": [
+          {
+            "@id": "_:b23",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-04-g1-pre.ttl"
+          }
+        ],
         "ut:request": "insert-04.ru"
       },
       "approval": "dawgt:Approved",
@@ -332,29 +311,31 @@
       "comment": "This is a INSERT of a triple over a dataset with data in named graphs, inserting into the default graph using the USING keyword",
       "name": "INSERT 04",
       "result": {
-        "@id": "_:b20",
+        "@id": "_:b44",
         "ut:data": "insert-04-post.ttl",
-        "ut:graphData": {
-          "@id": "_:b19",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-04-g1-post.ttl"
-        }
+        "ut:graphData": [
+          {
+            "@id": "_:b43",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-04-g1-post.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b42",
         "ut:data": "insert-using-01-pre.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b17",
+            "@id": "_:b41",
             "label": "http://example.org/g1",
             "ut:graph": "insert-using-01-g1-pre.ttl"
           },
           {
-            "@id": "_:b16",
+            "@id": "_:b40",
             "label": "http://example.org/g2",
             "ut:graph": "insert-using-01-g2-pre.ttl"
           }
@@ -366,16 +347,16 @@
       "comment": "This is an INSERT into the default graph of two triples constructed from the data in two named graphs that are treated as the default graph during matching with the USING keyword.",
       "name": "INSERT USING 01",
       "result": {
-        "@id": "_:b15",
+        "@id": "_:b39",
         "ut:data": "insert-using-01-post.ttl",
         "ut:graphData": [
           {
-            "@id": "_:b14",
+            "@id": "_:b38",
             "label": "http://example.org/g1",
             "ut:graph": "insert-using-01-g1-post.ttl"
           },
           {
-            "@id": "_:b13",
+            "@id": "_:b37",
             "label": "http://example.org/g2",
             "ut:graph": "insert-using-01-g2-post.ttl"
           }
@@ -386,12 +367,14 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b12",
-        "ut:graphData": {
-          "@id": "_:b11",
-          "label": "http://example.org/g1",
-          "ut:graph": "insert-05a-g1-pre.ttl"
-        },
+        "@id": "_:b36",
+        "ut:graphData": [
+          {
+            "@id": "_:b35",
+            "label": "http://example.org/g1",
+            "ut:graph": "insert-05a-g1-pre.ttl"
+          }
+        ],
         "ut:request": "insert-05a.ru"
       },
       "approval": "dawgt:Approved",
@@ -399,19 +382,21 @@
       "comment": "As per http://lists.w3.org/Archives/Public/public-rdf-dawg/2012AprJun/0165.html",
       "name": "INSERT same bnode twice",
       "result": {
-        "@id": "_:b10",
-        "ut:graphData": {
-          "@id": "_:b9",
-          "label": "http://example.org/g3",
-          "ut:graph": "insert-05a-g3-post.ttl"
-        }
+        "@id": "_:b34",
+        "ut:graphData": [
+          {
+            "@id": "_:b33",
+            "label": "http://example.org/g3",
+            "ut:graph": "insert-05a-g3-post.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b32",
         "ut:request": "insert-data-same-bnode.ru"
       },
       "approval": "dawgt:Approved",
@@ -419,19 +404,21 @@
       "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012JulSep/0196.html, this can be viewed as a variation of :insert-05a",
       "name": "INSERTing the same bnode with INSERT DATA into two different Graphs is the same bnode",
       "result": {
-        "@id": "_:b7",
-        "ut:graphData": {
-          "@id": "_:b6",
-          "label": "http://example.org/g3",
-          "ut:graph": "insert-05a-g3-post.ttl"
-        }
+        "@id": "_:b31",
+        "ut:graphData": [
+          {
+            "@id": "_:b30",
+            "label": "http://example.org/g3",
+            "ut:graph": "insert-05a-g3-post.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b29",
         "ut:data": "insert-where-same-bnode-pre.ttl",
         "ut:request": "insert-where-same-bnode.ru"
       },
@@ -440,20 +427,22 @@
       "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a",
       "name": "INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode",
       "result": {
-        "@id": "_:b4",
+        "@id": "_:b28",
         "ut:data": "insert-where-same-bnode-pre.ttl",
-        "ut:graphData": {
-          "@id": "_:b3",
-          "label": "http://example.org/g3",
-          "ut:graph": "insert-where-same-bnode-g3-post.ttl"
-        }
+        "ut:graphData": [
+          {
+            "@id": "_:b27",
+            "label": "http://example.org/g3",
+            "ut:graph": "insert-where-same-bnode-g3-post.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b26",
         "ut:data": "insert-where-same-bnode-pre.ttl",
         "ut:request": "insert-where-same-bnode2.ru"
       },
@@ -462,13 +451,15 @@
       "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a",
       "name": "INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode even if both WHERE clauses have the empty solution mapping as the only solution.",
       "result": {
-        "@id": "_:b1",
+        "@id": "_:b25",
         "ut:data": "insert-where-same-bnode-pre.ttl",
-        "ut:graphData": {
-          "@id": "_:b0",
-          "label": "http://example.org/g3",
-          "ut:graph": "insert-where-same-bnode-g3-post.ttl"
-        }
+        "ut:graphData": [
+          {
+            "@id": "_:b24",
+            "label": "http://example.org/g3",
+            "ut:graph": "insert-where-same-bnode-g3-post.ttl"
+          }
+        ]
       }
     }
   ],

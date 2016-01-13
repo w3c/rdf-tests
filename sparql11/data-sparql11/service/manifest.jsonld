@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -153,11 +122,11 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b1",
         "data": "data01.ttl",
         "query": "service01.rq",
         "serviceData": {
-          "@id": "_:b14",
+          "@id": "_:b0",
           "data": "data01endpoint.ttl",
           "endpoint": "http://example.org/sparql"
         }
@@ -172,16 +141,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b15",
         "query": "service02.rq",
         "serviceData": [
           {
-            "@id": "_:b12",
+            "@id": "_:b14",
             "data": "data02endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b11",
+            "@id": "_:b13",
             "data": "data02endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -197,16 +166,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b12",
         "query": "service03.rq",
         "serviceData": [
           {
-            "@id": "_:b9",
+            "@id": "_:b11",
             "data": "data03endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b8",
+            "@id": "_:b10",
             "data": "data03endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -222,11 +191,11 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b9",
         "data": "data04.ttl",
         "query": "service04a.rq",
         "serviceData": {
-          "@id": "_:b6",
+          "@id": "_:b8",
           "data": "data04endpoint.ttl",
           "endpoint": "http://example.org/sparql"
         }
@@ -241,17 +210,17 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b7",
         "data": "data05.ttl",
         "query": "service05.rq",
         "serviceData": [
           {
-            "@id": "_:b4",
+            "@id": "_:b6",
             "data": "data05endpoint1.ttl",
             "endpoint": "http://example1.org/sparql"
           },
           {
-            "@id": "_:b3",
+            "@id": "_:b5",
             "data": "data05endpoint2.ttl",
             "endpoint": "http://example2.org/sparql"
           }
@@ -267,10 +236,10 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b4",
         "query": "service06.rq",
         "serviceData": {
-          "@id": "_:b1",
+          "@id": "_:b3",
           "data": "data06endpoint1.ttl",
           "endpoint": "http://example1.org/sparql"
         }
@@ -285,7 +254,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b2",
         "data": "data07.ttl",
         "query": "service07.rq"
       },

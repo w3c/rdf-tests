@@ -168,7 +168,7 @@
                 ut:graphData [ut:graph <delete-pre-01.ttl> ;
                               rdfs:label "http://example.org/g1" ] 
               ] ;
-    mf:result [ ut:result ut:Success ; 
+    mf:result [ ut:result ut:success ; 
                 ut:graphData [ ut:graph <delete-post-01f.ttl> ;
                                rdfs:label "http://example.org/g1" ] 
               ] .

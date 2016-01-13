@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",

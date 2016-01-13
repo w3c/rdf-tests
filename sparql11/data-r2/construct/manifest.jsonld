@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,46 +105,17 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
-  "@id": "_:b1",
+  "@id": "_:b5",
   "@type": "mf:Manifest",
   "comment": "Some DAWG test cases on the CONSTRUCT result form",
   "entries": [
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b4",
         "data": "data-ident.ttl",
         "query": "query-ident.rq"
       },
@@ -162,14 +131,14 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "comment": "Graph equivalent result graph",
       "name": "dawg-construct-identity",
-      "queryForm": "QueryConstruct",
+      "queryForm": "mq:QueryConstruct",
       "result": "result-ident.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b3",
         "data": "data-ident.ttl",
         "query": "query-subgraph.rq"
       },
@@ -177,14 +146,14 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "comment": "Result subgraph of original graph",
       "name": "dawg-construct-subgraph",
-      "queryForm": "QueryConstruct",
+      "queryForm": "mq:QueryConstruct",
       "result": "result-subgraph.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b2",
         "data": "data-reif.ttl",
         "query": "query-reif-1.rq"
       },
@@ -192,14 +161,14 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "comment": "Reification of the default graph",
       "name": "dawg-construct-reification-1",
-      "queryForm": "QueryConstruct",
+      "queryForm": "mq:QueryConstruct",
       "result": "result-reif.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b1",
         "data": "data-reif.ttl",
         "query": "query-reif-2.rq"
       },
@@ -207,14 +176,14 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "comment": "Reification of the default graph",
       "name": "dawg-construct-reification-2",
-      "queryForm": "QueryConstruct",
+      "queryForm": "mq:QueryConstruct",
       "result": "result-reif.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/construct/manifest#construct-5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b0",
         "data": "data-opt.ttl",
         "query": "query-construct-optional.rq"
       },
@@ -222,7 +191,7 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "comment": "Reification of the default graph",
       "name": "dawg-construct-optional",
-      "queryForm": "QueryConstruct",
+      "queryForm": "mq:QueryConstruct",
       "result": "result-construct-optional.ttl"
     }
   ],

@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-str-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b1",
         "data": "data-builtin-1.ttl",
         "query": "q-str-1.rq"
       },
@@ -167,7 +136,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-str-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b19",
+        "@id": "_:b0",
         "data": "data-builtin-1.ttl",
         "query": "q-str-2.rq"
       },
@@ -180,7 +149,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-str-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b10",
         "data": "data-builtin-1.ttl",
         "query": "q-str-3.rq"
       },
@@ -193,7 +162,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-str-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b9",
         "data": "data-builtin-1.ttl",
         "query": "q-str-4.rq"
       },
@@ -206,7 +175,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-isBlank-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b23",
         "data": "data-builtin-1.ttl",
         "query": "q-blank-1.rq"
       },
@@ -219,7 +188,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-isLiteral-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b23",
+        "@id": "_:b2",
         "data": "data-builtin-2.ttl",
         "query": "q-isliteral-1.rq"
       },
@@ -232,7 +201,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-datatype-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b22",
         "data": "data-builtin-1.ttl",
         "query": "q-datatype-1.rq"
       },
@@ -245,7 +214,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-datatype-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b21",
         "data": "data-builtin-2.ttl",
         "query": "q-datatype-2.rq"
       },
@@ -259,7 +228,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-datatype-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b20",
         "data": "data-builtin-2.ttl",
         "query": "q-datatype-3.rq"
       },
@@ -273,7 +242,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-lang-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b19",
         "data": "data-builtin-2.ttl",
         "query": "q-lang-1.rq"
       },
@@ -287,7 +256,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-lang-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b18",
         "data": "data-builtin-2.ttl",
         "query": "q-lang-2.rq"
       },
@@ -301,7 +270,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-lang-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b17",
         "data": "data-builtin-2.ttl",
         "query": "q-lang-3.rq"
       },
@@ -315,7 +284,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-isURI-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b16",
         "data": "data-builtin-1.ttl",
         "query": "q-uri-1.rq"
       },
@@ -328,7 +297,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-isIRI-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b15",
         "data": "data-builtin-1.ttl",
         "query": "q-iri-1.rq"
       },
@@ -341,7 +310,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b14",
         "data": "data-langMatches.ttl",
         "query": "q-langMatches-1.rq"
       },
@@ -355,7 +324,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b13",
         "data": "data-langMatches.ttl",
         "query": "q-langMatches-2.rq"
       },
@@ -369,7 +338,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b12",
         "data": "data-langMatches.ttl",
         "query": "q-langMatches-3.rq"
       },
@@ -383,7 +352,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b11",
         "data": "data-langMatches.ttl",
         "query": "q-langMatches-4.rq"
       },
@@ -397,7 +366,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-basic",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b8",
         "data": "data-langMatches-de.ttl",
         "query": "q-langMatches-de-de.rq"
       },
@@ -411,7 +380,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#lang-case-insensitive-eq",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b7",
         "data": "lang-case-sensitivity.ttl",
         "query": "lang-case-sensitivity-eq.rq"
       },
@@ -425,7 +394,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#lang-case-insensitive-ne",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b6",
         "data": "lang-case-sensitivity.ttl",
         "query": "lang-case-sensitivity-ne.rq"
       },
@@ -439,7 +408,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#sameTerm-simple",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b5",
         "data": "data-builtin-1.ttl",
         "query": "sameTerm.rq"
       },
@@ -453,7 +422,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#sameTerm-eq",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b4",
         "data": "data-builtin-1.ttl",
         "query": "sameTerm-eq.rq"
       },
@@ -467,7 +436,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#sameTerm-not-eq",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b3",
         "data": "data-builtin-1.ttl",
         "query": "sameTerm-not-eq.rq"
       },

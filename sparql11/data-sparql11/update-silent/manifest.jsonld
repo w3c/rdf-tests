@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b26",
         "ut:request": "load-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -167,7 +136,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b25",
         "ut:request": "load-silent-into.ru"
       },
       "approval": "dawgt:Approved",
@@ -180,7 +149,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b24",
         "ut:data": "spo.ttl",
         "ut:request": "clear-silent.ru"
       },
@@ -189,7 +158,7 @@
       "comment": "Clearing a non-existent named graph",
       "name": "CLEAR SILENT GRAPH iri",
       "result": {
-        "@id": "_:b25",
+        "@id": "_:b23",
         "ut:data": "spo.ttl"
       }
     },
@@ -197,7 +166,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b24",
+        "@id": "_:b22",
         "ut:request": "clear-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -210,12 +179,14 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b23",
-        "ut:graphData": {
-          "@id": "_:b22",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b21",
+        "ut:graphData": [
+          {
+            "@id": "_:b20",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "create-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -223,19 +194,21 @@
       "comment": "Creation of an already existent named graph",
       "name": "CREATE SILENT iri",
       "result": {
-        "@id": "_:b21",
-        "ut:graphData": {
-          "@id": "_:b20",
-          "label": "http://example.org/g1",
-          "ut:graph": "spo.ttl"
-        }
+        "@id": "_:b19",
+        "ut:graphData": [
+          {
+            "@id": "_:b18",
+            "label": "http://example.org/g1",
+            "ut:graph": "spo.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b19",
+        "@id": "_:b17",
         "ut:data": "spo.ttl",
         "ut:request": "drop-silent.ru"
       },
@@ -244,7 +217,7 @@
       "comment": "Clearing a non-existent named graph",
       "name": "DROP SILENT GRAPH iri",
       "result": {
-        "@id": "_:b18",
+        "@id": "_:b16",
         "ut:data": "spo.ttl"
       }
     },
@@ -252,7 +225,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b15",
         "ut:request": "drop-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -265,12 +238,14 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b16",
-        "ut:graphData": {
-          "@id": "_:b15",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b14",
+        "ut:graphData": [
+          {
+            "@id": "_:b13",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "copy-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -278,19 +253,21 @@
       "comment": "copy a non-existent graph",
       "name": "COPY SILENT",
       "result": {
-        "@id": "_:b14",
-        "ut:graphData": {
-          "@id": "_:b13",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        }
+        "@id": "_:b12",
+        "ut:graphData": [
+          {
+            "@id": "_:b11",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b10",
         "ut:request": "copy-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -303,12 +280,14 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b11",
-        "ut:graphData": {
-          "@id": "_:b10",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b9",
+        "ut:graphData": [
+          {
+            "@id": "_:b8",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "move-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -316,19 +295,21 @@
       "comment": "move a non-existent graph",
       "name": "MOVE SILENT",
       "result": {
-        "@id": "_:b1",
-        "ut:graphData": {
-          "@id": "_:b0",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        }
+        "@id": "_:b7",
+        "ut:graphData": [
+          {
+            "@id": "_:b6",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b5",
         "ut:request": "move-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -341,12 +322,14 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b8",
-        "ut:graphData": {
-          "@id": "_:b7",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        },
+        "@id": "_:b4",
+        "ut:graphData": [
+          {
+            "@id": "_:b3",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ],
         "ut:request": "add-silent.ru"
       },
       "approval": "dawgt:Approved",
@@ -354,19 +337,21 @@
       "comment": "add a non-existent graph",
       "name": "ADD SILENT",
       "result": {
-        "@id": "_:b6",
-        "ut:graphData": {
-          "@id": "_:b5",
-          "label": "http://example.org/g2",
-          "ut:graph": "spo.ttl"
-        }
+        "@id": "_:b2",
+        "ut:graphData": [
+          {
+            "@id": "_:b1",
+            "label": "http://example.org/g2",
+            "ut:graph": "spo.ttl"
+          }
+        ]
       }
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b0",
         "ut:request": "add-to-default-silent.ru"
       },
       "approval": "dawgt:Approved",

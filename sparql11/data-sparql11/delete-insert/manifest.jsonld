@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-01",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b15",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-01.ru"
       },
@@ -163,7 +132,7 @@
       "comment": "This update request reverts all foaf:knows relations",
       "name": "DELETE INSERT 1",
       "result": {
-        "@id": "_:b3",
+        "@id": "_:b14",
         "ut:data": "delete-insert-post-01.ttl"
       }
     },
@@ -171,7 +140,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-01b",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b13",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-01b.ru"
       },
@@ -180,7 +149,7 @@
       "comment": "This test case, as a variant of dawg-delete-insert-01, shoes that DELETE followed by INSERT is different from DELETE INSERT in a single operation",
       "name": "DELETE INSERT 1b",
       "result": {
-        "@id": "_:b10",
+        "@id": "_:b12",
         "ut:data": "delete-insert-post-01b.ttl"
       }
     },
@@ -188,7 +157,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-01c",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b11",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-01c.ru"
       },
@@ -197,7 +166,7 @@
       "comment": "This test case, as a variant of dawg-delete-insert-01, shoes that INSERT followed by DELETE is different from DELETE INSERT in a single operation.",
       "name": "DELETE INSERT 1c",
       "result": {
-        "@id": "_:b15",
+        "@id": "_:b10",
         "ut:data": "delete-insert-post-01b.ttl"
       }
     },
@@ -205,7 +174,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-02",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b9",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-02.ru"
       },
@@ -214,7 +183,7 @@
       "comment": "This deletes all foaf:knows relations from anyone named 'Alan'.",
       "name": "DELETE INSERT 2",
       "result": {
-        "@id": "_:b4",
+        "@id": "_:b8",
         "ut:data": "delete-insert-post-02.ttl"
       }
     },
@@ -240,7 +209,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-04",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b7",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-04.ru"
       },
@@ -249,7 +218,7 @@
       "comment": "This deletes all foaf:knows relations from anyone named 'Alan' using a naive rewriting, as suggested in http://lists.w3.org/Archives/Public/public-rdf-dawg/2011JanMar/0305.html",
       "name": "DELETE INSERT 4",
       "result": {
-        "@id": "_:b11",
+        "@id": "_:b6",
         "ut:data": "delete-insert-post-02.ttl"
       }
     },
@@ -257,7 +226,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-04b",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b5",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-04b.ru"
       },
@@ -266,7 +235,7 @@
       "comment": "This deletes all foaf:knows relations from anyone named 'Alan' using a simpler rewriting than dawg-delete-insert-04",
       "name": "DELETE INSERT 4b",
       "result": {
-        "@id": "_:b8",
+        "@id": "_:b4",
         "ut:data": "delete-insert-post-02.ttl"
       }
     },
@@ -283,7 +252,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-05b",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b3",
         "ut:data": "delete-insert-pre-01.ttl",
         "ut:request": "delete-insert-05b.ru"
       },
@@ -292,7 +261,7 @@
       "comment": "This deletes all foaf:knows relations from anyone named 'Alan' and inserts that all 'Alans' know themselves only, using a rewriting analogous to :dawg-delete-insert-04b",
       "name": "DELETE INSERT 5b",
       "result": {
-        "@id": "_:b5",
+        "@id": "_:b2",
         "ut:data": "delete-insert-post-05.ttl"
       }
     },
@@ -309,7 +278,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-insert/manifest#dawg-delete-insert-06b",
       "@type": "mf:UpdateEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b1",
         "ut:data": "delete-insert-pre-06.ttl",
         "ut:request": "delete-insert-05b.ru"
       },
@@ -318,7 +287,7 @@
       "comment": "dawg-delete-insert-06 and dawg-delete-insert-06b show that the rewriting in dawg-delete-insert-05b.ru isn't equivalent to dawg-delete-insert-05.ru in case Alan doesn't know anybody.",
       "name": "DELETE INSERT 6b",
       "result": {
-        "@id": "_:b1",
+        "@id": "_:b0",
         "ut:data": "delete-insert-pre-06.ttl"
       }
     },

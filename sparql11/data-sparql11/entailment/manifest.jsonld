@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -153,23 +122,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b25",
-        "data": "bind-data.ttl",
-        "query": "bind01.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b59",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind01.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -180,23 +149,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b20",
-        "data": "bind-data.ttl",
-        "query": "bind02.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b42",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind02.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -207,23 +176,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
-        "data": "bind-data.ttl",
-        "query": "bind03.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b25",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind03.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -234,23 +203,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
-        "data": "bind-data.ttl",
-        "query": "bind04.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b13",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind04.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -261,23 +230,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
-        "data": "bind-data.ttl",
-        "query": "bind05.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b4",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind05.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -288,23 +257,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b67",
-        "data": "bind-data.ttl",
-        "query": "bind06.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b5",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind06.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -315,23 +284,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b62",
-        "data": "bind-data.ttl",
-        "query": "bind07.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b14",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "bind07.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -342,23 +311,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#bind08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b58",
-        "data": "bind-data.ttl",
-        "query": "bind08.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b26",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:QL",
           "pr:RL",
           "pr:Full",
           "pr:EL"
         ],
-        "sd:entailmentRegime": [
+        "data": "bind-data.ttl",
+        "entailmentRegime": [
           "ent:D",
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF"
-        ]
+        ],
+        "query": "bind08.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -369,12 +338,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#d-ent-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b54",
+        "@id": "_:b43",
         "data": "d-ent-01.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "d-ent-01.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:D"
-        },
-        "query": "d-ent-01.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -385,19 +354,19 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#lang",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b52",
-        "data": "lang.ttl",
-        "query": "lang.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b50",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full",
           "pr:QL",
           "pr:RL"
         ],
-        "sd:entailmentRegime": [
+        "data": "lang.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "lang.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -408,20 +377,20 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#owlds01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b48",
-        "data": "owlds01.ttl",
-        "query": "owlds01.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b65",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full",
           "pr:EL"
         ],
-        "sd:entailmentRegime": [
+        "data": "owlds01.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "owlds01.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -432,20 +401,20 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#owlds02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
-        "data": "owlds02.ttl",
-        "query": "owlds02.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b69",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "owlds02.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D",
           "ent:RDF"
-        ]
+        ],
+        "query": "owlds02.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -456,18 +425,18 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b45",
-        "data": "paper-sparqldl-data.ttl",
-        "query": "paper-sparqldl-Q1.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b66",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "paper-sparqldl-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "paper-sparqldl-Q1.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -478,13 +447,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q1-rdfs",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b43",
+        "@id": "_:b62",
         "data": "paper-sparqldl-data.ttl",
-        "query": "paper-sparqldl-Q1.rq",
-        "sd:entailmentRegime": [
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "paper-sparqldl-Q1.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -495,15 +464,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b40",
+        "@id": "_:b61",
         "data": "paper-sparqldl-data.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "paper-sparqldl-Q2.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "paper-sparqldl-Q2.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-10-09#resolution_3",
@@ -514,15 +483,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b38",
+        "@id": "_:b57",
         "data": "paper-sparqldl-data.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "paper-sparqldl-Q3.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "paper-sparqldl-Q3.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -533,18 +502,18 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b36",
-        "data": "paper-sparqldl-data.ttl",
-        "query": "paper-sparqldl-Q4.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b55",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "paper-sparqldl-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "paper-sparqldl-Q4.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-04#resolution_2",
@@ -555,21 +524,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#paper-sparqldl-Q5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b34",
-        "data": "paper-sparqldl-data.ttl",
-        "query": "paper-sparqldl-Q5.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b53",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full",
           "pr:QL"
         ],
-        "sd:entailmentRegime": [
+        "data": "paper-sparqldl-data.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "paper-sparqldl-Q5.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -580,15 +549,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b30",
+        "@id": "_:b47",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent10.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent10.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -599,20 +568,20 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b27",
-        "data": "parent.ttl",
-        "query": "parent2.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b44",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "parent.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDF",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "parent2.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -623,15 +592,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b24",
+        "@id": "_:b39",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent3.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent3.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -642,15 +611,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b36",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent4.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent4.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -661,15 +630,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b33",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent5.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent5.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -680,15 +649,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent6",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b31",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent6.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent6.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -699,15 +668,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent7",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b29",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent7.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent7.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -718,12 +687,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent8",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b27",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "parent8.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent8.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -734,15 +703,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#parent9",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b24",
         "data": "parent.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "parent9.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "parent9.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -753,19 +722,19 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#plainLit",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
-        "data": "plainLit.ttl",
-        "query": "plainLit.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b22",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "plainLit.ttl",
+        "entailmentRegime": [
           "ent:OWL-RDF-Based",
           "ent:OWL-Direct"
-        ]
+        ],
+        "query": "plainLit.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -776,12 +745,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdf01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b69",
+        "@id": "_:b19",
         "data": "rdf01.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rdf01.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RDF"
-        },
-        "query": "rdf01.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -792,12 +761,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdf02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b65",
+        "@id": "_:b17",
         "data": "rdf02.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rdf02.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RDF"
-        },
-        "query": "rdf02.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -808,12 +777,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdf03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b63",
+        "@id": "_:b15",
         "data": "rdf03.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rdf03.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RDF"
-        },
-        "query": "rdf03.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -824,22 +793,22 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdf04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b60",
-        "data": "rdf04.ttl",
-        "query": "rdf04.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b12",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdf04.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based",
           "ent:RDF"
-        ]
+        ],
+        "query": "rdf04.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -850,21 +819,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b56",
-        "data": "rdfs01.ttl",
-        "query": "rdfs01.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b9",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs01.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs01.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -875,21 +844,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b53",
-        "data": "rdfs01.ttl",
-        "query": "rdfs02.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b7",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs01.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs02.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -900,13 +869,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b49",
+        "@id": "_:b1",
         "data": "rdfs03.ttl",
-        "query": "rdfs03.rq",
-        "sd:entailmentRegime": [
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "rdfs03.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -917,21 +886,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b47",
-        "data": "rdfs04.ttl",
-        "query": "rdfs04.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b3",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs04.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs04.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -942,21 +911,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b46",
-        "data": "rdfs05.ttl",
-        "query": "rdfs05.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b0",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs05.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs05.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -967,21 +936,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b42",
-        "data": "rdfs06.ttl",
-        "query": "rdfs06.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b52",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs06.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs06.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -992,21 +961,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b39",
-        "data": "rdfs07.ttl",
-        "query": "rdfs07.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b67",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs07.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs07.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1017,13 +986,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b35",
+        "@id": "_:b63",
         "data": "rdfs08.ttl",
-        "query": "rdfs08.rq",
-        "sd:entailmentRegime": [
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "rdfs08.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1034,21 +1003,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b33",
-        "data": "rdfs09.ttl",
-        "query": "rdfs09.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b60",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs09.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs09.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1059,21 +1028,21 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b29",
-        "data": "rdfs10.ttl",
-        "query": "rdfs10.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b56",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:QL",
           "pr:RL",
           "pr:Full",
           "pr:EL"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs10.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "rdfs10.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1084,13 +1053,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b51",
         "data": "rdfs11.ttl",
-        "query": "rdfs11.rq",
-        "sd:entailmentRegime": [
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "rdfs11.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-04#resolution_2",
@@ -1101,13 +1070,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b48",
         "data": "rdfs12.ttl",
-        "query": "rdfs12.rq",
-        "sd:entailmentRegime": [
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "rdfs12.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-04#resolution_2",
@@ -1118,20 +1087,20 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rdfs13",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b19",
-        "data": "rdfs13.ttl",
-        "query": "rdfs13.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b46",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "rdfs13.ttl",
+        "entailmentRegime": [
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "rdfs13.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1142,12 +1111,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rif01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b41",
         "data": "rif01.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rif01.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RIF"
-        },
-        "query": "rif01.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_3",
@@ -1158,12 +1127,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rif03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b38",
         "data": "rif03.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rif03.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RIF"
-        },
-        "query": "rif03.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_3",
@@ -1174,12 +1143,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rif04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b34",
         "data": "rif04.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rif04.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RIF"
-        },
-        "query": "rif04.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_3",
@@ -1190,12 +1159,12 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#rif06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b32",
         "data": "rif06.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "query": "rif06.rq",
+        "sd:entailmentRegime": {
           "@id": "ent:RIF"
-        },
-        "query": "rif06.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_3",
@@ -1206,16 +1175,16 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple1",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
-        "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
-          "@id": "ent:OWL-Direct"
-        },
-        "query": "simple1.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b30",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:RL"
-        ]
+        ],
+        "data": "simple.ttl",
+        "query": "simple1.rq",
+        "sd:entailmentRegime": {
+          "@id": "ent:OWL-Direct"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1226,15 +1195,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple2",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b68",
+        "@id": "_:b28",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple2.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple2.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1245,15 +1214,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple3",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b64",
+        "@id": "_:b23",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple3.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple3.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1264,15 +1233,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple4",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b61",
+        "@id": "_:b21",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple4.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple4.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1283,15 +1252,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple5",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b59",
+        "@id": "_:b20",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple5.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple5.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1302,15 +1271,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple6",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b57",
+        "@id": "_:b18",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple6.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple6.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1321,15 +1290,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple7",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b55",
+        "@id": "_:b16",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple7.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple7.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1340,15 +1309,15 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#simple8",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b51",
+        "@id": "_:b11",
         "data": "simple.ttl",
-        "http://www.w3.org/ns/sparql-service-description#EntailmentProfile": {
+        "query": "simple8.rq",
+        "sd:EntailmentProfile": {
           "@id": "pr:DL"
         },
-        "http://www.w3.org/ns/sparql-service-description#entailmentRegime": {
+        "sd:entailmentRegime": {
           "@id": "ent:OWL-Direct"
-        },
-        "query": "simple8.rq"
+        }
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1359,23 +1328,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b50",
-        "data": "data-01.ttl",
-        "query": "sparqldl-01.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b10",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-01.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D",
           "ent:RDF"
-        ]
+        ],
+        "query": "sparqldl-01.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1386,22 +1355,22 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b32",
-        "data": "data-01.ttl",
-        "query": "sparqldl-02.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b8",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:Full",
           "pr:RL",
           "pr:QL"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-01.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-02.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1412,20 +1381,20 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b44",
-        "data": "data-02.ttl",
-        "query": "sparqldl-03.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b6",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full",
           "pr:EL"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-02.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-03.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1436,22 +1405,22 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b41",
-        "data": "data-03.ttl",
-        "query": "sparqldl-04.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b2",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-03.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDF",
           "ent:RDFS",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-04.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1463,21 +1432,21 @@
       "@type": "mf:QueryEvaluationTest",
       "action": {
         "@id": "_:b37",
-        "data": "data-03.ttl",
-        "query": "sparqldl-05.rq",
-        "sd:EntailmentProfile": [
+        "EntailmentProfile": [
           "pr:DL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-03.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-05.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1488,23 +1457,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b31",
-        "data": "data-06.ttl",
-        "query": "sparqldl-06.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b68",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-06.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-06.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1515,23 +1484,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b28",
-        "data": "data-06.ttl",
-        "query": "sparqldl-07.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b64",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:RL",
           "pr:QL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-06.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-07.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1542,23 +1511,23 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b23",
-        "data": "data-06.ttl",
-        "query": "sparqldl-08.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b58",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:QL",
           "pr:Full",
           "pr:RL"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-06.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based",
           "ent:RDFS",
           "ent:RDF",
           "ent:D"
-        ]
+        ],
+        "query": "sparqldl-08.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1569,22 +1538,22 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
-        "data": "data-07.ttl",
-        "query": "sparqldl-09.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b54",
+        "EntailmentProfile": [
           "pr:QL",
           "pr:DL",
           "pr:EL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-07.ttl",
+        "entailmentRegime": [
           "ent:RDFS",
           "ent:RDF",
           "ent:D",
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "sparqldl-09.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_2",
@@ -1595,18 +1564,18 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
-        "data": "data-07.ttl",
-        "query": "sparqldl-10.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b49",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full",
           "pr:EL"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-07.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "sparqldl-10.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1617,17 +1586,17 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
-        "data": "data-11.ttl",
-        "query": "sparqldl-11.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b45",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-11.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "sparqldl-11.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1638,17 +1607,17 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
-        "data": "data-11.ttl",
-        "query": "sparqldl-12.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b40",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-11.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "sparqldl-12.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",
@@ -1659,19 +1628,19 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/entailment/manifest#sparqldl-13",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b66",
-        "data": "data-08.ttl",
-        "query": "sparqldl-13.rq",
-        "sd:EntailmentProfile": [
+        "@id": "_:b35",
+        "EntailmentProfile": [
           "pr:DL",
           "pr:EL",
           "pr:RL",
           "pr:Full"
         ],
-        "sd:entailmentRegime": [
+        "data": "data-08.ttl",
+        "entailmentRegime": [
           "ent:OWL-Direct",
           "ent:OWL-RDF-Based"
-        ]
+        ],
+        "query": "sparqldl-13.rq"
       },
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_2",

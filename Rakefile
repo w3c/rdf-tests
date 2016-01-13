@@ -9,8 +9,8 @@ MANIFESTS = Dir.glob("**/manifest*.ttl")
 
 desc "Build HTML manifests"
 task index: MANIFESTS.
-  map {|m| m.sub(/manifest(.*)\.ttl$/, 'index\1.html')}.
-  select {|m| File.exist?(m)}
+  select {|m| File.exist?(m)}.
+  map {|m| m.sub(/manifest(.*)\.ttl$/, 'index\1.html')}
 
 desc "Build JSON-LD manifests"
 task manifests_jsonld: MANIFESTS.

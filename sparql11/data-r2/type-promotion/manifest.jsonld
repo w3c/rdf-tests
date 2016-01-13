@@ -38,6 +38,16 @@
       "@id": "mq:endpoint",
       "@type": "@id"
     },
+    "EntailmentProfile": {
+      "@id": "sd:EntailmentProfile",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "entailmentRegime": {
+      "@id": "sd:entailmentRegime",
+      "@type": "@id",
+      "@container": "@list"
+    },
     "entries": {
       "@id": "mf:entries",
       "@container": "@list",
@@ -46,10 +56,6 @@
     "feature": {
       "@id": "mf:feature",
       "@type": "@vocab"
-    },
-    "graphData": {
-      "@id": "mq:graphData",
-      "@type": "@id"
     },
     "include": {
       "@id": "mf:include",
@@ -92,14 +98,6 @@
       "@id": "mq:serviceData",
       "@type": "@id"
     },
-    "sd:EntailmentProfile": {
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "sd:entailmentRegime": {
-      "@type": "@id",
-      "@container": "@list"
-    },
     "ut:data": {
       "@type": "@id"
     },
@@ -107,43 +105,14 @@
       "@type": "@id"
     },
     "ut:graphData": {
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "ut:request": {
       "@type": "@vocab"
     },
-    "IllFormedLiteral": {
-      "@id": "mf:IllFormedLiteral"
-    },
-    "XsdDateOperations": {
-      "@id": "mf:XsdDateOperations"
-    },
-    "StringSimpleLiteralCmp": {
-      "@id": "mf:StringSimpleLiteralCmp"
-    },
-    "KnownTypesDefault2Neq": {
-      "@id": "mf:KnownTypesDefault2Neq"
-    },
-    "LangTagAwareness": {
-      "@id": "mf:LangTagAwareness"
-    },
-    "ResultCardinality": {
-      "@id": "mf:ResultCardinality"
-    },
-    "LaxCardinality": {
-      "@id": "mf:LaxCardinality"
-    },
-    "QuerySelect": {
-      "@id": "mq:QuerySelect"
-    },
-    "QueryConstruct": {
-      "@id": "mq:QueryConstruct"
-    },
-    "QueryDescribe": {
-      "@id": "mq:QueryDescribe"
-    },
-    "QueryAsk": {
-      "@id": "mq:QueryAsk"
+    "ut:result": {
+      "@type": "@vocab"
     }
   },
   "@id": "",
@@ -154,7 +123,7 @@
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-01",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b10",
+        "@id": "_:b21",
         "data": "tP.ttl",
         "query": "tP-double-double.rq"
       },
@@ -162,14 +131,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-double-double",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-02",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b8",
+        "@id": "_:b20",
         "data": "tP.ttl",
         "query": "tP-double-float.rq"
       },
@@ -177,14 +146,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-double-float",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-03",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b6",
+        "@id": "_:b19",
         "data": "tP.ttl",
         "query": "tP-double-decimal.rq"
       },
@@ -192,14 +161,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-double-decimal",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-04",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b4",
+        "@id": "_:b18",
         "data": "tP.ttl",
         "query": "tP-float-float.rq"
       },
@@ -207,14 +176,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-float-float",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-05",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b2",
+        "@id": "_:b16",
         "data": "tP.ttl",
         "query": "tP-float-decimal.rq"
       },
@@ -222,14 +191,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-float-decimal",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-06",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b0",
+        "@id": "_:b15",
         "data": "tP.ttl",
         "query": "tP-decimal-decimal.rq"
       },
@@ -237,14 +206,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-decimal-decimal",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-07",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b28",
+        "@id": "_:b14",
         "data": "tP.ttl",
         "query": "tP-integer-short.rq"
       },
@@ -252,14 +221,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-integer-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-08",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b26",
+        "@id": "_:b13",
         "data": "tP.ttl",
         "query": "tP-nonPositiveInteger-short.rq"
       },
@@ -267,14 +236,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-nonPositiveInteger-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-09",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b25",
+        "@id": "_:b12",
         "data": "tP.ttl",
         "query": "tP-negativeInteger-short.rq"
       },
@@ -282,14 +251,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-negativeInteger-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-10",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b24",
+        "@id": "_:b11",
         "data": "tP.ttl",
         "query": "tP-long-short.rq"
       },
@@ -297,14 +266,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-long-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-11",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b22",
+        "@id": "_:b10",
         "data": "tP.ttl",
         "query": "tP-int-short.rq"
       },
@@ -312,14 +281,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-int-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-12",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b23",
+        "@id": "_:b9",
         "data": "tP.ttl",
         "query": "tP-short-short.rq"
       },
@@ -327,14 +296,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-13",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b21",
+        "@id": "_:b8",
         "data": "tP.ttl",
         "query": "tP-byte-short.rq"
       },
@@ -342,14 +311,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-byte-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-14",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b20",
+        "@id": "_:b7",
         "data": "tP.ttl",
         "query": "tP-nonNegativeInteger-short.rq"
       },
@@ -357,14 +326,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-nonNegativeInteger-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-15",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b19",
+        "@id": "_:b6",
         "data": "tP.ttl",
         "query": "tP-unsignedLong-short.rq"
       },
@@ -372,14 +341,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-unsignedLong-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-16",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b18",
+        "@id": "_:b5",
         "data": "tP.ttl",
         "query": "tP-unsignedInt-short.rq"
       },
@@ -387,14 +356,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-unsignedInt-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-17",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b17",
+        "@id": "_:b4",
         "data": "tP.ttl",
         "query": "tP-unsignedShort-short.rq"
       },
@@ -402,14 +371,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-unsignedShort-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-18",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b16",
+        "@id": "_:b3",
         "data": "tP.ttl",
         "query": "tP-unsignedByte-short.rq"
       },
@@ -417,14 +386,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-unsignedByte-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-19",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b15",
+        "@id": "_:b2",
         "data": "tP.ttl",
         "query": "tP-positiveInteger-short.rq"
       },
@@ -432,14 +401,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-positiveInteger-short",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-20",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b14",
+        "@id": "_:b1",
         "data": "tP.ttl",
         "query": "tP-short-double.rq"
       },
@@ -447,14 +416,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-double",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-21",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b13",
+        "@id": "_:b0",
         "data": "tP.ttl",
         "query": "tP-short-float.rq"
       },
@@ -462,14 +431,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-float",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-22",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b12",
+        "@id": "_:b17",
         "data": "tP.ttl",
         "query": "tP-short-decimal.rq"
       },
@@ -477,14 +446,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-decimal",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "true.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-23",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b11",
+        "@id": "_:b22",
         "data": "tP.ttl",
         "query": "tP-short-short-fail.rq"
       },
@@ -492,14 +461,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-short-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-24",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b9",
+        "@id": "_:b29",
         "data": "tP.ttl",
         "query": "tP-byte-short-fail.rq"
       },
@@ -507,14 +476,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-byte-short-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-25",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b7",
+        "@id": "_:b28",
         "data": "tP.ttl",
         "query": "tP-short-long-fail.rq"
       },
@@ -522,14 +491,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-long-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-26",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b5",
+        "@id": "_:b27",
         "data": "tP.ttl",
         "query": "tP-short-int-fail.rq"
       },
@@ -537,14 +506,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-int-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-27",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b3",
+        "@id": "_:b26",
         "data": "tP.ttl",
         "query": "tP-short-byte-fail.rq"
       },
@@ -552,14 +521,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-short-byte-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-28",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b1",
+        "@id": "_:b25",
         "data": "tP.ttl",
         "query": "tP-double-float-fail.rq"
       },
@@ -567,14 +536,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-double-float-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-29",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b29",
+        "@id": "_:b24",
         "data": "tP.ttl",
         "query": "tP-double-decimal-fail.rq"
       },
@@ -582,14 +551,14 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-double-decimal-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     },
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/type-promotion/manifest#type-promotion-30",
       "@type": "mf:QueryEvaluationTest",
       "action": {
-        "@id": "_:b27",
+        "@id": "_:b23",
         "data": "tP.ttl",
         "query": "tP-float-decimal-fail.rq"
       },
@@ -597,7 +566,7 @@
       "approvedBy": "http://www.w3.org/2007/07/17-dawg-minutes",
       "comment": "Positive test: product of type promotion within the xsd:decimal type tree.",
       "name": "tP-float-decimal-fail",
-      "queryForm": "QueryAsk",
+      "queryForm": "mq:QueryAsk",
       "result": "false.ttl"
     }
   ],

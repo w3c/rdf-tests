@@ -78,6 +78,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n\n    PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:fn \"John Doe\"\n        ].\n\n#### Response\n\n`201 Created`\n    ",
       "name": "PUT - Initial state"
     },
     {
@@ -85,6 +86,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $GRAPHSTORE$?graph=$GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n       foaf:businessCard [\n            a v:VCard;\n            v:fn \"John Doe\"\n       ].\n    ",
       "name": "GET of PUT - Initial state"
     },
     {
@@ -92,6 +94,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:fn \"Jane Doe\"\n        ].\n\n#### Response\n\n    204 No Content\n    ",
       "name": "PUT - graph already in store"
     },
     {
@@ -99,6 +102,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n       foaf:businessCard [\n            a v:VCard;\n            v:fn \"Jane Doe\"\n       ] .\n    ",
       "name": "GET of PUT - graph already in store"
     },
     {
@@ -106,6 +110,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    PUT $GRAPHSTORE$?default HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n\n#### Response\n\n    201 Created\n    ",
       "name": "PUT - default graph"
     },
     {
@@ -113,6 +118,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $GRAPHSTORE$?default HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n    ",
       "name": "GET of PUT - default graph"
     },
     {
@@ -120,6 +126,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:fn \"Jane Doe\"\n        ].\n\n#### Response\n\n    400 Bad Request\n    ",
       "name": "PUT - mismatched payload"
     },
     {
@@ -127,6 +134,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    200 OK\n    ",
       "name": "DELETE - existing graph"
     },
     {
@@ -134,6 +142,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $GRAPHSTORE$/person/2.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    404 Not Found\n    ",
       "name": "GET of DELETE - existing graph"
     },
     {
@@ -141,6 +150,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    404 Not Found\n    ",
       "name": "DELETE - non-existent graph"
     },
     {
@@ -155,6 +165,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    POST $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> foaf:name \"Jane Doe\"\n\n#### Response\n\n    200 OK\n    ",
       "name": "GET of POST - existing graph"
     },
     {
@@ -162,6 +173,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    POST $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: multipart/form-data; boundary=a6fe4cd636164618814be9f8d3d1a0de\n\n    --a6fe4cd636164618814be9f8d3d1a0de\n    Content-Disposition: form-data; name=\"lastName.ttl\"; filename=\"lastName.ttl\"\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    <http://$HOST$/$GRAPHSTORE$/person/1> foaf:familyName \"Doe\"\n\n    --a6fe4cd636164618814be9f8d3d1a0de\n    Content-Disposition: form-data; name=\"firstName.ttl\"; filename=\"firstName.ttl\"\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    <http://$HOST$/$GRAPHSTORE$/person/1> foaf:givenName \"Jane\"\n\n    --a6fe4cd636164618814be9f8d3d1a0de--\n\n#### Response\n\n    200 OK\n    ",
       "name": "POST - multipart/form-data"
     },
     {
@@ -169,6 +181,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n        foaf:name           \"Jane Doe\";\n        foaf:givenName      \"Jane\";\n        foaf:familyName     \"Doe\";\n        foaf:businessCard [\n            a               v:VCard;\n            v:fn            \"Jane Doe\"\n        ] .\n    ",
       "name": "GET of POST - multipart/form-data"
     },
     {
@@ -176,20 +189,23 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
-      "name": "POST - create  new graph"
+      "comment": "\n#### Request\n\n    POST $GRAPHSTORE$ HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n\n#### Response\n\n    201 Created\n    Location: $NEWPATH$\n    ",
+      "name": "POST - create new graph"
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__create__new_graph",
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
-      "name": "GET of POST - create  new graph"
+      "comment": "\n#### Request\n\n    GET $NEWPATH$ HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n    ",
+      "name": "GET of POST - create new graph"
     },
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__after_noop",
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    GET $NEWPATH$ HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n    ",
       "name": "GET of POST - after noop"
     },
     {
@@ -197,6 +213,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    HEAD $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n    ",
       "name": "HEAD on an existing graph"
     },
     {
@@ -204,6 +221,7 @@
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
+      "comment": "\n#### Request\n\n    HEAD $GRAPHSTORE$/person/4.ttl HTTP/1.1\n    Host: $HOST$\n\n#### Response\n\n    404 Not Found\n    ",
       "name": "HEAD on a non-existing graph"
     }
   ],
