@@ -48,11 +48,6 @@ MANIFESTS.each do |ttl|
           # Remove nil 'entries'
           man.delete('mf:entries') if man['mf:entries'].nil?
 
-          # Replace .ttl includes with .jsonld includes
-          if man['include'].is_a?(Array)
-            man['include'] = man['include'].map {|i| i.sub('.ttl', '.jsonld')}
-          end
-
           # Fix up test entries
           Array(man['entries']).each do |entry|
             # Fix results which aren't IRIs
