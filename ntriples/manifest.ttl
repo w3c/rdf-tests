@@ -8,7 +8,7 @@
 @prefix rdft:   <http://www.w3.org/ns/rdftest#> .
 
 <>  rdf:type mf:Manifest ;
-    mf:name "N-Triples tests" ;
+    rdfs:label "N-Triples tests" ;
     mf:entries
     (
     <#nt-syntax-file-01>

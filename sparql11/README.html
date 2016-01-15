@@ -107,41 +107,21 @@ p.note {
   <hr />
 
 
-<p class="note">
-This document is a work in progress. As the SPARQL working group finalizes work
-on the SPARQL 1.1 standards, the test suite and its description below will be
-updated to reflect the standards. However, the current tests and descriptions
-may be incomplete with respect to the current state of the standards.
-</p>
-
-<p>
-The
-<a href="http://www.w3.org/2009/sparql/wiki/">SPARQL Working Group</a> uses a test-driven process.&nbsp; The <a href=".">test area</a> is a 
-collection of the current test cases of the working group extending and updating the <a href="http://www.w3.org/2001/sw/DataAccess/tests/r2">testcases</a> of the <a href="http://www.w3.org/2001/sw/DataAccess/">Data Access Working Group</a>. </p>
-  <p>
-Tests are divided into collections (corresponding to directories) for manageability.&nbsp; Each collection 
-of tests has a <em>manifest file</em> within its directory (usually named
-<tt>manifest.ttl</tt>, but sometimes <tt>manifest.n3</tt>).
-There is also a number of overall manifests containing entries pointing to the
-individual test collection manifests:</p> <p>@@@ Fix URLs!</p>
+<p>The <a href="http://www.w3.org/2009/sparql/wiki/">SPARQL Working Group</a> uses a test-driven process.&nbsp; The <a href=".">test area</a> is a collection of the current test cases of the working group extending and updating the <a href="http://www.w3.org/2001/sw/DataAccess/tests/r2">testcases</a> of the <a href="http://www.w3.org/2001/sw/DataAccess/">Data Access Working Group</a>. </p>
+<p>Tests are divided into collections (corresponding to directories) for manageability.&nbsp; Each collection of tests has a <em>manifest file</em> within its directory (named <tt>manifest.ttl</tt>, but also <tt>manifest.jsonld</tt>, and <tt>index.html</tt> with RDF represented using RDFa). There are also a number of overall manifests containing entries pointing to the individual test collection manifests:</p>
 <ul>
-<li><a
-href="http://www.w3.org/2001/sw/DataAccess/tests/data-r2/manifest-syntax.ttl">manifest
-of syntax-only tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL1.0 Query Language</a></li>
-<a
-href="http://www.w3.org/2001/sw/DataAccess/tests/data-r2/manifest-evaluation.ttl">manifest
-of query-evaluation tests</a> for the <a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL1.0 Query Language</a>.</li>
-<li><a href="data-sparql11/manifest-sparql11-query-syntax.ttl">manifest of syntax-only tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/sparql11-query/">SPARQL1.1 Query Language</a></li>
-  <li><a
-href="data-sparql11/manifest-sparql11-query-evaluation.ttl">manifest of query evaluation tests</a> for the <a href="http://www.w3.org/TR/sparql11-query/">SPARQL1.1 Query Language</a></li>
-  <li><a
-href="data-sparql11/entailment/manifest.ttl">manifest of entailment evaluation tests</a> for the <a href="http://www.w3.org/TR/sparql11-entailment/">SPARQL1.1 Entailment Regimes</a></li>
-  <li><a href="data-sparql11/manifest-sparql11-update-syntax.ttl">manifest of syntax-only tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/sparql11-update/">SPARQL1.1 Update Language</a></li>
-  <li><a
-href="data-sparql11/manifest-sparql11-update-syntax.ttl">manifest of update evaluation tests</a> for the <a href="http://www.w3.org/TR/sparql11-update/">SPARQL1.1 Update Language</a></li>
-  <li><a
-href="data-sparql11/service-description/manifest.ttl">manifest of service description tests</a> for the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL1.1 Service Description</a></li>
+  <li><a href="data-r2/index-syntax.html">manifest of syntax-only tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL 1.0 Query Language</a></li>
+  <li><a href="data-r2/index-evaluation.html">manifest of query-evaluation tests</a> for the <a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL 1.0 Query Language</a>.</li>
 
+  <li><a href="data-sparql11/index-sparql11-query.html">manifest of syntax and evaluation tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/sparql11-query/">SPARQL 1.1 Query Language</a></li>
+  <li><a href="data-sparql11/index-sparql11-update.html">manifest of syntax and evaluation tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/sparql11-update/">SPARQL 1.1 Update Language</a></li>
+  <li><a href="data-sparql11/csv-tsv-res/index.html">manifest of CSV and TSV format tests</a> for the <a href="ttp://www.w3.org/TR/sparql11-results-csv-tsv/">SPARQL 1.1 Query Results CSV and TSV Formats</a></li>
+  <li><a href="data-sparql11/json-res/index.html">manifest of JSON format tests</a> for the <a href="http://www.w3.org/TR/sparql11-results-json/">SPARQL 1.1 Query Results JSON Format</a></li>
+  <li><a href="data-sparql11/index-sparql11-fed.html">manifest of syntax and evaluation tests</a> (positive and negative tests) for the <a href="http://www.w3.org/TR/sparql11-federated-query/">SPARQL 1.1 Federation Extensions</a></li>
+  <li><a href="data-sparql11/entailment/index.html">manifest of entailment evaluation tests</a> for the <a href="http://www.w3.org/TR/sparql11-entailment/">SPARQL 1.1 Entailment Regimes</a></li>
+  <li><a href="data-sparql11/service-description/index.html">manifest of service description tests</a> for the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a></li>
+  <li><a href="data-sparql11/protocol/index.html">manifest of protocol tests</a> for the <a href="http://www.w3.org/TR/sparql11-protocol/">SPARQL 1.1 Protocol</a></li>
+  <li><a href="data-sparql11/http-rdf-update/index.html">manifest of graph protocol tests</a> for the <a href="http://www.w3.org/TR/sparql11-http-rdf-update/">SPARQL 1.1 Graph Store HTTP Protocol</a></li>
 
 </ul>
 
@@ -149,7 +129,7 @@ href="data-sparql11/service-description/manifest.ttl">manifest of service descri
 <p>
 The test cases are organised in two directories</p>
 <ul>
-  <li>The <a href="data-r2/">data-r2</a> directory holds the testcases from the previous <a href="http://www.w3.org/2001/sw/DataAccess/tests/r2">testcases</a>SPARQL1.0 Query language test suite @@@plus new tests that are restricted to SPARQL 1.0 features only??? @@@.</li>
+  <li>The <a href="data-r2/">data-r2</a> directory holds the testcases from the previous <a href="http://www.w3.org/2001/sw/DataAccess/tests/r2">testcases</a> SPARQL1.0 Query language test suite @@@plus new tests that are restricted to SPARQL 1.0 features only??? @@@.</li>
   <li>The <a href="data-sparql11">data-sparql11</a> directory holds test cases aimed at covering as much of the SPARQL 1.1 Query Language and SPARQL 1.1 Update Language as possible.</li>
 </ul>
   The purpose is to provide an up-to-date, upwards-compatible, consistent, and easy-to-use suite of test cases that SPARQL 1.1 implementors can use to evaluate and report on their
@@ -158,7 +138,6 @@ implementation.
 <p>
 The tests as-is shall constitute a test suite that the group will
 use to generate an implementation report for the SPARQL1.1 Query  and SPARQL1.1 Update languages.</p>
-<p><b>@@@ What about other tests, will we use the same structure for e.g. http-update, service-description tests, will we (a) have separate manifest(s) for entailment?</b></p>
 </p>
   <h4><a name="vocabularies" id="vocabularies"/>Manifest Vocabularies</a></h4>
 
@@ -369,7 +348,7 @@ http://example.org/s2,http://example.org/p2,2.2
 
   <h4><a name="entailevaltests" id="entailevaltests"/>Entailment Evaluation Tests</a></h4>
 
-<p>Entailment Evaluation tests are special query evaluation tests that additionally (slightly ab-)use the <tt>sd:entailmentRegime</tt> and, optionally, the <tt>sd:entailmentProfile</tt> properties from the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description<a> vocabulary to further specify the  object of the <tt>mf:action</tt> property, indicating the expected entailment regime for graphs in the dataset and, where applicable, which OWL profile that test satisfies.</p>
+<p>Entailment Evaluation tests are special query evaluation tests that additionally (slightly ab-)use the <tt>sd:entailmentRegime</tt> and, optionally, the <tt>sd:EntailmentProfile</tt> properties from the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description<a> vocabulary to further specify the  object of the <tt>mf:action</tt> property, indicating the expected entailment regime for graphs in the dataset and, where applicable, which OWL profile that test satisfies.</p>
 
 <p>A SPARQL implementation passes a query evaluation test if its
 answers over any graphs in the dataset using the <tt>sd:entailmentRegime</tt>
@@ -484,7 +463,7 @@ to the graphs denoted in the <tt>mf:action</tt> (and <tt>mf:result</tt>) propert
 
 <h4><a name="graphstoreprotocoltests" id="graphstoreprotocoltests"/>Graph Store HTTP Protocol Tests</a></h4>
 
-<p>A number of test cases for the <a href="http://www.w3.org/TR/sparql11-http-rdf-update/">SPARQL 1.1 Graph Store HTTP Protocol</a> consisting of HTTP requests and expected responses are described in a <a href="http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/">separate document</a>.</p> 
+<p>A number of test cases for the <a href="http://www.w3.org/TR/sparql11-http-rdf-update/">SPARQL 1.1 Graph Store HTTP Protocol</a> consisting of HTTP requests and expected responses are described in a <a href="data-sparql11/http-rdf-update/index.html">separate document</a>.</p> 
 
   <h4><a name="testannotations" id="testannotations"/>Test annotations</a></h4>
 

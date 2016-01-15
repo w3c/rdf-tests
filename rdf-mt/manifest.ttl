@@ -14,7 +14,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 <> rdf:type mf:Manifest ;
-  mf:name "RDF Schema and Semantics tests" ;
+  rdfs:label "RDF Schema and Semantics tests" ;
   mf:entries (
     <#datatypes-intensional-xsd-integer-decimal-compatible>
 #    <#datatypes-intensional-xsd-integer-string-incompatible> # recinded 2013-12-18

@@ -15,7 +15,7 @@
 @prefix rdft:   <http://www.w3.org/ns/rdftest#> .
 
 <>  rdf:type mf:Manifest ;
-    mf:name "TriG tests" ;
+    rdfs:label "TriG tests" ;
     mf:entries
     (
     # TriG specific tests
