@@ -1577,25 +1577,28 @@
    mf:action    <turtle-syntax-struct-05.ttl> ;
    .
 
-<#turtle-syntax-lists-01> rdf:type rdft:TestTurtlePositiveSyntax ;
+<#turtle-syntax-lists-01> rdf:type rdft:TestTurtleEval ;
    mf:name    "turtle-syntax-lists-01" ;
    rdfs:comment "empty list" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-syntax-lists-01.ttl> ;
+   mf:result    <turtle-syntax-lists-01.nt> ;
    .
 
-<#turtle-syntax-lists-02> rdf:type rdft:TestTurtlePositiveSyntax ;
+<#turtle-syntax-lists-02> rdf:type rdft:TestTurtleEval ;
    mf:name    "turtle-syntax-lists-02" ;
    rdfs:comment "mixed list" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-syntax-lists-02.ttl> ;
+   mf:result    <turtle-syntax-lists-02.nt> ;
    .
 
-<#turtle-syntax-lists-03> rdf:type rdft:TestTurtlePositiveSyntax ;
+<#turtle-syntax-lists-03> rdf:type rdft:TestTurtleEval ;
    mf:name    "turtle-syntax-lists-03" ;
    rdfs:comment "isomorphic list as subject and object" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-syntax-lists-03.ttl> ;
+   mf:result    <turtle-syntax-lists-03.nt> ;
    .
 
 <#turtle-syntax-lists-04> rdf:type rdft:TestTurtlePositiveSyntax ;
