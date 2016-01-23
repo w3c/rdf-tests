@@ -1605,11 +1605,12 @@
    mf:action    <turtle-syntax-lists-04.ttl> ;
    .
 
-<#turtle-syntax-lists-05> rdf:type rdft:TestTurtlePositiveSyntax ;
+<#turtle-syntax-lists-05> rdf:type rdft:TestTurtleEval ;
    mf:name    "turtle-syntax-lists-05" ;
    rdfs:comment "mixed lists with embedded lists" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-syntax-lists-05.ttl> ;
+   mf:result    <turtle-syntax-lists-05.nt> ;
    .
 
 <#turtle-syntax-bad-uri-01> rdf:type rdft:TestTurtleNegativeSyntax ;
