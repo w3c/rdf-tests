@@ -59,6 +59,8 @@
     <#sole_blankNodePropertyList>
     <#blankNodePropertyList_as_subject>
     <#blankNodePropertyList_as_object>
+    <#blankNodePropertyList_as_object_containing_objectList>
+    <#blankNodePropertyList_as_object_containing_objectList_of_two_objects>
     <#blankNodePropertyList_with_multiple_triples>
     <#nested_blankNodePropertyLists>
     <#blankNodePropertyList_containing_collection>
@@ -115,6 +117,7 @@
     <#lantag_with_subtag>
     <#objectList_with_two_objects>
     <#predicateObjectList_with_two_objectLists>
+    <#predicateObjectList_with_blankNodePropertyList_as_object>
     <#repeated_semis_at_end>
     <#repeated_semis_not_at_end>
 
@@ -636,6 +639,22 @@
    mf:result    <blankNodePropertyList_as_object.nt> ;
    .
 
+<#blankNodePropertyList_as_object_containing_objectList> rdf:type rdft:TestTurtleEval ;
+   mf:name      "blankNodePropertyList_as_object_containing_objectList" ;
+   rdfs:comment "blankNodePropertyList as object containing objectList <s> <p> [ <p2> <o>,<o2> ] ." ;
+   rdft:approval rdft:Approved ;
+   mf:action    <blankNodePropertyList_as_object_containing_objectList.ttl> ;
+   mf:result    <blankNodePropertyList_as_object_containing_objectList.nt> ;
+   .
+
+<#blankNodePropertyList_as_object_containing_objectList_of_two_objects> rdf:type rdft:TestTurtleEval ;
+   mf:name      "blankNodePropertyList_as_object_containing_objectList_of_two_objects" ;
+   rdfs:comment "blankNodePropertyList as object containing objectList of two objects <s> <p> [ <p2 <o> ] , <o2> ." ;
+   rdft:approval rdft:Approved ;
+   mf:action    <blankNodePropertyList_as_object_containing_objectList_of_two_objects.ttl> ;
+   mf:result    <blankNodePropertyList_as_object_containing_objectList_of_two_objects.nt> ;
+   .
+
 <#blankNodePropertyList_with_multiple_triples> rdf:type rdft:TestTurtleEval ;
    mf:name      "blankNodePropertyList_with_multiple_triples" ;
    rdfs:comment "blankNodePropertyList with multiple triples [ <s> <p> ; <s2> <p2> ]" ;
@@ -1082,6 +1101,14 @@
    rdft:approval rdft:Approved ;
    mf:action    <predicateObjectList_with_two_objectLists.ttl> ;
    mf:result    <predicateObjectList_with_two_objectLists.nt> ;
+   .
+
+<#predicateObjectList_with_blankNodePropertyList_as_object> rdf:type rdft:TestTurtleEval ;
+   mf:name      "predicateObjectList_with_blankNodePropertyList_as_object" ;
+   rdfs:comment "predicateObjectList_with_blankNodePropertyList_as_object <s> <p> [ <p2> <o> ] ; <p3> [ <p4> <o2> , <o3> ] " ;
+   rdft:approval rdft:Approved ;
+   mf:action    <predicateObjectList_with_blankNodePropertyList_as_object.ttl> ;
+   mf:result    <predicateObjectList_with_blankNodePropertyList_as_object.nt> ;
    .
 
 <#repeated_semis_at_end> rdf:type rdft:TestTurtleEval ;
