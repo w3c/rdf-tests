@@ -204,11 +204,11 @@
     <#turtle-syntax-struct-03>
     <#turtle-syntax-struct-04>
     <#turtle-syntax-struct-05>
-    <#turtle-syntax-lists-01>
-    <#turtle-syntax-lists-02>
-    <#turtle-syntax-lists-03>
-    <#turtle-syntax-lists-04>
-    <#turtle-syntax-lists-05>
+    <#turtle-eval-lists-01>
+    <#turtle-eval-lists-02>
+    <#turtle-eval-lists-03>
+    <#turtle-eval-lists-04>
+    <#turtle-eval-lists-05>
     <#turtle-syntax-bad-uri-01>
     <#turtle-syntax-bad-uri-02>
     <#turtle-syntax-bad-uri-03>
@@ -1604,39 +1604,44 @@
    mf:action    <turtle-syntax-struct-05.ttl> ;
    .
 
-<#turtle-syntax-lists-01> rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name    "turtle-syntax-lists-01" ;
+<#turtle-eval-lists-01> rdf:type rdft:TestTurtleEval ;
+   mf:name    "turtle-eval-lists-01" ;
    rdfs:comment "empty list" ;
    rdft:approval rdft:Approved ;
-   mf:action    <turtle-syntax-lists-01.ttl> ;
+   mf:action    <turtle-eval-lists-01.ttl> ;
+   mf:result    <turtle-eval-lists-01.nt> ;
    .
 
-<#turtle-syntax-lists-02> rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name    "turtle-syntax-lists-02" ;
+<#turtle-eval-lists-02> rdf:type rdft:TestTurtleEval ;
+   mf:name    "turtle-eval-lists-02" ;
    rdfs:comment "mixed list" ;
    rdft:approval rdft:Approved ;
-   mf:action    <turtle-syntax-lists-02.ttl> ;
+   mf:action    <turtle-eval-lists-02.ttl> ;
+   mf:result    <turtle-eval-lists-02.nt> ;
    .
 
-<#turtle-syntax-lists-03> rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name    "turtle-syntax-lists-03" ;
+<#turtle-eval-lists-03> rdf:type rdft:TestTurtleEval ;
+   mf:name    "turtle-eval-lists-03" ;
    rdfs:comment "isomorphic list as subject and object" ;
    rdft:approval rdft:Approved ;
-   mf:action    <turtle-syntax-lists-03.ttl> ;
+   mf:action    <turtle-eval-lists-03.ttl> ;
+   mf:result    <turtle-eval-lists-03.nt> ;
    .
 
-<#turtle-syntax-lists-04> rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name    "turtle-syntax-lists-04" ;
+<#turtle-eval-lists-04> rdf:type rdft:TestTurtleEval ;
+   mf:name    "turtle-eval-lists-04" ;
    rdfs:comment "lists of lists" ;
    rdft:approval rdft:Approved ;
-   mf:action    <turtle-syntax-lists-04.ttl> ;
+   mf:action    <turtle-eval-lists-04.ttl> ;
+   mf:result    <turtle-eval-lists-04.nt> ;
    .
 
-<#turtle-syntax-lists-05> rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name    "turtle-syntax-lists-05" ;
+<#turtle-eval-lists-05> rdf:type rdft:TestTurtleEval ;
+   mf:name    "turtle-eval-lists-05" ;
    rdfs:comment "mixed lists with embedded lists" ;
    rdft:approval rdft:Approved ;
-   mf:action    <turtle-syntax-lists-05.ttl> ;
+   mf:action    <turtle-eval-lists-05.ttl> ;
+   mf:result    <turtle-eval-lists-05.nt> ;
    .
 
 <#turtle-syntax-bad-uri-01> rdf:type rdft:TestTurtleNegativeSyntax ;
