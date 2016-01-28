@@ -29,7 +29,7 @@ MANIFESTS.each do |ttl|
   if template
     desc "Build #{html}"
     file html => [ttl, frame, template] do
-      puts "Genrate #{html}"
+      puts "Generate #{html}"
       temp, man = File.read(template), nil
 
       RDF::Reader.open(ttl) do |reader|
