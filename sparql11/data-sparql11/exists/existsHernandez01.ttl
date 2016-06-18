@@ -1,0 +1,9 @@
+@prefix : <http://www.example.org/> .
+
+  :a :country :j .
+  :a :parent :b .
+  :b :country :j .
+  :b :parent :c .
+  :c :parent :d .
+  :c :country :k .
+
