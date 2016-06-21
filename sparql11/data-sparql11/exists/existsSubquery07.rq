@@ -1,7 +1,5 @@
 prefix : <http://www.example.org/>
 
-prefix : <http://www.example.org/>
-
 SELECT ?x WHERE {
   ?x :p :b .
   FILTER EXISTS { ?x :p :b .
