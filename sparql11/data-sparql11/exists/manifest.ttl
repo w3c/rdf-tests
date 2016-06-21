@@ -26,6 +26,10 @@
     :existsSubquery03
     :existsSubquery04
     :existsSubquery05
+    :existsSubquery06
+    :existsSubquery07
+    :existsSubquery08
+    :existsSubquery09
     :existsValues01
     :existsValues02
   ).
@@ -144,7 +148,7 @@
     mf:result  <existsValues02.srx>  
     .           
 
-:existsSubQuery01 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery01 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with projection to FILTER variable";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -156,7 +160,7 @@
     mf:result  <existsSubquery01.srx>  
     .           
 
-:existsSubQuery02 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery02 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT inside group in EXISTS with projection to FILTER variable";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -169,7 +173,7 @@
     mf:result  <existsSubquery01.srx>  
     .           
 
-:existsSubQuery03 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery03 rdf:type mf:QueryEvaluationTest ;
     mf:name "Twin SELECT in EXISTS for FILTER variables with same value";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -181,7 +185,7 @@
     mf:result  <existsSubquery03.srx>  
     .           
 
-:existsSubQuery04 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery04 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with disconnected FILTER variable";
     rdfs:comment    "Change EXISTS to not affect disconnected variables" ;
 	mf:feature sparql:exists ;
@@ -192,7 +196,7 @@
     mf:result  <existsSubquery04.srx>  
     .           
 
-:existsSubQuery05 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery05 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with disconnected FILTER variable";
 	mf:feature sparql:exists ;
     rdfs:comment    "To ensure that the argument to EXISTS is a pattern" ;
@@ -204,7 +208,7 @@
     mf:result  <existsSubquery04.srx>  
     .           
 
-:existsSubQuery06 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery06 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with connected FILTER variable with AS";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -216,7 +220,7 @@
     mf:result  <existsSubquery01.srx>  
     .           
 
-:existsSubQuery07 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery07 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with connected FILTER variable with AS";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -228,7 +232,7 @@
     mf:result  <existsSubquery01.srx>  
     .           
 
-:existsSubQuery08 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery08 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with connected FILTER variable checking BOUND";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
@@ -240,7 +244,7 @@
     mf:result  <existsSubquery03.srx>  
     .           
 
-:existsSubQuery09 rdf:type mf:QueryEvaluationTest ;
+:existsSubquery09 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with disconnected FILTER variable grouping";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
