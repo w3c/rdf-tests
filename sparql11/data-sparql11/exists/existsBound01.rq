@@ -1,6 +1,6 @@
 prefix : <http://www.example.org/>
 
 SELECT ?x WHERE {
-  :s :p ?x .
+  :b :p ?x .
   FILTER EXISTS { FILTER BOUND(?x) }
 }
