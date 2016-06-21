@@ -31,6 +31,8 @@
     :existsSubquery07
     :existsSubquery08
     :existsSubquery09
+    :existsSubquery10
+    :existsSubquery11
     :existsValues01
     :existsValues02
   ).
@@ -152,7 +154,7 @@
 :existsSubquery01 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with projection to FILTER variable";
 	mf:feature sparql:exists ;
-    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "An undefined Project is generated internally" ;
     rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
     mf:action
          [ qt:query  <existsSubquery01.rq> ;
@@ -164,7 +166,7 @@
 :existsSubquery02 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT inside group in EXISTS with projection to FILTER variable";
 	mf:feature sparql:exists ;
-    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "An undefined Project is generated internally" ;
     rdfs:comment    "To ensure that the argument to EXISTS is a pattern" ;
     rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
     mf:action
@@ -177,7 +179,7 @@
 :existsSubquery03 rdf:type mf:QueryEvaluationTest ;
     mf:name "Twin SELECT in EXISTS for FILTER variables with same value";
 	mf:feature sparql:exists ;
-    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "An undefined Project is generated internally" ;
     rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
     mf:action
          [ qt:query  <existsSubquery03.rq> ;
@@ -236,7 +238,7 @@
 :existsSubquery08 rdf:type mf:QueryEvaluationTest ;
     mf:name "SELECT in EXISTS with connected FILTER variable checking BOUND";
 	mf:feature sparql:exists ;
-    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "An undefined Project is generated internally" ;
     rdfs:comment    "Change EXISTS to not affect connected variables" ;
     mf:action
          [ qt:query  <existsSubquery08.rq> ;
@@ -246,13 +248,37 @@
     .           
 
 :existsSubquery09 rdf:type mf:QueryEvaluationTest ;
-    mf:name "SELECT in EXISTS with disconnected FILTER variable grouping";
+    mf:name "SELECT in EXISTS with disconnected FILTER variable and grouping";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect disconnected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery09.rq> ;
+           qt:data   <existsSubquery09.ttl> ;
+          ] ;
+    mf:result  <existsSubquery04.srx>  
+    .           
+
+:existsSubquery10 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with connected FILTER variable with different value";
 	mf:feature sparql:exists ;
     rdfs:comment    "An illegal solution mapping is generated internally" ;
     rdfs:comment    "Change EXISTS to not affect connected variables" ;
     mf:action
-         [ qt:query  <existsSubquery09.rq> ;
-           qt:data   <existsSubquery09.ttl> ;
+         [ qt:query  <existsSubquery10.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery11 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with twin connected FILTER variables with different values";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery11.rq> ;
+           qt:data   <existsbpb.ttl> ;
           ] ;
     mf:result  <existsSubquery04.srx>  
     .           
