@@ -42,7 +42,13 @@
 
 !!! 5
 %html{:prefix => "earl: http://www.w3.org/ns/earl# doap: http://usefulinc.com/ns/doap# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"}
-  - subjects = tests['testSubjects']
+  - test_info = {}
+  - test_refs = {}
+  - subject_refs = {}
+  - passed_tests = []
+  - subjects = tests['testSubjects'].sort_by {|s| s['name'].to_s.downcase}
+  - subjects.each_with_index do |subject, index|
+    - subject_refs[subject['@id']] = "subj_#{index}"
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html;charset=utf-8"}
     %link{:rel => "alternate", :href => "earl.ttl"}
@@ -227,12 +233,9 @@
           See [Turtle Test Suite Wiki](http://www.w3.org/2011/rdf-wg/wiki/Turtle_Test_Suite)
           for more information.
     %section
-      - test_info = {}
-      - test_refs = {}
-      - subject_refs = {}
       %h2
         Test Manifests
-      - tests['entries'].each do |manifest|
+      - tests['entries'].each_with_index do |manifest, ndx2|
         - test_cases = manifest['entries']
         %section{:typeof => manifest['@type'].join(" "), :resource => manifest['@id']}
           %h2<=manifest['title']
@@ -241,17 +244,16 @@
               ~ CGI.escapeHTML desc.to_s
           %table.report
             - skip_subject = {}
-            - passed_tests = []
+            - passed_tests[ndx2] = []
             %tr
               %th
                 Test
               - subjects.each_with_index do |subject, index|
-                - subject_refs[subject['@id']] = "subj_#{index}"
                 -# If subject is untested for every test in this manifest, skip it
                 - skip_subject[subject['@id']] = manifest['entries'].all? {|t| t['assertions'][index]['result']['outcome'] == 'earl:untested'}
                 - unless skip_subject[subject['@id']]
                   %th
-                    %a{:href => '#' + subject_refs[subject['@id']]}<=subject['name']
+                    %a{:href => '#' + subject_refs[subject['@id']]}<=Array(subject['name']).first
             - test_cases.each do |test|
               - tid = 'test_' + (test['@id'][0,2] == '_:' ? test['@id'][2..-1] : test['@id'].split('#').last)
               - (test_info[tid] ||= []) << test
@@ -260,10 +262,11 @@
                 %td
                   %a{:href => "##{tid}"}<
                     ~ CGI.escapeHTML test['title'].to_s
-                - test['assertions'].each_with_index do |assertion, ndx|
-                  - next if skip_subject[assertion['subject']]
+                - subjects.each_with_index do |subject, ndx|
+                  - next if skip_subject[subject['@id']]
+                  - assertion = test['assertions'].detect {|a| a['subject'] == subject['@id']}
                   - pass_fail = assertion['result']['outcome'].split(':').last.upcase.sub(/(PASS|FAIL)ED$/, '\1')
-                  - passed_tests[ndx] = (passed_tests[ndx] || 0) + (pass_fail == 'PASS' ? 1 : 0)
+                  - passed_tests[ndx2][ndx] = (passed_tests[ndx2][ndx] || 0) + (pass_fail == 'PASS' ? 1 : 0)
                   %td{:class => pass_fail, :property => "earl:assertions", :typeof => assertion['@type'], :inlist => true}
                     - if assertion['assertedBy']
                       %link{:property => "earl:assertedBy", :href => assertion['assertedBy']}
@@ -277,7 +280,7 @@
             %tr.summary
               %td
                 = "Percentage passed out of #{manifest['entries'].length} Tests"
-              - passed_tests.compact.each do |r|
+              - passed_tests[ndx2].compact.each do |r|
                 - pct = (r * 100.0) / manifest['entries'].length
                 %td{:class => (pct == 100.0 ? 'passed-all' : (pct >= 95.0 ? 'passed-most' : 'passed-some'))}
                   = "#{'%.1f' % pct}%"
@@ -290,7 +293,7 @@
         - subjects.each_with_index do |subject, index|
           %dt{:id => subject_refs[subject['@id']]}
             %a{:href => subject['@id']}
-              %span{:about => subject['@id'], :property => "doap:name"}<= subject['name']
+              %span{:about => subject['@id'], :property => "doap:name"}<= Array(subject['name']).first
           %dd{:property => "earl:testSubjects", :resource => subject['@id'], :typeof => [subject['@type']].flatten.join(" "), :inlist => true}
             %dl
               - if subject['doapDesc']
@@ -323,8 +326,8 @@
               %dd
                 %table.report
                   %tbody
-                    - tests['entries'].each do |manifest|
-                      - passed = manifest['entries'].select {|t| t['assertions'][index]['result']['outcome'] == 'earl:passed' }.length
+                    - tests['entries'].each_with_index do |manifest, ndx|
+                      - passed = passed_tests[ndx][index].to_i
                       - next if passed == 0
                       - total = manifest['entries'].length
                       - pct = (passed * 100.0) / total
@@ -341,25 +344,6 @@
           - tests['assertions'].each do |file|
             %li
               %a.source{:href => file}<= file
-    %section.appendix
-      %h2
-        Test Definitions
-      %dl
-        - tests['entries'].each do |manifest|
-          %div{:property => "mf:entries", :inlist => true, :resource => manifest['@id']}
-            - manifest['entries'].each do |test|
-              %dt{:id => test_refs[test['@id']], :resource => test['@id']}
-                Test
-                %span{:property => "dc:title mf:name"}<
-                  ~ CGI.escapeHTML test['title'].to_s
-              %dd{:resource => test['@id']}
-                %p{:property => "dc:description", :lang => 'en'}<
-                  ~ CGI.escapeHTML test['description'].to_s
-                %pre{:class => "example actionDoc", :property => "mf:action", :resource => test['testAction'], :title => "#{test['title']} Input"}<
-                  ~ Kernel.open(test['testAction']) {|f| f.set_encoding(Encoding::UTF_8); CGI.escapeHTML(f.read).to_s.gsub(/\n/, '<br/>')} rescue "#{test['testAction']} not loaded"
-                - if test['testResult']
-                  %pre{:class => "example resultDoc", :property => "mf:result", :resource => test['testResult'], :title => "#{test['title']} Result"}<
-                    ~ Kernel.open(test['testResult']) {|f| f.set_encoding(Encoding::UTF_8); CGI.escapeHTML(f.read).to_s.gsub(/\n/, '<br/>')} rescue "#{test['testResult']} not loaded"
     %section#appendix{:property => "earl:generatedBy", :resource => tests['generatedBy']['@id'], :typeof => tests['generatedBy']['@type']}
       %h2
         Report Generation Software
