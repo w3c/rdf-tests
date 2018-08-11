@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query via URL-encoded POST" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query_dataset_default_graphs_post" enabled="true">
       <stringProp name="TestPlan.comments">#### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
-    Content-Type: application/x-www-url-form-urlencoded
+    Content-Type: application/sparql-query
     Content-Length: XXX
 
-    query=ASK%20%7B%7D
+    ASK { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; ?p ?o . &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; ?p ?o }
 
 #### Response
 
@@ -57,7 +57,7 @@
       </HeaderManager>
       <hashTree/>
       <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
@@ -186,7 +186,7 @@ if(Failure){
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">

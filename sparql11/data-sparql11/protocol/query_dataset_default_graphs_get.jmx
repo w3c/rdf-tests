@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query via URL-encoded POST" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query_dataset_default_graphs_get" enabled="true">
       <stringProp name="TestPlan.comments">#### Request
 
-    POST /sparql/ HTTP/1.1
+    GET /sparql?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
     Host: www.example
     User-agent: sparql-client/0.1
-    Content-Type: application/x-www-url-form-urlencoded
-    Content-Length: XXX
-
-    query=ASK%20%7B%7D
 
 #### Response
 

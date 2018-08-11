@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query_dataset_named_graphs_post" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query_dataset_full" enabled="true">
       <stringProp name="TestPlan.comments">#### Request
 
-    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
-    ASK { GRAPH ?g { ?s ?p ?o } }
+    SELECT ?g ?x ?s { ?x ?y ?o  GRAPH ?g { ?s ?p ?o } }
 
 #### Response
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml or application/sparql-results+json
 
-    true</stringProp>
+    Contains SPARQL results for variables g x s </stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -126,7 +126,7 @@ LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">ASK { GRAPH ?g { ?s ?p ?o } }</stringProp>
+                <stringProp name="Argument.value">SELECT ?g ?x ?s { ?x ?y ?o  GRAPH ?g { ?s ?p ?o } }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -135,7 +135,7 @@ LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
           <stringProp name="HTTPSampler.port">${PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${PATH}sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</stringProp>
+          <stringProp name="HTTPSampler.path">${PATH}sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -159,13 +159,13 @@ LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
           <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Type Assertion" enabled="true">
             <stringProp name="BeanShellAssertion.query">import org.apache.commons.lang3.StringUtils;
 Failure = !(StringUtils.contains(new String(ResponseHeaders), &quot;Content-Type: application/sparql-results+xml&quot;) ||
-		StringUtils.contains(new String(ResponseHeaders), &quot;Content-Type: application/sparql-results+json&quot;));
+		StringUtils.contains(new String(ResponseHeaders), &quot;Content-Type: application/sparql-results+json&quot;)); 
 
 if(Failure){
 	FailureMessage = &quot;ERROR Response Type Assertion :\n&quot;+
 	&quot;EXPECTED  \n&quot;+
 	&quot;Content-Type: application/sparql-results+xml or application/sparql-results+json \n&quot;+
-	&quot;ResponseHeaders :\n&quot;+
+	&quot;ResponseHeaders :\n&quot;+  
 	new String(ResponseHeaders);
 }</stringProp>
             <stringProp name="BeanShellAssertion.filename"></stringProp>
@@ -175,12 +175,14 @@ if(Failure){
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message Assertion" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="3569038">true</stringProp>
+              <stringProp name="103">g</stringProp>
+              <stringProp name="120">x</stringProp>
+              <stringProp name="115">s</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
+            <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>

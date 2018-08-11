@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query via URL-encoded POST" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="query_dataset_named_graphs_get" enabled="true">
       <stringProp name="TestPlan.comments">#### Request
 
-    POST /sparql/ HTTP/1.1
+    GET /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf&amp;query=ASK%20%7B%20GRAPH%20%3Fg%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D%20%7D HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
-    Content-Type: application/x-www-url-form-urlencoded
-    Content-Length: XXX
-
-    query=ASK%20%7B%7D
 
 #### Response
 
@@ -181,7 +177,7 @@ if(Failure){
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
