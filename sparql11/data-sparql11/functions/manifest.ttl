@@ -733,6 +733,18 @@
     mf:result  <uuid01.srx> ;
 	.
 
+:uuid02 rdf:type mf:QueryEvaluationTest ;
+	mf:name    "UUID() per binding" ;
+    rdfs:comment "UUID() calls generate results per invocation, not per query" ;
+    rdfs:seeAlso <https://github.com/w3c/sparql-12/issues/102> ;
+	mf:feature sparql:uuid ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <uuid02.rq> ;
+           qt:data   <data-empty.nt> ] ;
+    mf:result  <uuid02.srx> ;
+	.
+
 :struuid01 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "STRUUID() pattern match" ;
 	mf:feature sparql:struuid ;
