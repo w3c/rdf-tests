@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="update_post_form" enabled="true">
       <stringProp name="TestPlan.comments">update via URL-encoded POST&quot; ;
@@ -66,6 +66,7 @@
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </SetupThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request LOAD" enabled="true">
@@ -73,8 +74,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="update" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.value">LOAD &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt;;
-LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
+                <stringProp name="Argument.value">LOAD &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt;; LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">update</stringProp>
@@ -108,6 +108,7 @@ LOAD &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt;;</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
