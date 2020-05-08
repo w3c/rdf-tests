@@ -358,7 +358,8 @@
     .    
 
 :agg-empty-group-count-01  rdf:type mf:QueryEvaluationTest ;
-    mf:name "COUNT: no match, no group";
+	mf:name "COUNT: no match, no group" ;
+        rdfs:comment "counting no results without grouping always returns a single result." ;
     mf:action
          [ qt:query  <agg-empty-group-count-01.rq> ;
            qt:data   <empty.ttl> ] ;
