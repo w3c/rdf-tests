@@ -340,6 +340,7 @@
 
 :agg-empty-group-1 rdf:type mf:QueryEvaluationTest ;
 	mf:name "agg on empty set, explicit grouping" ;
+        rdfs:comment "aggregating empty results returns no rows, as there are no grouped results." ;
 	mf:feature sparql:aggregate ;
     mf:action
          [ qt:query  <agg-empty-group-1.rq> ;
