@@ -24,11 +24,17 @@
 	:concat01
 	:concat02
 	:substring01
+	:substring01-non-bmp
 	:substring02
+	:substring02-non-bmp
 	:length01
+	:length01-non-bmp
 	:ucase01
+	:ucase01-non-bmp
 	:lcase01
+	:lcase01-non-bmp
 	:encode01
+	:encode01-non-bmp
 	:contains01
 	:starts01
 	:ends01
@@ -226,6 +232,16 @@
     mf:result  <substring01.srx> ;
 	.
 
+:substring01-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "SUBSTR() (3-argument) on non-BMP unicode strings" ;
+	mf:feature sparql:substr ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <substring01.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <substring01-non-bmp.srx> ;
+	.
+
 :substring02 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "SUBSTR() (2-argument)" ;
 	mf:feature sparql:substr ;
@@ -235,6 +251,16 @@
          [ qt:query  <substring02.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <substring02.srx> ;
+	.
+
+:substring02-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "SUBSTR() (2-argument) on non-BMP unicode strings" ;
+	mf:feature sparql:substr ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <substring02.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <substring02-non-bmp.srx> ;
 	.
 
 :length01 rdf:type mf:QueryEvaluationTest ;
@@ -248,6 +274,16 @@
     mf:result  <length01.srx> ;
 	.
 
+:length01-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "STRLEN() on non-BMP unicode strings" ;
+	mf:feature sparql:strlen ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <length01.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <length01-non-bmp.srx> ;
+	.
+
 :ucase01 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "UCASE()" ;
 	mf:feature sparql:ucase ;
@@ -257,6 +293,16 @@
          [ qt:query  <ucase01.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <ucase01.srx> ;
+	.
+
+:ucase01-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "UCASE() on non-BMP unicode strings" ;
+	mf:feature sparql:ucase ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <ucase01.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <ucase01-non-bmp.srx> ;
 	.
 
 :lcase01 rdf:type mf:QueryEvaluationTest ;
@@ -270,6 +316,16 @@
     mf:result  <lcase01.srx> ;
 	.
 
+:lcase01-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "LCASE() on non-BMP unicode strings" ;
+	mf:feature sparql:lcase ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <lcase01.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <lcase01-non-bmp.srx> ;
+	.
+
 :encode01 rdf:type mf:QueryEvaluationTest ;
 	mf:name    "ENCODE_FOR_URI()" ;
 	mf:feature sparql:encode_for_uri ;
@@ -279,6 +335,16 @@
          [ qt:query  <encode01.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <encode01.srx> ;
+	.
+
+:encode01-non-bmp rdf:type mf:QueryEvaluationTest ;
+	mf:name    "ENCODE_FOR_URI() on non-BMP unicode strings" ;
+	mf:feature sparql:encode_for_uri ;
+	dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <encode01.rq> ;
+           qt:data   <data5.ttl> ] ;
+    mf:result  <encode01-non-bmp.srx> ;
 	.
 
 :contains01 rdf:type mf:QueryEvaluationTest ;
