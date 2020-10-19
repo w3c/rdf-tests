@@ -10,6 +10,8 @@
     mf:entries
     (   
         :cast-bool
+        :cast-int
+        :cast-float
     ) .
 
 :cast-bool rdf:type mf:QueryEvaluationTest ;
@@ -19,3 +21,19 @@
         [ qt:query  <cast-bool.rq> ;
           qt:data   <data.ttl>  ] ;
      mf:result  <cast-bool.srx> .
+
+:cast-int rdf:type mf:QueryEvaluationTest ;
+    mf:name    "xsd:integer cast" ;
+    dawgt:approval dawgt:Proposed ;
+     mf:action
+        [ qt:query  <cast-int.rq> ;
+          qt:data   <data.ttl>  ] ;
+     mf:result  <cast-int.srx> .
+
+:cast-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "xsd:float cast" ;
+    dawgt:approval dawgt:Proposed ;
+     mf:action
+        [ qt:query  <cast-float.rq> ;
+          qt:data   <data.ttl>  ] ;
+     mf:result  <cast-float.srx> .
