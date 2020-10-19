@@ -12,6 +12,8 @@
         :cast-bool
         :cast-int
         :cast-float
+        :cast-double
+        :cast-decimal
     ) .
 
 :cast-bool rdf:type mf:QueryEvaluationTest ;
@@ -37,3 +39,19 @@
         [ qt:query  <cast-float.rq> ;
           qt:data   <data.ttl>  ] ;
      mf:result  <cast-float.srx> .
+
+:cast-double rdf:type mf:QueryEvaluationTest ;
+    mf:name    "xsd:double cast" ;
+    dawgt:approval dawgt:Proposed ;
+     mf:action
+        [ qt:query  <cast-double.rq> ;
+          qt:data   <data.ttl>  ] ;
+     mf:result  <cast-double.srx> .
+
+:cast-decimal rdf:type mf:QueryEvaluationTest ;
+    mf:name    "xsd:decimal cast" ;
+    dawgt:approval dawgt:Proposed ;
+     mf:action
+        [ qt:query  <cast-decimal.rq> ;
+          qt:data   <data.ttl>  ] ;
+     mf:result  <cast-decimal.srx> .
