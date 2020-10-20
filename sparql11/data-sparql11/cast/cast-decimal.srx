@@ -82,6 +82,11 @@
       <binding name="v"><literal datatype="http://www.w3.org/2001/XMLSchema#boolean">false</literal></binding>
       <binding name="decimal"><literal datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</literal></binding>
     </result>
+    <result>
+      <binding name="a"><uri>http://example.org/b03</uri></binding>
+      <binding name="v"><literal datatype="http://www.w3.org/2001/XMLSchema#boolean">0</literal></binding>
+      <binding name="decimal"><literal datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</literal></binding>
+    </result>
 
     <result>
       <binding name="a"><uri>http://example.org/n01</uri></binding>
