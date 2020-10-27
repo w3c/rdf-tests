@@ -10,74 +10,75 @@
     rdfs:label "Built-in Functions" ;
     mf:entries
     ( 
-    :strdt01
-    :strdt02
-    :strdt03-rdf11
-    :strlang01
-    :strlang02
-    :strlang03-rdf11
-    :isnumeric01
-    :abs01
-    :ceil01
-    :floor01
-    :round01
-    :concat01
-    :concat02
-    :substring01
-    :substring01-non-bmp
-    :substring02
-    :substring02-non-bmp
-    :length01
-    :length01-non-bmp
-    :ucase01
-    :ucase01-non-bmp
-    :lcase01
-    :lcase01-non-bmp
-    :encode01
-    :encode01-non-bmp
-    :contains01
-    :starts01
-    :ends01
-    :plus-1-corrected
-    :plus-2-corrected
-    :md5-01
-    :md5-02
-    :sha1-01
-    :sha1-02
-    :sha256-01
-    :sha256-02
-    :sha512-01
-    :sha512-02
-    :minutes
-    :seconds
-    :hours
-    :month
-    :year
-    :day
-    :timezone
-    :tz
-    :bnode01
-    :bnode02
-    :in01
-    :in02
-    :notin01
-    :notin02
-    :now01
-    :rand01
-    :iri01
-    :if01
-    :if02
-    :coalesce01
-    :strbefore01a
-    :strbefore02
-    :strafter01a
-    :strafter02
-    :replace01
-    :replace02
-    :replace03
-    :uuid01
-    :struuid01
- ) .
+        :strdt01
+        :strdt02
+        :strdt03-rdf11
+        :strlang01
+        :strlang02
+        :strlang03-rdf11
+        :isnumeric01
+        :abs01
+        :ceil01
+        :floor01
+        :round01
+        :concat01
+        :concat02
+        :substring01
+        :substring01-non-bmp
+        :substring02
+        :substring02-non-bmp
+        :length01
+        :length01-non-bmp
+        :ucase01
+        :ucase01-non-bmp
+        :lcase01
+        :lcase01-non-bmp
+        :encode01
+        :encode01-non-bmp
+        :contains01
+        :starts01
+        :ends01
+        :plus-1-corrected
+        :plus-2-corrected
+        :md5-01
+        :md5-02
+        :sha1-01
+        :sha1-02
+        :sha256-01
+        :sha256-02
+        :sha512-01
+        :sha512-02
+        :minutes
+        :seconds
+        :hours
+        :month
+        :year
+        :day
+        :timezone
+        :tz
+        :bnode01
+        :bnode02
+        :in01
+        :in02
+        :notin01
+        :notin02
+        :now01
+        :rand01
+        :iri01
+        :if01
+        :if02
+        :coalesce01
+        :strbefore01a
+        :strbefore02
+        :strafter01a
+        :strafter02
+        :replace01
+        :replace02
+        :replace03
+        :uuid01
+        :uuid02
+        :struuid01
+    ) .
 
 
 :strdt01 rdf:type mf:QueryEvaluationTest ;
@@ -798,6 +799,18 @@
            qt:data   <data-empty.nt> ] ;
     mf:result  <uuid01.srx> ;
     .
+
+:uuid02 rdf:type mf:QueryEvaluationTest ;
+	mf:name    "UUID() per binding" ;
+    rdfs:comment "UUID() calls generate results per invocation, not per query" ;
+    rdfs:seeAlso <https://github.com/w3c/sparql-12/issues/102> ;
+	mf:feature sparql:uuid ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <uuid02.rq> ;
+           qt:data   <data-empty.nt> ] ;
+    mf:result  <uuid02.srx> ;
+	.
 
 :struuid01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "STRUUID() pattern match" ;
