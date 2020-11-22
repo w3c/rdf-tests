@@ -109,6 +109,9 @@
 :test_codepoint_escape_03
 :test_codepoint_escape_bad_04
 :test_codepoint_escape_bad_05
+:test_codepoint_boundaries_01
+:test_codepoint_boundaries_01_escaped
+:test_invalid_codepoint_escaped_bad_01
 ) .
 
 :test_1 rdf:type   mf:PositiveSyntaxTest11 ;
@@ -655,3 +658,19 @@
    mf:name    "Invalid multi-pass codepoint escaping (\\U then \\u)" ;
    mf:description "Unescaping one escape sequence must not produce content that is used in another escape sequence" ;
    mf:action  <syn-codepoint-escape-bad-05.rq> ;.
+
+:test_codepoint_boundaries_01 rdf:type mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "utf8 literal using codepoints at notable unicode boundaries" ;
+   mf:action  <1val1STRING_LITERAL1_with_UTF8_boundaries.rq> ;.
+
+:test_codepoint_boundaries_01_escaped rdf:type mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "\\U and \\u unicode codepoint escaping in literal using codepoints at notable unicode boundaries" ;
+   mf:action  <1val1STRING_LITERAL1_with_UTF8_boundaries_escaped.rq> ;.
+
+:test_invalid_codepoint_escaped_bad_01 rdf:type mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "\\u unicode codepoint escaping in literal using partial surrogate pair" ;
+   mf:description "Using a codepoint that is half of a surrogate pair (in the range U+D800–U+DFFF) without a corresponding codepoint is illegal" ;
+   mf:action  <syn-invalid-codepoint-escaped-bad-01.rq> ;.
