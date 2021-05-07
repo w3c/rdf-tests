@@ -1,6 +1,6 @@
 @prefix :       <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-query/manifest#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix mfx:    <http://jena.hpl.hp.com/2005/05/test-manifest-extra#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
@@ -103,6 +103,13 @@
 :test_pn_bad_13
 
 :test_pp_coll
+
+:test_codepoint_escape_01
+:test_codepoint_escape_bad_02
+:test_codepoint_escape_bad_03
+:test_codepoint_boundaries_04
+:test_codepoint_boundaries_escaped_05
+:test_codepoint_invalid_escaped_bad_06
 ) .
 
 :test_1 rdf:type   mf:PositiveSyntaxTest11 ;
@@ -622,3 +629,36 @@
    dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2> ;
    mf:name    "syn-pp-in-collection" ;
    mf:action  <syn-pp-in-collection.rq> ;.
+
+:test_codepoint_escape_01 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "\\U unicode codepoint escaping in literal" ;
+   mf:action  <syn-codepoint-escape-01.rq> ;.
+
+:test_codepoint_escape_bad_02 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "Invalid multi-pass codepoint escaping (\\u then \\U)" ;
+   mf:description "Unescaping one escape sequence must not produce content that is used in another escape sequence" ;
+   mf:action  <syn-codepoint-escape-bad-04.rq> ;.
+
+:test_codepoint_escape_bad_03 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "Invalid multi-pass codepoint escaping (\\U then \\u)" ;
+   mf:description "Unescaping one escape sequence must not produce content that is used in another escape sequence" ;
+   mf:action  <syn-codepoint-escape-bad-05.rq> ;.
+
+:test_codepoint_boundaries_04 rdf:type mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "utf8 literal using codepoints at notable unicode boundaries" ;
+   mf:action  <1val1STRING_LITERAL1_with_UTF8_boundaries.rq> ;.
+
+:test_codepoint_boundaries_escaped_05 rdf:type mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "\\U and \\u unicode codepoint escaping in literal using codepoints at notable unicode boundaries" ;
+   mf:action  <1val1STRING_LITERAL1_with_UTF8_boundaries_escaped.rq> ;.
+
+:test_codepoint_invalid_escaped_bad_06 rdf:type mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "\\u unicode codepoint escaping in literal using partial surrogate pair" ;
+   mf:description "Using a codepoint that is half of a surrogate pair (in the range U+D800–U+DFFF) without a corresponding codepoint is illegal" ;
+   mf:action  <syn-invalid-codepoint-escaped-bad-01.rq> ;.
