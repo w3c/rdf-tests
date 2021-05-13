@@ -19,17 +19,17 @@
       {
         "s": { "type": "uri" , "value": "http://example.org/s3" } ,
         "p": { "type": "uri" , "value": "http://example.org/p2" } ,
-        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#string" , "type": "typed-literal" , "value": "bar" }
+        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#string" , "type": "literal" , "value": "bar" }
       } ,
       {
         "s": { "type": "uri" , "value": "http://example.org/s4" } ,
         "p": { "type": "uri" , "value": "http://example.org/p4" } ,
-        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" }
+        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "literal" , "value": "4" }
       } ,
       {
         "s": { "type": "uri" , "value": "http://example.org/s5" } ,
         "p": { "type": "uri" , "value": "http://example.org/p5" } ,
-        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "type": "typed-literal" , "value": "5" }
+        "o": { "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "type": "literal" , "value": "5" }
       } ,
       {
         "s": { "type": "uri" , "value": "http://example.org/s6" } ,
