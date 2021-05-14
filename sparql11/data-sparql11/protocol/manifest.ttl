@@ -50,14 +50,14 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/x-www-url-form-urlencoded
     Content-Length: XXX
 
     query=ASK%20%7B%7D
-    
+
 #### Response
 
     2xx or 3xx response
@@ -65,9 +65,14 @@
 
     true
        """ ;
+        mf:action 	<query_post_form.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
+       dawgt:approval dawgt:ApprovedMustToHave ;
        .
+
+
+
 
 :query_dataset_default_graphs_get rdf:type mf:ProtocolTest ;
        mf:name    "GET query with protocol-specified default graph" ;
@@ -77,7 +82,7 @@
     GET /sparql?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
     Host: www.example
     User-agent: sparql-client/0.1
-    
+
 #### Response
 
     2xx or 3xx response
@@ -85,6 +90,7 @@
 
     true
        """ ;
+        #mf:action 	<query_dataset_default_graphs_get.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -94,14 +100,14 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
+    POST /sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> ?p ?o . <http://kasei.us/2009/09/sparql/data/data2.rdf> ?p ?o }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -109,6 +115,7 @@
 
     true
        """ ;
+        #mf:action 	<query_dataset_default_graphs_post.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -118,14 +125,14 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
+    POST /sparql?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     ASK { GRAPH ?g { ?s ?p ?o } }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -133,6 +140,7 @@
 
     true
        """ ;
+        #mf:action 	<query_dataset_named_graphs_post.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -142,10 +150,10 @@
        rdfs:comment """
 #### Request
 
-    GET /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf&query=ASK%20%7B%20GRAPH%20%3Fg%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D%20%7D HTTP/1.1
+    GET /sparql?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf&query=ASK%20%7B%20GRAPH%20%3Fg%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D%20%7D HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
-    
+
 #### Response
 
     2xx or 3xx response
@@ -153,6 +161,7 @@
 
     true
        """ ;
+        #mf:action 	<query_dataset_named_graphs_get.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -162,21 +171,22 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
+    POST /sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     SELECT ?g ?x ?s { ?x ?y ?o  GRAPH ?g { ?s ?p ?o } }
-    
+
 #### Response
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml or application/sparql-results+json
 
-    true
+    Contains SPARQL results for variables g x s
        """ ;
+        #mf:action 	<query_dataset_full.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -186,14 +196,14 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
+    POST /sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     ASK FROM <http://kasei.us/2009/09/sparql/data/data1.rdf> { <data1.rdf> ?p ?o }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -201,6 +211,7 @@
 
     true
        """ ;
+        #mf:action 	<query_multiple_dataset.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -211,7 +222,7 @@
 #### Request
 
     GET /sparql?query=ASK%20%7B%7D
-    
+
 #### Response
 
     2xx or 3xx response
@@ -219,8 +230,10 @@
 
     true
        """ ;
+        mf:action 	<query_get.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
+       dawgt:approval dawgt:ApprovedMustToHave ;
        .
 
 :query_content_type_select rdf:type mf:ProtocolTest ;
@@ -228,19 +241,20 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     SELECT (1 AS ?value) {}
-    
+
 #### Response
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, or text/csv
        """ ;
+        #mf:action 	<query_content_type_select.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -250,19 +264,20 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     ASK {}
-    
+
 #### Response
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml or application/sparql-results+json
        """ ;
+        #mf:action 	<query_content_type_ask.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -272,19 +287,20 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     DESCRIBE <http://example.org/>
-    
+
 #### Response
 
     2xx or 3xx response
     Content-Type: application/rdf+xml, application/rdf+json or text/turtle
        """ ;
+        #mf:action 	<query_content_type_describe.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -294,19 +310,20 @@
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     CONSTRUCT { <s> <p> 1 } WHERE {}
-    
+
 #### Response
 
     2xx or 3xx response
     Content-Type: application/rdf+xml, application/rdf+json or text/turtle
        """ ;
+        #mf:action 	<query_content_type_construct.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -338,7 +355,7 @@
     WHERE {
         ?s a foaf:Document
     }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -364,9 +381,10 @@ followed by
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+
     true
        """ ;
+        #mf:action 	<update_dataset_default_graph.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -398,7 +416,7 @@ followed by
     WHERE {
         ?s a foaf:Document
     }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -430,9 +448,10 @@ followed by
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+
     true
        """ ;
+        #mf:action 	<update_dataset_default_graphs.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -466,7 +485,7 @@ followed by
             ?s a foaf:Document
         }
     }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -498,9 +517,10 @@ followed by
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+
     true
        """ ;
+        #mf:action 	<update_dataset_named_graphs.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -540,7 +560,7 @@ followed by
             BIND("default" AS ?in)
         }
     }
-    
+
 #### Response
 
     2xx or 3xx response
@@ -572,9 +592,10 @@ followed by
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+
     true
        """ ;
+        #mf:action 	<update_dataset_full.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -584,20 +605,22 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/x-www-url-form-urlencoded
     Content-Length: XXX
 
     update=CLEAR%20ALL
-    
+
 #### Response
 
     2xx or 3xx response
        """ ;
+        mf:action 	<update_post_form.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
+       dawgt:approval dawgt:ApprovedMustToHave ;
        .
 
 :update_post_direct rdf:type mf:ProtocolTest ;
@@ -605,18 +628,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-update
     Content-Length: XXX
 
     CLEAR ALL
-    
+
 #### Response
 
     2xx or 3xx response
        """ ;
+        #mf:action 	<update_post_direct.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -626,7 +650,7 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-update
@@ -634,14 +658,14 @@ followed by
 
     CLEAR GRAPH <http://example.org/protocol-base-test/> ;
     INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }
-    
+
 #### Response
 
     2xx or 3xx response
 
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
@@ -658,9 +682,10 @@ followed by
 
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+
     one result with `?o` bound to an IRI that is _not_ `<test>`
        """ ;
+        #mf:action 	<update_base_uri.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -670,14 +695,14 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query
     Content-Length: XXX
 
     ASK {}
-    
+
 #### Response
 
     2xx or 3xx response
@@ -685,6 +710,7 @@ followed by
 
     true
        """ ;
+        #mf:action 	<query_post_direct.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -694,12 +720,13 @@ followed by
        rdfs:comment """
 #### Request
 
-    PUT /sparql?query=ASK%20%7B%7D            
-    
+    PUT /sparql?query=ASK%20%7B%7D
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_query_method.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -710,11 +737,12 @@ followed by
 #### Request
 
     GET /sparql?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_multiple_queries.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -724,18 +752,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: text/plain
     Content-Length: XXX
 
     ASK {}
-    
+
 #### Response
 
     4xx
        """ ;
+        ##mf:action 	<bad_query_wrong_media_type.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -745,17 +774,18 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Length: XXX
 
     query=ASK%20%7B%7D
-    
+
 #### Response
 
     4xx
        """ ;
+        ##mf:action 	<bad_query_missing_form_type.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -765,17 +795,18 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Length: XXX
 
     ASK {}
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_query_missing_direct_type.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -787,18 +818,19 @@ followed by
 
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-query; charset=UTF-16
     Content-Length: XXX
 
     ASK {}
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_query_non_utf8.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -809,11 +841,12 @@ followed by
 #### Request
 
     GET /sparql?query=ASK%20%7B
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_query_syntax.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -824,11 +857,12 @@ followed by
 #### Request
 
     GET /sparql?update=CLEAR%20ALL
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_get.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -838,18 +872,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/x-www-url-form-urlencoded
     Content-Length: XXX
 
     update=CLEAR%20NAMED&update=CLEAR%20DEFAULT
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_multiple_updates.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -859,18 +894,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: text/plain
     Content-Length: XXX
 
     CLEAR NAMED
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_wrong_media_type.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -880,17 +916,18 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Length: XXX
 
     update=CLEAR%20NAMED
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_missing_form_type.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -902,18 +939,19 @@ followed by
 
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/sparql-update; charset=UTF-16
     Content-Length: XXX
 
     CLEAR NAMED
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_non_utf8.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -923,18 +961,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/x-www-url-form-urlencoded
     Content-Length: XXX
 
     update=CLEAR%20XYZ
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_syntax.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
@@ -944,18 +983,19 @@ followed by
        rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql HTTP/1.1
     Host: www.example
     User-agent: sparql-client/0.1
     Content-Type: application/x-www-url-form-urlencoded
     Content-Length: XXX
 
     using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&update=%09%09PREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0A%09%09WITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0A%09%09DELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0A%09%09INSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0A%09%09WHERE%20%7B%0A%09%09%09%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%09%09%7D%0A
-    
+
 #### Response
 
     4xx
        """ ;
+        #mf:action 	<bad_update_dataset_conflict.jmx>  ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
        .
