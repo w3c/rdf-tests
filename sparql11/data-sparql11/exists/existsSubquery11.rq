@@ -1,0 +1,8 @@
+prefix : <http://www.example.org/>
+
+SELECT ?x WHERE {
+  BIND ( :b AS ?x )
+  BIND ( :b AS ?y )
+  FILTER EXISTS { { SELECT ( :d AS ?x ) WHERE { } }
+  	 	  { SELECT ( :e AS ?y ) WHERE { } } }
+}

@@ -1,0 +1,10 @@
+prefix : <http://www.example.org/>
+
+SELECT ?parent WHERE {
+  ?parent :country :j
+  FILTER ( EXISTS { SELECT ?child
+    WHERE { ?child :parent ?chparent
+      FILTER (?chparent = ?parent)
+    }
+  } )
+}

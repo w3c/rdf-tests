@@ -1,0 +1,7 @@
+prefix : <http://www.example.org/>
+
+SELECT ?x WHERE {
+  ?x :p ?y .
+  FILTER EXISTS { { SELECT ?x WHERE { ?x :p :b . } }
+  	 	  { SELECT ?y WHERE { :b ?y :b . } } }
+}

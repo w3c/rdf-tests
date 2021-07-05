@@ -1,0 +1,6 @@
+prefix : <http://www.example.org/>
+
+SELECT ?x WHERE {
+  :s :p ?x .
+  FILTER EXISTS { ?x :p _:a . }
+}
