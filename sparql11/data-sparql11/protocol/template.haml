@@ -115,7 +115,7 @@
             %dd{property: "mf:entry", inlist: true, resource: test['@id'], typeof: test['@type']}
               %dl.test-detail
                 %dt="type"
-                %dd{property: 'rdf:type'}<~test['@type']
+                %dd<~test['@type']
                 %dt="approval"
                 %dd{property: "mf:approval", resource: test['approval']}<~test['approval']
                 - # Syntax Tests

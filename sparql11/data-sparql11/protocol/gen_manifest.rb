@@ -1,6 +1,7 @@
 require 'cgi'
 require 'getoptlong'
 require 'json/ld'
+require 'rdf/rdfa'
 require 'rdf/reasoner'
 require 'rdf/turtle'
 require 'haml'
@@ -883,12 +884,13 @@ when :html
   template = File.read(File.expand_path('../template.haml', __FILE__))
   engine = Haml::Engine.new(template, format: :html5)
   html = engine.render(self, man: JSON.parse(man.to_json))
+  validate(RDF::RDFa::Reader.new(html, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: validate)) if validate
   output.write(html)
 when :jsonld
-  validate(JSON::LD::Reader.new(man.to_json)) if validate
+  validate(JSON::LD::Reader.new(man.to_json, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: validate)) if validate
   output.puts man.to_json(JSON::LD::JSON_STATE)
 when :ttl
-  JSON::LD::Reader.new(man.to_json) do |reader|
+  JSON::LD::Reader.new(man.to_json, validate: validate) do |reader|
     ttl = RDF::Turtle::Writer.buffer(
       prefixes: {
         "":     "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#",
@@ -902,7 +904,7 @@ when :ttl
       }
     ) {|writer| writer << reader}
 
-    validate(RDF::Turtle::Reader.new(ttl)) if validate
+    validate(RDF::Turtle::Reader.new(ttl, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: true)) if validate
 
     # Do some result hacking
     ttl.sub!('<http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest>', '<>')
