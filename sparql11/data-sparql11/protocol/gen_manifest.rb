@@ -424,7 +424,6 @@ ASK {
     }
   }
 }
-END
 ),
       'Content-Type': 'application/sparql-query',
       'Accept': 'application/sparql-results+xml',
@@ -558,7 +557,7 @@ NEGATIVE_TESTS  = {
     name: "invoke query operation with invalid query syntax (4XX result)",
     req: [{
       method: :GET,
-      query: 'ASK {}',
+      query: 'ASK {',
       "default-graph-uri": "http://kasei.us/2009/09/sparql/data/data0.rdf",
       resp: {
         status: "4XX"

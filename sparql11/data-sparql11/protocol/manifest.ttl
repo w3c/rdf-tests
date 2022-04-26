@@ -227,7 +227,7 @@ Some tests require special result processing.
     ht:connectionAuthority "www.example";
     ht:requests ([
         a ht:Request;
-        ht:absolutePath "/sparql?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf";
+        ht:absolutePath "/sparql?query=ASK%20%7B&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf";
         ht:httpVersion "1.1";
         ht:methodName "GET";
         ht:resp [
@@ -1413,7 +1413,6 @@ ASK {
     }
   }
 }
-END
 """
         ];
         ht:headers ([

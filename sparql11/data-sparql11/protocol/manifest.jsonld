@@ -1330,7 +1330,7 @@
             ],
             "ht:body": {
               "@type": "cnt:ContentAsText",
-              "cnt:chars": "\nASK {\n  GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n    <http://kasei.us/2009/09/sparql/data/data1.rdf> <http://example.org/in> \"default\" .\n    <http://kasei.us/2009/09/sparql/data/data2.rdf> <http://example.org/in> <http://kasei.us/2009/09/sparql/data/data2.rdf> .\n  }\n  FILTER NOT EXISTS {\n    GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n      <http://kasei.us/2009/09/sparql/data/data3.rdf> ?p ?o\n    }\n  }\n}\nEND\n",
+              "cnt:chars": "\nASK {\n  GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n    <http://kasei.us/2009/09/sparql/data/data1.rdf> <http://example.org/in> \"default\" .\n    <http://kasei.us/2009/09/sparql/data/data2.rdf> <http://example.org/in> <http://kasei.us/2009/09/sparql/data/data2.rdf> .\n  }\n  FILTER NOT EXISTS {\n    GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n      <http://kasei.us/2009/09/sparql/data/data3.rdf> ?p ?o\n    }\n  }\n}\n",
               "cnt:characterEncoding": "UTF-8"
             },
             "ht:resp": {
@@ -1779,7 +1779,7 @@
             "@type": "ht:Request",
             "ht:methodName": "GET",
             "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:absolutePath": "/sparql?query=ASK%20%7B&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
             "ht:resp": {
               "@type": "ht:Response",
               "ht:statusCodeValue": [
