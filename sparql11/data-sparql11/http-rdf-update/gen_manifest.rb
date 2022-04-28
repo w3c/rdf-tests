@@ -450,7 +450,7 @@ def gen_entry(frag, params)
   $charset = "UTF-8"
   entry = {
     '@id': "##{frag}",
-    "@type": "mf:ProtocolTest",
+    "@type": "mf:mf:GraphStoreProtocolTest",
     "name": params.delete(:name),
     "approval": "dawgt:Approved",
     "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",

@@ -90,7 +90,7 @@
   "entries": [
     {
       "@id": "#put__initial_state",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "PUT - Initial state",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -151,7 +151,7 @@
     },
     {
       "@id": "#get_of_put__initial_state",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of PUT - Initial state",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -223,7 +223,7 @@
     },
     {
       "@id": "#put__graph_already_in_store",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "PUT - graph already in store",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -284,7 +284,7 @@
     },
     {
       "@id": "#get_of_put__graph_already_in_store",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of PUT - graph already in store",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -356,7 +356,7 @@
     },
     {
       "@id": "#put__default_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "PUT - default graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -417,7 +417,7 @@
     },
     {
       "@id": "#get_of_put__default_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of PUT - default graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -489,7 +489,7 @@
     },
     {
       "@id": "#put__mismatched_payload",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "PUT - mismatched payload",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -550,7 +550,7 @@
     },
     {
       "@id": "#delete__existing_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "DELETE - existing graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -588,7 +588,7 @@
     },
     {
       "@id": "#get_of_delete__existing_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of DELETE - existing graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -626,7 +626,7 @@
     },
     {
       "@id": "#delete__nonexistent_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "DELETE - non-existent graph)",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -664,7 +664,7 @@
     },
     {
       "@id": "#post__existing_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "POST - existing graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -725,7 +725,7 @@
     },
     {
       "@id": "#get_of_post__existing_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of POST - existing graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -797,7 +797,7 @@
     },
     {
       "@id": "#post__multipart_formdata",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "POST - multipart/form-data",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -858,7 +858,7 @@
     },
     {
       "@id": "#get_of_post__multipart_formdata",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of POST - multipart/form-data",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -919,7 +919,7 @@
     },
     {
       "@id": "#post__create__new_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "POST - create new graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -991,7 +991,7 @@
     },
     {
       "@id": "#get_of_post__create__new_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of POST - create new graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -1063,7 +1063,7 @@
     },
     {
       "@id": "#get_of_post__after_noop",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "GET of POST - after noop",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -1135,7 +1135,7 @@
     },
     {
       "@id": "#head_on_an_existing_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -1191,7 +1191,7 @@
     },
     {
       "@id": "#head_on_a_nonexisting_graph",
-      "@type": "mf:ProtocolTest",
+      "@type": "mf:mf:GraphStoreProtocolTest",
       "name": "HEAD on a non-existing graph",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
