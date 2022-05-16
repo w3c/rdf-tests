@@ -744,8 +744,8 @@ def gen_entry(frag, params)
       req[:Accept]
 
     # Default Content-Type on POST
-    req[:'Content-Type'] = "application/x-www-form-urlencoded" if
-      req[:method] == :POST && !req.key?(:'Content-Type')
+    #req[:'Content-Type'] = "application/x-www-form-urlencoded" if
+    #  req[:method] == :POST && !req.key?(:'Content-Type')
 
     (request[:headers] ||= []) << encode_header(req, :'Content-Type') if
       req[:'Content-Type']

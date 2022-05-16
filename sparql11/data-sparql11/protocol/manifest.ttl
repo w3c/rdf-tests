@@ -86,15 +86,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=CLEAR%20ALL&update=CLEAR%20DEFAULT"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -138,15 +129,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "ASK {}"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -399,15 +381,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=CLEAR%20XYZ"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -465,15 +438,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -511,15 +475,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=CONSTRUCT%20%7B%20%3Cs%3E%20%3Cp%3E%201%20%7D%20WHERE%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -566,15 +521,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=DESCRIBE%20%3Chttp%3A%2F%2Fexample.org%2F%3E&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -621,15 +567,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=SELECT%20%281%20AS%20%3Fvalue%29%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -673,15 +610,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%3Fp%20%3Fo%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -761,15 +689,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -812,15 +731,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=%0AASK%20%7B%0A%20%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20%3Ftype%0A%20%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%0A%20%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%0A%7D%0A&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -900,15 +810,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -988,15 +889,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "query=ASK%20FROM%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1085,15 +977,6 @@ Some tests require special result processing.
     ht:requests ([
         a ht:Request;
         ht:absolutePath "/sparql?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf";
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1136,15 +1019,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=CLEAR%20SILENT%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-base-test%2F%3E%20%3B%20INSERT%20DATA%20%7B%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-base-test%2F%3E%20%7B%20%3Chttp%3A%2F%2Fexample.org%2Fs%3E%20%3Chttp%3A%2F%2Fexample.org%2Fp%3E%20%3Ctest%3E%20%7D%20%7D"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1167,14 +1041,6 @@ Some tests require special result processing.
             ht:headerElements ([
                 a ht:HeaderElement;
                 ht:elementName "application/sparql-results+xml"
-              ])
-          ] [
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
               ])
           ]);
         ht:httpVersion "1.1";
@@ -1216,15 +1082,6 @@ Some tests require special result processing.
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ACLEAR%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%0A%20%20%20%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%0A%20%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%3Fs%20a%20foaf%3ADocument%0A%7D%0A"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1297,15 +1154,6 @@ ASK {
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-graphs-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%3Fs%20a%20foaf%3ADocument%0A%7D%0A"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1379,15 +1227,6 @@ ASK {
     ht:requests ([
         a ht:Request;
         ht:absolutePath "/sparql?update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-full-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20%3Chttp%3A%2F%2Fexample.org%2Fin%3E%20%3Fin%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20GRAPH%20%3Fg%20%7B%20%3Fs%20a%20foaf%3ADocument%20%7D%0A%20%20%20%20BIND%28%3Fg%20AS%20%3Fin%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20%3Fs%20a%20foaf%3ADocument%20.%0A%20%20%20%20BIND%28%22default%22%20AS%20%3Fin%29%0A%20%20%7D%0A%7D%0A&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf";
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1466,15 +1305,6 @@ ASK {
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-named-graphs-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20GRAPH%20%3Fg%20%7B%0A%20%20%20%20%3Fs%20a%20foaf%3ADocument%0A%20%20%7D%0A%7D%0A"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
@@ -1587,15 +1417,6 @@ ASK {
           cnt:characterEncoding "UTF-8";
           cnt:chars "update=CLEAR%20ALL"
         ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
         ht:httpVersion "1.1";
         ht:methodName "POST";
         ht:resp [
