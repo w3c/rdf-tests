@@ -15,6 +15,26 @@
     :exists03
     :exists04
     :exists05
+    :existsBlank01
+    :existsBound01
+    :existsHernandez01
+    :existsHernandez02
+    :existsMinus01
+    :existsScope01
+    :existsScope02
+    :existsSubquery01
+    :existsSubquery02
+    :existsSubquery03
+    :existsSubquery04
+    :existsSubquery05
+    :existsSubquery06
+    :existsSubquery07
+    :existsSubquery08
+    :existsSubquery09
+    :existsSubquery10
+    :existsSubquery11
+    :existsValues01
+    :existsValues02
   ).
 
 
@@ -56,7 +76,7 @@
     .    
    
     
- :exists04 rdf:type mf:QueryEvaluationTest ;
+:exists04 rdf:type mf:QueryEvaluationTest ;
     mf:name "Nested positive exists";
 	mf:feature sparql:exists ;
     dawgt:approval dawgt:Approved;
@@ -79,4 +99,245 @@
           ] ;
     mf:result  <exists05.srx>  
     .           
+
     
+:existsScope01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "BIND in EXISTS to FILTER variable";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect BIND variables" ;
+    rdfs:comment    "Change in-scope to start out with FILTER variables" ;
+    mf:action
+         [ qt:query  <existsScope01.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsScope01.srx>  
+    .           
+
+:existsScope02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "Twin BIND in EXISTS to FILTER variables with same value";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect BIND variables" ;
+    rdfs:comment    "Change in-scope to start out with FILTER variables" ;
+    rdfs:comment    "Explicitly undefined in spec" ;
+    mf:action
+         [ qt:query  <existsScope02.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    .           
+
+:existsValues01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "VALUES in EXISTS for FILTER variable";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect solution mapping variables" ;
+    mf:action
+         [ qt:query  <existsValues01.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsValues01.srx>  
+    .           
+
+:existsValues02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "Twin VALUES in EXISTS for FILTER variables with same value";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect solution mapping variables" ;
+    mf:action
+         [ qt:query  <existsValues02.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsValues02.srx>  
+    .           
+
+:existsSubquery01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with projection to FILTER variable";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
+    mf:action
+         [ qt:query  <existsSubquery01.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT inside group in EXISTS with projection to FILTER variable";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "To ensure that the argument to EXISTS is a pattern" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
+    mf:action
+         [ qt:query  <existsSubquery02.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery03 rdf:type mf:QueryEvaluationTest ;
+    mf:name "Twin SELECT in EXISTS for FILTER variables with same value";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables in subqueries" ;
+    mf:action
+         [ qt:query  <existsSubquery03.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery03.srx>  
+    .           
+
+:existsSubquery04 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with disconnected FILTER variable";
+    rdfs:comment    "Change EXISTS to not affect disconnected variables" ;
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <existsSubquery04.rq> ;
+           qt:data   <existsSubquery04.ttl> ;
+          ] ;
+    mf:result  <existsSubquery04.srx>  
+    .           
+
+:existsSubquery05 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with disconnected FILTER variable";
+	mf:feature sparql:exists ;
+    rdfs:comment    "To ensure that the argument to EXISTS is a pattern" ;
+    rdfs:comment    "Change EXISTS to not affect disconnected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery05.rq> ;
+           qt:data   <existsSubquery04.ttl> ;
+          ] ;
+    mf:result  <existsSubquery04.srx>  
+    .           
+
+:existsSubquery06 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with connected FILTER variable with AS";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery06.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery07 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with connected FILTER variable with AS";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery07.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery08 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with connected FILTER variable checking BOUND";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery08.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery03.srx>  
+    .           
+
+:existsSubquery09 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with disconnected FILTER variable and grouping";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An undefined Project is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect disconnected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery09.rq> ;
+           qt:data   <existsSubquery09.ttl> ;
+          ] ;
+    mf:result  <existsSubquery04.srx>  
+    .           
+
+:existsSubquery10 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with connected FILTER variable with different value";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery10.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery01.srx>  
+    .           
+
+:existsSubquery11 rdf:type mf:QueryEvaluationTest ;
+    mf:name "SELECT in EXISTS with twin connected FILTER variables with different values";
+	mf:feature sparql:exists ;
+    rdfs:comment    "An illegal solution mapping is generated internally" ;
+    rdfs:comment    "Change EXISTS to not affect connected variables" ;
+    mf:action
+         [ qt:query  <existsSubquery11.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsSubquery04.srx>  
+    .           
+
+:existsBlank01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS substitution to blank node";
+	mf:feature sparql:exists ;
+    rdfs:comment "The substituted blank node is further substituted" ;
+    rdfs:comment "Change EXISTS so that mappings to blank nodes don't trigger instance mappings";
+    mf:action
+         [ qt:query  <existsBlank01.rq> ;
+           qt:data   <existsBlank01.ttl> ;
+          ] ;
+    mf:result  <existsBlank01.srx>  
+    .           
+
+:existsBound01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS substitution to variable in BOUND";
+	mf:feature sparql:exists ;
+    rdfs:comment "Change EXISTS so that variable status is not affected";
+    mf:action
+         [ qt:query  <existsBound01.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsBound01.srx>  
+    .           
+
+:existsMinus01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS substitution that removes shared variable in MINUS";
+	mf:feature sparql:exists ;
+    rdfs:comment "Change EXISTS so that variable status ix not affected";
+    mf:action
+         [ qt:query  <existsMinus01.rq> ;
+           qt:data   <existsbpb.ttl> ;
+          ] ;
+    mf:result  <existsMinus01.srx>  
+    .           
+
+:existsHernandez01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS substitution into disconnected variable";
+	mf:feature sparql:exists ;
+    rdfs:comment "Change EXISTS to not affect disconnected variables";
+    rdfs:comment "From https://scirate.com/arxiv/1606.01441" ;
+    mf:action
+         [ qt:query  <existsHernandez01.rq> ;
+           qt:data   <existsHernandez01.ttl> ;
+          ] ;
+    mf:result  <existsHernandez01.srx>  
+    .
+
+:existsHernandez02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS substitution into disconnected variable";
+	mf:feature sparql:exists ;
+    rdfs:comment "Change EXISTS to not affect disconnected variables";
+    rdfs:comment "From https://scirate.com/arxiv/1606.01441" ;
+    mf:action
+         [ qt:query  <existsHernandez02.rq> ;
+           qt:data   <existsHernandez01.ttl> ;
+          ] ;
+    mf:result  <existsHernandez01.srx>  
+    .
+

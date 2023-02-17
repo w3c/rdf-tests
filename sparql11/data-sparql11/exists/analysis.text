@@ -1,0 +1,279 @@
+Here are the portions of the SPARQL 1.1 Query specification relevant to the
+definition of EXISTS, as far as I can tell.  
+
+
+From 18.2.2.2 Collect FILTER Elements
+
+FILTER expressions apply to the whole group graph pattern in which they
+appear. The algebra operators to perform filtering are added to the group
+after translation of each group element. We collect the filters together
+here and remove them from group, then apply them to the whole translated
+group graph pattern. 
+
+In this step, we also translate graph patterns within FILTER expressions
+EXISTS and NOT EXISTS. 
+
+Let FS := empty set
+
+For each form FILTER(expr) in the group graph pattern:
+    In expr, replace NOT EXISTS{P} with fn:not(exists(translate(P))) 
+    In expr, replace EXISTS{P} with exists(translate(P))
+    FS := FS ∪ {expr}
+    End
+
+
+18.5 SPARQL Algebra
+
+Definition: Exists
+
+exists(pattern) is a function that returns true if the pattern evaluates to
+a non-empty solution sequence, given the current solution mapping and active
+graph at the time of evaluation; otherwise it returns false.
+
+
+From 18.6 Evaluation Semantics
+
+'substitute' is a filter function in support of the evaluation of EXISTS and
+NOT EXISTS forms which were translated to exists. 
+
+Definition: Substitute
+
+Let μ be a solution mapping.
+substitute(pattern, μ) = the pattern formed by replacing every occurrence of
+a variable v in pattern by μ(v) for each v in dom(μ) 
+
+Definition: Evaluation of Exists
+
+Let μ be the current solution mapping for a filter and P a graph pattern:
+The value exists(P), given D(G) is true if and only if eval(D(G),
+substitute(P, μ)) is a non-empty sequence.  
+
+
+
+The purpose of existsScope01 is to explore what happens with a BIND to a
+variable that is in the solution mapping that goes into the EXISTS.
+
+The query is
+  SELECT ?x WHERE {
+    ?x :p :b .
+    FILTER EXISTS { BIND ( :j AS ?x ) }
+  }
+This query is syntactically correct.
+
+The EXISTS argument is translated to
+  exists( Extend(E, x, :j) )
+where E is the empty pattern.
+
+The FILTER is evaluated with the multiset of solution mappings
+  { { ( x , :b ) } }
+so the result of the substitute part of the evaluation is
+  Extend(E, :b, :j)
+Evaluating Extend evaluates E, which results in an empty multiset, and then
+adds in a mapping for :b, which results in
+  { { ( :b , :j ) } }
+
+This is not a multiset of solution mappings, so something has gone wrong.
+It doesn't look like an error but it is something that SPARQL
+implementations probably should not accept.  Even so, the multiset is not
+empty so the exists evaluates to true and the result of the query is
+  { { ( x , :b ) } }
+
+Even in this very simple exmple, there is a problem with EXISTS.
+
+
+The purpose of existsScope02 is to further explore what happens with BIND.
+The query is
+  SELECT ?x WHERE {
+    ?x :p ?y .
+    FILTER EXISTS { BIND ( :j AS ?x )
+                    BIND ( :k AS ?y ) }
+  }
+The EXISTS is translated to
+  Extend( Extend(E, ?x, :j), y, :k )
+which after substitution is
+  Extend( Extend(E, :b, :j), :b, :k )
+The outer Extend tries to override an existing binding.  That result is
+explicitly undefined so it is not possible to proceed further.
+
+
+The purpose of existsValues01 and existsValues02 is to explore what happens
+with VALUES that use variables that are in the solution mapping.
+
+The EXISTS arguments are
+  { VALUES (?x) { ( :c ) } }
+and 
+  { VALUES (?x) { ( :c ) } VALUES (?y) { ( :d ) } }
+which translated as follows, respectively
+  { { ( ?x, :c ) } }
+and
+  Join( Join( E,   { { ( ?x, :c ) } } ) ,   { { ( y, :d ) } } )
+After substitution they become
+  { { ( :b, :c ) } }
+and
+  Join( Join( E,   { { ( :b, :c ) } } ) ,   { { ( :b, :d ) } } )
+And they evaluate to
+  { { ( :b, :c ) } }
+and
+  { }
+
+Here there is again the problem with illegal multisets of solution mappings,
+but there is also another minor problem that
+  { { ( :b, :c ) } }
+is not explicitly listed as one of the parts of the SPARQL algebra that is a
+Graph Pattern.  One could argue that this means that this violates the
+requirement in the definition of substite that the result is a pattern and
+is another semantic anomaly that should be reported.
+
+
+The purpose of existsBlank is to explore what happens with blank nodes in
+solution mappings.  The query is
+  SELECT ?x WHERE {
+    :s :p ?x .
+    FILTER EXISTS { ?x :p _:a . }
+  }
+The exists argument is translated to
+  BGP( ?x :p _:a )
+The solution sequence in the FILTER is
+  { { ( ?x, _:b ) } }
+The substitution results in
+ BGP( _:b :p _:a )
+which results in a multiset of solution mappings of
+ { { } }
+against the graph 
+  :s :p _:b .
+because _:b in the BGP can be substituted with :s in the RDF instance
+mapping part of the pattern instance mapping.
+Here there are no semantic anomalies at all.
+
+
+The purpose of existsBound is to explore what happens with the BOUND
+function.  [Note: This test was not in the list of tests to run but is now.]
+The EXISTS argument is
+  { FILTER BOUND(?x) }
+which is translated to
+  Filter( BOUND(?x), E )
+Substitution then produces
+  Filter( BOUND(:b), E )
+BOUND is only defined for variables so a type error will always result and
+the Filter will eliminate all solution mappings so the final result is the
+empty multiset.
+
+
+The purpose of existsMinus is to explore what happens with MINUS.
+  { ?x :p :b . MINUS { ?x :p :b } }
+which is translated to
+  Minus( Join(E, BGP( ?x :p :b )), BGP ( ?x :p :b ) )
+Maybe the Join is simplified out, but that doesn't affect the analysis here.
+Substitution results in
+  Minus( Join(E, BGP( :b :p :b )), BGP ( :b :p :b ) )
+Evaluation proceeds to
+  Minus( { { } }, { { } } )
+Which is
+  { { } }
+because the solution bindings have disjoint domains.
+Finally, the result of the query is
+  { { ( ?x, :b ) } }
+
+
+The purpose of the other tests is to explore what happens with subqueries.
+Many of them are similar or mirror examples from above, so only a few are
+analyzed here.
+
+The purpose of existsSubquery01 is to analyze what happens with connected
+variables.  The query is
+  SELECT ?x WHERE {
+    ?x :p :b .
+    FILTER EXISTS { SELECT ?x WHERE { ?x :p :b . } }
+  }
+The translation of the EXISTS argument is
+  ToMultiSet( Project(BGP(?x :p :b),{?x}) )
+After translation this is 
+  ToMultiSet( Project(BGP(:b :p :b),{:b}) )
+ToMultiSet is not listed as a Graph Pattern symbol in the SPARQL algebra so
+there is an argument to be made that this is a semantic anomaly that needs
+to be reported.  Also, the second argument to Project is not a set of
+variables so the definition of Project has to be expanded.
+The resulting multiset if these semantic anomalies are ignored is
+  { { } }
+which produces a result for the query of
+  { { ( ?x, :b ) } }
+
+Note that if the query is changed to 
+  SELECT ?x WHERE {
+    ?x :p :b .
+    FILTER EXISTS { { SELECT ?x WHERE { ?x :p :b . } BIND ( :k AS ?k ) } }
+  }
+Then the argument to and result of substitute will both definitely be
+acceptable so it is not sufficient to argue that substitute needs to be
+changed if its argument or result is not a graph pattern.
+
+The purpose of existsSubquery04 is to analyze what happens with disconnected
+variables.  The query is
+  SELECT ?x WHERE {
+    ?x :a ?y .
+    FILTER EXISTS { SELECT ?z WHERE { ?z :f ?y . } }
+  }
+The translation of the EXISTS argument is
+  ToMultiSet(Project(BGP(?z :f ?y),{?z}))
+and the substitution result is
+  ToMultiSet(Project(BGP(?z :f :b),{?z}))
+The BGP has no matches so the result of this is
+  { }
+so the result of the entire query is
+  { }
+
+The purpose of existsSubquery07 is to analyze what happens with connected
+variables that are set up with expresions.  The query is
+  SELECT ?x WHERE {
+    ?x :p :b .
+    FILTER EXISTS { ?x :p :b .
+                    { SELECT ( :d AS ?x ) WHERE { :b :p :b . } } }
+  }
+The translation of the EXISTS argument is
+  Join( Join( E, BGP(?x :p :b) ),
+        ToMultiSet( Project( Extend( BGP( :b :p :b ), ?x, :d ), {?x} ) ) )
+After substitution this is
+  Join( Join( E, BGP(:b :p :b) ),
+        ToMultiSet( Project( Extend( BGP( :b :p :b ), :b, :d ), {:b} ) ) )
+Both the Extend and the Project have semantic anomalies here.  In the end
+the result is
+  { { ( :b, :d ) } }
+and the query produces
+  { { ( ?x, :b ) } }
+
+
+The purpose of existsSubquery10 (new test) is to analyze the interaction
+between FILTER variables and connected variables with different mappings in
+subqueries.  The query is
+  SELECT ?x WHERE {
+    BIND ( :b AS ?x )
+    FILTER EXISTS { SELECT ( :d AS ?x ) WHERE { } }
+  }
+The translation of the EXISTS argument is
+  ToMultiSet( Project( Extend( E, ?x, :d ) ) )
+After substitution this is
+  ToMultiSet( Project( Extend( E, :b, :d ) ) )
+This results in the (illegal) multiset of solution mappings
+  { { ( :b, :d ) } }
+so the query results in
+  { { ( ?x, :b) } }
+
+The purpose of existsSubquery11 (new test) is to further analyze the
+interaction between FILTER variables and connected variables with different
+mappings in subqueries.  The query is
+  SELECT ?x WHERE {
+    BIND ( :b AS ?x )
+    BIND ( :b AS ?y )
+    FILTER EXISTS { { SELECT ( :d AS ?x ) WHERE { } }
+  	 	  { SELECT ( :e AS ?y ) WHERE { } } }
+  }
+The translation of the EXISTS argument is
+  Join( Join( E, ToMultiSet( Project( Extend( E, ?x, :d ) ) ) )
+  	ToMultiSet( Project( Extend( E, ?y, :e ) ) ) )
+After substitution this is
+  Join( Join( E, ToMultiSet( Project( Extend( E, :b, :d ) ) ) )
+  	ToMultiSet( Project( Extend( E, :b, :e ) ) ) )
+This results in (after going through some illegal solution mappings) 
+  { }
+so the query results in
+  { }
