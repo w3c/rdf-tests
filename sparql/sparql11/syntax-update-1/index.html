@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       Syntax Update 1
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>Syntax Update 1</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         Syntax tests Syntax SPARQL Update
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +78,20 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1:
+        <dt id='test_1'>
+          <a class='testlink' href='#test_1'>
+            test_1:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1' property='mf:name'>syntax-update-01.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_1' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -109,19 +104,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2:
+        <dt id='test_2'>
+          <a class='testlink' href='#test_2'>
+            test_2:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2' property='mf:name'>syntax-update-02.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_2' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -134,19 +130,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3:
+        <dt id='test_3'>
+          <a class='testlink' href='#test_3'>
+            test_3:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3' property='mf:name'>syntax-update-03.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_3' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -159,19 +156,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4:
+        <dt id='test_4'>
+          <a class='testlink' href='#test_4'>
+            test_4:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4' property='mf:name'>syntax-update-04.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_4' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -184,19 +182,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5:
+        <dt id='test_5'>
+          <a class='testlink' href='#test_5'>
+            test_5:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5' property='mf:name'>syntax-update-05.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_5' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -209,19 +208,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6:
+        <dt id='test_6'>
+          <a class='testlink' href='#test_6'>
+            test_6:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6' property='mf:name'>syntax-update-06.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_6' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -234,19 +234,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7:
+        <dt id='test_7'>
+          <a class='testlink' href='#test_7'>
+            test_7:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7' property='mf:name'>syntax-update-07.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_7' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -259,19 +260,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8:
+        <dt id='test_8'>
+          <a class='testlink' href='#test_8'>
+            test_8:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8' property='mf:name'>syntax-update-08.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_8' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -284,19 +286,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9:
+        <dt id='test_9'>
+          <a class='testlink' href='#test_9'>
+            test_9:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9' property='mf:name'>syntax-update-09.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_9' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -309,19 +312,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10:
+        <dt id='test_10'>
+          <a class='testlink' href='#test_10'>
+            test_10:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10' property='mf:name'>syntax-update-10.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_10' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -334,19 +338,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11:
+        <dt id='test_11'>
+          <a class='testlink' href='#test_11'>
+            test_11:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11' property='mf:name'>syntax-update-11.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_11' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -359,19 +364,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12:
+        <dt id='test_12'>
+          <a class='testlink' href='#test_12'>
+            test_12:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12' property='mf:name'>syntax-update-12.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_12' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -384,19 +390,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13:
+        <dt id='test_13'>
+          <a class='testlink' href='#test_13'>
+            test_13:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13' property='mf:name'>syntax-update-13.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_13' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -409,19 +416,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14:
+        <dt id='test_14'>
+          <a class='testlink' href='#test_14'>
+            test_14:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14' property='mf:name'>syntax-update-14.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_14' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -434,19 +442,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15:
+        <dt id='test_15'>
+          <a class='testlink' href='#test_15'>
+            test_15:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15' property='mf:name'>syntax-update-15.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_15' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -459,19 +468,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16:
+        <dt id='test_16'>
+          <a class='testlink' href='#test_16'>
+            test_16:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16' property='mf:name'>syntax-update-16.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_16' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -484,19 +494,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17:
+        <dt id='test_17'>
+          <a class='testlink' href='#test_17'>
+            test_17:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17' property='mf:name'>syntax-update-17.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_17' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -509,19 +520,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18:
+        <dt id='test_18'>
+          <a class='testlink' href='#test_18'>
+            test_18:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18' property='mf:name'>syntax-update-18.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_18' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -534,19 +546,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19:
+        <dt id='test_19'>
+          <a class='testlink' href='#test_19'>
+            test_19:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19' property='mf:name'>syntax-update-19.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_19' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -559,19 +572,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20:
+        <dt id='test_20'>
+          <a class='testlink' href='#test_20'>
+            test_20:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20' property='mf:name'>syntax-update-20.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_20' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -584,19 +598,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21:
+        <dt id='test_21'>
+          <a class='testlink' href='#test_21'>
+            test_21:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21' property='mf:name'>syntax-update-21.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_21' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -609,19 +624,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22:
+        <dt id='test_22'>
+          <a class='testlink' href='#test_22'>
+            test_22:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22' property='mf:name'>syntax-update-22.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_22' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -634,19 +650,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23:
+        <dt id='test_23'>
+          <a class='testlink' href='#test_23'>
+            test_23:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23' property='mf:name'>syntax-update-23.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_23' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -659,19 +676,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24:
+        <dt id='test_24'>
+          <a class='testlink' href='#test_24'>
+            test_24:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24' property='mf:name'>syntax-update-24.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_24' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -684,19 +702,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25:
+        <dt id='test_25'>
+          <a class='testlink' href='#test_25'>
+            test_25:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25' property='mf:name'>syntax-update-25.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_25' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -709,19 +728,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26:
+        <dt id='test_26'>
+          <a class='testlink' href='#test_26'>
+            test_26:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26' property='mf:name'>syntax-update-26.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_26' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -734,19 +754,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27:
+        <dt id='test_27'>
+          <a class='testlink' href='#test_27'>
+            test_27:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27' property='mf:name'>syntax-update-27.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_27' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -759,19 +780,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28:
+        <dt id='test_28'>
+          <a class='testlink' href='#test_28'>
+            test_28:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28' property='mf:name'>syntax-update-28.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_28' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -784,19 +806,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29:
+        <dt id='test_29'>
+          <a class='testlink' href='#test_29'>
+            test_29:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29' property='mf:name'>syntax-update-29.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_29' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -809,19 +832,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30:
+        <dt id='test_30'>
+          <a class='testlink' href='#test_30'>
+            test_30:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30' property='mf:name'>syntax-update-30.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_30' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -834,19 +858,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31:
+        <dt id='test_31'>
+          <a class='testlink' href='#test_31'>
+            test_31:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31' property='mf:name'>syntax-update-31.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_31' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -859,19 +884,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32:
+        <dt id='test_32'>
+          <a class='testlink' href='#test_32'>
+            test_32:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32' property='mf:name'>syntax-update-32.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_32' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -884,19 +910,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33:
+        <dt id='test_33'>
+          <a class='testlink' href='#test_33'>
+            test_33:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33' property='mf:name'>syntax-update-33.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_33' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -909,19 +936,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34:
+        <dt id='test_34'>
+          <a class='testlink' href='#test_34'>
+            test_34:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34' property='mf:name'>syntax-update-34.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_34' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -934,19 +962,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35:
+        <dt id='test_35'>
+          <a class='testlink' href='#test_35'>
+            test_35:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35' property='mf:name'>syntax-update-35.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_35' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -959,19 +988,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36:
+        <dt id='test_36'>
+          <a class='testlink' href='#test_36'>
+            test_36:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36' property='mf:name'>syntax-update-36.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_36' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -984,19 +1014,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37:
+        <dt id='test_37'>
+          <a class='testlink' href='#test_37'>
+            test_37:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37' property='mf:name'>syntax-update-37.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_37' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1009,19 +1040,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38:
+        <dt id='test_38'>
+          <a class='testlink' href='#test_38'>
+            test_38:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38' property='mf:name'>syntax-update-38.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_38' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1034,19 +1066,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39:
+        <dt id='test_39'>
+          <a class='testlink' href='#test_39'>
+            test_39:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39' property='mf:name'>syntax-update-39.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_39' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1059,19 +1092,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40:
+        <dt id='test_40'>
+          <a class='testlink' href='#test_40'>
+            test_40:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40' property='mf:name'>syntax-update-40.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_40' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1084,19 +1118,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41:
+        <dt id='test_41'>
+          <a class='testlink' href='#test_41'>
+            test_41:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41' property='mf:name'>syntax-update-bad-01.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_41' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1109,19 +1144,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42:
+        <dt id='test_42'>
+          <a class='testlink' href='#test_42'>
+            test_42:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42' property='mf:name'>syntax-update-bad-02.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_42' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1134,19 +1170,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43:
+        <dt id='test_43'>
+          <a class='testlink' href='#test_43'>
+            test_43:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43' property='mf:name'>syntax-update-bad-03.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_43' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1159,19 +1196,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44:
+        <dt id='test_44'>
+          <a class='testlink' href='#test_44'>
+            test_44:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44' property='mf:name'>syntax-update-bad-04.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_44' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1184,19 +1222,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45:
+        <dt id='test_45'>
+          <a class='testlink' href='#test_45'>
+            test_45:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45' property='mf:name'>syntax-update-bad-05.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_45' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1209,19 +1248,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46:
+        <dt id='test_46'>
+          <a class='testlink' href='#test_46'>
+            test_46:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46' property='mf:name'>syntax-update-bad-06.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_46' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1234,19 +1274,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47:
+        <dt id='test_47'>
+          <a class='testlink' href='#test_47'>
+            test_47:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47' property='mf:name'>syntax-update-bad-07.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_47' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1259,19 +1300,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48:
+        <dt id='test_48'>
+          <a class='testlink' href='#test_48'>
+            test_48:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48' property='mf:name'>syntax-update-bad-08.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_48' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1284,19 +1326,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49:
+        <dt id='test_49'>
+          <a class='testlink' href='#test_49'>
+            test_49:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49' property='mf:name'>syntax-update-bad-09.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_49' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1309,19 +1352,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50:
+        <dt id='test_50'>
+          <a class='testlink' href='#test_50'>
+            test_50:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50' property='mf:name'>syntax-update-bad-10.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_50' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1334,19 +1378,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51:
+        <dt id='test_51'>
+          <a class='testlink' href='#test_51'>
+            test_51:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51' property='mf:name'>syntax-update-bad-11.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_51' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1359,19 +1404,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52:
+        <dt id='test_52'>
+          <a class='testlink' href='#test_52'>
+            test_52:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52' property='mf:name'>syntax-update-bad-12.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_52' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1384,19 +1430,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53:
+        <dt id='test_53'>
+          <a class='testlink' href='#test_53'>
+            test_53:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53' property='mf:name'>syntax-update-53.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53' typeof='mf:PositiveUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_53' typeof='mf:PositiveUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1409,19 +1456,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54:
+        <dt id='test_54'>
+          <a class='testlink' href='#test_54'>
+            test_54:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54' property='mf:name'>syntax-update-54.ru</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54' typeof='mf:NegativeUpdateSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-update-1/manifest#test_54' typeof='mf:NegativeUpdateSyntaxTest11'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeUpdateSyntaxTest11</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       SPARQL Service
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,19 @@
       </a>
     </p>
     <h1 property='rdfs:label'>SPARQL Service</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +77,20 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1:
+        <dt id='service1'>
+          <a class='testlink' href='#service1'>
+            service1:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1' property='mf:name'>SERVICE test 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -105,7 +99,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b15'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service01.rq' property='qt:query'>service01.rq</a>
@@ -122,19 +116,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2:
+        <dt id='service2'>
+          <a class='testlink' href='#service2'>
+            service2:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2' property='mf:name'>SERVICE test 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -143,7 +138,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b13'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service02.rq' property='qt:query'>service02.rq</a>
@@ -156,19 +151,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3:
+        <dt id='service3'>
+          <a class='testlink' href='#service3'>
+            service3:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3' property='mf:name'>SERVICE test 3</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -177,7 +173,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b10'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service03.rq' property='qt:query'>service03.rq</a>
@@ -190,19 +186,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a:
+        <dt id='service4a'>
+          <a class='testlink' href='#service4a'>
+            service4a:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a' property='mf:name'>SERVICE test 4a with VALUES clause</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -211,7 +208,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b7'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service04a.rq' property='qt:query'>service04a.rq</a>
@@ -228,19 +225,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5:
+        <dt id='service5'>
+          <a class='testlink' href='#service5'>
+            service5:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5' property='mf:name'>SERVICE test 5</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -249,7 +247,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service05.rq' property='qt:query'>service05.rq</a>
@@ -266,19 +264,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6:
+        <dt id='service6'>
+          <a class='testlink' href='#service6'>
+            service6:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6' property='mf:name'>SERVICE test 6</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -287,7 +286,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b2'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service06.rq' property='qt:query'>service06.rq</a>
@@ -300,19 +299,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7:
+        <dt id='service7'>
+          <a class='testlink' href='#service7'>
+            service7:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7' property='mf:name'>SERVICE test 7</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource='sd:BasicFederatedQuery'>sd:BasicFederatedQuery</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -321,7 +321,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b0'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='service07.rq' property='qt:query'>service07.rq</a>

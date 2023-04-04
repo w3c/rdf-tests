@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#'>
+<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       Syntax 3
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>Syntax 3</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         Syntax tests syntax-sparql3
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +78,20 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01:
+        <dt id='syn-01'>
+          <a class='testlink' href='#syn-01'>
+            syn-01:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01' property='mf:name'>syn-01.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-01' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -109,19 +104,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02:
+        <dt id='syn-02'>
+          <a class='testlink' href='#syn-02'>
+            syn-02:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02' property='mf:name'>syn-02.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-02' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -134,19 +130,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03:
+        <dt id='syn-03'>
+          <a class='testlink' href='#syn-03'>
+            syn-03:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03' property='mf:name'>syn-03.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-03' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -159,19 +156,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04:
+        <dt id='syn-04'>
+          <a class='testlink' href='#syn-04'>
+            syn-04:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04' property='mf:name'>syn-04.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-04' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -184,19 +182,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05:
+        <dt id='syn-05'>
+          <a class='testlink' href='#syn-05'>
+            syn-05:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05' property='mf:name'>syn-05.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-05' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -209,19 +208,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06:
+        <dt id='syn-06'>
+          <a class='testlink' href='#syn-06'>
+            syn-06:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06' property='mf:name'>syn-06.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-06' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -234,19 +234,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07:
+        <dt id='syn-07'>
+          <a class='testlink' href='#syn-07'>
+            syn-07:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07' property='mf:name'>syn-07.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-07' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -259,19 +260,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08:
+        <dt id='syn-08'>
+          <a class='testlink' href='#syn-08'>
+            syn-08:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08' property='mf:name'>syn-08.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-08' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -284,19 +286,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01:
+        <dt id='syn-bad-01'>
+          <a class='testlink' href='#syn-bad-01'>
+            syn-bad-01:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01' property='mf:name'>syn-bad-01.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-01' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -309,19 +312,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02:
+        <dt id='syn-bad-02'>
+          <a class='testlink' href='#syn-bad-02'>
+            syn-bad-02:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02' property='mf:name'>syn-bad-02.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-02' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -334,19 +338,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03:
+        <dt id='syn-bad-03'>
+          <a class='testlink' href='#syn-bad-03'>
+            syn-bad-03:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03' property='mf:name'>syn-bad-03.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-03' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -359,19 +364,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04:
+        <dt id='syn-bad-04'>
+          <a class='testlink' href='#syn-bad-04'>
+            syn-bad-04:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04' property='mf:name'>syn-bad-04.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-04' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -384,19 +390,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05:
+        <dt id='syn-bad-05'>
+          <a class='testlink' href='#syn-bad-05'>
+            syn-bad-05:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05' property='mf:name'>syn-bad-05.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-05' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -409,19 +416,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06:
+        <dt id='syn-bad-06'>
+          <a class='testlink' href='#syn-bad-06'>
+            syn-bad-06:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06' property='mf:name'>syn-bad-06.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-06' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -434,19 +442,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07:
+        <dt id='syn-bad-07'>
+          <a class='testlink' href='#syn-bad-07'>
+            syn-bad-07:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07' property='mf:name'>syn-bad-07.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-07' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -459,19 +468,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08:
+        <dt id='syn-bad-08'>
+          <a class='testlink' href='#syn-bad-08'>
+            syn-bad-08:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08' property='mf:name'>syn-bad-08.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-08' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -484,19 +494,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09:
+        <dt id='syn-bad-09'>
+          <a class='testlink' href='#syn-bad-09'>
+            syn-bad-09:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09' property='mf:name'>syn-bad-09.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-09' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -509,19 +520,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10:
+        <dt id='syn-bad-10'>
+          <a class='testlink' href='#syn-bad-10'>
+            syn-bad-10:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10' property='mf:name'>syn-bad-10.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-10' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -534,19 +546,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11:
+        <dt id='syn-bad-11'>
+          <a class='testlink' href='#syn-bad-11'>
+            syn-bad-11:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11' property='mf:name'>syn-bad-11.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-11' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -559,19 +572,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12:
+        <dt id='syn-bad-12'>
+          <a class='testlink' href='#syn-bad-12'>
+            syn-bad-12:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12' property='mf:name'>syn-bad-12.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-12' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -584,19 +598,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13:
+        <dt id='syn-bad-13'>
+          <a class='testlink' href='#syn-bad-13'>
+            syn-bad-13:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13' property='mf:name'>syn-bad-13.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-13' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -609,19 +624,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14:
+        <dt id='syn-bad-14'>
+          <a class='testlink' href='#syn-bad-14'>
+            syn-bad-14:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14' property='mf:name'>syn-bad-14.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-14' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -634,19 +650,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15:
+        <dt id='syn-bad-15'>
+          <a class='testlink' href='#syn-bad-15'>
+            syn-bad-15:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15' property='mf:name'>syn-bad-15.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-15' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -659,19 +676,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16:
+        <dt id='syn-bad-16'>
+          <a class='testlink' href='#syn-bad-16'>
+            syn-bad-16:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16' property='mf:name'>syn-bad-16.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-16' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -684,19 +702,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17:
+        <dt id='syn-bad-17'>
+          <a class='testlink' href='#syn-bad-17'>
+            syn-bad-17:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17' property='mf:name'>syn-bad-17.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-17' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -709,19 +728,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18:
+        <dt id='syn-bad-18'>
+          <a class='testlink' href='#syn-bad-18'>
+            syn-bad-18:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18' property='mf:name'>syn-bad-18.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-18' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -734,19 +754,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19:
+        <dt id='syn-bad-19'>
+          <a class='testlink' href='#syn-bad-19'>
+            syn-bad-19:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19' property='mf:name'>syn-bad-19.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-19' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -759,19 +780,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20:
+        <dt id='syn-bad-20'>
+          <a class='testlink' href='#syn-bad-20'>
+            syn-bad-20:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20' property='mf:name'>syn-bad-20.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-20' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -784,19 +806,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21:
+        <dt id='syn-bad-21'>
+          <a class='testlink' href='#syn-bad-21'>
+            syn-bad-21:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21' property='mf:name'>syn-bad-21.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-21' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -809,19 +832,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22:
+        <dt id='syn-bad-22'>
+          <a class='testlink' href='#syn-bad-22'>
+            syn-bad-22:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22' property='mf:name'>syn-bad-22.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-22' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -834,19 +858,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23:
+        <dt id='syn-bad-23'>
+          <a class='testlink' href='#syn-bad-23'>
+            syn-bad-23:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23' property='mf:name'>syn-bad-23.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-23' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -859,19 +884,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24:
+        <dt id='syn-bad-24'>
+          <a class='testlink' href='#syn-bad-24'>
+            syn-bad-24:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24' property='mf:name'>syn-bad-24.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-24' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -884,19 +910,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25:
+        <dt id='syn-bad-25'>
+          <a class='testlink' href='#syn-bad-25'>
+            syn-bad-25:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25' property='mf:name'>syn-bad-25.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-25' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -909,19 +936,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26:
+        <dt id='syn-bad-26'>
+          <a class='testlink' href='#syn-bad-26'>
+            syn-bad-26:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26' property='mf:name'>syn-bad-26.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-26' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -934,19 +962,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27:
+        <dt id='syn-bad-27'>
+          <a class='testlink' href='#syn-bad-27'>
+            syn-bad-27:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27' property='mf:name'>syn-bad-27.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-27' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -959,19 +988,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28:
+        <dt id='syn-bad-28'>
+          <a class='testlink' href='#syn-bad-28'>
+            syn-bad-28:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28' property='mf:name'>syn-bad-28.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-28' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -984,19 +1014,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29:
+        <dt id='syn-bad-29'>
+          <a class='testlink' href='#syn-bad-29'>
+            syn-bad-29:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29' property='mf:name'>syn-bad-29.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-29' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1009,19 +1040,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30:
+        <dt id='syn-bad-30'>
+          <a class='testlink' href='#syn-bad-30'>
+            syn-bad-30:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30' property='mf:name'>syn-bad-30.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-30' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1034,19 +1066,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31:
+        <dt id='syn-bad-31'>
+          <a class='testlink' href='#syn-bad-31'>
+            syn-bad-31:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31' property='mf:name'>syn-bad-31.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#syn-bad-31' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1059,19 +1092,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot:
+        <dt id='bnode-dot'>
+          <a class='testlink' href='#bnode-dot'>
+            bnode-dot:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot' property='mf:name'>syn-bad-bnode-dot.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnode-dot' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1084,19 +1118,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01:
+        <dt id='bnodes-missing-pvalues-01'>
+          <a class='testlink' href='#bnodes-missing-pvalues-01'>
+            bnodes-missing-pvalues-01:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01' property='mf:name'>syn-bad-bnodes-missing-pvalues-01.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-01' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1109,19 +1144,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02:
+        <dt id='bnodes-missing-pvalues-02'>
+          <a class='testlink' href='#bnodes-missing-pvalues-02'>
+            bnodes-missing-pvalues-02:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02' property='mf:name'>syn-bad-bnodes-missing-pvalues-02.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#bnodes-missing-pvalues-02' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1134,19 +1170,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01:
+        <dt id='empty-optional-01'>
+          <a class='testlink' href='#empty-optional-01'>
+            empty-optional-01:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01' property='mf:name'>syn-bad-empty-optional-01.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-01' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1159,19 +1196,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02:
+        <dt id='empty-optional-02'>
+          <a class='testlink' href='#empty-optional-02'>
+            empty-optional-02:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02' property='mf:name'>syn-bad-empty-optional-02.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#empty-optional-02' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1184,19 +1222,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens:
+        <dt id='filter-missing-parens'>
+          <a class='testlink' href='#filter-missing-parens'>
+            filter-missing-parens:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens' property='mf:name'>syn-bad-filter-missing-parens.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#filter-missing-parens' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1209,19 +1248,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list:
+        <dt id='lone-list'>
+          <a class='testlink' href='#lone-list'>
+            lone-list:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list' property='mf:name'>syn-bad-lone-list.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-list' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1234,19 +1274,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node:
+        <dt id='lone-node'>
+          <a class='testlink' href='#lone-node'>
+            lone-node:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node' property='mf:name'>syn-bad-lone-node.rq</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#lone-node' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1259,19 +1300,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter:
+        <dt id='blabel-cross-filter'>
+          <a class='testlink' href='#blabel-cross-filter'>
+            blabel-cross-filter:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter' property='mf:name'>syn-blabel-cross-filter</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-filter' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:PositiveSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1284,19 +1326,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad:
+        <dt id='blabel-cross-graph-bad'>
+          <a class='testlink' href='#blabel-cross-graph-bad'>
+            blabel-cross-graph-bad:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad' property='mf:name'>syn-blabel-cross-graph-bad</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-graph-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1309,19 +1352,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad:
+        <dt id='blabel-cross-optional-bad'>
+          <a class='testlink' href='#blabel-cross-optional-bad'>
+            blabel-cross-optional-bad:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad' property='mf:name'>syn-blabel-cross-optional-bad</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-optional-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1334,19 +1378,20 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad:
+        <dt id='blabel-cross-union-bad'>
+          <a class='testlink' href='#blabel-cross-union-bad'>
+            blabel-cross-union-bad:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad' property='mf:name'>syn-blabel-cross-union-bad</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/syntax-sparql3/manifest#blabel-cross-union-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:NegativeSyntaxTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>

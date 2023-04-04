@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       SPARQL 1.1 Update test cases for SILENT
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>SPARQL 1.1 Update test cases for SILENT</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         The test cases in this manifest comprise cases of erroneous operations which should fail, but succeed because of the keyword SILENT
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +78,21 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent:
+        <dt id='load-silent'>
+          <a class='testlink' href='#load-silent'>
+            load-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' property='mf:name'>LOAD SILENT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Loading a non-existent graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -105,7 +101,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b26'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='load-silent.ru' property='ut:request'>load-silent.ru</a>
@@ -114,23 +110,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b32' property='mf:result'>_:b32</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent:
+        <dt id='load-into-silent'>
+          <a class='testlink' href='#load-into-silent'>
+            load-into-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' property='mf:name'>LOAD SILENT INTO</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Loading a non-existent named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -139,7 +138,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b25'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='load-silent-into.ru' property='ut:request'>load-silent-into.ru</a>
@@ -148,23 +147,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b31' property='mf:result'>_:b31</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent:
+        <dt id='clear-silent'>
+          <a class='testlink' href='#clear-silent'>
+            clear-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' property='mf:name'>CLEAR SILENT GRAPH iri</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Clearing a non-existent named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -173,7 +175,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b24'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='spo.ttl' property='ut:data'>spo.ttl</a>
@@ -186,7 +188,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b23'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='spo.ttl' property='ut:data'>spo.ttl</a>
@@ -195,19 +197,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent:
+        <dt id='clear-default-silent'>
+          <a class='testlink' href='#clear-default-silent'>
+            clear-default-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' property='mf:name'>CLEAR SILENT DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Clearing the already empty default graph. (This operation would also succeed without SILENT)</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -216,7 +220,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b22'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='clear-default-silent.ru' property='ut:request'>clear-default-silent.ru</a>
@@ -225,23 +229,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b28' property='mf:result'>_:b28</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent:
+        <dt id='create-silent'>
+          <a class='testlink' href='#create-silent'>
+            create-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' property='mf:name'>CREATE SILENT iri</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Creation of an already existent named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -250,11 +257,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b21'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b20'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -270,11 +277,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b19'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b18'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -286,19 +293,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent:
+        <dt id='drop-silent'>
+          <a class='testlink' href='#drop-silent'>
+            drop-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' property='mf:name'>DROP SILENT GRAPH iri</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Clearing a non-existent named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -307,7 +316,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b17'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='spo.ttl' property='ut:data'>spo.ttl</a>
@@ -320,7 +329,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b16'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='spo.ttl' property='ut:data'>spo.ttl</a>
@@ -329,19 +338,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent:
+        <dt id='drop-default-silent'>
+          <a class='testlink' href='#drop-default-silent'>
+            drop-default-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' property='mf:name'>DROP SILENT DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Clearing the already empty default graph. (This operation would also succeed withou SILENT)</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -350,7 +361,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b15'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='drop-default-silent.ru' property='ut:request'>drop-default-silent.ru</a>
@@ -359,23 +370,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b30' property='mf:result'>_:b30</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent:
+        <dt id='copy-silent'>
+          <a class='testlink' href='#copy-silent'>
+            copy-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' property='mf:name'>COPY SILENT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>copy a non-existent graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -384,11 +398,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b14'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b13'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -404,11 +418,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b12'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b11'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -420,19 +434,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent:
+        <dt id='copy-to-default-silent'>
+          <a class='testlink' href='#copy-to-default-silent'>
+            copy-to-default-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' property='mf:name'>COPY SILENT TO DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>copy a non-existent graph to default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -441,7 +457,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b10'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='copy-to-default-silent.ru' property='ut:request'>copy-to-default-silent.ru</a>
@@ -450,23 +466,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b29' property='mf:result'>_:b29</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent:
+        <dt id='move-silent'>
+          <a class='testlink' href='#move-silent'>
+            move-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' property='mf:name'>MOVE SILENT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>move a non-existent graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -475,11 +494,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b9'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b8'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -495,11 +514,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b7'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b6'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -511,19 +530,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent:
+        <dt id='move-to-default-silent'>
+          <a class='testlink' href='#move-to-default-silent'>
+            move-to-default-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' property='mf:name'>MOVE SILENT TO DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>move a non-existent graph to default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -532,7 +553,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='move-to-default-silent.ru' property='ut:request'>move-to-default-silent.ru</a>
@@ -541,23 +562,26 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b33' property='mf:result'>_:b33</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent:
+        <dt id='add-silent'>
+          <a class='testlink' href='#add-silent'>
+            add-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' property='mf:name'>ADD SILENT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>add a non-existent graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -566,11 +590,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b4'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b3'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -586,11 +610,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b2'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b1'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -602,19 +626,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent:
+        <dt id='add-to-default-silent'>
+          <a class='testlink' href='#add-to-default-silent'>
+            add-to-default-silent:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' property='mf:name'>ADD SILENT TO DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>add a non-existent graph to default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -623,7 +649,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b0'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='add-to-default-silent.ru' property='ut:request'>add-to-default-silent.ru</a>
@@ -632,7 +658,8 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='_:b27' property='mf:result'>_:b27</a>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
             </dd>
           </dl>
         </dd>

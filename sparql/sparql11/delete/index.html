@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       DELETE
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>DELETE</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         Tests for SPARQL UPDATE
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +78,21 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01:
+        <dt id='dawg-delete-01'>
+          <a class='testlink' href='#dawg-delete-01'>
+            dawg-delete-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01' property='mf:name'>Simple DELETE 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of an existing triple from the default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -105,7 +101,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b13'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -118,7 +114,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b11'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01s.ttl' property='ut:data'>delete-post-01s.ttl</a>
@@ -127,19 +123,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02:
+        <dt id='dawg-delete-02'>
+          <a class='testlink' href='#dawg-delete-02'>
+            dawg-delete-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02' property='mf:name'>Simple DELETE 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-02' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of an existing triple from a named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -148,11 +146,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b8'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b1'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
@@ -168,11 +166,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b4'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b3'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01s.ttl' property='ut:graph'>delete-post-01s.ttl</a>
@@ -184,19 +182,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03:
+        <dt id='dawg-delete-03'>
+          <a class='testlink' href='#dawg-delete-03'>
+            dawg-delete-03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03' property='mf:name'>Simple DELETE 3</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-03' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple from the default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -205,7 +205,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b0'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -218,7 +218,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b81'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -227,19 +227,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04:
+        <dt id='dawg-delete-04'>
+          <a class='testlink' href='#dawg-delete-04'>
+            dawg-delete-04:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04' property='mf:name'>Simple DELETE 4</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-04' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple from a named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -248,11 +250,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b79'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b80'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
@@ -268,11 +270,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b78'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b77'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01f.ttl' property='ut:graph'>delete-post-01f.ttl</a>
@@ -284,19 +286,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05:
+        <dt id='dawg-delete-05'>
+          <a class='testlink' href='#dawg-delete-05'>
+            dawg-delete-05:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05' property='mf:name'>Graph-specific DELETE 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-05' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 1 for DELETE only modifying the desired graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -305,7 +309,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b73'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -313,13 +317,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b72'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b71'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -335,7 +339,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b70'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01s.ttl' property='ut:data'>delete-post-01s.ttl</a>
@@ -343,13 +347,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b69'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b68'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -361,19 +365,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06:
+        <dt id='dawg-delete-06'>
+          <a class='testlink' href='#dawg-delete-06'>
+            dawg-delete-06:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06' property='mf:name'>Graph-specific DELETE 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-06' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 2 for DELETE only modifying the desired graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -382,7 +388,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b95'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -390,13 +396,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b94'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b93'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -412,7 +418,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b92'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -420,13 +426,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b91'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02s.ttl' property='ut:graph'>delete-post-02s.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b90'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -438,19 +444,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07:
+        <dt id='dawg-delete-07'>
+          <a class='testlink' href='#dawg-delete-07'>
+            dawg-delete-07:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07' property='mf:name'>Simple DELETE 7</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-07' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete to test that unbound variables in the DELETE clause do not act as wildcards</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -459,7 +467,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b89'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -472,7 +480,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b88'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -481,19 +489,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01:
+        <dt id='dawg-delete-with-01'>
+          <a class='testlink' href='#dawg-delete-with-01'>
+            dawg-delete-with-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01' property='mf:name'>Simple DELETE 1 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete using a WITH clause to identify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -502,11 +512,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b75'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b76'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
@@ -522,11 +532,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b87'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b82'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01s.ttl' property='ut:graph'>delete-post-01s.ttl</a>
@@ -538,19 +548,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02:
+        <dt id='dawg-delete-with-02'>
+          <a class='testlink' href='#dawg-delete-with-02'>
+            dawg-delete-with-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02' property='mf:name'>Simple DELETE 2 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-02' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple test to make sure the GRAPH clause overrides the WITH clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -559,17 +571,17 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b65'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b66'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b67'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
@@ -585,17 +597,17 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b62'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b63'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01s.ttl' property='ut:graph'>delete-post-01s.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b64'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
@@ -607,19 +619,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03:
+        <dt id='dawg-delete-with-03'>
+          <a class='testlink' href='#dawg-delete-with-03'>
+            dawg-delete-with-03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03' property='mf:name'>Simple DELETE 3 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-03' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple using a WITH clause to identify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -628,11 +642,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b86'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b85'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
@@ -648,7 +662,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b84'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>result</dt>
                 <dd>
                   <code property='ut:result' resource='ut:success'>ut:success</code>
@@ -656,7 +670,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b83'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01f.ttl' property='ut:graph'>delete-post-01f.ttl</a>
@@ -668,19 +682,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04:
+        <dt id='dawg-delete-with-04'>
+          <a class='testlink' href='#dawg-delete-with-04'>
+            dawg-delete-with-04:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04' property='mf:name'>Simple DELETE 4 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-04' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple making sure that the GRAPH clause overrides the WITH clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -689,17 +705,17 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b74'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b35'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b34'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
@@ -715,17 +731,17 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b33'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b32'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01f.ttl' property='ut:graph'>delete-post-01f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b31'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
@@ -737,19 +753,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05:
+        <dt id='dawg-delete-with-05'>
+          <a class='testlink' href='#dawg-delete-with-05'>
+            dawg-delete-with-05:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05' property='mf:name'>Graph-specific DELETE 1 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-05' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 1 for DELETE only modifying the desired graph using a WITH clause to specify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -758,23 +776,23 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b61'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b60'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b59'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b58'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -790,23 +808,23 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b57'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b56'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01s2.ttl' property='ut:graph'>delete-post-01s2.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b55'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b54'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -818,19 +836,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06:
+        <dt id='dawg-delete-with-06'>
+          <a class='testlink' href='#dawg-delete-with-06'>
+            dawg-delete-with-06:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06' property='mf:name'>Graph-specific DELETE 2 (WITH)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-with-06' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 2 for DELETE only modifying the desired graph making sure the GRAPH clause overrides the WITH clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -839,7 +859,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b53'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -847,13 +867,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b52'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b51'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -869,7 +889,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b50'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -877,13 +897,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b49'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02s.ttl' property='ut:graph'>delete-post-02s.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b48'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -895,19 +915,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01:
+        <dt id='dawg-delete-using-01'>
+          <a class='testlink' href='#dawg-delete-using-01'>
+            dawg-delete-using-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01' property='mf:name'>Simple DELETE 1 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete using a USING clause to identify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -916,7 +938,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b47'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -924,7 +946,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b46'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
@@ -940,7 +962,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b45'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01s.ttl' property='ut:data'>delete-post-01s.ttl</a>
@@ -948,7 +970,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b44'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
@@ -960,19 +982,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a:
+        <dt id='dawg-delete-using-02a'>
+          <a class='testlink' href='#dawg-delete-using-02a'>
+            dawg-delete-using-02a:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a' property='mf:name'>Simple DELETE 2 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-02a' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple test to make sure the GRAPH clause does not override the USING clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -981,7 +1005,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b43'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -989,13 +1013,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b42'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b41'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -1011,7 +1035,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b40'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -1019,13 +1043,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b39'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b38'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -1037,19 +1061,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03:
+        <dt id='dawg-delete-using-03'>
+          <a class='testlink' href='#dawg-delete-using-03'>
+            dawg-delete-using-03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03' property='mf:name'>Simple DELETE 3 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-03' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple using a USING clause to identify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1058,7 +1084,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b37'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-01.ttl' property='ut:data'>delete-pre-01.ttl</a>
@@ -1066,7 +1092,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b36'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
@@ -1082,7 +1108,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b30'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-01f.ttl' property='ut:data'>delete-post-01f.ttl</a>
@@ -1090,7 +1116,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b29'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
@@ -1102,19 +1128,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04:
+        <dt id='dawg-delete-using-04'>
+          <a class='testlink' href='#dawg-delete-using-04'>
+            dawg-delete-using-04:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04' property='mf:name'>Simple DELETE 4 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-04' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple delete of a non-existing triple making sure that the GRAPH clause overrides the USING clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1123,7 +1151,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b28'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-pre-03.ttl' property='ut:data'>delete-pre-03.ttl</a>
@@ -1131,13 +1159,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b27'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b26'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -1153,7 +1181,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b25'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='delete-post-03f.ttl' property='ut:data'>delete-post-03f.ttl</a>
@@ -1161,13 +1189,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b24'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b23'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -1179,19 +1207,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05:
+        <dt id='dawg-delete-using-05'>
+          <a class='testlink' href='#dawg-delete-using-05'>
+            dawg-delete-using-05:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05' property='mf:name'>Graph-specific DELETE 1 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-05' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 1 for DELETE only modifying the desired graph using a USING clause to specify the active graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1200,23 +1230,23 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b22'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b21'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b20'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b19'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -1232,23 +1262,23 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b18'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b17'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01s2.ttl' property='ut:graph'>delete-post-01s2.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b16'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b15'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>
@@ -1260,19 +1290,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a:
+        <dt id='dawg-delete-using-06a'>
+          <a class='testlink' href='#dawg-delete-using-06a'>
+            dawg-delete-using-06a:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a' property='mf:name'>Graph-specific DELETE 2 (USING)</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete/manifest#dawg-delete-using-06a' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test 2 for DELETE only modifying the desired graph making sure the GRAPH clause does not override the USING clause</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -1281,23 +1313,23 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b14'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b12'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-pre-01.ttl' property='ut:graph'>delete-pre-01.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b10'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-pre-02.ttl' property='ut:graph'>delete-pre-02.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b9'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-pre-03.ttl' property='ut:graph'>delete-pre-03.ttl</a>
@@ -1313,23 +1345,23 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b7'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b6'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='delete-post-01f.ttl' property='ut:graph'>delete-post-01f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b5'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='delete-post-02f.ttl' property='ut:graph'>delete-post-02f.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b2'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='delete-post-03f.ttl' property='ut:graph'>delete-post-03f.ttl</a>

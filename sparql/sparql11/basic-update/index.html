@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       Basic Update
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>Basic Update</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         Basic SPARQL 1.1 Update test cases
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,19 +78,21 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1:
+        <dt id='insert-data-spo1'>
+          <a class='testlink' href='#insert-data-spo1'>
+            insert-data-spo1:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1' property='mf:name'>Simple insert data 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple insert of a single triple to the unnamed graph of an empty graph store</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -105,7 +101,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b29'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='insert-data-spo1.ru' property='ut:request'>insert-data-spo1.ru</a>
@@ -114,7 +110,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b28'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>result</dt>
                 <dd>
                   <code property='ut:result' resource='ut:success'>ut:success</code>
@@ -127,19 +123,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1:
+        <dt id='insert-data-spo-named1'>
+          <a class='testlink' href='#insert-data-spo-named1'>
+            insert-data-spo-named1:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1' property='mf:name'>Simple insert data named 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple insert of a single triple into the named graph <a href="http://example.org/g1">http://example.org/g1</a> of an empty graph store</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -148,7 +146,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b44'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='insert-data-named1.ru' property='ut:request'>insert-data-named1.ru</a>
@@ -157,7 +155,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b43'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>result</dt>
                 <dd>
                   <code property='ut:result' resource='ut:success'>ut:success</code>
@@ -165,7 +163,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b42'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -177,19 +175,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2:
+        <dt id='insert-data-spo-named2'>
+          <a class='testlink' href='#insert-data-spo-named2'>
+            insert-data-spo-named2:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2' property='mf:name'>Simple insert data named 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple insert of a single triple into the named graph <a href="http://example.org/g1">http://example.org/g1</a> of a graph store consisting of an empty unnamed graph and the named graph holds one (different) triple already</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -198,11 +198,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b41'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b27'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -218,7 +218,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b40'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>result</dt>
                 <dd>
                   <code property='ut:result' resource='ut:success'>ut:success</code>
@@ -226,7 +226,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b39'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo2.ttl' property='ut:graph'>spo2.ttl</a>
@@ -238,19 +238,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3:
+        <dt id='insert-data-spo-named3'>
+          <a class='testlink' href='#insert-data-spo-named3'>
+            insert-data-spo-named3:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3' property='mf:name'>Simple insert data named 3</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a simple insert of a single triple into the named graph <a href="http://example.org/g1">http://example.org/g1</a> of a graph store consisting of an empty unnamed graph and the named holds the inserted triple already (using the same query as insert-data-named1)</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -259,11 +261,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b30'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b31'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -279,7 +281,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b33'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>result</dt>
                 <dd>
                   <code property='ut:result' resource='ut:success'>ut:success</code>
@@ -287,7 +289,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b32'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='spo.ttl' property='ut:graph'>spo.ttl</a>
@@ -299,19 +301,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01:
+        <dt id='insert-where-01'>
+          <a class='testlink' href='#insert-where-01'>
+            insert-where-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01' property='mf:name'>INSERT 01</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a INSERT over a dataset with a single triple in the default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -320,7 +324,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b38'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-01-pre.ttl' property='ut:data'>insert-01-pre.ttl</a>
@@ -333,7 +337,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b37'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-01-post.ttl' property='ut:data'>insert-01-post.ttl</a>
@@ -342,19 +346,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02:
+        <dt id='insert-where-02'>
+          <a class='testlink' href='#insert-where-02'>
+            insert-where-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02' property='mf:name'>INSERT 02</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a INSERT over a dataset with a single triple in the default graph, inserting into a named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -363,7 +369,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b36'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-02-pre.ttl' property='ut:data'>insert-02-pre.ttl</a>
@@ -376,7 +382,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b35'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-02-post.ttl' property='ut:data'>insert-02-post.ttl</a>
@@ -384,7 +390,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b34'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-02-g1-post.ttl' property='ut:graph'>insert-02-g1-post.ttl</a>
@@ -396,19 +402,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03:
+        <dt id='insert-where-03'>
+          <a class='testlink' href='#insert-where-03'>
+            insert-where-03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03' property='mf:name'>INSERT 03</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a INSERT over a dataset with a single triple in a named graph, inserting into the named graph using the WITH keyword</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -417,7 +425,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b9'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-03-pre.ttl' property='ut:data'>insert-03-pre.ttl</a>
@@ -425,7 +433,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b8'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-03-g1-pre.ttl' property='ut:graph'>insert-03-g1-pre.ttl</a>
@@ -441,7 +449,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b26'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-03-post.ttl' property='ut:data'>insert-03-post.ttl</a>
@@ -449,7 +457,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b25'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-03-g1-post.ttl' property='ut:graph'>insert-03-g1-post.ttl</a>
@@ -461,19 +469,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04:
+        <dt id='insert-where-04'>
+          <a class='testlink' href='#insert-where-04'>
+            insert-where-04:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04' property='mf:name'>INSERT 04</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a INSERT of a triple over a dataset with data in named graphs, inserting into the default graph using the USING keyword</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -482,7 +492,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b24'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-04-pre.ttl' property='ut:data'>insert-04-pre.ttl</a>
@@ -490,7 +500,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b23'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-04-g1-pre.ttl' property='ut:graph'>insert-04-g1-pre.ttl</a>
@@ -506,7 +516,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b22'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-04-post.ttl' property='ut:data'>insert-04-post.ttl</a>
@@ -514,7 +524,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b21'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-04-g1-post.ttl' property='ut:graph'>insert-04-g1-post.ttl</a>
@@ -526,19 +536,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01:
+        <dt id='insert-using-01'>
+          <a class='testlink' href='#insert-using-01'>
+            insert-using-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01' property='mf:name'>INSERT USING 01</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is an INSERT into the default graph of two triples constructed from the data in two named graphs that are treated as the default graph during matching with the USING keyword.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -547,7 +559,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b20'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-using-01-pre.ttl' property='ut:data'>insert-using-01-pre.ttl</a>
@@ -555,13 +567,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b19'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-using-01-g1-pre.ttl' property='ut:graph'>insert-using-01-g1-pre.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b18'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='insert-using-01-g2-pre.ttl' property='ut:graph'>insert-using-01-g2-pre.ttl</a>
@@ -577,7 +589,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b17'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-using-01-post.ttl' property='ut:data'>insert-using-01-post.ttl</a>
@@ -585,13 +597,13 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b16'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-using-01-g1-post.ttl' property='ut:graph'>insert-using-01-g1-post.ttl</a>
                       </td>
                     </tr>
-                    <tr property='ut:graphData' resource='_:b15'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g2</td>
                       <td>
                         <a href='insert-using-01-g2-post.ttl' property='ut:graph'>insert-using-01-g2-post.ttl</a>
@@ -603,19 +615,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a:
+        <dt id='insert-05a'>
+          <a class='testlink' href='#insert-05a'>
+            insert-05a:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a' property='mf:name'>INSERT same bnode twice</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>As per http://lists.w3.org/Archives/Public/public-rdf-dawg/2012AprJun/0165.html</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -624,11 +638,11 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b14'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b13'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g1</td>
                       <td>
                         <a href='insert-05a-g1-pre.ttl' property='ut:graph'>insert-05a-g1-pre.ttl</a>
@@ -644,11 +658,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b12'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b11'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='insert-05a-g3-post.ttl' property='ut:graph'>insert-05a-g3-post.ttl</a>
@@ -660,19 +674,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode:
+        <dt id='insert-data-same-bnode'>
+          <a class='testlink' href='#insert-data-same-bnode'>
+            insert-data-same-bnode:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode' property='mf:name'>INSERTing the same bnode with INSERT DATA into two different Graphs is the same bnode</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>http://lists.w3.org/Archives/Public/public-rdf-dawg/2012JulSep/0196.html, this can be viewed as a variation of :insert-05a</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -681,7 +697,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b10'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>request</dt>
                 <dd>
                   <a href='insert-data-same-bnode.ru' property='ut:request'>insert-data-same-bnode.ru</a>
@@ -690,11 +706,11 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b7'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b6'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='insert-05a-g3-post.ttl' property='ut:graph'>insert-05a-g3-post.ttl</a>
@@ -706,19 +722,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode:
+        <dt id='insert-where-same-bnode'>
+          <a class='testlink' href='#insert-where-same-bnode'>
+            insert-where-same-bnode:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode' property='mf:name'>INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -727,7 +745,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-where-same-bnode-pre.ttl' property='ut:data'>insert-where-same-bnode-pre.ttl</a>
@@ -740,7 +758,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b4'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-where-same-bnode-pre.ttl' property='ut:data'>insert-where-same-bnode-pre.ttl</a>
@@ -748,7 +766,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b3'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='insert-where-same-bnode-g3-post.ttl' property='ut:graph'>insert-where-same-bnode-g3-post.ttl</a>
@@ -760,19 +778,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2:
+        <dt id='insert-where-same-bnode2'>
+          <a class='testlink' href='#insert-where-same-bnode2'>
+            insert-where-same-bnode2:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2' property='mf:name'>INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode even if both WHERE clauses have the empty solution mapping as the only solution.</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -781,7 +801,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b2'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-where-same-bnode-pre.ttl' property='ut:data'>insert-where-same-bnode-pre.ttl</a>
@@ -794,7 +814,7 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b1'>
+              <dl class='test-detail' property='mf:result' resource=''>
                 <dt>data</dt>
                 <dd>
                   <a href='insert-where-same-bnode-pre.ttl' property='ut:data'>insert-where-same-bnode-pre.ttl</a>
@@ -802,7 +822,7 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b0'>
+                    <tr property='ut:graphData' resource=''>
                       <td property='rdfs:label'>http://example.org/g3</td>
                       <td>
                         <a href='insert-where-same-bnode-g3-post.ttl' property='ut:graph'>insert-where-same-bnode-g3-post.ttl</a>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#'>
+<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       XPath operators
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,20 @@
       </a>
     </p>
     <h1 property='rdfs:label'>XPath operators</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
         SPARQL tests - XPath operators in FILTERs
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -84,21 +78,23 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1:
+        <dt id='ge-1'>
+          <a class='testlink' href='#ge-1'>
+            ge-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1' property='mf:name'>Greater-than or equals</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <blockquote>
-            <p>= in FILTER expressions</p>
+              <p>= in FILTER expressions</p>
             </blockquote>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -107,7 +103,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-ge-1.rq' property='qt:query'>query-ge-1.rq</a>
@@ -124,19 +120,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1:
+        <dt id='le-1'>
+          <a class='testlink' href='#le-1'>
+            le-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1' property='mf:name'>Less-than or equals</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>&lt;= in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -145,7 +143,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-le-1.rq' property='qt:query'>query-le-1.rq</a>
@@ -162,19 +160,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1:
+        <dt id='mul-1'>
+          <a class='testlink' href='#mul-1'>
+            mul-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1' property='mf:name'>Multiplication</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>A * B in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -183,7 +183,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-mul-1.rq' property='qt:query'>query-mul-1.rq</a>
@@ -200,19 +200,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1:
+        <dt id='plus-1'>
+          <a class='testlink' href='#plus-1'>
+            plus-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1' property='mf:name'>Addition</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>A + B in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -221,7 +223,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-plus-1.rq' property='qt:query'>query-plus-1.rq</a>
@@ -238,19 +240,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1:
+        <dt id='minus-1'>
+          <a class='testlink' href='#minus-1'>
+            minus-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1' property='mf:name'>Subtraction</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>A - B in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -259,7 +263,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-minus-1.rq' property='qt:query'>query-minus-1.rq</a>
@@ -276,19 +280,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1:
+        <dt id='unplus-1'>
+          <a class='testlink' href='#unplus-1'>
+            unplus-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1' property='mf:name'>Unary Plusn</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>+A in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -297,7 +303,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-unplus-1.rq' property='qt:query'>query-unplus-1.rq</a>
@@ -314,19 +320,21 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1:
+        <dt id='unminus-1'>
+          <a class='testlink' href='#unminus-1'>
+            unminus-1:
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1' property='mf:name'>Unary Minus</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>-A in FILTER expressions</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
+            <dt>feature</dt>
+            <dd property='mf:feature' resource=''></dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
             <dt>approvedBy</dt>
@@ -335,7 +343,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='query-unminus-1.rq' property='qt:query'>query-unminus-1.rq</a>

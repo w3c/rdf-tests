@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -33,7 +33,7 @@
       Aggregates
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -57,26 +57,19 @@
       </a>
     </p>
     <h1 property='rdfs:label'>Aggregates</h1>
-    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
-      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -85,12 +78,12 @@
       </h2>
       <dl class='test-description'>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01' property='mf:name'>COUNT 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Simple count</p>
           </div>
@@ -105,7 +98,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b10'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg01.rq' property='qt:query'>agg01.rq</a>
@@ -123,12 +116,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02' property='mf:name'>COUNT 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count with grouping</p>
           </div>
@@ -143,7 +136,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b9'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg02.rq' property='qt:query'>agg02.rq</a>
@@ -161,12 +154,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03' property='mf:name'>COUNT 3</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count with grouping and HAVING clause</p>
           </div>
@@ -181,7 +174,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b8'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg03.rq' property='qt:query'>agg03.rq</a>
@@ -199,12 +192,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04' property='mf:name'>COUNT 4</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count(*)</p>
           </div>
@@ -219,7 +212,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b7'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg04.rq' property='qt:query'>agg04.rq</a>
@@ -237,12 +230,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05' property='mf:name'>COUNT 5</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count(*) with grouping</p>
           </div>
@@ -257,7 +250,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b6'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg05.rq' property='qt:query'>agg05.rq</a>
@@ -275,12 +268,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06' property='mf:name'>COUNT 6</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count(<em>) with HAVING Count(</em>)</p>
           </div>
@@ -295,7 +288,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg06.rq' property='qt:query'>agg06.rq</a>
@@ -313,12 +306,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07' property='mf:name'>COUNT 7</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Count(<em>) with grouping and HAVING Count(</em>)</p>
           </div>
@@ -333,7 +326,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b3'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg07.rq' property='qt:query'>agg07.rq</a>
@@ -351,12 +344,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08' property='mf:name'>COUNT 8</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08' typeof='mf:NegativeSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08' typeof='mf:NegativeSyntaxTest11'>
           <div property='rdfs:comment'>
             <p>grouping by expression, done wrong</p>
           </div>
@@ -376,12 +369,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b' property='mf:name'>COUNT 8b</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>grouping by expression, done correctly</p>
           </div>
@@ -396,7 +389,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b2'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg08b.rq' property='qt:query'>agg08b.rq</a>
@@ -414,12 +407,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09' property='mf:name'>COUNT 9</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09' typeof='mf:NegativeSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09' typeof='mf:NegativeSyntaxTest11'>
           <div property='rdfs:comment'>
             <p>Projection of an ungrouped variable (not appearing in the GROUP BY expression)</p>
           </div>
@@ -439,12 +432,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10' property='mf:name'>COUNT 10</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10' typeof='mf:NegativeSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10' typeof='mf:NegativeSyntaxTest11'>
           <div property='rdfs:comment'>
             <p>Projection of an ungrouped variable (no GROUP BY expression at all)</p>
           </div>
@@ -464,12 +457,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11' property='mf:name'>COUNT 11</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11' typeof='mf:NegativeSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11' typeof='mf:NegativeSyntaxTest11'>
           <div property='rdfs:comment'>
             <p>Use of an ungrouped variable in a project expression</p>
           </div>
@@ -489,12 +482,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12' property='mf:name'>COUNT 12</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12' typeof='mf:NegativeSyntaxTest11'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12' typeof='mf:NegativeSyntaxTest11'>
           <div property='rdfs:comment'>
             <p>Use of an ungrouped variable in a project expression, where the variable appears in a GROUP BY expression</p>
           </div>
@@ -514,14 +507,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01' property='mf:name'>GROUP_CONCAT 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -534,7 +526,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b1'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-groupconcat-1.rq' property='qt:query'>agg-groupconcat-1.rq</a>
@@ -552,14 +544,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02' property='mf:name'>GROUP_CONCAT 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -572,7 +563,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b0'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-groupconcat-2.rq' property='qt:query'>agg-groupconcat-2.rq</a>
@@ -590,14 +581,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03' property='mf:name'>GROUP_CONCAT with SEPARATOR</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -610,7 +600,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b17'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-groupconcat-3.rq' property='qt:query'>agg-groupconcat-3.rq</a>
@@ -628,14 +618,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01' property='mf:name'>SUM</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -648,7 +637,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b19'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-sum-01.rq' property='qt:query'>agg-sum-01.rq</a>
@@ -666,14 +655,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02' property='mf:name'>SUM with GROUP BY</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -686,7 +674,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b18'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-sum-02.rq' property='qt:query'>agg-sum-02.rq</a>
@@ -704,14 +692,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01' property='mf:name'>AVG</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -724,7 +711,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b15'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-avg-01.rq' property='qt:query'>agg-avg-01.rq</a>
@@ -742,14 +729,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02' property='mf:name'>AVG with GROUP BY</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -762,7 +748,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b13'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-avg-02.rq' property='qt:query'>agg-avg-02.rq</a>
@@ -780,14 +766,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01' property='mf:name'>MIN</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -800,7 +785,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b12'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-min-01.rq' property='qt:query'>agg-min-01.rq</a>
@@ -818,14 +803,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02' property='mf:name'>MIN with GROUP BY</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -838,7 +822,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b22'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-min-02.rq' property='qt:query'>agg-min-02.rq</a>
@@ -856,14 +840,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01' property='mf:name'>MAX</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -876,7 +859,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b21'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-max-01.rq' property='qt:query'>agg-max-01.rq</a>
@@ -894,14 +877,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02' property='mf:name'>MAX with GROUP BY</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -914,7 +896,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b20'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-max-02.rq' property='qt:query'>agg-max-02.rq</a>
@@ -932,14 +914,13 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01' property='mf:name'>SAMPLE</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -952,7 +933,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b16'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-sample-01.rq' property='qt:query'>agg-sample-01.rq</a>
@@ -970,12 +951,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01' property='mf:name'>Error in AVG</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Error in AVG return no binding</p>
           </div>
@@ -990,7 +971,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b14'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-err-01.rq' property='qt:query'>agg-err-01.rq</a>
@@ -1008,12 +989,12 @@
           </dl>
         </dd>
         <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02'>
             http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02' property='mf:name'>Protect from error in AVG</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Protect from error in AVG using IF and COALESCE</p>
           </div>
@@ -1028,7 +1009,7 @@
             </dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b4'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
                   <a href='agg-err-02.rq' property='qt:query'>agg-err-02.rq</a>
@@ -1045,31 +1026,27 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2:
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2' property='mf:name'>["agg empty group", "Aggregate over empty group resulting in a row with unbound variables"]</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1' property='mf:name'>agg on empty set, explicit grouping</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group2' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
+            <p>aggregating empty results returns no rows, as there are no grouped results.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-10-30#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-10-30#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b11'>
+              <dl class='test-detail' property='mf:action' resource=''>
                 <dt>query</dt>
                 <dd>
-                  <a href='agg-empty-group.rq' property='qt:query'>agg-empty-group.rq</a>
+                  <a href='agg-empty-group-max-1.rq' property='qt:query'>agg-empty-group-max-1.rq</a>
                 </dd>
                 <dt>data</dt>
                 <dd>
@@ -1079,7 +1056,109 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <a href='agg-empty-group2.srx' property='mf:result'>agg-empty-group2.srx</a>
+              <a href='agg-empty-group-max-1.srx' property='mf:result'>agg-empty-group-max-1.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2' property='mf:name'>agg on empty set, no grouping</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>aggregating empty results with no group-by always returns a single result.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='agg-empty-group-max-2.rq' property='qt:query'>agg-empty-group-max-2.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='empty.ttl' property='qt:data'>empty.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='agg-empty-group-max-2.srx' property='mf:result'>agg-empty-group-max-2.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1' property='mf:name'>COUNT: no match, with group</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>counting no results with grouping returns no results.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='agg-empty-group-count-1.rq' property='qt:query'>agg-empty-group-count-1.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='empty.ttl' property='qt:data'>empty.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='agg-empty-group-count-1.srj' property='mf:result'>agg-empty-group-count-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2'>
+          <a class='testlink' href='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2' property='mf:name'>COUNT: no match, no group</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>counting no results without grouping always returns a single result.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='agg-empty-group-count-2.rq' property='qt:query'>agg-empty-group-count-2.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='empty.ttl' property='qt:data'>empty.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='agg-empty-group-count-2.srj' property='mf:result'>agg-empty-group-count-2.srj</a>
             </dd>
           </dl>
         </dd>
