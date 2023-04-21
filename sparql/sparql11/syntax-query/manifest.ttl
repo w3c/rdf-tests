@@ -110,6 +110,9 @@
 :test_codepoint_boundaries_04
 :test_codepoint_boundaries_escaped_05
 :test_codepoint_invalid_escaped_bad_06
+
+:test_bad_values_too_few
+:test_bad_values_too_many
 ) .
 
 :test_1 rdf:type   mf:PositiveSyntaxTest11 ;
@@ -662,3 +665,11 @@
    mf:name    "\\u unicode codepoint escaping in literal using partial surrogate pair" ;
    mf:description "Using a codepoint that is half of a surrogate pair (in the range U+D800–U+DFFF) without a corresponding codepoint is illegal" ;
    mf:action  <syn-invalid-codepoint-escaped-bad-01.rq> ;.
+
+:test_bad_values_too_many rdf:type mf:NegativeSyntaxTest11 ;
+    mf:name "Too many values in a VALUE clause compared to the number of variables" ;
+    mf:action <syn-bad-values-too-many.rq> .
+
+:test_bad_values_too_few rdf:type mf:NegativeSyntaxTest11 ;
+    mf:name "Too few values in a VALUE clause compared to the number of variables" ;
+    mf:action <syn-bad-values-too-few.rq> .
