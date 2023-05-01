@@ -27,6 +27,7 @@
 	:dawg-delete-insert-07b
 	:dawg-delete-insert-08
 	:dawg-delete-insert-09
+	:delete-insert-halloween-problem
    ).
 
 :dawg-delete-insert-01 a mf:UpdateEvaluationTest ;
@@ -182,3 +183,8 @@
     dawgt:approval dawgt:Approved;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3> ;
     mf:action <delete-insert-09.ru> .
+
+:delete-insert-halloween-problem rdf:type mf:UpdateEvaluationTest ;
+    mf:name "Halloween Problem: A delete/insert operation should not be able to read its own writes" ;
+    mf:action [ ut:request <delete-insert-halloween-problem.ru> ; ut:data <delete-insert-halloween-problem-pre.ttl> ] ;
+    mf:result [ ut:data <delete-insert-halloween-problem-post.ttl> ] .
