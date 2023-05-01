@@ -37,6 +37,8 @@
     :pp35
     :pp36
     :pp37
+
+    :values_and_path
  ) .
 
 
@@ -285,3 +287,10 @@
           qt:data  <pp37.ttl> ] ;
     mf:result <pp37.srx> 
    .
+
+:values_and_path rdf:type mf:QueryEvaluationTest ;
+    mf:name "ZeroOrX property paths should only return terms in the graph and not also terms defined in the query" ;
+    mf:action
+        [ qt:query <values_and_path.rq> ;
+          qt:data  <empty.ttl> ] ;
+    mf:result  <values_and_path.srx> .
