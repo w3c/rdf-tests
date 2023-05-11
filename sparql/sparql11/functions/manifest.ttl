@@ -23,6 +23,8 @@
         :round01
         :concat01
         :concat02
+        :concat-empty
+        :concat-single
         :substring01
         :substring01-non-bmp
         :substring02
@@ -221,6 +223,22 @@
            qt:data   <data2.ttl> ] ;
     mf:result  <concat02.srx> ;
     .
+
+:concat-empty rdf:type mf:QueryEvaluationTest ;
+    mf:name    "CONCAT() without parameter" ;
+    mf:feature sparql:concat ;
+    mf:action
+         [ qt:query  <concat-empty.rq> ;
+           qt:data   <data.ttl> ] ;
+    mf:result  <concat-empty.srx> .
+
+:concat-single rdf:type mf:QueryEvaluationTest ;
+    mf:name    "CONCAT() with a single parameter" ;
+    mf:feature sparql:concat ;
+    mf:action
+         [ qt:query  <concat-single.rq> ;
+           qt:data   <data.ttl> ] ;
+    mf:result  <concat-single.srx> .
 
 :substring01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "SUBSTR() (3-argument)" ;
