@@ -39,6 +39,8 @@
     :pp37
 
     :values_and_path
+    :nps_inverse
+    :nps_direct_and_inverse
  ) .
 
 
@@ -294,3 +296,18 @@
         [ qt:query <values_and_path.rq> ;
           qt:data  <empty.ttl> ] ;
     mf:result  <values_and_path.srx> .
+
+:nps_inverse rdf:type mf:QueryEvaluationTest ;
+    mf:name "Negated Property Set with inverse properties" ;
+    mf:action
+        [ qt:query <nps_inverse.rq> ;
+          qt:data  <nps_inverse.ttl> ] ;
+    mf:result  <nps_inverse.srx> .
+
+
+:nps_direct_and_inverse rdf:type mf:QueryEvaluationTest ;
+    mf:name "Negated Property Set with both direct and inverse properties" ;
+    mf:action
+        [ qt:query <nps_direct_and_inverse.rq> ;
+          qt:data  <nps_direct_and_inverse.ttl> ] ;
+    mf:result  <nps_direct_and_inverse.srx> .
