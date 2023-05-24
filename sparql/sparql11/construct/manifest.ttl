@@ -15,6 +15,7 @@
     :constructwhere04
     :constructwhere05
     :constructwhere06
+    :constructlist
     ) .
 
 :constructwhere01 rdf:type mf:QueryEvaluationTest ;
@@ -73,3 +74,10 @@
     dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3> ;
     mf:action <constructwhere06.rq> .
+
+:constructlist rdf:type mf:QueryEvaluationTest ;
+    mf:name    "CONSTRUCT list" ;
+    mf:action
+         [ qt:query  <constructlist.rq> ;
+           qt:data <data.ttl> ] ;
+    mf:result  <constructlistresult.ttl> .
