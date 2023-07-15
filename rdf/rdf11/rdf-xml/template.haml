@@ -59,9 +59,11 @@
     %div
       %h2{id: "abstract"}="Abstract"
       %p{property: "rdfs:comment"}
-        = Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')
+        :markdown
+          #{Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')}
+
       :markdown
-        This page describes W3C RDF Working Group's test suite.
+        This page describes W3C RDF 1.1 Working Group's test suite.
 
         ### Contributing Tests
         The test manifests and entries are built automatically from [manifest.ttl](manifest.ttl) using a Rake task. Tests may be contributed via pull request to [https://github.com/w3c/rdf-tests](https://github.com/w3c/rdf-tests) with suitable changes to the [manifest.ttl](manifest.ttl) and referenced files.
