@@ -23,12 +23,12 @@ tests have an expected result (mf:result).
 • An implementation passes a negative syntax test if it fails to parse
   the input.
 
-The home of the test suite is <http://www.w3.org/2013/RDFXMLTests/>.
+The home of the test suite is <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-xml/>.
 Per RFC 3986 section 5.1.3, the base IRI for parsing each file is the
 retrieval IRI for that file. For example, the tests rdf-containers-syntax-vs-schema-test004 and
 xmlbase-test014 require relative IRI resolution against a base of
-<http://www.w3.org/2013/RDFXMLTests/rdf-containers-syntax-vs-schema/test004.rdf> and
-<http://www.w3.org/2013/RDFXMLTests/xmlbase/test014.rdf> respectively.
+<https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-xml/rdf-containers-syntax-vs-schema/test004.rdf> and
+<https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-xml/xmlbase/test014.rdf> respectively.
 
 See http://www.w3.org/2011/rdf-wg/wiki/RDFXML_Test_Suite for more details.
 
