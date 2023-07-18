@@ -26,12 +26,12 @@ tests have an expected result (mf:result).
 • An implementation passes a negative syntax test if it fails to parse
   the input.
 
-The home of the test suite is <http://www.w3.org/2013/TriGTests/>.
+The home of the test suite is <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-trig/>.
 Per RFC 3986 section 5.1.3, the base IRI for parsing each file is the
 retrieval IRI for that file. For example, the tests trig-subm-01 and
 trig-subm-27 require relative IRI resolution against a base of
-<http://www.w3.org/2013/TriGTests/trig-subm-01.trig> and
-<http://www.w3.org/2013/TriGTests/trig-subm-27.trig> respectively.
+<https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-trig/trig-subm-01.trig> and
+<https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-trig/trig-subm-27.trig> respectively.
 
 
 See http://www.w3.org/2011/rdf-wg/wiki/TriG_Test_Suite for more details.
