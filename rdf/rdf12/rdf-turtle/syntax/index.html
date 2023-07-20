@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# rdft: http://www.w3.org/ns/rdftest#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
+    <style>
+      body: {bacground-image: none;}
+      dl.editor>dd {
+        margin: 0 0 0 40px;
+      }
+      dl.test-detail {
+        padding: 0.5em;
+      }
+      dl.test-detail>dt {
+        float: left;
+        clear: left;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dl.test-detail>dt:after {content: ": "}
+      dl.test-detail>dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+      dl.test-description>dt {margin-top: 2em;}
+      dd {margin-left: 0;}
+      dd code {display: inline;}
+      footer {text-align: center;}
+    </style>
+    <title>
+      RDF 1.2 Turtle Syntax Tests
+    </title>
+    <style>
+      em.rfc2119 {
+        text-transform: lowercase;
+        font-variant:   small-caps;
+        font-style:     normal;
+        color:          #900;
+      }
+      a.testlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      a.testlink:hover {
+        text-decoration: underline;
+      }
+      .warning {color: orange;}
+      .error {color: red;}
+    </style>
+  </head>
+  <body resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#manifest' typeof='mf:Manifest'>
+    <p>
+      <a href='http://www.w3.org/'>
+        <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
+      </a>
+    </p>
+    <h1 property='rdfs:label'>RDF 1.2 Turtle Syntax Tests</h1>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
+    <hr title='Separator for header'>
+    <div>
+      <h2 id='abstract'>Abstract</h2>
+      <p>This page describes W3C RDF-star Working Group&#39;s test suite for RDF 1.2.
+        Conformance for RDF 1.2 requires conforming with tests in this test suite
+        along with the relevant RDF 1.2 tests.</p>
+      <h3>Contributing Tests</h3>
+      <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
+      <h3>Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
+      <h3>Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+    </div>
+    <div>
+      <h2>
+        Test Descriptions
+      </h2>
+      <dl class='test-description'>
+        <dt id='turtle-star-1'>
+          <a class='testlink' href='#turtle-star-1'>
+            turtle-star-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-1' property='mf:name'>Turtle-star - subject quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-basic-01.ttl' property='mf:action'>turtle-star-syntax-basic-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-2'>
+          <a class='testlink' href='#turtle-star-2'>
+            turtle-star-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-2' property='mf:name'>Turtle-star - object quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-basic-02.ttl' property='mf:action'>turtle-star-syntax-basic-02.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-inside-1'>
+          <a class='testlink' href='#turtle-star-inside-1'>
+            turtle-star-inside-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-inside-1' property='mf:name'>Turtle-star - quoted triple inside blankNodePropertyList</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-inside-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-inside-01.ttl' property='mf:action'>turtle-star-syntax-inside-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-inside-2'>
+          <a class='testlink' href='#turtle-star-inside-2'>
+            turtle-star-inside-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-inside-2' property='mf:name'>Turtle-star - quoted triple inside collection</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-inside-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-inside-02.ttl' property='mf:action'>turtle-star-syntax-inside-02.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-nested-1'>
+          <a class='testlink' href='#turtle-star-nested-1'>
+            turtle-star-nested-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-nested-1' property='mf:name'>Turtle-star - nested quoted triple, subject position</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-nested-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-nested-01.ttl' property='mf:action'>turtle-star-syntax-nested-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-nested-2'>
+          <a class='testlink' href='#turtle-star-nested-2'>
+            turtle-star-nested-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-nested-2' property='mf:name'>Turtle-star - nested quoted triple, object position</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-nested-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-nested-02.ttl' property='mf:action'>turtle-star-syntax-nested-02.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-compound-1'>
+          <a class='testlink' href='#turtle-star-compound-1'>
+            turtle-star-compound-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-compound-1' property='mf:name'>Turtle-star - compound forms</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-compound-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-compound.ttl' property='mf:action'>turtle-star-syntax-compound.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bnode-1'>
+          <a class='testlink' href='#turtle-star-bnode-1'>
+            turtle-star-bnode-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-1' property='mf:name'>Turtle-star - blank node subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bnode-01.ttl' property='mf:action'>turtle-star-syntax-bnode-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bnode-2'>
+          <a class='testlink' href='#turtle-star-bnode-2'>
+            turtle-star-bnode-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-2' property='mf:name'>Turtle-star - blank node object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bnode-02.ttl' property='mf:action'>turtle-star-syntax-bnode-02.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bnode-3'>
+          <a class='testlink' href='#turtle-star-bnode-3'>
+            turtle-star-bnode-3:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-3' property='mf:name'>Turtle-star - blank node</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bnode-3' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bnode-03.ttl' property='mf:action'>turtle-star-syntax-bnode-03.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-1'>
+          <a class='testlink' href='#turtle-star-bad-1'>
+            turtle-star-bad-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-1' property='mf:name'>Turtle-star - bad - quoted triple as predicate</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-1' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-01.ttl' property='mf:action'>turtle-star-syntax-bad-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-2'>
+          <a class='testlink' href='#turtle-star-bad-2'>
+            turtle-star-bad-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-2' property='mf:name'>Turtle-star - bad - quoted triple outside triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-2' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-02.ttl' property='mf:action'>turtle-star-syntax-bad-02.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-3'>
+          <a class='testlink' href='#turtle-star-bad-3'>
+            turtle-star-bad-3:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-3' property='mf:name'>Turtle-star - bad - collection list in quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-3' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-03.ttl' property='mf:action'>turtle-star-syntax-bad-03.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-4'>
+          <a class='testlink' href='#turtle-star-bad-4'>
+            turtle-star-bad-4:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-4' property='mf:name'>Turtle-star - bad - literal in subject position of quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-4' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-04.ttl' property='mf:action'>turtle-star-syntax-bad-04.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-5'>
+          <a class='testlink' href='#turtle-star-bad-5'>
+            turtle-star-bad-5:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-5' property='mf:name'>Turtle-star - bad - blank node  as predicate in quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-5' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-05.ttl' property='mf:action'>turtle-star-syntax-bad-05.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-6'>
+          <a class='testlink' href='#turtle-star-bad-6'>
+            turtle-star-bad-6:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-6' property='mf:name'>Turtle-star - bad - compound blank node expression</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-6' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-06.ttl' property='mf:action'>turtle-star-syntax-bad-06.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-7'>
+          <a class='testlink' href='#turtle-star-bad-7'>
+            turtle-star-bad-7:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-7' property='mf:name'>Turtle-star - bad - incomplete quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-7' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-07.ttl' property='mf:action'>turtle-star-syntax-bad-07.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-8'>
+          <a class='testlink' href='#turtle-star-bad-8'>
+            turtle-star-bad-8:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-8' property='mf:name'>Turtle-star - bad - over-long quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-8' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-08.ttl' property='mf:action'>turtle-star-syntax-bad-08.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-ann-1'>
+          <a class='testlink' href='#turtle-star-ann-1'>
+            turtle-star-ann-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-ann-1' property='mf:name'>Turtle-star - Annotation form</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-ann-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-annotation-1.ttl' property='mf:action'>turtle-star-annotation-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-ann-2'>
+          <a class='testlink' href='#turtle-star-ann-2'>
+            turtle-star-ann-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-ann-2' property='mf:name'>Turtle-star - Annotation example</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-ann-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-annotation-2.ttl' property='mf:action'>turtle-star-annotation-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-ann-1'>
+          <a class='testlink' href='#turtle-star-bad-ann-1'>
+            turtle-star-bad-ann-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-ann-1' property='mf:name'>Turtle-star - bad - empty annotation</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-ann-1' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-ann-1.ttl' property='mf:action'>turtle-star-syntax-bad-ann-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='turtle-star-bad-ann-2'>
+          <a class='testlink' href='#turtle-star-bad-ann-2'>
+            turtle-star-bad-ann-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-ann-2' property='mf:name'>Turtle-star - bad - triple as annotation</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle-star-bad-ann-2' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='turtle-star-syntax-bad-ann-2.ttl' property='mf:action'>turtle-star-syntax-bad-ann-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-1'>
+          <a class='testlink' href='#nt-ttl-star-1'>
+            nt-ttl-star-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-1' property='mf:name'>N-Triples-star as Turtle-star - subject quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-syntax-1.ttl' property='mf:action'>nt-ttl-star-syntax-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-2'>
+          <a class='testlink' href='#nt-ttl-star-2'>
+            nt-ttl-star-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-2' property='mf:name'>N-Triples-star as Turtle-star - object quoted triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-syntax-2.ttl' property='mf:action'>nt-ttl-star-syntax-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-3'>
+          <a class='testlink' href='#nt-ttl-star-3'>
+            nt-ttl-star-3:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-3' property='mf:name'>N-Triples-star as Turtle-star - subject and object quoted triples</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-3' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-syntax-3.ttl' property='mf:action'>nt-ttl-star-syntax-3.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-4'>
+          <a class='testlink' href='#nt-ttl-star-4'>
+            nt-ttl-star-4:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-4' property='mf:name'>N-Triples-star as Turtle-star - whitespace and terms</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-4' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-syntax-4.ttl' property='mf:action'>nt-ttl-star-syntax-4.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-5'>
+          <a class='testlink' href='#nt-ttl-star-5'>
+            nt-ttl-star-5:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-5' property='mf:name'>N-Triples-star as Turtle-star - Nested, no whitespace</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-5' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-syntax-5.ttl' property='mf:action'>nt-ttl-star-syntax-5.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bnode-1'>
+          <a class='testlink' href='#nt-ttl-star-bnode-1'>
+            nt-ttl-star-bnode-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bnode-1' property='mf:name'>N-Triples-star as Turtle-star - Blank node subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bnode-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bnode-1.ttl' property='mf:action'>nt-ttl-star-bnode-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bnode-2'>
+          <a class='testlink' href='#nt-ttl-star-bnode-2'>
+            nt-ttl-star-bnode-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bnode-2' property='mf:name'>N-Triples-star as Turtle-star - Blank node object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bnode-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bnode-2.ttl' property='mf:action'>nt-ttl-star-bnode-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-nested-1'>
+          <a class='testlink' href='#nt-ttl-star-nested-1'>
+            nt-ttl-star-nested-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-nested-1' property='mf:name'>N-Triples-star as Turtle-star - Nested subject term</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-nested-1' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-nested-1.ttl' property='mf:action'>nt-ttl-star-nested-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-nested-2'>
+          <a class='testlink' href='#nt-ttl-star-nested-2'>
+            nt-ttl-star-nested-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-nested-2' property='mf:name'>N-Triples-star as Turtle-star - Nested object term</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-nested-2' typeof='rdft:TestTurtlePositiveSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtlePositiveSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-nested-2.ttl' property='mf:action'>nt-ttl-star-nested-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bad-1'>
+          <a class='testlink' href='#nt-ttl-star-bad-1'>
+            nt-ttl-star-bad-1:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-1' property='mf:name'>N-Triples-star as Turtle-star - Bad - quoted triple as predicate</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-1' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bad-syntax-1.ttl' property='mf:action'>nt-ttl-star-bad-syntax-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bad-2'>
+          <a class='testlink' href='#nt-ttl-star-bad-2'>
+            nt-ttl-star-bad-2:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-2' property='mf:name'>N-Triples-star as Turtle-star - Bad - quoted triple, literal subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-2' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bad-syntax-2.ttl' property='mf:action'>nt-ttl-star-bad-syntax-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bad-3'>
+          <a class='testlink' href='#nt-ttl-star-bad-3'>
+            nt-ttl-star-bad-3:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-3' property='mf:name'>N-Triples-star as Turtle-star - Bad - quoted triple, literal predicate</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-3' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bad-syntax-3.ttl' property='mf:action'>nt-ttl-star-bad-syntax-3.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='nt-ttl-star-bad-4'>
+          <a class='testlink' href='#nt-ttl-star-bad-4'>
+            nt-ttl-star-bad-4:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-4' property='mf:name'>N-Triples-star as Turtle-star - Bad - quoted triple, blank node predicate</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl-star-bad-4' typeof='rdft:TestTurtleNegativeSyntax'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>rdft:TestTurtleNegativeSyntax</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nt-ttl-star-bad-syntax-4.ttl' property='mf:action'>nt-ttl-star-bad-syntax-4.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+    <footer>
+      <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
+    </footer>
+  </body>
+</html>

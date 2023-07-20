@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# rdft: http://www.w3.org/ns/rdftest#'>
+  <!-- This file is generated automatciallly from manifest.ttl, and should not be edited directly. -->
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
+    <style>
+      body: {bacground-image: none;}
+      dl.editor>dd {
+        margin: 0 0 0 40px;
+      }
+      dl.test-detail {
+        padding: 0.5em;
+      }
+      dl.test-detail>dt {
+        float: left;
+        clear: left;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dl.test-detail>dt:after {content: ": "}
+      dl.test-detail>dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+      dl.test-description>dt {margin-top: 2em;}
+      dd {margin-left: 0;}
+      dd code {display: inline;}
+      footer {text-align: center;}
+    </style>
+    <title>
+      RDF 1.2 Semantics tests
+    </title>
+    <style>
+      em.rfc2119 {
+        text-transform: lowercase;
+        font-variant:   small-caps;
+        font-style:     normal;
+        color:          #900;
+      }
+      a.testlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      a.testlink:hover {
+        text-decoration: underline;
+      }
+      .warning {color: orange;}
+      .error {color: red;}
+    </style>
+  </head>
+  <body resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#manifest' typeof='mf:Manifest'>
+    <p>
+      <a href='http://www.w3.org/'>
+        <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
+      </a>
+    </p>
+    <h1 property='rdfs:label'>RDF 1.2 Semantics tests</h1>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
+    <hr title='Separator for header'>
+    <div>
+      <h2 id='abstract'>Abstract</h2>
+      <p>This page describes W3C RDF-star Working Group&#39;s test suite for RDF 1.2.
+        Conformance for RDF 1.2 requires conforming with tests in this test suite
+        along with the relevant RDF 1.2 tests.</p>
+      <h3>Contributing Tests</h3>
+      <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
+      <h3>Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
+      <h3>Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+    </div>
+    <div>
+      <h2>
+        Test Descriptions
+      </h2>
+      <dl class='test-description'>
+        <dt id='all-identical-quoted-triples-are-the-same'>
+          <a class='testlink' href='#all-identical-quoted-triples-are-the-same'>
+            all-identical-quoted-triples-are-the-same:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#all-identical-quoted-triples-are-the-same' property='mf:name'>all-identical-quoted-triples-are-the-same</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#all-identical-quoted-triples-are-the-same' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Multiple occurences of the same quoted triples are undistinguishable in the abstract model.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test001a.ttl' property='mf:action'>test001a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test001r.ttl' property='mf:result'>test001r.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='quoted-triples-no-spurious'>
+          <a class='testlink' href='#quoted-triples-no-spurious'>
+            quoted-triples-no-spurious:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#quoted-triples-no-spurious' property='mf:name'>quoted-triples-no-spurious</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#quoted-triples-no-spurious' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>This test ensures that other entailments are not spurious.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test005.ttl' property='mf:result'>test005.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='bnodes-in-quoted-subject'>
+          <a class='testlink' href='#bnodes-in-quoted-subject'>
+            bnodes-in-quoted-subject:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject' property='mf:name'>bnodes-in-quoted-subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Terms inside quoted triples can be replaced by fresh bnodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002sr.ttl' property='mf:result'>test002sr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='bnodes-in-quoted-object'>
+          <a class='testlink' href='#bnodes-in-quoted-object'>
+            bnodes-in-quoted-object:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-object' property='mf:name'>bnodes-in-quoted-object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-object' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Terms inside quoted triples can be replaced by fresh bnodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002or.ttl' property='mf:result'>test002or.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='bnodes-in-quoted-subject-and-object'>
+          <a class='testlink' href='#bnodes-in-quoted-subject-and-object'>
+            bnodes-in-quoted-subject-and-object:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject-and-object' property='mf:name'>bnodes-in-quoted-subject-and-object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject-and-object' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Terms inside quoted triples can be replaced by fresh bnodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002sor.ttl' property='mf:result'>test002sor.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='bnodes-in-quoted-subject-and-object-fail'>
+          <a class='testlink' href='#bnodes-in-quoted-subject-and-object-fail'>
+            bnodes-in-quoted-subject-and-object-fail:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject-and-object-fail' property='mf:name'>bnodes-in-quoted-subject-and-object-fail</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#bnodes-in-quoted-subject-and-object-fail' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>The same bnode can not match different quoted terms.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002sbr.ttl' property='mf:result'>test002sbr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='same-bnode-same-quoted-term'>
+          <a class='testlink' href='#same-bnode-same-quoted-term'>
+            same-bnode-same-quoted-term:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#same-bnode-same-quoted-term' property='mf:name'>same-bnode-same-quoted-term</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#same-bnode-same-quoted-term' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Identical quoted term can be replaced by the same fresh bnode multiple times.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test003a.ttl' property='mf:action'>test003a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002sbr.ttl' property='mf:result'>test002sbr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='different-bnodes-same-quoted-term'>
+          <a class='testlink' href='#different-bnodes-same-quoted-term'>
+            different-bnodes-same-quoted-term:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#different-bnodes-same-quoted-term' property='mf:name'>different-bnodes-same-quoted-term</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#different-bnodes-same-quoted-term' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Different bnodes can match identical quoted terms.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test003a.ttl' property='mf:action'>test003a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002sor.ttl' property='mf:result'>test002sor.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='constrained-bnodes-in-quoted-subject'>
+          <a class='testlink' href='#constrained-bnodes-in-quoted-subject'>
+            constrained-bnodes-in-quoted-subject:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-subject' property='mf:name'>constrained-bnodes-in-quoted-subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-subject' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Terms inside and outside quoted triples can be replaced by fresh bnodes</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test004sr.ttl' property='mf:result'>test004sr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='constrained-bnodes-in-quoted-object'>
+          <a class='testlink' href='#constrained-bnodes-in-quoted-object'>
+            constrained-bnodes-in-quoted-object:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-object' property='mf:name'>constrained-bnodes-in-quoted-object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-object' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Terms inside and outside quoted triples can be replaced by fresh bnodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test004or.ttl' property='mf:result'>test004or.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='constrained-bnodes-in-quoted-fail'>
+          <a class='testlink' href='#constrained-bnodes-in-quoted-fail'>
+            constrained-bnodes-in-quoted-fail:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-fail' property='mf:name'>constrained-bnodes-in-quoted-fail</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-in-quoted-fail' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted bnode identifiers share the same scope as non-quoted ones. A bnode that occurs both inside quoted triples and inside asserted triples must satisfy all occurrences at the same time.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test004fr.ttl' property='mf:result'>test004fr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='constrained-bnodes-on-literal'>
+          <a class='testlink' href='#constrained-bnodes-on-literal'>
+            constrained-bnodes-on-literal:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-on-literal' property='mf:name'>constrained-bnodes-on-literal</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#constrained-bnodes-on-literal' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Literals inside and outside quoted triples can be replaced by fresh bnodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test006a.ttl' property='mf:action'>test006a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test006r.ttl' property='mf:result'>test006r.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='malformed-literal-control'>
+          <a class='testlink' href='#malformed-literal-control'>
+            malformed-literal-control:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-control' property='mf:name'>malformed-literal-control</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-control' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Checks that xsd:integer is indeed recognized, to ensure that malformed-literal-* tests do not pass spuriously.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='malformed-literal-control.ttl' property='mf:action'>malformed-literal-control.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='malformed-literal'>
+          <a class='testlink' href='#malformed-literal'>
+            malformed-literal:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal' property='mf:name'>malformed-literal</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Malformed literals are allowed when quoted.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='malformed-literal-accepted'>
+          <a class='testlink' href='#malformed-literal-accepted'>
+            malformed-literal-accepted:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-accepted' property='mf:name'>malformed-literal-accepted</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-accepted' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Malformed literals are allowed when quoted.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='malformed-literal.ttl' property='mf:result'>malformed-literal.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='malformed-literal-no-spurious'>
+          <a class='testlink' href='#malformed-literal-no-spurious'>
+            malformed-literal-no-spurious:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-no-spurious' property='mf:name'>malformed-literal-no-spurious</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-no-spurious' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted malformed literals do not lead to spurious entailment.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='malformed-literal-other.ttl' property='mf:result'>malformed-literal-other.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='malformed-literal-bnode-neg'>
+          <a class='testlink' href='#malformed-literal-bnode-neg'>
+            malformed-literal-bnode-neg:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-bnode-neg' property='mf:name'>malformed-literal-bnode</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#malformed-literal-bnode-neg' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Malformed literals can not be replaced by blank nodes.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002or.ttl' property='mf:result'>test002or.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-literal-control'>
+          <a class='testlink' href='#opaque-literal-control'>
+            opaque-literal-control:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-literal-control' property='mf:name'>opaque-literal-control</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-literal-control' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Checks that xsd:integer is indeed recognized, to ensure that opaque-literal does not pass spuriously.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='non-canonical-literal-control.ttl' property='mf:action'>non-canonical-literal-control.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='canonical-literal-control.ttl' property='mf:result'>canonical-literal-control.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-literal'>
+          <a class='testlink' href='#opaque-literal'>
+            opaque-literal:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-literal' property='mf:name'>opaque-literal</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-literal' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted literals are opaque, even when their datatype is recognized.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='non-canonical-literal.ttl' property='mf:action'>non-canonical-literal.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='canonical-literal.ttl' property='mf:result'>canonical-literal.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-language-string-control'>
+          <a class='testlink' href='#opaque-language-string-control'>
+            opaque-language-string-control:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-language-string-control' property='mf:name'>opaque-language-string-control</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-language-string-control' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Checks that language strings are indeed recognized, to ensure that opaque-language-string does not pass spuriously.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='lowercase-language-string-control.ttl' property='mf:action'>lowercase-language-string-control.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='upercase-language-string-control.ttl' property='mf:result'>upercase-language-string-control.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-language-string'>
+          <a class='testlink' href='#opaque-language-string'>
+            opaque-language-string:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-language-string' property='mf:name'>opaque-language-string</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-language-string' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted literals (including language strings) are opaque, even when their datatype is recognized.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='lowercase-language-string.ttl' property='mf:action'>lowercase-language-string.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='upercase-language-string.ttl' property='mf:result'>upercase-language-string.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-iri-control'>
+          <a class='testlink' href='#opaque-iri-control'>
+            opaque-iri-control:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-iri-control' property='mf:name'>opaque-iri-control</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-iri-control' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Check that owl:sameAs works as expected, to ensure that opaque-iri does not pass spuriously.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='control-sameas-a.ttl' property='mf:action'>control-sameas-a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='control-sameas-r.ttl' property='mf:result'>control-sameas-r.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-iri'>
+          <a class='testlink' href='#opaque-iri'>
+            opaque-iri:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-iri' property='mf:name'>opaque-iri</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#opaque-iri' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted IRIs are opaque.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='superman.ttl' property='mf:action'>superman.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='superman_undesired_entailment.ttl' property='mf:result'>superman_undesired_entailment.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='quoted-not-asserted'>
+          <a class='testlink' href='#quoted-not-asserted'>
+            quoted-not-asserted:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#quoted-not-asserted' property='mf:name'>quoted-not-asserted</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#quoted-not-asserted' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Quoted triples are not asserted.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test002pgr.ttl' property='mf:result'>test002pgr.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='annotated-asserted'>
+          <a class='testlink' href='#annotated-asserted'>
+            annotated-asserted:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotated-asserted' property='mf:name'>annotated-asserted</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotated-asserted' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Annotated triples are asserted.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test007a.ttl' property='mf:action'>test007a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test007r1.ttl' property='mf:result'>test007r1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='annotation'>
+          <a class='testlink' href='#annotation'>
+            annotation:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotation' property='mf:name'>annotation</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotation' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Annotation are about the annotated triple.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test007a.ttl' property='mf:action'>test007a.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test007r2.ttl' property='mf:result'>test007r2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='annotation-unfolded'>
+          <a class='testlink' href='#annotation-unfolded'>
+            annotation-unfolded:
+          </a>
+          <span about='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotation-unfolded' property='mf:name'>annotation-unfolded</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics#annotation-unfolded' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Annotation is the same as separate assertions.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='test007a2.ttl' property='mf:action'>test007a2.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='test007a.ttl' property='mf:result'>test007a.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+    <footer>
+      <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
+    </footer>
+  </body>
+</html>
