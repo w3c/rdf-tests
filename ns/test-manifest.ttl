@@ -52,6 +52,11 @@
     rdfs:range   rdf:List ;
     .
 
+:assumedTestBase rdf:type rdf:Property ;
+    rdfs:comment "The assumed base URI for tests" ;
+    rdfs:domain	 :Manifest ;
+    .
+
 ## ---- Property declarations for each test ----
 
 :name rdf:type rdf:Property ;
