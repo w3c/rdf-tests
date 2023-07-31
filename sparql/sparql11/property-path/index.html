@@ -33,7 +33,7 @@
       Property Path
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -62,21 +62,14 @@
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
+      <h3 id="distribution">Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -90,30 +83,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp01' property='mf:name'>(pp01) Simple path</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp01' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp01' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b11'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp01.rq' property='qt:query'>pp01.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp01.ttl' property='qt:data'>pp01.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -128,30 +108,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp02' property='mf:name'>(pp02) Star path</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp02' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp02' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b10'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp02.rq' property='qt:query'>pp02.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp01.ttl' property='qt:data'>pp01.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -166,30 +133,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp03' property='mf:name'>(pp03) Simple path with loop</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp03' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp03' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b9'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp03.rq' property='qt:query'>pp03.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp03.ttl' property='qt:data'>pp03.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -204,26 +158,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp06' property='mf:name'>(pp06) Path with two graphs</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp06' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp06' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b6'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp06.rq' property='qt:query'>pp06.rq</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -238,26 +183,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp07' property='mf:name'>(pp07) Path with one graph</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp07' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp07' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp06.rq' property='qt:query'>pp06.rq</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -272,30 +208,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp08' property='mf:name'>(pp08) Reverse path</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp08' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp08' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b4'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp08.rq' property='qt:query'>pp08.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp08.ttl' property='qt:data'>pp08.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -310,30 +233,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp09' property='mf:name'>(pp09) Reverse sequence path</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp09' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp09' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b3'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp09.rq' property='qt:query'>pp09.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp09.ttl' property='qt:data'>pp09.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -348,30 +258,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp10' property='mf:name'>(pp10) Path with negation</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp10' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp10' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b2'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp10.rq' property='qt:query'>pp10.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp10.ttl' property='qt:data'>pp10.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -386,30 +283,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp11' property='mf:name'>(pp11) Simple path and two paths to same target node</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp11' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp11' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b1'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp11.rq' property='qt:query'>pp11.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp11.ttl' property='qt:data'>pp11.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -424,30 +308,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp12' property='mf:name'>(pp12) Variable length path and two paths to same target node</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp12' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp12' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b0'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp12.rq' property='qt:query'>pp12.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp11.ttl' property='qt:data'>pp11.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -462,30 +333,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp14' property='mf:name'>(pp14) Star path over foaf:knows</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp14' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp14' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b17'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp14.rq' property='qt:query'>pp14.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp14.ttl' property='qt:data'>pp14.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -500,30 +358,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp16' property='mf:name'>(pp16) Duplicate paths and cycles through foaf:knows*</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp16' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp16' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b23'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp14.rq' property='qt:query'>pp14.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp16.ttl' property='qt:data'>pp16.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -538,30 +383,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp21' property='mf:name'>(pp21) Diamond -- :p+</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp21' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp21' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b16'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-2-2.rq' property='qt:query'>path-2-2.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data-diamond.ttl' property='qt:data'>data-diamond.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -576,30 +408,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp23' property='mf:name'>(pp23) Diamond, with tail -- :p+</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp23' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp23' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b22'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-2-2.rq' property='qt:query'>path-2-2.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data-diamond-tail.ttl' property='qt:data'>data-diamond-tail.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -614,30 +433,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp25' property='mf:name'>(pp25) Diamond, with loop -- :p+</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp25' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp25' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b21'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-2-2.rq' property='qt:query'>path-2-2.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data-diamond-loop.ttl' property='qt:data'>data-diamond-loop.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -652,30 +458,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp28a' property='mf:name'>(pp28a) Diamond, with loop -- (:p/:p)?</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp28a' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp28a' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b20'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-3-3.rq' property='qt:query'>path-3-3.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data-diamond-loop.ttl' property='qt:data'>data-diamond-loop.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -690,30 +483,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp30' property='mf:name'>(pp30) Operator precedence 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp30' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp30' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b15'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-p1.rq' property='qt:query'>path-p1.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='path-p1.ttl' property='qt:data'>path-p1.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -728,30 +508,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp31' property='mf:name'>(pp31) Operator precedence 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp31' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp31' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b19'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-p2.rq' property='qt:query'>path-p2.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='path-p1.ttl' property='qt:data'>path-p1.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -766,30 +533,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp32' property='mf:name'>(pp32) Operator precedence 3</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp32' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp32' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b18'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-p3.rq' property='qt:query'>path-p3.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='path-p3.ttl' property='qt:data'>path-p3.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -804,30 +558,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp33' property='mf:name'>(pp33) Operator precedence 4</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp33' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp33' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b8'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-p4.rq' property='qt:query'>path-p4.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='path-p3.ttl' property='qt:data'>path-p3.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -842,26 +583,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp34' property='mf:name'>(pp34) Named Graph 1</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp34' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp34' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b7'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-ng-01.rq' property='qt:query'>path-ng-01.rq</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -876,26 +608,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp35' property='mf:name'>(pp35) Named Graph 2</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp35' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp35' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b14'>
-                <dt>query</dt>
-                <dd>
-                  <a href='path-ng-02.rq' property='qt:query'>path-ng-02.rq</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -910,30 +633,17 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp36' property='mf:name'>(pp36) Arbitrary path with bound endpoints</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp36' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp36' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b13'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp36.rq' property='qt:query'>pp36.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='clique3.ttl' property='qt:data'>clique3.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
@@ -948,7 +658,7 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp37' property='mf:name'>(pp37) Nested (*)*</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp37' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp37' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
             <p>Test case as per http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/2012Feb/0006.html</p>
           </div>
@@ -956,27 +666,90 @@
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b12'>
-                <dt>query</dt>
-                <dd>
-                  <a href='pp37.rq' property='qt:query'>pp37.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='pp37.ttl' property='qt:data'>pp37.ttl</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
             <dd>
               <a href='pp37.srx' property='mf:result'>pp37.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path' property='mf:name'>ZeroOrX property paths should only return terms in the graph and not also terms defined in the query</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values_and_path.srx' property='mf:result'>values_and_path.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse' property='mf:name'>Negated Property Set with inverse properties</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='nps_inverse.srx' property='mf:result'>nps_inverse.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse' property='mf:name'>Negated Property Set with both direct and inverse properties</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='nps_direct_and_inverse.srx' property='mf:result'>nps_direct_and_inverse.srx</a>
             </dd>
           </dl>
         </dd>

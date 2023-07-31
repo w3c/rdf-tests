@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      DROP
+      Casting
     </title>
     <style>
       em.rfc2119 {
@@ -56,13 +56,12 @@
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>DROP</h1>
+    <h1 property='rdfs:label'>Casting</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        Tests for SPARQL UPDATE
       </p>
       <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
       <h3 id="contributing-tests">Contributing Tests</h3>
@@ -78,19 +77,18 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-default-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-default-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-default-01:
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-bool'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-bool'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-bool:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-default-01' property='mf:name'>DROP DEFAULT</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-bool' property='mf:name'>xsd:boolean cast</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-default-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-bool' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>This is a DROP of the default graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:UpdateEvaluationTest</dd>
+            <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -100,24 +98,22 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource=''>
-              </dl>
+              <a href='cast-bool.srx' property='mf:result'>cast-bool.srx</a>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-graph-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-graph-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-graph-01:
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-int'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-int'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-int:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-graph-01' property='mf:name'>DROP GRAPH</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-int' property='mf:name'>xsd:integer cast</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-graph-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-int' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>This is a DROP of an existing named graph</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:UpdateEvaluationTest</dd>
+            <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -127,24 +123,22 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource=''>
-              </dl>
+              <a href='cast-int.srx' property='mf:result'>cast-int.srx</a>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-named-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-named-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-named-01:
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-float'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-float'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-float:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-named-01' property='mf:name'>DROP NAMED</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-float' property='mf:name'>xsd:float cast</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-named-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-float' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>This is a DROP of all the named graphs</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:UpdateEvaluationTest</dd>
+            <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -154,24 +148,22 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource=''>
-              </dl>
+              <a href='cast-float.srx' property='mf:result'>cast-float.srx</a>
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-all-01'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-all-01'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-all-01:
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-double'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-double'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-double:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-all-01' property='mf:name'>DROP ALL</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-double' property='mf:name'>xsd:double cast</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/drop/manifest#dawg-drop-all-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-double' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>This is a DROP of all graphs (default and named)</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:UpdateEvaluationTest</dd>
+            <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -181,8 +173,57 @@
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource=''>
+              <a href='cast-double.srx' property='mf:result'>cast-double.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-decimal'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-decimal'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-decimal:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-decimal' property='mf:name'>xsd:decimal cast</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-decimal' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='cast-decimal.srx' property='mf:result'>cast-decimal.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-string'>
+          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-string'>
+            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-string:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-string' property='mf:name'>xsd:string cast</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/cast/manifest#cast-string' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='cast-string.srx' property='mf:result'>cast-string.srx</a>
             </dd>
           </dl>
         </dd>

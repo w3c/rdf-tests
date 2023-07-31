@@ -33,7 +33,7 @@
       Casting
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -62,21 +62,14 @@
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
+      <h3 id="distribution">Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -90,30 +83,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-str' property='mf:name'>Cast to xsd:string</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-str' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-str' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-str.rq' property='qt:query'>cast-str.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -128,30 +108,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-flt' property='mf:name'>Cast to xsd:float</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-flt' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-flt' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-flt.rq' property='qt:query'>cast-flt.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -166,30 +133,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dbl' property='mf:name'>Cast to xsd:double</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dbl' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dbl' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-dbl.rq' property='qt:query'>cast-dbl.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -204,30 +158,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dec' property='mf:name'>Cast to xsd:decimal</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dec' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dec' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-dec.rq' property='qt:query'>cast-dec.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -242,30 +183,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-int' property='mf:name'>Cast to xsd:integer</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-int' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-int' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-int.rq' property='qt:query'>cast-int.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -280,30 +208,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dT' property='mf:name'>Cast to xsd:dateTime</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dT' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dT' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-dT.rq' property='qt:query'>cast-dT.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
@@ -318,30 +233,17 @@
           </a>
           <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-bool' property='mf:name'>Cast to xsd:boolean</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-bool' typeof='mf:QueryEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-bool' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:QueryEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
               <dl class='test-detail'>
-                <dt>query</dt>
-                <dd>
-                  <a href='cast-bool.rq' property='qt:query'>cast-bool.rq</a>
-                </dd>
-                <dt>data</dt>
-                <dd>
-                  <a href='data.ttl' property='qt:data'>data.ttl</a>
-                </dd>
               </dl>
             </dd>
             <dt>result</dt>
