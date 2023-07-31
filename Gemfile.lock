@@ -1,0 +1,61 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ebnf (2.3.5)
+      htmlentities (~> 4.3)
+      rdf (~> 3.2)
+      scanf (~> 1.0)
+      sxp (~> 1.2)
+      unicode-types (~> 1.8)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    htmlbeautifier (1.4.2)
+    htmlentities (4.3.4)
+    json-canonicalization (0.3.2)
+    json-ld (3.2.5)
+      htmlentities (~> 4.3)
+      json-canonicalization (~> 0.3, >= 0.3.2)
+      link_header (~> 0.0, >= 0.0.8)
+      multi_json (~> 1.15)
+      rack (>= 2.2, < 4)
+      rdf (~> 3.2, >= 3.2.10)
+    kramdown (2.4.0)
+      rexml
+    link_header (0.0.8)
+    matrix (0.4.2)
+    multi_json (1.15.0)
+    rack (3.0.8)
+    rake (13.0.6)
+    rdf (3.2.11)
+      link_header (~> 0.0, >= 0.0.8)
+    rdf-turtle (3.2.1)
+      ebnf (~> 2.3)
+      rdf (~> 3.2)
+    rexml (3.2.6)
+    scanf (1.0.0)
+    sxp (1.2.4)
+      matrix (~> 0.4)
+      rdf (~> 3.2)
+    temple (0.10.2)
+    thor (1.2.2)
+    tilt (2.2.0)
+    unicode-types (1.8.0)
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  haml (~> 6.1)
+  htmlbeautifier (~> 1.4)
+  json-ld
+  kramdown (~> 2.3)
+  rake
+  rdf-turtle
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.17
