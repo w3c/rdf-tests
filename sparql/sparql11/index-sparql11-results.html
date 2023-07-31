@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#'>
+<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      bound
+      SPARQL 1.1 tests - Results Formats
     </title>
     <style>
       em.rfc2119 {
@@ -56,13 +56,12 @@
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>bound</h1>
+    <h1 property='rdfs:label'>SPARQL 1.1 tests - Results Formats</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        DAWG bound test cases
       </p>
       <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
       <h3 id="contributing-tests">Contributing Tests</h3>
@@ -75,36 +74,16 @@
     </div>
     <div>
       <h2>
-        Test Descriptions
+        Referenced Manifests
       </h2>
-      <dl class='test-description'>
-        <dt id='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bound/manifest#dawg-bound-query-001'>
-          <a class='testlink' href='#http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bound/manifest#dawg-bound-query-001'>
-            http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bound/manifest#dawg-bound-query-001:
-          </a>
-          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bound/manifest#dawg-bound-query-001' property='mf:name'>dawg-bound-query-001</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bound/manifest#dawg-bound-query-001' typeof='mf:QueryEvaluationTest'>
-          <div property='rdfs:comment'>
-            <p>BOUND test case.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:QueryEvaluationTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
-            <dt>action</dt>
-            <dd>
-              <dl class='test-detail'>
-              </dl>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='bound1-result.ttl' property='mf:result'>bound1-result.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-      </dl>
+      <ul>
+        <li>
+          <a href='csv-tsv-res/index.html' inlist='true' property='mf:include'>csv-tsv-res/</a>
+        </li>
+        <li>
+          <a href='json-res/index.html' inlist='true' property='mf:include'>json-res/</a>
+        </li>
+      </ul>
     </div>
     <footer>
       <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>

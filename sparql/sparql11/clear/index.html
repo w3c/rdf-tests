@@ -33,7 +33,7 @@
       CLEAR
     </title>
     <style>
-      em.rfc2119 { 
+      em.rfc2119 {
         text-transform: lowercase;
         font-variant:   small-caps;
         font-style:     normal;
@@ -64,19 +64,13 @@
       <p property='rdfs:comment'>
         Tests for SPARQL UPDATE
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
-      
-      <h3>Contributing Tests</h3>
-      
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      
-      <h3>Distribution</h3>
-      
+      <h3 id="distribution">Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      
-      <h3>Disclaimer</h3>
-      
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -90,7 +84,7 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-default-01' property='mf:name'>CLEAR DEFAULT</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-default-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-default-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a CLEAR of the default graph</p>
           </div>
@@ -98,65 +92,15 @@
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b5'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b4'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='clear-g1.ttl' property='ut:graph'>clear-g1.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b3'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
-                <dt>request</dt>
-                <dd>
-                  <a href='clear-default-01.ru' property='ut:request'>clear-default-01.ru</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b1'>
-                <dt>data</dt>
-                <dd>
-                  <a href='empty.ttl' property='ut:data'>empty.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b0'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='clear-g1.ttl' property='ut:graph'>clear-g1.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b2'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
+              <dl class='test-detail' property='mf:result' resource=''>
               </dl>
             </dd>
           </dl>
@@ -167,7 +111,7 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-graph-01' property='mf:name'>CLEAR GRAPH</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-graph-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-graph-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a CLEAR of an existing named graph</p>
           </div>
@@ -175,65 +119,15 @@
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b17'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b16'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='clear-g1.ttl' property='ut:graph'>clear-g1.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b15'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
-                <dt>request</dt>
-                <dd>
-                  <a href='clear-graph-01.ru' property='ut:request'>clear-graph-01.ru</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b13'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b12'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='empty.ttl' property='ut:graph'>empty.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b14'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
+              <dl class='test-detail' property='mf:result' resource=''>
               </dl>
             </dd>
           </dl>
@@ -244,7 +138,7 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-named-01' property='mf:name'>CLEAR NAMED</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-named-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-named-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a CLEAR of all the named graphs</p>
           </div>
@@ -252,65 +146,15 @@
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b11'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b10'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='clear-g1.ttl' property='ut:graph'>clear-g1.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b9'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
-                <dt>request</dt>
-                <dd>
-                  <a href='clear-named-01.ru' property='ut:request'>clear-named-01.ru</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b8'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b7'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='empty.ttl' property='ut:graph'>empty.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b6'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='empty.ttl' property='ut:graph'>empty.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
+              <dl class='test-detail' property='mf:result' resource=''>
               </dl>
             </dd>
           </dl>
@@ -321,7 +165,7 @@
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-all-01' property='mf:name'>CLEAR ALL</span>
         </dt>
-        <dd inlist property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-all-01' typeof='mf:UpdateEvaluationTest'>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-all-01' typeof='mf:UpdateEvaluationTest'>
           <div property='rdfs:comment'>
             <p>This is a CLEAR of all graphs (default and named)</p>
           </div>
@@ -329,65 +173,15 @@
             <dt>type</dt>
             <dd>mf:UpdateEvaluationTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
-            <dt>approvedBy</dt>
-            <dd>
-              <a href='http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3</a>
-            </dd>
+            <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <dl class='test-detail' property='mf:action' resource='_:b23'>
-                <dt>data</dt>
-                <dd>
-                  <a href='clear-default.ttl' property='ut:data'>clear-default.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b22'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='clear-g1.ttl' property='ut:graph'>clear-g1.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b21'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='clear-g2.ttl' property='ut:graph'>clear-g2.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
-                <dt>request</dt>
-                <dd>
-                  <a href='clear-all-01.ru' property='ut:request'>clear-all-01.ru</a>
-                </dd>
+              <dl class='test-detail' property='mf:action' resource=''>
               </dl>
             </dd>
             <dt>result</dt>
             <dd>
-              <dl class='test-detail' property='mf:result' resource='_:b20'>
-                <dt>data</dt>
-                <dd>
-                  <a href='empty.ttl' property='ut:data'>empty.ttl</a>
-                </dd>
-                <dt>graphData</dt>
-                <dd>
-                  <table class='test-detail'>
-                    <tr property='ut:graphData' resource='_:b19'>
-                      <td property='rdfs:label'>http://example.org/g1</td>
-                      <td>
-                        <a href='empty.ttl' property='ut:graph'>empty.ttl</a>
-                      </td>
-                    </tr>
-                    <tr property='ut:graphData' resource='_:b18'>
-                      <td property='rdfs:label'>http://example.org/g2</td>
-                      <td>
-                        <a href='empty.ttl' property='ut:graph'>empty.ttl</a>
-                      </td>
-                    </tr>
-                  </table>
-                </dd>
+              <dl class='test-detail' property='mf:result' resource=''>
               </dl>
             </dd>
           </dl>
