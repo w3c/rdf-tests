@@ -17,6 +17,10 @@
   rdfs:comment "Tests the generation of canonical N-Triples.";
   mf:entries (
     :comment_following_triple
+    :extra_whitespace-01
+    :extra_whitespace-02
+    :extra_whitespace-03
+    :extra_whitespace-04
     :langtagged_string
     # :lantag_with_subtag
     :literal_all_controls
@@ -197,6 +201,38 @@
   rdft:approval rdft:Proposed ;
   mf:action    <minimal_whitespace-02.nt> ;
   mf:result    <minimal_whitespace-02-c14n.nt>;
+  .
+
+:extra_whitespace-01 rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N extra_whitespace-01" ;
+  rdfs:comment "Tests canonicalization of triples with extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <extra_whitespace-01.nt> ;
+  mf:result    <extra_whitespace-01-c14n.nt>;
+  .
+
+:extra_whitespace-02 rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N extra_whitespace-02" ;
+  rdfs:comment "Tests canonicalization of triples with extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <extra_whitespace-02.nt> ;
+  mf:result    <extra_whitespace-02-c14n.nt>;
+  .
+
+:extra_whitespace-03 rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N extra_whitespace-03" ;
+  rdfs:comment "Tests canonicalization of triples with extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <extra_whitespace-03.nt> ;
+  mf:result    <extra_whitespace-03-c14n.nt>;
+  .
+
+:extra_whitespace-04 rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N extra_whitespace-04" ;
+  rdfs:comment "Tests canonicalization of triples with extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <extra_whitespace-04.nt> ;
+  mf:result    <extra_whitespace-04-c14n.nt>;
   .
 
 :nt-syntax-uri-01 rdf:type rdft:TestNTriplesPositiveC14N ;
