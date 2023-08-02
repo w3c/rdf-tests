@@ -39,6 +39,7 @@
     :literal_with_REVERSE_SOLIDUS
     :literal_with_REVERSE_SOLIDUS2
     :literal_with_squote
+    :literal_with_string_dt
     :literal_with_UTF8_boundaries
     :minimal_whitespace-01
     :minimal_whitespace-02
@@ -177,6 +178,14 @@
   rdft:approval rdft:Proposed ;
   mf:action    <literal_with_squote.nt> ;
   mf:result    <literal_with_squote-c14n.nt>;
+  .
+
+:literal_with_string_dt rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N literal_with_string_dt" ;
+  rdfs:comment "Tests canonicalization of literal with explicit xsd:string" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_with_string_dt.nt> ;
+  mf:result    <literal_with_string_dt-c14n.nt>;
   .
 
 :literal_with_UTF8_boundaries rdf:type rdft:TestNTriplesPositiveC14N ;
