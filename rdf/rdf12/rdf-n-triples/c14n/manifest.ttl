@@ -6,15 +6,16 @@
 ## Test types
 ## * rdft:TestNTriplesPositiveC14N – N-Triples canonicalization
 
-@prefix : <#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix mf:   <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
-@prefix rdft: <http://www.w3.org/ns/rdftest#> .
+PREFIX :     <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mf:   <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
+PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 
-<manifest>  a mf:Manifest ;
-  rdfs:label "RDF-star N-Triples Canonicalization Test Suite";
-  rdfs:comment "Tests the generation of canonical N-Triples.";
+:manifest  a mf:Manifest ;
+  rdfs:label "RDF-star N-Triples Canonicalization Test Suite"@en;
+  rdfs:comment "Tests the generation of canonical N-Triples."@en;
+  rdfs:seeAlso <README.md>;
   mf:entries (
     :comment_following_triple
     :extra_whitespace-01
@@ -90,6 +91,30 @@
   rdft:approval rdft:Proposed ;
   mf:action    <literal_all_punctuation.nt> ;
   mf:result    <literal_all_punctuation-c14n.nt>;
+  .
+
+:literal_ascii_boundaries rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N literal_ascii_boundaries" ;
+  rdfs:comment "Tests canonicalization of literal_ascii_boundaries '\\x00\\x26\\x28...'" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_ascii_boundaries.nt> ;
+  mf:result    <literal_ascii_boundaries-c14n.nt>;
+  .
+
+:literal_with_2_dquotes rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N literal_with_2_dquotes" ;
+  rdfs:comment "Tests canonicalization of literal with 2 squotes \"\"\"a\"\"b\"\"\"" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_with_2_dquotes.nt> ;
+  mf:result    <literal_with_2_dquotes-c14n.nt>;
+  .
+
+:literal_with_2_squotes rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N literal_with_2_squotes" ;
+  rdfs:comment "Tests canonicalization of literal with 2 squotes \"x''y\"" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_with_2_squotes.nt> ;
+  mf:result    <literal_with_2_squotes-c14n.nt>;
   .
 
 :literal_with_BACKSPACE rdf:type rdft:TestNTriplesPositiveC14N ;
