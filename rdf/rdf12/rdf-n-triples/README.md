@@ -1,9 +1,9 @@
 This README is for the W3C RDF-star Working Group's N-Triples test suite.
 This test suite contains three kinds of tests:
 
-*  Positive syntax (`rdft:TestNTriplesPositiveSyntax`) - an input N-Triples file with no syntax errors.
-*  Negative syntax (`rdft:TestNTriplesNegativeSyntax`) - an input N-Triples file with at least one syntax error.
-*  Positive canonicalization (`rdft:TestNTriplesPositiveC14N`) - an input N-Triples file with no syntax errors.
+*  Positive syntax (`rdft:TestNTriplesPositiveSyntax`) — an input N-Triples file with no syntax errors.
+*  Negative syntax (`rdft:TestNTriplesNegativeSyntax`) — an input N-Triples file with at least one syntax error.
+*  Positive canonicalization (`rdft:TestNTriplesPositiveC14N`) — an input N-Triples file with no syntax errors.
 
 The `manifest.ttl` files in this directory lists tests in the RDF-star WG's N-Triples test suite.
 All tests have a name (`mf:name`) and an input (`mf:action`).
