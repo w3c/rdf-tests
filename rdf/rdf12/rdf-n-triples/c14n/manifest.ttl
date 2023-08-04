@@ -103,7 +103,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 
 :literal_with_2_dquotes rdf:type rdft:TestNTriplesPositiveC14N ;
   mf:name      "C14N literal_with_2_dquotes" ;
-  rdfs:comment "Tests canonicalization of literal with 2 squotes \"\"\"a\"\"b\"\"\"" ;
+  rdfs:comment "Tests canonicalization of literal with 2 dquotes \"\"\"a\"\"b\"\"\"" ;
   rdft:approval rdft:Proposed ;
   mf:action    <literal_with_2_dquotes.nt> ;
   mf:result    <literal_with_2_dquotes-c14n.nt>;
