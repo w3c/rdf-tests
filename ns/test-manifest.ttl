@@ -53,7 +53,7 @@
     .
 
 :assumedTestBase rdf:type rdf:Property ;
-    rdfs:comment "The assumed base URI for tests" ;
+    rdfs:comment "The assumed base URI for test manifest. Relative IRIs in manifest are resolved relative to this IRI." ;
     rdfs:domain	 :Manifest ;
     .
 
