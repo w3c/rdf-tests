@@ -14,7 +14,7 @@
 
 <> rdf:type mf:Manifest ;
   rdfs:label "RDF/XML Syntax tests" ;
-  # mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-xml/> ;
+  mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-xml/> ;
   mf:entries (
     <#amp-in-url-test001>
     <#datatypes-test001>
