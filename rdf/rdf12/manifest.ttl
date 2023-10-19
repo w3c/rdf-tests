@@ -32,6 +32,7 @@ trs:manifest  rdf:type mf:Manifest ;
     along with the relevant RDF 1.1 tests.
   """;
   mf:include (
+    <rdf-n-triples/c14n/manifest.ttl>
     <rdf-n-triples/syntax/manifest.ttl>
     <rdf-semantics/manifest.ttl>
     <rdf-turtle/syntax/manifest.ttl>
