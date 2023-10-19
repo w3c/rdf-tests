@@ -15,4 +15,4 @@ All tests have a name (`mf:name`) and an input (`mf:action`).
 * An implementation passes a positive canonicalization test if it parses the
   input, and generates the expected result (`mf:result`) compared as text when generating the canonical form of triples.
 
-The home of the test suite is <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/>.
+The home of the test suite is <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/>.
