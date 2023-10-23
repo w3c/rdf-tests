@@ -36,6 +36,9 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-star-nested-1
         trs:ntriples-star-nested-2
 
+        trs:ntriples-base-1
+        trs:ntriples-base-2
+
         trs:ntriples-star-bad-1
         trs:ntriples-star-bad-2
         trs:ntriples-star-bad-3
@@ -45,6 +48,9 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-star-bnode-bad-annotated-syntax-2
         trs:ntriples-star-nested-bad-annotated-syntax-1
         trs:ntriples-star-nested-bad-annotated-syntax-2
+
+        trs:ntriples-base-bad-1
+        trs:ntriples-base-bad-2
     ) .
 
 trs:ntriples-star-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
@@ -94,6 +100,18 @@ trs:ntriples-star-nested-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
    mf:action    <ntriples-star-nested-2.nt> ;
    .
 
+# Base direction
+
+trs:ntriples-base-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
+  mf:name       "N-Triples literal with base direction ltr" ;
+  mf:action     <ntriples-base-1.nt> ;
+  .
+
+trs:ntriples-base-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
+  mf:name       "N-Triples literal with base direction ltr" ;
+  mf:action     <ntriples-base-2.nt> ;
+  .
+
 ## Bad syntax
 
 trs:ntriples-star-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
@@ -137,3 +155,15 @@ trs:ntriples-star-nested-bad-annotated-syntax-2 rdf:type rdft:TestNTriplesNegati
     mf:name      "N-Triples-star - Bad - annotated triple, nested object term" ;
     mf:action    <ntriples-star-nested-bad-annotated-syntax-2.nt> ;
     .
+
+# Base direction
+
+trs:ntriples-base-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples literal- Bad - undefined base direction" ;
+  mf:action     <ntriples-base-bad-1.nt> ;
+  .
+
+trs:ntriples-base-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples literal- Bad - upper case LTR" ;
+  mf:action     <ntriples-base-bad-2.nt> ;
+  .
