@@ -20,7 +20,7 @@ tests have a name (mf:name) and an input (mf:action). The Evaluation
 tests have an expected result (mf:result).
 
 • An implementation passes an Evaluation test if it parses the input
-  into a graph, parses the expecte result into another graph, and
+  into a graph, parses the expected result into another graph, and
   those two graphs are isomorphic (see
   <http://www.w3.org/TR/rdf11-concepts/#graph-isomorphism>).
 

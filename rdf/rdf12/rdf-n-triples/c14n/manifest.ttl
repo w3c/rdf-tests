@@ -15,6 +15,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :manifest  a mf:Manifest ;
   rdfs:label "RDF-star N-Triples Canonicalization Test Suite"@en;
   rdfs:comment "Tests the generation of canonical N-Triples."@en;
+  mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/> ;
   rdfs:seeAlso <README.md>;
   mf:entries (
     :comment_following_triple
