@@ -18,6 +18,7 @@ trs:manifest  rdf:type mf:Manifest ;
    rdfs:label "RDF 1.2 TriG Evaluation Tests"@en ;
    skos:prefLabel "La suite des tests pour évaluation de RDF 1.2 TriG"@fr;
    skos:prefLabel "Conjunto de pruebas para evaluar RDF 1.2 TriG"@es;
+   mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/> ;
    dct:issued "2023-07-20"^^xsd:date ;
    rdfs:seeAlso <https://w3c.github.io/rdf-tests/> ;
    dct:modified "2023-07-20"^^xsd:date ;

@@ -15,6 +15,7 @@ task index: MANIFESTS.
 
 MANIFESTS.each do |ttl|
   html = ttl.sub(/manifest(.*)\.ttl$/, 'index\1.html')
+  base = 'https://w3c.github.io/rdf-tests/' + ttl.sub('manifest.ttl', '')
 
   # Find frame closest to file
   frame_path, template_path = nil, nil
@@ -35,8 +36,8 @@ MANIFESTS.each do |ttl|
 
       ttl_path, ttl_file = File.dirname(ttl), File.basename(ttl)
       Dir.chdir(ttl_path) do
-        RDF::Reader.open(ttl_file, base_uri: '') do |reader|
-          out = JSON::LD::Writer.buffer(frame: JSON.parse(frame), simple_compact_iris: true) do |writer|
+        RDF::Reader.open(ttl_file, base_uri: base) do |reader|
+          out = JSON::LD::Writer.buffer(frame: JSON.parse(frame), base_uri: base, simple_compact_iris: true) do |writer|
             writer << reader
           end
 
