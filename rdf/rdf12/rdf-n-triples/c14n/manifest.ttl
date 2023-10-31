@@ -84,6 +84,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   rdft:approval rdft:Proposed ;
   mf:action    <dirlangtagged_string.nt> ;
   mf:result    <dirlangtagged_string-c14n.nt>;
+  .
 
 :literal_all_controls rdf:type rdft:TestNTriplesPositiveC14N ;
   mf:name      "C14N literal_all_controls" ;
