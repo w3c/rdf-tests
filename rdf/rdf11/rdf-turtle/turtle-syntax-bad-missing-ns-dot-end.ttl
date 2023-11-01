@@ -1,1 +1,4 @@
+@prefix valid: <http://example.com/v#> .
+@prefix invalid.: <http://example.com/i#> .
+
 valid:s valid:p invalid.:o .
