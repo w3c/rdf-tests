@@ -24,6 +24,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
     :extra_whitespace-04
     :langtagged_string
     # :lantag_with_subtag
+    :dirlangtagged_string
     :literal_all_controls
     :literal_all_punctuation
     :literal_ascii_boundaries
@@ -76,6 +77,14 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 #  mf:action    <lantag_with_subtag.nt> ;
 #  mf:result    <lantag_with_subtag-c14n.nt>;
 #  .
+
+:dirlangtagged_string rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name       "C14N literal with base direction ltr" ;
+  rdfs:comment "Tests canonicalization of triples including directional language-tagged string" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <dirlangtagged_string.nt> ;
+  mf:result    <dirlangtagged_string-c14n.nt>;
+  .
 
 :literal_all_controls rdf:type rdft:TestNTriplesPositiveC14N ;
   mf:name      "C14N literal_all_controls" ;
