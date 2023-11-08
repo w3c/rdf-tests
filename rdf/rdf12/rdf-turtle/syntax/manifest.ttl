@@ -73,6 +73,14 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:nt-ttl-star-bad-2
         trs:nt-ttl-star-bad-3
         trs:nt-ttl-star-bad-4
+
+## Base direction
+
+        trs:nt-ttl-base-1
+        trs:nt-ttl-base-2
+
+        trs:nt-ttl-base-bad-1
+        trs:nt-ttl-base-bad-2
     ) .
 
 ## Good Syntax
@@ -224,6 +232,16 @@ trs:nt-ttl-star-5 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:action    <nt-ttl-star-syntax-5.ttl> ;
    .
 
+trs:nt-ttl-base-1 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "N-Triples-star as Turtle-star - base direction ltr" ;
+   mf:action    <nt-ttl-base-1.ttl> ;
+   .
+
+trs:nt-ttl-base-2 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "N-Triples-star as Turtle-star - base direction ltr" ;
+   mf:action    <nt-ttl-base-2.ttl> ;
+   .
+
 # Blank nodes
 
 trs:nt-ttl-star-bnode-1 rdf:type rdft:TestTurtlePositiveSyntax ;
@@ -267,3 +285,13 @@ trs:nt-ttl-star-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "N-Triples-star as Turtle-star - Bad - quoted triple, blank node predicate" ;
     mf:action    <nt-ttl-star-bad-syntax-4.ttl> ;
     .
+
+trs:nt-ttl-base-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "N-Triples-star as Turtle-star - undefined base direction" ;
+   mf:action    <nt-ttl-base-bad-1.ttl> ;
+   .
+
+trs:nt-ttl-base-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "N-Triples-star as Turtle-star - upper case LTR" ;
+   mf:action    <nt-ttl-base-bad-2.ttl> ;
+   .

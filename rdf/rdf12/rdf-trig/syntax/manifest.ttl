@@ -54,6 +54,14 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:trig-star-bad-ann-1
         trs:trig-star-bad-ann-2
+
+## Base direction
+
+        trs:trig-base-1
+        trs:trig-base-2
+
+        trs:trig-base-bad-1
+        trs:trig-base-bad-2
     ) .
 
 ## Good Syntax
@@ -174,3 +182,24 @@ trs:trig-star-bad-ann-2 rdf:type rdft:TestTrigNegativeSyntax ;
     mf:action    <trig-star-syntax-bad-ann-2.trig> ;
    .
 
+## Base direction
+
+trs:trig-base-1 rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "base direction ltr" ;
+   mf:action    <trig-base-1.trig> ;
+   .
+
+trs:trig-base-2 rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "base direction ltr" ;
+   mf:action    <trig-base-2.trig> ;
+   .
+
+trs:trig-base-bad-1 rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name      "undefined base direction" ;
+   mf:action    <trig-base-bad-1.trig> ;
+   .
+
+trs:trig-base-bad-2 rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name      "upper case LTR" ;
+   mf:action    <trig-base-bad-2.trig> ;
+   .
