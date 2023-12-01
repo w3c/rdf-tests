@@ -171,6 +171,9 @@
     
 :LangTagAwareness	rdf:type :Requirement ;
     rdfs:comment "Tests that require langauge tag handling in FILTERs" .
+    
+:NoCanonicalizationOfNumerics	rdf:type :Requirement ;
+    rdfs:comment "Tests that require that literals with numeric datatypes are not canonicalized during loading" .
 
 ## ---- Notable features ----
 
