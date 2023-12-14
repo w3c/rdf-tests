@@ -29,7 +29,7 @@
       dd code {display: inline;}
       footer {text-align: center;}
     %title
-      = man['label']
+      = man['label'].is_a?(Hash) ? man['label']['@value'] : man['label']
     :css
       em.rfc2119 { 
         text-transform: lowercase;
@@ -51,7 +51,7 @@
     %p
       %a{href: "http://www.w3.org/"}
         %img{src: "http://www.w3.org/Icons/w3c_home", alt: "W3C", height: 48, width: 72}
-    %h1{property: "rdfs:label"}<= man['label']
+    %h1{property: "rdfs:label"}<= man['label'].is_a?(Hash) ? man['label']['@value'] : man['label']
     :markdown
       [Copyright](http://www.w3.org/Consortium/Legal/ipr-notice#Copyright) © 2010 [<acronym title="World Wide Web Consortium">W3C</acronym>](http://www.w3.org/)<sup>®</sup> ([<acronym title="Massachusetts Institute of Technology">MIT</acronym>](http://www.csail.mit.edu/), [<acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym>](http://www.ercim.org/), [Keio](http://www.keio.ac.jp/)), All Rights Reserved. W3C [liability](http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer), [trademark](http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks), and [document use](http://www.w3.org/Consortium/Legal/copyright-documents) rules apply.
     %hr{title: "Separator for header"}
@@ -59,7 +59,8 @@
     %div
       %h2{id: "abstract"}="Abstract"
       %p{property: "rdfs:comment"}
-        = Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')
+        :markdown
+          #{Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')}
       :markdown
         This page describes SPARQL 1.2 test suite of the W3C RDF-star Working Group.
 
