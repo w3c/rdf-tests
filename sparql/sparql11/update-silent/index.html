@@ -50,7 +50,7 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='' typeof='mf:Manifest'>
+  <body resource='./' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
@@ -64,7 +64,7 @@
       <p property='rdfs:comment'>
         The test cases in this manifest comprise cases of erroneous operations which should fail, but succeed because of the keyword SILENT
       </p>
-      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.1 test suite.</p>
       <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
       <h3 id="distribution">Distribution</h3>
@@ -78,10 +78,11 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent:
+        <dt id='load-silent'>
+          <a class='testlink' href='#load-silent'>
+            load-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' property='mf:name'>LOAD SILENT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' property='mf:name'>LOAD SILENT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-silent' typeof='mf:UpdateEvaluationTest'>
@@ -105,10 +106,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent:
+        <dt id='load-into-silent'>
+          <a class='testlink' href='#load-into-silent'>
+            load-into-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' property='mf:name'>LOAD SILENT INTO</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' property='mf:name'>LOAD SILENT INTO</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#load-into-silent' typeof='mf:UpdateEvaluationTest'>
@@ -132,10 +134,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent:
+        <dt id='clear-silent'>
+          <a class='testlink' href='#clear-silent'>
+            clear-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' property='mf:name'>CLEAR SILENT GRAPH iri</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' property='mf:name'>CLEAR SILENT GRAPH iri</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-silent' typeof='mf:UpdateEvaluationTest'>
@@ -159,10 +162,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent:
+        <dt id='clear-default-silent'>
+          <a class='testlink' href='#clear-default-silent'>
+            clear-default-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' property='mf:name'>CLEAR SILENT DEFAULT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' property='mf:name'>CLEAR SILENT DEFAULT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#clear-default-silent' typeof='mf:UpdateEvaluationTest'>
@@ -186,10 +190,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent:
+        <dt id='create-silent'>
+          <a class='testlink' href='#create-silent'>
+            create-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' property='mf:name'>CREATE SILENT iri</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' property='mf:name'>CREATE SILENT iri</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#create-silent' typeof='mf:UpdateEvaluationTest'>
@@ -213,10 +218,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent:
+        <dt id='drop-silent'>
+          <a class='testlink' href='#drop-silent'>
+            drop-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' property='mf:name'>DROP SILENT GRAPH iri</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' property='mf:name'>DROP SILENT GRAPH iri</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-silent' typeof='mf:UpdateEvaluationTest'>
@@ -240,10 +246,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent:
+        <dt id='drop-default-silent'>
+          <a class='testlink' href='#drop-default-silent'>
+            drop-default-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' property='mf:name'>DROP SILENT DEFAULT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' property='mf:name'>DROP SILENT DEFAULT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#drop-default-silent' typeof='mf:UpdateEvaluationTest'>
@@ -267,10 +274,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent:
+        <dt id='copy-silent'>
+          <a class='testlink' href='#copy-silent'>
+            copy-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' property='mf:name'>COPY SILENT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' property='mf:name'>COPY SILENT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-silent' typeof='mf:UpdateEvaluationTest'>
@@ -294,10 +302,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent:
+        <dt id='copy-to-default-silent'>
+          <a class='testlink' href='#copy-to-default-silent'>
+            copy-to-default-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' property='mf:name'>COPY SILENT TO DEFAULT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' property='mf:name'>COPY SILENT TO DEFAULT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#copy-to-default-silent' typeof='mf:UpdateEvaluationTest'>
@@ -321,10 +330,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent:
+        <dt id='move-silent'>
+          <a class='testlink' href='#move-silent'>
+            move-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' property='mf:name'>MOVE SILENT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' property='mf:name'>MOVE SILENT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-silent' typeof='mf:UpdateEvaluationTest'>
@@ -348,10 +358,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent:
+        <dt id='move-to-default-silent'>
+          <a class='testlink' href='#move-to-default-silent'>
+            move-to-default-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' property='mf:name'>MOVE SILENT TO DEFAULT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' property='mf:name'>MOVE SILENT TO DEFAULT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#move-to-default-silent' typeof='mf:UpdateEvaluationTest'>
@@ -375,10 +386,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent:
+        <dt id='add-silent'>
+          <a class='testlink' href='#add-silent'>
+            add-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' property='mf:name'>ADD SILENT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' property='mf:name'>ADD SILENT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-silent' typeof='mf:UpdateEvaluationTest'>
@@ -402,10 +414,11 @@
             </dd>
           </dl>
         </dd>
-        <dt id='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent'>
-          <a class='testlink' href='#http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent'>
-            http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent:
+        <dt id='add-to-default-silent'>
+          <a class='testlink' href='#add-to-default-silent'>
+            add-to-default-silent:
           </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' property='mf:name'>ADD SILENT TO DEFAULT</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' property='mf:name'>ADD SILENT TO DEFAULT</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/update-silent/manifest#add-to-default-silent' typeof='mf:UpdateEvaluationTest'>
