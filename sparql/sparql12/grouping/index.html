@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      SPARQL 1.1 Federation Extensions
+      Grouping
     </title>
     <style>
       em.rfc2119 {
@@ -50,20 +50,20 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='manifest-sparql11-fed.ttl' typeof='mf:Manifest'>
+  <body resource='../grouping#manifest' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>SPARQL 1.1 Federation Extensions</h1>
+    <h1 property='rdfs:label'>Grouping</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
       </p>
-      <p>This page describes W3C SPARQL Working Group's SPARQL1.1 test suite.</p>
+      <p>This page describes SPARQL 1.2 test suite of the W3C RDF-star Working Group.</p>
       <h3 id="contributing-tests">Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
       <h3 id="distribution">Distribution</h3>
@@ -74,16 +74,36 @@
     </div>
     <div>
       <h2>
-        Referenced Manifests
+        Test Descriptions
       </h2>
-      <ul>
-        <li>
-          <a href='service/index.html' inlist='true' property='mf:include'>service/</a>
-        </li>
-        <li>
-          <a href='syntax-fed/index.html' inlist='true' property='mf:include'>syntax-fed/</a>
-        </li>
-      </ul>
+      <dl class='test-description'>
+        <dt id='group01'>
+          <a class='testlink' href='#group01'>
+            group01:
+          </a>
+          <span about='../grouping#group01' property='mf:name'>Group-1</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#group01' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Grouping with literals</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='group01.srx' property='mf:result'>group01.srx</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
     </div>
     <footer>
       <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
