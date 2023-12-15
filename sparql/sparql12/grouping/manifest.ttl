@@ -21,4 +21,5 @@
          [ qt:query  <group01.rq> ;
            qt:data   <group-data-1.ttl> ] ;
     mf:result  <group01.srx>
+    mf:requires mf:NoCanonicalizationOfNumerics
     .
