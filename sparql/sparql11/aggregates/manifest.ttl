@@ -30,6 +30,7 @@
     :agg-sum-02
     :agg-avg-01
     :agg-avg-02
+    :agg-avg-03
     :agg-min-01
     :agg-min-02
     :agg-max-01
@@ -233,6 +234,14 @@
          [ qt:query  <agg-avg-02.rq> ;
            qt:data   <agg-numeric2.ttl> ] ;
     mf:result  <agg-avg-02.srx>
+    .
+
+:agg-avg-03 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "AVG with empty group (value defined to be 0)" ;
+	mf:feature sparql:avg ;
+    mf:action
+         [ qt:query  <agg-avg-03.rq> ] ;
+    mf:result  <agg-avg-03.srx>
     .
 
 :agg-min-01 rdf:type mf:QueryEvaluationTest ;
