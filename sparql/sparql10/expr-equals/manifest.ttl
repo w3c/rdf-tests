@@ -12,6 +12,7 @@
     ( 
         :eq-1 :eq-2 :eq-3 :eq-4 :eq-5 :eq-2-1 :eq-2-2
         :eq-graph-1 :eq-graph-2 :eq-graph-3 :eq-graph-4 :eq-graph-5
+        :eq-float :eq-bool
     ).
 
 :eq-1 a mf:QueryEvaluationTest ;
@@ -140,5 +141,20 @@
               qt:data   <data-eq.ttl> ] ;
          mf:result  <result-eq-graph-5.ttl>
       .
-
+:eq-float a mf:QueryEvaluationTest ;
+        rdfs:comment "= with float" ;
+         mf:name    "Equality with float" ;
+         mf:action
+            [ qt:query  <query-eq-float.rq> ;
+              qt:data   <data-eq-float.ttl> ] ;
+         mf:result  <result-eq-float.ttl>
+      .
+:eq-bool a mf:QueryEvaluationTest ;
+        rdfs:comment "= with bool" ;
+         mf:name    "Equality with bool" ;
+         mf:action
+            [ qt:query  <query-eq-bool.rq> ;
+              qt:data   <data-eq-bool.ttl>  ] ;
+         mf:result  <result-eq-bool.ttl>
+      .
 
