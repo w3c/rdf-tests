@@ -32,10 +32,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-star-5
 
         trs:ntriples-star-bnode-1
-        trs:ntriples-star-bnode-2
 
         trs:ntriples-star-nested-1
-        trs:ntriples-star-nested-2
 
         trs:ntriples-base-1
         trs:ntriples-base-2
@@ -44,6 +42,12 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-star-bad-2
         trs:ntriples-star-bad-3
         trs:ntriples-star-bad-4
+        trs:ntriples-star-bad-5
+
+        trs:ntriples-star-bad-quoted-1
+        trs:ntriples-star-bad-quoted-2
+        trs:ntriples-star-bad-quoted-3
+        trs:ntriples-star-bad-quoted-4
 
         trs:ntriples-star-bnode-bad-annotated-syntax-1
         trs:ntriples-star-bnode-bad-annotated-syntax-2
@@ -55,50 +59,32 @@ trs:manifest  rdf:type mf:Manifest ;
     ) .
 
 trs:ntriples-star-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - subject quoted triple" ;
+   mf:name      "N-Triples-star - triple term" ;
    mf:action    <ntriples-star-syntax-1.nt> ;
    .
 
 trs:ntriples-star-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - object quoted triple" ;
+   mf:name      "N-Triples-star - whitespace and terms" ;
    mf:action    <ntriples-star-syntax-2.nt> ;
    .
 
 trs:ntriples-star-3 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - subject and object quoted triples" ;
-   mf:action    <ntriples-star-syntax-3.nt> ;
-   .
-
-trs:ntriples-star-4 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - whitespace and terms" ;
-   mf:action    <ntriples-star-syntax-4.nt> ;
-   .
-
-trs:ntriples-star-5 rdf:type rdft:TestNTriplesPositiveSyntax ;
    mf:name      "N-Triples-star - Nested, no whitespace" ;
-   mf:action    <ntriples-star-syntax-5.nt> ;
+   mf:action    <ntriples-star-syntax-3.nt> ;
    .
 
 # Blank nodes
 
 trs:ntriples-star-bnode-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - Blank node subject" ;
+   mf:name      "N-Triples-star - Blank node object" ;
    mf:action    <ntriples-star-bnode-1.nt> ;
    .
 
-trs:ntriples-star-bnode-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - Blank node object" ;
-   mf:action    <ntriples-star-bnode-2.nt> ;
-   .
+#  Nesting
 
 trs:ntriples-star-nested-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - Nested subject term" ;
+   mf:name      "N-Triples-star - Nested term" ;
    mf:action    <ntriples-star-nested-1.nt> ;
-   .
-
-trs:ntriples-star-nested-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - Nested object term" ;
-   mf:action    <ntriples-star-nested-2.nt> ;
    .
 
 # Base direction
@@ -116,24 +102,49 @@ trs:ntriples-base-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
 ## Bad syntax
 
 trs:ntriples-star-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples-star - Bad - quoted triple as predicate" ;
+    mf:name      "N-Triples-star - Bad - triple term as predicate" ;
     mf:action    <ntriples-star-bad-syntax-1.nt> ;
     .
 
 trs:ntriples-star-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples-star - Bad - quoted triple, literal subject" ;
+    mf:name      "N-Triples-star - Bad - triple term, literal subject" ;
     mf:action    <ntriples-star-bad-syntax-2.nt> ;
     .
 
 trs:ntriples-star-bad-3 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples-star - Bad - quoted triple, literal predicate" ;
+    mf:name      "N-Triples-star - Bad - triple term, literal predicate" ;
     mf:action    <ntriples-star-bad-syntax-3.nt> ;
     .
 
 trs:ntriples-star-bad-4 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples-star - Bad - quoted triple, blank node predicate" ;
+    mf:name      "N-Triples-star - Bad - triple term, blank node predicate" ;
     mf:action    <ntriples-star-bad-syntax-4.nt> ;
     .
+
+trs:ntriples-star-bad-5 rdf:type rdft:TestNTriplesNegativeSyntax ;
+    mf:name      "N-Triples-star - Bad - triple term as subject" ;
+    mf:action    <ntriples-star-bad-syntax-5.nt> ;
+    .
+
+trs:ntriples-star-bad-quoted-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
+   mf:name      "N-Triples-star - Bad - subject quoted triple" ;
+   mf:action    <ntriples-star-bad-quoted-syntax-1.nt> ;
+   .
+
+trs:ntriples-star-bad-quoted-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
+   mf:name      "N-Triples-star - Bad - object quoted triple" ;
+   mf:action    <ntriples-star-bad-quoted-syntax-2.nt> ;
+   .
+
+trs:ntriples-star-bad-quoted-3 rdf:type rdft:TestNTriplesNegativeSyntax ;
+   mf:name      "N-Triples-star - Bad - subject and object quoted triples" ;
+   mf:action    <ntriples-star-bad-quoted-syntax-3.nt> ;
+   .
+
+trs:ntriples-star-bad-quoted-4 rdf:type rdft:TestNTriplesNegativeSyntax ;
+   mf:name      "N-Triples-star - Bad - quoted triples whitespace and terms" ;
+   mf:action    <ntriples-star-bad-quoted-syntax-4.nt> ;
+   .
 
 # Annotation syntax is not permitted in nt
 
