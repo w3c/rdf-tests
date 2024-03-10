@@ -29,6 +29,8 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:turtle-star-inside-1
         trs:turtle-star-inside-2
+        trs:turtle-star-inside-3
+        trs:turtle-star-inside-4
 
         trs:turtle-star-nested-1
         trs:turtle-star-nested-2
@@ -60,19 +62,16 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:nt-ttl-star-1
         trs:nt-ttl-star-2
         trs:nt-ttl-star-3
-        trs:nt-ttl-star-4
-        trs:nt-ttl-star-5
 
         trs:nt-ttl-star-bnode-1
-        trs:nt-ttl-star-bnode-2
 
         trs:nt-ttl-star-nested-1
-        trs:nt-ttl-star-nested-2
 
         trs:nt-ttl-star-bad-1
         trs:nt-ttl-star-bad-2
         trs:nt-ttl-star-bad-3
         trs:nt-ttl-star-bad-4
+        trs:nt-ttl-star-bad-5
 
 ## Base direction
 
@@ -103,6 +102,16 @@ trs:turtle-star-inside-1 rdf:type rdft:TestTurtlePositiveSyntax ;
 trs:turtle-star-inside-2 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "Turtle-star - quoted triple inside collection" ;
    mf:action    <turtle-star-syntax-inside-02.ttl> ;
+   .
+
+trs:turtle-star-inside-3 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle-star - quoted triple with IRI identifier" ;
+   mf:action    <turtle-star-syntax-inside-03.ttl> ;
+   .
+
+trs:turtle-star-inside-4 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle-star - quoted triple with blank node identifier" ;
+   mf:action    <turtle-star-syntax-inside-04.ttl> ;
    .
 
 trs:turtle-star-nested-1 rdf:type rdft:TestTurtlePositiveSyntax ;
@@ -208,28 +217,18 @@ trs:turtle-star-bad-ann-2 rdf:type rdft:TestTurtleNegativeSyntax ;
 ## Good Syntax
 
 trs:nt-ttl-star-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - subject quoted triple" ;
+   mf:name      "N-Triples-star as Turtle-star - triple term" ;
    mf:action    <nt-ttl-star-syntax-1.ttl> ;
    .
 
 trs:nt-ttl-star-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - object quoted triple" ;
+   mf:name      "N-Triples-star as Turtle-star - whitespace and terms" ;
    mf:action    <nt-ttl-star-syntax-2.ttl> ;
    .
 
 trs:nt-ttl-star-3 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - subject and object quoted triples" ;
-   mf:action    <nt-ttl-star-syntax-3.ttl> ;
-   .
-
-trs:nt-ttl-star-4 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - whitespace and terms" ;
-   mf:action    <nt-ttl-star-syntax-4.ttl> ;
-   .
-
-trs:nt-ttl-star-5 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "N-Triples-star as Turtle-star - Nested, no whitespace" ;
-   mf:action    <nt-ttl-star-syntax-5.ttl> ;
+   mf:action    <nt-ttl-star-syntax-3.ttl> ;
    .
 
 trs:nt-ttl-base-1 rdf:type rdft:TestTurtlePositiveSyntax ;
@@ -245,45 +244,40 @@ trs:nt-ttl-base-2 rdf:type rdft:TestTurtlePositiveSyntax ;
 # Blank nodes
 
 trs:nt-ttl-star-bnode-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - Blank node subject" ;
+   mf:name      "N-Triples-star as Turtle-star - Blank node object" ;
    mf:action    <nt-ttl-star-bnode-1.ttl> ;
    .
 
-trs:nt-ttl-star-bnode-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - Blank node object" ;
-   mf:action    <nt-ttl-star-bnode-2.ttl> ;
-   .
-   
 trs:nt-ttl-star-nested-1 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "N-Triples-star as Turtle-star - Nested subject term" ;
    mf:action    <nt-ttl-star-nested-1.ttl> ;
    .
 
-trs:nt-ttl-star-nested-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "N-Triples-star as Turtle-star - Nested object term" ;
-   mf:action    <nt-ttl-star-nested-2.ttl> ;
-   .
-
 ## Bad syntax
  
 trs:nt-ttl-star-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "N-Triples-star as Turtle-star - Bad - quoted triple as predicate" ;
+    mf:name      "N-Triples-star as Turtle-star - Bad - triple term as predicate" ;
     mf:action    <nt-ttl-star-bad-syntax-1.ttl> ;
     .
     
 trs:nt-ttl-star-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "N-Triples-star as Turtle-star - Bad - quoted triple, literal subject" ;
+    mf:name      "N-Triples-star as Turtle-star - Bad - triple term, literal subject" ;
     mf:action    <nt-ttl-star-bad-syntax-2.ttl> ;
     .
 
 trs:nt-ttl-star-bad-3 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "N-Triples-star as Turtle-star - Bad - quoted triple, literal predicate" ;
+    mf:name      "N-Triples-star as Turtle-star - Bad - triple term, literal predicate" ;
     mf:action    <nt-ttl-star-bad-syntax-3.ttl> ;
     .
 
 trs:nt-ttl-star-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "N-Triples-star as Turtle-star - Bad - quoted triple, blank node predicate" ;
+    mf:name      "N-Triples-star as Turtle-star - Bad - triple term, blank node predicate" ;
     mf:action    <nt-ttl-star-bad-syntax-4.ttl> ;
+    .
+
+trs:nt-ttl-star-bad-5 rdf:type rdft:TestTurtleNegativeSyntax ;
+    mf:name      "N-Triples-star as Turtle-star - Bad - triple term as subject" ;
+    mf:action    <nt-ttl-star-bad-syntax-5.ttl> ;
     .
 
 trs:nt-ttl-base-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
