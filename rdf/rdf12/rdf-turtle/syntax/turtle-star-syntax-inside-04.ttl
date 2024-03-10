@@ -1,0 +1,4 @@
+PREFIX : <http://example/>
+
+:s :p <<_:id | :s :p :o1>> .
+_:id :q 123 .
