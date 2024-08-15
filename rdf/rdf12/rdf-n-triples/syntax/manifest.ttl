@@ -25,16 +25,13 @@ trs:manifest  rdf:type mf:Manifest ;
    rdfs:seeAlso <README>;
     mf:entries
     (
-        trs:ntriples-star-1
-        trs:ntriples-star-2
-        # trs:ntriples-star-3
-        trs:ntriples-star-4
-        trs:ntriples-star-5
+        trs:ntriples-star-01
+        trs:ntriples-star-02
+        trs:ntriples-star-03
 
         trs:ntriples-star-bnode-1
 
-        # trs:ntriples-star-nested-1
-        trs:ntriples-star-nested-2
+        trs:ntriples-star-nested-1
 
         trs:ntriples-base-1
         trs:ntriples-base-2
@@ -78,16 +75,6 @@ trs:ntriples-star-03 rdf:type rdft:TestNTriplesPositiveSyntax ;
   mf:name      "N-Triples-star - Nested, no whitespace" ;
   mf:action    <ntriples-star-syntax-03.nt> ;
   .
-
-trs:ntriples-star-04 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - whitespace and terms" ;
-   mf:action    <ntriples-star-syntax-04.nt> ;
-   .
-
-trs:ntriples-star-05 rdf:type rdft:TestNTriplesPositiveSyntax ;
-   mf:name      "N-Triples-star - Nested, no whitespace" ;
-   mf:action    <ntriples-star-syntax-05.nt> ;
-   .
 
 # Blank nodes
 
