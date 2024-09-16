@@ -33,8 +33,8 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:ntriples-star-nested-1
 
-        trs:ntriples-base-1
-        trs:ntriples-base-2
+        trs:ntriples-langdir-1
+        trs:ntriples-langdir-2
 
         trs:ntriples-star-bad-01
         trs:ntriples-star-bad-02
@@ -57,8 +57,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-star-nested-bad-annotated-syntax-1
         trs:ntriples-star-nested-bad-annotated-syntax-2
 
-        trs:ntriples-base-bad-1
-        trs:ntriples-base-bad-2
+        trs:ntriples-langdir-bad-1
+        trs:ntriples-langdir-bad-2
     ) .
 
 trs:ntriples-star-01 rdf:type rdft:TestNTriplesPositiveSyntax ;
@@ -90,14 +90,14 @@ trs:ntriples-star-nested-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
 
 # Base direction
 
-trs:ntriples-base-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
+trs:ntriples-langdir-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
   mf:name       "N-Triples literal with base direction ltr" ;
-  mf:action     <ntriples-base-1.nt> ;
+  mf:action     <ntriples-langdir-1.nt> ;
   .
 
-trs:ntriples-base-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
+trs:ntriples-langdir-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
   mf:name       "N-Triples literal with base direction rtl" ;
-  mf:action     <ntriples-base-2.nt> ;
+  mf:action     <ntriples-langdir-2.nt> ;
   .
 
 ## Bad syntax
@@ -196,12 +196,12 @@ trs:ntriples-star-nested-bad-annotated-syntax-2 rdf:type rdft:TestNTriplesNegati
 
 # Base direction
 
-trs:ntriples-base-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:ntriples-langdir-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
   mf:name       "N-Triples literal- Bad - undefined base direction" ;
-  mf:action     <ntriples-base-bad-1.nt> ;
+  mf:action     <ntriples-langdir-bad-1.nt> ;
   .
 
-trs:ntriples-base-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:ntriples-langdir-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
   mf:name       "N-Triples literal- Bad - upper case LTR" ;
-  mf:action     <ntriples-base-bad-2.nt> ;
+  mf:action     <ntriples-langdir-bad-2.nt> ;
   .
