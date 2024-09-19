@@ -28,8 +28,6 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle-star-2
         trs:turtle-star-3
         trs:turtle-star-4
-        trs:turtle-star-5
-        trs:turtle-star-6
 
         trs:turtle-star-inside-1
         trs:turtle-star-inside-2
@@ -46,11 +44,12 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle-star-bnode-3
 
         trs:turtle-star-bad-1
+        trs:turtle-star-bad-2
+        trs:turtle-star-bad-3
         trs:turtle-star-bad-4
         trs:turtle-star-bad-5
-        # trs:turtle-star-bad-6
+        trs:turtle-star-bad-6
         trs:turtle-star-bad-7
-        trs:turtle-star-bad-8
 
         trs:turtle-star-ann-1
         trs:turtle-star-ann-2
@@ -112,16 +111,6 @@ trs:turtle-star-4 rdf:type rdft:TestTurtlePositiveSyntax ;
     mf:action    <turtle-star-syntax-basic-04.ttl> ;
     .
 
-trs:turtle-star-5 rdf:type rdft:TestTurtlePositiveSyntax ;
-    mf:name      "Turtle-star - reified with list object" ;
-    mf:action    <turtle-star-syntax-basic-05.ttl> ;
-    .
-
-trs:turtle-star-6 rdf:type rdft:TestTurtlePositiveSyntax ;
-    mf:name      "Turtle-star - compound blank node expression";
-    mf:action    <turtle-star-syntax-basic-06.ttl> ;
-    .
-
 trs:turtle-star-inside-1 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "Turtle-star - reified triple inside blankNodePropertyList" ;
    mf:action    <turtle-star-syntax-inside-01.ttl> ;
@@ -179,24 +168,34 @@ trs:turtle-star-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:action    <turtle-star-syntax-bad-01.ttl> ;
     .
 
-trs:turtle-star-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
+trs:turtle-star-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "Turtle-star - bad - literal in subject position of reified triple" ;
+    mf:action    <turtle-star-syntax-bad-02.ttl> ;
+    .
+
+trs:turtle-star-bad-3 rdf:type rdft:TestTurtleNegativeSyntax ;
+    mf:name      "Turtle-star - bad - blank node  as predicate in reified triple";
+    mf:action    <turtle-star-syntax-bad-03.ttl> ;
+    .
+
+trs:turtle-star-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
+    mf:name      "Turtle-star - bad - incomplete reified triple";
     mf:action    <turtle-star-syntax-bad-04.ttl> ;
     .
 
 trs:turtle-star-bad-5 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle-star - bad - blank node  as predicate in reified triple";
+    mf:name      "Turtle-star - bad - over-long reified triple";
     mf:action    <turtle-star-syntax-bad-05.ttl> ;
     .
 
-trs:turtle-star-bad-7 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle-star - bad - incomplete reified triple";
-    mf:action    <turtle-star-syntax-bad-07.ttl> ;
+trs:turtle-star-bad-6 rdf:type rdft:TestTurtleNegativeSyntax ;
+    mf:name      "Turtle-star - bad - reified with list object" ;
+    mf:action    <turtle-star-syntax-bad-06.ttl> ;
     .
 
-trs:turtle-star-bad-8 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle-star - bad - over-long reified triple";
-    mf:action    <turtle-star-syntax-bad-08.ttl> ;
+trs:turtle-star-bad-7 rdf:type rdft:TestTurtleNegativeSyntax ;
+    mf:name      "Turtle-star - bad - compound blank node expression";
+    mf:action    <turtle-star-syntax-bad-07.ttl> ;
     .
 
 ## Annotation syntax
