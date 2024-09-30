@@ -1,4 +1,4 @@
 PREFIX : <http://example/>
 
-
-<<:s :p [ :p1 :o1 ]  >> :q 123 .
+:s :p ("abc") .
+<<:s :p ("abc") >> :q 123 .
