@@ -62,6 +62,7 @@
 :quoted-variable-path-anonreifier
 :quoted-variable-path-reifier
 :quoted-variable-path-tripleterm
+:subject-tripleterm
 :syntax-update-anonreifier-01
 :syntax-update-anonreifier-02
 
@@ -321,6 +322,11 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "quoted-variable-path-tripleterm.rq" ;
    mf:action  <quoted-variable-path-tripleterm.rq> .
+
+:subject-tripleterm rdf:type   mf:NegativeUpdateSyntaxTest11 ;
+  dawgt:approval dawgt:Proposed ;
+  mf:name    "subject-tripleterm.rq" ;
+  mf:action  <subject-tripleterm.rq> .
 
 :syntax-update-anonreifier-01 rdf:type   mf:NegativeUpdateSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
