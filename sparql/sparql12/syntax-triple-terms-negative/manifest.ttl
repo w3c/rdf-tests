@@ -65,6 +65,12 @@
 :subject-tripleterm
 :syntax-update-anonreifier-01
 :syntax-update-anonreifier-02
+:tripleterm-separate-01
+:tripleterm-separate-02
+:tripleterm-separate-03
+:tripleterm-separate-04
+:tripleterm-separate-05
+:tripleterm-separate-06
 
 ) .
 
@@ -323,7 +329,7 @@
    mf:name    "quoted-variable-path-tripleterm.rq" ;
    mf:action  <quoted-variable-path-tripleterm.rq> .
 
-:subject-tripleterm rdf:type   mf:NegativeUpdateSyntaxTest11 ;
+:subject-tripleterm rdf:type   mf:NegativeSyntaxTest11 ;
   dawgt:approval dawgt:Proposed ;
   mf:name    "subject-tripleterm.rq" ;
   mf:action  <subject-tripleterm.rq> .
@@ -337,3 +343,34 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "syntax-update-anonreifier-02.rq" ;
    mf:action  <syntax-update-anonreifier-02.rq> .
+
+:tripleterm-separate-01 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-01.rq" ;
+   mf:action  <tripleterm-separate-01.rq> .
+
+:tripleterm-separate-02 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-02.rq" ;
+   mf:action  <tripleterm-separate-02.rq> .
+
+:tripleterm-separate-03 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-03.rq" ;
+   mf:action  <tripleterm-separate-03.rq> .
+
+:tripleterm-separate-04 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-04.rq" ;
+   mf:action  <tripleterm-separate-04.rq> .
+
+:tripleterm-separate-05 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-05.rq" ;
+   mf:action  <tripleterm-separate-05.rq> .
+
+:tripleterm-separate-06 rdf:type   mf:NegativeSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "tripleterm-separate-06.rq" ;
+   mf:action  <tripleterm-separate-06.rq> .
+
