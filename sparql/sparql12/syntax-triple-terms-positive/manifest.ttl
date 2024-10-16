@@ -87,7 +87,6 @@
 :compound-reifier
 :compound-tripleterm
 :expr-tripleterm-01
-:expr-tripleterm-02
 :expr-tripleterm-03
 :expr-tripleterm-04
 :expr-tripleterm-05
@@ -509,11 +508,6 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "expr-tripleterm-01.rq" ;
    mf:action  <expr-tripleterm-01.rq> .
-
-:expr-tripleterm-02 rdf:type   mf:PositiveSyntaxTest11 ;
-   dawgt:approval dawgt:Proposed ;
-   mf:name    "expr-tripleterm-02.rq" ;
-   mf:action  <expr-tripleterm-02.rq> .
 
 :expr-tripleterm-03 rdf:type   mf:PositiveSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
