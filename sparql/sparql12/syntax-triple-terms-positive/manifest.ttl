@@ -20,6 +20,10 @@
 :annotation-anonreifier-07
 :annotation-anonreifier-08
 :annotation-anonreifier-09
+:annotation-anonreifier-multiple-01
+:annotation-anonreifier-multiple-02
+:annotation-anonreifier-multiple-03
+:annotation-anonreifier-multiple-04
 :annotation-reifier-01
 :annotation-reifier-02
 :annotation-reifier-03
@@ -29,6 +33,16 @@
 :annotation-reifier-07
 :annotation-reifier-08
 :annotation-reifier-09
+:annotation-reifier-multiple-01
+:annotation-reifier-multiple-02
+:annotation-reifier-multiple-03
+:annotation-reifier-multiple-04
+:annotation-reifier-multiple-05
+:annotation-reifier-multiple-06
+:annotation-reifier-multiple-07
+:annotation-reifier-multiple-08
+:annotation-reifier-multiple-09
+:annotation-reifier-multiple-10
 :basic-anonreifier-01
 :basic-anonreifier-02
 :basic-anonreifier-03
@@ -157,6 +171,26 @@
    mf:name    "annotation-anonreifier-09.rq" ;
    mf:action  <annotation-anonreifier-09.rq> .
 
+:annotation-anonreifier-multiple-01 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-anonreifier-multiple-01.rq" ;
+   mf:action  <annotation-anonreifier-multiple-01.rq> .
+
+:annotation-anonreifier-multiple-02 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-anonreifier-multiple-02.rq" ;
+   mf:action  <annotation-anonreifier-multiple-02.rq> .
+
+:annotation-anonreifier-multiple-03 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-anonreifier-multiple-03.rq" ;
+   mf:action  <annotation-anonreifier-multiple-03.rq> .
+
+:annotation-anonreifier-multiple-04 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-anonreifier-multiple-04.rq" ;
+   mf:action  <annotation-anonreifier-multiple-04.rq> .
+
 :annotation-reifier-01 rdf:type   mf:PositiveSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
    mf:name    "annotation-reifier-01.rq" ;
@@ -201,6 +235,56 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "annotation-reifier-09.rq" ;
    mf:action  <annotation-reifier-09.rq> .
+
+:annotation-reifier-multiple-01 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-01.rq" ;
+   mf:action  <annotation-reifier-multiple-01.rq> .
+
+:annotation-reifier-multiple-02 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-02.rq" ;
+   mf:action  <annotation-reifier-multiple-02.rq> .
+
+:annotation-reifier-multiple-03 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-03.rq" ;
+   mf:action  <annotation-reifier-multiple-03.rq> .
+
+:annotation-reifier-multiple-04 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-04.rq" ;
+   mf:action  <annotation-reifier-multiple-04.rq> .
+
+:annotation-reifier-multiple-05 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-05.rq" ;
+   mf:action  <annotation-reifier-multiple-05.rq> .
+
+:annotation-reifier-multiple-06 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-06.rq" ;
+   mf:action  <annotation-reifier-multiple-06.rq> .
+
+:annotation-reifier-multiple-07 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-07.rq" ;
+   mf:action  <annotation-reifier-multiple-07.rq> .
+
+:annotation-reifier-multiple-08 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-08.rq" ;
+   mf:action  <annotation-reifier-multiple-08.rq> .
+
+:annotation-reifier-multiple-09 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-09.rq" ;
+   mf:action  <annotation-reifier-multiple-09.rq> .
+
+:annotation-reifier-multiple-10 rdf:type   mf:PositiveSyntaxTest11 ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name    "annotation-reifier-multiple-10.rq" ;
+   mf:action  <annotation-reifier-multiple-10.rq> .
 
 :basic-anonreifier-01 rdf:type   mf:PositiveSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
@@ -321,11 +405,6 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "basic-reifier-13.rq" ;
    mf:action  <basic-reifier-13.rq> .
-
-:basic-reifier-07 rdf:type   mf:PositiveSyntaxTest11 ;
-   dawgt:approval dawgt:Proposed ;
-   mf:name    "basic-reifier-07.rq" ;
-   mf:action  <basic-reifier-07.rq> .
 
 :basic-tripleterm-01 rdf:type   mf:PositiveSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
