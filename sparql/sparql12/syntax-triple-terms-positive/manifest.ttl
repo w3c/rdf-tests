@@ -102,7 +102,6 @@
 :nested-reifier-01
 :nested-reifier-02
 :nested-tripleterm-01
-:nested-tripleterm-02
 :update-anonreifier-01
 :update-anonreifier-02
 :update-anonreifier-03
@@ -583,11 +582,6 @@
    dawgt:approval dawgt:Proposed ;
    mf:name    "nested-tripleterm-01.rq" ;
    mf:action  <nested-tripleterm-01.rq> .
-
-:nested-tripleterm-02 rdf:type   mf:PositiveSyntaxTest11 ;
-   dawgt:approval dawgt:Proposed ;
-   mf:name    "nested-tripleterm-02.rq" ;
-   mf:action  <nested-tripleterm-02.rq> .
 
 :update-anonreifier-01 rdf:type   mf:PositiveUpdateSyntaxTest11 ;
    dawgt:approval dawgt:Proposed ;
