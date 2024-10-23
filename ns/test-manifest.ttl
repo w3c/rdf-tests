@@ -97,6 +97,11 @@
     rdfs:domain :ManifestEntry ;
     rdfs:range :ResultCardinality .
 
+:specVersion rdf:type rdf:Property ;
+    rdfs:comment "The specification version this test applies to" ;
+    rdfs:domain :ManifestEntry ;
+    .
+
 ## ---- Test Case Type ---
 
 :PositiveSyntaxTest rdf:type rdfs:Class ;
@@ -111,6 +116,14 @@
       rdfs:label "Positive Syntax Test for SPARQL1.1 Update" ;
       rdfs:comment "A type of test specifically for syntax testing of SPARQL1.1 Update. Syntax tests are not required to have an associated result, only an action." .
 
+:PositiveSyntaxTestSparql rdf:type rdfs:Class ;
+      rdfs:label "Positive Syntax Test for SPARQL Query" ;
+      rdfs:comment "A type of test specifically for syntax testing of new features in the SPARQL Query Language. Syntax tests are not required to have an associated result, only an action. Tests are expected to define their spec version." .
+
+:PositiveUpdateSyntaxTestSparql rdf:type rdfs:Class ;
+      rdfs:label "Positive Syntax Test for SPARQL Update" ;
+      rdfs:comment "A type of test specifically for syntax testing of SPARQL Update. Syntax tests are not required to have an associated result, only an action. Tests are expected to define their spec version." .
+
 
 :NegativeSyntaxTest rdf:type rdfs:Class ;
       rdfs:label "Negative Syntax Test" ;
@@ -123,6 +136,14 @@
 :NegativeUpdateSyntaxTest11 rdf:type rdfs:Class ;
       rdfs:label "Negative Syntax Test for SPARQL1.1 Update" ;
       rdfs:comment "A type of test specifically for syntax testing of SPARQL1.1 Update. Syntax tests are not required to have an associated result, only an action. Negative syntax tests are tests of which the result should be a parser error." .
+
+:NegativeSyntaxTestSparql rdf:type rdfs:Class ;
+      rdfs:label "Negative Syntax Test for SPARQL Query" ;
+      rdfs:comment "A type of test specifically for syntax testing of new features in the SPARQL Query Language. Syntax tests are not required to have an associated result, only an action. Negative syntax tests are tests of which the result should be a parser error. Tests are expected to define their spec version." .
+
+:NegativeUpdateSyntaxTestSparql rdf:type rdfs:Class ;
+      rdfs:label "Negative Syntax Test for SPARQL Update" ;
+      rdfs:comment "A type of test specifically for syntax testing of SPARQL Update. Syntax tests are not required to have an associated result, only an action. Negative syntax tests are tests of which the result should be a parser error. Tests are expected to define their spec version." .
 
 
 :QueryEvaluationTest rdf:type rdfs:Class ;
