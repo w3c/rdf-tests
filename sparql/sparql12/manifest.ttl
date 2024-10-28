@@ -33,6 +33,7 @@ trs:manifest  rdf:type mf:Manifest ;
   """;
   mf:include (
     <grouping/manifest.ttl>
+    <syntax-escaping/manifest.ttl>
     <syntax-triple-terms-negative/manifest.ttl>
     <syntax-triple-terms-positive/manifest.ttl>
     <eval-triple-terms/manifest.ttl>
