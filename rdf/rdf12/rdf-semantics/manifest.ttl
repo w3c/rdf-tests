@@ -460,8 +460,6 @@ trs:json-infinity a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-
-
 trs:float-zero a mf:NegativeEntailmentTest;
   rdfs:comment "Positive zero and negative zero are different in xsd:float.";
   mf:action <float-positive-zero.ttl>;
