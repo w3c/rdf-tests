@@ -11,6 +11,10 @@
     mf:entries
     ( 
         :ge-1 :le-1 :mul-1 :plus-1 :minus-1 :unplus-1 :unminus-1
+        :dateTime-le-2
+        :dateTime-ge-2
+        :dateTime-lt-2
+        :dateTime-gt-2
     ).
 
 
@@ -85,4 +89,40 @@
             [ qt:query  <query-le-1.rq> ;
               qt:data   <data.ttl> ] ;
          mf:result  <result-le-1.srx>
+      .
+
+:dateTime-le-2 a mf:QueryEvaluationTest ;
+         mf:name    "DateTime Less-than or equals" ;
+         rdfs:comment "<= in FILTER expressions" ;
+         mf:action
+            [ qt:query  <query-le-2.rq> ;
+              qt:data   <data-dateTime.ttl> ] ;
+         mf:result  <result-dateTime-le-2.srx>
+      .
+
+:dateTime-ge-2 a mf:QueryEvaluationTest ;
+         mf:name    "DateTime Greater-than or equals" ;
+         rdfs:comment "<= in FILTER expressions" ;
+         mf:action
+            [ qt:query  <query-ge-2.rq> ;
+              qt:data   <data-dateTime.ttl> ] ;
+         mf:result  <result-dateTime-ge-2.srx>
+      .
+
+:dateTime-lt-2 a mf:QueryEvaluationTest ;
+         mf:name    "DateTime Less-than" ;
+         rdfs:comment "< in FILTER expressions" ;
+         mf:action
+            [ qt:query  <query-lt-2.rq> ;
+              qt:data   <data-dateTime.ttl> ] ;
+         mf:result  <result-dateTime-lt-2.srx>
+      .
+
+:dateTime-gt-2 a mf:QueryEvaluationTest ;
+         mf:name    "DateTime Greater-than" ;
+         rdfs:comment "> in FILTER expressions" ;
+         mf:action
+            [ qt:query  <query-gt-2.rq> ;
+              qt:data   <data-dateTime.ttl> ] ;
+         mf:result  <result-dateTime-gt-2.srx>
       .

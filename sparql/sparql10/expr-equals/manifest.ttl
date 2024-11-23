@@ -12,7 +12,7 @@
     ( 
         :eq-1 :eq-2 :eq-3 :eq-4 :eq-5 :eq-2-1 :eq-2-2
         :eq-graph-1 :eq-graph-2 :eq-graph-3 :eq-graph-4 :eq-graph-5
-        :eq-float :eq-bool
+        :eq-float :eq-bool :eq-dateTime
     ).
 
 :eq-1 a mf:QueryEvaluationTest ;
@@ -157,4 +157,11 @@
               qt:data   <data-eq-bool.ttl>  ] ;
          mf:result  <result-eq-bool.ttl>
       .
-
+:eq-dateTime a mf:QueryEvaluationTest ;
+        rdfs:comment "= with dateTime" ;
+         mf:name    "Equality with dateTime" ;
+         mf:action
+            [ qt:query  <query-eq-dateTime.rq> ;
+              qt:data   <data-eq-dateTime.ttl>  ] ;
+         mf:result  <result-eq-dateTime.ttl>
+      .
