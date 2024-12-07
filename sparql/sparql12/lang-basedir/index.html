@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
+    <style>
+      body: {bacground-image: none;}
+      dl.editor>dd {
+        margin: 0 0 0 40px;
+      }
+      dl.test-detail {
+        padding: 0.5em;
+      }
+      dl.test-detail>dt {
+        float: left;
+        clear: left;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dl.test-detail>dt:after {content: ": "}
+      dl.test-detail>dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+      dl.test-description>dt {margin-top: 2em;}
+      dd {margin-left: 0;}
+      dd code {display: inline;}
+      footer {text-align: center;}
+    </style>
+    <title>
+      Language and base direction
+    </title>
+    <style>
+      em.rfc2119 {
+        text-transform: lowercase;
+        font-variant:   small-caps;
+        font-style:     normal;
+        color:          #900;
+      }
+      a.testlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      a.testlink:hover {
+        text-decoration: underline;
+      }
+      .warning {color: orange;}
+      .error {color: red;}
+    </style>
+  </head>
+  <body resource='../grouping#manifest' typeof='mf:Manifest'>
+    <p>
+      <a href='http://www.w3.org/'>
+        <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
+      </a>
+    </p>
+    <h1 property='rdfs:label'>Language and base direction</h1>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <hr title='Separator for header'>
+    <div>
+      <h2 id='abstract'>Abstract</h2>
+      <p property='rdfs:comment'>
+      </p>
+      <p>This page describes SPARQL 1.2 test suite of the W3C RDF-star Working Group.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
+      <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+    </div>
+    <div>
+      <h2>
+        Test Descriptions
+      </h2>
+      <dl class='test-description'>
+        <dt id='haslang'>
+          <a class='testlink' href='#haslang'>
+            haslang:
+          </a>
+          <span about='../grouping#haslang' property='mf:name'>hasLANG</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#haslang' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function hasLANG</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='haslang.srj' property='mf:result'>haslang.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='haslangdir'>
+          <a class='testlink' href='#haslangdir'>
+            haslangdir:
+          </a>
+          <span about='../grouping#haslangdir' property='mf:name'>hasLANG</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#haslangdir' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function hasLANGDIR</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='haslangdir.srj' property='mf:result'>haslangdir.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='lang'>
+          <a class='testlink' href='#lang'>
+            lang:
+          </a>
+          <span about='../grouping#lang' property='mf:name'>LANG</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#lang' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function LANG</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='lang.srj' property='mf:result'>lang.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='langdir'>
+          <a class='testlink' href='#langdir'>
+            langdir:
+          </a>
+          <span about='../grouping#langdir' property='mf:name'>LANGDIR</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#langdir' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function LANGDIR</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='langdir.srj' property='mf:result'>langdir.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='strlang'>
+          <a class='testlink' href='#strlang'>
+            strlang:
+          </a>
+          <span about='../grouping#strlang' property='mf:name'>STRLANG</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#strlang' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function STRLANG</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='strlang.srj' property='mf:result'>strlang.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='strlangdir'>
+          <a class='testlink' href='#strlangdir'>
+            strlangdir:
+          </a>
+          <span about='../grouping#strlangdir' property='mf:name'>STRLANGDIR</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#strlangdir' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Function STRLANGDIR</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='strlangdir.srj' property='mf:result'>strlangdir.srj</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+    <footer>
+      <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    </footer>
+  </body>
+</html>
