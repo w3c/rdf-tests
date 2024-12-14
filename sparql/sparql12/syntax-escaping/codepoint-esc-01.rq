@@ -1,0 +1,7 @@
+SELECT * WHERE {
+	?s ?p "\\u000Z"
+}
+
+# \u000Z is an invalid escape sequence. It should either: be left as-is
+# as it does not match the escape syntax of `\u HEX HEX HEX HEX`; or
+# seen as a syntax error.
