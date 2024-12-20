@@ -21,6 +21,7 @@
 	:dawg-graph-09
 	:dawg-graph-10b
 	:dawg-graph-11
+	:graph-empty
    ).
 
 :dawg-graph-01  rdf:type mf:QueryEvaluationTest ;
@@ -165,3 +166,14 @@
     mf:result  <graph-11.ttl> ;
     .
 
+:graph-empty  rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-empty" ;
+    rdfs:comment  "Graph with empty BGP: list all named graphs" ;
+    mf:action
+            [ qt:query        <graph-empty.rq> ;
+              qt:data         <data-g1.ttl> ;
+              qt:graphData    <data-g1.ttl> ;
+              qt:graphData    <data-g2.ttl> ;
+            ] ;
+    mf:result  <graph-empty.ttl> ;
+    .
