@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      SPARQL 1.2 tests
+      RDF 1.1 literals handling
     </title>
     <style>
       em.rfc2119 {
@@ -50,19 +50,18 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='../sparql12#manifest' typeof='mf:Manifest'>
+  <body resource='../grouping#manifest' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>SPARQL 1.2 tests</h1>
+    <h1 property='rdfs:label'>RDF 1.1 literals handling</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        <p>These test suites are a product of the <a href="">W3C RDF-star Working Group</a> as well as the RDF-star Interest Group within the W3C RDF-DEV Community Group, and has been maintained by the <a href="https://www.w3.org/community/rdf-tests/">RDF Test Curation Community Group</a> at <a href="https://github.com/w3c/rdf-tests/tree/main/sparql/sparql12/">https://github.com/w3c/rdf-tests/tree/main/sparql/sparql12</a>. Conformance with SPARQL 1.2 specifications can be determined via successfully running the tests for relevant specifications along with the relevant SPARQL 1.1 tests.</p>
       </p>
       <p>This page describes SPARQL 1.2 test suite of the W3C RDF-star Working Group.</p>
       <h3 id="contributing-tests">Contributing Tests</h3>
@@ -75,25 +74,88 @@
     </div>
     <div>
       <h2>
-        Referenced Manifests
+        Test Descriptions
       </h2>
-      <ul>
-        <li>
-          <a href='grouping/index.html' inlist='true' property='mf:include'>grouping/</a>
-        </li>
-        <li>
-          <a href='lang-basedir/index.html' inlist='true' property='mf:include'>lang-basedir/</a>
-        </li>
-        <li>
-          <a href='rdf11/index.html' inlist='true' property='mf:include'>rdf11/</a>
-        </li>
-        <li>
-          <a href='syntax-triple-terms-negative/index.html' inlist='true' property='mf:include'>syntax-triple-terms-negative/</a>
-        </li>
-        <li>
-          <a href='syntax-triple-terms-positive/index.html' inlist='true' property='mf:include'>syntax-triple-terms-positive/</a>
-        </li>
-      </ul>
+      <dl class='test-description'>
+        <dt id='langstring-datatype'>
+          <a class='testlink' href='#langstring-datatype'>
+            langstring-datatype:
+          </a>
+          <span about='../grouping#langstring-datatype' property='mf:name'>DATATYPE on rdf:langString</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#langstring-datatype' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>plain literals with a language tag have a rdf:langString datatype</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='langstring-datatype.srj' property='mf:result'>langstring-datatype.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='plain-string-datatype'>
+          <a class='testlink' href='#plain-string-datatype'>
+            plain-string-datatype:
+          </a>
+          <span about='../grouping#plain-string-datatype' property='mf:name'>DATATYPE on plain string literal</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#plain-string-datatype' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>plain literals without a language tag have the xsd:string datatype</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='plain-string-datatype.srj' property='mf:result'>plain-string-datatype.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='plain-string-same'>
+          <a class='testlink' href='#plain-string-same'>
+            plain-string-same:
+          </a>
+          <span about='../grouping#plain-string-same' property='mf:name'>xsd:string and plain literals are the same</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../grouping#plain-string-same' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>xsd:string literals are the same as literals without datatypes</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='plain-string-same.srj' property='mf:result'>plain-string-same.srj</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
     </div>
     <footer>
       <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
