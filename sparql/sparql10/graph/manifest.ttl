@@ -22,6 +22,8 @@
 	:dawg-graph-10b
 	:dawg-graph-11
 	:graph-empty
+	:graph-exist
+	:graph-not-exist
    ).
 
 :dawg-graph-01  rdf:type mf:QueryEvaluationTest ;
@@ -168,7 +170,7 @@
 
 :graph-empty  rdf:type mf:QueryEvaluationTest ;
     mf:name "graph-empty" ;
-    rdfs:comment  "Graph with empty BGP: list all named graphs" ;
+    rdfs:comment  "Variable graph with empty BGP: list all named graphs" ;
     mf:action
             [ qt:query        <graph-empty.rq> ;
               qt:data         <data-g1.ttl> ;
@@ -176,4 +178,27 @@
               qt:graphData    <data-g2.ttl> ;
             ] ;
     mf:result  <graph-empty.ttl> ;
+    .
+
+:graph-exist  rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-exist" ;
+    rdfs:comment  "Set graph with empty BGP: returns an empty tuple because the graph exists" ;
+    mf:action
+            [ qt:query        <graph-empty-exist.rq> ;
+              qt:data         <data-g1.ttl> ;
+              qt:graphData    <data-g1.ttl> ;
+              qt:graphData    <data-g2.ttl> ;
+            ] ;
+    mf:result  <graph-empty-exist.ttl> ;
+    .
+:graph-not-exist  rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-not-exist" ;
+    rdfs:comment  "Set graph with empty BGP: returns an empty tuple because the graph exists" ;
+    mf:action
+            [ qt:query        <graph-empty-not-exist.rq> ;
+              qt:data         <data-g1.ttl> ;
+              qt:graphData    <data-g1.ttl> ;
+              qt:graphData    <data-g2.ttl> ;
+            ] ;
+    mf:result  <graph-empty-not-exist.ttl> ;
     .
