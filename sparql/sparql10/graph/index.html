@@ -384,7 +384,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-empty' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>Graph with empty BGP: list all named graphs</p>
+            <p>Variable graph with empty BGP: list all named graphs</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -399,6 +399,60 @@
             <dt>result</dt>
             <dd>
               <a href='graph-empty.ttl' property='mf:result'>graph-empty.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-exist'>
+          <a class='testlink' href='#graph-exist'>
+            graph-exist:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-exist' property='mf:name'>graph-exist</span>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-exist' property='mf:name'>graph-exist</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-exist' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Set graph with empty BGP: returns an empty tuple because the graph exists</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-empty-exist.ttl' property='mf:result'>graph-empty-exist.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-not-exist'>
+          <a class='testlink' href='#graph-not-exist'>
+            graph-not-exist:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-not-exist' property='mf:name'>graph-not-exist</span>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-not-exist' property='mf:name'>graph-not-exist</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-not-exist' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Set graph with empty BGP: returns an empty tuple because the graph exists</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-empty-not-exist.ttl' property='mf:result'>graph-empty-not-exist.ttl</a>
             </dd>
           </dl>
         </dd>
