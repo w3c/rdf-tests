@@ -285,6 +285,34 @@
                     },
                     "type": "triple"
                 }
+            },
+            {
+                "x": {
+                    "value": "http://example/x9",
+                    "type": "uri"
+                },
+                "left": {
+                    "value": "http://example/irireifier",
+                    "type": "uri"
+                },
+                "right": {
+                    "value": "http://example/irireifier",
+                    "type": "uri"
+                }
+            },
+            {
+                "x": {
+                    "value": "http://example/x10",
+                    "type": "uri"
+                },
+                "left": {
+                    "value": "bc_0_b0_bnodereifier",
+                    "type": "bnode"
+                },
+                "right": {
+                    "value": "bc_0_b0_bnodereifier",
+                    "type": "bnode"
+                }
             }
         ]
     }
