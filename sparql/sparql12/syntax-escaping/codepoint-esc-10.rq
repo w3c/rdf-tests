@@ -1,0 +1,11 @@
+SELECT * WHERE {
+	?s ?p "\\u000\u241e"
+}
+
+# \u000\ is an invalid escape sequence, while \u241e is a valid sequence.
+# The interpretation here depends on whether the entire six-character sequence `\u000\`
+# is consumed during parsing/tokenizing and left as-is (or raised as an error),
+# or whether the final character is recognized as the first character of a valid
+# codepoint escape sequence. If the latter, the unescaping should result in a
+# six-codepoint literal whose five-character prefix is "\u000", followed by
+# SYMBOL FOR RECORD SEPARATOR (U+241E).
