@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
+    <style>
+      body: {bacground-image: none;}
+      dl.editor>dd {
+        margin: 0 0 0 40px;
+      }
+      dl.test-detail {
+        padding: 0.5em;
+      }
+      dl.test-detail>dt {
+        float: left;
+        clear: left;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dl.test-detail>dt:after {content: ": "}
+      dl.test-detail>dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+      dl.test-description>dt {margin-top: 2em;}
+      dd {margin-left: 0;}
+      dd code {display: inline;}
+      footer {text-align: center;}
+    </style>
+    <title>
+      Evaluation Triple Terms
+    </title>
+    <style>
+      em.rfc2119 {
+        text-transform: lowercase;
+        font-variant:   small-caps;
+        font-style:     normal;
+        color:          #900;
+      }
+      a.testlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      a.testlink:hover {
+        text-decoration: underline;
+      }
+      .warning {color: orange;}
+      .error {color: red;}
+    </style>
+  </head>
+  <body resource='./' typeof='mf:Manifest'>
+    <p>
+      <a href='http://www.w3.org/'>
+        <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
+      </a>
+    </p>
+    <h1 property='rdfs:label'>Evaluation Triple Terms</h1>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <hr title='Separator for header'>
+    <div>
+      <h2 id='abstract'>Abstract</h2>
+      <p property='rdfs:comment'>
+        <p>Evaluation tests for triple terms in SPARQL 1.2</p>
+      </p>
+      <p>This page describes SPARQL 1.2 test suite of the W3C RDF-star Working Group.</p>
+      <h3 id="contributing-tests">Contributing Tests</h3>
+      <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
+      <h3 id="distribution">Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
+      <h3 id="disclaimer">Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+    </div>
+    <div>
+      <h2>
+        Test Descriptions
+      </h2>
+      <dl class='test-description'>
+        <dt id='results-tripleterms-1j'>
+          <a class='testlink' href='#results-tripleterms-1j'>
+            results-tripleterms-1j:
+          </a>
+          <span about='manifest#results-tripleterms-1j' property='mf:name'>Triple terms - all graph triples (JSON results)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#results-tripleterms-1j' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='results-tripleterms-1.srj' property='mf:result'>results-tripleterms-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='results-tripleterms-1x'>
+          <a class='testlink' href='#results-tripleterms-1x'>
+            results-tripleterms-1x:
+          </a>
+          <span about='manifest#results-tripleterms-1x' property='mf:name'>Triple terms - all graph triples (XML results)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#results-tripleterms-1x' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='results-tripleterms-1.srx' property='mf:result'>results-tripleterms-1.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='results-reifiedtriples-1j'>
+          <a class='testlink' href='#results-reifiedtriples-1j'>
+            results-reifiedtriples-1j:
+          </a>
+          <span about='manifest#results-reifiedtriples-1j' property='mf:name'>Reified triples - all graph triples (JSON results)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#results-reifiedtriples-1j' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='results-reifiedtriples-1.srj' property='mf:result'>results-reifiedtriples-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='results-reifiedtriples-1x'>
+          <a class='testlink' href='#results-reifiedtriples-1x'>
+            results-reifiedtriples-1x:
+          </a>
+          <span about='manifest#results-reifiedtriples-1x' property='mf:name'>Reified triples - all graph triples (XML results)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#results-reifiedtriples-1x' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='results-reifiedtriples-1.srx' property='mf:result'>results-reifiedtriples-1.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='basic-2'>
+          <a class='testlink' href='#basic-2'>
+            basic-2:
+          </a>
+          <span about='manifest#basic-2' property='mf:name'>Reified triples - match constant reified triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#basic-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='basic-2.srj' property='mf:result'>basic-2.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='basic-3'>
+          <a class='testlink' href='#basic-3'>
+            basic-3:
+          </a>
+          <span about='manifest#basic-3' property='mf:name'>Reified triples - match reified triple, var subject</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#basic-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='basic-3.srj' property='mf:result'>basic-3.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='basic-4'>
+          <a class='testlink' href='#basic-4'>
+            basic-4:
+          </a>
+          <span about='manifest#basic-4' property='mf:name'>Reified triples - match reified triple, var predicate</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#basic-4' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='basic-4.srj' property='mf:result'>basic-4.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='basic-5'>
+          <a class='testlink' href='#basic-5'>
+            basic-5:
+          </a>
+          <span about='manifest#basic-5' property='mf:name'>Reified triples - match reified triple, var object</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#basic-5' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='basic-5.srj' property='mf:result'>basic-5.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='basic-6'>
+          <a class='testlink' href='#basic-6'>
+            basic-6:
+          </a>
+          <span about='manifest#basic-6' property='mf:name'>Reified triples - no match of reified triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#basic-6' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='basic-6.srj' property='mf:result'>basic-6.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-1'>
+          <a class='testlink' href='#pattern-1'>
+            pattern-1:
+          </a>
+          <span about='manifest#pattern-1' property='mf:name'>Reified triples - Asserted and reified triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-01.srj' property='mf:result'>pattern-01.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-2'>
+          <a class='testlink' href='#pattern-2'>
+            pattern-2:
+          </a>
+          <span about='manifest#pattern-2' property='mf:name'>Reified triples - Asserted and reified triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-02.srj' property='mf:result'>pattern-02.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-3'>
+          <a class='testlink' href='#pattern-3'>
+            pattern-3:
+          </a>
+          <span about='manifest#pattern-3' property='mf:name'>Reified triples - Pattern - Variable for reified triple reifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-03.srj' property='mf:result'>pattern-03.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-3-nomatch'>
+          <a class='testlink' href='#pattern-3-nomatch'>
+            pattern-3-nomatch:
+          </a>
+          <span about='manifest#pattern-3-nomatch' property='mf:name'>Reified triples - Pattern - Variable for reified triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-3-nomatch' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-03-nomatch.srj' property='mf:result'>pattern-03-nomatch.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-4'>
+          <a class='testlink' href='#pattern-4'>
+            pattern-4:
+          </a>
+          <span about='manifest#pattern-4' property='mf:name'>Reified triples - Pattern - No match</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-4' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-04.srj' property='mf:result'>pattern-04.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-5'>
+          <a class='testlink' href='#pattern-5'>
+            pattern-5:
+          </a>
+          <span about='manifest#pattern-5' property='mf:name'>Reified triples - Pattern - match variables in triple terms</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-5' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-05.srj' property='mf:result'>pattern-05.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-6'>
+          <a class='testlink' href='#pattern-6'>
+            pattern-6:
+          </a>
+          <span about='manifest#pattern-6' property='mf:name'>Reified triples - Pattern - Nesting 1</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-6' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-06.srj' property='mf:result'>pattern-06.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-7'>
+          <a class='testlink' href='#pattern-7'>
+            pattern-7:
+          </a>
+          <span about='manifest#pattern-7' property='mf:name'>Reified triples - Pattern - Nesting 2</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-7' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-07.srj' property='mf:result'>pattern-07.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-8'>
+          <a class='testlink' href='#pattern-8'>
+            pattern-8:
+          </a>
+          <span about='manifest#pattern-8' property='mf:name'>Reified triples - Pattern - Match and nesting</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-8' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-08.srj' property='mf:result'>pattern-08.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-8-nomatch'>
+          <a class='testlink' href='#pattern-8-nomatch'>
+            pattern-8-nomatch:
+          </a>
+          <span about='manifest#pattern-8-nomatch' property='mf:name'>Reified triples - Pattern - Match for non-equal reifier and nesting</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-8-nomatch' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-08-nomatch.srj' property='mf:result'>pattern-08-nomatch.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='pattern-9'>
+          <a class='testlink' href='#pattern-9'>
+            pattern-9:
+          </a>
+          <span about='manifest#pattern-9' property='mf:name'>Reified triples - Pattern - Same variable</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#pattern-9' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='pattern-09.srj' property='mf:result'>pattern-09.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='construct-1'>
+          <a class='testlink' href='#construct-1'>
+            construct-1:
+          </a>
+          <span about='manifest#construct-1' property='mf:name'>Reified triples - CONSTRUCT with constant template</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#construct-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='construct-1.ttl' property='mf:result'>construct-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='construct-2'>
+          <a class='testlink' href='#construct-2'>
+            construct-2:
+          </a>
+          <span about='manifest#construct-2' property='mf:name'>Reified triples - CONSTRUCT WHERE with constant template</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#construct-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='construct-2.ttl' property='mf:result'>construct-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='construct-3'>
+          <a class='testlink' href='#construct-3'>
+            construct-3:
+          </a>
+          <span about='manifest#construct-3' property='mf:name'>Reified triples - CONSTRUCT - about every triple</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#construct-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='construct-3.ttl' property='mf:result'>construct-3.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='construct-4'>
+          <a class='testlink' href='#construct-4'>
+            construct-4:
+          </a>
+          <span about='manifest#construct-4' property='mf:name'>Reified triples - CONSTRUCT with annotation syntax</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#construct-4' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='construct-4.ttl' property='mf:result'>construct-4.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='construct-5'>
+          <a class='testlink' href='#construct-5'>
+            construct-5:
+          </a>
+          <span about='manifest#construct-5' property='mf:name'>Reified triples - CONSTRUCT WHERE with annotation syntax</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#construct-5' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='construct-5.ttl' property='mf:result'>construct-5.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graphs-1'>
+          <a class='testlink' href='#graphs-1'>
+            graphs-1:
+          </a>
+          <span about='manifest#graphs-1' property='mf:name'>Reified triples - GRAPH</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#graphs-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graphs-1.srj' property='mf:result'>graphs-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graphs-2'>
+          <a class='testlink' href='#graphs-2'>
+            graphs-2:
+          </a>
+          <span about='manifest#graphs-2' property='mf:name'>Reified triples - GRAPHs with blank node</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#graphs-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graphs-2.srj' property='mf:result'>graphs-2.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='expr-1'>
+          <a class='testlink' href='#expr-1'>
+            expr-1:
+          </a>
+          <span about='manifest#expr-1' property='mf:name'>Reified triples - Embedded triple - BIND - CONSTRUCT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#expr-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='expr-01.ttl' property='mf:result'>expr-01.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='expr-2'>
+          <a class='testlink' href='#expr-2'>
+            expr-2:
+          </a>
+          <span about='manifest#expr-2' property='mf:name'>Reified triples - Embedded triple - Functions</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#expr-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='expr-02.srj' property='mf:result'>expr-02.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='op-1'>
+          <a class='testlink' href='#op-1'>
+            op-1:
+          </a>
+          <span about='manifest#op-1' property='mf:name'>Reified triples - Embedded triple - sameTerm</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#op-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='op-1.srj' property='mf:result'>op-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='op-2'>
+          <a class='testlink' href='#op-2'>
+            op-2:
+          </a>
+          <span about='manifest#op-2' property='mf:name'>Reified triples - Embedded triple - value-equality</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#op-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='op-2.srj' property='mf:result'>op-2.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='op-3'>
+          <a class='testlink' href='#op-3'>
+            op-3:
+          </a>
+          <span about='manifest#op-3' property='mf:name'>Reified triples - Embedded triple - value-inequality</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#op-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='op-3.srj' property='mf:result'>op-3.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='op-4'>
+          <a class='testlink' href='#op-4'>
+            op-4:
+          </a>
+          <span about='manifest#op-4' property='mf:name'>Reified triples - Embedded triple - value-inequality</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#op-4' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='op-4.srj' property='mf:result'>op-4.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='order-1'>
+          <a class='testlink' href='#order-1'>
+            order-1:
+          </a>
+          <span about='manifest#order-1' property='mf:name'>Reified triples - Embedded triple - ORDER BY</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#order-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='order-1.srj' property='mf:result'>order-1.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='order-2'>
+          <a class='testlink' href='#order-2'>
+            order-2:
+          </a>
+          <span about='manifest#order-2' property='mf:name'>Reified triples - Embedded triple - ordering</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#order-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='order-2.srj' property='mf:result'>order-2.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='update-1'>
+          <a class='testlink' href='#update-1'>
+            update-1:
+          </a>
+          <span about='manifest#update-1' property='mf:name'>Reified triples - Update</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#update-1' typeof='mf:UpdateEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:UpdateEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='update-2'>
+          <a class='testlink' href='#update-2'>
+            update-2:
+          </a>
+          <span about='manifest#update-2' property='mf:name'>Reified triples - Update - annotation</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#update-2' typeof='mf:UpdateEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:UpdateEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='update-3'>
+          <a class='testlink' href='#update-3'>
+            update-3:
+          </a>
+          <span about='manifest#update-3' property='mf:name'>Reified triples - Update - data</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#update-3' typeof='mf:UpdateEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:UpdateEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <dl class='test-detail' property='mf:result' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+    <footer>
+      <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    </footer>
+  </body>
+</html>
