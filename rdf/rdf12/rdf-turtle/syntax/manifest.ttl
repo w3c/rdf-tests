@@ -87,6 +87,24 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:nt-ttl-base-bad-1
         trs:nt-ttl-base-bad-2
+
+## Version
+
+        trs:turtle-version-01
+        trs:turtle-version-02
+        trs:turtle-version-03
+        trs:turtle-version-04
+        trs:turtle-version-05
+        trs:turtle-version-06
+        trs:turtle-version-07
+        trs:turtle-version-08
+
+        trs:turtle-version-bad-01
+        trs:turtle-version-bad-02
+        trs:turtle-version-bad-03
+        trs:turtle-version-bad-04
+        trs:turtle-version-bad-05
+        trs:turtle-version-bad-06
     ) .
 
 ## Good Syntax
@@ -351,3 +369,76 @@ trs:nt-ttl-base-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name      "N-Triples-star as Turtle-star - upper case LTR" ;
    mf:action    <nt-ttl-base-bad-2.ttl> ;
    .
+
+## Version
+
+trs:turtle-version-01 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - VERSION" ;
+   mf:action    <turtle-version-01.ttl> ;
+   .
+
+trs:turtle-version-02 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - @version" ;
+   mf:action    <turtle-version-02.ttl> ;
+   .
+
+trs:turtle-version-03 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - VERSION in data " ;
+   mf:action    <turtle-version-03.ttl> ;
+   .
+
+trs:turtle-version-04 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - @version in data" ;
+   mf:action    <turtle-version-04.ttl> ;
+   .
+
+trs:turtle-version-05 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - VERSION other version string" ;
+   mf:action    <turtle-version-05.ttl> ;
+   .
+
+trs:turtle-version-06 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - @version other version string" ;
+   mf:action    <turtle-version-06.ttl> ;
+   .
+
+trs:turtle-version-07 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - mixed versions" ;
+   mf:action    <turtle-version-07.ttl> ;
+   .
+
+trs:turtle-version-08 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - many versions" ;
+   mf:action    <turtle-version-08.ttl> ;
+   .
+
+trs:turtle-version-bad-01 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - VERSION - not string" ;
+   mf:action    <turtle-version-bad-01.ttl> ;
+   .
+
+trs:turtle-version-bad-02 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - VERSION - triple-'-quoted string" ;
+   mf:action    <turtle-version-bad-02.ttl> ;
+   .
+
+trs:turtle-version-bad-03 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - VERSION - triple-\"-quoted string" ;
+   mf:action    <turtle-version-bad-03.ttl> ;
+   .
+
+trs:turtle-version-bad-04 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - @version - not string" ;
+   mf:action    <turtle-version-bad-04.ttl> ;
+   .
+
+trs:turtle-version-bad-05 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - @version - triple-'-quoted string" ;
+   mf:action    <turtle-version-bad-05.ttl> ;
+   .
+
+trs:turtle-version-bad-06 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - @version - triple-\"-quoted string" ;
+   mf:action    <turtle-version-bad-06.ttl> ;
+   .
+
