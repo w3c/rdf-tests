@@ -25,58 +25,55 @@ trs:manifest  rdf:type mf:Manifest ;
    rdfs:seeAlso <README>;
     mf:entries
     (
-        trs:nquads-star-1
-        trs:nquads-star-2
-        trs:nquads-star-3
-        trs:nquads-star-4
-        trs:nquads-star-5
+        trs:nquads-star-01
+        trs:nquads-star-02
+        trs:nquads-star-03
 
         trs:nquads-star-bnode-1
-        trs:nquads-star-bnode-2
 
         trs:nquads-star-nested-1
-        trs:nquads-star-nested-2
 
-        trs:nquads-base-1
-        trs:nquads-base-2
+        trs:nquads-langdir-1
+        trs:nquads-langdir-2
 
-        trs:nquads-star-bad-1
-        trs:nquads-star-bad-2
-        trs:nquads-star-bad-3
-        trs:nquads-star-bad-4
+        trs:nquads-star-bad-01
+        trs:nquads-star-bad-02
+        trs:nquads-star-bad-03
+        trs:nquads-star-bad-04
+        trs:nquads-star-bad-05
+        trs:nquads-star-bad-06
+        trs:nquads-star-bad-07
+        trs:nquads-star-bad-08
+        trs:nquads-star-bad-09
+        trs:nquads-star-bad-10
+
+        trs:nquads-star-bad-reified-1
+        trs:nquads-star-bad-reified-2
+        trs:nquads-star-bad-reified-3
+        trs:nquads-star-bad-reified-4
 
         trs:nquads-star-bnode-bad-annotated-syntax-1
         trs:nquads-star-bnode-bad-annotated-syntax-2
         trs:nquads-star-nested-bad-annotated-syntax-1
         trs:nquads-star-nested-bad-annotated-syntax-2
 
-        trs:nquads-base-bad-1
-        trs:nquads-base-bad-2
+        trs:nquads-langdir-bad-1
+        trs:nquads-langdir-bad-2
     ) .
 
-trs:nquads-star-1 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - subject quoted triple" ;
-   mf:action    <nquads-star-syntax-1.nq> ;
+trs:nquads-star-01 rdf:type rdft:TestNQuadsPositiveSyntax ;
+   mf:name      "N-Quads-star - object triple term" ;
+   mf:action    <nquads-star-syntax-01.nq> ;
    .
 
-trs:nquads-star-2 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - object quoted triple" ;
-   mf:action    <nquads-star-syntax-2.nq> ;
+trs:nquads-star-02 rdf:type rdft:TestNQuadsPositiveSyntax ;
+   mf:name      "N-Quads-star - object triple term, no whitespace" ;
+   mf:action    <nquads-star-syntax-02.nq> ;
    .
 
-trs:nquads-star-3 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - subject and object quoted quads" ;
-   mf:action    <nquads-star-syntax-3.nq> ;
-   .
-
-trs:nquads-star-4 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - whitespace and terms" ;
-   mf:action    <nquads-star-syntax-4.nq> ;
-   .
-
-trs:nquads-star-5 rdf:type rdft:TestNQuadsPositiveSyntax ;
+trs:nquads-star-03 rdf:type rdft:TestNQuadsPositiveSyntax ;
    mf:name      "N-Quads-star - Nested, no whitespace" ;
-   mf:action    <nquads-star-syntax-5.nq> ;
+   mf:action    <nquads-star-syntax-03.nq> ;
    .
 
 # Blank nodes
@@ -86,56 +83,96 @@ trs:nquads-star-bnode-1 rdf:type rdft:TestNQuadsPositiveSyntax ;
    mf:action    <nquads-star-bnode-1.nq> ;
    .
 
-trs:nquads-star-bnode-2 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - Blank node object" ;
-   mf:action    <nquads-star-bnode-2.nq> ;
-   .
-
 trs:nquads-star-nested-1 rdf:type rdft:TestNQuadsPositiveSyntax ;
-   mf:name      "N-Quads-star - Nested subject term" ;
-   mf:action    <nquads-star-nested-1.nq> ;
-   .
-
-trs:nquads-star-nested-2 rdf:type rdft:TestNQuadsPositiveSyntax ;
    mf:name      "N-Quads-star - Nested object term" ;
-   mf:action    <nquads-star-nested-2.nq> ;
+   mf:action    <nquads-star-nested-1.nq> ;
    .
 
 # Base direction
 
-trs:nquads-base-1 rdf:type rdft:TestNQuadsPositiveSyntax ;
+trs:nquads-langdir-1 rdf:type rdft:TestNQuadsPositiveSyntax ;
   mf:name       "N-Quads literal with base direction ltr" ;
-  mf:action     <nquads-base-1.nq> ;
+  mf:action     <nquads-langdir-1.nq> ;
   .
 
-trs:nquads-base-2 rdf:type rdft:TestNQuadsPositiveSyntax ;
+trs:nquads-langdir-2 rdf:type rdft:TestNQuadsPositiveSyntax ;
   mf:name       "N-Quads literal with base direction rtl" ;
-  mf:action     <nquads-base-2.nq> ;
+  mf:action     <nquads-langdir-2.nq> ;
   .
 
 ## Bad syntax
 
-trs:nquads-star-bad-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
-    mf:name      "N-Quads-star - Bad - quoted triple as predicate" ;
-    mf:action    <nquads-star-bad-syntax-1.nq> ;
+trs:nquads-star-bad-01 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - reified triple as predicate" ;
+    mf:action    <nquads-star-bad-syntax-01.nq> ;
     .
 
-trs:nquads-star-bad-2 rdf:type rdft:TestNQuadsNegativeSyntax ;
-    mf:name      "N-Quads-star - Bad - quoted triple, literal subject" ;
-    mf:action    <nquads-star-bad-syntax-2.nq> ;
+trs:nquads-star-bad-02 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - reified triple, literal subject" ;
+    mf:action    <nquads-star-bad-syntax-02.nq> ;
     .
 
-trs:nquads-star-bad-3 rdf:type rdft:TestNQuadsNegativeSyntax ;
-    mf:name      "N-Quads-star - Bad - quoted triple, literal predicate" ;
-    mf:action    <nquads-star-bad-syntax-3.nq> ;
+trs:nquads-star-bad-03 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - reified triple, literal predicate" ;
+    mf:action    <nquads-star-bad-syntax-03.nq> ;
     .
 
-trs:nquads-star-bad-4 rdf:type rdft:TestNQuadsNegativeSyntax ;
-    mf:name      "N-Quads-star - Bad - quoted triple, blank node predicate" ;
-    mf:action    <nquads-star-bad-syntax-4.nq> ;
+trs:nquads-star-bad-04 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - reified triple, blank node predicate" ;
+    mf:action    <nquads-star-bad-syntax-04.nq> ;
     .
 
-# Annotation syntax is not permitted in nt
+trs:nquads-star-bad-05 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - triple term as predicate" ;
+    mf:action    <nquads-star-bad-syntax-05.nq> ;
+    .
+
+trs:nquads-star-bad-06 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - triple term, literal subject" ;
+    mf:action    <nquads-star-bad-syntax-06.nq> ;
+    .
+
+trs:nquads-star-bad-07 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - triple term, literal predicate" ;
+    mf:action    <nquads-star-bad-syntax-07.nq> ;
+    .
+
+trs:nquads-star-bad-08 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - triple term, blank node predicate" ;
+    mf:action    <nquads-star-bad-syntax-08.nq> ;
+    .
+
+trs:nquads-star-bad-09 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - reified triple object" ;
+    mf:action    <nquads-star-bad-syntax-09.nq> ;
+    .
+
+trs:nquads-star-bad-10 rdf:type rdft:TestNQuadsNegativeSyntax ;
+    mf:name      "N-Quads-star - Bad - triple term as subject" ;
+    mf:action    <nquads-star-bad-syntax-10.nq> ;
+    .
+
+trs:nquads-star-bad-reified-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
+   mf:name      "N-Quads-star - Bad - subject reified triple" ;
+   mf:action    <nquads-star-bad-reified-syntax-1.nq> ;
+   .
+
+trs:nquads-star-bad-reified-2 rdf:type rdft:TestNQuadsNegativeSyntax ;
+   mf:name      "N-Quads-star - Bad - object reified triple" ;
+   mf:action    <nquads-star-bad-reified-syntax-2.nq> ;
+   .
+
+trs:nquads-star-bad-reified-3 rdf:type rdft:TestNQuadsNegativeSyntax ;
+   mf:name      "N-Quads-star - Bad - subject and object reified triples" ;
+   mf:action    <nquads-star-bad-reified-syntax-3.nq> ;
+   .
+
+trs:nquads-star-bad-reified-4 rdf:type rdft:TestNQuadsNegativeSyntax ;
+   mf:name      "N-Quads-star - Bad - predicate reified triple" ;
+   mf:action    <nquads-star-bad-reified-syntax-4.nq> ;
+   .
+
+# Annotation syntax is not permitted in nq
 
 trs:nquads-star-bnode-bad-annotated-syntax-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
     mf:name      "N-Quads-star - Bad - annotated triple, blank node subject" ;
@@ -159,12 +196,12 @@ trs:nquads-star-nested-bad-annotated-syntax-2 rdf:type rdft:TestNQuadsNegativeSy
 
 # Base direction
 
-trs:nquads-base-bad-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
+trs:nquads-langdir-bad-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
   mf:name       "N-Quads literal- Bad - undefined base direction" ;
-  mf:action     <nquads-base-bad-1.nq> ;
+  mf:action     <nquads-langdir-bad-1.nq> ;
   .
 
-trs:nquads-base-bad-2 rdf:type rdft:TestNQuadsNegativeSyntax ;
+trs:nquads-langdir-bad-2 rdf:type rdft:TestNQuadsNegativeSyntax ;
   mf:name       "N-Quads literal- Bad - upper case LTR" ;
-  mf:action     <nquads-base-bad-2.nq> ;
+  mf:action     <nquads-langdir-bad-2.nq> ;
   .
