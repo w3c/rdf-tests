@@ -27,9 +27,13 @@ trs:manifest  rdf:type mf:Manifest ;
     (
         trs:trig-star-1
         trs:trig-star-2
+        trs:trig-star-3
+        trs:trig-star-4
 
         trs:trig-star-inside-1
         trs:trig-star-inside-2
+        trs:trig-star-inside-3
+        trs:trig-star-inside-4
 
         trs:trig-star-nested-1
         trs:trig-star-nested-2
@@ -47,10 +51,15 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:trig-star-bad-5
         trs:trig-star-bad-6
         trs:trig-star-bad-7
-        trs:trig-star-bad-8
 
         trs:trig-star-ann-1
         trs:trig-star-ann-2
+        trs:trig-star-ann-3
+        trs:trig-star-ann-4
+        trs:trig-star-ann-5
+        trs:trig-star-ann-6
+        trs:trig-star-ann-7
+        trs:trig-star-ann-8
 
         trs:trig-star-bad-ann-1
         trs:trig-star-bad-ann-2
@@ -67,23 +76,43 @@ trs:manifest  rdf:type mf:Manifest ;
 ## Good Syntax
 
 trs:trig-star-1 rdf:type rdft:TestTrigPositiveSyntax ;
-   mf:name      "TriG-star - subject quoted triple" ;
+   mf:name      "TriG-star - subject reified triple" ;
    mf:action    <trig-star-syntax-basic-01.trig> ;
    .
 
 trs:trig-star-2 rdf:type rdft:TestTrigPositiveSyntax ;
-   mf:name      "TriG-star - object quoted triple" ;
+   mf:name      "TriG-star - object reified triple" ;
    mf:action    <trig-star-syntax-basic-02.trig> ;
    .
 
+trs:trig-star-3 rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "TriG-star - triple term object" ;
+   mf:action    <trig-star-syntax-basic-03.trig> ;
+   .
+
+trs:trig-star-4 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - reified triple outside triple" ;
+    mf:action    <trig-star-syntax-basic-04.trig> ;
+    .
+
 trs:trig-star-inside-1 rdf:type rdft:TestTrigPositiveSyntax ;
-   mf:name      "TriG-star - quoted triple inside blankNodePropertyList" ;
+   mf:name      "TriG-star - reified triple inside blankNodePropertyList" ;
    mf:action    <trig-star-syntax-inside-01.trig> ;
    .
 
 trs:trig-star-inside-2 rdf:type rdft:TestTrigPositiveSyntax ;
-   mf:name      "TriG-star - quoted triple inside collection" ;
+   mf:name      "TriG-star - reified triple inside collection" ;
    mf:action    <trig-star-syntax-inside-02.trig> ;
+   .
+
+trs:trig-star-inside-3 rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "TriG-star - reified triple with IRI identifier" ;
+   mf:action    <trig-star-syntax-inside-03.trig> ;
+   .
+
+trs:trig-star-inside-4 rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "TriG-star - reified triple with blank node identifier" ;
+   mf:action    <trig-star-syntax-inside-04.trig> ;
    .
 
 trs:trig-star-nested-1 rdf:type rdft:TestTrigPositiveSyntax ;
@@ -119,43 +148,38 @@ trs:trig-star-bnode-3 rdf:type rdft:TestTrigPositiveSyntax ;
 ## Bad Syntax
 
 trs:trig-star-bad-1 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - quoted triple as predicate" ;
+    mf:name      "TriG-star - bad - reified triple as predicate" ;
     mf:action    <trig-star-syntax-bad-01.trig> ;
     .
 
 trs:trig-star-bad-2 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - quoted triple outside triple" ;
+    mf:name      "TriG-star - bad - literal in subject position of reified triple" ;
     mf:action    <trig-star-syntax-bad-02.trig> ;
     .
 
 trs:trig-star-bad-3 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - collection list in quoted triple" ;
+    mf:name      "TriG-star - bad - blank node  as predicate in reified triple" ;
     mf:action    <trig-star-syntax-bad-03.trig> ;
     .
 
 trs:trig-star-bad-4 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - literal in subject position of quoted triple" ;
+    mf:name      "TriG-star - bad - incomplete reified triple" ;
     mf:action    <trig-star-syntax-bad-04.trig> ;
     .
 
 trs:trig-star-bad-5 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - blank node  as predicate in quoted triple";
+    mf:name      "TriG-star - bad - over-long reified triple";
     mf:action    <trig-star-syntax-bad-05.trig> ;
     .
 
 trs:trig-star-bad-6 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - compound blank node expression";
+    mf:name      "TriG-star - bad - reified with list object";
     mf:action    <trig-star-syntax-bad-06.trig> ;
     .
 
 trs:trig-star-bad-7 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - incomplete quoted triple";
+    mf:name      "TriG-star - bad - compound blank node expression";
     mf:action    <trig-star-syntax-bad-07.trig> ;
-    .
-
-trs:trig-star-bad-8 rdf:type rdft:TestTrigNegativeSyntax ;
-    mf:name      "TriG-star - bad - over-long quoted triple";
-    mf:action    <trig-star-syntax-bad-08.trig> ;
     .
 
 ## Annotation syntax
@@ -168,6 +192,36 @@ trs:trig-star-ann-1 rdf:type rdft:TestTrigPositiveSyntax ;
 trs:trig-star-ann-2 rdf:type rdft:TestTrigPositiveSyntax ;
     mf:name      "TriG-star - Annotation example" ;
     mf:action    <trig-star-annotation-2.trig> ;
+    .
+
+trs:trig-star-ann-3 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Annotation predicateObjecetList" ;
+    mf:action    <trig-star-annotation-3.trig> ;
+    .
+
+trs:trig-star-ann-4 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Annotation followed by predicate/object" ;
+    mf:action    <trig-star-annotation-4.trig> ;
+    .
+
+trs:trig-star-ann-5 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Reifier without annotation block" ;
+    mf:action    <trig-star-annotation-5.trig> ;
+    .
+
+trs:trig-star-ann-6 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Empty reifier without annotation block" ;
+    mf:action    <trig-star-annotation-6.trig> ;
+    .
+
+trs:trig-star-ann-7 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Reifier with annotation block" ;
+    mf:action    <trig-star-annotation-7.trig> ;
+    .
+
+trs:trig-star-ann-8 rdf:type rdft:TestTrigPositiveSyntax ;
+    mf:name      "TriG-star - Empty reifier with annotation block" ;
+    mf:action    <trig-star-annotation-8.trig> ;
     .
 
 ## Bad annotation syntax

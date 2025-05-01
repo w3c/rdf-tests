@@ -1,6 +1,5 @@
 PREFIX : <http://example/>
 
 :G {
-  :s :p ("abc") .
-  <<:s :p ("abc") >> :q 123 .
+  <<:s [] :o>> :q 123 .
 }
