@@ -29,7 +29,7 @@ GEM
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     link_header (0.0.8)
-    logger (1.6.6)
+    logger (1.7.0)
     matrix (0.4.2)
     multi_json (1.15.0)
     ostruct (0.6.1)
@@ -60,17 +60,17 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  haml (~> 6.2)
+  haml (~> 6.3)
   htmlbeautifier (~> 1.4)
   json-ld
-  kramdown (~> 2.4)
-  logger (~> 1.6)
+  kramdown (~> 2.5)
+  logger (~> 1.7)
   ostruct (~> 0.6)
   rake
   rdf-turtle
 
 RUBY VERSION
-   ruby 3.4.1p0
+   ruby 3.4.3p32
 
 BUNDLED WITH
-   2.5.19
+   2.6.9
