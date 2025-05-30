@@ -148,6 +148,7 @@
     <#rdfms-rdf-names-use-warn-002>
     <#rdfms-rdf-names-use-warn-003>
     <#rdfms-reification-required-test001>
+    <#rdfms-reification-required-test002>
     <#rdfms-seq-representation-test001>
     <#rdfms-syntax-incomplete-test001>
     <#rdfms-syntax-incomplete-test002>
@@ -1431,6 +1432,15 @@ statements for all description elements.
   rdft:approval rdft:Approved;
   mf:action <rdfms-reification-required/test001.rdf>;
   mf:result <rdfms-reification-required/test001.nt> .
+
+<#rdfms-reification-required-test002> a rdft:TestXMLEval;
+  mf:name "rdfms-reification-required-test002";
+  rdfs:comment """
+    A parser must generate inside of other reifications
+  """;
+  rdft:approval rdft:Approved;
+  mf:action <rdfms-reification-required/test002.rdf>;
+  mf:result <rdfms-reification-required/test002.nt> .
 
 <#rdfms-seq-representation-test001> a rdft:TestXMLEval;
   mf:name "rdfms-seq-representation-test001";
