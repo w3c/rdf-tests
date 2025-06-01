@@ -3,10 +3,100 @@ require 'rdf/turtle'
 require 'json/ld'
 require 'haml'
 require 'htmlbeautifier'
+require 'nokogiri'
 
 task default: :index
 
 MANIFESTS = Dir.glob("**/manifest*.ttl").reject {|f| f.include?('-az')}
+
+SPECS = %w(
+  https://w3c.github.io/rdf-concepts/spec/index.html
+  https://w3c.github.io/rdf-n-quads/spec/index.html
+  https://w3c.github.io/rdf-n-triples/spec/index.html
+  https://w3c.github.io/rdf-schema/spec/index.html
+  https://w3c.github.io/rdf-semantics/spec/index.html
+  https://w3c.github.io/rdf-trig/spec/index.html
+  https://w3c.github.io/rdf-turtle/spec/index.html
+  https://w3c.github.io/rdf-xml/spec/index.html
+
+  https://w3c.github.io/sparql-concepts/spec/index.html
+  https://w3c.github.io/sparql-entailment/spec/index.html
+  https://w3c.github.io/sparql-federated-query/spec/index.html
+  https://w3c.github.io/sparql-graph-store-protocol/spec/index.html
+  https://w3c.github.io/sparql-protocol/spec/index.html
+  https://w3c.github.io/sparql-query/spec/index.html
+  https://w3c.github.io/sparql-results-csv-tsv/spec/index.html
+  https://w3c.github.io/sparql-results-json/spec/index.html
+  https://w3c.github.io/sparql-results-xml/spec/index.html
+  https://w3c.github.io/sparql-service-description/spec/index.html
+  https://w3c.github.io/sparql-update/spec/index.html
+)
+
+JSON_STATE = {
+                 :indent => "  ",
+                  :space => " ",
+           :space_before => "",
+              :object_nl => "\n",
+               :array_nl => "\n",
+              :allow_nan => false,
+             :ascii_only => false,
+            :max_nesting => 100,
+            :script_safe => false,
+                 :strict => false,
+                  :depth => 0,
+  :buffer_initial_length => 1024
+}
+task :force_build do
+  # Exists simply to require tasks to run
+end
+
+desc "Build map of test references"
+file "test-map.json" => :force_build do
+  puts "Generate test-map.json"
+  # Test map will be like the following:
+  # {
+  #   "rdf/rdf11/rdf-xml/index.html" => {
+  #     "xmlbase-test001" => [
+  #       "https://w3c.github.io/rdf-xml/spec/index.html#baseURIs-tests1"
+  #     ]
+  #   }
+  # }
+  test_map = {}
+  failed = false
+  SPECS.each do |spec|
+    puts "  Spec: #{spec}"
+    RDF::Util::File.open_file(spec) do |f|
+      dom = Nokogiri::HTML.parse(f)
+      # Extract each referenced test from the data-tests attribute
+      dom.css("*[data-tests]").each do |el|
+        id = el['id']
+        raise StandardError, "In #{spec}, data-tests found on element without an anchor" unless id
+
+        el.attributes['data-tests']
+          .value
+          .split(',')
+          .map(&:strip)
+          .each do |ref|
+
+            man, anchor = ref.split('#')
+            ((test_map[man] ||= {})[anchor] ||= []) << "#{spec}##{id}"
+        end
+      end
+    end
+    rescue IOError => e
+      failed = true
+      puts "Failed to open URL: #{e.message}"
+    rescue StandardError => e
+      failed = true
+      puts "An error occurred: #{e.message}"
+  end
+
+  unless failed
+    File.open("test-map.json", "w") do |f|
+      f.write(test_map.to_json(JSON_STATE))
+    end
+  end
+end
 
 desc "Build HTML manifests"
 task index: MANIFESTS.
@@ -30,7 +120,7 @@ MANIFESTS.each do |ttl|
 
   if template_path
     desc "Build #{html}"
-    file html => [ttl, frame_path, template_path] do
+    file html => [ttl, frame_path, template_path, 'test-map.json'] do
       puts "Generate #{html}"
       frame, template, man = File.read(frame_path), File.read(template_path), nil
 
@@ -75,7 +165,8 @@ MANIFESTS.each do |ttl|
         rendered = haml_runner.render(self,
             man: man,
             haml_indent: true,
-            ttl: ttl.split('/').last
+            ttl: ttl.split('/').last,
+            test_map: JSON.parse(File.read('test-map.json')).fetch(html, {})
           )
         beautified = HtmlBeautifier.beautify(rendered) + "\n"
         f.write(beautified)
