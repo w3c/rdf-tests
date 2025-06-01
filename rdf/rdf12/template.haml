@@ -110,6 +110,12 @@
                 %dd<~test['@type']
                 %dt="approval"
                 %dd{property: "mf:approval", resource: test['approval']}<~test['approval']
+                - if test_map[test['@id'][1..-1]]
+                  %dt="references"
+                  %dd
+                    - links = test_map[test['@id'][1..-1]].map.with_index {|l, r| %(<a href="#{l}">#{r+1}</a>)}
+                    != "(#{links.join(' ')})"
+
                 - if test['action']
                   %dt="action"
                   %dd
