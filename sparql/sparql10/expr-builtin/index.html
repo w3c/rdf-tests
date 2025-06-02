@@ -64,13 +64,13 @@
       <p property='rdfs:comment'>
         DAWG Expression tests: Built-ins
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL1.0 test suite.</p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
       <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
       <h3 id='distribution'>Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
       <h3 id='disclaimer'>Disclaimer</h3>
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -456,7 +456,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-1' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>langMatches(lang(?v), &#39;en-GB&#39;) matches &#39;abc&#39;@en-gb</p>
+            <p>langMatches(lang(?v), 'en-GB') matches 'abc'@en-gb</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -483,7 +483,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-2' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>langMatches(lang(?v), &#39;en&#39;) matches &#39;abc&#39;@en, &#39;abc&#39;@en-gb</p>
+            <p>langMatches(lang(?v), 'en') matches 'abc'@en, 'abc'@en-gb</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -510,7 +510,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-3' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>langMatches(lang(?v), &#39;*&#39;) matches &#39;abc&#39;@en, &#39;abc&#39;@en-gb, &#39;abc&#39;@fr</p>
+            <p>langMatches(lang(?v), '*') matches 'abc'@en, 'abc'@en-gb, 'abc'@fr</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -537,7 +537,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-4' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>! langMatches(lang(?v), &#39;*&#39;) matches &#39;abc&#39;</p>
+            <p>! langMatches(lang(?v), '*') matches 'abc'</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -564,7 +564,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#dawg-langMatches-basic' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>the basic range &#39;de-de&#39; does not match &#39;de-Latn-de&#39;</p>
+            <p>the basic range 'de-de' does not match 'de-Latn-de'</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -591,7 +591,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#lang-case-insensitive-eq' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>&#39;xyz&#39;@en = &#39;xyz&#39;@EN</p>
+            <p>'xyz'@en = 'xyz'@EN</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -618,7 +618,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#lang-case-insensitive-ne' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>&#39;xyz&#39;@en != &#39;xyz&#39;@EN</p>
+            <p>'xyz'@en != 'xyz'@EN</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
