@@ -4,6 +4,7 @@ require 'json/ld'
 require 'haml'
 require 'htmlbeautifier'
 require 'nokogiri'
+require 'rake/clean'
 
 task default: :index
 
@@ -46,12 +47,10 @@ JSON_STATE = {
                   :depth => 0,
   :buffer_initial_length => 1024
 }
-task :force_build do
-  # Exists simply to require tasks to run
-end
 
+CLOBBER.include("test-map.json")
 desc "Build map of test references"
-file "test-map.json" => :force_build do
+file "test-map.json" do
   puts "Generate test-map.json"
   # Test map will be like the following:
   # {
@@ -102,6 +101,8 @@ desc "Build HTML manifests"
 task index: MANIFESTS.
   select {|m| File.exist?(m)}.
   map {|m| m.sub(/manifest(.*)\.ttl$/, 'index\1.html')}
+
+CLOBBER.include(MANIFESTS.map {|ttl| ttl.sub(/manifest(.*)\.ttl$/, 'index\1.html')})
 
 MANIFESTS.each do |ttl|
   html = ttl.sub(/manifest(.*)\.ttl$/, 'index\1.html')
