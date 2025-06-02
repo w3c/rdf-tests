@@ -370,8 +370,8 @@
 <#rdfs-container-membership-superProperty-test001> a mf:NegativeEntailmentTest;
   mf:name "rdfs-container-membership-superProperty-test001";
   rdfs:comment """
-    While it is a superproperty, _:a <rdfs:contains (@@member?)>
-    _:b . does NOT entail _:a <rdf:_n> _:b . for any _n.
+    While it is a superproperty, `_:a <rdfs:contains (@@member?)> _:b .`
+    does NOT entail `_:a <rdf:_n> _:b . for any _n.`
   """;
   rdft:approval rdft:Approved;
   mf:entailmentRegime "RDFS" ;
