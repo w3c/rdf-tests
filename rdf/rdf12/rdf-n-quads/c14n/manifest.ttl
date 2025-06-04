@@ -46,6 +46,10 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
     :literal_with_UTF8_boundaries
     :minimal_whitespace-01
     :minimal_whitespace-02
+    :triple-term-01
+    :triple-term-02
+    :triple-term-03
+    :triple-term-04
     :nq-syntax-uri-01
     :nq-syntax-uri-02
     :nq-syntax-uri-03
@@ -237,6 +241,34 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   rdft:approval rdft:Proposed ;
   mf:action    <minimal_whitespace-01.nq> ;
   mf:result    <minimal_whitespace-01-c14n.nq>;
+  .
+
+:triple-term-01 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N triple-term-01" ;
+  rdfs:comment "Tests canonicalization of triple terms with iri subject and object" ;
+  mf:action    <triple-term-01.nq> ;
+  mf:result    <triple-term-01-c14n.nq>;
+  .
+
+:triple-term-02 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N triple-term-02" ;
+  rdfs:comment "Tests canonicalization of triple terms with iri subject and bnode object" ;
+  mf:action    <triple-term-02.nq> ;
+  mf:result    <triple-term-02-c14n.nq>;
+  .
+
+:triple-term-03 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N triple-term-03" ;
+  rdfs:comment "Tests canonicalization of triple terms with iri subject and literal object" ;
+  mf:action    <triple-term-03.nq> ;
+  mf:result    <triple-term-03-c14n.nq>;
+  .
+
+:triple-term-04 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N triple-term-03" ;
+  rdfs:comment "Tests canonicalization of triple terms with triple term object" ;
+  mf:action    <triple-term-04.nq> ;
+  mf:result    <triple-term-04-c14n.nq>;
   .
 
 :minimal_whitespace-02 rdf:type rdft:TestNQuadsPositiveC14N ;
