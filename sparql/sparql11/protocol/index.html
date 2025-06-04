@@ -121,7 +121,7 @@
             <pre><code>POST /sparql/ HTTP/1.1
 Host: www.example
 User-agent: sparql-client/0.1
-Content-Type: application/x-www-url-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 Content-Length: XXX
 
 query=ASK%20%7B%7D
@@ -771,7 +771,7 @@ true
             <pre><code>POST /sparql/ HTTP/1.1
 Host: www.example
 User-agent: sparql-client/0.1
-Content-Type: application/x-www-url-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 Content-Length: XXX
 
 update=CLEAR%20ALL
@@ -977,8 +977,8 @@ ASK {}
           <a class='testlink' href='#bad_query_missing_form_type'>
             bad_query_missing_form_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-url-form-urlencoded media type</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-url-form-urlencoded media type</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1118,7 +1118,7 @@ ASK {}
             <pre><code>POST /sparql/ HTTP/1.1
 Host: www.example
 User-agent: sparql-client/0.1
-Content-Type: application/x-www-url-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 Content-Length: XXX
 
 update=CLEAR%20NAMED&amp;update=CLEAR%20DEFAULT
@@ -1167,8 +1167,8 @@ CLEAR NAMED
           <a class='testlink' href='#bad_update_missing_form_type'>
             bad_update_missing_form_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-url-form-urlencoded media type</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-url-form-urlencoded media type</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1234,7 +1234,7 @@ CLEAR NAMED
             <pre><code>POST /sparql/ HTTP/1.1
 Host: www.example
 User-agent: sparql-client/0.1
-Content-Type: application/x-www-url-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 Content-Length: XXX
 
 update=CLEAR%20XYZ
@@ -1263,7 +1263,7 @@ update=CLEAR%20XYZ
             <pre><code>POST /sparql/ HTTP/1.1
 Host: www.example
 User-agent: sparql-client/0.1
-Content-Type: application/x-www-url-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 Content-Length: XXX
 
 using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&amp;update=%09%09PREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0A%09%09WITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0A%09%09DELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0A%09%09INSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0A%09%09WHERE%20%7B%0A%09%09%09%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%09%09%7D%0A
