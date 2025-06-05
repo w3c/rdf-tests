@@ -305,7 +305,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   .
 
 :triple-term-04 rdf:type rdft:TestNTriplesPositiveC14N ;
-  mf:name      "C14N triple-term-03" ;
+  mf:name      "C14N triple-term-04" ;
   rdfs:comment "Tests canonicalization of triple terms with triple term object" ;
   mf:action    <triple-term-04.nt> ;
   mf:result    <triple-term-04-c14n.nt>;
