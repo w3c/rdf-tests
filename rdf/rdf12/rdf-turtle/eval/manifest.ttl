@@ -23,127 +23,127 @@ trs:manifest  rdf:type mf:Manifest ;
    rdfs:seeAlso <https://w3c.github.io/rdf-tests/> ;
    dct:modified "2023-07-20"^^xsd:date ;
    dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
-   dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF-star Working Group" ] ;
+   dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF 1.2 Working Group" ] ;
     mf:entries
     (
-        trs:turtle-star-1
-        trs:turtle-star-2
-        trs:turtle-star-3
-        trs:turtle-star-4
-        trs:turtle-star-bnode-1
-        trs:turtle-star-bnode-2
-        trs:turtle-star-annotation-1
-        trs:turtle-star-annotation-2
-        trs:turtle-star-annotation-3
-        trs:turtle-star-annotation-4
-        trs:turtle-star-annotation-5
-        trs:turtle-star-annotation-6
-        trs:turtle-star-annotation-7
-        trs:turtle-star-annotation-8
-        trs:turtle-star-quoted-annotation-1
-        trs:turtle-star-quoted-annotation-2
-        trs:turtle-star-quoted-annotation-3
+        trs:turtle12-1
+        trs:turtle12-2
+        trs:turtle12-3
+        trs:turtle12-4
+        trs:turtle12-bnode-1
+        trs:turtle12-bnode-2
+        trs:turtle12-annotation-1
+        trs:turtle12-annotation-2
+        trs:turtle12-annotation-3
+        trs:turtle12-annotation-4
+        trs:turtle12-annotation-5
+        trs:turtle12-annotation-6
+        trs:turtle12-annotation-7
+        trs:turtle12-annotation-8
+        trs:turtle12-quoted-annotation-1
+        trs:turtle12-quoted-annotation-2
+        trs:turtle12-quoted-annotation-3
     ) .
 
-trs:turtle-star-1 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - subject reification" ;
-   mf:action    <turtle-star-eval-01.ttl> ;
-   mf:result    <turtle-star-eval-01.nt> ;
+trs:turtle12-1 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - subject reification" ;
+   mf:action    <turtle12-eval-01.ttl> ;
+   mf:result    <turtle12-eval-01.nt> ;
    .
 
-trs:turtle-star-2 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - object reification" ;
-   mf:action    <turtle-star-eval-02.ttl> ;
-   mf:result    <turtle-star-eval-02.nt> ;
+trs:turtle12-2 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object reification" ;
+   mf:action    <turtle12-eval-02.ttl> ;
+   mf:result    <turtle12-eval-02.nt> ;
    .
 
-trs:turtle-star-3 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - subject reification with identifier" ;
-   mf:action    <turtle-star-eval-03.ttl> ;
-   mf:result    <turtle-star-eval-03.nt> ;
+trs:turtle12-3 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - subject reification with identifier" ;
+   mf:action    <turtle12-eval-03.ttl> ;
+   mf:result    <turtle12-eval-03.nt> ;
    .
 
-trs:turtle-star-4 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - object reification with identifier" ;
-   mf:action    <turtle-star-eval-04.ttl> ;
-   mf:result    <turtle-star-eval-04.nt> ;
+trs:turtle12-4 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object reification with identifier" ;
+   mf:action    <turtle12-eval-04.ttl> ;
+   mf:result    <turtle12-eval-04.nt> ;
    .
 
-trs:turtle-star-bnode-1 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - blank node label" ;
-   mf:action    <turtle-star-eval-bnode-1.ttl> ;
-   mf:result    <turtle-star-eval-bnode-1.nt> ;
+trs:turtle12-bnode-1 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - blank node label" ;
+   mf:action    <turtle12-eval-bnode-1.ttl> ;
+   mf:result    <turtle12-eval-bnode-1.nt> ;
    .
 
-trs:turtle-star-bnode-2 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - blank node labels" ;
-   mf:action    <turtle-star-eval-bnode-2.ttl> ;
-   mf:result    <turtle-star-eval-bnode-2.nt> ;
+trs:turtle12-bnode-2 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - blank node labels" ;
+   mf:action    <turtle12-eval-bnode-2.ttl> ;
+   mf:result    <turtle12-eval-bnode-2.nt> ;
    .
 
-trs:turtle-star-annotation-1 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation form" ;
-   mf:action    <turtle-star-eval-annotation-1.ttl> ;
-   mf:result    <turtle-star-eval-annotation-1.nt> ;
+trs:turtle12-annotation-1 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form" ;
+   mf:action    <turtle12-eval-annotation-1.ttl> ;
+   mf:result    <turtle12-eval-annotation-1.nt> ;
    .
 
-trs:turtle-star-annotation-2 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation example" ;
-   mf:action    <turtle-star-eval-annotation-2.ttl> ;
-   mf:result    <turtle-star-eval-annotation-2.nt> ;
+trs:turtle12-annotation-2 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation example" ;
+   mf:action    <turtle12-eval-annotation-2.ttl> ;
+   mf:result    <turtle12-eval-annotation-2.nt> ;
    .
 
-trs:turtle-star-annotation-3 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation - predicate and object lists" ;
-   mf:action    <turtle-star-eval-annotation-3.ttl> ;
-   mf:result    <turtle-star-eval-annotation-3.nt> ;
+trs:turtle12-annotation-3 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation - predicate and object lists" ;
+   mf:action    <turtle12-eval-annotation-3.ttl> ;
+   mf:result    <turtle12-eval-annotation-3.nt> ;
    .
 
-trs:turtle-star-annotation-4 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation - nested" ;
-   mf:action    <turtle-star-eval-annotation-4.ttl> ;
-   mf:result    <turtle-star-eval-annotation-4.nt> ;
+trs:turtle12-annotation-4 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation - nested" ;
+   mf:action    <turtle12-eval-annotation-4.ttl> ;
+   mf:result    <turtle12-eval-annotation-4.nt> ;
    .
 
-trs:turtle-star-annotation-5 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation object list" ;
-   mf:action    <turtle-star-eval-annotation-5.ttl> ;
-   mf:result    <turtle-star-eval-annotation-5.nt> ;
+trs:turtle12-annotation-5 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation object list" ;
+   mf:action    <turtle12-eval-annotation-5.ttl> ;
+   mf:result    <turtle12-eval-annotation-5.nt> ;
    .
 
-trs:turtle-star-annotation-6 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation with identifier" ;
-   mf:action    <turtle-star-eval-annotation-6.ttl> ;
-   mf:result    <turtle-star-eval-annotation-6.nt> ;
+trs:turtle12-annotation-6 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation with identifier" ;
+   mf:action    <turtle12-eval-annotation-6.ttl> ;
+   mf:result    <turtle12-eval-annotation-6.nt> ;
    .
 
-trs:turtle-star-annotation-7 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Different annotations have different default identifiers" ;
-   mf:action    <turtle-star-eval-annotation-7.ttl> ;
-   mf:result    <turtle-star-eval-annotation-7.nt> ;
+trs:turtle12-annotation-7 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Different annotations have different default identifiers" ;
+   mf:action    <turtle12-eval-annotation-7.ttl> ;
+   mf:result    <turtle12-eval-annotation-7.nt> ;
    .
 
-trs:turtle-star-annotation-8 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation form with explicit identifier" ;
-   mf:action    <turtle-star-eval-annotation-8.ttl> ;
-   mf:result    <turtle-star-eval-annotation-8.nt> ;
+trs:turtle12-annotation-8 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form with explicit identifier" ;
+   mf:action    <turtle12-eval-annotation-8.ttl> ;
+   mf:result    <turtle12-eval-annotation-8.nt> ;
    .
 
-trs:turtle-star-quoted-annotation-1 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation with quoting" ;
-   mf:action    <turtle-star-eval-quoted-annotation-1.ttl> ;
-   mf:result    <turtle-star-eval-quoted-annotation-1.nt> ;
+trs:turtle12-quoted-annotation-1 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation with quoting" ;
+   mf:action    <turtle12-eval-quoted-annotation-1.ttl> ;
+   mf:result    <turtle12-eval-quoted-annotation-1.nt> ;
    .
    
-trs:turtle-star-quoted-annotation-2 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation on triple with quoted subject" ;
-   mf:action    <turtle-star-eval-quoted-annotation-2.ttl> ;
-   mf:result    <turtle-star-eval-quoted-annotation-2.nt> ;
+trs:turtle12-quoted-annotation-2 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation on triple with quoted subject" ;
+   mf:action    <turtle12-eval-quoted-annotation-2.ttl> ;
+   mf:result    <turtle12-eval-quoted-annotation-2.nt> ;
    .
    
-trs:turtle-star-quoted-annotation-3 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle-star - Annotation on triple with quoted object" ;
-   mf:action    <turtle-star-eval-quoted-annotation-3.ttl> ;
-   mf:result    <turtle-star-eval-quoted-annotation-3.nt> ;
+trs:turtle12-quoted-annotation-3 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation on triple with quoted object" ;
+   mf:action    <turtle12-eval-quoted-annotation-3.ttl> ;
+   mf:result    <turtle12-eval-quoted-annotation-3.nt> ;
    .
 
