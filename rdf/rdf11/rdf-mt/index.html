@@ -5,7 +5,7 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
+      body {background-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -92,11 +92,11 @@
       <p>Tests can be run from the web or by downloading either a <a href="TESTS.tar.gz">tarball</a> or <a href="TESTS.zip">zip file</a>.</p>
       <p>The home of the test suite is <a href="http://www.w3.org/2013/rdf-mt-tests/">http://www.w3.org/2013/rdf-mt-tests/</a>.</p>
       <p>See <a href="http://www.w3.org/2011/rdf-wg/wiki/RDF_Test_Suites">http://www.w3.org/2011/rdf-wg/wiki/RDF_Test_Suites</a> for more details. Per RFC 3986 section 5.1.3, the base IRI for parsing each file is the retrieval IRI for that file, but changing base IRIs should not affect any testing results.</p>
-      <h3 id="contributing-tests">Contributing Tests</h3>
+      <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      <h3 id="distribution">Distribution</h3>
+      <h3 id='distribution'>Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      <h3 id="disclaimer">Disclaimer</h3>
+      <h3 id='disclaimer'>Disclaimer</h3>
       <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
@@ -831,7 +831,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='#rdfs-container-membership-superProperty-test001' typeof='mf:NegativeEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>While it is a superproperty, _:a &lt;rdfs:contains (@@member?)&gt; _:b . does NOT entail _:a <rdf:_n> _:b . for any _n.</rdf:_n></p>
+            <p>While it is a superproperty, <code>_:a &lt;rdfs:contains (@@member?)&gt; _:b .</code> does NOT entail <code>_:a &lt;rdf:_n&gt; _:b . for any _n.</code></p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>

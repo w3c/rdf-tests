@@ -32,7 +32,12 @@ GEM
     logger (1.7.0)
     matrix (0.4.2)
     multi_json (1.15.0)
+    nokogiri (1.18.8-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.8-x86_64-linux-gnu)
+      racc (~> 1.4)
     ostruct (0.6.1)
+    racc (1.8.1)
     rack (3.1.14)
     rake (13.2.1)
     rdf (3.3.2)
@@ -65,6 +70,7 @@ DEPENDENCIES
   json-ld
   kramdown (~> 2.5)
   logger (~> 1.7)
+  nokogiri (~> 1.18)
   ostruct (~> 0.6)
   rake
   rdf-turtle
