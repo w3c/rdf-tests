@@ -13,7 +13,7 @@ PREFIX mf:   <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
 PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 
 :manifest  a mf:Manifest ;
-  rdfs:label "RDF-star N-Quads Canonicalization Test Suite"@en;
+  rdfs:label "RDF 1.2 N-Quads Canonicalization Test Suite"@en;
   rdfs:comment "Tests the generation of canonical N-Quads."@en;
   mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n/> ;
   rdfs:seeAlso <README.md>;
