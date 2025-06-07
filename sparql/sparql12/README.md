@@ -2,5 +2,5 @@
 
 rdf-test area reserved for SPARQL 1.2.
 This will be based on the work of the 
-[RDF-star Working Group](https://www.w3.org/2022/08/rdf-star-wg-charter/).
+[RDF & SPARQL Working Group](https://www.w3.org/2022/08/rdf-star-wg-charter/).
 

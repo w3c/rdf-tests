@@ -77,7 +77,7 @@ MANIFESTS.each do |ttl|
             haml_indent: true,
             ttl: ttl.split('/').last
           )
-        beautified = HtmlBeautifier.beautify(rendered)
+        beautified = HtmlBeautifier.beautify(rendered) + "\n"
         f.write(beautified)
       end
     end

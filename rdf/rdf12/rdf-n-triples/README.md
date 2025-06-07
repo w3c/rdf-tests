@@ -1,4 +1,4 @@
-This README is for the W3C RDF-star Working Group's N-Triples test suite.
+This README is for the W3C RDF & SPARQL Working Group's N-Triples test suite.
 This test suite contains three kinds of tests:
 
 *  Positive syntax (`rdft:TestNTriplesPositiveSyntax`) — an input N-Triples file with no syntax errors.

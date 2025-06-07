@@ -1,4 +1,4 @@
-This README is for the W3C RDF-star Working Group's TrigG test suite.
+This README is for the W3C RDF & SPARQL Working Group's TrigG test suite.
 This test suite contains three kinds of tests:
 
 *  Positive evaluation (`rdft:TestTrigEval`) — a pair of an input TriG file and referenced N-Quads file..
