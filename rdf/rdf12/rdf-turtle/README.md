@@ -1,4 +1,4 @@
-This README is for the W3C RDF-star Working Group's Turtle test suite.
+This README is for the W3C RDF & SPARQL Working Group's Turtle test suite.
 This test suite contains three kinds of tests:
 
 *  Positive evaluation (`rdft:TestTurtleEval`) — a pair of an input Turtle file and referenced N-Quads file..

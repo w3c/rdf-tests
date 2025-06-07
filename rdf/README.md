@@ -1,6 +1,6 @@
 # RDF Test Suites
 
-This test suite is a product previous RDF working groups, the [RDF-star Working Group](https://www.w3.org/groups/wg/rdf-star/), and has been maintained by the [RDF Test Curation Community Group](https://www.w3.org/community/rdf-tests/).
+This test suite is a product previous RDF working groups, the [RDF & SPARQL Working Group](https://www.w3.org/groups/wg/rdf-star/), and has been maintained by the [RDF Test Curation Community Group](https://www.w3.org/community/rdf-tests/).
 
 Community maintained at https://github.com/w3c/rdf-tests/tree/main/rdf.
 
