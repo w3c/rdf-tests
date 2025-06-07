@@ -37,7 +37,7 @@ var localBibliography = {
     "SPARQL11-QUERY": { aliasOf: "sparql11-query" },
     "SPARQL11-ENTAILMENT": { aliasOf: "sparql11-entailment" },
     "SPARQL11-SERVICE-DESCRIPTION": { aliasOf: "sparql11-service-description" },
-    "SPARQL11-TEST-CASE" : "Axel Polleres. <cite><a href=\"http://www.w3.org/2009/sparql/docs/tests/README.html\">SPARQL1.1: Test case structure</a></cite> Informal. URL: <a href=\"http://www.w3.org/2009/sparql/docs/tests/README.html\">http://www.w3.org/2009/sparql/docs/tests/README.html</a>",
+    "SPARQL11-TEST-CASE" : "Axel Polleres. <cite><a href=\"http://www.w3.org/2009/sparql/docs/tests/README.html\">SPARQL 1.1: Test case structure</a></cite> Informal. URL: <a href=\"http://www.w3.org/2009/sparql/docs/tests/README.html\">http://www.w3.org/2009/sparql/docs/tests/README.html</a>",
     "SPARQL11-UPDATE": { aliasOf: "sparql11-update" },
     "XPATH-DATAMODEL-30": { aliasOf: "xpath-datamodel-30" },
     "XPATH-FUNCTIONS-30": { aliasOf: "xpath-functions-30" },
