@@ -32,6 +32,7 @@
     <#rdf-containers-syntax-vs-schema-test007>
     <#rdf-containers-syntax-vs-schema-test008>
     <#rdf-element-not-mandatory-test001>
+    <#rdf-node-element-test001>
     <#rdf-ns-prefix-confusion-test0001>
     <#rdf-ns-prefix-confusion-test0003>
     <#rdf-ns-prefix-confusion-test0004>
@@ -150,6 +151,7 @@
     <#rdfms-reification-required-test001>
     <#rdfms-reification-required-test002>
     <#rdfms-seq-representation-test001>
+    <#rdfms-seq-representation-test002>
     <#rdfms-syntax-incomplete-test001>
     <#rdfms-syntax-incomplete-test002>
     <#rdfms-syntax-incomplete-test003>
@@ -174,6 +176,7 @@
     <#unrecognised-xml-attributes-test001>
     <#unrecognised-xml-attributes-test002>
     <#xml-canon-test001>
+    <#xml-canon-test002>
     <#xmlbase-test001>
     <#xmlbase-test002>
     <#xmlbase-test003>
@@ -355,11 +358,20 @@ properties that may be defined for a resource.
   mf:action <rdf-element-not-mandatory/test001.rdf>;
   mf:result <rdf-element-not-mandatory/test001.nt> .
 
+<#rdf-node-element-test001>  a rdft:TestXMLEval;
+  mf:name "rdf-node-element-test001";
+  rdfs:comment """
+    A node element that does not use rdf:Description creates a type.
+  """;
+  rdft:approval rdft:Approved;
+  mf:action <rdf-node-element/test001.rdf>;
+  mf:result <rdf-node-element/test001.nt> .
+
 <#rdf-ns-prefix-confusion-test0001> a rdft:TestXMLEval;
   mf:name "rdf-ns-prefix-confusion-test0001";
   rdfs:comment """
     RDF attributes that are required to have an rdf: prefix about
-aboutEach ID bagID type resource parseType
+ID type resource parseType
   """;
   rdft:approval rdft:Approved;
   mf:action <rdf-ns-prefix-confusion/test0001.rdf>;
@@ -369,7 +381,7 @@ aboutEach ID bagID type resource parseType
   mf:name "rdf-ns-prefix-confusion-test0003";
   rdfs:comment """
     RDF attributes that are required to have an rdf: prefix about
-aboutEach ID bagID type resource parseType
+ID type resource parseType
   """;
   rdft:approval rdft:Approved;
   mf:action <rdf-ns-prefix-confusion/test0003.rdf>;
@@ -379,7 +391,7 @@ aboutEach ID bagID type resource parseType
   mf:name "rdf-ns-prefix-confusion-test0004";
   rdfs:comment """
     RDF attributes that are required to have an rdf: prefix about
-aboutEach ID bagID type resource parseType
+ID type resource parseType
   """;
   rdft:approval rdft:Approved;
   mf:action <rdf-ns-prefix-confusion/test0004.rdf>;
@@ -473,8 +485,7 @@ xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" attribute.
 <#rdfms-abouteach-error001> a rdft:TestXMLNegativeSyntax;
   mf:name "rdfms-abouteach-error001";
   rdfs:comment """
-    aboutEach removed from the RDF specifications. See URI above
-for further details.
+    aboutEach removed from the RDF specifications.
   """;
   rdft:approval rdft:Approved;
   mf:action <rdfms-abouteach/error001.rdf> .
@@ -482,8 +493,7 @@ for further details.
 <#rdfms-abouteach-error002> a rdft:TestXMLNegativeSyntax;
   mf:name "rdfms-abouteach-error002";
   rdfs:comment """
-    aboutEach removed from the RDF specifications. See URI above
-for further details.
+    aboutEach removed from the RDF specifications.
   """;
   rdft:approval rdft:Approved;
   mf:action <rdfms-abouteach/error002.rdf> .
@@ -1452,6 +1462,15 @@ daml:collection.
   mf:action <rdfms-seq-representation/test001.rdf>;
   mf:result <rdfms-seq-representation/test001.nt> .
 
+<#rdfms-seq-representation-test002> a rdft:TestXMLEval;
+  mf:name "rdfms-seq-representation-test002";
+  rdfs:comment """
+    rdf:parseType="Collection" and rdf:ID.
+  """;
+  rdft:approval rdft:Approved;
+  mf:action <rdfms-seq-representation/test002.rdf>;
+  mf:result <rdfms-seq-representation/test002.nt> .
+
 <#rdfms-syntax-incomplete-test001> a rdft:TestXMLEval;
   mf:name "rdfms-syntax-incomplete-test001";
   rdfs:comment """
@@ -1678,6 +1697,15 @@ ignored.
   rdft:approval rdft:Approved;
   mf:action <xml-canon/test001.rdf>;
   mf:result <xml-canon/test001.nt> .
+
+<#xml-canon-test002> a rdft:TestXMLEval;
+  mf:name "xml-canon-test002";
+  rdfs:comment """
+    Canonicalization of XMLLiterals with reification.
+  """;
+  rdft:approval rdft:Approved;
+  mf:action <xml-canon/test002.rdf>;
+  mf:result <xml-canon/test002.nt> .
 
 <#xmlbase-test001> a rdft:TestXMLEval;
   mf:name "xmlbase-test001";
