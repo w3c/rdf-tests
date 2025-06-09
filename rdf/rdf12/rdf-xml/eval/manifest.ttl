@@ -52,6 +52,12 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:rdf12-xml-an-08
         trs:rdf12-xml-an-09
         trs:rdf12-xml-an-10
+        trs:rdf12-xml-an-11
+        trs:rdf12-xml-an-12
+        trs:rdf12-xml-an-13
+        trs:rdf12-xml-an-14
+        trs:rdf12-xml-an-15
+        trs:rdf12-xml-an-16
     ) .
 
 # Initial Text Direction
@@ -200,3 +206,39 @@ trs:rdf12-xml-an-10 rdf:type rdft:TestXMLEval;
   mf:comment  "Node with recursive annotation";
   mf:action   <rdf12-xml-an-10.rdf>;
   mf:result   <rdf12-xml-an-10.nt> .
+
+trs:rdf12-xml-an-11 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-11";
+  mf:comment  "rdf:annotation and rdf:resource are allowed together on empty property element.";
+  mf:action   <rdf12-xml-an-11.rdf>;
+  mf:result   <rdf12-xml-an-11.nt> .
+
+trs:rdf12-xml-an-12 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-12";
+  mf:comment  "rdf:annotationNodeID and rdf:resource are allowed together on empty property element.";
+  mf:action   <rdf12-xml-an-12.rdf>;
+  mf:result   <rdf12-xml-an-12.nt> .
+
+trs:rdf12-xml-an-13 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-13";
+  mf:comment  """rdf:annotation and parseType="Literal".""";
+  mf:action   <rdf12-xml-an-13.rdf>;
+  mf:result   <rdf12-xml-an-13.nt> .
+
+trs:rdf12-xml-an-14 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-14";
+  mf:comment  """rdf:annotationNodeID and parseType="Literal".""";
+  mf:action   <rdf12-xml-an-14.rdf>;
+  mf:result   <rdf12-xml-an-14.nt> .
+
+trs:rdf12-xml-an-15 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-15";
+  mf:comment  """rdf:annotation and parseType="Collection".""";
+  mf:action   <rdf12-xml-an-15.rdf>;
+  mf:result   <rdf12-xml-an-15.nt> .
+
+trs:rdf12-xml-an-16 rdf:type rdft:TestXMLEval;
+  mf:name     "rdf12-xml-an-16";
+  mf:comment  """rdf:annotationNodeID and parseType="Collection".""";
+  mf:action   <rdf12-xml-an-16.rdf>;
+  mf:result   <rdf12-xml-an-16.nt> .
