@@ -63,7 +63,7 @@
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
       </p>
-      <p>This page describes W3C SPARQL Working Group&#39;s SPARQL 1.0 test suite.</p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.</p>
       <p><strong>$HOST$</strong> is the host where the Graph Store Protocol implementation is listening</p>
       <p><strong>$GRAPHSTORE$</strong> is the path of the URL of the graph store</p>
       <p><strong>$NEWPATH$</strong> is the URL returned in the Location HTTP header</p>
@@ -78,7 +78,7 @@ Body
       <h3 id='distribution'>Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
       <h3 id='disclaimer'>Disclaimer</h3>
-      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED &quot;AS IS,&quot; AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
     <div>
@@ -94,7 +94,7 @@ Body
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__initial_state' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
@@ -105,10 +105,10 @@ Content-Type: text/turtle; charset=utf-8
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:fn &quot;John Doe&quot;
+        v:fn "John Doe"
     ].
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <p><code>201 Created</code></p>
           </div>
           <dl class='test-detail'>
@@ -130,12 +130,12 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__initial_state' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $GRAPHSTORE$?graph=$GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -143,7 +143,7 @@ Content-Length: ...
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
    foaf:businessCard [
         a v:VCard;
-        v:fn &quot;John Doe&quot;
+        v:fn "John Doe"
    ].
 </code></pre>
           </div>
@@ -166,7 +166,7 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__graph_already_in_store' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
@@ -177,10 +177,10 @@ Content-Type: text/turtle; charset=utf-8
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:fn &quot;Jane Doe&quot;
+        v:fn "Jane Doe"
     ].
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>204 No Content
 </code></pre>
           </div>
@@ -203,12 +203,12 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__graph_already_in_store' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -219,7 +219,7 @@ Content-Length: ...
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
    foaf:businessCard [
         a v:VCard;
-        v:fn &quot;Jane Doe&quot;
+        v:fn "Jane Doe"
    ] .
 </code></pre>
           </div>
@@ -242,7 +242,7 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__default_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>PUT $GRAPHSTORE$?default HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
@@ -253,10 +253,10 @@ Content-Type: text/turtle; charset=utf-8
 []  a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:given-name &quot;Alice&quot;
+        v:given-name "Alice"
     ] .
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>201 Created
 </code></pre>
           </div>
@@ -279,12 +279,12 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__default_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $GRAPHSTORE$?default HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -295,7 +295,7 @@ Content-Length: ...
 []  a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:given-name &quot;Alice&quot;
+        v:given-name "Alice"
     ] .
 </code></pre>
           </div>
@@ -318,7 +318,7 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__mismatched_payload' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
@@ -329,10 +329,10 @@ Content-Type: text/turtle; charset=utf-8
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:fn &quot;Jane Doe&quot;
+        v:fn "Jane Doe"
     ].
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>400 Bad Request
 </code></pre>
           </div>
@@ -355,11 +355,11 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 </code></pre>
           </div>
@@ -382,11 +382,11 @@ Host: $HOST$
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_delete__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $GRAPHSTORE$/person/2.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>404 Not Found
 </code></pre>
           </div>
@@ -409,11 +409,11 @@ Host: $HOST$
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__nonexistent_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>404 Not Found
 </code></pre>
           </div>
@@ -456,16 +456,16 @@ Host: $HOST$
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
 
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
 
-&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:name &quot;Jane Doe&quot;
+&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:name "Jane Doe"
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 </code></pre>
           </div>
@@ -488,28 +488,28 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__multipart_formdata' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Content-Type: multipart/form-data; boundary=a6fe4cd636164618814be9f8d3d1a0de
 
 --a6fe4cd636164618814be9f8d3d1a0de
-Content-Disposition: form-data; name=&quot;lastName.ttl&quot;; filename=&quot;lastName.ttl&quot;
+Content-Disposition: form-data; name="lastName.ttl"; filename="lastName.ttl"
 Content-Type: text/turtle; charset=utf-8
 
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:familyName &quot;Doe&quot;
+&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:familyName "Doe"
 
 --a6fe4cd636164618814be9f8d3d1a0de
-Content-Disposition: form-data; name=&quot;firstName.ttl&quot;; filename=&quot;firstName.ttl&quot;
+Content-Disposition: form-data; name="firstName.ttl"; filename="firstName.ttl"
 Content-Type: text/turtle; charset=utf-8
 
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:givenName &quot;Jane&quot;
+&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:givenName "Jane"
 
 --a6fe4cd636164618814be9f8d3d1a0de--
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 </code></pre>
           </div>
@@ -532,11 +532,11 @@ Content-Type: text/turtle; charset=utf-8
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__multipart_formdata' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -545,12 +545,12 @@ Content-Length: ...
 @prefix v: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
 
 &lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
-    foaf:name           &quot;Jane Doe&quot;;
-    foaf:givenName      &quot;Jane&quot;;
-    foaf:familyName     &quot;Doe&quot;;
+    foaf:name           "Jane Doe";
+    foaf:givenName      "Jane";
+    foaf:familyName     "Doe";
     foaf:businessCard [
         a               v:VCard;
-        v:fn            &quot;Jane Doe&quot;
+        v:fn            "Jane Doe"
     ] .
 </code></pre>
           </div>
@@ -573,7 +573,7 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__create__new_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>POST $GRAPHSTORE$ HTTP/1.1
 Host: $HOST$
 Content-Type: text/turtle; charset=utf-8
@@ -584,10 +584,10 @@ Content-Type: text/turtle; charset=utf-8
 []  a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:given-name &quot;Alice&quot;
+        v:given-name "Alice"
     ] .
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>201 Created
 Location: $NEWPATH$
 </code></pre>
@@ -611,12 +611,12 @@ Location: $NEWPATH$
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__create__new_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $NEWPATH$ HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -627,7 +627,7 @@ Content-Length: ...
 []  a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:given-name &quot;Alice&quot;
+        v:given-name "Alice"
     ] .
 </code></pre>
           </div>
@@ -650,12 +650,12 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__after_noop' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>GET $NEWPATH$ HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -666,7 +666,7 @@ Content-Length: ...
 []  a foaf:Person;
     foaf:businessCard [
         a v:VCard;
-        v:given-name &quot;Alice&quot;
+        v:given-name "Alice"
     ] .
 </code></pre>
           </div>
@@ -689,11 +689,11 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_an_existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>HEAD $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>200 OK
 Content-Type: text/turtle; charset=utf-8
 Content-Length: ...
@@ -718,11 +718,11 @@ Content-Length: ...
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_a_nonexisting_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
-            <h4>Request</h4>
+            <h4 id="request">Request</h4>
             <pre><code>HEAD $GRAPHSTORE$/person/4.ttl HTTP/1.1
 Host: $HOST$
 </code></pre>
-            <h4>Response</h4>
+            <h4 id="response">Response</h4>
             <pre><code>404 Not Found
 </code></pre>
           </div>
