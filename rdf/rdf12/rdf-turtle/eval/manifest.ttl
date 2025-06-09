@@ -32,6 +32,10 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-4
         trs:turtle12-bnode-1
         trs:turtle12-bnode-2
+        trs:turtle12-tt-01
+        trs:turtle12-tt-02
+        trs:turtle12-tt-03
+        trs:turtle12-tt-04
         trs:turtle12-annotation-1
         trs:turtle12-annotation-2
         trs:turtle12-annotation-3
@@ -79,6 +83,30 @@ trs:turtle12-bnode-2 rdf:type rdft:TestTurtleEval ;
    mf:name      "Turtle 1.2 - blank node labels" ;
    mf:action    <turtle12-eval-bnode-2.ttl> ;
    mf:result    <turtle12-eval-bnode-2.nt> ;
+   .
+
+trs:turtle12-tt-01 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object triple term" ;
+   mf:action    <turtle12-eval-tt-01.ttl> ;
+   mf:result    <turtle12-eval-tt-01.nt> ;
+   .
+
+trs:turtle12-tt-02 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object triple term, no whitespace" ;
+   mf:action    <turtle12-eval-tt-02.ttl> ;
+   mf:result    <turtle12-eval-tt-02.nt> ;
+   .
+
+trs:turtle12-tt-03 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Nested, no whitespace" ;
+   mf:action    <turtle12-eval-tt-03.ttl> ;
+   mf:result    <turtle12-eval-tt-03.nt> ;
+   .
+
+trs:turtle12-tt-04 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Nested object term" ;
+   mf:action    <turtle12-eval-tt-04.ttl> ;
+   mf:result    <turtle12-eval-tt-04.nt> ;
    .
 
 trs:turtle12-annotation-1 rdf:type rdft:TestTurtleEval ;
