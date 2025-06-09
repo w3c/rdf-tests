@@ -48,6 +48,10 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-annotation-06
         trs:turtle12-annotation-07
         trs:turtle12-annotation-08
+        trs:turtle12-annotation-09
+        trs:turtle12-annotation-10
+        trs:turtle12-annotation-11
+        trs:turtle12-annotation-12
         trs:turtle12-quoted-annotation-01
         trs:turtle12-quoted-annotation-02
         trs:turtle12-quoted-annotation-03
@@ -183,6 +187,30 @@ trs:turtle12-annotation-08 rdf:type rdft:TestTurtleEval ;
    mf:name      "Turtle 1.2 - Annotation form with explicit identifier" ;
    mf:action    <turtle12-eval-annotation-08.ttl> ;
    mf:result    <turtle12-eval-annotation-08.nt> ;
+   .
+
+trs:turtle12-annotation-09 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form with multiple reifiers" ;
+   mf:action    <turtle12-eval-annotation-09.ttl> ;
+   mf:result    <turtle12-eval-annotation-09.nt> ;
+   .
+
+trs:turtle12-annotation-10 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form with multiple annotation blocks" ;
+   mf:action    <turtle12-eval-annotation-10.ttl> ;
+   mf:result    <turtle12-eval-annotation-10.nt> ;
+   .
+
+trs:turtle12-annotation-11 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form with annotation block followed by reifier" ;
+   mf:action    <turtle12-eval-annotation-11.ttl> ;
+   mf:result    <turtle12-eval-annotation-11.nt> ;
+   .
+
+trs:turtle12-annotation-12 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation form with alternating reifiers and annotation blocks" ;
+   mf:action    <turtle12-eval-annotation-12.ttl> ;
+   mf:result    <turtle12-eval-annotation-12.nt> ;
    .
 
 trs:turtle12-quoted-annotation-01 rdf:type rdft:TestTurtleEval ;
