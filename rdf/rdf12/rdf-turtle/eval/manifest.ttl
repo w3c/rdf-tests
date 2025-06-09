@@ -30,6 +30,10 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-rt-02
         trs:turtle12-rt-03
         trs:turtle12-rt-04
+        trs:turtle12-rt-05
+        trs:turtle12-rt-06
+        trs:turtle12-rt-07
+        trs:turtle12-rt-08
         trs:turtle12-bnode-01
         trs:turtle12-bnode-02
         trs:turtle12-tt-01
@@ -71,6 +75,30 @@ trs:turtle12-rt-04 rdf:type rdft:TestTurtleEval ;
    mf:name      "Turtle 1.2 - object reification with identifier" ;
    mf:action    <turtle12-eval-rt-04.ttl> ;
    mf:result    <turtle12-eval-rt-04.nt> ;
+   .
+
+trs:turtle12-rt-05 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - subject reification with bnode identifier" ;
+   mf:action    <turtle12-eval-rt-05.ttl> ;
+   mf:result    <turtle12-eval-rt-05.nt> ;
+   .
+
+trs:turtle12-rt-06 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object reification with bnode identifier" ;
+   mf:action    <turtle12-eval-rt-06.ttl> ;
+   mf:result    <turtle12-eval-rt-06.nt> ;
+   .
+
+trs:turtle12-rt-07 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - subject reification with empty identifier" ;
+   mf:action    <turtle12-eval-rt-07.ttl> ;
+   mf:result    <turtle12-eval-rt-07.nt> ;
+   .
+
+trs:turtle12-rt-08 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - object reification with empty identifier" ;
+   mf:action    <turtle12-eval-rt-08.ttl> ;
+   mf:result    <turtle12-eval-rt-08.nt> ;
    .
 
 trs:turtle12-bnode-01 rdf:type rdft:TestTurtleEval ;
