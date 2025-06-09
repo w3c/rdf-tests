@@ -10,28 +10,28 @@ task default: :index
 
 MANIFESTS = Dir.glob("**/manifest*.ttl").reject {|f| f.include?('-az')}
 
-SPECS = %w(
-  https://w3c.github.io/rdf-concepts/spec/index.html
-  https://w3c.github.io/rdf-n-quads/spec/index.html
-  https://w3c.github.io/rdf-n-triples/spec/index.html
-  https://w3c.github.io/rdf-schema/spec/index.html
-  https://w3c.github.io/rdf-semantics/spec/index.html
-  https://w3c.github.io/rdf-trig/spec/index.html
-  https://w3c.github.io/rdf-turtle/spec/index.html
-  https://w3c.github.io/rdf-xml/spec/index.html
+SPECS = {
+  "rdf-concepts/spec/index.html"  => "FIXME",
+  "rdf-n-quads/spec/index.html"   => "rdf/rdf12/rdf-n-quads/",
+  "rdf-n-triples/spec/index.html" => "rdf/rdf12/rdf-n-triples/",
+  "rdf-schema/spec/index.html"    => "FIXME",
+  "rdf-semantics/spec/index.html" => "rdf/rdf12/rdf-semantics/",
+  "rdf-trig/spec/index.html"      => "rdf/rdf12/rdf-trig/",
+  "rdf-turtle/spec/index.html"    => "rdf/rdf12/rdf-turtle/",
+  "rdf-xml/spec/index.html"       => "rdf/rdf12/rdf-xml/",
 
-  https://w3c.github.io/sparql-concepts/spec/index.html
-  https://w3c.github.io/sparql-entailment/spec/index.html
-  https://w3c.github.io/sparql-federated-query/spec/index.html
-  https://w3c.github.io/sparql-graph-store-protocol/spec/index.html
-  https://w3c.github.io/sparql-protocol/spec/index.html
-  https://w3c.github.io/sparql-query/spec/index.html
-  https://w3c.github.io/sparql-results-csv-tsv/spec/index.html
-  https://w3c.github.io/sparql-results-json/spec/index.html
-  https://w3c.github.io/sparql-results-xml/spec/index.html
-  https://w3c.github.io/sparql-service-description/spec/index.html
-  https://w3c.github.io/sparql-update/spec/index.html
-)
+  "sparql-concepts/spec/index.html"             => "",
+  "sparql-entailment/spec/index.html"           => "",
+  "sparql-federated-query/spec/index.html"      => "",
+  "sparql-graph-store-protocol/spec/index.html" => "",
+  "sparql-protocol/spec/index.html"             => "",
+  "sparql-query/spec/index.html"                => "",
+  "sparql-results-csv-tsv/spec/index.html"      => "",
+  "sparql-results-json/spec/index.html"         => "",
+  "sparql-results-xml/spec/index.html"          => "",
+  "sparql-service-description/spec/index.html"  => "",
+  "sparql-update/spec/index.html"               => ""
+}
 
 JSON_STATE = {
                  :indent => "  ",
@@ -62,7 +62,9 @@ file "test-map.json" do
   # }
   test_map = {}
   failed = false
-  SPECS.each do |spec|
+  SPECS.each do |spec, ts|
+    spec = "https://w3c.github.io/#{spec}"
+    ts = RDF::URI("https://w3c.github.io/rdf-tests/#{ts}")
     puts "  Spec: #{spec}"
     RDF::Util::File.open_file(spec) do |f|
       dom = Nokogiri::HTML.parse(f)
@@ -78,6 +80,7 @@ file "test-map.json" do
           .each do |ref|
 
             man, anchor = ref.split('#')
+            man = ts.join(man).to_s.sub('https://w3c.github.io/rdf-tests/', '')
             ((test_map[man] ||= {})[anchor] ||= []) << "#{spec}##{id}"
         end
       end

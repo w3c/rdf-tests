@@ -93,9 +93,10 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            %dt{id: test['@id'].split('#').last}
-              %a.testlink{href: "##{test['@id'].split('#').last}"}
-                = "#{test['@id'].split('#').last}:"
+            - test_id = test['@id'].split('#').last
+            %dt{id: test_id}
+              %a.testlink{href: "##{test_id}"}
+                = "#{test_id}:"
               %span{about: test['@id'], property: "mf:name"}<~test['name']
             %dd{property: "mf:entry", inlist: true, resource: test['@id'], typeof: test['@type']}
               %div{property: "rdfs:comment"}

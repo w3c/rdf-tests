@@ -94,9 +94,10 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            %dt{id: test['@id'][1..-1]}
-              %a.testlink{href: "#{test['@id']}"}
-                = "#{test['@id'][1..-1]}:"
+            - test_id = test['@id'].split('#').last
+            %dt{id: test_id}
+              %a.testlink{href: "##{test_id}"}
+                = "#{test_id}:"
               %span{about: test['@id'], property: "mf:name"}<~test['name']
             %dd{property: "mf:entry", inlist: true, resource: test['@id'], typeof: test['@type']}
               %div{property: "rdfs:comment"}
@@ -110,10 +111,10 @@
                 %dd<~test['@type']
                 %dt="approval"
                 %dd{property: "mf:approval", resource: test['approval']}<~test['approval']
-                - if test_map[test['@id'][1..-1]]
+                - if test_map[test_id]
                   %dt="references"
                   %dd
-                    - links = test_map[test['@id'][1..-1]].map.with_index {|l, r| %(<a href="#{l}">#{r+1}</a>)}
+                    - links = test_map[test_id].map.with_index {|l, r| %(<a href="#{l}">#{r+1}</a>)}
                     != "(#{links.join(' ')})"
 
                 - if test['action']
