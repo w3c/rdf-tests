@@ -43,6 +43,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
     :literal_with_REVERSE_SOLIDUS2
     :literal_with_squote
     :literal_with_string_dt
+    :literal_with_extra_whitespace
     :literal_with_UTF8_boundaries
     :minimal_whitespace-01
     :minimal_whitespace-02
@@ -233,6 +234,14 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   rdft:approval rdft:Proposed ;
   mf:action    <literal_with_UTF8_boundaries.nq> ;
   mf:result    <literal_with_UTF8_boundaries-c14n.nq>;
+  .
+
+:literal_with_extra_whitespace rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N literal_with_extra_whitespace" ;
+  rdfs:comment "Tests canonicalization of quads with literals having extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_with_extra_whitespace.nq> ;
+  mf:result    <literal_with_extra_whitespace-c14n.nq>;
   .
 
 :minimal_whitespace-01 rdf:type rdft:TestNQuadsPositiveC14N ;
