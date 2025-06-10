@@ -21,7 +21,7 @@ trs:manifest  rdf:type mf:Manifest ;
    mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval/> ;
    dct:issued "2023-07-20"^^xsd:date ;
    rdfs:seeAlso <https://w3c.github.io/rdf-tests/> ;
-   dct:modified "2023-07-20"^^xsd:date ;
+   dct:modified "2025-06-10"^^xsd:date ;
    dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
    dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
     mf:entries
@@ -52,9 +52,9 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-annotation-10
         trs:turtle12-annotation-11
         trs:turtle12-annotation-12
-        trs:turtle12-quoted-annotation-01
-        trs:turtle12-quoted-annotation-02
-        trs:turtle12-quoted-annotation-03
+        trs:turtle12-reified-triples-annotation-01
+        trs:turtle12-reified-triples-annotation-02
+        trs:turtle12-reified-triples-annotation-03
     ) .
 
 trs:turtle12-rt-01 rdf:type rdft:TestTurtleEval ;
@@ -213,21 +213,21 @@ trs:turtle12-annotation-12 rdf:type rdft:TestTurtleEval ;
    mf:result    <turtle12-eval-annotation-12.nt> ;
    .
 
-trs:turtle12-quoted-annotation-01 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle 1.2 - Annotation with quoting" ;
-   mf:action    <turtle12-eval-quoted-annotation-01.ttl> ;
-   mf:result    <turtle12-eval-quoted-annotation-01.nt> ;
+trs:turtle12-reified-triples-annotation-01 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation with reified triples" ;
+   mf:action    <turtle12-eval-reified-triples-annotation-01.ttl> ;
+   mf:result    <turtle12-eval-reified-triples-annotation-01.nt> ;
    .
    
-trs:turtle12-quoted-annotation-02 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle 1.2 - Annotation on triple with quoted subject" ;
-   mf:action    <turtle12-eval-quoted-annotation-02.ttl> ;
-   mf:result    <turtle12-eval-quoted-annotation-02.nt> ;
+trs:turtle12-reified-triples-annotation-02 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation on triple with reified triple subject" ;
+   mf:action    <turtle12-eval-reified-triples-annotation-02.ttl> ;
+   mf:result    <turtle12-eval-reified-triples-annotation-02.nt> ;
    .
    
-trs:turtle12-quoted-annotation-03 rdf:type rdft:TestTurtleEval ;
-   mf:name      "Turtle 1.2 - Annotation on triple with quoted object" ;
-   mf:action    <turtle12-eval-quoted-annotation-03.ttl> ;
-   mf:result    <turtle12-eval-quoted-annotation-03.nt> ;
+trs:turtle12-reified-triples-annotation-03 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Annotation on triple with reified triple object" ;
+   mf:action    <turtle12-eval-reified-triples-annotation-03.ttl> ;
+   mf:result    <turtle12-eval-reified-triples-annotation-03.nt> ;
    .
 
