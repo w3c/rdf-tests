@@ -5,7 +5,7 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
+      body {background-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -63,7 +63,7 @@
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
       </p>
-      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.</p>
       <h3 id="configuration">Configuration</h3>
       <p>When accessed without any query parameters, the CGI provides an HTML form that
         may be used to validate a Protocol implementation. The parameters are:</p>
@@ -95,11 +95,11 @@
       </ul>
       <p>Finally, it is assumed that implementations can produce application/rdf+xml and
         application/sparql-results+xml when requested using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html">conneg</a>.</p>
-      <h3 id="contributing-tests">Contributing Tests</h3>
+      <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      <h3 id="distribution">Distribution</h3>
+      <h3 id='distribution'>Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      <h3 id="disclaimer">Disclaimer</h3>
+      <h3 id='disclaimer'>Disclaimer</h3>
       <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
@@ -112,7 +112,6 @@
           <a class='testlink' href='#query_post_form'>
             query_post_form:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' property='mf:name'>query via URL-encoded POST</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' property='mf:name'>query via URL-encoded POST</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' typeof='mf:ProtocolTest'>
@@ -145,7 +144,6 @@ true
             query_dataset_default_graphs_get:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' property='mf:name'>GET query with protocol-specified default graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' property='mf:name'>GET query with protocol-specified default graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -172,7 +170,6 @@ true
           <a class='testlink' href='#query_dataset_default_graphs_post'>
             query_dataset_default_graphs_post:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' property='mf:name'>POST query with protocol-specified default graphs</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' property='mf:name'>POST query with protocol-specified default graphs</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' typeof='mf:ProtocolTest'>
@@ -205,7 +202,6 @@ true
             query_dataset_named_graphs_post:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' property='mf:name'>POST query with protocol-specified named graphs</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' property='mf:name'>POST query with protocol-specified named graphs</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -237,7 +233,6 @@ true
             query_dataset_named_graphs_get:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' property='mf:name'>GET query with protocol-specified named graphs</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' property='mf:name'>GET query with protocol-specified named graphs</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -264,7 +259,6 @@ true
           <a class='testlink' href='#query_dataset_full'>
             query_dataset_full:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' property='mf:name'>query with protocol-specified dataset (both named and default graphs)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' property='mf:name'>query with protocol-specified dataset (both named and default graphs)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' typeof='mf:ProtocolTest'>
@@ -297,7 +291,6 @@ true
             query_multiple_dataset:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' property='mf:name'>query specifying dataset in both query string and protocol; test for use of protocol-specified dataset</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' property='mf:name'>query specifying dataset in both query string and protocol; test for use of protocol-specified dataset</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -329,7 +322,6 @@ true
             query_get:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' property='mf:name'>query via GET</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' property='mf:name'>query via GET</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -354,7 +346,6 @@ true
           <a class='testlink' href='#query_content_type_select'>
             query_content_type_select:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' property='mf:name'>query appropriate content type (expect one of: XML, JSON, CSV, TSV)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' property='mf:name'>query appropriate content type (expect one of: XML, JSON, CSV, TSV)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' typeof='mf:ProtocolTest'>
@@ -385,7 +376,6 @@ Content-Type: application/sparql-results+xml, application/sparql-results+json, t
             query_content_type_ask:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' property='mf:name'>query appropriate content type (expect one of: XML, JSON)</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' property='mf:name'>query appropriate content type (expect one of: XML, JSON)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -414,7 +404,6 @@ Content-Type: application/sparql-results+xml or application/sparql-results+json
           <a class='testlink' href='#query_content_type_describe'>
             query_content_type_describe:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' typeof='mf:ProtocolTest'>
@@ -445,7 +434,6 @@ Content-Type: application/rdf+xml, application/rdf+json or text/turtle
             query_content_type_construct:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -474,7 +462,6 @@ Content-Type: application/rdf+xml, application/rdf+json or text/turtle
           <a class='testlink' href='#update_dataset_default_graph'>
             update_dataset_default_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' property='mf:name'>update with protocol-specified default graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' property='mf:name'>update with protocol-specified default graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' typeof='mf:ProtocolTest'>
@@ -539,7 +526,6 @@ true
           <a class='testlink' href='#update_dataset_default_graphs'>
             update_dataset_default_graphs:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' property='mf:name'>update with protocol-specified default graphs</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' property='mf:name'>update with protocol-specified default graphs</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' typeof='mf:ProtocolTest'>
@@ -610,7 +596,6 @@ true
           <a class='testlink' href='#update_dataset_named_graphs'>
             update_dataset_named_graphs:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' property='mf:name'>update with protocol-specified named graphs</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' property='mf:name'>update with protocol-specified named graphs</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' typeof='mf:ProtocolTest'>
@@ -683,7 +668,6 @@ true
           <a class='testlink' href='#update_dataset_full'>
             update_dataset_full:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' property='mf:name'>update with protocol-specified dataset (both named and default graphs)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' property='mf:name'>update with protocol-specified dataset (both named and default graphs)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' typeof='mf:ProtocolTest'>
@@ -763,7 +747,6 @@ true
             update_post_form:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' property='mf:name'>update via URL-encoded POST</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' property='mf:name'>update via URL-encoded POST</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -792,7 +775,6 @@ update=CLEAR%20ALL
             update_post_direct:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' property='mf:name'>update via POST directly</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' property='mf:name'>update via POST directly</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -820,7 +802,6 @@ CLEAR ALL
           <a class='testlink' href='#update_base_uri'>
             update_base_uri:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' property='mf:name'>test for service-defined BASE URI (&quot;which MAY be the service endpoint&quot;)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' property='mf:name'>test for service-defined BASE URI (&quot;which MAY be the service endpoint&quot;)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' typeof='mf:ProtocolTest'>
@@ -871,7 +852,6 @@ one result with `?o` bound to an IRI that is _not_ `&lt;test&gt;`
             query_post_direct:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' property='mf:name'>query via POST directly</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' property='mf:name'>query via POST directly</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -903,7 +883,6 @@ true
             bad_query_method:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' property='mf:name'>invoke query operation with a method other than GET or POST</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' property='mf:name'>invoke query operation with a method other than GET or POST</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -926,7 +905,6 @@ true
             bad_multiple_queries:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' property='mf:name'>invoke query operation with more than one query string</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' property='mf:name'>invoke query operation with more than one query string</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -948,7 +926,6 @@ true
           <a class='testlink' href='#bad_query_wrong_media_type'>
             bad_query_wrong_media_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' property='mf:name'>invoke query operation with a POST with media type that&#39;s not url-encoded or application/sparql-query</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' property='mf:name'>invoke query operation with a POST with media type that&#39;s not url-encoded or application/sparql-query</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' typeof='mf:ProtocolTest'>
@@ -978,7 +955,6 @@ ASK {}
             bad_query_missing_form_type:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1006,7 +982,6 @@ query=ASK%20%7B%7D
             bad_query_missing_direct_type:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' property='mf:name'>invoke query operation with SPARQL body, but without application/sparql-query media type</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' property='mf:name'>invoke query operation with SPARQL body, but without application/sparql-query media type</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1033,7 +1008,6 @@ ASK {}
           <a class='testlink' href='#bad_query_non_utf8'>
             bad_query_non_utf8:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' property='mf:name'>invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' property='mf:name'>invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' typeof='mf:ProtocolTest'>
@@ -1064,7 +1038,6 @@ ASK {}
             bad_query_syntax:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' property='mf:name'>invoke query operation with invalid query syntax (4XX result)</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' property='mf:name'>invoke query operation with invalid query syntax (4XX result)</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1087,7 +1060,6 @@ ASK {}
             bad_update_get:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' property='mf:name'>invoke update operation with GET</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' property='mf:name'>invoke update operation with GET</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1109,7 +1081,6 @@ ASK {}
           <a class='testlink' href='#bad_multiple_updates'>
             bad_multiple_updates:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' property='mf:name'>invoke update operation with more than one update string</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' property='mf:name'>invoke update operation with more than one update string</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' typeof='mf:ProtocolTest'>
@@ -1139,7 +1110,6 @@ update=CLEAR%20NAMED&amp;update=CLEAR%20DEFAULT
             bad_update_wrong_media_type:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' property='mf:name'>invoke update operation with a POST with media type that&#39;s not url-encoded or application/sparql-update</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' property='mf:name'>invoke update operation with a POST with media type that&#39;s not url-encoded or application/sparql-update</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1168,7 +1138,6 @@ CLEAR NAMED
             bad_update_missing_form_type:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1195,7 +1164,6 @@ update=CLEAR%20NAMED
           <a class='testlink' href='#bad_update_non_utf8'>
             bad_update_non_utf8:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' property='mf:name'>invoke update operation with direct POST, but with a non-UTF8 encoding</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' property='mf:name'>invoke update operation with direct POST, but with a non-UTF8 encoding</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' typeof='mf:ProtocolTest'>
@@ -1226,7 +1194,6 @@ CLEAR NAMED
             bad_update_syntax:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' property='mf:name'>invoke update operation with invalid update syntax</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' property='mf:name'>invoke update operation with invalid update syntax</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
@@ -1254,7 +1221,6 @@ update=CLEAR%20XYZ
           <a class='testlink' href='#bad_update_dataset_conflict'>
             bad_update_dataset_conflict:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' property='mf:name'>invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' property='mf:name'>invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' typeof='mf:ProtocolTest'>

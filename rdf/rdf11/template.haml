@@ -6,7 +6,7 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %link{rel: "stylesheet", type: "text/css", href: "https://www.w3.org/StyleSheets/TR/base"}
     :css
-      body: {bacground-image: none;}
+      body {background-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -63,19 +63,21 @@
         %p{property: "rdfs:comment"}
           :markdown
             #{Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')}
-
-      :markdown
+      %p
         This page describes W3C RDF 1.1 Working Group's test suite.
 
-        ### Contributing Tests
+      %h3#contributing-tests="Contributing Tests"
+      :markdown
         The test manifests and entries are built automatically from [manifest.ttl](manifest.ttl) using a Rake task. Tests may be contributed via pull request to [https://github.com/w3c/rdf-tests](https://github.com/w3c/rdf-tests) with suitable changes to the [manifest.ttl](manifest.ttl) and referenced files.
 
-        ### Distribution
-          Distributed under both the [W3C Test Suite License](http://www.w3.org/Consortium/Legal/2008/04-testsuite-license) and the [W3C 3-clause BSD License](http://www.w3.org/Consortium/Legal/2008/03-bsd-license). To contribute to a W3C Test Suite, see the [policies and contribution forms](http://www.w3.org/2004/10/27-testcases).
+      %h3#distribution="Distribution"
+      :markdown
+        Distributed under both the [W3C Test Suite License](http://www.w3.org/Consortium/Legal/2008/04-testsuite-license) and the [W3C 3-clause BSD License](http://www.w3.org/Consortium/Legal/2008/03-bsd-license). To contribute to a W3C Test Suite, see the [policies and contribution forms](http://www.w3.org/2004/10/27-testcases).
 
-        ### Disclaimer
-          UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
-          COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.
+      %h3#disclaimer="Disclaimer"
+      :markdown
+        UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.
 
     - if man['include']
       %div
@@ -92,9 +94,10 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            %dt{id: test['@id'][1..-1]}
-              %a.testlink{href: "#{test['@id']}"}
-                = "#{test['@id'][1..-1]}:"
+            - test_id = test['@id'].split('#').last
+            %dt{id: test_id}
+              %a.testlink{href: "##{test_id}"}
+                = "#{test_id}:"
               %span{about: test['@id'], property: "mf:name"}<~test['name']
             %dd{property: "mf:entry", inlist: true, resource: test['@id'], typeof: test['@type']}
               %div{property: "rdfs:comment"}
@@ -108,6 +111,12 @@
                 %dd<~test['@type']
                 %dt="approval"
                 %dd{property: "mf:approval", resource: test['approval']}<~test['approval']
+                - if test_map[test_id]
+                  %dt="references"
+                  %dd
+                    - links = test_map[test_id].map.with_index {|l, r| %(<a href="#{l}">#{r+1}</a>)}
+                    != "(#{links.join(' ')})"
+
                 - if test['action']
                   %dt="action"
                   %dd

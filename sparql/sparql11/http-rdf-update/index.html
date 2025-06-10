@@ -5,7 +5,7 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
-      body: {bacground-image: none;}
+      body {background-image: none;}
       dl.editor>dd {
         margin: 0 0 0 40px;
       }
@@ -63,7 +63,7 @@
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
       </p>
-      <p>This page describes W3C SPARQL Working Group's SPARQL1.0 test suite.</p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.</p>
       <p><strong>$HOST$</strong> is the host where the Graph Store Protocol implementation is listening</p>
       <p><strong>$GRAPHSTORE$</strong> is the path of the URL of the graph store</p>
       <p><strong>$NEWPATH$</strong> is the URL returned in the Location HTTP header</p>
@@ -73,11 +73,11 @@ Headers
 &lt;space&gt;
 Body                    
 </code></pre>
-      <h3 id="contributing-tests">Contributing Tests</h3>
+      <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
-      <h3 id="distribution">Distribution</h3>
+      <h3 id='distribution'>Distribution</h3>
       <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
-      <h3 id="disclaimer">Disclaimer</h3>
+      <h3 id='disclaimer'>Disclaimer</h3>
       <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
         COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
     </div>
@@ -90,7 +90,6 @@ Body
           <a class='testlink' href='#put__initial_state'>
             put__initial_state:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__initial_state' property='mf:name'>PUT - Initial state</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__initial_state' property='mf:name'>PUT - Initial state</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__initial_state' typeof='mf:GraphStoreProtocolTest'>
@@ -128,7 +127,6 @@ Content-Type: text/turtle; charset=utf-8
             get_of_put__initial_state:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__initial_state' property='mf:name'>GET of PUT - Initial state</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__initial_state' property='mf:name'>GET of PUT - Initial state</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__initial_state' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -164,7 +162,6 @@ Content-Length: ...
           <a class='testlink' href='#put__graph_already_in_store'>
             put__graph_already_in_store:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__graph_already_in_store' property='mf:name'>PUT - graph already in store</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__graph_already_in_store' property='mf:name'>PUT - graph already in store</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__graph_already_in_store' typeof='mf:GraphStoreProtocolTest'>
@@ -202,7 +199,6 @@ Content-Type: text/turtle; charset=utf-8
           <a class='testlink' href='#get_of_put__graph_already_in_store'>
             get_of_put__graph_already_in_store:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__graph_already_in_store' property='mf:name'>GET of PUT - graph already in store</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__graph_already_in_store' property='mf:name'>GET of PUT - graph already in store</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__graph_already_in_store' typeof='mf:GraphStoreProtocolTest'>
@@ -243,7 +239,6 @@ Content-Length: ...
             put__default_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__default_graph' property='mf:name'>PUT - default graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__default_graph' property='mf:name'>PUT - default graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__default_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -280,7 +275,6 @@ Content-Type: text/turtle; charset=utf-8
           <a class='testlink' href='#get_of_put__default_graph'>
             get_of_put__default_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__default_graph' property='mf:name'>GET of PUT - default graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__default_graph' property='mf:name'>GET of PUT - default graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__default_graph' typeof='mf:GraphStoreProtocolTest'>
@@ -321,7 +315,6 @@ Content-Length: ...
             put__mismatched_payload:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__mismatched_payload' property='mf:name'>PUT - mismatched payload</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__mismatched_payload' property='mf:name'>PUT - mismatched payload</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__mismatched_payload' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -359,7 +352,6 @@ Content-Type: text/turtle; charset=utf-8
             delete__existing_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__existing_graph' property='mf:name'>DELETE - existing graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__existing_graph' property='mf:name'>DELETE - existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -386,7 +378,6 @@ Host: $HOST$
           <a class='testlink' href='#get_of_delete__existing_graph'>
             get_of_delete__existing_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_delete__existing_graph' property='mf:name'>GET of DELETE - existing graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_delete__existing_graph' property='mf:name'>GET of DELETE - existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_delete__existing_graph' typeof='mf:GraphStoreProtocolTest'>
@@ -415,7 +406,6 @@ Host: $HOST$
             delete__nonexistent_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__nonexistent_graph' property='mf:name'>DELETE - non-existent graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__nonexistent_graph' property='mf:name'>DELETE - non-existent graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__nonexistent_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -443,7 +433,6 @@ Host: $HOST$
             post__existing_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__existing_graph' property='mf:name'>POST - existing graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__existing_graph' property='mf:name'>POST - existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -463,7 +452,6 @@ Host: $HOST$
           <a class='testlink' href='#get_of_post__existing_graph'>
             get_of_post__existing_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__existing_graph' property='mf:name'>GET of POST - existing graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__existing_graph' property='mf:name'>GET of POST - existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__existing_graph' typeof='mf:GraphStoreProtocolTest'>
@@ -496,7 +484,6 @@ Content-Type: text/turtle; charset=utf-8
           <a class='testlink' href='#post__multipart_formdata'>
             post__multipart_formdata:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__multipart_formdata' property='mf:name'>POST - multipart/form-data</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__multipart_formdata' property='mf:name'>POST - multipart/form-data</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__multipart_formdata' typeof='mf:GraphStoreProtocolTest'>
@@ -542,7 +529,6 @@ Content-Type: text/turtle; charset=utf-8
             get_of_post__multipart_formdata:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__multipart_formdata' property='mf:name'>GET of POST - multipart/form-data</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__multipart_formdata' property='mf:name'>GET of POST - multipart/form-data</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__multipart_formdata' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -584,7 +570,6 @@ Content-Length: ...
             post__create__new_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__create__new_graph' property='mf:name'>POST - create new graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__create__new_graph' property='mf:name'>POST - create new graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__create__new_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -622,7 +607,6 @@ Location: $NEWPATH$
           <a class='testlink' href='#get_of_post__create__new_graph'>
             get_of_post__create__new_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__create__new_graph' property='mf:name'>GET of POST - create new graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__create__new_graph' property='mf:name'>GET of POST - create new graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__create__new_graph' typeof='mf:GraphStoreProtocolTest'>
@@ -663,7 +647,6 @@ Content-Length: ...
             get_of_post__after_noop:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__after_noop' property='mf:name'>GET of POST - after noop</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__after_noop' property='mf:name'>GET of POST - after noop</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__after_noop' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -703,7 +686,6 @@ Content-Length: ...
             head_on_an_existing_graph:
           </a>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_an_existing_graph' property='mf:name'>HEAD on an existing graph</span>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_an_existing_graph' property='mf:name'>HEAD on an existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_an_existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
@@ -732,7 +714,6 @@ Content-Length: ...
           <a class='testlink' href='#head_on_a_nonexisting_graph'>
             head_on_a_nonexisting_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_a_nonexisting_graph' property='mf:name'>HEAD on a non-existing graph</span>
           <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_a_nonexisting_graph' property='mf:name'>HEAD on a non-existing graph</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_on_a_nonexisting_graph' typeof='mf:GraphStoreProtocolTest'>
