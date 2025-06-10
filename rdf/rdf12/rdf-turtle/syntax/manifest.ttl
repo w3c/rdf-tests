@@ -19,7 +19,7 @@ trs:manifest  rdf:type mf:Manifest ;
    skos:prefLabel "Conjunto de pruebas para la sintaxis RDF 1.2 Turtle"@es ;
    mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax/> ;
    dct:issued "2023-07-20"^^xsd:date ; 
-   dct:modified "2023-07-20"^^xsd:date ; 
+   dct:modified "2025-06-10"^^xsd:date ; 
    dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
    dct:creator [ foaf:homepage <https://w3c.github.io/rdf12-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
     mf:entries
@@ -74,6 +74,14 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:nt-ttl12-nested-1
 
+## Base direction
+
+        trs:nt-ttl12-langdir-1
+        trs:nt-ttl12-langdir-2
+
+        trs:nt-ttl12-langdir-bad-1
+        trs:nt-ttl12-langdir-bad-2
+
         trs:nt-ttl12-bad-01
         trs:nt-ttl12-bad-02
         trs:nt-ttl12-bad-03
@@ -83,14 +91,6 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:nt-ttl12-bad-07
         trs:nt-ttl12-bad-08
         trs:nt-ttl12-bad-09
-
-## Base direction
-
-        trs:nt-ttl-base-1
-        trs:nt-ttl-base-2
-
-        trs:nt-ttl-base-bad-1
-        trs:nt-ttl-base-bad-2
 
 ## Version
 
@@ -295,14 +295,14 @@ trs:nt-ttl12-3 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:action    <nt-ttl12-syntax-3.ttl> ;
    .
 
-trs:nt-ttl-base-1 rdf:type rdft:TestTurtlePositiveSyntax ;
+trs:nt-ttl12-langdir-1 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "N-Triples 1.2 as Turtle 1.2 - base direction ltr" ;
-   mf:action    <nt-ttl-base-1.ttl> ;
+   mf:action    <nt-ttl12-langdir-1.ttl> ;
    .
 
-trs:nt-ttl-base-2 rdf:type rdft:TestTurtlePositiveSyntax ;
+trs:nt-ttl12-langdir-2 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "N-Triples 1.2 as Turtle 1.2 - base direction ltr" ;
-   mf:action    <nt-ttl-base-2.ttl> ;
+   mf:action    <nt-ttl12-langdir-2.ttl> ;
    .
 
 # Blank nodes
@@ -364,14 +364,14 @@ trs:nt-ttl12-bad-09 rdf:type rdft:TestNTriplesNegativeSyntax ;
     mf:action    <nt-ttl12-bad-syntax-09.ttl> ;
     .
 
-trs:nt-ttl-base-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
+trs:nt-ttl12-langdir-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name      "N-Triples 1.2 as Turtle 1.2 - undefined base direction" ;
-   mf:action    <nt-ttl-base-bad-1.ttl> ;
+   mf:action    <nt-ttl12-langdir-bad-1.ttl> ;
    .
 
-trs:nt-ttl-base-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
+trs:nt-ttl12-langdir-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name      "N-Triples 1.2 as Turtle 1.2 - upper case LTR" ;
-   mf:action    <nt-ttl-base-bad-2.ttl> ;
+   mf:action    <nt-ttl12-langdir-bad-2.ttl> ;
    .
 
 ## Version

@@ -5,6 +5,7 @@ require 'haml'
 require 'htmlbeautifier'
 require 'nokogiri'
 require 'rake/clean'
+require 'pathname'
 
 task default: :index
 
