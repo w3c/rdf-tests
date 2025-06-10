@@ -44,6 +44,7 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
     :literal_with_squote
     :literal_with_string_dt
     :literal_with_UTF8_boundaries
+    :literal_with_extra_whitespace
     :minimal_whitespace-01
     :minimal_whitespace-02
     :triple-term-01
@@ -233,6 +234,14 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   rdft:approval rdft:Proposed ;
   mf:action    <literal_with_UTF8_boundaries.nt> ;
   mf:result    <literal_with_UTF8_boundaries-c14n.nt>;
+  .
+
+:literal_with_extra_whitespace rdf:type rdft:TestNTriplesPositiveC14N ;
+  mf:name      "C14N literal_with_extra_whitespace" ;
+  rdfs:comment "Tests canonicalization of triples with literals having extra whitespace" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_with_extra_whitespace.nt> ;
+  mf:result    <literal_with_extra_whitespace-c14n.nt>;
   .
 
 :minimal_whitespace-01 rdf:type rdft:TestNTriplesPositiveC14N ;
