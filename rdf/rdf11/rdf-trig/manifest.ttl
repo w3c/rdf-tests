@@ -72,6 +72,8 @@
     <#sole_blankNodePropertyList>
     <#blankNodePropertyList_as_subject>
     <#blankNodePropertyList_as_object>
+    <#blankNodePropertyList_as_object_containing_objectList>
+    <#blankNodePropertyList_as_object_containing_objectList_of_two_objects>
     <#blankNodePropertyList_with_multiple_triples>
     <#nested_blankNodePropertyLists>
     <#blankNodePropertyList_containing_collection>
@@ -128,6 +130,7 @@
     <#lantag_with_subtag>
     <#objectList_with_two_objects>
     <#predicateObjectList_with_two_objectLists>
+    <#predicateObjectList_with_blankNodePropertyList_as_object>
     <#repeated_semis_at_end>
     <#repeated_semis_not_at_end>
 
@@ -258,6 +261,16 @@
     <#trig-syntax-bad-n3-extras-11>
     <#trig-syntax-bad-n3-extras-12>
     <#trig-syntax-bad-n3-extras-13>
+    <#trig-syntax-bad-numeric-escape-01>
+    <#trig-syntax-bad-numeric-escape-02>
+    <#trig-syntax-bad-numeric-escape-03>
+    <#trig-syntax-bad-numeric-escape-04>
+    <#trig-syntax-bad-numeric-escape-05>
+    <#trig-syntax-bad-numeric-escape-06>
+    <#trig-syntax-bad-numeric-escape-07>
+    <#trig-syntax-bad-numeric-escape-08>
+    <#trig-syntax-bad-numeric-escape-09>
+    <#trig-syntax-bad-numeric-escape-10>
     <#trig-syntax-bad-struct-09>
     <#trig-syntax-bad-struct-10>
     <#trig-syntax-bad-struct-12>
@@ -781,6 +794,22 @@
    mf:result    <blankNodePropertyList_as_object.nq> ;
    .
 
+<#blankNodePropertyList_as_object_containing_objectList> rdf:type rdft:TestTrigEval ;
+   mf:name      "blankNodePropertyList_as_object_containing_objectList" ;
+   rdfs:comment "blankNodePropertyList as object containing objectList <s> <p> [ <p2> <o>,<o2> ] ." ;
+   rdft:approval rdft:Approved ;
+   mf:action    <blankNodePropertyList_as_object_containing_objectList.trig> ;
+   mf:result    <blankNodePropertyList_as_object_containing_objectList.nq> ;
+   .
+
+<#blankNodePropertyList_as_object_containing_objectList_of_two_objects> rdf:type rdft:TestTrigEval ;
+   mf:name      "blankNodePropertyList_as_object_containing_objectList_of_two_objects" ;
+   rdfs:comment "blankNodePropertyList as object containing objectList of two objects <s> <p> [ <p2 <o> ] , <o2> ." ;
+   rdft:approval rdft:Approved ;
+   mf:action    <blankNodePropertyList_as_object_containing_objectList_of_two_objects.trig> ;
+   mf:result    <blankNodePropertyList_as_object_containing_objectList_of_two_objects.nq> ;
+   .
+
 <#blankNodePropertyList_with_multiple_triples> rdf:type rdft:TestTrigEval ;
    mf:name      "blankNodePropertyList_with_multiple_triples" ;
    rdfs:comment "blankNodePropertyList with multiple triples [ <s> <p> ; <s2> <p2> ]" ;
@@ -1227,6 +1256,14 @@
    rdft:approval rdft:Approved ;
    mf:action    <predicateObjectList_with_two_objectLists.trig> ;
    mf:result    <predicateObjectList_with_two_objectLists.nq> ;
+   .
+
+<#predicateObjectList_with_blankNodePropertyList_as_object> rdf:type rdft:TestTrigEval ;
+   mf:name      "predicateObjectList_with_blankNodePropertyList_as_object" ;
+   rdfs:comment "predicateObjectList_with_blankNodePropertyList_as_object <s> <p> [ <p2> <o> ] ; <p3> [ <p4> <o2> , <o3> ] " ;
+   rdft:approval rdft:Approved ;
+   mf:action    <predicateObjectList_with_blankNodePropertyList_as_object.trig> ;
+   mf:result    <predicateObjectList_with_blankNodePropertyList_as_object.nq> ;
    .
 
 <#repeated_semis_at_end> rdf:type rdft:TestTrigEval ;
@@ -2026,6 +2063,76 @@
    rdfs:comment "@keywords is not TriG (negative test)" ;
    rdft:approval rdft:Approved ;
    mf:action    <trig-syntax-bad-n3-extras-13.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-01> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-01" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-01.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-02> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-02" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-02.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-03> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-03" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_SINGLE_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-03.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-04> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-04" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_SINGLE_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-04.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-05> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-05" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_LONG_SINGLE_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-05.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-06> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-06" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_LONG_SINGLE_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-06.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-07> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-07" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_LONG_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-07.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-08> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-08" ;
+   rdfs:comment "Surrogates not allowed in STRING_LITERAL_LONG_QUOTE" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-08.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-09> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-09" ;
+   rdfs:comment "Surrogates not allowed in IRIREF" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-09.trig> ;
+   .
+
+<#trig-syntax-bad-numeric-escape-10> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-numeric-escape-10" ;
+   rdfs:comment "Surrogates not allowed in IRIREF" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-numeric-escape-10.trig> ;
    .
 
 <#trig-syntax-bad-struct-09> rdf:type rdft:TestTrigNegativeSyntax ;
