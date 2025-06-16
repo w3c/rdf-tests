@@ -1,4 +1,4 @@
 prefix : <http://example.com/ns#>
 
-<< _:x :b :c >> :p1 :o1.
+:a1 :p1 <<( _:x :b :c )>>.
 _:x :label "A".

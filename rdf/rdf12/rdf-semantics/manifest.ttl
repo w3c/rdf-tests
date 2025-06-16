@@ -37,17 +37,17 @@ trs:manifest a mf:Manifest;
   """;
   rdfs:seeAlso <README>;
   mf:entries (
-    trs:all-identical-quoted-triples-are-the-same
-    trs:quoted-triples-no-spurious
-    trs:bnodes-in-quoted-subject
-    trs:bnodes-in-quoted-object
-    trs:bnodes-in-quoted-subject-and-object
-    trs:bnodes-in-quoted-subject-and-object-fail
-    trs:same-bnode-same-quoted-term
-    trs:different-bnodes-same-quoted-term
-    trs:constrained-bnodes-in-quoted-subject
-    trs:constrained-bnodes-in-quoted-object
-    trs:constrained-bnodes-in-quoted-fail
+    trs:all-identical-triple-terms-are-the-same
+    trs:triple-terms-no-spurious
+    trs:bnodes-in-triple-term-subject
+    trs:bnodes-in-triple-term-object
+    trs:bnodes-in-triple-term-subject-and-object
+    trs:bnodes-in-triple-term-subject-and-object-fail
+    trs:same-bnode-same-triple-term
+    trs:different-bnodes-same-triple-term
+    trs:constrained-bnodes-in-triple-term-subject
+    trs:constrained-bnodes-in-triple-term-object
+    trs:constrained-bnodes-in-triple-term-fail
     trs:constrained-bnodes-on-literal
     trs:malformed-literal-control
     trs:malformed-literal
@@ -60,7 +60,7 @@ trs:manifest a mf:Manifest;
     trs:opaque-language-string
     trs:opaque-iri-control
     trs:opaque-iri
-    trs:quoted-not-asserted
+    trs:triple-term-not-asserted
     trs:annotated-asserted
     trs:annotation
     trs:annotation-unfolded
@@ -81,11 +81,11 @@ trs:manifest a mf:Manifest;
     trs:double-infinity
   ) .
 
-trs:all-identical-quoted-triples-are-the-same a mf:PositiveEntailmentTest;
-  rdfs:comment "Multiple occurences of the same quoted triples are undistinguishable in the abstract model.";
+trs:all-identical-triple-terms-are-the-same a mf:PositiveEntailmentTest;
+  rdfs:comment "Multiple occurences of the same triple terms are undistinguishable in the abstract model.";
   mf:action <test001a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "all-identical-quoted-triples-are-the-same";
+  mf:name "all-identical-triple-terms-are-the-same";
   mf:recognizedDatatypes ();
   mf:result <test001r.ttl>;
   mf:unrecognizedDatatypes ();
@@ -102,7 +102,7 @@ trs:annotated-asserted a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:annotation a mf:PositiveEntailmentTest;
-  rdfs:comment "Annotation are about the annotated triple.";
+  rdfs:comment "Annotation are about the reifying triple.";
   mf:action <test007a.ttl>;
   mf:entailmentRegime "simple";
   mf:name "annotation";
@@ -121,78 +121,78 @@ trs:annotation-unfolded a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:bnodes-in-quoted-object a mf:PositiveEntailmentTest;
-  rdfs:comment "Terms inside quoted triples can be replaced by fresh bnodes.";
+trs:bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
+  rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "bnodes-in-quoted-object";
+  mf:name "bnodes-in-triple-term-object";
   mf:recognizedDatatypes ();
   mf:result <test002or.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:bnodes-in-quoted-subject a mf:PositiveEntailmentTest;
-  rdfs:comment "Terms inside quoted triples can be replaced by fresh bnodes.";
+trs:bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
+  rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "bnodes-in-quoted-subject";
+  mf:name "bnodes-in-triple-term-subject";
   mf:recognizedDatatypes ();
   mf:result <test002sr.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:bnodes-in-quoted-subject-and-object a mf:PositiveEntailmentTest;
-  rdfs:comment "Terms inside quoted triples can be replaced by fresh bnodes.";
+trs:bnodes-in-triple-term-subject-and-object a mf:PositiveEntailmentTest;
+  rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "bnodes-in-quoted-subject-and-object";
+  mf:name "bnodes-in-triple-term-subject-and-object";
   mf:recognizedDatatypes ();
   mf:result <test002sor.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:bnodes-in-quoted-subject-and-object-fail a mf:NegativeEntailmentTest;
-  rdfs:comment "The same bnode can not match different quoted terms.";
+trs:bnodes-in-triple-term-subject-and-object-fail a mf:NegativeEntailmentTest;
+  rdfs:comment "The same bnode can not match different triple terms.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "bnodes-in-quoted-subject-and-object-fail";
+  mf:name "bnodes-in-triple-term-subject-and-object-fail";
   mf:recognizedDatatypes ();
   mf:result <test002sbr.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:constrained-bnodes-in-quoted-fail a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted bnode identifiers share the same scope as non-quoted ones. A bnode that occurs both inside quoted triples and inside asserted triples must satisfy all occurrences at the same time.";
+trs:constrained-bnodes-in-triple-term-fail a mf:NegativeEntailmentTest;
+  rdfs:comment "Quoted bnode identifiers share the same scope as non-quoted ones. A bnode that occurs both inside triple terms and inside asserted triples must satisfy all occurrences at the same time.";
   mf:action <test004a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "constrained-bnodes-in-quoted-fail";
+  mf:name "constrained-bnodes-in-triple-term-fail";
   mf:recognizedDatatypes ();
   mf:result <test004fr.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:constrained-bnodes-in-quoted-object a mf:PositiveEntailmentTest;
-  rdfs:comment "Terms inside and outside quoted triples can be replaced by fresh bnodes.";
+trs:constrained-bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
+  rdfs:comment "Terms inside and outside triple terms can be replaced by fresh bnodes.";
   mf:action <test004a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "constrained-bnodes-in-quoted-object";
+  mf:name "constrained-bnodes-in-triple-term-object";
   mf:recognizedDatatypes ();
   mf:result <test004or.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:constrained-bnodes-in-quoted-subject a mf:PositiveEntailmentTest;
-  rdfs:comment "Terms inside and outside quoted triples can be replaced by fresh bnodes";
+trs:constrained-bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
+  rdfs:comment "Terms inside and outside triple terms can be replaced by fresh bnodes";
   mf:action <test004a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "constrained-bnodes-in-quoted-subject";
+  mf:name "constrained-bnodes-in-triple-term-subject";
   mf:recognizedDatatypes ();
   mf:result <test004sr.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
 trs:constrained-bnodes-on-literal a mf:PositiveEntailmentTest;
-  rdfs:comment "Literals inside and outside quoted triples can be replaced by fresh bnodes.";
+  rdfs:comment "Literals inside and outside triple terms can be replaced by fresh bnodes.";
   mf:action <test006a.ttl>;
   mf:entailmentRegime "simple";
   mf:name "constrained-bnodes-on-literal";
@@ -201,27 +201,27 @@ trs:constrained-bnodes-on-literal a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:different-bnodes-same-quoted-term a mf:PositiveEntailmentTest;
-  rdfs:comment "Different bnodes can match identical quoted terms.";
+trs:different-bnodes-same-triple-term a mf:PositiveEntailmentTest;
+  rdfs:comment "Different bnodes can match identical triple terms.";
   mf:action <test003a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "different-bnodes-same-quoted-term";
+  mf:name "different-bnodes-same-triple-term";
   mf:recognizedDatatypes ();
   mf:result <test002sor.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:quoted-not-asserted a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted triples are not asserted.";
+trs:triple-term-not-asserted a mf:NegativeEntailmentTest;
+  rdfs:comment "Triple terms are not asserted.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
-  mf:name "quoted-not-asserted";
+  mf:name "triple-term-not-asserted";
   mf:recognizedDatatypes ();
   mf:result <test002pgr.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:quoted-triples-no-spurious a mf:NegativeEntailmentTest;
+trs:triple-terms-no-spurious a mf:NegativeEntailmentTest;
   rdfs:comment "This test ensures that other entailments are not spurious.";
   mf:action <test002a.ttl>;
   mf:entailmentRegime "simple";
@@ -232,7 +232,7 @@ trs:quoted-triples-no-spurious a mf:NegativeEntailmentTest;
   test:approval test:NotClassified .
 
 trs:malformed-literal a mf:NegativeEntailmentTest;
-  rdfs:comment "Malformed literals are allowed when quoted.";
+  rdfs:comment "Malformed literals are allowed when in triple terms.";
   mf:action <malformed-literal.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "malformed-literal";
@@ -242,7 +242,7 @@ trs:malformed-literal a mf:NegativeEntailmentTest;
   test:approval test:NotClassified .
 
 trs:malformed-literal-accepted a mf:PositiveEntailmentTest;
-  rdfs:comment "Malformed literals are allowed when quoted.";
+  rdfs:comment "Malformed literals are allowed when in triple terms.";
   mf:action <malformed-literal.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "malformed-literal-accepted";
@@ -302,7 +302,7 @@ trs:malformed-literal-control a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:malformed-literal-no-spurious a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted malformed literals do not lead to spurious entailment.";
+  rdfs:comment "Malformed literals within triple terms do not lead to spurious entailment.";
   mf:action <malformed-literal.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "malformed-literal-no-spurious";
@@ -312,7 +312,7 @@ trs:malformed-literal-no-spurious a mf:NegativeEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-iri a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted IRIs are opaque.";
+  rdfs:comment "Triple term IRIs are opaque.";
   mf:action <superman.ttl>;
   mf:entailmentRegime "RDFS-Plus";
   mf:name "opaque-iri";
@@ -332,7 +332,7 @@ trs:opaque-iri-control a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-language-string a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted literals (including language strings) are opaque, even when their datatype is recognized.";
+  rdfs:comment "Literals within reifying terms (including language strings) are opaque, even when their datatype is recognized.";
   mf:action <lowercase-language-string.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "opaque-language-string";
@@ -352,7 +352,7 @@ trs:opaque-language-string-control a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-literal a mf:NegativeEntailmentTest;
-  rdfs:comment "Quoted literals are opaque, even when their datatype is recognized.";
+  rdfs:comment "Literals within triple terms are opaque, even when their datatype is recognized.";
   mf:action <non-canonical-literal.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "opaque-literal";
@@ -371,8 +371,8 @@ trs:opaque-literal-control a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
-trs:same-bnode-same-quoted-term a mf:PositiveEntailmentTest;
-  rdfs:comment "Identical quoted term can be replaced by the same fresh bnode multiple times.";
+trs:same-bnode-same-triple-term a mf:PositiveEntailmentTest;
+  rdfs:comment "Identical triple term can be replaced by the same fresh bnode multiple times.";
   mf:action <test003a.ttl>;
   mf:entailmentRegime "simple";
   mf:name "same-bnode-same-quoted-term";
@@ -382,7 +382,7 @@ trs:same-bnode-same-quoted-term a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:triple-in-object a mf:PositiveEntailmentTest;
-  rdfs:comment "Quoted triples can appear in object position (withdrawn, as it belongs to concrete syntax test-suites).";
+  rdfs:comment "Triple terms can appear in object position (withdrawn, as it belongs to concrete syntax test-suites).";
   mf:action <test000o.ttl>;
   mf:entailmentRegime "simple";
   mf:name "triple-in-object";
