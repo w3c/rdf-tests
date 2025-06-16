@@ -1,4 +1,4 @@
 prefix : <http://example.com/ns#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<< :a :b "hello"@en-us >> :p1 :o1.
+:a1 :p1 <<( :a :b "hello"@en-us )>>.
