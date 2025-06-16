@@ -97,7 +97,6 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            - require 'byebug'; byebug unless test['@id']
             - test_id = test['@id'].split('#').last
             %dt{id: test_id}
               %a.testlink{href: "##{test_id}"}
