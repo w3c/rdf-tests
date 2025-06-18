@@ -192,7 +192,7 @@
     Content-Type: application/sparql-query
     Content-Length: XXX
 
-    ASK FROM <http://kasei.us/2009/09/sparql/data/data1.rdf> { <data1.rdf> ?p ?o }
+    ASK FROM <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> ?p ?o }
     
 #### Response
 
