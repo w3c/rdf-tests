@@ -211,7 +211,7 @@
 
               <http://rubygems.org/gems/rdf-trig> a doap:Project, earl:TestSubject, earl:Software ;
                 doap:name          "RDF::TriG" ;
-                doap:homepage      <http://ruby-rdf.github.com/rdf-trig> ;
+                doap:homepage      <https://ruby-rdf.github.io/rdf-trig> ;
                 doap:license       <http://creativecommons.org/licenses/publicdomain/> ;
                 doap:description   "RDF::TriG is an TriG reader/writer for the RDF.rb library suite."@en ;
                 doap:created       "2011-08-29"^^xsd:date ;

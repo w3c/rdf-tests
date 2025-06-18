@@ -9,7 +9,7 @@ require 'pathname'
 
 task default: :index
 
-MANIFESTS = Dir.glob("**/manifest*.ttl").reject {|f| f.include?('-az')}
+MANIFESTS = Dir.glob("**/manifest*.ttl").reject {|f| f.include?('-az') || f.include?('protocol') || f.include?('http-rdf-update')}
 
 SPECS = {
   "rdf-concepts/spec/index.html"  => "FIXME",

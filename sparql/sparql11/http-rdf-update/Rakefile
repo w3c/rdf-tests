@@ -1,0 +1,17 @@
+# Builds manifests
+task default: [:jsonld, :ttl, :html]
+
+desc "Create manifest.jsonld"
+task jsonld: "gen_manifest.rb" do
+  %x(ruby gen_manifest.rb -o manifest.jsonld)
+end
+
+desc "Create manifest.ttl"
+task ttl: "gen_manifest.rb" do
+  %x(ruby gen_manifest.rb --format ttl -o manifest.ttl)
+end
+
+desc "Create index.html"
+task html: "gen_manifest.rb" do
+  %x(ruby gen_manifest.rb --format html -o index.html)
+end
