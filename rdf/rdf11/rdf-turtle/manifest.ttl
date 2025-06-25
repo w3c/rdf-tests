@@ -195,6 +195,8 @@
     <#turtle-syntax-number-09>
     <#turtle-syntax-number-10>
     <#turtle-syntax-number-11>
+    <#turtle-syntax-number-12>
+    <#turtle-syntax-number-13>
     <#turtle-syntax-datatypes-01>
     <#turtle-syntax-datatypes-02>
     <#turtle-syntax-kw-01>
@@ -1546,6 +1548,20 @@
    rdfs:comment "double literal no fraction" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-syntax-number-11.ttl> ;
+   .
+
+<#turtle-syntax-number-12> rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name    "turtle-syntax-number-12" ;
+   rdfs:comment "double literal no leading zero" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <turtle-syntax-number-12.ttl> ;
+   .
+
+<#turtle-syntax-number-13> rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name    "turtle-syntax-number-13" ;
+   rdfs:comment "decimal literal no leading zero" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <turtle-syntax-number-13.ttl> ;
    .
 
 <#turtle-syntax-datatypes-01> rdf:type rdft:TestTurtlePositiveSyntax ;
