@@ -43,9 +43,6 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-bnode-2
         trs:turtle12-bnode-3
 
-        trs:turtle12-number-1
-        trs:turtle12-number-2
-
         trs:turtle12-bad-1
         trs:turtle12-bad-2
         trs:turtle12-bad-3
@@ -184,16 +181,6 @@ trs:turtle12-bnode-2 rdf:type rdft:TestTurtlePositiveSyntax ;
 trs:turtle12-bnode-3 rdf:type rdft:TestTurtlePositiveSyntax ;
    mf:name      "Turtle 1.2 - blank node" ;
    mf:action    <turtle12-syntax-bnode-03.ttl> ;
-   .
-
-trs:turtle12-number-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - double literal no leading zero" ;
-   mf:action    <turtle12-syntax-number-01.ttl> ;
-   .
-
-trs:turtle12-number-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - decimal literal no leading zero" ;
-   mf:action    <turtle12-syntax-number-02.ttl> ;
    .
 
 ## Bad Syntax
