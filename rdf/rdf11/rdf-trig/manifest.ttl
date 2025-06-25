@@ -1689,6 +1689,20 @@
    mf:action    <trig-syntax-number-11.trig> ;
    .
 
+<#trig-syntax-number-12> rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name    "trig-syntax-number-12" ;
+   rdfs:comment "double literal no leading zero" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-number-12.trig> ;
+   .
+
+<#trig-syntax-number-13> rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name    "trig-syntax-number-13" ;
+   rdfs:comment "decimal literal no leading zero" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-number-13.trig> ;
+   .
+
 <#trig-syntax-datatypes-01> rdf:type rdft:TestTrigPositiveSyntax ;
    mf:name    "trig-syntax-datatypes-01" ;
    rdfs:comment "xsd:byte literal" ;
