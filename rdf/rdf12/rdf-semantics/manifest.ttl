@@ -307,7 +307,7 @@ trs:opaque-language-string a mf:NegativeEntailmentTest;
   mf:entailmentRegime "RDF";
   mf:name "opaque-language-string";
   mf:recognizedDatatypes ();
-  mf:result <upercase-language-string.ttl>;
+  mf:result <uppercase-language-string.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
@@ -317,7 +317,7 @@ trs:opaque-language-string-control a mf:PositiveEntailmentTest;
   mf:entailmentRegime "RDF";
   mf:name "opaque-language-string-control";
   mf:recognizedDatatypes ();
-  mf:result <upercase-language-string-control.ttl>;
+  mf:result <uppercase-language-string-control.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
