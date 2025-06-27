@@ -238,7 +238,7 @@ gsp:get_of_put__initial_state a mf:GraphStoreProtocolTest;
     rdfs:comment """
 #### Request
 
-    GET $GRAPHSTORE$?graph=$GRAPHSTORE$/person/1.ttl HTTP/1.1
+    GET $GRAPHSTORE$?graph=http://$HOST$/$GRAPHSTORE$/person/1.ttl HTTP/1.1
     Host: $HOST$
     Accept: text/turtle
 
