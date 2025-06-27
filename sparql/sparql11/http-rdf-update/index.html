@@ -131,7 +131,7 @@ Content-Type: text/turtle; charset=utf-8
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_put__initial_state' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
             <h4 id="request">Request</h4>
-            <pre><code>GET $GRAPHSTORE$?graph=$GRAPHSTORE$/person/1.ttl HTTP/1.1
+            <pre><code>GET $GRAPHSTORE$?graph=http://$HOST$/$GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
 Accept: text/turtle
 </code></pre>
