@@ -49,6 +49,7 @@ trs:manifest a mf:Manifest;
     trs:constrained-bnodes-in-triple-term-object
     trs:constrained-bnodes-in-triple-term-fail
     trs:constrained-bnodes-on-literal
+    trs:literal-type
     trs:malformed-literal-control
     trs:malformed-literal
     trs:malformed-literal-accepted
@@ -234,6 +235,16 @@ trs:triple-terms-no-spurious a mf:NegativeEntailmentTest;
   mf:result <test005.ttl>;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
+
+trs:literal-type a mf:PositiveEntailmentTest;
+  rdfs:comment "Literals denote instances of their datatype.";
+  mf:action <canonical-literal-control.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "literal-type";
+  mf:recognizedDatatypes (xsd:integer);
+  mf:result <literal-type.ttl>;
+  mf:unrecognizedDatatypes ();
+  test:approval test:NotClassified .
 
 trs:malformed-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Malformed literals are allowed in triple terms, but cause inconsistency.";
