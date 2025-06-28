@@ -79,6 +79,8 @@ trs:manifest a mf:Manifest;
     trs:double-round-different
     trs:double-round-same
     trs:double-infinity
+    trs:triple-terms-propositions
+    trs:reifies-range
   ) .
 
 trs:all-identical-triple-terms-are-the-same a mf:PositiveEntailmentTest;
@@ -499,5 +501,25 @@ trs:double-infinity a mf:PositiveEntailmentTest;
   mf:name "double-infinity";
   mf:recognizedDatatypes (xsd:double);
   mf:result <double-e401.ttl>;
+  mf:unrecognizedDatatypes ();
+  test:approval test:NotClassified .
+
+trs:triple-terms-propositions a mf:PositiveEntailmentTest;
+  rdfs:comment "Triple terms denote instances of rdfs:Proposition.";
+  mf:action <test001a.ttl>;
+  mf:entailmentRegime "RDFS";
+  mf:name "triple-terms-propositions";
+  mf:recognizedDatatypes ();
+  mf:result <triple-terms-propositions.ttl>;
+  mf:unrecognizedDatatypes ();
+  test:approval test:NotClassified .
+
+trs:reifies-range a mf:PositiveEntailmentTest;
+  rdfs:comment "Range of rdf:reifies is rdfs:Proposition.";
+  mf:action <reifies-rangea.ttl>;
+  mf:entailmentRegime "RDFS";
+  mf:name "reifies-range";
+  mf:recognizedDatatypes ();
+  mf:result <reifies-ranger.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
