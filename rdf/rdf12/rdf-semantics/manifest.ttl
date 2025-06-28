@@ -505,7 +505,7 @@ trs:double-infinity a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:triple-terms-propositions a mf:PositiveEntailmentTest;
-  rdfs:comment "Triple terms are instances of rdfs:Proposition.";
+  rdfs:comment "Triple terms denote instances of rdfs:Proposition.";
   mf:action <test001a.ttl>;
   mf:entailmentRegime "RDFS";
   mf:name "triple-terms-propositions";
