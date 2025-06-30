@@ -142,7 +142,7 @@ trs:rdf12-xml-tt-07 rdf:type rdft:TestXMLNegativeSyntax;
 
 trs:rdf12-xml-tt-08 rdf:type rdft:TestXMLNegativeSyntax;
   mf:name     "rdf12-xml-tt-08";
-  mf:comment  "Invalid triple term having no predicate or object";
+  mf:comment  "Invalid triple term having two objects";
   mf:action   <rdf12-xml-tt-08.rdf> .
 
 # Annotations
