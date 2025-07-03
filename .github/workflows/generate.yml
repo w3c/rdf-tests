@@ -21,7 +21,10 @@ jobs:
       - name: Install dependencies
         run:  bundle install
       - name: Generate Test Manifests
-        run:  bundle exec rake
+        run: |
+          bundle exec rake
+          (cd sparql/sparql11/protocol; bundle exec rake)
+          (cd sparql/sparql11/http-rdf-update; bundle exec rake)
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Automated manifest generation
