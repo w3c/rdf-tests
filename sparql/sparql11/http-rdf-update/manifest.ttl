@@ -248,6 +248,9 @@ gsp:get_of_put__initial_state a mf:GraphStoreProtocolTest;
     Content-Type: text/turtle; charset=utf-8
     Content-Length: ...
 
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
     <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;
        foaf:businessCard [
             a v:VCard;
