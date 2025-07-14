@@ -82,7 +82,7 @@ trs:manifest a mf:Manifest;
   ) .
 
 trs:all-identical-triple-terms-are-the-same a mf:PositiveEntailmentTest;
-  rdfs:comment "Multiple occurences of the same triple term are the same domain element.";
+  rdfs:comment "Multiple occurrences of the same triple term are the same domain element.";
   mf:action <test001a.ttl>;
   mf:entailmentRegime "simple";
   mf:name "all-identical-triple-terms-are-the-same";
@@ -102,7 +102,7 @@ trs:annotated-asserted a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:annotation a mf:PositiveEntailmentTest;
-  rdfs:comment "Annotation are about the reifying triple.  This is about shorthand expansion, and is not really a semantics test.";
+  rdfs:comment "Annotations are about the reifying triple.  This is about shorthand expansion, and is not really a semantics test.";
   mf:action <test007a.ttl>;
   mf:entailmentRegime "simple";
   mf:name "annotation";
@@ -112,7 +112,7 @@ trs:annotation a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:annotation-unfolded a mf:PositiveEntailmentTest;
-  rdfs:comment "Annotation is the same as separate assertions.  This is about shorthand expansion, and is not really a semantics test.";
+  rdfs:comment "Annotations are the same as separate assertions.  This is about shorthand expansion, and is not really a semantics test.";
   mf:action <test007a2.ttl>;
   mf:entailmentRegime "simple";
   mf:name "annotation-unfolded";
@@ -252,7 +252,7 @@ trs:malformed-literal-accepted a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:malformed-literal-bnode-neg a mf:NegativeEntailmentTest;
-  rdfs:comment "Malformed literals can not be replaced by blank nodes.";
+  rdfs:comment "Malformed literals cannot be replaced by blank nodes.";
   mf:action <malformed-literal.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "malformed-literal-bnode-neg";
@@ -292,7 +292,7 @@ trs:opaque-iri a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-iri-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Check that owl:sameAs works as expected, was to ensure that opaque-iri does not pass spuriously.";
+  rdfs:comment "Check that owl:sameAs works as expected; was to ensure that opaque-iri did not pass spuriously.";
   mf:action <control-sameas-a.ttl>;
   mf:entailmentRegime "RDFS-Plus";
   mf:name "opaque-iri-control";
@@ -312,7 +312,7 @@ trs:opaque-language-string a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-language-string-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that language strings are indeed recognized, was to ensure that opaque-language-string does not pass spuriously.";
+  rdfs:comment "Checks that language strings are indeed recognized; was to ensure that opaque-language-string did not pass spuriously.";
   mf:action <lowercase-language-string-control.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "opaque-language-string-control";
@@ -332,7 +332,7 @@ trs:opaque-literal a mf:PositiveEntailmentTest;
   test:approval test:NotClassified .
 
 trs:opaque-literal-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that xsd:integer is indeed recognized, was to ensure that opaque-literal does not pass spuriously.";
+  rdfs:comment "Checks that xsd:integer is indeed recognized; was to ensure that opaque-literal did not pass spuriously.";
   mf:action <non-canonical-literal-control.ttl>;
   mf:entailmentRegime "RDF";
   mf:name "opaque-literal-control";
