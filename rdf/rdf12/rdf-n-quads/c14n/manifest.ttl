@@ -58,6 +58,8 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
     :nq-syntax-str-esc-01
     :nq-syntax-str-esc-02
     :nq-syntax-str-esc-03
+    :literal_needing_uchar_escaping-01
+    :literal_needing_uchar_escaping-02
   ) .
 
 :comment_following_triple rdf:type rdft:TestNQuadsPositiveC14N ;
@@ -374,4 +376,20 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
   rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-str-esc-03.nq> ;
   mf:result    <nq-syntax-str-esc-03-c14n.nq>;
+  .
+
+:literal_needing_uchar_escaping-01 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N literal_needing_uchar_escaping-01" ;
+  rdfs:comment "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using raw UTF-8 data" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_needing_uchar_escaping-01.nq> ;
+  mf:result    <literal_needing_uchar_escaping-01-c14n.nq>;
+  .
+
+:literal_needing_uchar_escaping-02 rdf:type rdft:TestNQuadsPositiveC14N ;
+  mf:name      "C14N literal_needing_uchar_escaping-02" ;
+  rdfs:comment "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using \\U escaping" ;
+  rdft:approval rdft:Proposed ;
+  mf:action    <literal_needing_uchar_escaping-02.nq> ;
+  mf:result    <literal_needing_uchar_escaping-01-c14n.nq>;
   .
