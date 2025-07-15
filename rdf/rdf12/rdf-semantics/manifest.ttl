@@ -58,6 +58,8 @@ trs:manifest a mf:Manifest;
     trs:opaque-literal
     trs:opaque-language-string-control
     trs:opaque-language-string
+    trs:opaque-dir-language-string-control
+    trs:opaque-dir-language-string
     trs:opaque-iri-control
     trs:opaque-iri
     trs:triple-term-not-asserted
@@ -320,6 +322,26 @@ trs:opaque-language-string-control a mf:PositiveEntailmentTest;
   mf:name "opaque-language-string-control";
   mf:recognizedDatatypes ();
   mf:result <uppercase-language-string-control.ttl>;
+  mf:unrecognizedDatatypes ();
+  test:approval test:NotClassified .
+
+trs:opaque-dir-language-string a mf:NegativeEntailmentTest;
+  rdfs:comment "Literals within reifying terms (including directional language strings) are opaque, even when their datatype is recognized.";
+  mf:action <lowercase-dir-language-string.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "opaque-dir-language-string";
+  mf:recognizedDatatypes ();
+  mf:result <uppercase-dir-language-string.ttl>;
+  mf:unrecognizedDatatypes ();
+  test:approval test:NotClassified .
+
+trs:opaque-dir-language-string-control a mf:PositiveEntailmentTest;
+  rdfs:comment "Checks that directional language strings are indeed recognized, to ensure that opaque-dir-language-string does not pass spuriously.";
+  mf:action <lowercase-dir-language-string-control.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "opaque-dir-language-string-control";
+  mf:recognizedDatatypes ();
+  mf:result <uppercase-dir-language-string-control.ttl>;
   mf:unrecognizedDatatypes ();
   test:approval test:NotClassified .
 
