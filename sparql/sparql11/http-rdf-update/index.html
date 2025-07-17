@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# cnt: http://www.w3.org/2011/content# ht: http://www.w3.org/2011/http#'>
+<html lang='en' prefix='dawg:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# cnt: http://www.w3.org/2011/content# ht: http://www.w3.org/2011/http#'>
 <head>
 <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -77,13 +77,61 @@ SPARQL Graph Store Protocol
   <dd>is the URL returned in the Location HTTP header</dd>
 </dl>
 
-<p>HTTP response messages are in the format:</p>
+<p>The Turtle and JSON-LD versions of this manifest use the <a href="http://www.w3.org/2011/http#"><code>ht</code></a>
+and <a href="http://www.w3.org/2011/content#"><code>cnt</code></a> to describe the
+HTTP actions that a test client can use to provision call and response
+that a server will use to run each test.
+This includes a sequence of HTTP requests, with headers and other information
+that can be used for the provisioned client to will use to send HTTP methods
+to the system under test along with the expected response.</p>
 
-<pre><code>HTTP Status code
-Headers
-&lt;space&gt;
-Body                    
+<p>For example, the following entry for <code>gsp:delete__existing_graph</code>
+has an action described as an <code>ht:Connection</code>, with the authority <code>"www.example"</code>
+and a sequence of requests having a single entry of type <code>ht:Request</code>,
+an <code>ht:absolutePath</code> of <code>"$GRAPHSTORE$/person/2.ttl"</code> (where the
+test runner will substitute <code>$GRAPHSTORE</code> with the path to the graph store service
+being tested), and the expected response:</p>
+
+<pre><code>gsp:delete__existing_graph a mf:mf:GraphStoreProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy &lt;http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3&gt;;
+  mf:action [
+    a ht:Connection;
+    ht:connectionAuthority "www.example";
+    ht:requests ([
+        a ht:Request;
+        ht:absolutePath "$GRAPHSTORE$/person/2.ttl";
+        ht:headers ([
+            a ht:RequestHeader;
+            ht:fieldName "Host";
+            ht:fieldValue "$HOST$";
+            ht:headerElements ([
+                a ht:HeaderElement;
+                ht:elementName "$HOST$"
+              ])
+          ]);
+        ht:httpVersion "1.1";
+        ht:methodName "DELETE";
+        ht:resp [
+          a ht:Response;
+          ht:statusCodeValue "200"
+        ]
+      ])
+  ];
+  mf:name "DELETE - existing graph" .
 </code></pre>
+
+<p>This is rendered into HTTP envelopes:</p>
+
+<p><strong>Request</strong></p>
+
+<p>DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
+  Host: www.example
+  Host: $HOST$</p>
+
+<p><strong>Response</strong></p>
+
+<p>200 response</p>
 
 
 <h3 id='contributing-tests'>Contributing Tests</h3>
@@ -119,7 +167,7 @@ gsp:put__initial_state:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -186,7 +234,7 @@ gsp:get_of_put__initial_state:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -259,7 +307,7 @@ gsp:put__graph_already_in_store:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -326,7 +374,7 @@ gsp:get_of_put__graph_already_in_store:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -399,7 +447,7 @@ gsp:put__default_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -466,7 +514,7 @@ gsp:get_of_put__default_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -539,7 +587,7 @@ gsp:put__mismatched_payload:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -606,7 +654,7 @@ gsp:delete__existing_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -652,7 +700,7 @@ gsp:get_of_delete__existing_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -698,7 +746,7 @@ gsp:delete__nonexistent_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -744,7 +792,7 @@ gsp:post__existing_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -806,7 +854,7 @@ gsp:get_of_post__existing_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -880,7 +928,7 @@ gsp:post__multipart_formdata:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -954,7 +1002,7 @@ gsp:get_of_post__multipart_formdata:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -1024,7 +1072,7 @@ gsp:post__create__new_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -1097,7 +1145,7 @@ gsp:get_of_post__create__new_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -1167,7 +1215,7 @@ gsp:get_of_post__after_noop:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -1237,7 +1285,7 @@ gsp:head_on_an_existing_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>
@@ -1291,7 +1339,7 @@ gsp:head_on_a_nonexisting_graph:
 <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
 <dt>approvedBy</dt>
 <dd>
-<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawgt:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+<a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
 </dd>
 </dl>
 <div class='test-detail' property='mf:action' typeof='ht:Connection'>

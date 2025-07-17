@@ -6,9 +6,28 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<> a mf:Manifest;
+<http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest> a mf:Manifest;
   rdfs:label "SPARQL Graph Store Protocol";
-  mf:entries (gsp:put__initial_state gsp:get_of_put__initial_state gsp:put__graph_already_in_store gsp:get_of_put__graph_already_in_store gsp:put__default_graph gsp:get_of_put__default_graph gsp:put__mismatched_payload gsp:delete__existing_graph gsp:get_of_delete__existing_graph gsp:delete__nonexistent_graph gsp:post__existing_graph gsp:get_of_post__existing_graph gsp:post__multipart_formdata gsp:get_of_post__multipart_formdata gsp:post__create__new_graph gsp:get_of_post__create__new_graph gsp:get_of_post__after_noop gsp:head_on_an_existing_graph gsp:head_on_a_nonexisting_graph) .
+  mf:entries (
+    gsp:put__initial_state
+    gsp:get_of_put__initial_state
+    gsp:put__graph_already_in_store
+    gsp:get_of_put__graph_already_in_store
+    gsp:put__default_graph
+    gsp:get_of_put__default_graph
+    gsp:put__mismatched_payload
+    gsp:delete__existing_graph
+    gsp:get_of_delete__existing_graph
+    gsp:delete__nonexistent_graph
+    gsp:post__existing_graph
+    gsp:get_of_post__existing_graph
+    gsp:post__multipart_formdata
+    gsp:get_of_post__multipart_formdata
+    gsp:post__create__new_graph
+    gsp:get_of_post__create__new_graph
+    gsp:get_of_post__after_noop
+    gsp:head_on_an_existing_graph
+    gsp:head_on_a_nonexisting_graph) .
 
 gsp:delete__existing_graph a mf:mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;

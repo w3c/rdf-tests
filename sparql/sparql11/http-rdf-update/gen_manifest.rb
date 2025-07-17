@@ -635,9 +635,8 @@ when :ttl
     validate(RDF::Turtle::Reader.new(ttl, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest.ttl", validate: true)) if validate
 
     # Do some result hacking
-    ttl.sub!('<http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest>', '<>')
     ttl.sub!(/mf:entries \((.*)\) \.$/) do |matched|
-      matched.sub('(:', '( :').gsub(' :', "\n    :")
+      matched.sub('(gsp:', '( gsp:').gsub(' gsp:', "\n    gsp:")
     end
     
     output.write(ttl)
