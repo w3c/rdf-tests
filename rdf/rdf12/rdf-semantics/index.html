@@ -89,7 +89,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#all-identical-triple-terms-are-the-same' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Multiple occurences of the same triple terms are undistinguishable in the abstract model.</p>
+            <p>Multiple occurrences of the same triple term are the same domain element.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -110,7 +110,7 @@
           <a class='testlink' href='#triple-terms-no-spurious'>
             triple-terms-no-spurious:
           </a>
-          <span about='../rdf-semantics#triple-terms-no-spurious' property='mf:name'>quoted-triples-no-spurious</span>
+          <span about='../rdf-semantics#triple-terms-no-spurious' property='mf:name'>triple-terms-no-spurious</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#triple-terms-no-spurious' typeof='mf:NegativeEntailmentTest'>
           <div property='rdfs:comment'>
@@ -408,13 +408,13 @@
           </a>
           <span about='../rdf-semantics#malformed-literal' property='mf:name'>malformed-literal</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal' typeof='mf:NegativeEntailmentTest'>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Malformed literals are allowed when in triple terms.</p>
+            <p>Malformed literals are allowed in triple terms, but cause inconsistency.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
+            <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -477,11 +477,11 @@
           <a class='testlink' href='#malformed-literal-bnode-neg'>
             malformed-literal-bnode-neg:
           </a>
-          <span about='../rdf-semantics#malformed-literal-bnode-neg' property='mf:name'>malformed-literal-bnode</span>
+          <span about='../rdf-semantics#malformed-literal-bnode-neg' property='mf:name'>malformed-literal-bnode-neg</span>
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal-bnode-neg' typeof='mf:NegativeEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Malformed literals can not be replaced by blank nodes.</p>
+            <p>Malformed literals cannot be replaced by blank nodes.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -506,7 +506,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-literal-control' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Checks that xsd:integer is indeed recognized, to ensure that opaque-literal does not pass spuriously.</p>
+            <p>Checks that xsd:integer is indeed recognized; was to ensure that opaque-literal did not pass spuriously.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -529,13 +529,13 @@
           </a>
           <span about='../rdf-semantics#opaque-literal' property='mf:name'>opaque-literal</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-literal' typeof='mf:NegativeEntailmentTest'>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-literal' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Literals within triple terms are opaque, even when their datatype is recognized.</p>
+            <p>Literals within triple terms are transparent.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
+            <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -556,7 +556,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-language-string-control' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Checks that language strings are indeed recognized, to ensure that opaque-language-string does not pass spuriously.</p>
+            <p>Checks that language strings are indeed recognized; was to ensure that opaque-language-string did not pass spuriously.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -579,13 +579,13 @@
           </a>
           <span about='../rdf-semantics#opaque-language-string' property='mf:name'>opaque-language-string</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-language-string' typeof='mf:NegativeEntailmentTest'>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-language-string' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Literals within reifying terms (including language strings) are opaque, even when their datatype is recognized.</p>
+            <p>Literals within reifying terms (including language strings) are transparent.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
+            <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -606,7 +606,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-iri-control' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Check that owl:sameAs works as expected, to ensure that opaque-iri does not pass spuriously.</p>
+            <p>Check that owl:sameAs works as expected; was to ensure that opaque-iri did not pass spuriously.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -629,13 +629,13 @@
           </a>
           <span about='../rdf-semantics#opaque-iri' property='mf:name'>opaque-iri</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-iri' typeof='mf:NegativeEntailmentTest'>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-iri' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Triple term IRIs are opaque.</p>
+            <p>Triple term IRIs are transparent.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
+            <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
@@ -681,7 +681,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#annotated-asserted' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Annotated triples are asserted.</p>
+            <p>Annotated triples are asserted. This is about shorthand expansion, and is not really a semantics test.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -706,7 +706,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#annotation' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Annotation are about the reifying triple.</p>
+            <p>Annotations are about the reifying triple. This is about shorthand expansion, and is not really a semantics test.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -731,7 +731,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='../rdf-semantics#annotation-unfolded' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Annotation is the same as separate assertions.</p>
+            <p>Annotations are the same as separate assertions. This is about shorthand expansion, and is not really a semantics test.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
