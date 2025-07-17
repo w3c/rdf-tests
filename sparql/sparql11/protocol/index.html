@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' prefix='dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#'>
+<html lang='en' prefix='dawg:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# cnt: http://www.w3.org/2011/content# ht: http://www.w3.org/2011/http# trs: https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest#'>
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -50,7 +50,7 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='./' typeof='mf:Manifest'>
+  <body resource='' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
@@ -62,22 +62,10 @@
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
+        Test descriptions used for generating Manifest and HTML renderings. Test HTTP connection described using HTTP and CNT vocabularies. In responses, status values such as &quot;2XX&quot;, &quot;3XX&quot; are used to match the actual response status. Multiple values for Content-Type mean that the response &lt;em class=&quot;rfc2119&quot;&gt;MUST&lt;/em&gt; include one or more of these types. Responses for ASK match any specified boolean content. Some tests require special result processing.
       </p>
-      <p>This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.</p>
-      <h3 id="configuration">Configuration</h3>
-      <p>When accessed without any query parameters, the CGI provides an HTML form that
-        may be used to validate a Protocol implementation. The parameters are:</p>
-      <ul>
-        <li>"query_url" &#8211; query endpoint URL</li>
-        <li>"update_url" &#8211; update endpoint URL</li>
-        <li>"software" &#8211; The Protocol implementation IRI that will be used if <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html">conneg</a> is used and requests RDF</li>
-      </ul>
-      <p>The following parameters <em>should</em> also be accounted for (in a future version):</p>
-      <ul>
-        <li>does the default graph change based on other graphs (e.g. acts as the union of named graphs)?</li>
-      </ul>
-      <h3 id="requirements">Requirements</h3>
-      <p>It is assumed that the Protocol implementation provides support for all of SPARQL (1.0)
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
+      <p>It is assumed that the Protocol implementation provides support for all of SPARQL (1.1)
         and also SPARQL 1.1 Query/Update support for:</p>
       <ul>
         <li>Select expressions</li>
@@ -95,6 +83,65 @@
       </ul>
       <p>Finally, it is assumed that implementations can produce application/rdf+xml and
         application/sparql-results+xml when requested using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html">conneg</a>.</p>
+      <p>The Turtle and JSON-LD versions of this manifest use the <a href="http://www.w3.org/2011/http#"><code>ht</code></a>
+        and <a href="http://www.w3.org/2011/content#"><code>cnt</code></a> namespaces to describe the
+        HTTP actions that a test client can use to provision call and response
+        that a server will use to run each test.
+        This includes a sequence of HTTP requests, with headers and other information
+        that can be used for the provisioned client to will use to send HTTP methods
+        to the system under test along with the expected response.</p>
+      <p>For example, the following entry for <code>trs:query_get</code>
+        has an action described as an <code>ht:Connection</code>, with the authority <code>"www.example"</code>
+        and a sequence of requests having a single entry of type <code>ht:Request</code>,
+        and the expected response:</p>
+      <pre><code>&lt;#query_get&gt; a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy &lt;http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3&gt;;
+  mf:action [
+    a ht:Connection;
+    ht:connectionAuthority "www.example";
+    ht:requests ([
+        a ht:Request;
+        ht:absolutePath "/sparql?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf";
+        ht:httpVersion "1.1";
+        ht:methodName "GET";
+        ht:resp [
+          a ht:Response;
+          ht:body [
+            a cnt:ContentAsText;
+            cnt:characterEncoding "UTF-8";
+            cnt:chars true
+          ];
+          ht:headers ([
+              a ht:RequestHeader;
+              ht:fieldName "Content-Type";
+              ht:fieldValue "application/sparql-results+xml, application/sparql-results+json";
+              ht:headerElements ([
+                  a ht:HeaderElement;
+                  ht:elementName "application/sparql-results+xml"
+                ] [
+                  a ht:HeaderElement;
+                  ht:elementName "application/sparql-results+json"
+                ])
+            ]);
+          ht:statusCodeValue "2XX",
+            "3XX"
+        ]
+      ])
+  ];
+  mf:name "query via GET" .
+</code></pre>
+      <p>This is rendered into HTTP envelopes:</p>
+      <p><strong>Request</strong></p>
+      <pre><code>  GET /sparql?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
+  Host: www.example
+</code></pre>
+      <p><strong>Response</strong></p>
+      <pre><code>  2XXor3XX response
+  Content-Type: application/sparql-results+xml or application/sparql-results+json
+
+  true
+</code></pre>
       <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
       <h3 id='distribution'>Distribution</h3>
@@ -108,1142 +155,2081 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='query_post_form'>
-          <a class='testlink' href='#query_post_form'>
-            query_post_form:
+        <dt id='#bad_query_method'>
+          <a class='testlink' href='##bad_query_method'>
+            #bad_query_method:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' property='mf:name'>query via URL-encoded POST</span>
+          <span about='#bad_query_method' property='mf:name'>invoke query operation with a method other than GET or POST</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_method' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: XXX
-
-query=ASK%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>PUT</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_dataset_default_graphs_get'>
-          <a class='testlink' href='#query_dataset_default_graphs_get'>
-            query_dataset_default_graphs_get:
+        <dt id='#bad_multiple_queries'>
+          <a class='testlink' href='##bad_multiple_queries'>
+            #bad_multiple_queries:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' property='mf:name'>GET query with protocol-specified default graph</span>
+          <span about='#bad_multiple_queries' property='mf:name'>invoke query operation with more than one query string</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_multiple_queries' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
-Host: www.example
-User-agent: sparql-client/0.1
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%7D&amp;query=SELECT%20%2A%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_dataset_default_graphs_post'>
-          <a class='testlink' href='#query_dataset_default_graphs_post'>
-            query_dataset_default_graphs_post:
+        <dt id='#bad_query_wrong_media_type'>
+          <a class='testlink' href='##bad_query_wrong_media_type'>
+            #bad_query_wrong_media_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' property='mf:name'>POST query with protocol-specified default graphs</span>
+          <span about='#bad_query_wrong_media_type' property='mf:name'>invoke query operation with a POST with media type that&#39;s not url-encoded or application/sparql-query</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_wrong_media_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; ?p ?o . &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; ?p ?o }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='text/plain'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/plain</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>ASK {}</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_dataset_named_graphs_post'>
-          <a class='testlink' href='#query_dataset_named_graphs_post'>
-            query_dataset_named_graphs_post:
+        <dt id='#bad_query_missing_form_type'>
+          <a class='testlink' href='##bad_query_missing_form_type'>
+            #bad_query_missing_form_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' property='mf:name'>POST query with protocol-specified named graphs</span>
+          <span about='#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK { GRAPH ?g { ?s ?p ?o } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_dataset_named_graphs_get'>
-          <a class='testlink' href='#query_dataset_named_graphs_get'>
-            query_dataset_named_graphs_get:
+        <dt id='#bad_query_missing_direct_type'>
+          <a class='testlink' href='##bad_query_missing_direct_type'>
+            #bad_query_missing_direct_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' property='mf:name'>GET query with protocol-specified named graphs</span>
+          <span about='#bad_query_missing_direct_type' property='mf:name'>invoke query operation with SPARQL body, but without application/sparql-query media type</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_missing_direct_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf&amp;query=ASK%20%7B%20GRAPH%20%3Fg%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D%20%7D HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>ASK {}</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_dataset_full'>
-          <a class='testlink' href='#query_dataset_full'>
-            query_dataset_full:
+        <dt id='#bad_query_non_utf8'>
+          <a class='testlink' href='##bad_query_non_utf8'>
+            #bad_query_non_utf8:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' property='mf:name'>query with protocol-specified dataset (both named and default graphs)</span>
+          <span about='#bad_query_non_utf8' property='mf:name'>invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_non_utf8' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-SELECT ?g ?x ?s { ?x ?y ?o  GRAPH ?g { ?s ?p ?o } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query; charset=UTF-16'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span>; 
+                          <span inlist='true' property='ht:params' typeof='ht:Parameter'><span property='ht:paramName'>charset</span>=<span property='ht:paramValue'>UTF-16</span></span>
+                        </span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-16'>
+                    <span property='cnt:chars'>ASK {}</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_multiple_dataset'>
-          <a class='testlink' href='#query_multiple_dataset'>
-            query_multiple_dataset:
+        <dt id='#bad_query_syntax'>
+          <a class='testlink' href='##bad_query_syntax'>
+            #bad_query_syntax:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' property='mf:name'>query specifying dataset in both query string and protocol; test for use of protocol-specified dataset</span>
+          <span about='#bad_query_syntax' property='mf:name'>invoke query operation with invalid query syntax (4XX result)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_query_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK FROM &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;data1.rdf&gt; ?p ?o }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_get'>
-          <a class='testlink' href='#query_get'>
-            query_get:
+        <dt id='#bad_update_get'>
+          <a class='testlink' href='##bad_update_get'>
+            #bad_update_get:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' property='mf:name'>query via GET</span>
+          <span about='#bad_update_get' property='mf:name'>invoke update operation with GET</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql?query=ASK%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?update=CLEAR%20ALL&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_content_type_select'>
-          <a class='testlink' href='#query_content_type_select'>
-            query_content_type_select:
+        <dt id='#bad_multiple_updates'>
+          <a class='testlink' href='##bad_multiple_updates'>
+            #bad_multiple_updates:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' property='mf:name'>query appropriate content type (expect one of: XML, JSON, CSV, TSV)</span>
+          <span about='#bad_multiple_updates' property='mf:name'>invoke update operation with more than one update string</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_multiple_updates' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-SELECT (1 AS ?value) {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, or text/csv
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=CLEAR%20ALL&amp;update=CLEAR%20DEFAULT</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_content_type_ask'>
-          <a class='testlink' href='#query_content_type_ask'>
-            query_content_type_ask:
+        <dt id='#bad_update_wrong_media_type'>
+          <a class='testlink' href='##bad_update_wrong_media_type'>
+            #bad_update_wrong_media_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' property='mf:name'>query appropriate content type (expect one of: XML, JSON)</span>
+          <span about='#bad_update_wrong_media_type' property='mf:name'>invoke update operation with a POST with media type that&#39;s not url-encoded or application/sparql-update</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_wrong_media_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='text/plain'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/plain</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>CLEAR NAMED</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_content_type_describe'>
-          <a class='testlink' href='#query_content_type_describe'>
-            query_content_type_describe:
+        <dt id='#bad_update_missing_form_type'>
+          <a class='testlink' href='##bad_update_missing_form_type'>
+            #bad_update_missing_form_type:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
+          <span about='#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-DESCRIBE &lt;http://example.org/&gt;
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/rdf+xml, application/rdf+json or text/turtle
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>CLEAR NAMED</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_content_type_construct'>
-          <a class='testlink' href='#query_content_type_construct'>
-            query_content_type_construct:
+        <dt id='#bad_update_non_utf8'>
+          <a class='testlink' href='##bad_update_non_utf8'>
+            #bad_update_non_utf8:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' property='mf:name'>query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)</span>
+          <span about='#bad_update_non_utf8' property='mf:name'>invoke update operation with direct POST, but with a non-UTF8 encoding</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_non_utf8' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-CONSTRUCT { &lt;s&gt; &lt;p&gt; 1 } WHERE {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/rdf+xml, application/rdf+json or text/turtle
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-update; charset=UTF-16'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-update</span>; 
+                          <span inlist='true' property='ht:params' typeof='ht:Parameter'><span property='ht:paramName'>charset</span>=<span property='ht:paramValue'>UTF-16</span></span>
+                        </span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-16'>
+                    <span property='cnt:chars'>CLEAR NAMED</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_dataset_default_graph'>
-          <a class='testlink' href='#update_dataset_default_graph'>
-            update_dataset_default_graph:
+        <dt id='#bad_update_syntax'>
+          <a class='testlink' href='##bad_update_syntax'>
+            #bad_update_syntax:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' property='mf:name'>update with protocol-specified default graph</span>
+          <span about='#bad_update_syntax' property='mf:name'>invoke update operation with invalid update syntax (4XX result)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-CLEAR ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document
-    }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    ?s a foaf:Document
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Accept: application/sparql-results+xml
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt;
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=CLEAR%20XYZ</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_dataset_default_graphs'>
-          <a class='testlink' href='#update_dataset_default_graphs'>
-            update_dataset_default_graphs:
+        <dt id='#bad_update_dataset_conflict'>
+          <a class='testlink' href='##bad_update_dataset_conflict'>
+            #bad_update_dataset_conflict:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' property='mf:name'>update with protocol-specified default graphs</span>
+          <span about='#bad_update_dataset_conflict' property='mf:name'>invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#bad_update_dataset_conflict' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-CLEAR ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    ?s a foaf:Document
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Accept: application/sparql-results+xml
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/x-www-form-urlencoded'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/x-www-form-urlencoded</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&amp;update=%0APREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0AWITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0ADELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0AINSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0AWHERE%20%7B%0A%20%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%7D%0A</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>4XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_dataset_named_graphs'>
-          <a class='testlink' href='#update_dataset_named_graphs'>
-            update_dataset_named_graphs:
+        <dt id='#query_get'>
+          <a class='testlink' href='##query_get'>
+            #query_get:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' property='mf:name'>update with protocol-specified named graphs</span>
+          <span about='#query_get' property='mf:name'>query via GET</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-CLEAR ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    GRAPH ?g {
-        ?s a foaf:Document
-    }
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Accept: application/sparql-results+xml
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_dataset_full'>
-          <a class='testlink' href='#update_dataset_full'>
-            update_dataset_full:
+        <dt id='#query_post_form'>
+          <a class='testlink' href='##query_post_form'>
+            #query_post_form:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' property='mf:name'>update with protocol-specified dataset (both named and default graphs)</span>
+          <span about='#query_post_form' property='mf:name'>query via URL-encoded POST</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_post_form' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-CLEAR ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-        ?s &lt;http://example.org/in&gt; ?in
-    }
-}
-WHERE {
-    {
-        GRAPH ?g { ?s a foaf:Document }
-        BIND(?g AS ?in)
-    }
-    UNION
-    {
-        ?s a foaf:Document .
-        BIND("default" AS ?in)
-    }
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Accept: application/sparql-results+xml
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; &lt;http://example.org/in&gt; "default" .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; &lt;http://example.org/in&gt; &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; ?p ?o
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_post_form'>
-          <a class='testlink' href='#update_post_form'>
-            update_post_form:
+        <dt id='#query_post_direct'>
+          <a class='testlink' href='##query_post_direct'>
+            #query_post_direct:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' property='mf:name'>update via URL-encoded POST</span>
+          <span about='#query_post_direct' property='mf:name'>query via POST directly</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: XXX
-
-update=CLEAR%20ALL
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>ASK {}</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_post_direct'>
-          <a class='testlink' href='#update_post_direct'>
-            update_post_direct:
+        <dt id='#query_dataset_default_graph'>
+          <a class='testlink' href='##query_dataset_default_graph'>
+            #query_dataset_default_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' property='mf:name'>update via POST directly</span>
+          <span about='#query_dataset_default_graph' property='mf:name'>query with protocol-specified default graph</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_default_graph' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-CLEAR ALL
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%3Fp%20%3Fo%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='update_base_uri'>
-          <a class='testlink' href='#update_base_uri'>
-            update_base_uri:
+        <dt id='#query_dataset_default_graphs_get'>
+          <a class='testlink' href='##query_dataset_default_graphs_get'>
+            #query_dataset_default_graphs_get:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' property='mf:name'>test for service-defined BASE URI (&quot;which MAY be the service endpoint&quot;)</span>
+          <span about='#query_dataset_default_graphs_get' property='mf:name'>GET query with protocol-specified default graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_default_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update
-Content-Length: XXX
-
-CLEAR GRAPH &lt;http://example.org/protocol-base-test/&gt; ;
-INSERT DATA { GRAPH &lt;http://example.org/protocol-base-test/&gt; { &lt;http://example.org/s&gt; &lt;http://example.org/p&gt; &lt;test&gt; } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Accept: application/sparql-results+xml
-Content-Length: XXX
-
-SELECT ?o WHERE {
-    GRAPH &lt;http://example.org/protocol-base-test/&gt; {
-        &lt;http://example.org/s&gt; &lt;http://example.org/p&gt; ?o
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml
-
-one result with `?o` bound to an IRI that is _not_ `&lt;test&gt;`
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='query_post_direct'>
-          <a class='testlink' href='#query_post_direct'>
-            query_post_direct:
+        <dt id='#query_dataset_default_graphs_post'>
+          <a class='testlink' href='##query_dataset_default_graphs_post'>
+            #query_dataset_default_graphs_post:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' property='mf:name'>query via POST directly</span>
+          <span about='#query_dataset_default_graphs_post' property='mf:name'>POST query with protocol-specified default graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_default_graphs_post' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query
-Content-Length: XXX
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml or application/sparql-results+json
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_method'>
-          <a class='testlink' href='#bad_query_method'>
-            bad_query_method:
+        <dt id='#query_dataset_named_graphs_post'>
+          <a class='testlink' href='##query_dataset_named_graphs_post'>
+            #query_dataset_named_graphs_post:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' property='mf:name'>invoke query operation with a method other than GET or POST</span>
+          <span about='#query_dataset_named_graphs_post' property='mf:name'>POST query with protocol-specified named graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_named_graphs_post' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>PUT /sparql?query=ASK%20%7B%7D            
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_multiple_queries'>
-          <a class='testlink' href='#bad_multiple_queries'>
-            bad_multiple_queries:
+        <dt id='#query_dataset_named_graphs_get'>
+          <a class='testlink' href='##query_dataset_named_graphs_get'>
+            #query_dataset_named_graphs_get:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' property='mf:name'>invoke query operation with more than one query string</span>
+          <span about='#query_dataset_named_graphs_get' property='mf:name'>GET query with protocol-specified named graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_named_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql?query=ASK%20%7B%7D&amp;query=SELECT%20%2A%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>GET</span>
+                  <span property='ht:absolutePath'>/sparql?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_wrong_media_type'>
-          <a class='testlink' href='#bad_query_wrong_media_type'>
-            bad_query_wrong_media_type:
+        <dt id='#query_dataset_full'>
+          <a class='testlink' href='##query_dataset_full'>
+            #query_dataset_full:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' property='mf:name'>invoke query operation with a POST with media type that&#39;s not url-encoded or application/sparql-query</span>
+          <span about='#query_dataset_full' property='mf:name'>query with protocol-specified dataset (both named and default graphs)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_dataset_full' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: text/plain
-Content-Length: XXX
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=%0AASK%20%7B%0A%20%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20%3Ftype%0A%20%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%0A%20%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%0A%7D%0A&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_missing_form_type'>
-          <a class='testlink' href='#bad_query_missing_form_type'>
-            bad_query_missing_form_type:
+        <dt id='#query_multiple_dataset'>
+          <a class='testlink' href='##query_multiple_dataset'>
+            #query_multiple_dataset:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' property='mf:name'>invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
+          <span about='#query_multiple_dataset' property='mf:name'>query specifying dataset in both query string and protocol; test for use of protocol-specified dataset</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_multiple_dataset' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Length: XXX
-
-query=ASK%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20FROM%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>true</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_missing_direct_type'>
-          <a class='testlink' href='#bad_query_missing_direct_type'>
-            bad_query_missing_direct_type:
+        <dt id='#query_content_type_select'>
+          <a class='testlink' href='##query_content_type_select'>
+            #query_content_type_select:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' property='mf:name'>invoke query operation with SPARQL body, but without application/sparql-query media type</span>
+          <span about='#query_content_type_select' property='mf:name'>SELECT query appropriate content type (expect one of: XML, JSON, CSV, TSV)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_content_type_select' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Length: XXX
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=SELECT%20%281%20AS%20%3Fvalue%29%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, text/csv'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/tab-separated-values</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/csv</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_non_utf8'>
-          <a class='testlink' href='#bad_query_non_utf8'>
-            bad_query_non_utf8:
+        <dt id='#query_content_type_ask'>
+          <a class='testlink' href='##query_content_type_ask'>
+            #query_content_type_ask:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' property='mf:name'>invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)</span>
+          <span about='#query_content_type_ask' property='mf:name'>ASK query appropriate content type (expect one of: XML, JSON)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_content_type_ask' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <p>(content body encoded in utf-16)</p>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-query; charset=UTF-16
-Content-Length: XXX
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml, application/sparql-results+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+json</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_query_syntax'>
-          <a class='testlink' href='#bad_query_syntax'>
-            bad_query_syntax:
+        <dt id='#query_content_type_describe'>
+          <a class='testlink' href='##query_content_type_describe'>
+            #query_content_type_describe:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' property='mf:name'>invoke query operation with invalid query syntax (4XX result)</span>
+          <span about='#query_content_type_describe' property='mf:name'>DESCRIBE query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_content_type_describe' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql?query=ASK%20%7B
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=DESCRIBE%20%3Chttp%3A%2F%2Fexample.org%2F%3E&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/rdf+xml, text/turtle, application/n-triples, text/html, application/ld+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/rdf+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/turtle</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/n-triples</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/html</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/ld+json</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_get'>
-          <a class='testlink' href='#bad_update_get'>
-            bad_update_get:
+        <dt id='#query_content_type_construct'>
+          <a class='testlink' href='##query_content_type_construct'>
+            #query_content_type_construct:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' property='mf:name'>invoke update operation with GET</span>
+          <span about='#query_content_type_construct' property='mf:name'>CONSTRUCT query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD))</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#query_content_type_construct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql?update=CLEAR%20ALL
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=CONSTRUCT%20%7B%20%3Cs%3E%20%3Cp%3E%201%20%7D%20WHERE%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/rdf+xml, text/turtle, application/n-triples, text/html, application/ld+json'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/rdf+xml</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/turtle</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/n-triples</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>text/html</span></span>
+                        <span>or</span>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/ld+json</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_multiple_updates'>
-          <a class='testlink' href='#bad_multiple_updates'>
-            bad_multiple_updates:
+        <dt id='#update_dataset_default_graph'>
+          <a class='testlink' href='##update_dataset_default_graph'>
+            #update_dataset_default_graph:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' property='mf:name'>invoke update operation with more than one update string</span>
+          <span about='#update_dataset_default_graph' property='mf:name'>update with protocol-specified default graph</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_dataset_default_graph' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: XXX
-
-update=CLEAR%20NAMED&amp;update=CLEAR%20DEFAULT
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ACLEAR%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%0A%20%20%20%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%0A%20%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%3Fs%20a%20foaf%3ADocument%0A%7D%0A</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+              <br>
+              <div>
+                followed by
+              </div>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Accept</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>
+                      ASK {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt;
+                      }
+                      }
+                    </span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_wrong_media_type'>
-          <a class='testlink' href='#bad_update_wrong_media_type'>
-            bad_update_wrong_media_type:
+        <dt id='#update_dataset_default_graphs'>
+          <a class='testlink' href='##update_dataset_default_graphs'>
+            #update_dataset_default_graphs:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' property='mf:name'>invoke update operation with a POST with media type that&#39;s not url-encoded or application/sparql-update</span>
+          <span about='#update_dataset_default_graphs' property='mf:name'>update with protocol-specified default graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_dataset_default_graphs' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: text/plain
-Content-Length: XXX
-
-CLEAR NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-graphs-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%3Fs%20a%20foaf%3ADocument%0A%7D%0A</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+              <br>
+              <div>
+                followed by
+              </div>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Accept</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>
+                      ASK {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      }
+                      FILTER NOT EXISTS {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      }
+                      }
+                      }
+                    </span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_missing_form_type'>
-          <a class='testlink' href='#bad_update_missing_form_type'>
-            bad_update_missing_form_type:
+        <dt id='#update_dataset_named_graphs'>
+          <a class='testlink' href='##update_dataset_named_graphs'>
+            #update_dataset_named_graphs:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' property='mf:name'>invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type</span>
+          <span about='#update_dataset_named_graphs' property='mf:name'>update with protocol-specified named graphs</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_dataset_named_graphs' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Length: XXX
-
-update=CLEAR%20NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-named-graphs-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20a%20dc%3ABibliographicResource%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20GRAPH%20%3Fg%20%7B%0A%20%20%20%20%3Fs%20a%20foaf%3ADocument%0A%20%20%7D%0A%7D%0A</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+              <br>
+              <div>
+                followed by
+              </div>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Accept</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>
+                      ASK {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      }
+                      FILTER NOT EXISTS {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
+                      }
+                      }
+                      }
+                    </span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_non_utf8'>
-          <a class='testlink' href='#bad_update_non_utf8'>
-            bad_update_non_utf8:
+        <dt id='#update_dataset_full'>
+          <a class='testlink' href='##update_dataset_full'>
+            #update_dataset_full:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' property='mf:name'>invoke update operation with direct POST, but with a non-UTF8 encoding</span>
+          <span about='#update_dataset_full' property='mf:name'>update with protocol-specified dataset (both named and default graphs)</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_dataset_full' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <p>(content body encoded in utf-16)</p>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/sparql-update; charset=UTF-16
-Content-Length: XXX
-
-CLEAR NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql?update=%0APREFIX%20dc%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP%20ALL%20%3B%0AINSERT%20DATA%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E%20a%20foaf%3ADocument%20%7D%0A%7D%20%3B%0AINSERT%20%7B%0A%20%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-full-test%2F%3E%20%7B%0A%20%20%20%20%3Fs%20%3Chttp%3A%2F%2Fexample.org%2Fin%3E%20%3Fin%0A%20%20%7D%0A%7D%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20GRAPH%20%3Fg%20%7B%20%3Fs%20a%20foaf%3ADocument%20%7D%0A%20%20%20%20BIND%28%3Fg%20AS%20%3Fin%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20%3Fs%20a%20foaf%3ADocument%20.%0A%20%20%20%20BIND%28%22default%22%20AS%20%3Fin%29%0A%20%20%7D%0A%7D%0A&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+              <br>
+              <div>
+                followed by
+              </div>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Accept</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-query'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-query</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>
+                      ASK {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; &lt;http://example.org/in&gt; &quot;default&quot; .
+                      &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; &lt;http://example.org/in&gt; &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; .
+                      }
+                      FILTER NOT EXISTS {
+                      GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
+                      &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; ?p ?o
+                      }
+                      }
+                      }
+                    </span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span></code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_syntax'>
-          <a class='testlink' href='#bad_update_syntax'>
-            bad_update_syntax:
+        <dt id='#update_post_form'>
+          <a class='testlink' href='##update_post_form'>
+            #update_post_form:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' property='mf:name'>invoke update operation with invalid update syntax</span>
+          <span about='#update_post_form' property='mf:name'>update via URL-encoded POST</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_post_form' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: XXX
-
-update=CLEAR%20XYZ
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=CLEAR%20ALL</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
-        <dt id='bad_update_dataset_conflict'>
-          <a class='testlink' href='#bad_update_dataset_conflict'>
-            bad_update_dataset_conflict:
+        <dt id='#update_post_direct'>
+          <a class='testlink' href='##update_post_direct'>
+            #update_post_direct:
           </a>
-          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' property='mf:name'>invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause</span>
+          <span about='#update_post_direct' property='mf:name'>update via POST directly</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' typeof='mf:ProtocolTest'>
+        <dd inlist='true' property='mf:entry' resource='#update_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-User-agent: sparql-client/0.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: XXX
-
-using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&amp;update=%09%09PREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0A%09%09WITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0A%09%09DELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0A%09%09INSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0A%09%09WHERE%20%7B%0A%09%09%09%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%09%09%7D%0A
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
             <dd>mf:ProtocolTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
           </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-update'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-update</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>CLEAR ALL</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+            </div>
+          </div>
+        </dd>
+        <dt id='#update_base_uri'>
+          <a class='testlink' href='##update_base_uri'>
+            #update_base_uri:
+          </a>
+          <span about='#update_base_uri' property='mf:name'>test for service-defined BASE URI (&quot;which MAY be the service endpoint&quot;)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='#update_base_uri' typeof='mf:ProtocolTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:ProtocolTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawg:Approved'>dawg:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3' property='dawg:approvedBy'>http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3</a>
+            </dd>
+          </dl>
+          <div class='test-detail' property='mf:action' typeof='ht:Connection'>
+            <meta property='ht:connectionAuthority' value='www.example'>
+            <div inlist='true' property='ht:requests'>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>update=CLEAR%20SILENT%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-base-test%2F%3E%20%3B%20INSERT%20DATA%20%7B%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-base-test%2F%3E%20%7B%20%3Chttp%3A%2F%2Fexample.org%2Fs%3E%20%3Chttp%3A%2F%2Fexample.org%2Fp%3E%20%3Ctest%3E%20%7D%20%7D</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                </code>
+              </div>
+              <br>
+              <div>
+                followed by
+              </div>
+              <div typeof='ht:Request'>
+                <h4>Request</h4>
+                <code><span property='ht:methodName'>POST</span>
+                  <span property='ht:absolutePath'>/sparql</span>
+                  HTTP/<span property='ht:absolutePath'>1.1</span><br>
+                  <span>Host: www.example</span>
+                  <br>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Accept</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>query=SELECT%20%3Fo%20WHERE%20%7B%20GRAPH%20%3Chttp%3A%2F%2Fexample.org%2Fprotocol-base-test%2F%3E%20%7B%20%3Chttp%3A%2F%2Fexample.org%2Fs%3E%20%3Chttp%3A%2F%2Fexample.org%2Fp%3E%20%3Fo%20%7D%20%7D</span>
+                  </div>
+                </code>
+              </div>
+              <div typeof='ht:Response'>
+                <h4>Response</h4>
+                <code><span property='ht:statusCodeValue'>2XX</span>or<span property='ht:statusCodeValue'>3XX</span><span>
+                    response
+                  </span>
+                  <span inlist='true' property='ht:headers'>
+                    <div typeof='ht:RequestHeader'>
+                      <meta property='ht:fieldValue' value='application/sparql-results+xml'><span property='ht:fieldName'>Content-Type</span>: 
+                      <span inlist='true' property='ht:headerElements'>
+                        <span typeof='ht:HeaderElement'><span property='ht:elementName'>application/sparql-results+xml</span></span>
+                      </span>
+                    </div>
+                  </span><br>
+                  <div property='ht:body' typeof='cnt:ContentAsText'>
+                    <meta property='cnt:characterEncoding' value='UTF-8'>
+                    <span property='cnt:chars'>one result with `?o` bound to an IRI that is _not_ `&lt;test&gt;`</span>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
         </dd>
       </dl>
     </div>

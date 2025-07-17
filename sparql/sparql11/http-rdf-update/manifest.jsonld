@@ -1,0 +1,1231 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest",
+    "cnt": "http://www.w3.org/2011/content#",
+    "dawg": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ht": "http://www.w3.org/2011/http#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "dawg:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawg:approvedBy",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "name": {
+      "@id": "mf:name"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "headerElements": {
+      "@id": "ht:headerElements",
+      "@container": "@list"
+    },
+    "headers": {
+      "@id": "ht:headers",
+      "@container": "@list"
+    },
+    "params": {
+      "@id": "ht:params",
+      "@container": "@list"
+    },
+    "requests": {
+      "@id": "ht:requests",
+      "@container": "@list"
+    }
+  },
+  "@id": "",
+  "@type": "mf:Manifest",
+  "label": "SPARQL Graph Store Protocol",
+  "entries": [
+    {
+      "@id": "#put__initial_state",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "PUT - Initial state",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "PUT",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:fn \"John Doe\"\n    ].\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "201"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_put__initial_state",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of PUT - Initial state",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$?graph=$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n   foaf:businessCard [\n        a v:VCard;\n        v:fn \"John Doe\"\n   ].\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#put__graph_already_in_store",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "PUT - graph already in store",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "PUT",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:fn \"Jane Doe\"\n    ].\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "204"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_put__graph_already_in_store",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of PUT - graph already in store",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n   foaf:businessCard [\n        a v:VCard;\n        v:fn \"Jane Doe\"\n   ] .\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#put__default_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "PUT - default graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "PUT",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$?default",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n[]  a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:given-name \"Alice\"\n    ] .\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "201"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_put__default_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of PUT - default graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$?default",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n[]  a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:given-name \"Alice\"\n    ] .\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#put__mismatched_payload",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "PUT - mismatched payload",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "PUT",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$?default",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:fn \"Jane Doe\"\n    ].\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "400"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#delete__existing_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "DELETE - existing graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "DELETE",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/2.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_delete__existing_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of DELETE - existing graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/2.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "404"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#delete__nonexistent_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "DELETE - non-existent graph)",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "DELETE",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/2.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "404"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#post__existing_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "POST - existing graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> foaf:name \"Jane Doe\"\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_post__existing_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of POST - existing graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n    foaf:name \"Jane Doe\";\n    foaf:businessCard [ \n        a v:VCard;\n        v:fn \"Jane Doe\" \n    ] .            \n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#post__multipart_formdata",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "POST - multipart/form-data",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "multipart/form-data; boundary=a6fe4cd636164618814be9f8d3d1a0de",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "multipart/form-data",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "boundary",
+                        "ht:paramValue": "a6fe4cd636164618814be9f8d3d1a0de"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n--a6fe4cd636164618814be9f8d3d1a0de\nContent-Disposition: form-data; name=\"lastName.ttl\"; filename=\"lastName.ttl\"\nContent-Type: text/turtle; charset=utf-8\n\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n<http://$HOST$/$GRAPHSTORE$/person/1> foaf:familyName \"Doe\"\n\n--a6fe4cd636164618814be9f8d3d1a0de\nContent-Disposition: form-data; name=\"firstName.ttl\"; filename=\"firstName.ttl\"\nContent-Type: text/turtle; charset=utf-8\n\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n<http://$HOST$/$GRAPHSTORE$/person/1> foaf:givenName \"Jane\"\n\n--a6fe4cd636164618814be9f8d3d1a0de--\n      ",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_post__multipart_formdata",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of POST - multipart/form-data",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n<http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n    foaf:name           \"Jane Doe\";\n    foaf:givenName      \"Jane\";\n    foaf:familyName     \"Doe\";\n    foaf:businessCard [\n        a               v:VCard;\n        v:fn            \"Jane Doe\"\n    ] .\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#post__create__new_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "POST - create new graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Location",
+                "ht:fieldValue": "$NEWPATH$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$NEWPATH$"
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n[]  a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:given-name \"Alice\"\n    ] .\n",
+              "cnt:characterEncoding": "utf-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "201"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_post__create__new_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of POST - create new graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$NEWPATH$",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n[]  a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:given-name \"Alice\"\n    ] .\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#get_of_post__after_noop",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "GET of POST - after noop",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$NEWPATH$",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Accept",
+                "ht:fieldValue": "text/turtle",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ],
+              "ht:body": {
+                "@type": "cnt:ContentAsText",
+                "cnt:chars": "\n[]  a foaf:Person;\n    foaf:businessCard [\n        a v:VCard;\n        v:given-name \"Alice\"\n    ] .\n",
+                "cnt:characterEncoding": "utf-8"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#head_on_an_existing_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "HEAD",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/1.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              },
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/turtle; charset=utf-8",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/turtle",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "utf-8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "200"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#head_on_a_nonexisting_graph",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "HEAD on a non-existing graph",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "HEAD",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "$GRAPHSTORE$/person/4.ttl",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Host",
+                "ht:fieldValue": "$HOST$",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "$HOST$"
+                  }
+                ]
+              }
+            ],
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "404"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

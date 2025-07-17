@@ -1,5 +1,5 @@
 !!! 5
-%html{lang: :en, prefix: "dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# mfx:    http://jena.hpl.hp.com/2005/05/test-manifest-extra# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# sd:      http://www.w3.org/ns/sparql-service-description# ut:     http://www.w3.org/2009/sparql/tests/test-update#"}
+%html{lang: :en, prefix: "dawg:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# cnt: http://www.w3.org/2011/content# ht: http://www.w3.org/2011/http#"}
   %head
     %meta{"http-equiv" => "Content-Type", content: "text/html;charset=utf-8"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
@@ -27,6 +27,7 @@
       dl.test-description>dt {margin-top: 2em;}
       dd {margin-left: 0;}
       dd code {display: inline;}
+      pre.code {margin-left: 0;}
       footer {text-align: center;}
     %title
       = man['label']
@@ -61,22 +62,72 @@
       %p{property: "rdfs:comment"}
         = Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')
       :markdown
-        This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.
+        This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.
 
-        **$HOST$** is the host where the Graph Store Protocol implementation is listening
+        **$HOST$**
+        :   is the host where the Graph Store Protocol implementation is listening
 
-        **$GRAPHSTORE$** is the path of the URL of the graph store
+        **$GRAPHSTORE$**
+        :   is the path of the URL of the graph store
 
-        **$NEWPATH$** is the URL returned in the Location HTTP header
+        **$NEWPATH$**
+        :   is the URL returned in the Location HTTP header
 
-        HTTP response messages are in the format:
+        The Turtle and JSON-LD versions of this manifest use the [`ht`](http://www.w3.org/2011/http#)
+        and [`cnt`](http://www.w3.org/2011/content#) namespaces to describe the
+        HTTP actions that a test client can use to provision call and response
+        that a server will use to run each test.
+        This includes a sequence of HTTP requests, with headers and other information
+        that can be used for the provisioned client to will use to send HTTP methods
+        to the system under test along with the expected response.
 
-            HTTP Status code
-            Headers
-            <space>
-            Body                    
+        For example, the following entry for `:delete__existing_graph`
+        has an action described as an `ht:Connection`, with the authority `"www.example"`
+        and a sequence of requests having a single entry of type `ht:Request`,
+        an `ht:absolutePath` of `"$GRAPHSTORE$/person/2.ttl"` (where the
+        test runner will substitute `$GRAPHSTORE` with the path to the graph store service
+        being tested), and the expected response:
 
+            <#delete__existing_graph> a mf:GraphStoreProtocolTest;
+              dawg:approval dawg:Approved;
+              dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+              mf:action [
+                a ht:Connection;
+                ht:connectionAuthority "www.example";
+                ht:requests ([
+                    a ht:Request;
+                    ht:absolutePath "$GRAPHSTORE$/person/2.ttl";
+                    ht:headers ([
+                        a ht:RequestHeader;
+                        ht:fieldName "Host";
+                        ht:fieldValue "$HOST$";
+                        ht:headerElements ([
+                            a ht:HeaderElement;
+                            ht:elementName "$HOST$"
+                          ])
+                      ]);
+                    ht:httpVersion "1.1";
+                    ht:methodName "DELETE";
+                    ht:resp [
+                      a ht:Response;
+                      ht:statusCodeValue "200"
+                    ]
+                  ])
+              ];
+              mf:name "DELETE - existing graph" .
 
+          This is rendered into HTTP envelopes:
+
+          **Request**
+
+              DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
+              Host: www.example
+              Host: $HOST$
+
+          **Response**
+
+              200 response
+          
       %h3#contributing-tests="Contributing Tests"
       :markdown
         The test manifests and entries are built automatically from [manifest.ttl](manifest.ttl) using a Rake task. Tests may be contributed via pull request to [https://github.com/w3c/rdf-tests](https://github.com/w3c/rdf-tests) with suitable changes to the [manifest.ttl](manifest.ttl) and referenced files.
@@ -105,18 +156,12 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            - test_id = test['@id'].split('#').last
+            - test_id = test['@id'].split(':').last
             %dt{id: test_id}
               %a.testlink{href: "##{test_id}"}
                 = "#{test_id}:"
               %span{about: test['@id'], property: "mf:name"}<~test['name']
             %dd{property: "mf:entry", inlist: true, resource: test['@id'], typeof: test['@type']}
-              %div{property: "rdfs:comment"}
-                :markdown
-                  #{test['comment'].to_s.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')}
-                - if test['type'] =~ /Negative/
-                  %p.error
-                    Negative Test
               %dl.test-detail
                 %dt="type"
                 %dd<~test['@type']
@@ -126,93 +171,85 @@
                 - if test['approvedBy']
                   %dt="approvedBy"
                   %dd
-                    %a{property: "dawgt:approvedBy", href: test['approvedBy']}<~test['approvedBy']
-
-                - # Spec references
-                - if test_map[test_id]
-                  %dt="references"
-                  %dd
-                    - links = test_map[test_id].map.with_index {|l, r| %(<a href="#{l}">#{r+1}</a>)}
-                    != "(#{links.join(' ')})"
-
-                - # Evaluation Tests
-                - if test['action'].is_a?(String)
-                  %dt="action"
-                  %dd
-                    %a{property: "mf:action", href: test['action']}<~test['action']
-                - if test['action'].is_a?(Hash)
-                  %dt="action"
-                  %dd
-                    %dl.test-detail{property: "mf:action", resource: test['action']['@id']}
-                      - # Entailment
-                      - if test['action']['EntailmentProfile']
-                        %dt='EntailmentProfile'
-                        %dd
-                          - test['action']['EntailmentProfile'].each do |r|
-                            %span{property: "sd:EntailmentProfile", resource: r}<~r
-                      - if test['action']['http://www.w3.org/ns/sparql-service-description#EntailmentProfile']
-                        %dt='EntailmentProfile'
-                        %dd{property: "sd:EntailmentProfile", resource: test['action']['http://www.w3.org/ns/sparql-service-description#EntailmentProfile']['@id']}<~test['action']['http://www.w3.org/ns/sparql-service-description#EntailmentProfile']['@id']
-                      - if test['action']['entailmentRegime']
-                        %dt='entailmentRegime'
-                        %dd
-                          - test['action']['entailmentRegime'].each do |r|
-                            %span{property: "sd:entailmentRegime", resource: r}<~r
-                      - if test['action']['http://www.w3.org/ns/sparql-service-description#entailmentRegime']
-                        %dt='entailmentRegime'
-                        %dd{property: "sd:entailmentRegime", resource: test['action']['http://www.w3.org/ns/sparql-service-description#entailmentRegime']['@id']}<~test['action']['http://www.w3.org/ns/sparql-service-description#entailmentRegime']['@id']
-
-                      - if test['action']['query']
-                        %dt='query'
-                        %dd
-                          %a{property: "qt:query", href: test['action']['query']}<~test['action']['query']
-                      - if test['action']['data']
-                        %dt='data'
-                        %dd
-                          %a{property: "qt:data", href: test['action']['data']}<~test['action']['data']
-                      - if test['action']['ut:data']
-                        %dt='data'
-                        %dd
-                          %a{property: "ut:data", href: test['action']['ut:data']}<~test['action']['ut:data']
-                      - if test['action']['ut:graphData']
-                        %dt='graphData'
-                        %dd
-                          %table.test-detail
-                            - test['action']['ut:graphData'].each do |gd|
-                              %tr{property: 'ut:graphData', resource: gd['@id']}
-                                %td{property: "rdfs:label"}<~gd['label']
-                                %td
-                                  %a{property: "ut:graph", href: gd['ut:graph']}<~gd['ut:graph']
-                      - if test['action']['ut:request']
-                        %dt='request'
-                        %dd
-                          %a{property: "ut:request", href: test['action']['ut:request']}<~test['action']['ut:request']
-
-                - if test['result'].is_a?(String)
-                  %dt="result"
-                  %dd
-                    %a{property: "mf:result", href: test['result']}<~test['result']
-                - if test['result'].is_a?(Hash)
-                  %dt="result"
-                  %dd
-                    %dl.test-detail{property: "mf:result", resource: test['result']['@id']}
-                      - if test['result']['ut:result']
-                        %dt='result'
-                        %dd
-                          %code{property: "ut:result", resource: test['result']['ut:result']}<~test['result']['ut:result']
-                      - if test['result']['ut:data']
-                        %dt='data'
-                        %dd
-                          %a{property: "ut:data", href: test['result']['ut:data']}<~test['result']['ut:data']
-                      - if test['result']['ut:graphData']
-                        %dt='graphData'
-                        %dd
-                          %table.test-detail
-                            - test['result']['ut:graphData'].each do |gd|
-                              %tr{property: 'ut:graphData', resource: gd['@id']}
-                                %td{property: "rdfs:label"}<~gd['label']
-                                %td
-                                  %a{property: "ut:graph", href: gd['ut:graph']}<~gd['ut:graph']
+                    %a{property: "dawg:approvedBy", href: test['approvedBy']}<~test['approvedBy']
+              - # Evaluation Tests
+              - if test['action'].is_a?(Hash)
+                %div.test-detail{property: "mf:action", typeof: test['action']['@type']}
+                  %meta{property: "ht:connectionAuthority", value: test['action']['ht:connectionAuthority']}
+                  %div{property: 'ht:requests', inlist: true}
+                    - test['action']['requests'].each_with_index do |request, ndx|
+                      - response = request['ht:resp']
+                      - if ndx > 0
+                        %br
+                        %div
+                          followed by
+                      %div{typeof: request['@type']}
+                        %h4 Request
+                        %code
+                          %span{property: 'ht:methodName'}<=request['ht:methodName']
+                          %span{property: 'ht:absolutePath'}&=request['ht:absolutePath']
+                          HTTP/
+                          %span{property: 'ht:absolutePath'}<>=request['ht:httpVersion']
+                          %br
+                          %span<="Host: " + test['action']['ht:connectionAuthority']
+                          %br
+                          - if request['headers']
+                            %span{property: 'ht:headers', inlist: true}
+                              - request['headers'].each do |header|
+                                %div{typeof: header['@type']}
+                                  %meta{property: 'ht:fieldValue', value: header['ht:fieldValue']}
+                                  %span{property: 'ht:fieldName'}<>= header['ht:fieldName']
+                                  = ': '
+                                  %span{property: 'ht:headerElements', inlist: true}
+                                    - header['headerElements'].each_with_index do |he, hendx|
+                                      - if hendx > 0
+                                        %span or
+                                      %span{typeof: he['@type']}
+                                        %span{property: 'ht:elementName'}<>= he['ht:elementName']
+                                        - Array(he['params']).each do |param|
+                                          = "; "
+                                          %span{property: 'ht:params', typeof: param['@type'], inlist: true}
+                                            %span{property: 'ht:paramName'}<>= param['ht:paramName']
+                                            = "="
+                                            %span{property: 'ht:paramValue'}<>= param['ht:paramValue']
+                          - if request['ht:body']
+                            %br
+                            %div{property: 'ht:body', typeof: request['ht:body']['@type']}
+                              %meta{property: 'cnt:characterEncoding', value: request['ht:body']['cnt:characterEncoding']}
+                              %pre.code{property: 'cnt:chars'}&= request['ht:body']['cnt:chars']
+                      %div{typeof: response['@type']}
+                        %h4 Response
+                        %code
+                          - response['ht:statusCodeValue'].each_with_index do |s, sndx|
+                            - if sndx > 0
+                              = "or"
+                            %span{property: 'ht:statusCodeValue'}<=s
+                          %span
+                            response
+                          - if response['headers']
+                            %span{property: 'ht:headers', inlist: true}
+                              - response['headers'].each_with_index do |header, hndx|
+                                %div{typeof: header['@type']}
+                                  %meta{property: 'ht:fieldValue', value: header['ht:fieldValue']}
+                                  %span{property: 'ht:fieldName'}<>= header['ht:fieldName']
+                                  = ': '
+                                  %span{property: 'ht:headerElements', inlist: true}
+                                    - header['headerElements'].each_with_index do |he, hendx|
+                                      - if hendx > 0
+                                        %span or
+                                      %span{typeof: he['@type']}
+                                        %span{property: 'ht:elementName'}<>= he['ht:elementName']
+                                        - Array(he['params']).each do |param|
+                                          = "; "
+                                          %span{property: 'ht:params', typeof: param['@type'], inlist: true}
+                                            %span{property: 'ht:paramName'}<>= param['ht:paramName']
+                                            = "="
+                                            %span{property: 'ht:paramValue'}<>= param['ht:paramValue']
+                          - if response['ht:body']
+                            %br
+                            %div{property: 'ht:body', typeof: response['ht:body']['@type']}
+                              %meta{property: 'cnt:characterEncoding', value: response['ht:body']['cnt:characterEncoding']}
+                              %pre.code{property: 'cnt:chars'}&= response['ht:body']['cnt:chars']
 
     %footer
       :markdown
