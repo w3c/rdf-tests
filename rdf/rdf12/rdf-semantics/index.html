@@ -598,6 +598,56 @@
             </dd>
           </dl>
         </dd>
+        <dt id='opaque-dir-language-string-control'>
+          <a class='testlink' href='#opaque-dir-language-string-control'>
+            opaque-dir-language-string-control:
+          </a>
+          <span about='../rdf-semantics#opaque-dir-language-string-control' property='mf:name'>opaque-dir-language-string-control</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-dir-language-string-control' typeof='mf:PositiveEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Checks that directional language strings are indeed recognized, to ensure that opaque-dir-language-string does not pass spuriously.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='lowercase-dir-language-string-control.ttl' property='mf:action'>lowercase-dir-language-string-control.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='uppercase-dir-language-string-control.ttl' property='mf:result'>uppercase-dir-language-string-control.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='opaque-dir-language-string'>
+          <a class='testlink' href='#opaque-dir-language-string'>
+            opaque-dir-language-string:
+          </a>
+          <span about='../rdf-semantics#opaque-dir-language-string' property='mf:name'>opaque-dir-language-string</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-dir-language-string' typeof='mf:NegativeEntailmentTest'>
+          <div property='rdfs:comment'>
+            <p>Literals within reifying terms (including directional language strings) are opaque, even when their datatype is recognized.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeEntailmentTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='lowercase-dir-language-string.ttl' property='mf:action'>lowercase-dir-language-string.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='uppercase-dir-language-string.ttl' property='mf:result'>uppercase-dir-language-string.ttl</a>
+            </dd>
+          </dl>
+        </dd>
         <dt id='opaque-iri-control'>
           <a class='testlink' href='#opaque-iri-control'>
             opaque-iri-control:
