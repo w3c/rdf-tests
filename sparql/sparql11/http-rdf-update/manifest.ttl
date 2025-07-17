@@ -1,35 +1,35 @@
+@base <https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dawg: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
-@prefix gsp: <https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest#> .
 @prefix ht: <http://www.w3.org/2011/http#> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest> a mf:Manifest;
+<manifest> a mf:Manifest;
   rdfs:label "SPARQL Graph Store Protocol";
   mf:entries (
-    gsp:put__initial_state
-    gsp:get_of_put__initial_state
-    gsp:put__graph_already_in_store
-    gsp:get_of_put__graph_already_in_store
-    gsp:put__default_graph
-    gsp:get_of_put__default_graph
-    gsp:put__mismatched_payload
-    gsp:delete__existing_graph
-    gsp:get_of_delete__existing_graph
-    gsp:delete__nonexistent_graph
-    gsp:post__existing_graph
-    gsp:get_of_post__existing_graph
-    gsp:post__multipart_formdata
-    gsp:get_of_post__multipart_formdata
-    gsp:post__create__new_graph
-    gsp:get_of_post__create__new_graph
-    gsp:get_of_post__after_noop
-    gsp:head_on_an_existing_graph
-    gsp:head_on_a_nonexisting_graph) .
+    <#put__initial_state>
+    <#get_of_put__initial_state>
+    <#put__graph_already_in_store>
+    <#get_of_put__graph_already_in_store>
+    <#put__default_graph>
+    <#get_of_put__default_graph>
+    <#put__mismatched_payload>
+    <#delete__existing_graph>
+    <#get_of_delete__existing_graph>
+    <#delete__nonexistent_graph>
+    <#post__existing_graph>
+    <#get_of_post__existing_graph>
+    <#post__multipart_formdata>
+    <#get_of_post__multipart_formdata>
+    <#post__create__new_graph>
+    <#get_of_post__create__new_graph>
+    <#get_of_post__after_noop>
+    <#head_on_an_existing_graph>
+    <#head_on_a_nonexisting_graph>) .
 
-gsp:delete__existing_graph a mf:mf:GraphStoreProtocolTest;
+<#delete__existing_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -57,7 +57,7 @@ gsp:delete__existing_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "DELETE - existing graph" .
 
-gsp:delete__nonexistent_graph a mf:mf:GraphStoreProtocolTest;
+<#delete__nonexistent_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -85,7 +85,7 @@ gsp:delete__nonexistent_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "DELETE - non-existent graph)" .
 
-gsp:get_of_delete__existing_graph a mf:mf:GraphStoreProtocolTest;
+<#get_of_delete__existing_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -113,7 +113,7 @@ gsp:get_of_delete__existing_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of DELETE - existing graph" .
 
-gsp:get_of_post__after_noop a mf:mf:GraphStoreProtocolTest;
+<#get_of_post__after_noop> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -173,7 +173,7 @@ gsp:get_of_post__after_noop a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of POST - after noop" .
 
-gsp:get_of_post__create__new_graph a mf:mf:GraphStoreProtocolTest;
+<#get_of_post__create__new_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -233,7 +233,7 @@ gsp:get_of_post__create__new_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of POST - create new graph" .
 
-gsp:get_of_post__existing_graph a mf:mf:GraphStoreProtocolTest;
+<#get_of_post__existing_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -297,7 +297,7 @@ gsp:get_of_post__existing_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of POST - existing graph" .
 
-gsp:get_of_post__multipart_formdata a mf:mf:GraphStoreProtocolTest;
+<#get_of_post__multipart_formdata> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -355,7 +355,7 @@ gsp:get_of_post__multipart_formdata a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of POST - multipart/form-data" .
 
-gsp:get_of_put__default_graph a mf:mf:GraphStoreProtocolTest;
+<#get_of_put__default_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -418,7 +418,7 @@ gsp:get_of_put__default_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of PUT - default graph" .
 
-gsp:get_of_put__graph_already_in_store a mf:mf:GraphStoreProtocolTest;
+<#get_of_put__graph_already_in_store> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -481,7 +481,7 @@ gsp:get_of_put__graph_already_in_store a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of PUT - graph already in store" .
 
-gsp:get_of_put__initial_state a mf:mf:GraphStoreProtocolTest;
+<#get_of_put__initial_state> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -544,7 +544,7 @@ gsp:get_of_put__initial_state a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "GET of PUT - Initial state" .
 
-gsp:head_on_a_nonexisting_graph a mf:mf:GraphStoreProtocolTest;
+<#head_on_a_nonexisting_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -572,7 +572,7 @@ gsp:head_on_a_nonexisting_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "HEAD on a non-existing graph" .
 
-gsp:head_on_an_existing_graph a mf:mf:GraphStoreProtocolTest;
+<#head_on_an_existing_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -613,7 +613,7 @@ gsp:head_on_an_existing_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "" .
 
-gsp:post__create__new_graph a mf:mf:GraphStoreProtocolTest;
+<#post__create__new_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -676,7 +676,7 @@ gsp:post__create__new_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "POST - create new graph" .
 
-gsp:post__existing_graph a mf:mf:GraphStoreProtocolTest;
+<#post__existing_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -726,7 +726,7 @@ gsp:post__existing_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "POST - existing graph" .
 
-gsp:post__multipart_formdata a mf:mf:GraphStoreProtocolTest;
+<#post__multipart_formdata> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -788,7 +788,7 @@ Content-Type: text/turtle; charset=utf-8
   ];
   mf:name "POST - multipart/form-data" .
 
-gsp:put__default_graph a mf:mf:GraphStoreProtocolTest;
+<#put__default_graph> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -843,7 +843,7 @@ gsp:put__default_graph a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "PUT - default graph" .
 
-gsp:put__graph_already_in_store a mf:mf:GraphStoreProtocolTest;
+<#put__graph_already_in_store> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -898,7 +898,7 @@ gsp:put__graph_already_in_store a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "PUT - graph already in store" .
 
-gsp:put__initial_state a mf:mf:GraphStoreProtocolTest;
+<#put__initial_state> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
@@ -953,7 +953,7 @@ gsp:put__initial_state a mf:mf:GraphStoreProtocolTest;
   ];
   mf:name "PUT - Initial state" .
 
-gsp:put__mismatched_payload a mf:mf:GraphStoreProtocolTest;
+<#put__mismatched_payload> a mf:GraphStoreProtocolTest;
   dawg:approval dawg:Approved;
   dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [

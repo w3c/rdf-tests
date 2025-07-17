@@ -1,8 +1,8 @@
 {
   "@context": {
-    "@base": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest",
     "cnt": "http://www.w3.org/2011/content#",
-    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "dawg": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
     "ht": "http://www.w3.org/2011/http#",
     "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
     "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
@@ -13,11 +13,11 @@
       "@type": "@id"
     },
     "approval": {
-      "@id": "dawgt:approval",
+      "@id": "dawg:approval",
       "@type": "@id"
     },
     "approvedBy": {
-      "@id": "dawgt:approvedBy",
+      "@id": "dawg:approvedBy",
       "@type": "@id"
     },
     "comment": {
@@ -90,10 +90,489 @@
   "comment": "\nTest descriptions used for generating Manifest and HTML renderings.\nTest HTTP connection described using HTTP and CNT vocabularies.\nIn responses, status values such as \"2XX\", \"3XX\" are used to match the actual response status.\nMultiple values for Content-Type mean that the response MUST include one or more of these types.\nResponses for ASK match any specified boolean content.\nSome tests require special result processing.\n  ",
   "entries": [
     {
+      "@id": "#bad_query_method",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with a method other than GET or POST",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "PUT",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_multiple_queries",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with more than one query string",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_query_wrong_media_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/plain",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/plain"
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "ASK {}",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_query_missing_form_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql",
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_query_missing_direct_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with SPARQL body, but without application/sparql-query media type",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "ASK {}",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_query_non_utf8",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "application/sparql-query; charset=UTF-16",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "application/sparql-query",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "UTF-16"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "ASK {}",
+              "cnt:characterEncoding": "UTF-16"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_query_syntax",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with invalid query syntax (4XX result)",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?query=ASK%20%7B&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_get",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with GET",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "GET",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?update=CLEAR%20ALL&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_multiple_updates",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with more than one update string",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "update=CLEAR%20ALL&update=CLEAR%20DEFAULT",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_wrong_media_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "text/plain",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "text/plain"
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "CLEAR NAMED",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_missing_form_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "CLEAR NAMED",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_non_utf8",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with direct POST, but with a non-UTF8 encoding",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "application/sparql-update; charset=UTF-16",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "application/sparql-update",
+                    "params": [
+                      {
+                        "@type": "ht:Parameter",
+                        "ht:paramName": "charset",
+                        "ht:paramValue": "UTF-16"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "CLEAR NAMED",
+              "cnt:characterEncoding": "UTF-16"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_syntax",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with invalid update syntax (4XX result)",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "update=CLEAR%20XYZ",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bad_update_dataset_conflict",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause",
+      "approval": "dawg:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
+      "action": {
+        "@type": "ht:Connection",
+        "ht:connectionAuthority": "www.example",
+        "requests": [
+          {
+            "@type": "ht:Request",
+            "ht:methodName": "POST",
+            "ht:httpVersion": "1.1",
+            "ht:absolutePath": "/sparql",
+            "headers": [
+              {
+                "@type": "ht:RequestHeader",
+                "ht:fieldName": "Content-Type",
+                "ht:fieldValue": "application/x-www-form-urlencoded",
+                "headerElements": [
+                  {
+                    "@type": "ht:HeaderElement",
+                    "ht:elementName": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            ],
+            "ht:body": {
+              "@type": "cnt:ContentAsText",
+              "cnt:chars": "using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&update=%0APREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0AWITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0ADELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0AINSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0AWHERE%20%7B%0A%20%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%7D%0A",
+              "cnt:characterEncoding": "UTF-8"
+            },
+            "ht:resp": {
+              "@type": "ht:Response",
+              "ht:statusCodeValue": [
+                "4XX"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
       "@id": "#query_get",
       "@type": "mf:ProtocolTest",
       "name": "query via GET",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -141,7 +620,7 @@
       "@id": "#query_post_form",
       "@type": "mf:ProtocolTest",
       "name": "query via URL-encoded POST",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -189,7 +668,7 @@
       "@id": "#query_post_direct",
       "@type": "mf:ProtocolTest",
       "name": "query via POST directly",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -255,7 +734,7 @@
       "@id": "#query_dataset_default_graph",
       "@type": "mf:ProtocolTest",
       "name": "query with protocol-specified default graph",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -308,7 +787,7 @@
       "@id": "#query_dataset_default_graphs_get",
       "@type": "mf:ProtocolTest",
       "name": "GET query with protocol-specified default graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -356,7 +835,7 @@
       "@id": "#query_dataset_default_graphs_post",
       "@type": "mf:ProtocolTest",
       "name": "POST query with protocol-specified default graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -409,7 +888,7 @@
       "@id": "#query_dataset_named_graphs_post",
       "@type": "mf:ProtocolTest",
       "name": "POST query with protocol-specified named graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -462,7 +941,7 @@
       "@id": "#query_dataset_named_graphs_get",
       "@type": "mf:ProtocolTest",
       "name": "GET query with protocol-specified named graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -510,7 +989,7 @@
       "@id": "#query_dataset_full",
       "@type": "mf:ProtocolTest",
       "name": "query with protocol-specified dataset (both named and default graphs)",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -563,7 +1042,7 @@
       "@id": "#query_multiple_dataset",
       "@type": "mf:ProtocolTest",
       "name": "query specifying dataset in both query string and protocol; test for use of protocol-specified dataset",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -616,7 +1095,7 @@
       "@id": "#query_content_type_select",
       "@type": "mf:ProtocolTest",
       "name": "SELECT query appropriate content type (expect one of: XML, JSON, CSV, TSV)",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -672,7 +1151,7 @@
       "@id": "#query_content_type_ask",
       "@type": "mf:ProtocolTest",
       "name": "ASK query appropriate content type (expect one of: XML, JSON)",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -720,7 +1199,7 @@
       "@id": "#query_content_type_describe",
       "@type": "mf:ProtocolTest",
       "name": "DESCRIBE query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD)",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -780,7 +1259,7 @@
       "@id": "#query_content_type_construct",
       "@type": "mf:ProtocolTest",
       "name": "CONSTRUCT query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD))",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -840,7 +1319,7 @@
       "@id": "#update_dataset_default_graph",
       "@type": "mf:ProtocolTest",
       "name": "update with protocol-specified default graph",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -926,7 +1405,7 @@
       "@id": "#update_dataset_default_graphs",
       "@type": "mf:ProtocolTest",
       "name": "update with protocol-specified default graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1012,7 +1491,7 @@
       "@id": "#update_dataset_named_graphs",
       "@type": "mf:ProtocolTest",
       "name": "update with protocol-specified named graphs",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1098,7 +1577,7 @@
       "@id": "#update_dataset_full",
       "@type": "mf:ProtocolTest",
       "name": "update with protocol-specified dataset (both named and default graphs)",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1179,7 +1658,7 @@
       "@id": "#update_post_form",
       "@type": "mf:ProtocolTest",
       "name": "update via URL-encoded POST",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1210,7 +1689,7 @@
       "@id": "#update_post_direct",
       "@type": "mf:ProtocolTest",
       "name": "update via POST directly",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1254,7 +1733,7 @@
       "@id": "#update_base_uri",
       "@type": "mf:ProtocolTest",
       "name": "test for service-defined BASE URI (\"which MAY be the service endpoint\")",
-      "approval": "dawgt:Approved",
+      "approval": "dawg:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
       "action": {
         "@type": "ht:Connection",
@@ -1325,485 +1804,6 @@
                 "cnt:chars": "one result with `?o` bound to an IRI that is _not_ `<test>`",
                 "cnt:characterEncoding": "UTF-8"
               }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_method",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with a method other than GET or POST",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "PUT",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_multiple_queries",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with more than one query string",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "GET",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_wrong_media_type",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "headers": [
-              {
-                "@type": "ht:RequestHeader",
-                "ht:fieldName": "Content-Type",
-                "ht:fieldValue": "text/plain",
-                "headerElements": [
-                  {
-                    "@type": "ht:HeaderElement",
-                    "ht:elementName": "text/plain"
-                  }
-                ]
-              }
-            ],
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "ASK {}",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_missing_form_type",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql",
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_missing_direct_type",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with SPARQL body, but without application/sparql-query media type",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "ASK {}",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_non_utf8",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "headers": [
-              {
-                "@type": "ht:RequestHeader",
-                "ht:fieldName": "Content-Type",
-                "ht:fieldValue": "application/sparql-query; charset=UTF-16",
-                "headerElements": [
-                  {
-                    "@type": "ht:HeaderElement",
-                    "ht:elementName": "application/sparql-query",
-                    "params": [
-                      {
-                        "@type": "ht:Parameter",
-                        "ht:paramName": "charset",
-                        "ht:paramValue": "UTF-16"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "ASK {}",
-              "cnt:characterEncoding": "UTF-16"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_query_syntax",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke query operation with invalid query syntax (4XX result)",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "GET",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?query=ASK%20%7B&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_get",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with GET",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "GET",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?update=CLEAR%20ALL&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_multiple_updates",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with more than one update string",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "update=CLEAR%20ALL&update=CLEAR%20DEFAULT",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_wrong_media_type",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "headers": [
-              {
-                "@type": "ht:RequestHeader",
-                "ht:fieldName": "Content-Type",
-                "ht:fieldValue": "text/plain",
-                "headerElements": [
-                  {
-                    "@type": "ht:HeaderElement",
-                    "ht:elementName": "text/plain"
-                  }
-                ]
-              }
-            ],
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "CLEAR NAMED",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_missing_form_type",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "CLEAR NAMED",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_non_utf8",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with direct POST, but with a non-UTF8 encoding",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "headers": [
-              {
-                "@type": "ht:RequestHeader",
-                "ht:fieldName": "Content-Type",
-                "ht:fieldValue": "application/sparql-update; charset=UTF-16",
-                "headerElements": [
-                  {
-                    "@type": "ht:HeaderElement",
-                    "ht:elementName": "application/sparql-update",
-                    "params": [
-                      {
-                        "@type": "ht:Parameter",
-                        "ht:paramName": "charset",
-                        "ht:paramValue": "UTF-16"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "CLEAR NAMED",
-              "cnt:characterEncoding": "UTF-16"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_syntax",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update operation with invalid update syntax (4XX result)",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "update=CLEAR%20XYZ",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@id": "#bad_update_dataset_conflict",
-      "@type": "mf:ProtocolTest",
-      "name": "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
-      "action": {
-        "@type": "ht:Connection",
-        "ht:connectionAuthority": "www.example",
-        "requests": [
-          {
-            "@type": "ht:Request",
-            "ht:methodName": "POST",
-            "ht:httpVersion": "1.1",
-            "ht:absolutePath": "/sparql",
-            "headers": [
-              {
-                "@type": "ht:RequestHeader",
-                "ht:fieldName": "Content-Type",
-                "ht:fieldValue": "application/x-www-form-urlencoded",
-                "headerElements": [
-                  {
-                    "@type": "ht:HeaderElement",
-                    "ht:elementName": "application/x-www-form-urlencoded"
-                  }
-                ]
-              }
-            ],
-            "ht:body": {
-              "@type": "cnt:ContentAsText",
-              "cnt:chars": "using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&update=%0APREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0AWITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0ADELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0AINSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0AWHERE%20%7B%0A%20%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%7D%0A",
-              "cnt:characterEncoding": "UTF-8"
-            },
-            "ht:resp": {
-              "@type": "ht:Response",
-              "ht:statusCodeValue": [
-                "4XX"
-              ]
             }
           }
         ]

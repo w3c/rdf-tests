@@ -719,7 +719,7 @@ def gen_entry(frag, params)
     '@id': "##{frag}",
     "@type": "mf:ProtocolTest",
     "name": params.delete(:name),
-    "approval": "dawgt:Approved",
+    "approval": "dawg:Approved",
     "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
     "action": {
       "@type": "ht:Connection",
@@ -787,9 +787,9 @@ end
 # Generate JSON-LD describing the test manifest
 man = {
   "@context": {
-    "@base":  "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest",
+    "@base":  "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest",
     "cnt":    "http://www.w3.org/2011/content#",
-    "dawgt":  "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "dawg":   "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
     "ht":     "http://www.w3.org/2011/http#",
     "mf":     "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
     "mq":     "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
@@ -797,8 +797,8 @@ man = {
     "xsd":    "http://www.w3.org/2001/XMLSchema#",
 
     "action":               {"@id": "mf:action", "@type": "@id"},
-    "approval":             {"@id": "dawgt:approval", "@type": "@id"},
-    "approvedBy":           {"@id": "dawgt:approvedBy", "@type": "@id"},
+    "approval":             {"@id": "dawg:approval", "@type": "@id"},
+    "approvedBy":           {"@id": "dawg:approvedBy", "@type": "@id"},
     "comment":              {"@id": "rdfs:comment"},
     "data":                 {"@id": "mq:data", "@type": "@id"},
     "entries":              {"@id": "mf:entries", "@container": "@list", "@type": "@id"},
@@ -831,7 +831,7 @@ Some tests require special result processing.
   "entries": []
 }
 
-POSITIVE_TESTS.merge(NEGATIVE_TESTS).each do |frag, params|
+NEGATIVE_TESTS.merge(POSITIVE_TESTS).each do |frag, params|
   entry = gen_entry(frag, params)
   man[:entries] << entry
 end
@@ -886,33 +886,33 @@ when :html
     Haml::Engine.new(template, format: :html5)
   end
   html = haml_runner.render(self, man: JSON.parse(man.to_json))
-  validate(RDF::RDFa::Reader.new(html, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: validate)) if validate
+  validate(RDF::RDFa::Reader.new(html, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest", validate: validate)) if validate
   beautified = HtmlBeautifier.beautify(html) + "\n"
-  output.write(html)
+  output.write(beautified)
 when :jsonld
-  validate(JSON::LD::Reader.new(man.to_json, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: validate)) if validate
+  validate(JSON::LD::Reader.new(man.to_json, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest", validate: validate)) if validate
   output.puts man.to_json(JSON::LD::JSON_STATE)
 when :ttl
   JSON::LD::Reader.new(man.to_json, validate: validate) do |reader|
     ttl = RDF::Turtle::Writer.buffer(
       prefixes: {
-        "":     "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#",
+        "":     "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest",
         cnt:    "http://www.w3.org/2011/content#",
-        dawgt:  "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+        dawg:   "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
         ht:     "http://www.w3.org/2011/http#",
         mf:     "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
         qt:     "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
         rdf:    "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         rdfs:   "http://www.w3.org/2000/01/rdf-schema#",
-      }
+      },
+      base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest"
     ) {|writer| writer << reader}
 
-    validate(RDF::Turtle::Reader.new(ttl, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: true)) if validate
+    validate(RDF::Turtle::Reader.new(ttl, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest", validate: true)) if validate
 
     # Do some result hacking
-    ttl.sub!('<http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest>', '<>')
     ttl.sub!(/mf:entries \((.*)\) \.$/) do |matched|
-      matched.sub('(:', '( :').gsub(' :', "\n    :")
+      matched.sub('(<', '( <').gsub(' <', "\n    <")
     end
     
     output.write(ttl)

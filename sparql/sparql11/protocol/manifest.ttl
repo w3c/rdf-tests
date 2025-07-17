@@ -1,12 +1,13 @@
-@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#> .
+@base <https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest> .
+@prefix : <https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/manifest> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
-@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix dawg: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 @prefix ht: <http://www.w3.org/2011/http#> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<> a mf:Manifest;
+<manifest> a mf:Manifest;
   rdfs:label "SPARQL Protocol";
   rdfs:comment """
 Test descriptions used for generating Manifest and HTML renderings.
@@ -17,45 +18,45 @@ Responses for ASK match any specified boolean content.
 Some tests require special result processing.
   """;
   mf:entries (
-    :query_get
-    :query_post_form
-    :query_post_direct
-    :query_dataset_default_graph
-    :query_dataset_default_graphs_get
-    :query_dataset_default_graphs_post
-    :query_dataset_named_graphs_post
-    :query_dataset_named_graphs_get
-    :query_dataset_full
-    :query_multiple_dataset
-    :query_content_type_select
-    :query_content_type_ask
-    :query_content_type_describe
-    :query_content_type_construct
-    :update_dataset_default_graph
-    :update_dataset_default_graphs
-    :update_dataset_named_graphs
-    :update_dataset_full
-    :update_post_form
-    :update_post_direct
-    :update_base_uri
-    :bad_query_method
-    :bad_multiple_queries
-    :bad_query_wrong_media_type
-    :bad_query_missing_form_type
-    :bad_query_missing_direct_type
-    :bad_query_non_utf8
-    :bad_query_syntax
-    :bad_update_get
-    :bad_multiple_updates
-    :bad_update_wrong_media_type
-    :bad_update_missing_form_type
-    :bad_update_non_utf8
-    :bad_update_syntax
-    :bad_update_dataset_conflict) .
+    <#bad_query_method>
+    <#bad_multiple_queries>
+    <#bad_query_wrong_media_type>
+    <#bad_query_missing_form_type>
+    <#bad_query_missing_direct_type>
+    <#bad_query_non_utf8>
+    <#bad_query_syntax>
+    <#bad_update_get>
+    <#bad_multiple_updates>
+    <#bad_update_wrong_media_type>
+    <#bad_update_missing_form_type>
+    <#bad_update_non_utf8>
+    <#bad_update_syntax>
+    <#bad_update_dataset_conflict>
+    <#query_get>
+    <#query_post_form>
+    <#query_post_direct>
+    <#query_dataset_default_graph>
+    <#query_dataset_default_graphs_get>
+    <#query_dataset_default_graphs_post>
+    <#query_dataset_named_graphs_post>
+    <#query_dataset_named_graphs_get>
+    <#query_dataset_full>
+    <#query_multiple_dataset>
+    <#query_content_type_select>
+    <#query_content_type_ask>
+    <#query_content_type_describe>
+    <#query_content_type_construct>
+    <#update_dataset_default_graph>
+    <#update_dataset_default_graphs>
+    <#update_dataset_named_graphs>
+    <#update_dataset_full>
+    <#update_post_form>
+    <#update_post_direct>
+    <#update_base_uri>) .
 
-:bad_multiple_queries a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_multiple_queries> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -72,9 +73,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with more than one query string" .
 
-:bad_multiple_updates a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_multiple_updates> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -96,9 +97,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with more than one update string" .
 
-:bad_query_method a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_method> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -115,9 +116,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with a method other than GET or POST" .
 
-:bad_query_missing_direct_type a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_missing_direct_type> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -139,9 +140,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with SPARQL body, but without application/sparql-query media type" .
 
-:bad_query_missing_form_type a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_missing_form_type> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -163,9 +164,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type" .
 
-:bad_query_non_utf8 a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_non_utf8> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -201,9 +202,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)" .
 
-:bad_query_syntax a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_syntax> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -220,9 +221,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with invalid query syntax (4XX result)" .
 
-:bad_query_wrong_media_type a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_query_wrong_media_type> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -253,9 +254,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query" .
 
-:bad_update_dataset_conflict a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_dataset_conflict> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -286,9 +287,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause" .
 
-:bad_update_get a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_get> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -305,9 +306,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with GET" .
 
-:bad_update_missing_form_type a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_missing_form_type> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -329,9 +330,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type" .
 
-:bad_update_non_utf8 a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_non_utf8> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -367,9 +368,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with direct POST, but with a non-UTF8 encoding" .
 
-:bad_update_syntax a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_syntax> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -391,9 +392,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with invalid update syntax (4XX result)" .
 
-:bad_update_wrong_media_type a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#bad_update_wrong_media_type> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -424,9 +425,9 @@ Some tests require special result processing.
   ];
   mf:name "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update" .
 
-:query_content_type_ask a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_content_type_ask> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -461,9 +462,9 @@ Some tests require special result processing.
   ];
   mf:name "ASK query appropriate content type (expect one of: XML, JSON)" .
 
-:query_content_type_construct a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_content_type_construct> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -507,9 +508,9 @@ Some tests require special result processing.
   ];
   mf:name "CONSTRUCT query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD))" .
 
-:query_content_type_describe a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_content_type_describe> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -553,9 +554,9 @@ Some tests require special result processing.
   ];
   mf:name "DESCRIBE query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa, JSON-LD)" .
 
-:query_content_type_select a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_content_type_select> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -596,9 +597,9 @@ Some tests require special result processing.
   ];
   mf:name "SELECT query appropriate content type (expect one of: XML, JSON, CSV, TSV)" .
 
-:query_dataset_default_graph a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_default_graph> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -638,9 +639,9 @@ Some tests require special result processing.
   ];
   mf:name "query with protocol-specified default graph" .
 
-:query_dataset_default_graphs_get a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_default_graphs_get> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -675,9 +676,9 @@ Some tests require special result processing.
   ];
   mf:name "GET query with protocol-specified default graphs" .
 
-:query_dataset_default_graphs_post a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_default_graphs_post> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -717,9 +718,9 @@ Some tests require special result processing.
   ];
   mf:name "POST query with protocol-specified default graphs" .
 
-:query_dataset_full a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_full> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -759,9 +760,9 @@ Some tests require special result processing.
   ];
   mf:name "query with protocol-specified dataset (both named and default graphs)" .
 
-:query_dataset_named_graphs_get a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_named_graphs_get> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -796,9 +797,9 @@ Some tests require special result processing.
   ];
   mf:name "GET query with protocol-specified named graphs" .
 
-:query_dataset_named_graphs_post a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_dataset_named_graphs_post> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -838,9 +839,9 @@ Some tests require special result processing.
   ];
   mf:name "POST query with protocol-specified named graphs" .
 
-:query_get a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_get> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -875,9 +876,9 @@ Some tests require special result processing.
   ];
   mf:name "query via GET" .
 
-:query_multiple_dataset a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_multiple_dataset> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -917,9 +918,9 @@ Some tests require special result processing.
   ];
   mf:name "query specifying dataset in both query string and protocol; test for use of protocol-specified dataset" .
 
-:query_post_direct a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_post_direct> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -968,9 +969,9 @@ Some tests require special result processing.
   ];
   mf:name "query via POST directly" .
 
-:query_post_form a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#query_post_form> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1005,9 +1006,9 @@ Some tests require special result processing.
   ];
   mf:name "query via URL-encoded POST" .
 
-:update_base_uri a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_base_uri> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1068,9 +1069,9 @@ Some tests require special result processing.
   ];
   mf:name "test for service-defined BASE URI (\"which MAY be the service endpoint\")" .
 
-:update_dataset_default_graph a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_dataset_default_graph> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1140,9 +1141,9 @@ ASK {
   ];
   mf:name "update with protocol-specified default graph" .
 
-:update_dataset_default_graphs a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_dataset_default_graphs> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1218,9 +1219,9 @@ ASK {
   ];
   mf:name "update with protocol-specified default graphs" .
 
-:update_dataset_full a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_dataset_full> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1291,9 +1292,9 @@ ASK {
   ];
   mf:name "update with protocol-specified dataset (both named and default graphs)" .
 
-:update_dataset_named_graphs a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_dataset_named_graphs> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1369,9 +1370,9 @@ ASK {
   ];
   mf:name "update with protocol-specified named graphs" .
 
-:update_post_direct a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_post_direct> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";
@@ -1403,9 +1404,9 @@ ASK {
   ];
   mf:name "update via POST directly" .
 
-:update_post_form a mf:ProtocolTest;
-  dawgt:approval dawgt:Approved;
-  dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
+<#update_post_form> a mf:ProtocolTest;
+  dawg:approval dawg:Approved;
+  dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
   mf:action [
     a ht:Connection;
     ht:connectionAuthority "www.example";

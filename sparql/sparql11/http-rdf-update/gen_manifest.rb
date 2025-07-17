@@ -451,8 +451,8 @@ end
 def gen_entry(frag, params)
   $charset = "UTF-8"
   entry = {
-    '@id': "gsp:#{frag}",
-    "@type": "mf:mf:GraphStoreProtocolTest",
+    '@id': "##{frag}",
+    "@type": "mf:GraphStoreProtocolTest",
     "name": params.delete(:name),
     "approval": "dawg:Approved",
     "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3",
@@ -518,11 +518,10 @@ end
 # Generate JSON-LD describing the test manifest
 man = {
   "@context": {
-    "@base":  "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest",
+    "@base":  "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest",
     "cnt":    "http://www.w3.org/2011/content#",
     "dawg":   "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
     "ht":     "http://www.w3.org/2011/http#",
-    "gsp":    "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest#",
     "mf":     "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
     "mq":     "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
     "rdfs":   "http://www.w3.org/2000/01/rdf-schema#",
@@ -610,33 +609,33 @@ when :html
     Haml::Engine.new(template, format: :html5)
   end
   html = haml_runner.render(self, man: JSON.parse(man.to_json))
-  validate(RDF::RDFa::Reader.new(html, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest.ttl", validate: validate)) if validate
+  validate(RDF::RDFa::Reader.new(html, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest", validate: validate)) if validate
   beautified = HtmlBeautifier.beautify(html) + "\n"
-  output.write(html)
+  output.write(beautified)
 when :jsonld
-  validate(JSON::LD::Reader.new(man.to_json, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest.ttl", validate: validate)) if validate
+  validate(JSON::LD::Reader.new(man.to_json, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest", validate: validate)) if validate
   output.puts man.to_json(JSON::LD::JSON_STATE)
 when :ttl
   JSON::LD::Reader.new(man.to_json, validate: validate) do |reader|
     ttl = RDF::Turtle::Writer.buffer(
       prefixes: {
-        "":     "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#",
+        "":     "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/http-rdf-update/manifest#",
         cnt:    "http://www.w3.org/2011/content#",
         dawg:   "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
         ht:     "http://www.w3.org/2011/http#",
-        gsp:    "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest#",
         mf:     "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
         qt:     "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
         rdf:    "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         rdfs:   "http://www.w3.org/2000/01/rdf-schema#",
-      }
+      },
+      base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest"
     ) {|writer| writer << reader}
 
-    validate(RDF::Turtle::Reader.new(ttl, base_uri: "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest.ttl", validate: true)) if validate
+    validate(RDF::Turtle::Reader.new(ttl, base_uri: "https://w3c.github.io/rdf-tests/sparql/sparql11/http-rdf-update/manifest", validate: true)) if validate
 
     # Do some result hacking
     ttl.sub!(/mf:entries \((.*)\) \.$/) do |matched|
-      matched.sub('(gsp:', '( gsp:').gsub(' gsp:', "\n    gsp:")
+      matched.sub('(<', '( <').gsub(' <', "\n    <")
     end
     
     output.write(ttl)

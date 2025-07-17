@@ -62,7 +62,7 @@
       %p{property: "rdfs:comment"}
         = Array(man['comment']).join(' ').gsub(/\s+/m, ' ').strip.gsub(/(MUST|SHOULD|MAY)/, '<em class="rfc2119">\\1</em>')
       :markdown
-        This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.
+        This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.
 
         **$HOST$**
         :   is the host where the Graph Store Protocol implementation is listening
@@ -74,21 +74,21 @@
         :   is the URL returned in the Location HTTP header
 
         The Turtle and JSON-LD versions of this manifest use the [`ht`](http://www.w3.org/2011/http#)
-        and [`cnt`](http://www.w3.org/2011/content#) to describe the
+        and [`cnt`](http://www.w3.org/2011/content#) namespaces to describe the
         HTTP actions that a test client can use to provision call and response
         that a server will use to run each test.
         This includes a sequence of HTTP requests, with headers and other information
         that can be used for the provisioned client to will use to send HTTP methods
         to the system under test along with the expected response.
 
-        For example, the following entry for `gsp:delete__existing_graph`
+        For example, the following entry for `:delete__existing_graph`
         has an action described as an `ht:Connection`, with the authority `"www.example"`
         and a sequence of requests having a single entry of type `ht:Request`,
         an `ht:absolutePath` of `"$GRAPHSTORE$/person/2.ttl"` (where the
         test runner will substitute `$GRAPHSTORE` with the path to the graph store service
         being tested), and the expected response:
 
-            gsp:delete__existing_graph a mf:mf:GraphStoreProtocolTest;
+            <#delete__existing_graph> a mf:GraphStoreProtocolTest;
               dawg:approval dawg:Approved;
               dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3>;
               mf:action [
@@ -120,13 +120,13 @@
 
           **Request**
 
-          DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
-          Host: www.example
-          Host: $HOST$
+              DELETE $GRAPHSTORE$/person/2.ttl HTTP/1.1
+              Host: www.example
+              Host: $HOST$
 
           **Response**
 
-          200 response
+              200 response
           
       %h3#contributing-tests="Contributing Tests"
       :markdown
@@ -156,7 +156,7 @@
           Test Descriptions
         %dl.test-description
           - man['entries'].each do |test|
-            - test_id = test['@id'].split('#').last
+            - test_id = test['@id'].split(':').last
             %dt{id: test_id}
               %a.testlink{href: "##{test_id}"}
                 = "#{test_id}:"
