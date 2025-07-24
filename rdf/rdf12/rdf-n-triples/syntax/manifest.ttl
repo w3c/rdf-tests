@@ -47,6 +47,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples12-bad-09
         trs:ntriples12-bad-10
 
+        trs:ntriples12-bad-iri-1
+
         trs:ntriples12-bad-reified-1
         trs:ntriples12-bad-reified-2
         trs:ntriples12-bad-reified-3
@@ -57,6 +59,9 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:ntriples-langdir-bad-1
         trs:ntriples-langdir-bad-2
+        trs:ntriples-langdir-bad-3
+        trs:ntriples-langdir-bad-4
+        trs:ntriples-langdir-bad-5
     ) .
 
 trs:ntriples12-01 rdf:type rdft:TestNTriplesPositiveSyntax ;
@@ -150,6 +155,11 @@ trs:ntriples12-bad-10 rdf:type rdft:TestNTriplesNegativeSyntax ;
     mf:action    <ntriples12-bad-syntax-10.nt> ;
     .
 
+trs:ntriples12-bad-iri-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples - Bad - invalid IRI" ;
+  mf:action     <ntriples12-bad-iri-1.nt> ;
+  .
+
 trs:ntriples12-bad-reified-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
    mf:name      "N-Triples-12 - Bad - subject reified triple" ;
    mf:action    <ntriples12-bad-reified-syntax-1.nt> ;
@@ -192,4 +202,19 @@ trs:ntriples-langdir-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
 trs:ntriples-langdir-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
   mf:name       "N-Triples literal- Bad - upper case LTR" ;
   mf:action     <ntriples-langdir-bad-2.nt> ;
+  .
+
+trs:ntriples-langdir-bad-3 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples - Bad - literal with missing language tag" ;
+  mf:action     <ntriples-langdir-bad-3.nt> ;
+  .
+
+trs:ntriples-langdir-bad-4 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples - Bad - literal with bad language tag" ;
+  mf:action     <ntriples-langdir-bad-4.nt> ;
+  .
+
+trs:ntriples-langdir-bad-5 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples - Bad - literal with missing language tag and direction" ;
+  mf:action     <ntriples-langdir-bad-5.nt> ;
   .

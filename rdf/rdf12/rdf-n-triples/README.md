@@ -9,9 +9,9 @@ The `manifest.ttl` files in this directory lists tests in the RDF-star WG's N-Tr
 All tests have a name (`mf:name`) and an input (`mf:action`).
 
 * An implementation passes a positive syntax test if it parses the
-  input.
+  input, and signals no errors or warnings.
 * An implementation passes a negative syntax test if it fails to parse
-  the input.
+  the input, or signals an error or warning.
 * An implementation passes a positive canonicalization test if it parses the
   input, and generates the expected result (`mf:result`) compared as text when generating the canonical form of triples.
 
