@@ -22,7 +22,7 @@
       }
       dl.test-detail>dt:after {content: ": "}
       dl.test-detail>dd {
-        margin: 0 0 0 110px;
+        margin: 0 0 0 210px;
         padding: 0 0 0.5em 0;
       }
       dl.test-description>dt {margin-top: 2em;}
@@ -66,8 +66,34 @@
         <p>These test suites are a product of the <a href="https://www.w3.org/groups/wg/rdf-star/">W3C RDF &amp; SPARQL Working Group</a> as well as the RDF-Star Interest Group within the W3C RDF-DEV Community Group, and has been maintained by the <a href="https://www.w3.org/community/rdf-tests/">RDF Test Curation Community Group</a> at <a href="https://github.com/w3c/rdf-tests/tree/main/rdf/rdf11/">https://github.com/w3c/rdf-tests/tree/main/rdf/rdf11</a>. Conformance with RDF 1.2 specifications can be determined via successfully running the tests for relevant specifications along with the relevant RDF 1.1 tests.</p>
       </p>
       <p>This page describes W3C RDF &amp; SPARQL Working Group's test suite for RDF 1.2.
-        Conformance for RDF 1.2 requires conforming with tests in this test suite
-        along with the relevant RDF 1.2 tests.</p>
+        This test suite contains two kinds of tests:</p>
+      <ul>
+        <li>Positive Entailment Tests (<code>rdft:PositiveEntailmentTest</code>)</li>
+        <li>Positive Entailment Tests (rdft:NegativeEntailmentTest)</li>
+      </ul>
+      <p>These tests are also described in <a href="manifest.ttl">Turtle</a> format in this directory for convenience. The manifest files in this directory lists all of the approved tests in the RDF WG's RDF Entailment test suite. All tests have a name (<code>mf:name</code>) and an input (<code>mf:action</code>).</p>
+      <p>Each test is one of the above kinds of tests. All tests have</p>
+      <ul>
+        <li>a name (<code>mf:name</code>),</li>
+        <li>an input RDF graph URL (<code>mf:action</code>),</li>
+        <li>an output RDF graph URL or the special marker false (<code>mf:result</code>),</li>
+        <li>an entailment regime, which is "simple", "RDF", or "RDFS" (<code>mf:entailmentRegime</code>),</li>
+        <li>a list of recognized datatypes (<code>mf:recognizedDatatypes</code>),</li>
+        <li>a list of unrecognized datatypes (<code>mf:unrecognizedDatatypes</code>).</li>
+      </ul>
+      <p>An implementation passes a Positive (Negative) Entailment Test if, when
+        configured to 
+        1. perform entailment under the entailment regime of the test or some
+        entailment regime that is stronger (weaker) than the entailment regime and
+        2. recognize all the datatypes in the list of recognized datatypes and
+        none of the datatypes in the list of unrecognized datatypes,
+        * for tests that have an output graph, determines that the input RDF graph entails (does not entail) the output RDF graph
+        * for tests that have false as output, either determines that the input
+        RDF graph entails (does not entail) an inconsistent RDF graph or that the input RDF graph is inconsistent (consistent).</p>
+      <p>An implementation also passes a test if when configured differently from a
+        correct configuration as given above nonetheless produces the given result, and the result is correct in the configured entailment regime with the configured recognized datatypes.</p>
+      <p>Conformance for RDF 1.2 requires conforming with tests in this test suite
+        along with the relevant RDF 1.1 tests.</p>
       <h3 id='contributing-tests'>Contributing Tests</h3>
       <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
       <h3 id='distribution'>Distribution</h3>
@@ -95,7 +121,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test001a.ttl' property='mf:action'>test001a.ttl</a>
@@ -120,7 +156,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -145,7 +191,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -170,7 +226,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -195,7 +261,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -220,7 +296,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -245,7 +331,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test003a.ttl' property='mf:action'>test003a.ttl</a>
@@ -270,7 +366,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test003a.ttl' property='mf:action'>test003a.ttl</a>
@@ -295,7 +401,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
@@ -320,7 +436,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
@@ -345,7 +471,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test004a.ttl' property='mf:action'>test004a.ttl</a>
@@ -370,7 +506,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test006a.ttl' property='mf:action'>test006a.ttl</a>
@@ -395,7 +541,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='malformed-literal-control.ttl' property='mf:action'>malformed-literal-control.ttl</a>
@@ -416,7 +572,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
@@ -437,7 +603,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
@@ -462,7 +638,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
@@ -487,7 +673,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
@@ -512,7 +708,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='non-canonical-literal-control.ttl' property='mf:action'>non-canonical-literal-control.ttl</a>
@@ -537,7 +743,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='non-canonical-literal.ttl' property='mf:action'>non-canonical-literal.ttl</a>
@@ -562,7 +778,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='lowercase-language-string-control.ttl' property='mf:action'>lowercase-language-string-control.ttl</a>
@@ -587,7 +813,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='lowercase-language-string.ttl' property='mf:action'>lowercase-language-string.ttl</a>
@@ -612,7 +848,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='lowercase-dir-language-string-control.ttl' property='mf:action'>lowercase-dir-language-string-control.ttl</a>
@@ -637,7 +883,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='lowercase-dir-language-string.ttl' property='mf:action'>lowercase-dir-language-string.ttl</a>
@@ -662,7 +918,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='control-sameas-a.ttl' property='mf:action'>control-sameas-a.ttl</a>
@@ -687,7 +953,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='superman.ttl' property='mf:action'>superman.ttl</a>
@@ -712,7 +988,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test002a.ttl' property='mf:action'>test002a.ttl</a>
@@ -737,7 +1023,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test007a.ttl' property='mf:action'>test007a.ttl</a>
@@ -762,7 +1058,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test007a.ttl' property='mf:action'>test007a.ttl</a>
@@ -787,7 +1093,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test007a2.ttl' property='mf:action'>test007a2.ttl</a>
@@ -812,7 +1128,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-array-1.ttl' property='mf:action'>json-array-1.ttl</a>
@@ -837,7 +1163,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-object-1.ttl' property='mf:action'>json-object-1.ttl</a>
@@ -862,7 +1198,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-positive-zero.ttl' property='mf:action'>json-positive-zero.ttl</a>
@@ -887,7 +1233,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-positive-zero-array.ttl' property='mf:action'>json-positive-zero-array.ttl</a>
@@ -912,7 +1268,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-9007199254740990-5.ttl' property='mf:action'>json-9007199254740990-5.ttl</a>
@@ -937,7 +1303,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-9007199254740992-5.ttl' property='mf:action'>json-9007199254740992-5.ttl</a>
@@ -962,7 +1338,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON'>http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='json-e400.ttl' property='mf:action'>json-e400.ttl</a>
@@ -987,7 +1373,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:float'>xsd:float</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='float-positive-zero.ttl' property='mf:action'>float-positive-zero.ttl</a>
@@ -1012,7 +1408,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:float'>xsd:float</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='float-16777206-5.ttl' property='mf:action'>float-16777206-5.ttl</a>
@@ -1037,7 +1443,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:float'>xsd:float</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='float-16777206-5.ttl' property='mf:action'>float-16777206-5.ttl</a>
@@ -1062,7 +1478,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:float'>xsd:float</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='float-e400.ttl' property='mf:action'>float-e400.ttl</a>
@@ -1087,7 +1513,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:double'>xsd:double</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='double-positive-zero.ttl' property='mf:action'>double-positive-zero.ttl</a>
@@ -1112,7 +1548,17 @@
             <dt>type</dt>
             <dd>mf:NegativeEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:double'>xsd:double</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='double-9007199254740990-5.ttl' property='mf:action'>double-9007199254740990-5.ttl</a>
@@ -1137,7 +1583,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:double'>xsd:double</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='double-9007199254740992-5.ttl' property='mf:action'>double-9007199254740992-5.ttl</a>
@@ -1162,7 +1618,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:double'>xsd:double</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='double-e400.ttl' property='mf:action'>double-e400.ttl</a>
@@ -1187,7 +1653,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='test001a.ttl' property='mf:action'>test001a.ttl</a>
@@ -1212,7 +1688,17 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
+            <dt>entailmentRegime</dt>
+            <dd property='mf:entailmentRegime'></dd>
+            <dt>recognizedDatatypes</dt>
+            <dd>
+              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
+            <dt>unrecognizedDatatypes</dt>
+            <dd>
+              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
+            </dd>
             <dt>action</dt>
             <dd>
               <a href='reifies-rangea.ttl' property='mf:action'>reifies-rangea.ttl</a>
