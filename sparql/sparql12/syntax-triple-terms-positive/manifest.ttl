@@ -86,6 +86,7 @@
 :compound-anonreifier
 :compound-reifier
 :compound-tripleterm
+:compound-tripleterm-subject
 :expr-tripleterm-01
 :expr-tripleterm-03
 :expr-tripleterm-04
@@ -102,6 +103,8 @@
 :nested-reifier-01
 :nested-reifier-02
 :nested-tripleterm-01
+:nested-tripleterm-02
+:subject-tripleterm
 :update-anonreifier-01
 :update-anonreifier-02
 :update-anonreifier-03
@@ -579,6 +582,12 @@
    mf:specVersion "sparql-1.2";
    mf:action      <compound-tripleterm.rq> .
 
+:compound-tripleterm-subject rdf:type   mf:PositiveSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "compound-tripleterm-subject.rq" ;
+   mf:specVersion "sparql-1.2";
+   mf:action      <compound-tripleterm-subject.rq> .
+
 :expr-tripleterm-01 rdf:type   mf:PositiveSyntaxTest ;
    dawgt:approval dawgt:Proposed ;
    mf:name        "expr-tripleterm-01.rq" ;
@@ -674,6 +683,18 @@
    mf:name        "nested-tripleterm-01.rq" ;
    mf:specVersion "sparql-1.2";
    mf:action      <nested-tripleterm-01.rq> .
+
+:nested-tripleterm-02 rdf:type   mf:PositiveSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "nested-tripleterm-02.rq" ;
+   mf:specVersion "sparql-1.2";
+   mf:action      <nested-tripleterm-02.rq> .
+
+:subject-tripleterm rdf:type   mf:PositiveSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "subject-tripleterm.rq" ;
+   mf:specVersion "sparql-1.2";
+   mf:action      <subject-tripleterm.rq> .
 
 :update-anonreifier-01 rdf:type   mf:PositiveUpdateSyntaxTest ;
    dawgt:approval dawgt:Proposed ;
