@@ -27,7 +27,6 @@
 :annotated-reifier-path
 :annotated-reifier-reifier-alternate-path
 :annotated-reifier-variable-path
-:basic-tripleterm-subject
 :bind-anonreified
 :bind-reified
 :bindbnode-anonreifier
@@ -174,12 +173,6 @@
    mf:name        "annotated-reifier-variable-path.rq" ;
    mf:specVersion "sparql-1.2";
    mf:action      <annotated-reifier-variable-path.rq> .
-
-:basic-tripleterm-subject rdf:type   mf:NegativeSyntaxTest ;
-   dawgt:approval dawgt:Proposed ;
-   mf:name        "basic-tripleterm-subject.rq" ;
-   mf:specVersion "sparql-1.2";
-   mf:action      <basic-tripleterm-subject.rq> .
 
 :bind-anonreified rdf:type   mf:NegativeSyntaxTest ;
    dawgt:approval dawgt:Proposed ;
