@@ -24,6 +24,7 @@
 	:graph-empty
 	:graph-exist
 	:graph-not-exist
+	:graph-variable-scope
    ).
 
 :dawg-graph-01  rdf:type mf:QueryEvaluationTest ;
@@ -201,4 +202,16 @@
               qt:graphData    <data-g2.ttl> ;
             ] ;
     mf:result  <graph-empty-not-exist.ttl> ;
+    .
+
+:graph-variable-scope rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-variable-scope" ;
+    rdfs:comment  "The variable bound by the GRAPH operator is not in-scope inside it" ;
+    mf:action
+            [ qt:query        <graph-variable-scope.rq> ;
+              qt:data         <data-g1.ttl> ;
+              qt:graphData    <data-g1.ttl> ;
+              qt:graphData    <data-g2.ttl> ;
+            ] ;
+    mf:result  <graph-variable-scope.ttl> ;
     .
