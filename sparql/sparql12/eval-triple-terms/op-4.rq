@@ -3,6 +3,7 @@ PREFIX :       <http://example/>
 SELECT * {
   ?x :left ?left .
   ?x :right ?right .
+  FILTER ( isTRIPLE(?left) && isTRIPLE(?right) )
   FILTER ( ?left <= ?right )
   FILTER ( ?right >= ?left )
 }
