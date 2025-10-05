@@ -219,7 +219,7 @@
 
 :graph-variable-join rdf:type mf:QueryEvaluationTest ;
     mf:name "graph-variable-join" ;
-    rdfs:comment  "The variable bound by the GRAPH operator is also used in the graph pattern" .
+    rdfs:comment  "The variable bound by the GRAPH operator is also used in the graph pattern" ;
     mf:action
             [ qt:query        <graph-variable-join.rq> ;
               qt:graphData    <data-variable-join.ttl> ;
