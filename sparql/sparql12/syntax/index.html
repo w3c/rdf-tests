@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      SPARQL 1.2 tests
+      Syntax
     </title>
     <style>
       em.rfc2119 {
@@ -50,19 +50,18 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='../sparql12#manifest' typeof='mf:Manifest'>
+  <body resource='manifest#manifest' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>SPARQL 1.2 tests</h1>
+    <h1 property='rdfs:label'>Syntax</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        <p>These test suites are a product of the <a href="https://www.w3.org/groups/wg/rdf-star/">W3C RDF &amp; SPARQL Working Group</a> as well as the RDF 1.2 Interest Group within the W3C RDF-DEV Community Group, and has been maintained by the <a href="https://www.w3.org/community/rdf-tests/">RDF Test Curation Community Group</a> at <a href="https://github.com/w3c/rdf-tests/tree/main/sparql/sparql12/">https://github.com/w3c/rdf-tests/tree/main/sparql/sparql12</a>. Conformance with SPARQL 1.2 specifications can be determined via successfully running the tests for relevant specifications along with the relevant SPARQL 1.1 tests.</p>
       </p>
       <p>This page describes SPARQL 1.2 test suite of the W3C RDF &amp; SPARQL Working Group.</p>
       <h3 id='contributing-tests'>Contributing Tests</h3>
@@ -75,37 +74,30 @@
     </div>
     <div>
       <h2>
-        Referenced Manifests
+        Test Descriptions
       </h2>
-      <ul>
-        <li>
-          <a href='codepoint-escapes/index.html' inlist='true' property='mf:include'>codepoint-escapes/</a>
-        </li>
-        <li>
-          <a href='eval-triple-terms/index.html' inlist='true' property='mf:include'>eval-triple-terms/</a>
-        </li>
-        <li>
-          <a href='expression/index.html' inlist='true' property='mf:include'>expression/</a>
-        </li>
-        <li>
-          <a href='grouping/index.html' inlist='true' property='mf:include'>grouping/</a>
-        </li>
-        <li>
-          <a href='lang-basedir/index.html' inlist='true' property='mf:include'>lang-basedir/</a>
-        </li>
-        <li>
-          <a href='rdf11/index.html' inlist='true' property='mf:include'>rdf11/</a>
-        </li>
-        <li>
-          <a href='syntax-triple-terms-negative/index.html' inlist='true' property='mf:include'>syntax-triple-terms-negative/</a>
-        </li>
-        <li>
-          <a href='syntax-triple-terms-positive/index.html' inlist='true' property='mf:include'>syntax-triple-terms-positive/</a>
-        </li>
-        <li>
-          <a href='syntax/index.html' inlist='true' property='mf:include'>syntax/</a>
-        </li>
-      </ul>
+      <dl class='test-description'>
+        <dt id='nested-aggregate-functions'>
+          <a class='testlink' href='#nested-aggregate-functions'>
+            nested-aggregate-functions:
+          </a>
+          <span about='manifest#nested-aggregate-functions' property='mf:name'>Nested aggregate functions</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#nested-aggregate-functions' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='nested-aggregate-functions.rq' property='mf:action'>nested-aggregate-functions.rq</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
     </div>
     <footer>
       <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
