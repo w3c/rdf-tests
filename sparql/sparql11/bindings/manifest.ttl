@@ -141,8 +141,8 @@
     [
         qt:query  <graph.rq> ;
         qt:data   <empty.ttl> ;
-        qt:dataGraph   <empty.ttl> ;
-        qt:dataGraph   <data02.ttl>
+        qt:graphData   <empty.ttl> ;
+        qt:graphData   <data02.ttl>
     ] ;
     mf:result  <graph.ttl> .
 
