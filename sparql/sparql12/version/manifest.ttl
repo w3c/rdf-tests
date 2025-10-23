@@ -18,7 +18,6 @@
     :version-bad-01
     :version-bad-02
     :version-bad-03
-    :version-bad-04
     ) .
 
 
@@ -75,9 +74,3 @@
    mf:name        "version-bad-03.rq" ;
    mf:specVersion "sparql-1.2";
    mf:action      <version-bad-03.rq> .
-
-:version-bad-04 rdf:type   mf:NegativeSyntaxTest ;
-   dawgt:approval dawgt:Proposed ;
-   mf:name        "version-bad-04.rq" ;
-   mf:specVersion "sparql-1.2";
-   mf:action      <version-bad-04.rq> .
