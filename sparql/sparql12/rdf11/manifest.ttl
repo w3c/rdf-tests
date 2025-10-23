@@ -5,7 +5,7 @@
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 
-:manifest  rdf:type mf:Manifest ;
+<>  rdf:type mf:Manifest ;
     rdfs:label "RDF 1.1 literals handling" ;
     mf:entries
     (
