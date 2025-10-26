@@ -10,9 +10,14 @@
     mf:entries
     (
     :nested-aggregate-functions
+    :duplicated-values-variable
     ) .
 
 :nested-aggregate-functions rdf:type mf:NegativeSyntaxTest ;
     mf:name "Nested aggregate functions" ;
     mf:comment "The expression argument of an aggregate function can not contain an aggregate function." ;
     mf:action <nested-aggregate-functions.rq> .
+
+:duplicated-values-variable rdf:type mf:NegativeSyntaxTest ;
+    mf:name "Duplicated variable in a VALUES clause" ;
+    mf:action <duplicated-values-variable.rq> .
