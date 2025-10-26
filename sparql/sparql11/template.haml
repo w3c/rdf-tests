@@ -82,9 +82,9 @@
         %h2
           Referenced Manifests
         %ul
-          - Array(man['include']).map{|m| m.sub('manifest.ttl', '')}.sort.each do |uri|
+          - Array(man['include']).map{|m| m.sub(/manifest([^\/]*)\.ttl/, 'index\1.html')}.sort.each do |uri|
             %li
-              %a{property: 'mf:include', inlist: true, href: "#{uri}index.html"}=uri
+              %a{property: 'mf:include', inlist: true, href: uri}=uri.sub('index.html', '')
 
     - if man['entries']
       %div
