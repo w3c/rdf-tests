@@ -30,7 +30,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      SPARQL Codepoint-Escaping Tests
+      Version announcement
     </title>
     <style>
       em.rfc2119 {
@@ -56,7 +56,7 @@
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>SPARQL Codepoint-Escaping Tests</h1>
+    <h1 property='rdfs:label'>Version announcement</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
@@ -77,13 +77,13 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='codepoint-esc-01'>
-          <a class='testlink' href='#codepoint-esc-01'>
-            codepoint-esc-01:
+        <dt id='version-01'>
+          <a class='testlink' href='#version-01'>
+            version-01:
           </a>
-          <span about='manifest#codepoint-esc-01' property='mf:name'>codepoint-esc-01.rq</span>
+          <span about='manifest#version-01' property='mf:name'>version-01.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-01' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-01' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
           </div>
           <dl class='test-detail'>
@@ -93,19 +93,18 @@
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-01.rq' property='mf:action'>codepoint-esc-01.rq</a>
+              <a href='version-01.rq' property='mf:action'>version-01.rq</a>
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-02'>
-          <a class='testlink' href='#codepoint-esc-02'>
-            codepoint-esc-02:
+        <dt id='version-02'>
+          <a class='testlink' href='#version-02'>
+            version-02:
           </a>
-          <span about='manifest#codepoint-esc-02' property='mf:name'>codepoint-esc-02.rq</span>
+          <span about='manifest#version-02' property='mf:name'>version-02.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-02' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-02' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape for the backslash of a PN_LOCAL_ESC in the PN_LOCAL part of a PrefixedName</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -114,19 +113,98 @@
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-02.rq' property='mf:action'>codepoint-esc-02.rq</a>
+              <a href='version-02.rq' property='mf:action'>version-02.rq</a>
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-bad-03'>
-          <a class='testlink' href='#codepoint-esc-bad-03'>
-            codepoint-esc-bad-03:
+        <dt id='version-03'>
+          <a class='testlink' href='#version-03'>
+            version-03:
           </a>
-          <span about='manifest#codepoint-esc-bad-03' property='mf:name'>codepoint-esc-bad-03.rq</span>
+          <span about='manifest#version-03' property='mf:name'>version-03.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-bad-03' typeof='mf:NegativeSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-03' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape that results in an invalid backslash escape (requires handling codepoint escaping before backslash escaping)</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='version-03.rq' property='mf:action'>version-03.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='version-04'>
+          <a class='testlink' href='#version-04'>
+            version-04:
+          </a>
+          <span about='manifest#version-04' property='mf:name'>version-04.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-04' typeof='mf:PositiveSyntaxTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='version-04.rq' property='mf:action'>version-04.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='version-05'>
+          <a class='testlink' href='#version-05'>
+            version-05:
+          </a>
+          <span about='manifest#version-05' property='mf:name'>version-05.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-05' typeof='mf:PositiveSyntaxTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='version-05.rq' property='mf:action'>version-05.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='version-06'>
+          <a class='testlink' href='#version-06'>
+            version-06:
+          </a>
+          <span about='manifest#version-06' property='mf:name'>version-06.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-06' typeof='mf:PositiveSyntaxTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:PositiveSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <a href='version-06.rq' property='mf:action'>version-06.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='version-bad-01'>
+          <a class='testlink' href='#version-bad-01'>
+            version-bad-01:
+          </a>
+          <span about='manifest#version-bad-01' property='mf:name'>version-bad-01.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-bad-01' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -135,111 +213,47 @@
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-bad-03.rq' property='mf:action'>codepoint-esc-bad-03.rq</a>
+              <a href='version-bad-01.rq' property='mf:action'>version-bad-01.rq</a>
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-04'>
-          <a class='testlink' href='#codepoint-esc-04'>
-            codepoint-esc-04:
+        <dt id='version-bad-02'>
+          <a class='testlink' href='#version-bad-02'>
+            version-bad-02:
           </a>
-          <span about='manifest#codepoint-esc-04' property='mf:name'>codepoint-esc-04.rq</span>
+          <span about='manifest#version-bad-02' property='mf:name'>version-bad-02.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-04' typeof='mf:PositiveSyntaxTest'>
-          <div property='rdfs:comment'>
-            <p>codepoint escape that results in a valid backslash escape</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
-            <dt>action</dt>
-            <dd>
-              <a href='codepoint-esc-04.rq' property='mf:action'>codepoint-esc-04.rq</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='codepoint-esc-05'>
-          <a class='testlink' href='#codepoint-esc-05'>
-            codepoint-esc-05:
-          </a>
-          <span about='manifest#codepoint-esc-05' property='mf:name'>codepoint-esc-05.rq</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-05' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-bad-02' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
+            <dd>mf:NegativeSyntaxTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-05.rq' property='mf:action'>codepoint-esc-05.rq</a>
+              <a href='version-bad-02.rq' property='mf:action'>version-bad-02.rq</a>
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-06'>
-          <a class='testlink' href='#codepoint-esc-06'>
-            codepoint-esc-06:
+        <dt id='version-bad-03'>
+          <a class='testlink' href='#version-bad-03'>
+            version-bad-03:
           </a>
-          <span about='manifest#codepoint-esc-06' property='mf:name'>codepoint-esc-06.rq</span>
+          <span about='manifest#version-bad-03' property='mf:name'>version-bad-03.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-06' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#version-bad-03' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape for the percent sign in the PL_LOCAL part of a PrefixedName</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
+            <dd>mf:NegativeSyntaxTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-06.rq' property='mf:action'>codepoint-esc-06.rq</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='codepoint-esc-07'>
-          <a class='testlink' href='#codepoint-esc-07'>
-            codepoint-esc-07:
-          </a>
-          <span about='manifest#codepoint-esc-07' property='mf:name'>codepoint-esc-07.rq</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-07' typeof='mf:PositiveSyntaxTest'>
-          <div property='rdfs:comment'>
-            <p>codepoint escape for whitespace separating the projection tokens: SELECT * WHERE</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
-            <dt>action</dt>
-            <dd>
-              <a href='codepoint-esc-07.rq' property='mf:action'>codepoint-esc-07.rq</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='codepoint-esc-08'>
-          <a class='testlink' href='#codepoint-esc-08'>
-            codepoint-esc-08:
-          </a>
-          <span about='manifest#codepoint-esc-08' property='mf:name'>codepoint-esc-08.rq</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-08' typeof='mf:PositiveSyntaxTest'>
-          <div property='rdfs:comment'>
-            <p>codepoint escape for the starting double-quote of a literal</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource=''></dd>
-            <dt>action</dt>
-            <dd>
-              <a href='codepoint-esc-08.rq' property='mf:action'>codepoint-esc-08.rq</a>
+              <a href='version-bad-03.rq' property='mf:action'>version-bad-03.rq</a>
             </dd>
           </dl>
         </dd>
