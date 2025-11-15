@@ -13,6 +13,7 @@
     :haslangdir
     :lang
     :langdir
+    :langdir-literal
     :strlang
     :strlangdir
     ) .
@@ -57,7 +58,17 @@
            qt:data   <data-lang.ttl> ] ;
     mf:result  <langdir.srj> ;
     .
-    
+
+:langdir-literal  rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGDIR with inline literals";
+    rdfs:comment    "Function LANGDIR" ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <langdir-literal.rq> ;
+           qt:data   <data-empty.ttl> ] ;
+    mf:result  <langdir-literal.srj> ;
+    .
+
 :strlang rdf:type mf:QueryEvaluationTest ;
     mf:name "STRLANG";
     rdfs:comment    "Function STRLANG" ;
