@@ -49,8 +49,6 @@
 
         :op-1
         :op-2
-        :op-3
-        :op-4
 
         :order-1
         :order-2
@@ -362,24 +360,6 @@
         [ qt:query  <op-2.rq> ;
           qt:data   <data-7.ttl> ] ;
     mf:result  <op-2.srj> ;
-    .
-
-:op-3  rdf:type mf:QueryEvaluationTest ;
-    dawgt:approval dawgt:Proposed ;
-    mf:name    "Reified triples - Embedded triple - value-inequality" ;
-    mf:action
-        [ qt:query  <op-3.rq> ;
-          qt:data   <data-7.ttl> ] ;
-    mf:result  <op-3.srj> ;
-    .
-
-:op-4  rdf:type mf:QueryEvaluationTest ;
-    dawgt:approval dawgt:Proposed ;
-    mf:name    "Reified triples - Embedded triple - value-inequality" ;
-    mf:action
-        [ qt:query  <op-4.rq> ;
-          qt:data   <data-7.ttl> ] ;
-    mf:result  <op-4.srj> ;
     .
 
 ## ORDER BY
