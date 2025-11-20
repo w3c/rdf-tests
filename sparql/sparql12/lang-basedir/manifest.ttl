@@ -14,6 +14,7 @@
     :lang
     :langdir
     :langdir-literal
+    :langdir-literal-invalid
     :strlang
     :strlangdir
     ) .
@@ -68,6 +69,12 @@
            qt:data   <data-empty.ttl> ] ;
     mf:result  <langdir-literal.srj> ;
     .
+
+:langdir-literal-invalid rdf:type mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "Literal with invalid base direction" ;
+   rdfs:comment   "Invalid base direction in a literal" ;
+   mf:action      <langdir-literal-invalid.rq> .
 
 :strlang rdf:type mf:QueryEvaluationTest ;
     mf:name "STRLANG";
