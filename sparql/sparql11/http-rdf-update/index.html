@@ -439,6 +439,18 @@ Host: $HOST$
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
+            <h4 id="request">Request</h4>
+            <pre><code>POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
+Host: $HOST$
+Content-Type: text/turtle; charset=utf-8
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:name "Jane Doe"
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>200 OK
+</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -460,16 +472,23 @@ Host: $HOST$
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#get_of_post__existing_graph' typeof='mf:GraphStoreProtocolTest'>
           <div property='rdfs:comment'>
             <h4 id="request">Request</h4>
-            <pre><code>POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
+            <pre><code>GET $GRAPHSTORE$/person/1.ttl HTTP/1.1
 Host: $HOST$
-Content-Type: text/turtle; charset=utf-8
-
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-
-&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; foaf:name "Jane Doe"
+Accept: text/turtle
 </code></pre>
             <h4 id="response">Response</h4>
             <pre><code>200 OK
+Content-Type: text/turtle; charset=utf-8
+Content-Length: ...
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix v: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+
+&lt;http://$HOST$/$GRAPHSTORE$/person/1&gt; a foaf:Person;
+   foaf:businessCard [
+        a v:VCard;
+        v:fn "John Doe"
+   ] .
 </code></pre>
           </div>
           <dl class='test-detail'>
