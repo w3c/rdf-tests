@@ -135,17 +135,24 @@ gsp:get_of_post__existing_graph a mf:GraphStoreProtocolTest;
     rdfs:comment """
 #### Request
 
-    POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
+    GET $GRAPHSTORE$/person/1.ttl HTTP/1.1
     Host: $HOST$
-    Content-Type: text/turtle; charset=utf-8
-
-    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-    <http://$HOST$/$GRAPHSTORE$/person/1> foaf:name "Jane Doe"
+    Accept: text/turtle
 
 #### Response
 
     200 OK
+    Content-Type: text/turtle; charset=utf-8
+    Content-Length: ...
+
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;
+       foaf:businessCard [
+            a v:VCard;
+            v:fn "John Doe"
+       ] .
     """ .
 
 gsp:get_of_post__multipart_formdata a mf:GraphStoreProtocolTest;
@@ -319,7 +326,22 @@ gsp:post__create__new_graph a mf:GraphStoreProtocolTest;
 gsp:post__existing_graph a mf:GraphStoreProtocolTest;
     dawg:approval dawg:Approved;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
-    mf:name "POST - existing graph" .
+    mf:name "POST - existing graph" ;
+    rdfs:comment """
+#### Request
+
+    POST $GRAPHSTORE$/person/1.ttl HTTP/1.1
+    Host: $HOST$
+    Content-Type: text/turtle; charset=utf-8
+
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+    <http://$HOST$/$GRAPHSTORE$/person/1> foaf:name "Jane Doe"
+
+#### Response
+
+    200 OK
+    """ .
 
 gsp:post__multipart_formdata a mf:GraphStoreProtocolTest;
     dawg:approval dawg:Approved;
