@@ -1,0 +1,364 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/regex/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "REGEX",
+  "comment": "SPARQL regex test cases",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-001",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "regex-query-001",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html"
+      },
+      "comment": "Simple unanchored match test",
+      "action": {
+        "mq:query": {
+          "@id": "regex-query-001.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-01.ttl"
+        }
+      },
+      "result": "regex-result-001.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-002",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "regex-query-002",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html"
+      },
+      "comment": "Case insensitive unanchored match test",
+      "action": {
+        "mq:query": {
+          "@id": "regex-query-002.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-01.ttl"
+        }
+      },
+      "result": "regex-result-002.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-003",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "regex-query-003",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html"
+      },
+      "comment": "Use/mention test",
+      "action": {
+        "mq:query": {
+          "@id": "regex-query-003.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-01.ttl"
+        }
+      },
+      "result": "regex-result-003.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-004",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "regex-query-004",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html"
+      },
+      "comment": "str()+URI test",
+      "action": {
+        "mq:query": {
+          "@id": "regex-query-004.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-01.ttl"
+        }
+      },
+      "result": "regex-result-004.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-optional",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an ? quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-optional.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-optional.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-zero-or-more",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an * quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-zero-or-more.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-zero-or-more.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-one-or-more",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with a + quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-one-or-more.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-one-or-more.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-exact",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an {2} quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-counted-exact.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-counted-exact.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-bound",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an {,2} quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-counted-lower-bound.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-counted-lower-bound.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-upper-bounds",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an {2,} quantifier",
+      "action": {
+        "mq:query": {
+          "@id": "regex-quantifier-counted-lower-upper-bounds.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-quantifier-counted-lower-upper-bounds.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an . operator",
+      "action": {
+        "mq:query": {
+          "@id": "regex-dot.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-dot.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot-all",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with an . operator and the s option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-dot-all.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-dot-all.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-case-insensitive",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with the i option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-case-insensitive.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-case-insensitive.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with the q option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-no-metacharacters.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-no-metacharacters.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters-case-insensitive",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with the iq option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-no-metacharacters-case-insensitive.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-no-metacharacters.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with ^ and $",
+      "action": {
+        "mq:query": {
+          "@id": "regex-start-end.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-start-end.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end-multiline",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with ^ and $ and m option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-start-end-multiline.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-start-end-multiline.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-char-class-expression",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with [] expression",
+      "action": {
+        "mq:query": {
+          "@id": "regex-char-class-expression.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-char-class-expression.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-negative-char-class-expression",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with a [^] expression",
+      "action": {
+        "mq:query": {
+          "@id": "regex-negative-char-class-expression.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-negative-char-class-expression.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with the ignore spacing (x) option",
+      "action": {
+        "mq:query": {
+          "@id": "regex-ignore-whitespaces.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-ignore-whitespaces.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces-class-expression",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "REGEX with the ignore spacing (x) option with class expression",
+      "action": {
+        "mq:query": {
+          "@id": "regex-ignore-whitespaces-class-expression.rq"
+        },
+        "mq:data": {
+          "@id": "regex-data-quantifiers.ttl"
+        }
+      },
+      "result": "regex-ignore-whitespaces-class-expression.srx"
+    }
+  ]
+}

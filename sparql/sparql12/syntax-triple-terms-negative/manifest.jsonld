@@ -1,0 +1,632 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Negative Syntax Triple Terms",
+  "comment": "Negative syntax tests for triple terms in SPARQL 1.2",
+  "entries": [
+    {
+      "@id": "manifest#alternate-path-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "alternate-path-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "alternate-path-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#alternate-path-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "alternate-path-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "alternate-path-reifier.rq"
+    },
+    {
+      "@id": "manifest#alternate-path-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "alternate-path-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "alternate-path-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-alternate-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-alternate-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-alternate-path.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-list-predicate",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-list-predicate.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-list-predicate.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-oneOrMore",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-oneOrMore.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-oneOrMore.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-optional",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-optional.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-optional.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-path-on-start",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-path-on-start.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-path-on-start.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-path.rq"
+    },
+    {
+      "@id": "manifest#annotated-anonreifier-variable-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-anonreifier-variable-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-anonreifier-variable-path.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-list-predicate",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-list-predicate.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-list-predicate.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-oneOrMore",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-oneOrMore.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-oneOrMore.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-optional",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-optional.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-optional.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-path-on-start",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-path-on-start.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-path-on-start.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-path.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-reifier-alternate-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-reifier-alternate-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-reifier-alternate-path.rq"
+    },
+    {
+      "@id": "manifest#annotated-reifier-variable-path",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "annotated-reifier-variable-path.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "annotated-reifier-variable-path.rq"
+    },
+    {
+      "@id": "manifest#bind-anonreified",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bind-anonreified.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bind-anonreified.rq"
+    },
+    {
+      "@id": "manifest#bind-reified",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bind-reified.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bind-reified.rq"
+    },
+    {
+      "@id": "manifest#bindbnode-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bindbnode-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bindbnode-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#bindbnode-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bindbnode-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bindbnode-reifier.rq"
+    },
+    {
+      "@id": "manifest#bindbnode-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bindbnode-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bindbnode-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#bnode-predicate-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bnode-predicate-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bnode-predicate-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#bnode-predicate-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bnode-predicate-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bnode-predicate-reifier.rq"
+    },
+    {
+      "@id": "manifest#bnode-predicate-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "bnode-predicate-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "bnode-predicate-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#list-anonreifier-01",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-anonreifier-01.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-anonreifier-01.rq"
+    },
+    {
+      "@id": "manifest#list-anonreifier-02",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-anonreifier-02.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-anonreifier-02.rq"
+    },
+    {
+      "@id": "manifest#list-reifier-01",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-reifier-01.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-reifier-01.rq"
+    },
+    {
+      "@id": "manifest#list-reifier-02",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-reifier-02.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-reifier-02.rq"
+    },
+    {
+      "@id": "manifest#list-tripleterm-01",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-tripleterm-01.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-tripleterm-01.rq"
+    },
+    {
+      "@id": "manifest#list-tripleterm-02",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "list-tripleterm-02.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "list-tripleterm-02.rq"
+    },
+    {
+      "@id": "manifest#nested-annotated-path-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "nested-annotated-path-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "nested-annotated-path-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#nested-annotated-path-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "nested-annotated-path-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "nested-annotated-path-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-object-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-object-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-object-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-object-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-object-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-object-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-object-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-object-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-object-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-predicate-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-predicate-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-predicate-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-predicate-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-predicate-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-predicate-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-predicate-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-predicate-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-predicate-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-subject-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-subject-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-subject-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-subject-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-subject-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-subject-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-list-subject-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-list-subject-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-list-subject-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-bind-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-bind-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-bind-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-bind-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-bind-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-bind-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-bind-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-bind-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-bind-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-path-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-path-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-path-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#quoted-variable-path-anonreifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-variable-path-anonreifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-variable-path-anonreifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-variable-path-reifier",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-variable-path-reifier.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-variable-path-reifier.rq"
+    },
+    {
+      "@id": "manifest#quoted-variable-path-tripleterm",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "quoted-variable-path-tripleterm.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "quoted-variable-path-tripleterm.rq"
+    },
+    {
+      "@id": "manifest#syntax-update-anonreifier-01",
+      "@type": "mf:NegativeUpdateSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "syntax-update-anonreifier-01.ru",
+      "mf:specVersion": "sparql-1.2",
+      "action": "syntax-update-anonreifier-01.ru"
+    },
+    {
+      "@id": "manifest#syntax-update-anonreifier-02",
+      "@type": "mf:NegativeUpdateSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "syntax-update-anonreifier-02.ru",
+      "mf:specVersion": "sparql-1.2",
+      "action": "syntax-update-anonreifier-02.ru"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-01",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-01.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-01.rq"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-02",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-02.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-02.rq"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-03",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-03.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-03.rq"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-04",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-04.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-04.rq"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-05",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-05.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-05.rq"
+    },
+    {
+      "@id": "manifest#tripleterm-separate-06",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "tripleterm-separate-06.rq",
+      "mf:specVersion": "sparql-1.2",
+      "action": "tripleterm-separate-06.rq"
+    }
+  ]
+}

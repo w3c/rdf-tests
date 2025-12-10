@@ -1,0 +1,553 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "N-Triples tests",
+  "entries": [
+    {
+      "@id": "#nt-syntax-file-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-file-01",
+      "comment": "Empty file",
+      "action": "nt-syntax-file-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-file-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-file-02",
+      "comment": "Only comment",
+      "action": "nt-syntax-file-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-file-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-file-03",
+      "comment": "One comment, one empty line",
+      "action": "nt-syntax-file-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-uri-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-uri-01",
+      "comment": "Only IRIs",
+      "action": "nt-syntax-uri-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-uri-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-uri-02",
+      "comment": "IRIs with Unicode escape",
+      "action": "nt-syntax-uri-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-uri-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-uri-03",
+      "comment": "IRIs with long Unicode escape",
+      "action": "nt-syntax-uri-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-uri-04",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-uri-04",
+      "comment": "Legal IRIs",
+      "action": "nt-syntax-uri-04.nt"
+    },
+    {
+      "@id": "#nt-syntax-string-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-string-01",
+      "comment": "string literal",
+      "action": "nt-syntax-string-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-string-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-string-02",
+      "comment": "langString literal",
+      "action": "nt-syntax-string-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-string-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-string-03",
+      "comment": "langString literal with region",
+      "action": "nt-syntax-string-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-str-esc-01",
+      "comment": "string literal with escaped newline",
+      "action": "nt-syntax-str-esc-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-str-esc-02",
+      "comment": "string literal with Unicode escape",
+      "action": "nt-syntax-str-esc-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-str-esc-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-str-esc-03",
+      "comment": "string literal with long Unicode escape",
+      "action": "nt-syntax-str-esc-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-bnode-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-bnode-01",
+      "comment": "bnode subject",
+      "action": "nt-syntax-bnode-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bnode-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-bnode-02",
+      "comment": "bnode object",
+      "action": "nt-syntax-bnode-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bnode-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-bnode-03",
+      "comment": "Blank node labels may start with a digit",
+      "action": "nt-syntax-bnode-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-datatypes-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-datatypes-01",
+      "comment": "xsd:byte literal",
+      "action": "nt-syntax-datatypes-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-datatypes-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-datatypes-02",
+      "comment": "integer as xsd:string",
+      "action": "nt-syntax-datatypes-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-01",
+      "comment": "Bad IRI : space (negative test)",
+      "action": "nt-syntax-bad-uri-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-02",
+      "comment": "Bad IRI : bad escape (negative test)",
+      "action": "nt-syntax-bad-uri-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-03",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-03",
+      "comment": "Bad IRI : bad long escape (negative test)",
+      "action": "nt-syntax-bad-uri-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-04",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-04",
+      "comment": "Bad IRI : character escapes not allowed (negative test)",
+      "action": "nt-syntax-bad-uri-04.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-05",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-05",
+      "comment": "Bad IRI : character escapes not allowed (2) (negative test)",
+      "action": "nt-syntax-bad-uri-05.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-06",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-06",
+      "comment": "Bad IRI : relative IRI not allowed in subject (negative test)",
+      "action": "nt-syntax-bad-uri-06.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-07",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-07",
+      "comment": "Bad IRI : relative IRI not allowed in predicate (negative test)",
+      "action": "nt-syntax-bad-uri-07.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-08",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-08",
+      "comment": "Bad IRI : relative IRI not allowed in object (negative test)",
+      "action": "nt-syntax-bad-uri-08.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-uri-09",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-uri-09",
+      "comment": "Bad IRI : relative IRI not allowed in datatype (negative test)",
+      "action": "nt-syntax-bad-uri-09.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-prefix-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-prefix-01",
+      "comment": "@prefix not allowed in n-triples (negative test)",
+      "action": "nt-syntax-bad-prefix-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-base-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-base-01",
+      "comment": "@base not allowed in N-Triples (negative test)",
+      "action": "nt-syntax-bad-base-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-bnode-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-bnode-01",
+      "comment": "Colon in bnode label not allowed (negative test)",
+      "action": "nt-syntax-bad-bnode-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-bnode-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-bnode-02",
+      "comment": "Colon in bnode label not allowed (negative test)",
+      "action": "nt-syntax-bad-bnode-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-struct-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-struct-01",
+      "comment": "N-Triples does not have objectList (negative test)",
+      "action": "nt-syntax-bad-struct-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-struct-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-struct-02",
+      "comment": "N-Triples does not have predicateObjectList (negative test)",
+      "action": "nt-syntax-bad-struct-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-lang-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-lang-01",
+      "comment": "langString with bad lang (negative test)",
+      "action": "nt-syntax-bad-lang-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-esc-01",
+      "comment": "Bad string escape (negative test)",
+      "action": "nt-syntax-bad-esc-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-esc-02",
+      "comment": "Bad string escape (negative test)",
+      "action": "nt-syntax-bad-esc-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-esc-03",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-esc-03",
+      "comment": "Bad string escape (negative test)",
+      "action": "nt-syntax-bad-esc-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-01",
+      "comment": "mismatching string literal open/close (negative test)",
+      "action": "nt-syntax-bad-string-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-02",
+      "comment": "mismatching string literal open/close (negative test)",
+      "action": "nt-syntax-bad-string-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-03",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-03",
+      "comment": "single quotes (negative test)",
+      "action": "nt-syntax-bad-string-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-04",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-04",
+      "comment": "long single string literal (negative test)",
+      "action": "nt-syntax-bad-string-04.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-05",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-05",
+      "comment": "long double string literal (negative test)",
+      "action": "nt-syntax-bad-string-05.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-06",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-06",
+      "comment": "string literal with no end (negative test)",
+      "action": "nt-syntax-bad-string-06.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-string-07",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-string-07",
+      "comment": "string literal with no start (negative test)",
+      "action": "nt-syntax-bad-string-07.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-num-01",
+      "comment": "no numbers in N-Triples (integer) (negative test)",
+      "action": "nt-syntax-bad-num-01.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-num-02",
+      "comment": "no numbers in N-Triples (decimal) (negative test)",
+      "action": "nt-syntax-bad-num-02.nt"
+    },
+    {
+      "@id": "#nt-syntax-bad-num-03",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "nt-syntax-bad-num-03",
+      "comment": "no numbers in N-Triples (float) (negative test)",
+      "action": "nt-syntax-bad-num-03.nt"
+    },
+    {
+      "@id": "#nt-syntax-subm-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "nt-syntax-subm-01",
+      "comment": "Submission test from Original RDF Test Cases",
+      "action": "nt-syntax-subm-01.nt"
+    },
+    {
+      "@id": "#comment_following_triple",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "comment_following_triple",
+      "comment": "Tests comments after a triple",
+      "approval": "rdft:Proposed",
+      "action": "comment_following_triple.nt"
+    },
+    {
+      "@id": "#literal",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal",
+      "comment": "literal \"\"\"x\"\"\"",
+      "approval": "rdft:Proposed",
+      "action": "literal.nt"
+    },
+    {
+      "@id": "#literal_all_controls",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_all_controls",
+      "comment": "literal_all_controls '\\x00\\x01\\x02\\x03\\x04...'",
+      "approval": "rdft:Approved",
+      "action": "literal_all_controls.nt"
+    },
+    {
+      "@id": "#literal_all_punctuation",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_all_punctuation",
+      "comment": "literal_all_punctuation '!\"#$%&()...'",
+      "approval": "rdft:Approved",
+      "action": "literal_all_punctuation.nt"
+    },
+    {
+      "@id": "#literal_ascii_boundaries",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_ascii_boundaries",
+      "comment": "literal_ascii_boundaries '\\x00\\x26\\x28...'",
+      "approval": "rdft:Proposed",
+      "action": "literal_ascii_boundaries.nt"
+    },
+    {
+      "@id": "#literal_with_2_dquotes",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_2_dquotes",
+      "comment": "literal with 2 dquotes \"\"\"a\"\"b\"\"\"",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_2_dquotes.nt"
+    },
+    {
+      "@id": "#literal_with_2_squotes",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_2_squotes",
+      "comment": "literal with 2 squotes \"x''y\"",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_2_squotes.nt"
+    },
+    {
+      "@id": "#literal_with_BACKSPACE",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_BACKSPACE",
+      "comment": "literal with BACKSPACE",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_BACKSPACE.nt"
+    },
+    {
+      "@id": "#literal_with_CARRIAGE_RETURN",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_CARRIAGE_RETURN",
+      "comment": "literal with CARRIAGE RETURN",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_CARRIAGE_RETURN.nt"
+    },
+    {
+      "@id": "#literal_with_CHARACTER_TABULATION",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_CHARACTER_TABULATION",
+      "comment": "literal with CHARACTER TABULATION",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_CHARACTER_TABULATION.nt"
+    },
+    {
+      "@id": "#literal_with_dquote",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_dquote",
+      "comment": "literal with dquote \"x\"y\"",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_dquote.nt"
+    },
+    {
+      "@id": "#literal_with_FORM_FEED",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_FORM_FEED",
+      "comment": "literal with FORM FEED",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_FORM_FEED.nt"
+    },
+    {
+      "@id": "#literal_with_LINE_FEED",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_LINE_FEED",
+      "comment": "literal with LINE FEED",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_LINE_FEED.nt"
+    },
+    {
+      "@id": "#literal_with_numeric_escape4",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_numeric_escape4",
+      "comment": "literal with numeric escape4 \\u",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_numeric_escape4.nt"
+    },
+    {
+      "@id": "#literal_with_numeric_escape8",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_numeric_escape8",
+      "comment": "literal with numeric escape8 \\U",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_numeric_escape8.nt"
+    },
+    {
+      "@id": "#literal_with_REVERSE_SOLIDUS",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_REVERSE_SOLIDUS",
+      "comment": "literal with REVERSE SOLIDUS",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_REVERSE_SOLIDUS.nt"
+    },
+    {
+      "@id": "#literal_with_REVERSE_SOLIDUS2",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_REVERSE_SOLIDUS2",
+      "comment": "REVERSE SOLIDUS at end of literal",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_REVERSE_SOLIDUS2.nt"
+    },
+    {
+      "@id": "#literal_with_squote",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_squote",
+      "comment": "literal with squote \"x'y\"",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_squote.nt"
+    },
+    {
+      "@id": "#literal_with_UTF8_boundaries",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "literal_with_UTF8_boundaries",
+      "comment": "literal_with_UTF8_boundaries '\\x80\\x7ff\\x800\\xfff...'",
+      "approval": "rdft:Proposed",
+      "action": "literal_with_UTF8_boundaries.nt"
+    },
+    {
+      "@id": "#langtagged_string",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "langtagged_string",
+      "comment": "langtagged string \"x\"@en",
+      "approval": "rdft:Proposed",
+      "action": "langtagged_string.nt"
+    },
+    {
+      "@id": "#lantag_with_subtag",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "lantag_with_subtag",
+      "comment": "lantag with subtag \"x\"@en-us",
+      "approval": "rdft:Proposed",
+      "action": "lantag_with_subtag.nt"
+    },
+    {
+      "@id": "#minimal_whitespace",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "minimal_whitespace",
+      "comment": "tests absense of whitespace between subject, predicate, object and end-of-statement",
+      "approval": "rdft:Proposed",
+      "action": "minimal_whitespace.nt"
+    }
+  ]
+}

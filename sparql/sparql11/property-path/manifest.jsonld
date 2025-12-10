@@ -1,0 +1,588 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/property-path/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Property Path",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp01) Simple path",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp01.rq"
+        },
+        "mq:data": {
+          "@id": "pp01.ttl"
+        }
+      },
+      "result": "pp01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp02) Star path",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp02.rq"
+        },
+        "mq:data": {
+          "@id": "pp01.ttl"
+        }
+      },
+      "result": "pp02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp03) Simple path with loop",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp03.rq"
+        },
+        "mq:data": {
+          "@id": "pp03.ttl"
+        }
+      },
+      "result": "pp03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp06",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp06) Path with two graphs",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp06.rq"
+        },
+        "mq:graphData": [
+          {
+            "@id": "pp061.ttl"
+          },
+          {
+            "@id": "pp062.ttl"
+          }
+        ]
+      },
+      "result": "pp06.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp07",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp07) Path with one graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp06.rq"
+        },
+        "mq:graphData": {
+          "@id": "pp07.ttl"
+        }
+      },
+      "result": "pp07.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp08",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp08) Reverse path",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "mq:queryForm": {
+        "@id": "mq:QueryAsk"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp08.rq"
+        },
+        "mq:data": {
+          "@id": "pp08.ttl"
+        }
+      },
+      "result": "pp08.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp09",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp09) Reverse sequence path",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp09.rq"
+        },
+        "mq:data": {
+          "@id": "pp09.ttl"
+        }
+      },
+      "result": "pp09.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp10",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp10) Path with negation",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp10.rq"
+        },
+        "mq:data": {
+          "@id": "pp10.ttl"
+        }
+      },
+      "result": "pp10.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp11",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp11) Simple path and two paths to same target node",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp11.rq"
+        },
+        "mq:data": {
+          "@id": "pp11.ttl"
+        }
+      },
+      "result": "pp11.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp12",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp12) Variable length path and two paths to same target node",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp12.rq"
+        },
+        "mq:data": {
+          "@id": "pp11.ttl"
+        }
+      },
+      "result": "pp12.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp14",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp14) Star path over foaf:knows",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp14.rq"
+        },
+        "mq:data": {
+          "@id": "pp14.ttl"
+        }
+      },
+      "result": "pp14.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp16",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp16) Duplicate paths and cycles through foaf:knows*",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp14.rq"
+        },
+        "mq:data": {
+          "@id": "pp16.ttl"
+        }
+      },
+      "result": "pp16.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp21",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "name": "(pp21) Diamond -- :p+",
+      "action": {
+        "mq:query": {
+          "@id": "path-2-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-diamond.ttl"
+        }
+      },
+      "result": "diamond-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp23",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "name": "(pp23) Diamond, with tail -- :p+",
+      "action": {
+        "mq:query": {
+          "@id": "path-2-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-diamond-tail.ttl"
+        }
+      },
+      "result": "diamond-tail-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp25",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "name": "(pp25) Diamond, with loop -- :p+",
+      "action": {
+        "mq:query": {
+          "@id": "path-2-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-diamond-loop.ttl"
+        }
+      },
+      "result": "diamond-loop-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp28a",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "(pp28a) Diamond, with loop -- (:p/:p)?",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "path-3-3.rq"
+        },
+        "mq:data": {
+          "@id": "data-diamond-loop.ttl"
+        }
+      },
+      "result": "diamond-loop-5a.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp30",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "name": "(pp30) Operator precedence 1",
+      "action": {
+        "mq:query": {
+          "@id": "path-p1.rq"
+        },
+        "mq:data": {
+          "@id": "path-p1.ttl"
+        }
+      },
+      "result": "path-p1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp31",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "name": "(pp31) Operator precedence 2",
+      "action": {
+        "mq:query": {
+          "@id": "path-p2.rq"
+        },
+        "mq:data": {
+          "@id": "path-p1.ttl"
+        }
+      },
+      "result": "path-p2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp32",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "name": "(pp32) Operator precedence 3",
+      "action": {
+        "mq:query": {
+          "@id": "path-p3.rq"
+        },
+        "mq:data": {
+          "@id": "path-p3.ttl"
+        }
+      },
+      "result": "path-p3.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp33",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-03-29#resolution_3"
+      },
+      "name": "(pp33) Operator precedence 4",
+      "action": {
+        "mq:query": {
+          "@id": "path-p4.rq"
+        },
+        "mq:data": {
+          "@id": "path-p3.ttl"
+        }
+      },
+      "result": "path-p4.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp34",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2"
+      },
+      "name": "(pp34) Named Graph 1",
+      "action": {
+        "mq:query": {
+          "@id": "path-ng-01.rq"
+        },
+        "mq:graphData": [
+          {
+            "@id": "ng-01.ttl"
+          },
+          {
+            "@id": "ng-02.ttl"
+          },
+          {
+            "@id": "ng-03.ttl"
+          }
+        ]
+      },
+      "result": "path-ng-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp35",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-04-05#resolution_2"
+      },
+      "name": "(pp35) Named Graph 2",
+      "action": {
+        "mq:query": {
+          "@id": "path-ng-02.rq"
+        },
+        "mq:graphData": [
+          {
+            "@id": "ng-01.ttl"
+          },
+          {
+            "@id": "ng-02.ttl"
+          },
+          {
+            "@id": "ng-03.ttl"
+          }
+        ]
+      },
+      "result": "path-ng-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp36",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "name": "(pp36) Arbitrary path with bound endpoints",
+      "action": {
+        "mq:query": {
+          "@id": "pp36.rq"
+        },
+        "mq:data": {
+          "@id": "clique3.ttl"
+        }
+      },
+      "result": "pp36.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#pp37",
+      "@type": "mf:QueryEvaluationTest",
+      "comment": "Test case as per http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/2012Feb/0006.html",
+      "name": "(pp37) Nested (*)*",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-05-15#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "pp37.rq"
+        },
+        "mq:data": {
+          "@id": "pp37.ttl"
+        }
+      },
+      "result": "pp37.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#values_and_path",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "ZeroOrX property paths should only return terms in the graph and not also terms defined in the query",
+      "action": {
+        "mq:query": {
+          "@id": "values_and_path.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        }
+      },
+      "result": "values_and_path.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_inverse",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Negated Property Set with inverse properties",
+      "action": {
+        "mq:query": {
+          "@id": "nps_inverse.rq"
+        },
+        "mq:data": {
+          "@id": "nps_inverse.ttl"
+        }
+      },
+      "result": "nps_inverse.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/property-path/manifest#nps_direct_and_inverse",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Negated Property Set with both direct and inverse properties",
+      "action": {
+        "mq:query": {
+          "@id": "nps_direct_and_inverse.rq"
+        },
+        "mq:data": {
+          "@id": "nps_direct_and_inverse.ttl"
+        }
+      },
+      "result": "nps_direct_and_inverse.srx"
+    }
+  ]
+}

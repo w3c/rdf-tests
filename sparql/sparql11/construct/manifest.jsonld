@@ -1,0 +1,165 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/construct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "CONSTRUCT",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "constructwhere01 - CONSTRUCT WHERE",
+      "comment": "CONSTRUCT WHERE { ?S ?P ?O }",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "constructwhere01.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "constructwhere01result.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "constructwhere02 - CONSTRUCT WHERE",
+      "comment": "CONSTRUCT WHERE  with join",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "constructwhere02.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "constructwhere02result.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "constructwhere03 - CONSTRUCT WHERE",
+      "comment": "CONSTRUCT WHERE  with join, using shortcut notation",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "constructwhere03.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "constructwhere03result.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere04",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "constructwhere04 - CONSTRUCT WHERE",
+      "comment": "CONSTRUCT WHERE  with DatasetClause",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "constructwhere04.rq"
+        },
+        "mq:graphData": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "constructwhere04result.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere05",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "constructwhere05 - CONSTRUCT WHERE",
+      "comment": "CONSTRUCT WHERE  with FILTER",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": "constructwhere05.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructwhere06",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "constructwhere06 - CONSTRUCT WHERE",
+      "mf:description": "CONSTRUCT WHERE  with GRAPH",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3"
+      },
+      "action": "constructwhere06.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/construct/manifest#constructlist",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "CONSTRUCT list",
+      "action": {
+        "mq:query": {
+          "@id": "constructlist.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "constructlistresult.ttl"
+    }
+  ]
+}
