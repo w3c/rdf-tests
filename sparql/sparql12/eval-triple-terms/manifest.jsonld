@@ -1,0 +1,683 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Evaluation Triple Terms",
+  "comment": "Evaluation tests for triple terms in SPARQL 1.2",
+  "entries": [
+    {
+      "@id": "manifest#results-tripleterms-1j",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Triple terms - all graph triples (JSON results)",
+      "action": {
+        "mq:query": {
+          "@id": "results-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-0-tripleterms.ttl"
+        }
+      },
+      "result": "results-tripleterms-1.srj"
+    },
+    {
+      "@id": "manifest#results-tripleterms-1x",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Triple terms - all graph triples (XML results)",
+      "action": {
+        "mq:query": {
+          "@id": "results-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-0-tripleterms.ttl"
+        }
+      },
+      "result": "results-tripleterms-1.srx"
+    },
+    {
+      "@id": "manifest#results-reifiedtriples-1j",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - all graph triples (JSON results)",
+      "action": {
+        "mq:query": {
+          "@id": "results-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-0-reifiedtriples.ttl"
+        }
+      },
+      "result": "results-reifiedtriples-1.srj"
+    },
+    {
+      "@id": "manifest#results-reifiedtriples-1x",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - all graph triples (XML results)",
+      "action": {
+        "mq:query": {
+          "@id": "results-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-0-reifiedtriples.ttl"
+        }
+      },
+      "result": "results-reifiedtriples-1.srx"
+    },
+    {
+      "@id": "manifest#basic-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - match constant reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "basic-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-1.ttl"
+        }
+      },
+      "result": "basic-2.srj"
+    },
+    {
+      "@id": "manifest#basic-3",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - match reified triple, var subject",
+      "action": {
+        "mq:query": {
+          "@id": "basic-3.rq"
+        },
+        "mq:data": {
+          "@id": "data-1.ttl"
+        }
+      },
+      "result": "basic-3.srj"
+    },
+    {
+      "@id": "manifest#basic-4",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - match reified triple, var predicate",
+      "action": {
+        "mq:query": {
+          "@id": "basic-4.rq"
+        },
+        "mq:data": {
+          "@id": "data-1.ttl"
+        }
+      },
+      "result": "basic-4.srj"
+    },
+    {
+      "@id": "manifest#basic-5",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - match reified triple, var object",
+      "action": {
+        "mq:query": {
+          "@id": "basic-5.rq"
+        },
+        "mq:data": {
+          "@id": "data-1.ttl"
+        }
+      },
+      "result": "basic-5.srj"
+    },
+    {
+      "@id": "manifest#basic-6",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - no match of reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "basic-6.rq"
+        },
+        "mq:data": {
+          "@id": "data-1.ttl"
+        }
+      },
+      "result": "basic-6.srj"
+    },
+    {
+      "@id": "manifest#basic-7",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Annotated triple - match constant reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "basic-7.rq"
+        },
+        "mq:data": {
+          "@id": "data-8.ttl"
+        }
+      },
+      "result": "basic-7.srj"
+    },
+    {
+      "@id": "manifest#pattern-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Asserted and reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-01.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-01.srj"
+    },
+    {
+      "@id": "manifest#pattern-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Asserted and reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-02.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-02.srj"
+    },
+    {
+      "@id": "manifest#pattern-3",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Variable for reified triple reifier",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-03.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-03.srj"
+    },
+    {
+      "@id": "manifest#pattern-3-nomatch",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Variable for reified triple",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-03-nomatch.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-03-nomatch.srj"
+    },
+    {
+      "@id": "manifest#pattern-4",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - No match",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-04.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-04.srj"
+    },
+    {
+      "@id": "manifest#pattern-5",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - match variables in triple terms",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-05.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-05.srj"
+    },
+    {
+      "@id": "manifest#pattern-6",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Nesting 1",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-06.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-06.srj"
+    },
+    {
+      "@id": "manifest#pattern-7",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Nesting 2",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-07.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-07.srj"
+    },
+    {
+      "@id": "manifest#pattern-8",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Match and nesting",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-08.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-08.srj"
+    },
+    {
+      "@id": "manifest#pattern-8-nomatch",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Match for non-equal reifier and nesting",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-08-nomatch.rq"
+        },
+        "mq:data": {
+          "@id": "data-2.ttl"
+        }
+      },
+      "result": "pattern-08-nomatch.srj"
+    },
+    {
+      "@id": "manifest#pattern-9",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Pattern - Same variable",
+      "action": {
+        "mq:query": {
+          "@id": "pattern-09.rq"
+        },
+        "mq:data": {
+          "@id": "data-5.ttl"
+        }
+      },
+      "result": "pattern-09.srj"
+    },
+    {
+      "@id": "manifest#construct-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - CONSTRUCT with constant template",
+      "action": {
+        "mq:query": {
+          "@id": "construct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-3.ttl"
+        }
+      },
+      "result": "construct-1.ttl"
+    },
+    {
+      "@id": "manifest#construct-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - CONSTRUCT WHERE with constant template",
+      "action": {
+        "mq:query": {
+          "@id": "construct-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-3.ttl"
+        }
+      },
+      "result": "construct-2.ttl"
+    },
+    {
+      "@id": "manifest#construct-3",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - CONSTRUCT - about every triple",
+      "action": {
+        "mq:query": {
+          "@id": "construct-3.rq"
+        },
+        "mq:data": {
+          "@id": "data-3.ttl"
+        }
+      },
+      "result": "construct-3.ttl"
+    },
+    {
+      "@id": "manifest#construct-4",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - CONSTRUCT with annotation syntax",
+      "action": {
+        "mq:query": {
+          "@id": "construct-4.rq"
+        },
+        "mq:data": {
+          "@id": "data-3.ttl"
+        }
+      },
+      "result": "construct-4.ttl"
+    },
+    {
+      "@id": "manifest#construct-5",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - CONSTRUCT WHERE with annotation syntax",
+      "action": {
+        "mq:query": {
+          "@id": "construct-5.rq"
+        },
+        "mq:data": {
+          "@id": "data-3.ttl"
+        }
+      },
+      "result": "construct-5.ttl"
+    },
+    {
+      "@id": "manifest#graphs-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - GRAPH",
+      "action": {
+        "mq:query": {
+          "@id": "graphs-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-4.trig"
+        }
+      },
+      "result": "graphs-1.srj"
+    },
+    {
+      "@id": "manifest#graphs-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - GRAPHs with blank node",
+      "action": {
+        "mq:query": {
+          "@id": "graphs-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-4.trig"
+        }
+      },
+      "result": "graphs-2.srj"
+    },
+    {
+      "@id": "manifest#expr-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - BIND - CONSTRUCT",
+      "action": {
+        "mq:query": {
+          "@id": "expr-01.rq"
+        },
+        "mq:data": {
+          "@id": "data-4.trig"
+        }
+      },
+      "result": "expr-01.ttl"
+    },
+    {
+      "@id": "manifest#expr-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - Functions",
+      "action": {
+        "mq:query": {
+          "@id": "expr-02.rq"
+        },
+        "mq:data": {
+          "@id": "empty.nq"
+        }
+      },
+      "result": "expr-02.srj"
+    },
+    {
+      "@id": "manifest#op-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - sameTerm",
+      "action": {
+        "mq:query": {
+          "@id": "op-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-7.ttl"
+        }
+      },
+      "result": "op-1.srj"
+    },
+    {
+      "@id": "manifest#op-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - value-equality",
+      "action": {
+        "mq:query": {
+          "@id": "op-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-7.ttl"
+        }
+      },
+      "result": "op-2.srj"
+    },
+    {
+      "@id": "manifest#order-1",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - ORDER BY",
+      "action": {
+        "mq:query": {
+          "@id": "order-by.rq"
+        },
+        "mq:data": {
+          "@id": "data-order-kind.ttl"
+        }
+      },
+      "result": "order-1.srj"
+    },
+    {
+      "@id": "manifest#order-2",
+      "@type": "mf:QueryEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Embedded triple - ordering",
+      "action": {
+        "mq:query": {
+          "@id": "order-by.rq"
+        },
+        "mq:data": {
+          "@id": "data-order.ttl"
+        }
+      },
+      "result": "order-2.srj"
+    },
+    {
+      "@id": "manifest#update-1",
+      "@type": "mf:UpdateEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Update",
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "update-1.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "data-6.trig"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "update-result-1.trig"
+        }
+      }
+    },
+    {
+      "@id": "manifest#update-2",
+      "@type": "mf:UpdateEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Update - annotation",
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "update-2.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "data-6.trig"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "update-result-2.trig"
+        }
+      }
+    },
+    {
+      "@id": "manifest#update-3",
+      "@type": "mf:UpdateEvaluationTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Reified triples - Update - data",
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "update-3.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "empty.nq"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "update-result-3.trig"
+        }
+      }
+    }
+  ]
+}
