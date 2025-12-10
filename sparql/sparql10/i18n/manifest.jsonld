@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/i18n/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "I18N",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#kanji-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "kanji-01",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:data": {
+          "@id": "kanji.ttl"
+        },
+        "mq:query": {
+          "@id": "kanji-01.rq"
+        }
+      },
+      "result": "kanji-01-results.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#kanji-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "kanji-02",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:data": {
+          "@id": "kanji.ttl"
+        },
+        "mq:query": {
+          "@id": "kanji-02.rq"
+        }
+      },
+      "result": "kanji-02-results.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "normalization-01",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html"
+      },
+      "action": {
+        "mq:data": {
+          "@id": "normalization-01.ttl"
+        },
+        "mq:query": {
+          "@id": "normalization-01.rq"
+        }
+      },
+      "result": "normalization-01-results.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "normalization-02",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "comment": "Example 1 from http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JulSep/0096",
+      "action": {
+        "mq:data": {
+          "@id": "normalization-02.ttl"
+        },
+        "mq:query": {
+          "@id": "normalization-02.rq"
+        }
+      },
+      "result": "normalization-02-results.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/i18n/manifest#normalization-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "normalization-03",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "comment": "Example 2 from http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JulSep/0096",
+      "action": {
+        "mq:data": {
+          "@id": "normalization-03.ttl"
+        },
+        "mq:query": {
+          "@id": "normalization-03.rq"
+        }
+      },
+      "result": "normalization-03-results.ttl"
+    }
+  ]
+}

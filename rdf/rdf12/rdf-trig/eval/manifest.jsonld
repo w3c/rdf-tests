@@ -1,0 +1,252 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "../eval#manifest",
+  "@type": "mf:Manifest",
+  "label": {
+    "@language": "en",
+    "@value": "RDF 1.2 TriG Evaluation Tests"
+  },
+  "http://www.w3.org/2004/02/skos/core#prefLabel": [
+    {
+      "@language": "fr",
+      "@value": "La suite des tests pour évaluation de RDF 1.2 TriG"
+    },
+    {
+      "@language": "es",
+      "@value": "Conjunto de pruebas para evaluar RDF 1.2 TriG"
+    }
+  ],
+  "mf:assumedTestBase": {
+    "@id": "./"
+  },
+  "http://purl.org/dc/terms/issued": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "rdfs:seeAlso": {
+    "@id": "../../../../"
+  },
+  "http://purl.org/dc/terms/modified": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "http://purl.org/dc/terms/licence": {
+    "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+  },
+  "http://purl.org/dc/terms/creator": {
+    "http://xmlns.com/foaf/0.1/homepage": {
+      "@id": "../../../../../rdf-star-wg/"
+    },
+    "http://xmlns.com/foaf/0.1/name": "W3C RDF & SPARQL Working Group"
+  },
+  "entries": [
+    {
+      "@id": "../eval#trig12-rt-01",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - subject reification",
+      "action": "trig12-eval-rt-01.trig",
+      "result": "trig12-eval-rt-01.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-02",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - object reification",
+      "action": "trig12-eval-rt-02.trig",
+      "result": "trig12-eval-rt-02.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-03",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - subject reification with identifier",
+      "action": "trig12-eval-rt-03.trig",
+      "result": "trig12-eval-rt-03.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-04",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - object reification with identifier",
+      "action": "trig12-eval-rt-04.trig",
+      "result": "trig12-eval-rt-04.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-05",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - subject reification with bnode identifier",
+      "action": "trig12-eval-rt-05.trig",
+      "result": "trig12-eval-rt-05.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-06",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - object reification with bnode identifier",
+      "action": "trig12-eval-rt-06.trig",
+      "result": "trig12-eval-rt-06.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-07",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - subject reification with empty identifier",
+      "action": "trig12-eval-rt-07.trig",
+      "result": "trig12-eval-rt-07.nq"
+    },
+    {
+      "@id": "../eval#trig12-rt-08",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - object reification with empty identifier",
+      "action": "trig12-eval-rt-08.trig",
+      "result": "trig12-eval-rt-08.nq"
+    },
+    {
+      "@id": "../eval#trig12-bnode-1",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - blank node label",
+      "action": "trig12-eval-bnode-1.trig",
+      "result": "trig12-eval-bnode-1.nq"
+    },
+    {
+      "@id": "../eval#trig12-bnode-2",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - blank node labels",
+      "action": "trig12-eval-bnode-2.trig",
+      "result": "trig12-eval-bnode-2.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-01",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form",
+      "action": "trig12-eval-annotation-01.trig",
+      "result": "trig12-eval-annotation-01.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-02",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation example",
+      "action": "trig12-eval-annotation-02.trig",
+      "result": "trig12-eval-annotation-02.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-03",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation - predicate and object lists",
+      "action": "trig12-eval-annotation-03.trig",
+      "result": "trig12-eval-annotation-03.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-04",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation - nested",
+      "action": "trig12-eval-annotation-04.trig",
+      "result": "trig12-eval-annotation-04.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-05",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation object list",
+      "action": "trig12-eval-annotation-05.trig",
+      "result": "trig12-eval-annotation-05.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-06",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation with identifier",
+      "action": "trig12-eval-annotation-06.trig",
+      "result": "trig12-eval-annotation-06.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-07",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Different annotations have different default identifiers",
+      "action": "trig12-eval-annotation-07.trig",
+      "result": "trig12-eval-annotation-07.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-08",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form with explicit identifier",
+      "action": "trig12-eval-annotation-08.trig",
+      "result": "trig12-eval-annotation-08.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-09",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form with multiple reifiers",
+      "action": "trig12-eval-annotation-09.trig",
+      "result": "trig12-eval-annotation-09.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-10",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form with multiple annotation blocks",
+      "action": "trig12-eval-annotation-10.trig",
+      "result": "trig12-eval-annotation-10.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-11",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form with annotation block followed by reifier",
+      "action": "trig12-eval-annotation-11.trig",
+      "result": "trig12-eval-annotation-11.nq"
+    },
+    {
+      "@id": "../eval#trig12-annotation-12",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation form with alternating reifiers and annotation blocks",
+      "action": "trig12-eval-annotation-12.trig",
+      "result": "trig12-eval-annotation-12.nq"
+    },
+    {
+      "@id": "../eval#trig12-reified-triples-annotation-01",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation with reified triples",
+      "action": "trig12-eval-reified-triples-annotation-01.trig",
+      "result": "trig12-eval-reified-triples-annotation-01.nq"
+    },
+    {
+      "@id": "../eval#trig12-reified-triples-annotation-02",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation on triple with reified triple subject",
+      "action": "trig12-eval-reified-triples-annotation-02.trig",
+      "result": "trig12-eval-reified-triples-annotation-02.nq"
+    },
+    {
+      "@id": "../eval#trig12-reified-triples-annotation-03",
+      "@type": "rdft:TestTrigEval",
+      "name": "TriG 1.2 - Annotation on triple with reified triple object",
+      "action": "trig12-eval-reified-triples-annotation-03.trig",
+      "result": "trig12-eval-reified-triples-annotation-03.nq"
+    }
+  ]
+}
