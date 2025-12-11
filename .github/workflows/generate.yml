@@ -1,4 +1,4 @@
-name: Automatic Report and Test Manifest Generation
+name: Automatic Report and Test Manifest Generation and Publishing on GitHub pages
 on:
   push:
     branches: [main]
@@ -8,11 +8,9 @@ on:
 jobs:
   build:
     name: Generate Reports using Ruby
-    if: github.repository == 'w3c/rdf-tests'
     runs-on: ubuntu-latest
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -22,9 +20,22 @@ jobs:
         run:  bundle install
       - name: Generate Test Manifests
         run:  bundle exec rake
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: actions/upload-pages-artifact@v4
         with:
-          commit_message: Automated manifest generation
-          commit_user_name: Report generation bot
-          commit_user_email: <>
+          path: .
 
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.repository == 'w3c/rdf-tests' && github.ref_name == 'main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
