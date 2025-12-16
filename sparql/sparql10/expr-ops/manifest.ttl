@@ -15,6 +15,12 @@
         :dateTime-ge-2
         :dateTime-lt-2
         :dateTime-gt-2
+        :plus-numbers-cast
+        :minus-numbers-cast
+        :mul-numbers-cast
+        :div-numbers-cast
+        :unplus-2
+        :unminus-2
     ).
 
 
@@ -125,4 +131,52 @@
             [ qt:query  <query-gt-2.rq> ;
               qt:data   <data-dateTime.ttl> ] ;
          mf:result  <result-dateTime-gt-2.srx>
+      .
+
+:plus-numbers-cast a mf:QueryEvaluationTest ;
+         mf:name    "+ operator on number mixed datatypes" ;
+         mf:action
+            [ qt:query  <query-plus-numbers-cast.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-plus-numbers-cast.srx>
+      .
+
+:minus-numbers-cast a mf:QueryEvaluationTest ;
+         mf:name    "- operator on number mixed datatypes" ;
+         mf:action
+            [ qt:query  <query-minus-numbers-cast.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-minus-numbers-cast.srx>
+      .
+
+:mul-numbers-cast a mf:QueryEvaluationTest ;
+         mf:name    "* operator on number mixed datatypes" ;
+         mf:action
+            [ qt:query  <query-mul-numbers-cast.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-mul-numbers-cast.srx>
+      .
+
+:div-numbers-cast a mf:QueryEvaluationTest ;
+         mf:name    "/ operator on number mixed datatypes" ;
+         mf:action
+            [ qt:query  <query-div-numbers-cast.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-div-numbers-cast.srx>
+      .
+
+:unplus-2 a mf:QueryEvaluationTest ;
+         mf:name    "Unary Plus with various datatype" ;
+         mf:action
+            [ qt:query  <query-unplus-2.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-unplus-2.srx>
+      .
+
+:unminus-2 a mf:QueryEvaluationTest ;
+         mf:name    "Unary Minus with various datatype" ;
+         mf:action
+            [ qt:query  <query-unminus-2.rq> ;
+              qt:data   <data-numbers.ttl> ] ;
+         mf:result  <result-unminus-2.srx>
       .
