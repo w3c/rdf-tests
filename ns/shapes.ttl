@@ -1,0 +1,40 @@
+# SHACL shapes for tests
+
+PREFIX mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdft: <http://www.w3.org/ns/rdftest#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+[
+    a sh:NodeShape ;
+    sh:targetClass mf:Manifest ;
+    sh:property [
+        sh:path mf:include ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path mf:entries ;
+        sh:maxCount 1
+    ]
+] .
+
+[
+    a sh:NodeShape ;
+    sh:targetClass rdft:Test ;
+    sh:property [
+        sh:path mf:action ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path mf:result ;
+        sh:or ( [ sh:nodeKind sh:IRI ] [ sh:hasValue false ] ) ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path rdft:approval ;
+        sh:nodeKind sh:IRI ;
+        sh:in (rdft:Approved rdft:Proposed rdft:Rejected rdft:NotClassified) ; # TODO: rdft:NotClassified is not in the vocabulary but used
+        sh:maxCount 1
+    ]
+] .
