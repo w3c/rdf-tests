@@ -15,10 +15,10 @@
         :dateTime-ge-2
         :dateTime-lt-2
         :dateTime-gt-2
-        :plus-numbers-cast
-        :minus-numbers-cast
-        :mul-numbers-cast
-        :div-numbers-cast
+        :add-numbers-cast
+        :subtract-numbers-cast
+        :multiply-numbers-cast
+        :divide-numbers-cast
         :unplus-2
         :unminus-2
     ).
@@ -133,36 +133,36 @@
          mf:result  <result-dateTime-gt-2.srx>
       .
 
-:plus-numbers-cast a mf:QueryEvaluationTest ;
+:add-numbers-cast a mf:QueryEvaluationTest ;
          mf:name    "+ operator on number mixed datatypes" ;
          mf:action
-            [ qt:query  <query-plus-numbers-cast.rq> ;
+            [ qt:query  <query-add-numbers-cast.rq> ;
               qt:data   <data-numbers.ttl> ] ;
-         mf:result  <result-plus-numbers-cast.srx>
+         mf:result  <result-add-numbers-cast.srx>
       .
 
-:minus-numbers-cast a mf:QueryEvaluationTest ;
+:subtract-numbers-cast a mf:QueryEvaluationTest ;
          mf:name    "- operator on number mixed datatypes" ;
          mf:action
-            [ qt:query  <query-minus-numbers-cast.rq> ;
+            [ qt:query  <query-subtract-numbers-cast.rq> ;
               qt:data   <data-numbers.ttl> ] ;
-         mf:result  <result-minus-numbers-cast.srx>
+         mf:result  <result-subtract-numbers-cast.srx>
       .
 
-:mul-numbers-cast a mf:QueryEvaluationTest ;
+:multiply-numbers-cast a mf:QueryEvaluationTest ;
          mf:name    "* operator on number mixed datatypes" ;
          mf:action
-            [ qt:query  <query-mul-numbers-cast.rq> ;
+            [ qt:query  <query-multiply-numbers-cast.rq> ;
               qt:data   <data-numbers.ttl> ] ;
-         mf:result  <result-mul-numbers-cast.srx>
+         mf:result  <result-multiply-numbers-cast.srx>
       .
 
-:div-numbers-cast a mf:QueryEvaluationTest ;
+:divide-numbers-cast a mf:QueryEvaluationTest ;
          mf:name    "/ operator on number mixed datatypes" ;
          mf:action
-            [ qt:query  <query-div-numbers-cast.rq> ;
+            [ qt:query  <query-divide-numbers-cast.rq> ;
               qt:data   <data-numbers.ttl> ] ;
-         mf:result  <result-div-numbers-cast.srx>
+         mf:result  <result-divide-numbers-cast.srx>
       .
 
 :unplus-2 a mf:QueryEvaluationTest ;
