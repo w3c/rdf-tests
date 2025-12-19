@@ -28,6 +28,10 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-2
         trs:turtle12-3
         trs:turtle12-4
+##         trs:turtle12-5
+##         trs:turtle12-6
+##         trs:turtle12-7
+##         trs:turtle12-8
 
         trs:turtle12-inside-1
         trs:turtle12-inside-2
@@ -131,6 +135,26 @@ trs:turtle12-3 rdf:type rdft:TestTurtlePositiveSyntax ;
 trs:turtle12-4 rdf:type rdft:TestTurtlePositiveSyntax ;
     mf:name      "Turtle 1.2 - reified triple outside triple" ;
     mf:action    <turtle12-syntax-basic-04.ttl> ;
+    .
+
+trs:turtle12-5 rdf:type rdft:TestTurtlePositiveSyntax ;
+    mf:name      "Turtle 1.2 - reified triple with literal object" ;
+    mf:action    <turtle12-syntax-basic-05.ttl> ;
+    .
+
+trs:turtle12-6 rdf:type rdft:TestTurtlePositiveSyntax ;
+    mf:name      "Turtle 1.2 - reified triple with keyword object" ;
+    mf:action    <turtle12-syntax-basic-06.ttl> ;
+    .
+
+trs:turtle12-7 rdf:type rdft:TestTurtlePositiveSyntax ;
+    mf:name      "Turtle 1.2 - triple term with literal object" ;
+    mf:action    <turtle12-syntax-basic-07.ttl> ;
+    .
+
+trs:turtle12-8 rdf:type rdft:TestTurtlePositiveSyntax ;
+    mf:name      "Turtle 1.2 - triple term with keyword object" ;
+    mf:action    <turtle12-syntax-basic-08.ttl> ;
     .
 
 trs:turtle12-inside-1 rdf:type rdft:TestTurtlePositiveSyntax ;
