@@ -1,0 +1,254 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/clear/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "CLEAR",
+  "comment": "Tests for SPARQL UPDATE",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-default-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "CLEAR DEFAULT",
+      "comment": "This is a CLEAR of the default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "clear-default-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g1.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "empty.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g1.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-graph-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "CLEAR GRAPH",
+      "comment": "This is a CLEAR of an existing named graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "clear-graph-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g1.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "empty.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-named-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "CLEAR NAMED",
+      "comment": "This is a CLEAR of all the named graphs",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "clear-named-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g1.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "empty.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "empty.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/clear/manifest#dawg-clear-all-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "CLEAR ALL",
+      "comment": "This is a CLEAR of all graphs (default and named)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "clear-all-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "clear-default.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g1.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "clear-g2.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "empty.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "empty.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "empty.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      }
+    }
+  ]
+}
