@@ -11,8 +11,8 @@ import os
 from pathlib import Path
 from pyshacl import validate
 
-repository_root = Path(__file__).parent
-shape_path = repository_root / "ns" / "shapes.ttl"
+repository_root = Path(__file__).parent.parent
+shape_path = repository_root / "shapes" / "manifest.ttl"
 vocab_path = repository_root / "ns" / "rdftest.ttl"
 
 
