@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v7
-      - run: uv run validate_manifest.py
+      - run: uv run shapes/validate_manifest.py
