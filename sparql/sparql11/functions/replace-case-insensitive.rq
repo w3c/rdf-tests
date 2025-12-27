@@ -1,1 +1,1 @@
-SELECT (REPLACE("aAbB", "a", "", "i") AS ?new) WHERE {}
+SELECT (REPLACE("aAbBaC", "a", "~/", "i") AS ?new) WHERE {}
