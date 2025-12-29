@@ -17,6 +17,9 @@
     :langdir-literal-invalid
     :strlang
     :strlangdir
+    :datatype
+    :concat
+    :contains
     ) .
 
 
@@ -65,8 +68,7 @@
     rdfs:comment    "Function LANGDIR" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
-         [ qt:query  <langdir-literal.rq> ;
-           qt:data   <data-empty.ttl> ] ;
+         [ qt:query  <langdir-literal.rq> ] ;
     mf:result  <langdir-literal.srj> ;
     .
 
@@ -81,8 +83,7 @@
     rdfs:comment    "Function STRLANG" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
-         [ qt:query  <strlang.rq> ;
-           qt:data   <data-empty.ttl> ] ;
+         [ qt:query  <strlang.rq> ] ;
     mf:result  <strlang.srj> ;
     .
 
@@ -91,7 +92,30 @@
     rdfs:comment    "Function STRLANGDIR" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
-         [ qt:query  <strlangdir.rq> ;
-           qt:data   <data-empty.ttl> ] ;
+         [ qt:query  <strlangdir.rq> ] ;
     mf:result  <strlangdir.srj> ;
+    .
+
+:datatype rdf:type mf:QueryEvaluationTest ;
+    mf:name "DATATYPE and rdf:dirLangString";
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <datatype.rq> ] ;
+    mf:result  <datatype.srj> ;
+    .
+
+:concat rdf:type mf:QueryEvaluationTest ;
+    mf:name "CONCAT and rdf:dirLangString";
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <concat.rq> ] ;
+    mf:result  <concat.srj> ;
+    .
+
+:contains rdf:type mf:QueryEvaluationTest ;
+    mf:name "CONTAINS and rdf:dirLangString";
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <contains.rq> ] ;
+    mf:result  <contains.srj> ;
     .
