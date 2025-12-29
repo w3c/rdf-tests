@@ -17,10 +17,15 @@
         :strlang02
         :strlang03-rdf11
         :isnumeric01
+        :isnumeric-float
         :abs01
+        :abs-float
         :ceil01
+        :ceil-float
         :floor01
+        :floor-float
         :round01
+        :round-float
         :concat01
         :concat02
         :concat-empty
@@ -162,6 +167,15 @@
     mf:result  <isnumeric01.srx> ;
     .
 
+:isnumeric-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "isNumeric() on float and double" ;
+    mf:feature sparql:isnumeric ;
+    mf:action
+         [ qt:query  <isnumeric01.rq> ;
+           qt:data   <data-float.ttl> ] ;
+    mf:result  <isnumeric-float.srx> ;
+    .
+
 :abs01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "ABS()" ;
     mf:feature sparql:abs ;
@@ -171,6 +185,15 @@
          [ qt:query  <abs01.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <abs01.srx> ;
+    .
+
+:abs-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "ABS() on float and double" ;
+    mf:feature sparql:abs ;
+    mf:action
+         [ qt:query  <abs-float.rq> ;
+           qt:data   <data-float.ttl> ] ;
+    mf:result  <abs-float.srx> ;
     .
 
 :ceil01 rdf:type mf:QueryEvaluationTest ;
@@ -184,6 +207,15 @@
     mf:result  <ceil01.srx> ;
     .
 
+:ceil-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "CEIL() on float and double" ;
+    mf:feature sparql:ceil ;
+    mf:action
+         [ qt:query  <ceil01.rq> ;
+           qt:data   <data-float.ttl> ] ;
+    mf:result  <ceil-float.srx> ;
+    .
+
 :floor01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "FLOOR()" ;
     mf:feature sparql:floor ;
@@ -195,6 +227,15 @@
     mf:result  <floor01.srx> ;
     .
 
+:floor-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "FLOOR() on float and double" ;
+    mf:feature sparql:floor ;
+    mf:action
+         [ qt:query  <floor01.rq> ;
+           qt:data   <data-float.ttl> ] ;
+    mf:result  <floor-float.srx> ;
+    .
+
 :round01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "ROUND()" ;
     mf:feature sparql:round ;
@@ -204,6 +245,15 @@
          [ qt:query  <round01.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <round01.srx> ;
+    .
+
+:round-float rdf:type mf:QueryEvaluationTest ;
+    mf:name    "ROUND() on float and double" ;
+    mf:feature sparql:round ;
+    mf:action
+         [ qt:query  <round01.rq> ;
+           qt:data   <data-float.ttl> ] ;
+    mf:result  <round-float.srx> ;
     .
 
 :concat01 rdf:type mf:QueryEvaluationTest ;
