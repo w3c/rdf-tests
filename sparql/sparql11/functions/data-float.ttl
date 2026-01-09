@@ -1,0 +1,10 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+
+:n1 :num "0"^^xsd:float .
+:n2 :num "-0"^^xsd:double .
+:n3 :num "-0.1"^^xsd:float .
+:n4 :num "0.1"^^xsd:double .
+:n5 :num "NaN"^^xsd:double .
+:n6 :num "-INF"^^xsd:float .
+:n7 :num "INF"^^xsd:double .
