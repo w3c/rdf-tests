@@ -21,6 +21,7 @@
         :divide-numbers-cast
         :unplus-2
         :unminus-2
+        :add-literals
     ).
 
 
@@ -179,4 +180,11 @@
             [ qt:query  <query-unminus-2.rq> ;
               qt:data   <data-numbers.ttl> ] ;
          mf:result  <result-unminus-2.srx>
+      .
+
+:add-literals a mf:QueryEvaluationTest ;
+         mf:name    "Add literal numbers with + and - prefixes" ;
+         mf:action
+            [ qt:query  <query-add-literals.rq> ] ;
+         mf:result  <result-add-literals.srx>
       .
