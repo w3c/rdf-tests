@@ -1,0 +1,181 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/cast/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Casting",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-str",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:string",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-str.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-str.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-flt",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:float",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-flt.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-flt.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dbl",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:double",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-dbl.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-dbl.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dec",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:decimal",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-dec.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-dec.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-int",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:integer",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-int.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-int.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-dT",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:dateTime",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-dT.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-dT.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/cast/manifest#cast-bool",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Cast to xsd:boolean",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "cast-bool.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "cast-bool.srx"
+    }
+  ]
+}

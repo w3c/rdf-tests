@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/manifest-sparql11-query.ttl",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "manifest-sparql11-query.ttl",
+  "@type": "mf:Manifest",
+  "label": "SPARQL 1.1 Query Language",
+  "include": [
+    "aggregates/manifest.ttl",
+    "bind/manifest.ttl",
+    "bindings/manifest.ttl",
+    "cast/manifest.ttl",
+    "construct/manifest.ttl",
+    "exists/manifest.ttl",
+    "functions/manifest.ttl",
+    "grouping/manifest.ttl",
+    "negation/manifest.ttl",
+    "project-expression/manifest.ttl",
+    "property-path/manifest.ttl",
+    "subquery/manifest.ttl",
+    "syntax-query/manifest.ttl"
+  ],
+  "mf:entries": null
+}
