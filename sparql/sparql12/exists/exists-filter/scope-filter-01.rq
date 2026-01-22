@@ -1,0 +1,8 @@
+SELECT ?v WHERE {
+  BIND ( <ex:a> AS ?v )
+  FILTER EXISTS {
+     SELECT ?w WHERE {
+        BIND(<ex:b> as ?w)
+        FILTER (?v = <ex:a>)
+  } }
+}

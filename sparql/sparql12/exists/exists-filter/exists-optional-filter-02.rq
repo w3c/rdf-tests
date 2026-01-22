@@ -1,0 +1,8 @@
+PREFIX : <http://example/>
+
+SELECT ?v WHERE {
+  BIND ( <ex:a> AS ?v )
+  FILTER EXISTS {
+     OPTIONAL { FILTER (true) }
+  }
+}

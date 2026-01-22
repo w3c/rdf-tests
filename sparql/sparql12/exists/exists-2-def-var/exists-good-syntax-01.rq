@@ -1,0 +1,6 @@
+PREFIX : <http://example/>
+
+SELECT * {
+   :s :p1 ?o
+   FILTER EXISTS { BIND(123 AS ?Z) }
+}

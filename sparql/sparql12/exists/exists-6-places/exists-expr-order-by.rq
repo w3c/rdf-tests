@@ -1,0 +1,4 @@
+PREFIX : <http://example/>
+
+SELECT * {
+} ORDER BY EXISTS { ?s ?p ?o }

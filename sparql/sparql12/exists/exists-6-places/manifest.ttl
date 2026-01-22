@@ -1,0 +1,85 @@
+PREFIX :       <#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
+PREFIX qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#>
+PREFIX dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>
+PREFIX sparql: <http://www.w3.org/ns/sparql#>
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "EXISTS - Expression other than FILTER" ;
+    mf:entries
+    (
+        :exists-expr-bind-01
+        :exists-expr-bind-02
+        :exists-expr-select-01
+        :exists-expr-select-02
+        :exists-expr-order-by-01
+        :exists-expr-order-by-02
+        :exists-expr-group-by-01
+        :exists-expr-group-by-02
+    ).
+
+:exists-expr-bind-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - BIND expression" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-bind.rq> ;
+                qt:data   <data.ttl> ] ;
+    mf:result <results-true.srj> ;
+    .
+
+:exists-expr-bind-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - BIND expression - empty data" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-bind.rq> ;
+                qt:data   <empty.ttl> ] ;
+    mf:result <results-false.srj> ;
+    .
+
+:exists-expr-select-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - SELECT expression" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-select.rq> ;
+                qt:data   <data.ttl> ] ;
+    mf:result <results-true.srj> ;
+    .
+
+:exists-expr-select-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - SELECT expression - empty data" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-select.rq> ;
+                qt:data   <empty.ttl> ] ;
+    mf:result <results-false.srj> ;
+    .
+
+:exists-expr-order-by-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - ORDER BY expression" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-order-by.rq> ;
+                qt:data   <data.ttl> ] ;
+    mf:result <results-one.srj> ;
+    .
+
+:exists-expr-order-by-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - ORDER BY expression - empty data" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-order-by.rq> ;
+                qt:data   <empty.ttl> ] ;
+    mf:result <results-one.srj> ;
+    .
+
+:exists-expr-group-by-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - GROUP BY expression" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-group-by.rq> ;
+                qt:data   <data.ttl> ] ;
+    mf:result <results-count-one.srj> ;
+    .
+
+:exists-expr-group-by-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - GROUP BY expression - empty data" ;
+	mf:feature sparql:exists ;
+    mf:action [ qt:query  <exists-expr-group-by.rq> ;
+                qt:data   <empty.ttl> ] ;
+    mf:result <results-count-one.srj> ;
+    .

@@ -1,0 +1,162 @@
+PREFIX :       <#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
+PREFIX qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#>
+PREFIX dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>
+PREFIX sparql: <http://www.w3.org/ns/sparql#>
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "Exists tests (FILTER)" ;
+    mf:entries
+    (
+       :exists-filter-01
+       :exists-filter-02
+       :exists-filter-03
+       :exists-filter-04
+       :exists-filter-05
+
+       :exists-optional-filter-01
+       :exists-optional-filter-02
+
+       :not-exists-filter-01
+       :not-exists-filter-02
+       :not-exists-filter-03
+       
+       :minus-filter-01
+       :minus-filter-02
+       :minus-filter-03
+
+       :scope-filter-01
+    ).
+
+:exists-filter-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-filter-01.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:exists-filter-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - SELECT * - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-filter-02.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:exists-filter-03 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - SELECT ?v - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-filter-03.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:exists-filter-04 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - nested FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-filter-04.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:exists-filter-05 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - different nested FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-filter-05.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-zero.srj>
+    .
+
+:exists-optional-filter-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - OPTIONAL - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-optional-filter-01.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:exists-optional-filter-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "EXISTS - OPTIONAL - FILTER(true)";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <exists-optional-filter-02.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+##
+
+:not-exists-filter-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "NOT EXISTS - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <not-exists-filter-01.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-zero.srj>
+    .
+
+:not-exists-filter-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "NOT EXISTS - SELECT * - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <not-exists-filter-02.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-zero.srj>
+    .
+
+:not-exists-filter-03 rdf:type mf:QueryEvaluationTest ;
+    mf:name "NOT EXISTS - SELECT ?v - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <not-exists-filter-03.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-zero.srj>
+    .
+##
+
+:minus-filter-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "MINUS - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <minus-filter-01.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:minus-filter-02 rdf:type mf:QueryEvaluationTest ;
+    mf:name "MINUS - SELECT * - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <minus-filter-02.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+:minus-filter-03 rdf:type mf:QueryEvaluationTest ;
+    mf:name "MINUS - SELECT ?v - FILTER";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <minus-filter-03.rq> ;
+           qt:data   <data1.nt> ] ;
+    mf:result  <results-one.srj>
+    .
+
+##
+    
+:scope-filter-01 rdf:type mf:QueryEvaluationTest ;
+    mf:name "Scope: SELECT ?w - FILTER ?v";
+	mf:feature sparql:exists ;
+    mf:action
+         [ qt:query  <scope-filter-01.rq> ;
+           qt:data   <empty.nt> ] ;
+    mf:result  <results-zero.srj>
+    .

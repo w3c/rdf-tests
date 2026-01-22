@@ -1,0 +1,55 @@
+PREFIX :       <#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
+PREFIX qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#>
+PREFIX dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>
+PREFIX sparql: <http://www.w3.org/ns/sparql#>
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "EXISTS - variable position (bad syntax)" ;
+    mf:entries
+    (
+    :exists-bad-syntax-01
+    :exists-good-syntax-01
+    :exists-bad-syntax-02
+    :exists-bad-syntax-03
+    :exists-bad-syntax-04
+    :exists-bad-syntax-05
+    ).
+
+:exists-bad-syntax-01 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "EXISTS - BIND undefined";
+	mf:feature sparql:exists ;
+    mf:action <exists-bad-syntax-01.rq> ;
+    .
+
+:exists-good-syntax-01 rdf:type mf:PositiveSyntaxTest ;
+    mf:name "EXISTS - BIND";
+	mf:feature sparql:exists ;
+    mf:action <exists-good-syntax-01.rq> ;
+    .
+
+:exists-bad-syntax-02 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "EXISTS - VALUES undefined";
+	mf:feature sparql:exists ;
+    mf:action <exists-bad-syntax-02.rq> ;
+    .
+
+:exists-bad-syntax-03 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "EXISTS - BOUND undefined";
+	mf:feature sparql:exists ;
+    mf:action <exists-bad-syntax-03.rq> ;
+    .
+
+:exists-bad-syntax-04 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "EXISTS - sub-SELECT undefined - 1";
+	mf:feature sparql:exists ;
+    mf:action <exists-bad-syntax-04.rq> ;
+    .
+    
+:exists-bad-syntax-05 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "EXISTS - sub-SELECT undefined - 2";
+	mf:feature sparql:exists ;
+    mf:action <exists-bad-syntax-05.rq> ;
+    .

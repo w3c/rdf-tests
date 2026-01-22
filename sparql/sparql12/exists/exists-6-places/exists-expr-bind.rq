@@ -1,0 +1,5 @@
+PREFIX : <http://example/>
+
+SELECT * {
+  BIND( EXISTS{ :s :p ?o } AS ?X)
+}
