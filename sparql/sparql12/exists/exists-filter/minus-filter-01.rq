@@ -1,0 +1,6 @@
+SELECT ?v WHERE {
+  ?v <ex:p> "z"
+  MINUS {
+    FILTER (?v = <ex:a>)
+  }
+}

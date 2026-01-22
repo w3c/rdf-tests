@@ -1,0 +1,5 @@
+PREFIX : <http://example/>
+
+SELECT * { 
+   FILTER EXISTS { SELECT ?y { ?y :p :o } }
+}

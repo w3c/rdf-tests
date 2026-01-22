@@ -1,0 +1,6 @@
+SELECT ?v WHERE {
+  ?v <ex:p> "z"
+  FILTER NOT EXISTS {
+    FILTER (?v = <ex:a>)
+  }
+}

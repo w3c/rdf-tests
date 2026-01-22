@@ -1,0 +1,4 @@
+PREFIX : <http://example/>
+
+SELECT (EXISTS{:s :p ?o } AS ?X) {}
+

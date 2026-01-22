@@ -1,0 +1,6 @@
+PREFIX : <http://example/>
+
+SELECT ?x WHERE {
+    ?x :p :c .
+    FILTER EXISTS { ?x :p :c . MINUS { ?x :p :c . } }
+}

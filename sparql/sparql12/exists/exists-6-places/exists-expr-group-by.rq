@@ -1,0 +1,4 @@
+PREFIX : <http://example/>
+
+SELECT (count(*) AS ?C) {
+} GROUP BY (EXISTS{ :s :p ?o } AS ?X)
