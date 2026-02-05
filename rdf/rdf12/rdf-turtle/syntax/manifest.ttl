@@ -118,12 +118,12 @@ trs:manifest  rdf:type mf:Manifest ;
 ## Good Syntax
 
 trs:turtle12-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - subject reified triple" ;
+   mf:name      "Turtle 1.2 - subject reifying triple" ;
    mf:action    <turtle12-syntax-basic-01.ttl> ;
    .
 
 trs:turtle12-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - object reified triple" ;
+   mf:name      "Turtle 1.2 - object reifying triple" ;
    mf:action    <turtle12-syntax-basic-02.ttl> ;
    .
 
@@ -133,17 +133,17 @@ trs:turtle12-3 rdf:type rdft:TestTurtlePositiveSyntax ;
    .
 
 trs:turtle12-4 rdf:type rdft:TestTurtlePositiveSyntax ;
-    mf:name      "Turtle 1.2 - reified triple outside triple" ;
+    mf:name      "Turtle 1.2 - reifying triple outside triple" ;
     mf:action    <turtle12-syntax-basic-04.ttl> ;
     .
 
 trs:turtle12-5 rdf:type rdft:TestTurtlePositiveSyntax ;
-    mf:name      "Turtle 1.2 - reified triple with literal object" ;
+    mf:name      "Turtle 1.2 - reifying triple with literal object" ;
     mf:action    <turtle12-syntax-basic-05.ttl> ;
     .
 
 trs:turtle12-6 rdf:type rdft:TestTurtlePositiveSyntax ;
-    mf:name      "Turtle 1.2 - reified triple with keyword object" ;
+    mf:name      "Turtle 1.2 - reifying triple with keyword object" ;
     mf:action    <turtle12-syntax-basic-06.ttl> ;
     .
 
@@ -158,32 +158,32 @@ trs:turtle12-8 rdf:type rdft:TestTurtlePositiveSyntax ;
     .
 
 trs:turtle12-inside-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - reified triple inside blankNodePropertyList" ;
+   mf:name      "Turtle 1.2 - reifying triple inside blankNodePropertyList" ;
    mf:action    <turtle12-syntax-inside-01.ttl> ;
    .
 
 trs:turtle12-inside-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - reified triple inside collection" ;
+   mf:name      "Turtle 1.2 - reifying triple inside collection" ;
    mf:action    <turtle12-syntax-inside-02.ttl> ;
    .
 
 trs:turtle12-inside-3 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - reified triple with IRI identifier" ;
+   mf:name      "Turtle 1.2 - reifying triple with IRI identifier" ;
    mf:action    <turtle12-syntax-inside-03.ttl> ;
    .
 
 trs:turtle12-inside-4 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - reified triple with blank node identifier" ;
+   mf:name      "Turtle 1.2 - reifying triple with blank node identifier" ;
    mf:action    <turtle12-syntax-inside-04.ttl> ;
    .
 
 trs:turtle12-nested-1 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - nested reified triple, subject position" ;
+   mf:name      "Turtle 1.2 - nested reifying triple, subject position" ;
    mf:action    <turtle12-syntax-nested-01.ttl> ;
    .
 
 trs:turtle12-nested-2 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - nested reified triple, object position" ;
+   mf:name      "Turtle 1.2 - nested reifying triple, object position" ;
    mf:action     <turtle12-syntax-nested-02.ttl> ;
    .
 
@@ -210,27 +210,27 @@ trs:turtle12-bnode-3 rdf:type rdft:TestTurtlePositiveSyntax ;
 ## Bad Syntax
 
 trs:turtle12-bad-1 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle 1.2 - bad - reified triple as predicate" ;
+    mf:name      "Turtle 1.2 - bad - reifying triple as predicate" ;
     mf:action    <turtle12-syntax-bad-01.ttl> ;
     .
 
 trs:turtle12-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle 1.2 - bad - literal in subject position of reified triple" ;
+    mf:name      "Turtle 1.2 - bad - literal in subject position of reifying triple" ;
     mf:action    <turtle12-syntax-bad-02.ttl> ;
     .
 
 trs:turtle12-bad-3 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle 1.2 - bad - blank node  as predicate in reified triple";
+    mf:name      "Turtle 1.2 - bad - blank node  as predicate in reifying triple";
     mf:action    <turtle12-syntax-bad-03.ttl> ;
     .
 
 trs:turtle12-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle 1.2 - bad - incomplete reified triple";
+    mf:name      "Turtle 1.2 - bad - incomplete reifying triple";
     mf:action    <turtle12-syntax-bad-04.ttl> ;
     .
 
 trs:turtle12-bad-5 rdf:type rdft:TestTurtleNegativeSyntax ;
-    mf:name      "Turtle 1.2 - bad - over-long reified triple";
+    mf:name      "Turtle 1.2 - bad - over-long reifying triple";
     mf:action    <turtle12-syntax-bad-05.ttl> ;
     .
 
@@ -369,22 +369,22 @@ trs:nt-ttl12-bad-05 rdf:type rdft:TestTurtleNegativeSyntax ;
     .
 
 trs:nt-ttl12-bad-06 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple as predicate" ;
+    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reifying triple as predicate" ;
     mf:action    <nt-ttl12-bad-syntax-06.ttl> ;
     .
 
 trs:nt-ttl12-bad-07 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal subject" ;
+    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reifying triple, literal subject" ;
     mf:action    <nt-ttl12-bad-syntax-07.ttl> ;
     .
 
 trs:nt-ttl12-bad-08 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal predicate" ;
+    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reifying triple, literal predicate" ;
     mf:action    <nt-ttl12-bad-syntax-08.ttl> ;
     .
 
 trs:nt-ttl12-bad-09 rdf:type rdft:TestNTriplesNegativeSyntax ;
-    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, blank node predicate" ;
+    mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reifying triple, blank node predicate" ;
     mf:action    <nt-ttl12-bad-syntax-09.ttl> ;
     .
 
