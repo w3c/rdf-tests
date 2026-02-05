@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+	<head>
+		<variable name="s"/>
+		<variable name="num"/>
+		<variable name="floor"/>
+	</head>
+	<results>
+		<result>
+			<binding name="s"><uri>http://example.org/n1</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#float">0</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#float">0</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n2</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#double">-0</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#double">-0</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n3</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#float">-0.1</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#float">-1</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n4</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#double">0.1</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#double">0</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n5</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#double">NaN</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#double">NaN</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n6</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#float">-INF</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#float">-INF</literal></binding>
+		</result>
+		<result>
+			<binding name="s"><uri>http://example.org/n7</uri></binding>
+			<binding name="num"><literal datatype="http://www.w3.org/2001/XMLSchema#double">INF</literal></binding>
+			<binding name="floor"><literal datatype="http://www.w3.org/2001/XMLSchema#double">INF</literal></binding>
+		</result>
+	</results>
+</sparql>
