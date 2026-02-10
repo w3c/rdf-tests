@@ -368,22 +368,22 @@ trs:nt-ttl12-bad-05 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:action    <nt-ttl12-bad-syntax-05.ttl> ;
     .
 
-trs:nt-ttl12-bad-06 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:nt-ttl12-bad-06 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple as predicate" ;
     mf:action    <nt-ttl12-bad-syntax-06.ttl> ;
     .
 
-trs:nt-ttl12-bad-07 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:nt-ttl12-bad-07 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal subject" ;
     mf:action    <nt-ttl12-bad-syntax-07.ttl> ;
     .
 
-trs:nt-ttl12-bad-08 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:nt-ttl12-bad-08 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal predicate" ;
     mf:action    <nt-ttl12-bad-syntax-08.ttl> ;
     .
 
-trs:nt-ttl12-bad-09 rdf:type rdft:TestNTriplesNegativeSyntax ;
+trs:nt-ttl12-bad-09 rdf:type rdft:TestTurtleNegativeSyntax ;
     mf:name      "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, blank node predicate" ;
     mf:action    <nt-ttl12-bad-syntax-09.ttl> ;
     .
