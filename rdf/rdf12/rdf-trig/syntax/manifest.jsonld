@@ -1,0 +1,287 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "../syntax#manifest",
+  "@type": "mf:Manifest",
+  "label": {
+    "@language": "en",
+    "@value": "RDF 1.2 TriG Syntax Tests"
+  },
+  "http://www.w3.org/2004/02/skos/core#prefLabel": [
+    {
+      "@language": "fr",
+      "@value": "La suite des tests pour la syntaxe de RDF 1.2 TriG"
+    },
+    {
+      "@language": "es",
+      "@value": "Conjunto de pruebas para la sintaxis de RDF 1.2 TriG"
+    }
+  ],
+  "mf:assumedTestBase": {
+    "@id": "./"
+  },
+  "http://purl.org/dc/terms/issued": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "rdfs:seeAlso": {
+    "@id": "../../../../"
+  },
+  "http://purl.org/dc/terms/modified": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "http://purl.org/dc/terms/licence": {
+    "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+  },
+  "http://purl.org/dc/terms/creator": {
+    "http://xmlns.com/foaf/0.1/homepage": {
+      "@id": "../../../../../rdf-star-wg/"
+    },
+    "http://xmlns.com/foaf/0.1/name": "W3C RDF & SPARQL Working Group"
+  },
+  "entries": [
+    {
+      "@id": "../syntax#trig12-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - subject reified triple",
+      "action": "trig12-syntax-basic-01.trig"
+    },
+    {
+      "@id": "../syntax#trig12-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - object reified triple",
+      "action": "trig12-syntax-basic-02.trig"
+    },
+    {
+      "@id": "../syntax#trig12-3",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - triple term object",
+      "action": "trig12-syntax-basic-03.trig"
+    },
+    {
+      "@id": "../syntax#trig12-4",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - reified triple outside triple",
+      "action": "trig12-syntax-basic-04.trig"
+    },
+    {
+      "@id": "../syntax#trig12-inside-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - reified triple inside blankNodePropertyList",
+      "action": "trig12-syntax-inside-01.trig"
+    },
+    {
+      "@id": "../syntax#trig12-inside-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - reified triple inside collection",
+      "action": "trig12-syntax-inside-02.trig"
+    },
+    {
+      "@id": "../syntax#trig12-inside-3",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - reified triple with IRI identifier",
+      "action": "trig12-syntax-inside-03.trig"
+    },
+    {
+      "@id": "../syntax#trig12-inside-4",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - reified triple with blank node identifier",
+      "action": "trig12-syntax-inside-04.trig"
+    },
+    {
+      "@id": "../syntax#trig12-nested-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - nested quoted triple, subject position",
+      "action": "trig12-syntax-nested-01.trig"
+    },
+    {
+      "@id": "../syntax#trig12-nested-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - nested quoted triple, object position",
+      "action": "trig12-syntax-nested-02.trig"
+    },
+    {
+      "@id": "../syntax#trig12-compound-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - compound forms",
+      "action": "trig12-syntax-compound.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bnode-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - blank node subject",
+      "action": "trig12-syntax-bnode-01.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bnode-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - blank node object",
+      "action": "trig12-syntax-bnode-02.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bnode-3",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - blank node",
+      "action": "trig12-syntax-bnode-03.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-1",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - reified triple as predicate",
+      "action": "trig12-syntax-bad-01.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-2",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - literal in subject position of reified triple",
+      "action": "trig12-syntax-bad-02.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-3",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - blank node  as predicate in reified triple",
+      "action": "trig12-syntax-bad-03.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-4",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - incomplete reified triple",
+      "action": "trig12-syntax-bad-04.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-5",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - over-long reified triple",
+      "action": "trig12-syntax-bad-05.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-6",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - reified with list object",
+      "action": "trig12-syntax-bad-06.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-7",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - compound blank node expression",
+      "action": "trig12-syntax-bad-07.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Annotation form",
+      "action": "trig12-annotation-1.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Annotation example",
+      "action": "trig12-annotation-2.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-3",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Annotation predicateObjecetList",
+      "action": "trig12-annotation-3.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-4",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Annotation followed by predicate/object",
+      "action": "trig12-annotation-4.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-5",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Reifier without annotation block",
+      "action": "trig12-annotation-5.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-6",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Empty reifier without annotation block",
+      "action": "trig12-annotation-6.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-7",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Reifier with annotation block",
+      "action": "trig12-annotation-7.trig"
+    },
+    {
+      "@id": "../syntax#trig12-ann-8",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "TriG 1.2 - Empty reifier with annotation block",
+      "action": "trig12-annotation-8.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-ann-1",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - empty annotation",
+      "action": "trig12-syntax-bad-ann-1.trig"
+    },
+    {
+      "@id": "../syntax#trig12-bad-ann-2",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "TriG 1.2 - bad - triple as annotation",
+      "action": "trig12-syntax-bad-ann-2.trig"
+    },
+    {
+      "@id": "../syntax#trig12-base-1",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "base direction ltr",
+      "action": "trig12-base-1.trig"
+    },
+    {
+      "@id": "../syntax#trig12-base-2",
+      "@type": "rdft:TestTrigPositiveSyntax",
+      "name": "base direction ltr",
+      "action": "trig12-base-2.trig"
+    },
+    {
+      "@id": "../syntax#trig12-base-bad-1",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "undefined base direction",
+      "action": "trig12-base-bad-1.trig"
+    },
+    {
+      "@id": "../syntax#trig12-base-bad-2",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "upper case LTR",
+      "action": "trig12-base-bad-2.trig"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/bindings/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "comment": "Bindings",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with subj-var, 1 row",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values01.rq"
+        },
+        "mq:data": {
+          "@id": "data01.ttl"
+        }
+      },
+      "result": "values01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with obj-var, 1 row",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values02.rq"
+        },
+        "mq:data": {
+          "@id": "data02.ttl"
+        }
+      },
+      "result": "values02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with 2 obj-vars, 1 row",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values03.rq"
+        },
+        "mq:data": {
+          "@id": "data03.ttl"
+        }
+      },
+      "result": "values03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with 2 obj-vars, 1 row with UNDEF",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values04.rq"
+        },
+        "mq:data": {
+          "@id": "data04.ttl"
+        }
+      },
+      "result": "values04.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values5",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with 2 obj-vars, 2 rows with UNDEF",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values05.rq"
+        },
+        "mq:data": {
+          "@id": "data05.ttl"
+        }
+      },
+      "result": "values05.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values6",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with pred-var, 1 row",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values06.rq"
+        },
+        "mq:data": {
+          "@id": "data06.ttl"
+        }
+      },
+      "result": "values06.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values7",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with (OPTIONAL) obj-var, 1 row",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": [
+        {
+          "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+        },
+        {
+          "@id": "http://www.w3.org/2009/sparql/meeting/2011-05-24#resolution_4"
+        }
+      ],
+      "action": {
+        "mq:query": {
+          "@id": "values07.rq"
+        },
+        "mq:data": {
+          "@id": "data07.ttl"
+        }
+      },
+      "result": "values07.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values8",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with subj/obj-vars, 2 rows with UNDEF",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "values08.rq"
+        },
+        "mq:data": {
+          "@id": "data08.ttl"
+        }
+      },
+      "result": "values08.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#inline1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Inline VALUES graph pattern",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "inline01.rq"
+        },
+        "mq:data": {
+          "@id": "data01.ttl"
+        }
+      },
+      "result": "inline01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#inline2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-subquery VALUES",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "inline02.rq"
+        },
+        "mq:data": {
+          "@id": "data02.ttl"
+        }
+      },
+      "result": "inline02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "VALUES inside GRAPH binding the same variable as the graph name",
+      "action": {
+        "mq:query": {
+          "@id": "graph.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "empty.ttl"
+          },
+          {
+            "@id": "data02.ttl"
+          }
+        ]
+      },
+      "result": "graph.ttl"
+    }
+  ]
+}

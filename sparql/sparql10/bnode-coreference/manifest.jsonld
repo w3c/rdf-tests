@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/bnode-coreference/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@type": "mf:Manifest",
+  "label": "bnode co-reference",
+  "comment": "DAWG test cases on bnode co-reference",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/bnode-coreference/manifest#dawg-bnode-coref-001",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "dawg-bnode-coreference",
+      "comment": "Query results must maintain bnode co-references in the dataset",
+      "action": {
+        "mq:query": {
+          "@id": "query.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "result.ttl",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0006"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/distinct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "DISTINCT",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#no-distinct-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Numbers: No distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "no-distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-num.ttl"
+        }
+      },
+      "result": "no-distinct-num.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Numbers: Distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-num.ttl"
+        }
+      },
+      "result": "distinct-num.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#no-distinct-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Strings: No distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "no-distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-str.ttl"
+        }
+      },
+      "result": "no-distinct-str.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Strings: Distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-str.ttl"
+        }
+      },
+      "result": "distinct-str.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#no-distinct-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Nodes: No distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "no-distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-node.ttl"
+        }
+      },
+      "result": "no-distinct-node.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Nodes: Distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-node.ttl"
+        }
+      },
+      "result": "distinct-node.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#no-distinct-4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Opt: No distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "no-distinct-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-opt.ttl"
+        }
+      },
+      "result": "no-distinct-opt.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Opt: Distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-2.rq"
+        },
+        "mq:data": {
+          "@id": "data-opt.ttl"
+        }
+      },
+      "result": "distinct-opt.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#no-distinct-9",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "All: No distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "no-distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-all.ttl"
+        }
+      },
+      "result": "no-distinct-all.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-9",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "All: Distinct",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/07/17-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-all.ttl"
+        }
+      },
+      "result": "distinct-all.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/distinct/manifest#distinct-star-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SELECT DISTINCT *",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0060/2007-08-07-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "distinct-star-1.rq"
+        },
+        "mq:data": {
+          "@id": "data-star.ttl"
+        }
+      },
+      "result": "distinct-star-1.srx"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "SPARQL Codepoint-Escaping Tests",
+  "entries": [
+    {
+      "@id": "manifest#codepoint-esc-01",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-01.rq",
+      "action": "codepoint-esc-01.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-02",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-02.rq",
+      "comment": "codepoint escape for the backslash of a PN_LOCAL_ESC in the PN_LOCAL part of a PrefixedName",
+      "action": "codepoint-esc-02.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-bad-03",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-bad-03.rq",
+      "comment": "codepoint escape that results in an invalid backslash escape (requires handling codepoint escaping before backslash escaping)",
+      "action": "codepoint-esc-bad-03.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-04",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-04.rq",
+      "comment": "codepoint escape that results in a valid backslash escape",
+      "action": "codepoint-esc-04.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-05",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-05.rq",
+      "action": "codepoint-esc-05.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-06",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-06.rq",
+      "comment": "codepoint escape for the percent sign in the PL_LOCAL part of a PrefixedName",
+      "action": "codepoint-esc-06.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-07",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-07.rq",
+      "comment": "codepoint escape for whitespace separating the projection tokens: SELECT * WHERE",
+      "action": "codepoint-esc-07.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-08",
+      "@type": "mf:PositiveSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "codepoint-esc-08.rq",
+      "comment": "codepoint escape for the starting double-quote of a literal",
+      "action": "codepoint-esc-08.rq"
+    }
+  ]
+}

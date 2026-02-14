@@ -1,0 +1,437 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/graph/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "GRAPH",
+  "comment": "Tests for GRAPH",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-01",
+      "comment": "Data: default graph / Query: default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-01.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        }
+      },
+      "result": "graph-01.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-02",
+      "comment": "Data: named graph / Query: default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-02.rq"
+        },
+        "mq:graphData": {
+          "@id": "data-g1.ttl"
+        }
+      },
+      "result": "graph-02.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-03",
+      "comment": "Data: named graph / Query: named graph graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-03.rq"
+        },
+        "mq:graphData": {
+          "@id": "data-g1.ttl"
+        }
+      },
+      "result": "graph-03.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-04",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-04",
+      "comment": "Data: named graph / Query: default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-04.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        }
+      },
+      "result": "graph-04.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-05",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-05",
+      "comment": "Data: default and named / Query: default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-05.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g2.ttl"
+        }
+      },
+      "result": "graph-05.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-06",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-06",
+      "comment": "Data: default and named / Query: named graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-06.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g2.ttl"
+        }
+      },
+      "result": "graph-06.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-07",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-07",
+      "comment": "Data: default and named / Query: all data by UNION",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-07.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g2.ttl"
+        }
+      },
+      "result": "graph-07.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-08",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-08",
+      "comment": "Data: default and named / Query: common subjects",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-08.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g2.ttl"
+        }
+      },
+      "result": "graph-08.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-09",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-09",
+      "comment": "Data: default and named (bnodes) / Query: common subjects",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-09.rq"
+        },
+        "mq:data": {
+          "@id": "data-g3.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g4.ttl"
+        }
+      },
+      "result": "graph-09.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-10b",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-10b",
+      "comment": "Data: default and named (same data, with bnodes) / Query: common subjects",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2007/10/09-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-10.rq"
+        },
+        "mq:data": {
+          "@id": "data-g3.ttl"
+        },
+        "mq:graphData": {
+          "@id": "data-g3-dup.ttl"
+        }
+      },
+      "result": "graph-10.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#dawg-graph-11",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-11",
+      "comment": "Data: default and named (several) / Query: get everything",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "graph-11.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-g1.ttl"
+          },
+          {
+            "@id": "data-g2.ttl"
+          },
+          {
+            "@id": "data-g3.ttl"
+          },
+          {
+            "@id": "data-g4.ttl"
+          }
+        ]
+      },
+      "result": "graph-11.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-empty",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-empty",
+      "comment": "Variable graph with empty BGP: list all named graphs",
+      "action": {
+        "mq:query": {
+          "@id": "graph-empty.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-g1.ttl"
+          },
+          {
+            "@id": "data-g2.ttl"
+          }
+        ]
+      },
+      "result": "graph-empty.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-exist",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-exist",
+      "comment": "Set graph with empty BGP: returns an empty tuple because the graph exists",
+      "action": {
+        "mq:query": {
+          "@id": "graph-empty-exist.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-g1.ttl"
+          },
+          {
+            "@id": "data-g2.ttl"
+          }
+        ]
+      },
+      "result": "graph-empty-exist.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-not-exist",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-not-exist",
+      "comment": "Set graph with empty BGP: returns an empty tuple because the graph exists",
+      "action": {
+        "mq:query": {
+          "@id": "graph-empty-not-exist.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-g1.ttl"
+          },
+          {
+            "@id": "data-g2.ttl"
+          }
+        ]
+      },
+      "result": "graph-empty-not-exist.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-variable-scope",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-variable-scope",
+      "comment": "The variable bound by the GRAPH operator is not in-scope inside it",
+      "action": {
+        "mq:query": {
+          "@id": "graph-variable-scope.rq"
+        },
+        "mq:data": {
+          "@id": "data-g1.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-g1.ttl"
+          },
+          {
+            "@id": "data-g2.ttl"
+          }
+        ]
+      },
+      "result": "graph-variable-scope.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-variable-join",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-variable-join",
+      "comment": "The variable bound by the GRAPH operator is also used in the graph pattern",
+      "action": {
+        "mq:query": {
+          "@id": "graph-variable-join.rq"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-variable-join.ttl"
+          },
+          {
+            "@id": "data-g1.ttl"
+          }
+        ]
+      },
+      "result": "graph-variable-join.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-optional",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-optional",
+      "comment": "The variable bound by the GRAPH operator is not used when evaluating a nested OPTIONAL",
+      "action": {
+        "mq:query": {
+          "@id": "graph-optional.rq"
+        },
+        "mq:graphData": [
+          {
+            "@id": "data-optional.ttl"
+          },
+          {
+            "@id": "data-g1.ttl"
+          }
+        ]
+      },
+      "result": "graph-optional.ttl"
+    }
+  ]
+}

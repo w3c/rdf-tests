@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Language and base direction",
+  "entries": [
+    {
+      "@id": "manifest#haslang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "hasLANG",
+      "comment": "Function hasLANG",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "haslang.rq"
+        },
+        "mq:data": {
+          "@id": "data-lang.ttl"
+        }
+      },
+      "result": "haslang.srj"
+    },
+    {
+      "@id": "manifest#haslangdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "hasLANGDIR",
+      "comment": "Function hasLANGDIR",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "haslangdir.rq"
+        },
+        "mq:data": {
+          "@id": "data-lang.ttl"
+        }
+      },
+      "result": "haslangdir.srj"
+    },
+    {
+      "@id": "manifest#lang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANG",
+      "comment": "Function LANG",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "lang.rq"
+        },
+        "mq:data": {
+          "@id": "data-lang.ttl"
+        }
+      },
+      "result": "lang.srj"
+    },
+    {
+      "@id": "manifest#langdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANGDIR",
+      "comment": "Function LANGDIR",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "langdir.rq"
+        },
+        "mq:data": {
+          "@id": "data-lang.ttl"
+        }
+      },
+      "result": "langdir.srj"
+    },
+    {
+      "@id": "manifest#langdir-literal",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANGDIR with inline literals",
+      "comment": "Function LANGDIR",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "langdir-literal.rq"
+        },
+        "mq:data": {
+          "@id": "data-empty.ttl"
+        }
+      },
+      "result": "langdir-literal.srj"
+    },
+    {
+      "@id": "manifest#langdir-literal-invalid",
+      "@type": "mf:NegativeSyntaxTest",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "name": "Literal with invalid base direction",
+      "comment": "Invalid base direction in a literal",
+      "action": "langdir-literal-invalid.rq"
+    },
+    {
+      "@id": "manifest#strlang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "STRLANG",
+      "comment": "Function STRLANG",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "strlang.rq"
+        },
+        "mq:data": {
+          "@id": "data-empty.ttl"
+        }
+      },
+      "result": "strlang.srj"
+    },
+    {
+      "@id": "manifest#strlangdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "STRLANGDIR",
+      "comment": "Function STRLANGDIR",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "strlangdir.rq"
+        },
+        "mq:data": {
+          "@id": "data-empty.ttl"
+        }
+      },
+      "result": "strlangdir.srj"
+    }
+  ]
+}

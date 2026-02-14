@@ -1,0 +1,251 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "../syntax#manifest",
+  "@type": "mf:Manifest",
+  "label": {
+    "@language": "en",
+    "@value": "RDF 1.2 N-Triples Syntax Tests"
+  },
+  "http://www.w3.org/2004/02/skos/core#prefLabel": [
+    {
+      "@language": "fr",
+      "@value": "La suite des tests pour RDF 1.2 N-Triples"
+    },
+    {
+      "@language": "es",
+      "@value": "Conjunto de pruebas para RDF 1.2 N-Triples"
+    }
+  ],
+  "mf:assumedTestBase": {
+    "@id": "./"
+  },
+  "http://purl.org/dc/terms/issued": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "http://purl.org/dc/terms/modified": {
+    "@type": "xsd:date",
+    "@value": "2023-07-20"
+  },
+  "http://purl.org/dc/terms/licence": {
+    "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+  },
+  "http://purl.org/dc/terms/creator": {
+    "http://xmlns.com/foaf/0.1/homepage": {
+      "@id": "../../../../../rdf-star-wg/"
+    },
+    "http://xmlns.com/foaf/0.1/name": "W3C RDF & SPARQL Working Group"
+  },
+  "rdfs:seeAlso": {
+    "@id": "README"
+  },
+  "entries": [
+    {
+      "@id": "../syntax#ntriples12-01",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples-12 - object triple term",
+      "action": "ntriples12-syntax-01.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-02",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples-12 - object triple term, no whitespace",
+      "action": "ntriples12-syntax-02.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-03",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples-12 - Nested, no whitespace",
+      "action": "ntriples12-syntax-03.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bnode-1",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples-12 - Blank node subject",
+      "action": "ntriples12-bnode-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-nested-1",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples-12 - Nested object term",
+      "action": "ntriples12-nested-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-1",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples literal with base direction ltr",
+      "action": "ntriples-langdir-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-2",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples literal with base direction rtl",
+      "action": "ntriples-langdir-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-01",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - reified triple as predicate",
+      "action": "ntriples12-bad-syntax-01.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-02",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - reified triple, literal subject",
+      "action": "ntriples12-bad-syntax-02.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-03",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - reified triple, literal predicate",
+      "action": "ntriples12-bad-syntax-03.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-04",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - reified triple, blank node predicate",
+      "action": "ntriples12-bad-syntax-04.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-05",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - triple term as predicate",
+      "action": "ntriples12-bad-syntax-05.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-06",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - triple term, literal subject",
+      "action": "ntriples12-bad-syntax-06.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-07",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - triple term, literal predicate",
+      "action": "ntriples12-bad-syntax-07.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-08",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - triple term, blank node predicate",
+      "action": "ntriples12-bad-syntax-08.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-09",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - reified triple object",
+      "action": "ntriples12-bad-syntax-09.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-10",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - triple term as subject",
+      "action": "ntriples12-bad-syntax-10.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-iri-1",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples - Bad - invalid IRI",
+      "action": "ntriples12-bad-iri-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-reified-1",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - subject reified triple",
+      "action": "ntriples12-bad-reified-syntax-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-reified-2",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - object reified triple",
+      "action": "ntriples12-bad-reified-syntax-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-reified-3",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - subject and object reified triples",
+      "action": "ntriples12-bad-reified-syntax-3.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bad-reified-4",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - predicate reified triple",
+      "action": "ntriples12-bad-reified-syntax-4.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bnode-bad-annotated-syntax-1",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - annotated triple, blank node subject",
+      "action": "ntriples12-bnode-bad-annotated-syntax-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples12-bnode-bad-annotated-syntax-2",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples-12 - Bad - annotated triple, blank node object",
+      "action": "ntriples12-bnode-bad-annotated-syntax-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-bad-1",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples literal- Bad - undefined base direction",
+      "action": "ntriples-langdir-bad-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-bad-2",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples literal- Bad - upper case LTR",
+      "action": "ntriples-langdir-bad-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-bad-3",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples - Bad - literal with missing language tag",
+      "action": "ntriples-langdir-bad-3.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-bad-4",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples - Bad - literal with bad language tag",
+      "action": "ntriples-langdir-bad-4.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-langdir-bad-5",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples - Bad - literal with missing language tag and direction",
+      "action": "ntriples-langdir-bad-5.nt"
+    }
+  ]
+}
