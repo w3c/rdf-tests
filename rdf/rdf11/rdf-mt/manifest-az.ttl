@@ -39,7 +39,7 @@
 <#ill-formed-string> a mf:PositiveEntailmentTest;
   mf:name "ill-formed-string";
   rdfs:comment """
-    XSD Strings do not allow the null code point \0000.
+    XSD Strings do not allow the null code point \\0000.
   """;
   mf:entailmentRegime "Simple" ;
   mf:recognizedDatatypes ( xsd:string ) ;
@@ -50,7 +50,7 @@
 <#well-formed-html> a mf:NegativeEntailmentTest;
   mf:name "well-formed-html";
   rdfs:comment """
-    rdf:HTML does allow the null code point \0000.
+    rdf:HTML does allow the null code point \\0000.
   """;
   mf:entailmentRegime "Simple" ;
   mf:recognizedDatatypes ( rdf:HTML ) ;
@@ -87,7 +87,7 @@
   """;
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( xsd:integer ) ;
-  mf:unrecognizedDatatypes ( ex:dt ) ;
+  mf:unrecognizedDatatypes ( <http://example.org/dt> ) ;
   mf:action <az-tests/unrecognized-datatype001.ttl>;
   mf:result false .
 
@@ -100,7 +100,7 @@
   """;
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( ) ;
-  mf:unrecognizedDatatypes ( ex:dt ) ;
+  mf:unrecognizedDatatypes ( <http://example.org/dt> ) ;
   mf:action <az-tests/unrecognized-datatype002.ttl>;
   mf:result <az-tests/unrecognized-datatype003.ttl> .
 
