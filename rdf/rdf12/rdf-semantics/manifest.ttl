@@ -57,7 +57,7 @@ trs:manifest a mf:Manifest;
     trs:opaque-literal
     trs:opaque-language-string
     trs:opaque-dir-language-string
-    trs:opaque-iri
+    # trs:opaque-iri  ## relies on non-standard entailment regime
     trs:triple-term-not-asserted
     trs:annotated-asserted
     trs:annotation
