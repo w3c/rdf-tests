@@ -43,7 +43,7 @@
   mf:entailmentRegime "simple" ;
   mf:recognizedDatatypes ( xsd:string ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/ill-formed-string.ttl>;
+  mf:action <ill-formed-string.ttl>;
   mf:result false .
 
 <#well-formed-html> a mf:NegativeEntailmentTest;
@@ -54,7 +54,7 @@
   mf:entailmentRegime "simple" ;
   mf:recognizedDatatypes ( rdf:HTML ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/well-formed-html.ttl>;
+  mf:action <well-formed-html.ttl>;
   mf:result false .
 
 <#langstring-disjoint-string> a mf:PositiveEntailmentTest;
@@ -65,7 +65,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( xsd:string rdf:langString ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/langstring-disjoint-string.ttl>;
+  mf:action <langstring-disjoint-string.ttl>;
   mf:result false .
 
 <#langstring-not-subclassof-string> a mf:PositiveEntailmentTest;
@@ -76,7 +76,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( xsd:string rdf:langString ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/langstring-not-subclassof-string.ttl>;
+  mf:action <langstring-not-subclassof-string.ttl>;
   mf:result false .
 
 <#unrecognized-datatype001> a mf:NegativeEntailmentTest;
@@ -87,7 +87,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( xsd:integer ) ;
   mf:unrecognizedDatatypes ( <https://example.org/dt> ) ;
-  mf:action <az-tests/unrecognized-datatype001.ttl>;
+  mf:action <unrecognized-datatype001.ttl>;
   mf:result false .
 
 <#unrecognized-datatype002> a mf:NegativeEntailmentTest;
@@ -100,8 +100,8 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( ) ;
   mf:unrecognizedDatatypes ( <https://example.org/dt> ) ;
-  mf:action <az-tests/unrecognized-datatype002.ttl>;
-  mf:result <az-tests/unrecognized-datatype003.ttl> .
+  mf:action <unrecognized-datatype002.ttl>;
+  mf:result <unrecognized-datatype003.ttl> .
 
 <#rdf11-tautology> a mf:PositiveEntailmentTest;
   mf:name "rdf11-tautology";
@@ -111,8 +111,8 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <rdfms-seq-representation/empty.nt>;
-  mf:result <az-tests/rdf11-tautology.ttl> .
+  mf:action <empty.nt>;
+  mf:result <rdf11-tautology.ttl> .
 
 <#langstring> a mf:PositiveEntailmentTest;
   mf:name "langstring";
@@ -122,8 +122,8 @@
   mf:entailmentRegime "RDF" ;
   mf:recognizedDatatypes ( rdf:langString ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/langstring001.ttl>;
-  mf:result <az-tests/langstring002.ttl> .
+  mf:action <langstring001.ttl>;
+  mf:result <langstring002.ttl> .
 
 <#horst-complete-rules> a mf:PositiveEntailmentTest;
   mf:name "horst-complete-rules";
@@ -133,8 +133,8 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/horst-complete-rules001.ttl>;
-  mf:result <az-tests/horst-complete-rules002.ttl> .
+  mf:action <horst-complete-rules001.ttl>;
+  mf:result <horst-complete-rules002.ttl> .
 
 <#inconsistent-recognizing-integer> a mf:PositiveEntailmentTest;
   mf:name "inconsistent-recognizing-integer";
@@ -145,7 +145,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes (  xsd:integer xsd:string ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/inconsistent-recognizing-integer.ttl>;
+  mf:action <inconsistent-recognizing-integer.ttl>;
   mf:result false .
 
 <#resource-is-literal> a mf:PositiveEntailmentTest;
@@ -156,8 +156,8 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes (  ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/resource-is-literal001.ttl>;
-  mf:result <az-tests/resource-is-literal002.ttl> .
+  mf:action <resource-is-literal001.ttl>;
+  mf:result <resource-is-literal002.ttl> .
 
 <#only-one-property> a mf:PositiveEntailmentTest;
   mf:name "only-one-property";
@@ -167,7 +167,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes (  xsd:nonNegativeInteger xsd:nonPositiveInteger ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/only-one-property.ttl>;
+  mf:action <only-one-property.ttl>;
   mf:result false .
 
 <#only-one-class> a mf:PositiveEntailmentTest;
@@ -178,7 +178,7 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes (  xsd:nonNegativeInteger xsd:nonPositiveInteger ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/only-one-class.ttl>;
+  mf:action <only-one-class.ttl>;
   mf:result false .
 
 <#same-as-one> a mf:PositiveEntailmentTest;
@@ -189,5 +189,5 @@
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes (  xsd:nonNegativeInteger xsd:nonPositiveInteger ) ;
   mf:unrecognizedDatatypes ( ) ;
-  mf:action <az-tests/same-as-one001.nt>;
-  mf:result <az-tests/same-as-one002.nt> .
+  mf:action <same-as-one001.nt>;
+  mf:result <same-as-one002.nt> .
