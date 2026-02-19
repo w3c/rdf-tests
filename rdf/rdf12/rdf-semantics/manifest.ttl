@@ -271,8 +271,8 @@ trs:opaque-language-string a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
-trs:opaque-dir-language-string a mf:NegativeEntailmentTest;
-  rdfs:comment "Literals within reifying terms (including directional language strings) are opaque, even when their datatype is recognized.";
+trs:opaque-dir-language-string a mf:PositiveEntailmentTest;
+  rdfs:comment "Literals within reifying terms (including directional language strings) are transparent.";
   mf:action <lowercase-dir-language-string.ttl>;
   mf:entailmentRegime "simple";
   mf:name "opaque-dir-language-string";
