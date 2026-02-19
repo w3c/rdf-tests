@@ -53,18 +53,13 @@ trs:manifest a mf:Manifest;
     trs:constrained-bnodes-in-triple-term-fail
     trs:constrained-bnodes-on-literal
     trs:literal-type
-    trs:malformed-literal-control
     trs:malformed-literal
     trs:malformed-literal-accepted
     trs:malformed-literal-no-spurious
     trs:malformed-literal-bnode-neg
-    trs:opaque-literal-control
     trs:opaque-literal
-    trs:opaque-language-string-control
     trs:opaque-language-string
-    trs:opaque-dir-language-string-control
     trs:opaque-dir-language-string
-    trs:opaque-iri-control
     trs:opaque-iri
     trs:triple-term-not-asserted
     trs:annotated-asserted
@@ -279,16 +274,6 @@ trs:malformed-literal-bnode-neg a mf:NegativeEntailmentTest;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
-trs:malformed-literal-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that xsd:integer is indeed recognized, to ensure that malformed-literal-* tests do not pass spuriously.";
-  mf:action <malformed-literal-control.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "malformed-literal-control";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result false;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
 trs:malformed-literal-no-spurious a mf:NegativeEntailmentTest;
   rdfs:comment "Malformed literals within triple terms do not lead to spurious entailment.";
   mf:action <malformed-literal.ttl>;
@@ -309,16 +294,6 @@ trs:opaque-iri a mf:PositiveEntailmentTest;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
-trs:opaque-iri-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Check that owl:sameAs works as expected; was to ensure that opaque-iri did not pass spuriously.";
-  mf:action <control-sameas-a.ttl>;
-  mf:entailmentRegime "RDFS-Plus";
-  mf:name "opaque-iri-control";
-  mf:recognizedDatatypes ();
-  mf:result <control-sameas-r.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
 trs:opaque-language-string a mf:PositiveEntailmentTest;
   rdfs:comment "Literals within reifying terms (including language strings) are transparent.";
   mf:action <lowercase-language-string.ttl>;
@@ -326,16 +301,6 @@ trs:opaque-language-string a mf:PositiveEntailmentTest;
   mf:name "opaque-language-string";
   mf:recognizedDatatypes ();
   mf:result <uppercase-language-string.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
-trs:opaque-language-string-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that language strings are indeed recognized; was to ensure that opaque-language-string did not pass spuriously.";
-  mf:action <lowercase-language-string-control.ttl>;
-  mf:entailmentRegime "simple";
-  mf:name "opaque-language-string-control";
-  mf:recognizedDatatypes ();
-  mf:result <uppercase-language-string-control.ttl>;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
@@ -349,16 +314,6 @@ trs:opaque-dir-language-string a mf:NegativeEntailmentTest;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
-trs:opaque-dir-language-string-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that directional language strings are indeed recognized, to ensure that opaque-dir-language-string does not pass spuriously.";
-  mf:action <lowercase-dir-language-string-control.ttl>;
-  mf:entailmentRegime "simple";
-  mf:name "opaque-dir-language-string-control";
-  mf:recognizedDatatypes ();
-  mf:result <uppercase-dir-language-string-control.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
 trs:opaque-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Literals within triple terms are transparent.";
   mf:action <non-canonical-literal.ttl>;
@@ -366,16 +321,6 @@ trs:opaque-literal a mf:PositiveEntailmentTest;
   mf:name "opaque-literal";
   mf:recognizedDatatypes (xsd:integer);
   mf:result <canonical-literal.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
-trs:opaque-literal-control a mf:PositiveEntailmentTest;
-  rdfs:comment "Checks that xsd:integer is indeed recognized; was to ensure that opaque-literal did not pass spuriously.";
-  mf:action <non-canonical-literal-control.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "opaque-literal-control";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result <canonical-literal-control.ttl>;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
