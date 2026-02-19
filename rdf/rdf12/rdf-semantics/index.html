@@ -541,7 +541,7 @@
             <dt>type</dt>
             <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
-            <dd property='mf:approval' resource=''>none</dd>
+            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
             <dt>entailmentRegime</dt>
             <dd property='mf:entailmentRegime'></dd>
             <dt>recognizedDatatypes</dt>
@@ -559,37 +559,6 @@
             <dt>result</dt>
             <dd>
               <a href='literal-type.ttl' property='mf:result'>literal-type.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='malformed-literal-control'>
-          <a class='testlink' href='#malformed-literal-control'>
-            malformed-literal-control:
-          </a>
-          <span about='../rdf-semantics#malformed-literal-control' property='mf:name'>malformed-literal-control</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal-control' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Checks that xsd:integer is indeed recognized, to ensure that malformed-literal-* tests do not pass spuriously.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='malformed-literal-control.ttl' property='mf:action'>malformed-literal-control.ttl</a>
             </dd>
           </dl>
         </dd>
@@ -621,146 +590,6 @@
             <dt>action</dt>
             <dd>
               <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='malformed-literal-accepted'>
-          <a class='testlink' href='#malformed-literal-accepted'>
-            malformed-literal-accepted:
-          </a>
-          <span about='../rdf-semantics#malformed-literal-accepted' property='mf:name'>malformed-literal-accepted</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal-accepted' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Malformed literals are allowed when in triple terms.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='malformed-literal.ttl' property='mf:result'>malformed-literal.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='malformed-literal-no-spurious'>
-          <a class='testlink' href='#malformed-literal-no-spurious'>
-            malformed-literal-no-spurious:
-          </a>
-          <span about='../rdf-semantics#malformed-literal-no-spurious' property='mf:name'>malformed-literal-no-spurious</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal-no-spurious' typeof='mf:NegativeEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Malformed literals within triple terms do not lead to spurious entailment.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='malformed-literal-other.ttl' property='mf:result'>malformed-literal-other.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='malformed-literal-bnode-neg'>
-          <a class='testlink' href='#malformed-literal-bnode-neg'>
-            malformed-literal-bnode-neg:
-          </a>
-          <span about='../rdf-semantics#malformed-literal-bnode-neg' property='mf:name'>malformed-literal-bnode-neg</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#malformed-literal-bnode-neg' typeof='mf:NegativeEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Malformed literals cannot be replaced by blank nodes.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='malformed-literal.ttl' property='mf:action'>malformed-literal.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='test002or.ttl' property='mf:result'>test002or.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='opaque-literal-control'>
-          <a class='testlink' href='#opaque-literal-control'>
-            opaque-literal-control:
-          </a>
-          <span about='../rdf-semantics#opaque-literal-control' property='mf:name'>opaque-literal-control</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-literal-control' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Checks that xsd:integer is indeed recognized; was to ensure that opaque-literal did not pass spuriously.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='non-canonical-literal-control.ttl' property='mf:action'>non-canonical-literal-control.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='canonical-literal-control.ttl' property='mf:result'>canonical-literal-control.ttl</a>
             </dd>
           </dl>
         </dd>
@@ -799,41 +628,6 @@
             </dd>
           </dl>
         </dd>
-        <dt id='opaque-language-string-control'>
-          <a class='testlink' href='#opaque-language-string-control'>
-            opaque-language-string-control:
-          </a>
-          <span about='../rdf-semantics#opaque-language-string-control' property='mf:name'>opaque-language-string-control</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-language-string-control' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Checks that language strings are indeed recognized; was to ensure that opaque-language-string did not pass spuriously.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='lowercase-language-string-control.ttl' property='mf:action'>lowercase-language-string-control.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='uppercase-language-string-control.ttl' property='mf:result'>uppercase-language-string-control.ttl</a>
-            </dd>
-          </dl>
-        </dd>
         <dt id='opaque-language-string'>
           <a class='testlink' href='#opaque-language-string'>
             opaque-language-string:
@@ -869,54 +663,19 @@
             </dd>
           </dl>
         </dd>
-        <dt id='opaque-dir-language-string-control'>
-          <a class='testlink' href='#opaque-dir-language-string-control'>
-            opaque-dir-language-string-control:
-          </a>
-          <span about='../rdf-semantics#opaque-dir-language-string-control' property='mf:name'>opaque-dir-language-string-control</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-dir-language-string-control' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Checks that directional language strings are indeed recognized, to ensure that opaque-dir-language-string does not pass spuriously.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='lowercase-dir-language-string-control.ttl' property='mf:action'>lowercase-dir-language-string-control.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='uppercase-dir-language-string-control.ttl' property='mf:result'>uppercase-dir-language-string-control.ttl</a>
-            </dd>
-          </dl>
-        </dd>
         <dt id='opaque-dir-language-string'>
           <a class='testlink' href='#opaque-dir-language-string'>
             opaque-dir-language-string:
           </a>
           <span about='../rdf-semantics#opaque-dir-language-string' property='mf:name'>opaque-dir-language-string</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-dir-language-string' typeof='mf:NegativeEntailmentTest'>
+        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-dir-language-string' typeof='mf:PositiveEntailmentTest'>
           <div property='rdfs:comment'>
-            <p>Literals within reifying terms (including directional language strings) are opaque, even when their datatype is recognized.</p>
+            <p>Literals within reifying terms (including directional language strings) are transparent.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:NegativeEntailmentTest</dd>
+            <dd>mf:PositiveEntailmentTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
             <dt>entailmentRegime</dt>
@@ -936,76 +695,6 @@
             <dt>result</dt>
             <dd>
               <a href='uppercase-dir-language-string.ttl' property='mf:result'>uppercase-dir-language-string.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='opaque-iri-control'>
-          <a class='testlink' href='#opaque-iri-control'>
-            opaque-iri-control:
-          </a>
-          <span about='../rdf-semantics#opaque-iri-control' property='mf:name'>opaque-iri-control</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-iri-control' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Check that owl:sameAs works as expected; was to ensure that opaque-iri did not pass spuriously.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='control-sameas-a.ttl' property='mf:action'>control-sameas-a.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='control-sameas-r.ttl' property='mf:result'>control-sameas-r.ttl</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='opaque-iri'>
-          <a class='testlink' href='#opaque-iri'>
-            opaque-iri:
-          </a>
-          <span about='../rdf-semantics#opaque-iri' property='mf:name'>opaque-iri</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='../rdf-semantics#opaque-iri' typeof='mf:PositiveEntailmentTest'>
-          <div property='rdfs:comment'>
-            <p>Triple term IRIs are transparent.</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveEntailmentTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='rdft:NotClassified'>rdft:NotClassified</dd>
-            <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
-            <dt>recognizedDatatypes</dt>
-            <dd>
-              <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>unrecognizedDatatypes</dt>
-            <dd>
-              <code property='mf:unrecognizedDatatypes' resource='rdf:nil'>none</code>
-            </dd>
-            <dt>action</dt>
-            <dd>
-              <a href='superman.ttl' property='mf:action'>superman.ttl</a>
-            </dd>
-            <dt>result</dt>
-            <dd>
-              <a href='superman_undesired_entailment.ttl' property='mf:result'>superman_undesired_entailment.ttl</a>
             </dd>
           </dl>
         </dd>
