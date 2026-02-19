@@ -244,7 +244,7 @@ trs:literal-type a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (xsd:integer);
   mf:result <literal-type.ttl>;
   mf:unrecognizedDatatypes ();
-  test:approval test:NotClassified .
+  rdft:approval rdft:NotClassified .
 
 trs:malformed-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Malformed literals are allowed in triple terms, but cause inconsistency.";
