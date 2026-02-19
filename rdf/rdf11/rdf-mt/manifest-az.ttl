@@ -22,26 +22,25 @@
     <#langstring-disjoint-string>
     <#langstring-not-subclassof-string>
     <#langstring>
-    <#manifest>
     <#only-one-class>
     <#only-one-property>
-    <#only-two-classes>
-    <#only-two-properties>
+    #<#only-two-classes> # test is missing
+    #<#only-two-properties> # test is missing
     <#rdf11-tautology>
     <#resource-is-literal>
     <#same-as-one>
     <#unrecognized-datatype001>
     <#unrecognized-datatype002>
-    <#unrecognized-datatype003>
+    #<#unrecognized-datatype003> # test is missing
     <#well-formed-html>
   ) .
 
 <#ill-formed-string> a mf:PositiveEntailmentTest;
   mf:name "ill-formed-string";
   rdfs:comment """
-    XSD Strings do not allow the null code point \0000.
+    XSD Strings do not allow the null code point U+0000.
   """;
-  mf:entailmentRegime "Simple" ;
+  mf:entailmentRegime "simple" ;
   mf:recognizedDatatypes ( xsd:string ) ;
   mf:unrecognizedDatatypes ( ) ;
   mf:action <az-tests/ill-formed-string.ttl>;
@@ -50,9 +49,9 @@
 <#well-formed-html> a mf:NegativeEntailmentTest;
   mf:name "well-formed-html";
   rdfs:comment """
-    rdf:HTML does allow the null code point \0000.
+    rdf:HTML does allow the null code point U+0000.
   """;
-  mf:entailmentRegime "Simple" ;
+  mf:entailmentRegime "simple" ;
   mf:recognizedDatatypes ( rdf:HTML ) ;
   mf:unrecognizedDatatypes ( ) ;
   mf:action <az-tests/well-formed-html.ttl>;
@@ -87,7 +86,7 @@
   """;
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( xsd:integer ) ;
-  mf:unrecognizedDatatypes ( ex:dt ) ;
+  mf:unrecognizedDatatypes ( <https://example.org/dt> ) ;
   mf:action <az-tests/unrecognized-datatype001.ttl>;
   mf:result false .
 
@@ -100,7 +99,7 @@
   """;
   mf:entailmentRegime "RDFS" ;
   mf:recognizedDatatypes ( ) ;
-  mf:unrecognizedDatatypes ( ex:dt ) ;
+  mf:unrecognizedDatatypes ( <https://example.org/dt> ) ;
   mf:action <az-tests/unrecognized-datatype002.ttl>;
   mf:result <az-tests/unrecognized-datatype003.ttl> .
 
@@ -172,7 +171,7 @@
   mf:result false .
 
 <#only-one-class> a mf:PositiveEntailmentTest;
-  mf:name "only-one-property";
+  mf:name "only-one-class";
   rdfs:comment """
     This forces all interpretations to have only one class, which has strange consequences.
   """;
