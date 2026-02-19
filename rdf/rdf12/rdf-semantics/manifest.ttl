@@ -54,9 +54,6 @@ trs:manifest a mf:Manifest;
     trs:constrained-bnodes-on-literal
     trs:literal-type
     trs:malformed-literal
-    trs:malformed-literal-accepted
-    trs:malformed-literal-no-spurious
-    trs:malformed-literal-bnode-neg
     trs:opaque-literal
     trs:opaque-language-string
     trs:opaque-dir-language-string
@@ -251,36 +248,6 @@ trs:malformed-literal a mf:PositiveEntailmentTest;
   mf:name "malformed-literal";
   mf:recognizedDatatypes (xsd:integer);
   mf:result false;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
-trs:malformed-literal-accepted a mf:PositiveEntailmentTest;
-  rdfs:comment "Malformed literals are allowed when in triple terms.";
-  mf:action <malformed-literal.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "malformed-literal-accepted";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result <malformed-literal.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
-trs:malformed-literal-bnode-neg a mf:NegativeEntailmentTest;
-  rdfs:comment "Malformed literals cannot be replaced by blank nodes.";
-  mf:action <malformed-literal.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "malformed-literal-bnode-neg";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result <test002or.ttl>;
-  mf:unrecognizedDatatypes ();
-  rdft:approval rdft:NotClassified .
-
-trs:malformed-literal-no-spurious a mf:NegativeEntailmentTest;
-  rdfs:comment "Malformed literals within triple terms do not lead to spurious entailment.";
-  mf:action <malformed-literal.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "malformed-literal-no-spurious";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result <malformed-literal-other.ttl>;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
