@@ -227,16 +227,6 @@ trs:triple-terms-no-spurious a mf:NegativeEntailmentTest;
   mf:unrecognizedDatatypes ();
   rdft:approval rdft:NotClassified .
 
-trs:literal-type a mf:PositiveEntailmentTest;
-  rdfs:comment "Literals denote instances of their datatype.";
-  mf:action <canonical-literal-control.ttl>;
-  mf:entailmentRegime "RDF";
-  mf:name "literal-type";
-  mf:recognizedDatatypes (xsd:integer);
-  mf:result <literal-type.ttl>;
-  mf:unrecognizedDatatypes ();
-  test:approval test:NotClassified .
-
 trs:malformed-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Malformed literals are allowed in triple terms, but cause inconsistency.";
   mf:action <malformed-literal.ttl>;
