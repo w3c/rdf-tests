@@ -58,6 +58,15 @@
     <#xmlsch-02-whitespace-facet-2>
 #    <#xmlsch-02-whitespace-facet-3> # recinded 2013-12-17
     <#xmlsch-02-whitespace-facet-4>
+    <#literal-type>
+    <#float-zero>
+    <#float-round-different>
+    <#float-round-same>
+    <#float-infinity>
+    <#double-zero>
+    <#double-round-different>
+    <#double-round-same>
+    <#double-infinity>
   ) .
 
 <#datatypes-intensional-xsd-integer-decimal-compatible> a mf:NegativeEntailmentTest;
@@ -643,3 +652,93 @@
   mf:result false .
 ## was <xmlsch-02/test003.ttl>
     
+<#literal-type> a mf:PositiveEntailmentTest;
+  rdfs:comment "Literals denote instances of their datatype.";
+  mf:action <datatypes/literal-type1.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "literal-type";
+  mf:recognizedDatatypes (xsd:integer);
+  mf:result <datatypes/literal-type2.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#float-zero> a mf:NegativeEntailmentTest;
+  rdfs:comment "Positive zero and negative zero are different in xsd:float.";
+  mf:action <datatypes/float-positive-zero.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "float-zero";
+  mf:recognizedDatatypes (xsd:float);
+  mf:result <datatypes/float-negative-zero.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#float-round-different> a mf:NegativeEntailmentTest;
+  rdfs:comment "Rounding to different even xsd:float.";
+  mf:action <datatypes/float-16777206-5.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "float-round-different";
+  mf:recognizedDatatypes (xsd:float);
+  mf:result <datatypes/float-16777207-5.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#float-round-same> a mf:PositiveEntailmentTest;
+  rdfs:comment "Rounding to same even xsd:float.";
+  mf:action <datatypes/float-16777206-5.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "float-round-same";
+  mf:recognizedDatatypes (xsd:float);
+  mf:result <datatypes/float-16777205-5.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#float-infinity> a mf:PositiveEntailmentTest;
+  rdfs:comment "Large xsd:float values are infinity.";
+  mf:action <datatypes/float-e400.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "float-infinity";
+  mf:recognizedDatatypes (xsd:float);
+  mf:result <datatypes/float-e401.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#double-zero> a mf:NegativeEntailmentTest;
+  rdfs:comment "Positive zero and negative zero are different in xsd:double.";
+  mf:action <datatypes/double-positive-zero.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "double-zero";
+  mf:recognizedDatatypes (xsd:double);
+  mf:result <datatypes/double-negative-zero.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#double-round-different> a mf:NegativeEntailmentTest;
+  rdfs:comment "Rounding to different even xsd:double.";
+  mf:action <datatypes/double-9007199254740990-5.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "double-round-different";
+  mf:recognizedDatatypes (xsd:double);
+  mf:result <datatypes/double-9007199254740991-5.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#double-round-same> a mf:PositiveEntailmentTest;
+  rdfs:comment "Rounding to same even xsd:double.";
+  mf:action <datatypes/double-9007199254740992-5.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "double-round-same";
+  mf:recognizedDatatypes (xsd:double);
+  mf:result <datatypes/double-9007199254740991-5.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
+<#double-infinity> a mf:PositiveEntailmentTest;
+  rdfs:comment "Large xsd:double values are infinity.";
+  mf:action <datatypes/double-e400.ttl>;
+  mf:entailmentRegime "RDF";
+  mf:name "double-infinity";
+  mf:recognizedDatatypes (xsd:double);
+  mf:result <datatypes/double-e401.ttl>;
+  mf:unrecognizedDatatypes ();
+  rdft:approval rdft:NotClassified .
+
