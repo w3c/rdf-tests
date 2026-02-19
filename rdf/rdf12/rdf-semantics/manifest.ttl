@@ -36,6 +36,9 @@ trs:manifest a mf:Manifest;
     along with the relevant RDF 1.1 tests.
   """;
   rdfs:seeAlso <README>;
+  mf:include (
+    <../../rdf11/rdf-mt/manifest.ttl>
+  ) ;
   mf:entries (
     trs:all-identical-triple-terms-are-the-same
     trs:triple-terms-no-spurious
