@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -30,7 +30,7 @@ td {
 th {  
   font-weight: bold;  
   text-align: center;  
-  background-color: NavyBlue !important; 
+  background-color: Navy !important;
   font-size: 110%;
   background: hsl(180, 30%, 50%); 
   color: #fff;
@@ -215,6 +215,8 @@ em.rfc2119 {
   The <a href="http://json-ld.org/test-suite/">JSON-LD Test Suite</a> is managed through the <a href="https://github.com/json-ld/json-ld.org/">json-ld/json-ld.org</a> GitHub repository. <a href="http://github.com/json-ld/json-ld.org/issues">Issues</a> should be filed in that repository.
 </p>
 
+<h2>Contributing</h2>
+
 <p>The work of the CG is being performed on <a href="http://github.com/w3c/rdf-tests" target="_blank" rel="external nofollow">GitHub</a>. The list of test suites managed, is available through the <a href="https://w3c.github.io/rdf-tests/" target="_blank" rel="external nofollow">HTML view</a>. The general process followed is the following:</p>
 <ul>
 <li>New test suites may be added via a PR request against the rdf-tests repository, or by filing an issue using the <a href="http://github.com/w3c/rdf-tests/issues" target="_blank" rel="external nofollow">issue tracker</a> for subsequent activity.</li>
@@ -224,9 +226,9 @@ Note that naming conventions for tests often make conflicting overlaps inevitabl
 <li>Some updates, e.g. more extensive updates to the SPARQL test suite, may require branching off of, and merging back into, a separate feature branch, so that a set of changes can be staged before updating the main branch.</li>
 <li>After a changes to a given test suite become stable, a “release” branch can be created to record the state of the test suite at that time.</li>
 <li>All changes affecting a given test suite should be broadcast to the appropriate comments list (<a href="mailto:public-rdf-comments@w3.org">public-rdf-comments@w3.org</a> or <a href="mailto:public-sparql-dev@w3.org">public-sparql-dev@w3.org</a> at this point).</li>
-<li>Implementations can typically access a given test suite using the <a href="https://w3c.github.io/rdf-tests/" target="_blank" rel="external nofollow">HTML view</a>. For example, the Turtle test manifest can be accessed at  <a href="https://w3c.github.io/rdf-tests/turtle/manifest.ttl" rel="external nofollow">https://w3c.github.io/rdf-tests/turtle/manifest.ttl</a>. Accessing test suites though an alternative branch via HTTP requires the use of a different facility, such as <a href="https://raw.githubusercontent.com/w3c/rdf-tests/main/turtle/manifest.ttl" target="_blank" rel="external nofollow">https://raw.githubusercontent.com/w3c/rdf-tests/main/turtle/manifest.ttl</a>, where &#8220;main&#8221; is replaced by the appropriate branch name.</li>
+<li>Implementations can typically access a given test suite using the <a href="https://w3c.github.io/rdf-tests/" target="_blank" rel="external nofollow">HTML view</a>. For example, the Turtle test manifest can be accessed at  <a href="https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/manifest.ttl" rel="external nofollow">https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/manifest.ttl</a>. Accessing test suites though an alternative branch via HTTP requires the use of a different facility, such as <a href="https://raw.githubusercontent.com/w3c/rdf-tests/main/rdf/rdf12/rdf-turtle/manifest.ttl" target="_blank" rel="external nofollow">https://raw.githubusercontent.com/w3c/rdf-tests/main/rdf/rdf12/rdf-turtle/manifest.ttl</a>, where &#8220;main&#8221; is replaced by the appropriate branch name.</li>
 </ul>
 
-<p>The group is chaired by <a href="http://greggkellogg.net/foaf#me">Gregg Kellogg</a>. The W3C staff contact is <a href="https://www.w3.org/2011/rdf-wg/wiki/User:Pchampin">Pierre-Antoine Champin</a>. If you are member of the Community Group, and you want to gain a “push” right to this repository, please contact <a href="mailto:gregg@greggkellogg.net">gregg@greggkellogg.net</a>, providing your github ID.</p>
+<p>The group is chaired by Thomas Pellissier Tanon, Andy Seaborne, and Ruben Taelman. The W3C staff contact is <a href="https://www.w3.org/2011/rdf-wg/wiki/User:Pchampin">Pierre-Antoine Champin</a>. If you are member of the Community Group, and you want to gain a “push” right to this repository, please contact the chairs, providing your github ID.</p>
 </body>
 </html>
