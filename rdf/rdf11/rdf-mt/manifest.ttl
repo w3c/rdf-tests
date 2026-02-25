@@ -244,7 +244,7 @@
   """;
   rdft:approval rdft:Approved;
   mf:entailmentRegime "RDFS" ;
-  mf:recognizedDatatypes ( ) ;
+  mf:recognizedDatatypes ( xsd:integer xsd:string ) ;
   mf:unrecognizedDatatypes ( ) ;
   mf:action <horst-01/test003.ttl>;
   mf:result <horst-01/test004.ttl> .
