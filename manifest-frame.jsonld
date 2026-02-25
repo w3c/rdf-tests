@@ -13,7 +13,11 @@
     "include": {"@id": "mf:include", "@container": "@list", "@type": "@id"},
     "label": "rdfs:label",
     "name": "mf:name",
-    "result": {"@id": "mf:result", "@type": "@id"}
+    "result": {"@id": "mf:result", "@type": "@id"},
+
+    "entailmentRegime": {"@id": "mf:entailmentRegime"},
+    "recognizedDatatypes": {"@id": "mf:recognizedDatatypes", "@type": "@id", "@container": "@list"},
+    "unrecognizedDatatypes": {"@id": "mf:unrecognizedDatatypes", "@type": "@id", "@container": "@list"}
   },
   "@type": "mf:Manifest",
   "entries": {"@embed": true}
