@@ -156,6 +156,14 @@
                         %dt='data'
                         %dd
                           %a{property: "ut:data", href: test['action']['ut:data']}<~test['action']['ut:data']
+                      - if test['action']['graphData']
+                        %dt='graphData'
+                        %dd
+                          %table.test-detail
+                            - test['action']['graphData'].each do |gd|
+                              %tr{property: 'qt:graphData', resource: gd}
+                                %td
+                                  %a{property: "qt:graphData", href: gd}<~gd
                       - if test['action']['ut:graphData']
                         %dt='graphData'
                         %dd

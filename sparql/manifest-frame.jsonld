@@ -24,7 +24,7 @@
     "approvedBy":           {"@id": "dawgt:approvedBy", "@type": "@id"},
     "data":                 {"@id": "mq:data", "@type": "@id"},
     "feature":              {"@id": "mf:feature", "@type": "@vocab"},
-    "graphData":            {"@id": "mq:graphData", "@type": "@id"},
+    "graphData":            {"@id": "mq:graphData", "@type": "@id", "@container": "@set"},
     "notable":              {"@id": "mf:notable", "@type": "@vocab"},
     "query":                {"@id": "mq:query", "@type": "@id"},
     "queryForm":            {"@id": "mq:queryForm", "@type": "@vocab"},
