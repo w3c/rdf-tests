@@ -160,7 +160,7 @@
                 %dt="action"
                 %dd
                   %a{property: "mf:action", href: test['action']}<~test['action']
-              - if test['result']
+              - if test.key?('result')
                 %dt="result"
                 %dd
                   - if test['result'].eql?(true)
