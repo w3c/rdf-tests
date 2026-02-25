@@ -173,10 +173,15 @@
                   %dt="action"
                   %dd
                     %a{property: "mf:action", href: test['action']}<~test['action']
-                - if test['result']
+                - if test.key?('result')
                   %dt="result"
                   %dd
-                    %a{property: "mf:result", href: test['result']}<~test['result']
+                    - if test['result'].eql?(true)
+                      %code{property: "mf:result", datatype: "xsd:boolean"}<~test['result']
+                    - elsif test['result'].eql?(false)
+                      %code{property: "mf:result", datatype: "xsd:boolean"}<~test['result']
+                    - else
+                      %a{property: "mf:result", href: test['result']}<~test['result']
 
     %footer
       :markdown
