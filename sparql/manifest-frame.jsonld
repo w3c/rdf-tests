@@ -6,6 +6,7 @@
     "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
     "rdft": "http://www.w3.org/ns/rdftest#",
     "dawgt":  "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
 
     "action": {"@id": "mf:action", "@type": "@id"},
     "comment": "rdfs:comment",
@@ -27,7 +28,11 @@
     "notable":              {"@id": "mf:notable", "@type": "@vocab"},
     "query":                {"@id": "mq:query", "@type": "@id"},
     "queryForm":            {"@id": "mq:queryForm", "@type": "@vocab"},
-    "requires":             {"@id": "mf:requires", "@type": "@vocab", "@container": "@set"}
+    "requires":             {"@id": "mf:requires", "@type": "@vocab", "@container": "@set"},
+    "ut:data":              {"@id": "ut:data", "@type": "@id"},
+    "ut:graphData":         {"@id": "ut:graphData", "@container": "@set"},
+    "ut:graph":             {"@id": "ut:graph", "@type": "@id"},
+    "ut:request":           {"@id": "ut:request", "@type": "@id"}
   },
   "@type": "mf:Manifest",
   "entries": {"@embed": true}
