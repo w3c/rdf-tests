@@ -40,7 +40,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:rdf12-xml-tt-05
         trs:rdf12-xml-tt-06
         trs:rdf12-xml-tt-07
-        trs:rdf12-xml-tt-08
+        trs:rdf12-xml-tt-bad-01
+        trs:rdf12-xml-tt-bad-02
 
         trs:rdf12-xml-an-01
         trs:rdf12-xml-an-02
@@ -119,31 +120,37 @@ trs:rdf12-xml-tt-03 rdf:type rdft:TestXMLEval;
 
 trs:rdf12-xml-tt-04 rdf:type rdft:TestXMLEval;
   mf:name     "rdf12-xml-tt-04";
-  mf:comment  "Triple term having a type";
+  mf:comment  "Triple term having a type (rdf:Description)";
   mf:action   <rdf12-xml-tt-04.rdf>;
   mf:result   <rdf12-xml-tt-04.nt> .
 
 trs:rdf12-xml-tt-05 rdf:type rdft:TestXMLEval;
   mf:name     "rdf12-xml-tt-05";
-  mf:comment  "Triple term having BNode object";
+  mf:comment  "Triple term having a type (striped)";
   mf:action   <rdf12-xml-tt-05.rdf>;
   mf:result   <rdf12-xml-tt-05.nt> .
 
 trs:rdf12-xml-tt-06 rdf:type rdft:TestXMLEval;
   mf:name     "rdf12-xml-tt-06";
-  mf:comment  "Recursive triple term";
+  mf:comment  "Triple term having BNode object";
   mf:action   <rdf12-xml-tt-06.rdf>;
   mf:result   <rdf12-xml-tt-06.nt> .
 
-trs:rdf12-xml-tt-07 rdf:type rdft:TestXMLNegativeSyntax;
+trs:rdf12-xml-tt-07 rdf:type rdft:TestXMLEval;
   mf:name     "rdf12-xml-tt-07";
-  mf:comment  "Invalid triple term having no predicate or object";
-  mf:action   <rdf12-xml-tt-07.rdf> .
+  mf:comment  "Recursive triple term";
+  mf:action   <rdf12-xml-tt-07.rdf>;
+  mf:result   <rdf12-xml-tt-07.nt> .
 
-trs:rdf12-xml-tt-08 rdf:type rdft:TestXMLNegativeSyntax;
-  mf:name     "rdf12-xml-tt-08";
+trs:rdf12-xml-tt-bad-01 rdf:type rdft:TestXMLNegativeSyntax;
+  mf:name     "rdf12-xml-tt-bad-01";
+  mf:comment  "Invalid triple term having no predicate or object";
+  mf:action   <rdf12-xml-tt-bad-01.rdf> .
+
+trs:rdf12-xml-tt-bad-02 rdf:type rdft:TestXMLNegativeSyntax;
+  mf:name     "rdf12-xml-tt-bad-02";
   mf:comment  "Invalid triple term having two objects";
-  mf:action   <rdf12-xml-tt-08.rdf> .
+  mf:action   <rdf12-xml-tt-bad-02.rdf> .
 
 # Annotations
 
