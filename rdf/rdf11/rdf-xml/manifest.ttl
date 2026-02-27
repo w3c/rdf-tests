@@ -189,6 +189,7 @@
     <#xmlbase-test011>
     <#xmlbase-test013>
     <#xmlbase-test014>
+    <#bad-parse-type>
   ) .
 
 <#amp-in-url-test001> a rdft:TestXMLEval;
@@ -1814,3 +1815,8 @@ ignored.
   rdft:approval rdft:Approved;
   mf:action <xmlbase/test014.rdf>;
   mf:result <xmlbase/test014.nt> .
+
+<#bad-parse-type> a rdft:TestXMLNegativeSyntax;
+  mf:name "bad-parse-type";
+  rdfs:comment "Unsupported rdf:parseType values raise an error";
+  mf:action <parse-type/bad-parse-type.rdf> .
