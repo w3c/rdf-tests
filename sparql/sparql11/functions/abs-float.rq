@@ -1,0 +1,4 @@
+PREFIX : <http://example.org/>
+SELECT ?s (ABS(?num) AS ?v) WHERE {
+	?s :num ?num
+}
