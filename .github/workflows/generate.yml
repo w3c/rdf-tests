@@ -6,25 +6,39 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    name: Generate Reports using Ruby
-    if: github.repository == 'w3c/rdf-tests'
+  check_build:
+    name: Try generating reports using Ruby
     runs-on: ubuntu-latest
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4.3
-      - name: Install dependencies
-        run:  bundle install
-      - name: Generate Test Manifests
-        run:  bundle exec rake
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Automated manifest generation
-          commit_user_name: Report generation bot
-          commit_user_email: <>
+      - run: bundle install
+      - run: bundle exec rake
 
+  build_and_push:
+    name: Generate reports using Ruby and push them to the gh-pages branch
+    if: github.repository == 'w3c/rdf-tests' && github.ref_name == 'main'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 'gh-pages'
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.4.3
+      - run: |      
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git merge --strategy-option theirs origin/main
+          bundle install
+          bundle exec rake
+          git add '**/*.html'
+          git diff-index --quiet HEAD || git commit -m "Regenerate website"
+          git push
