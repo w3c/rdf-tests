@@ -3,6 +3,7 @@
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='manifest.ttl' rel='alternate' type='text/turtle'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
       body {background-image: none;}
@@ -66,7 +67,7 @@
       <p>This page describes W3C RDF 1.1 Working Group's Entailment test suite. This test suite contains two kinds of tests:</p>
       <ul>
         <li>Positive Entailment Tests (<code>rdft:PositiveEntailmentTest</code>)</li>
-        <li>Positive Entailment Tests (rdft:NegativeEntailmentTest)</li>
+        <li>Positive Entailment Tests (<code>rdft:NegativeEntailmentTest</code>)</li>
       </ul>
       <p>These tests are also described in <a href="manifest.ttl">Turtle</a> format in this directory for convenience. The manifest files in this directory lists all of the approved tests in the RDF WG's RDF Entailment test suite. All tests have a name (<code>mf:name</code>) and an input (<code>mf:action</code>).</p>
       <p>Each test is one of the above kinds of tests. All tests have</p>
@@ -121,7 +122,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
@@ -156,7 +157,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>simple</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:string'>xsd:string</code>
@@ -168,6 +169,10 @@
             <dt>action</dt>
             <dd>
               <a href='ill-formed-string.ttl' property='mf:action'>ill-formed-string.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -187,7 +192,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
@@ -200,6 +205,10 @@
             <dt>action</dt>
             <dd>
               <a href='inconsistent-recognizing-integer.ttl' property='mf:action'>inconsistent-recognizing-integer.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -219,11 +228,11 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:string'>xsd:string</code>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#langString'>http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</code>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='rdf:langString'>rdf:langString</code>
             </dd>
             <dt>unrecognizedDatatypes</dt>
             <dd>
@@ -232,6 +241,10 @@
             <dt>action</dt>
             <dd>
               <a href='langstring-disjoint-string.ttl' property='mf:action'>langstring-disjoint-string.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -251,11 +264,11 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:string'>xsd:string</code>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#langString'>http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</code>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='rdf:langString'>rdf:langString</code>
             </dd>
             <dt>unrecognizedDatatypes</dt>
             <dd>
@@ -264,6 +277,10 @@
             <dt>action</dt>
             <dd>
               <a href='langstring-not-subclassof-string.ttl' property='mf:action'>langstring-not-subclassof-string.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -283,10 +300,10 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDF</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#langString'>http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</code>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='rdf:langString'>rdf:langString</code>
             </dd>
             <dt>unrecognizedDatatypes</dt>
             <dd>
@@ -318,7 +335,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:nonNegativeInteger'>xsd:nonNegativeInteger</code>
@@ -331,6 +348,10 @@
             <dt>action</dt>
             <dd>
               <a href='only-one-class.ttl' property='mf:action'>only-one-class.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -350,7 +371,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:nonNegativeInteger'>xsd:nonNegativeInteger</code>
@@ -363,6 +384,10 @@
             <dt>action</dt>
             <dd>
               <a href='only-one-property.ttl' property='mf:action'>only-one-property.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -382,7 +407,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
@@ -417,7 +442,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
@@ -452,7 +477,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:nonNegativeInteger'>xsd:nonNegativeInteger</code>
@@ -488,7 +513,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code inlist='true' property='mf:recognizedDatatypes' resource='xsd:integer'>xsd:integer</code>
@@ -500,6 +525,10 @@
             <dt>action</dt>
             <dd>
               <a href='unrecognized-datatype001.ttl' property='mf:action'>unrecognized-datatype001.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
@@ -519,7 +548,7 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>RDFS</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
               <code property='mf:recognizedDatatypes' resource='rdf:nil'>none</code>
@@ -554,10 +583,10 @@
             <dt>approval</dt>
             <dd property='mf:approval' resource=''></dd>
             <dt>entailmentRegime</dt>
-            <dd property='mf:entailmentRegime'></dd>
+            <dd property='mf:entailmentRegime'>simple</dd>
             <dt>recognizedDatatypes</dt>
             <dd>
-              <code inlist='true' property='mf:recognizedDatatypes' resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML'>http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML</code>
+              <code inlist='true' property='mf:recognizedDatatypes' resource='rdf:HTML'>rdf:HTML</code>
             </dd>
             <dt>unrecognizedDatatypes</dt>
             <dd>
@@ -566,6 +595,10 @@
             <dt>action</dt>
             <dd>
               <a href='well-formed-html.ttl' property='mf:action'>well-formed-html.ttl</a>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <code datatype='xsd:boolean' property='mf:result'>false</code>
             </dd>
           </dl>
         </dd>
