@@ -5,9 +5,7 @@
             rdf:version="1.2">
   <rdf:Description rdf:about="http://example.org/">
     <ex:prop rdf:parseType="Triple">
-      <rdf:Description rdf:about="http://example.org/stuff/1.0/s">
-        <ex:p rdf:nodeID="b1" />
-      </rdf:Description>
+      <ex:t rdf:about="http://example/s"/>
     </ex:prop>
   </rdf:Description>
 </rdf:RDF>
