@@ -1,4 +1,6 @@
 prefix : <http://example.com/ns#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 :a :b :c.
-:a1 :p1 <<( :a :b :c )>>.
+_:r rdf:reifies <<( :a :b :c )>>.
+_:r :p1 :o1.
