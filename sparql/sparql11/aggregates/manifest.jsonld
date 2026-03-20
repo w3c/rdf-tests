@@ -1,0 +1,768 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/aggregates/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Aggregates",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 1",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Simple count",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg01.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 2",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count with grouping",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg02.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 3",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count with grouping and HAVING clause",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg03.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg04",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 4",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count(*)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg04.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg04.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg05",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 5",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count(*) with grouping",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg05.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg05.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg06",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 6",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count(*) with HAVING Count(*)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg06.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg06.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg07",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 7",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Count(*) with grouping and HAVING Count(*)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg07.rq"
+        },
+        "mq:data": {
+          "@id": "agg01.ttl"
+        }
+      },
+      "result": "agg07.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "COUNT 8",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "grouping by expression, done wrong",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": "agg08.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg08b",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT 8b",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "grouping by expression, done correctly",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg08b.rq"
+        },
+        "mq:data": {
+          "@id": "agg08.ttl"
+        }
+      },
+      "result": "agg08b.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg09",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "COUNT 9",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Projection of an ungrouped variable (not appearing in the GROUP BY expression)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": "agg09.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg10",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "COUNT 10",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Projection of an ungrouped variable (no GROUP BY expression at all)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": "agg10.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg11",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "COUNT 11",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Use of an ungrouped variable in a project expression",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": "agg11.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg12",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "COUNT 12",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#count"
+      },
+      "comment": "Use of an ungrouped variable in a project expression, where the variable appears in a GROUP BY expression",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3"
+      },
+      "action": "agg12.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GROUP_CONCAT 1",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#group_concat"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-groupconcat-1.rq"
+        },
+        "mq:data": {
+          "@id": "agg-groupconcat-1.ttl"
+        }
+      },
+      "result": "agg-groupconcat-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GROUP_CONCAT 2",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#group_concat"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-groupconcat-2.rq"
+        },
+        "mq:data": {
+          "@id": "agg-groupconcat-1.ttl"
+        }
+      },
+      "result": "agg-groupconcat-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GROUP_CONCAT with SEPARATOR",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#group_concat"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-groupconcat-3.rq"
+        },
+        "mq:data": {
+          "@id": "agg-groupconcat-1.ttl"
+        }
+      },
+      "result": "agg-groupconcat-3.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-04",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GROUP_CONCAT with same language tag",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#group_concat"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-groupconcat-4.rq"
+        }
+      },
+      "result": "agg-groupconcat-4.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-groupconcat-05",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GROUP_CONCAT with different language tags",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#group_concat"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-groupconcat-5.rq"
+        }
+      },
+      "result": "agg-groupconcat-5.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SUM",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#sum"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-sum-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-sum-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sum-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SUM with GROUP BY",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#sum"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-sum-02.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric2.ttl"
+        }
+      },
+      "result": "agg-sum-02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "AVG",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#avg"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-avg-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-avg-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "AVG with GROUP BY",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#avg"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-avg-02.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric2.ttl"
+        }
+      },
+      "result": "agg-avg-02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-avg-03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "AVG with empty group (value defined to be 0)",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#avg"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-avg-03.rq"
+        }
+      },
+      "result": "agg-avg-03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "MIN",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#min"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-min-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-min-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-min-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "MIN with GROUP BY",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#min"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-min-02.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-min-02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "MAX",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#max"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-max-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-max-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-max-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "MAX with GROUP BY",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#max"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-max-02.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-max-02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-sample-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SAMPLE",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#sample"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-sample-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-numeric.ttl"
+        }
+      },
+      "result": "agg-sample-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Error in AVG",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#aggregate"
+      },
+      "comment": "Error in AVG return no binding",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-err-01.rq"
+        },
+        "mq:data": {
+          "@id": "agg-err-01.ttl"
+        }
+      },
+      "result": "agg-err-01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-err-02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Protect from error in AVG",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#aggregate"
+      },
+      "comment": "Protect from error in AVG using IF and COALESCE",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2010-09-07#resolution_2"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-err-02.rq"
+        },
+        "mq:data": {
+          "@id": "agg-err-02.ttl"
+        }
+      },
+      "result": "agg-err-02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "agg on empty set, explicit grouping",
+      "comment": "aggregating empty results returns no rows, as there are no grouped results.",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#aggregate"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-empty-group-max-1.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        }
+      },
+      "result": "agg-empty-group-max-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-max-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "agg on empty set, no grouping",
+      "comment": "aggregating empty results with no group-by always returns a single result.",
+      "mf:feature": {
+        "@id": "http://www.w3.org/ns/sparql#aggregate"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "agg-empty-group-max-2.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        }
+      },
+      "result": "agg-empty-group-max-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT: no match, with group",
+      "comment": "counting no results with grouping returns no results.",
+      "action": {
+        "mq:query": {
+          "@id": "agg-empty-group-count-1.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        }
+      },
+      "result": "agg-empty-group-count-1.srj"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT: no match, no group",
+      "comment": "counting no results without grouping always returns a single result.",
+      "action": {
+        "mq:query": {
+          "@id": "agg-empty-group-count-2.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        }
+      },
+      "result": "agg-empty-group-count-2.srj"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-graph",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "COUNT: no GROUP BY inside of GRAPH",
+      "comment": "counting no results without grouping always returns a single result per named graph.",
+      "action": {
+        "mq:query": {
+          "@id": "agg-empty-group-count-graph.rq"
+        },
+        "mq:data": {
+          "@id": "empty.ttl"
+        },
+        "mq:graphData": [
+          {
+            "@id": "empty.ttl"
+          },
+          {
+            "@id": "singleton.ttl"
+          }
+        ]
+      },
+      "result": "agg-empty-group-count-graph.ttl"
+    }
+  ]
+}

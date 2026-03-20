@@ -1,0 +1,464 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/basic-update/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Basic Update",
+  "comment": "Basic SPARQL 1.1 Update test cases",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo1",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "Simple insert data 1",
+      "comment": "This is a simple insert of a single triple to the unnamed graph of an empty graph store",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-data-spo1.ru"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#result": {
+          "@id": "http://www.w3.org/2009/sparql/tests/test-update#success"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "spo.ttl"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named1",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "Simple insert data named 1",
+      "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of an empty graph store",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-data-named1.ru"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#result": {
+          "@id": "http://www.w3.org/2009/sparql/tests/test-update#success"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "spo.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named2",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "Simple insert data named 2",
+      "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of a graph store consisting of an empty unnamed graph and the named graph holds one (different) triple already",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-data-named2.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "spo.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#result": {
+          "@id": "http://www.w3.org/2009/sparql/tests/test-update#success"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "spo2.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-spo-named3",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "Simple insert data named 3",
+      "comment": "This is a simple insert of a single triple into the named graph <http://example.org/g1> of a graph store consisting of an empty unnamed graph and the named holds the inserted triple already (using the same query as insert-data-named1)",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-data-named1.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "spo.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#result": {
+          "@id": "http://www.w3.org/2009/sparql/tests/test-update#success"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "spo.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT 01",
+      "comment": "This is a INSERT over a dataset with a single triple in the default graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-01-pre.ttl"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-01-post.ttl"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-02",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT 02",
+      "comment": "This is a INSERT over a dataset with a single triple in the default graph, inserting into a named graph",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-02.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-02-pre.ttl"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-02-post.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-02-g1-post.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-03",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT 03",
+      "comment": "This is a INSERT over a dataset with a single triple in a named graph, inserting into the named graph using the WITH keyword",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-03.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-03-pre.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-03-g1-pre.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-03-post.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-03-g1-post.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-04",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT 04",
+      "comment": "This is a INSERT of a triple over a dataset with data in named graphs, inserting into the default graph using the USING keyword",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-04.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-04-pre.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-04-g1-pre.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-04-post.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-04-g1-post.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-using-01",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT USING 01",
+      "comment": "This is an INSERT into the default graph of two triples constructed from the data in two named graphs that are treated as the default graph during matching with the USING keyword.",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-02-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-using-01.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-using-01-pre.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "insert-using-01-g1-pre.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "insert-using-01-g2-pre.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-using-01-post.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": [
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "insert-using-01-g1-post.ttl"
+            },
+            "label": "http://example.org/g1"
+          },
+          {
+            "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+              "@id": "insert-using-01-g2-post.ttl"
+            },
+            "label": "http://example.org/g2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-05a",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERT same bnode twice",
+      "comment": "As per http://lists.w3.org/Archives/Public/public-rdf-dawg/2012AprJun/0165.html",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_3"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-05a.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-05a-g1-pre.ttl"
+          },
+          "label": "http://example.org/g1"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-05a-g3-post.ttl"
+          },
+          "label": "http://example.org/g3"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-data-same-bnode",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERTing the same bnode with INSERT DATA into two different Graphs is the same bnode",
+      "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012JulSep/0196.html, this can be viewed as a variation of :insert-05a",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_5"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-data-same-bnode.ru"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-05a-g3-post.ttl"
+          },
+          "label": "http://example.org/g3"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode",
+      "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_5"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-where-same-bnode.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-where-same-bnode-pre.ttl"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-where-same-bnode-pre.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-where-same-bnode-g3-post.ttl"
+          },
+          "label": "http://example.org/g3"
+        }
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/basic-update/manifest#insert-where-same-bnode2",
+      "@type": "mf:UpdateEvaluationTest",
+      "name": "INSERTing the same bnode with two INSERT WHERE statement within one request is NOT the same bnode even if both WHERE clauses have the empty solution mapping as the only solution.",
+      "comment": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2012OctDec/0001.html, this can be viewed as a further variation of :insert-05a",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://www.w3.org/2009/sparql/meeting/2012-12-11#resolution_5"
+      },
+      "action": {
+        "http://www.w3.org/2009/sparql/tests/test-update#request": {
+          "@id": "insert-where-same-bnode2.ru"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-where-same-bnode-pre.ttl"
+        }
+      },
+      "result": {
+        "http://www.w3.org/2009/sparql/tests/test-update#data": {
+          "@id": "insert-where-same-bnode-pre.ttl"
+        },
+        "http://www.w3.org/2009/sparql/tests/test-update#graphData": {
+          "http://www.w3.org/2009/sparql/tests/test-update#graph": {
+            "@id": "insert-where-same-bnode-g3-post.ttl"
+          },
+          "label": "http://example.org/g3"
+        }
+      }
+    }
+  ]
+}
