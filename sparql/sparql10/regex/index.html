@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang='en' prefix='mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest# qt:     http://www.w3.org/2001/sw/DataAccess/tests/test-query# dawgt:   http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#'>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='manifest.ttl' rel='alternate' type='text/turtle'>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
+    <style>
+      body {background-image: none;}
+      dl.editor>dd {
+        margin: 0 0 0 40px;
+      }
+      dl.test-detail {
+        padding: 0.5em;
+      }
+      dl.test-detail>dt {
+        float: left;
+        clear: left;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dl.test-detail>dt:after {content: ": "}
+      dl.test-detail>dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+      dl.test-description>dt {margin-top: 2em;}
+      dd {margin-left: 0;}
+      dd code {display: inline;}
+      footer {text-align: center;}
+    </style>
+    <title>
+      REGEX
+    </title>
+    <style>
+      em.rfc2119 {
+        text-transform: lowercase;
+        font-variant:   small-caps;
+        font-style:     normal;
+        color:          #900;
+      }
+      a.testlink {
+        color: inherit;
+        text-decoration: none;
+      }
+      a.testlink:hover {
+        text-decoration: underline;
+      }
+      .warning {color: orange;}
+      .error {color: red;}
+    </style>
+  </head>
+  <body resource='./' typeof='mf:Manifest'>
+    <p>
+      <a href='http://www.w3.org/'>
+        <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
+      </a>
+    </p>
+    <h1 property='rdfs:label'>REGEX</h1>
+    <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    <hr title='Separator for header'>
+    <div>
+      <h2 id='abstract'>Abstract</h2>
+      <p property='rdfs:comment'>
+        SPARQL regex test cases
+      </p>
+      <p>This page describes W3C SPARQL Working Group's SPARQL 1.0 test suite.</p>
+      <h3 id='contributing-tests'>Contributing Tests</h3>
+      <p>The test manifests and entries are built automatically from <a href="manifest.ttl">manifest.ttl</a> using a Rake task. Tests may be contributed via pull request to <a href="https://github.com/w3c/rdf-tests">https://github.com/w3c/rdf-tests</a> with suitable changes to the <a href="manifest.ttl">manifest.ttl</a> and referenced files.</p>
+      <h3 id='distribution'>Distribution</h3>
+      <p>Distributed under both the <a href="http://www.w3.org/Consortium/Legal/2008/04-testsuite-license">W3C Test Suite License</a> and the <a href="http://www.w3.org/Consortium/Legal/2008/03-bsd-license">W3C 3-clause BSD License</a>. To contribute to a W3C Test Suite, see the <a href="http://www.w3.org/2004/10/27-testcases">policies and contribution forms</a>.</p>
+      <h3 id='disclaimer'>Disclaimer</h3>
+      <p>UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+        COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+    </div>
+    <div>
+      <h2>
+        Test Descriptions
+      </h2>
+      <dl class='test-description'>
+        <dt id='dawg-regex-001'>
+          <a class='testlink' href='#dawg-regex-001'>
+            dawg-regex-001:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-001' property='mf:name'>regex-query-001</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-001' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Simple unanchored match test</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html</a>
+            </dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-query-001.rq' property='qt:query'>regex-query-001.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-01.ttl' property='qt:data'>regex-data-01.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-result-001.ttl' property='mf:result'>regex-result-001.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='dawg-regex-002'>
+          <a class='testlink' href='#dawg-regex-002'>
+            dawg-regex-002:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-002' property='mf:name'>regex-query-002</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-002' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Case insensitive unanchored match test</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html</a>
+            </dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-query-002.rq' property='qt:query'>regex-query-002.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-01.ttl' property='qt:data'>regex-data-01.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-result-002.ttl' property='mf:result'>regex-result-002.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='dawg-regex-003'>
+          <a class='testlink' href='#dawg-regex-003'>
+            dawg-regex-003:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-003' property='mf:name'>regex-query-003</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-003' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Use/mention test</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html</a>
+            </dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-query-003.rq' property='qt:query'>regex-query-003.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-01.ttl' property='qt:data'>regex-data-01.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-result-003.ttl' property='mf:result'>regex-result-003.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='dawg-regex-004'>
+          <a class='testlink' href='#dawg-regex-004'>
+            dawg-regex-004:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-004' property='mf:name'>regex-query-004</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#dawg-regex-004' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>str()+URI test</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Approved'>dawgt:Approved</dd>
+            <dt>approvedBy</dt>
+            <dd>
+              <a href='http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html' property='dawgt:approvedBy'>http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0029.html</a>
+            </dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-query-004.rq' property='qt:query'>regex-query-004.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-01.ttl' property='qt:data'>regex-data-01.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-result-004.ttl' property='mf:result'>regex-result-004.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-optional'>
+          <a class='testlink' href='#regex-quantifier-optional'>
+            regex-quantifier-optional:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-optional' property='mf:name'>REGEX with an ? quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-optional' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-optional.rq' property='qt:query'>regex-quantifier-optional.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-optional.srx' property='mf:result'>regex-quantifier-optional.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-zero-or-more'>
+          <a class='testlink' href='#regex-quantifier-zero-or-more'>
+            regex-quantifier-zero-or-more:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-zero-or-more' property='mf:name'>REGEX with an * quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-zero-or-more' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-zero-or-more.rq' property='qt:query'>regex-quantifier-zero-or-more.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-zero-or-more.srx' property='mf:result'>regex-quantifier-zero-or-more.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-one-or-more'>
+          <a class='testlink' href='#regex-quantifier-one-or-more'>
+            regex-quantifier-one-or-more:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-one-or-more' property='mf:name'>REGEX with a + quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-one-or-more' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-one-or-more.rq' property='qt:query'>regex-quantifier-one-or-more.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-one-or-more.srx' property='mf:result'>regex-quantifier-one-or-more.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-counted-exact'>
+          <a class='testlink' href='#regex-quantifier-counted-exact'>
+            regex-quantifier-counted-exact:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-exact' property='mf:name'>REGEX with an {2} quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-exact' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-counted-exact.rq' property='qt:query'>regex-quantifier-counted-exact.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-counted-exact.srx' property='mf:result'>regex-quantifier-counted-exact.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-counted-lower-bound'>
+          <a class='testlink' href='#regex-quantifier-counted-lower-bound'>
+            regex-quantifier-counted-lower-bound:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-bound' property='mf:name'>REGEX with an {,2} quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-bound' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-counted-lower-bound.rq' property='qt:query'>regex-quantifier-counted-lower-bound.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-counted-lower-bound.srx' property='mf:result'>regex-quantifier-counted-lower-bound.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-quantifier-counted-lower-upper-bounds'>
+          <a class='testlink' href='#regex-quantifier-counted-lower-upper-bounds'>
+            regex-quantifier-counted-lower-upper-bounds:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-upper-bounds' property='mf:name'>REGEX with an {2,} quantifier</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-quantifier-counted-lower-upper-bounds' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-quantifier-counted-lower-upper-bounds.rq' property='qt:query'>regex-quantifier-counted-lower-upper-bounds.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-quantifier-counted-lower-upper-bounds.srx' property='mf:result'>regex-quantifier-counted-lower-upper-bounds.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-dot'>
+          <a class='testlink' href='#regex-dot'>
+            regex-dot:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot' property='mf:name'>REGEX with an . operator</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-dot.rq' property='qt:query'>regex-dot.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-dot.srx' property='mf:result'>regex-dot.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-dot-all'>
+          <a class='testlink' href='#regex-dot-all'>
+            regex-dot-all:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot-all' property='mf:name'>REGEX with an . operator and the s option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-dot-all' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-dot-all.rq' property='qt:query'>regex-dot-all.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-dot-all.srx' property='mf:result'>regex-dot-all.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-case-insensitive'>
+          <a class='testlink' href='#regex-case-insensitive'>
+            regex-case-insensitive:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-case-insensitive' property='mf:name'>REGEX with the i option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-case-insensitive' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-case-insensitive.rq' property='qt:query'>regex-case-insensitive.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-case-insensitive.srx' property='mf:result'>regex-case-insensitive.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-no-metacharacters'>
+          <a class='testlink' href='#regex-no-metacharacters'>
+            regex-no-metacharacters:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters' property='mf:name'>REGEX with the q option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-no-metacharacters.rq' property='qt:query'>regex-no-metacharacters.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-no-metacharacters.srx' property='mf:result'>regex-no-metacharacters.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-no-metacharacters-case-insensitive'>
+          <a class='testlink' href='#regex-no-metacharacters-case-insensitive'>
+            regex-no-metacharacters-case-insensitive:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters-case-insensitive' property='mf:name'>REGEX with the iq option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-no-metacharacters-case-insensitive' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-no-metacharacters-case-insensitive.rq' property='qt:query'>regex-no-metacharacters-case-insensitive.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-no-metacharacters.srx' property='mf:result'>regex-no-metacharacters.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-start-end'>
+          <a class='testlink' href='#regex-start-end'>
+            regex-start-end:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end' property='mf:name'>REGEX with ^ and $</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-start-end.rq' property='qt:query'>regex-start-end.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-start-end.srx' property='mf:result'>regex-start-end.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-start-end-multiline'>
+          <a class='testlink' href='#regex-start-end-multiline'>
+            regex-start-end-multiline:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end-multiline' property='mf:name'>REGEX with ^ and $ and m option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-start-end-multiline' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-start-end-multiline.rq' property='qt:query'>regex-start-end-multiline.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-start-end-multiline.srx' property='mf:result'>regex-start-end-multiline.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-char-class-expression'>
+          <a class='testlink' href='#regex-char-class-expression'>
+            regex-char-class-expression:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-char-class-expression' property='mf:name'>REGEX with [] expression</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-char-class-expression' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-char-class-expression.rq' property='qt:query'>regex-char-class-expression.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-char-class-expression.srx' property='mf:result'>regex-char-class-expression.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-negative-char-class-expression'>
+          <a class='testlink' href='#regex-negative-char-class-expression'>
+            regex-negative-char-class-expression:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-negative-char-class-expression' property='mf:name'>REGEX with a [^] expression</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-negative-char-class-expression' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-negative-char-class-expression.rq' property='qt:query'>regex-negative-char-class-expression.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-negative-char-class-expression.srx' property='mf:result'>regex-negative-char-class-expression.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-ignore-whitespaces'>
+          <a class='testlink' href='#regex-ignore-whitespaces'>
+            regex-ignore-whitespaces:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces' property='mf:name'>REGEX with the ignore spacing (x) option</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-ignore-whitespaces.rq' property='qt:query'>regex-ignore-whitespaces.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-ignore-whitespaces.srx' property='mf:result'>regex-ignore-whitespaces.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='regex-ignore-whitespaces-class-expression'>
+          <a class='testlink' href='#regex-ignore-whitespaces-class-expression'>
+            regex-ignore-whitespaces-class-expression:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces-class-expression' property='mf:name'>REGEX with the ignore spacing (x) option with class expression</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/regex/manifest#regex-ignore-whitespaces-class-expression' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='regex-ignore-whitespaces-class-expression.rq' property='qt:query'>regex-ignore-whitespaces-class-expression.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='regex-data-quantifiers.ttl' property='qt:data'>regex-data-quantifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='regex-ignore-whitespaces-class-expression.srx' property='mf:result'>regex-ignore-whitespaces-class-expression.srx</a>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+    <footer>
+      <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+    </footer>
+  </body>
+</html>
