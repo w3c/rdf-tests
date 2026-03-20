@@ -37,6 +37,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git merge --strategy-option theirs origin/main
+          git push
           bundle install
           bundle exec rake
           git add '**/*.html'
