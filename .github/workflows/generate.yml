@@ -16,8 +16,13 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4.3
-      - run: bundle install
-      - run: bundle exec rake
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          bundle install
+          bundle exec rake
+          git add --force '**/*.html'
+          git diff-index --quiet HEAD || git commit -m "Regenerate website" --dry-run
 
   build_and_push:
     name: Generate reports using Ruby and push them to the gh-pages branch
@@ -40,6 +45,6 @@ jobs:
           git push
           bundle install
           bundle exec rake
-          git add '**/*.html'
+          git add --force '**/*.html'
           git diff-index --quiet HEAD || git commit -m "Regenerate website"
           git push
