@@ -49,19 +49,19 @@
         mf:name    "query via URL-encoded POST" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Type: application/x-www-form-urlencoded
     Content-Length: 18
-
+    
     query=ASK%20%7B%7D
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -72,15 +72,15 @@
         mf:name    "GET query with protocol-specified default graph" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -91,7 +91,7 @@
         mf:name    "POST query with protocol-specified default graphs" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 123
@@ -101,10 +101,10 @@
     
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -115,7 +115,7 @@
         mf:name    "POST query with protocol-specified named graphs" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 147
@@ -125,10 +125,10 @@
     
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -139,15 +139,15 @@
         mf:name    "GET query with protocol-specified named graphs" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -158,7 +158,7 @@
         mf:name    "query with protocol-specified dataset (both named and default graphs)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 209
@@ -171,10 +171,10 @@
     }
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -185,7 +185,7 @@
         mf:name    "query specifying dataset in both query string and protocol; test for use of protocol-specified dataset" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 200
@@ -194,10 +194,10 @@
     ASK FROM <http://kasei.us/2009/09/sparql/data/data3.rdf> { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -208,15 +208,15 @@
         mf:name    "query via GET" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -227,7 +227,7 @@
         mf:name    "query appropriate content type (expect one of: XML, JSON, CSV, TSV)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Length: 23
@@ -236,7 +236,7 @@
     SELECT (1 AS ?value) {}
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, text/csv, or any other valid media type for tabular SPARQL results
         """ ;
@@ -248,7 +248,7 @@
         mf:name    "query appropriate content type (expect one of: XML, JSON)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Length: 5
@@ -257,7 +257,7 @@
     ASK {}
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
         """ ;
@@ -269,7 +269,7 @@
         mf:name    "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Length: 30
@@ -278,7 +278,7 @@
     DESCRIBE <http://example.org/>
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results
         """ ;
@@ -290,7 +290,7 @@
         mf:name    "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Length: 32
@@ -299,7 +299,7 @@
     CONSTRUCT { <s> <p> 1 } WHERE {}
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results
         """ ;
@@ -311,7 +311,7 @@
         mf:name    "update with protocol-specified default graph" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1
     Host: www.example
     Content-Length: 399
@@ -335,13 +335,13 @@
     }
     
 #### Response
-
+    
     2xx or 3xx response
 
 followed by
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Accept: application/sparql-results+xml
@@ -355,10 +355,10 @@ followed by
     }
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -369,7 +369,7 @@ followed by
         mf:name    "update with protocol-specified default graphs" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 645
@@ -393,13 +393,13 @@ followed by
     }
     
 #### Response
-
+    
     2xx or 3xx response
 
 followed by
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Accept: application/sparql-results+xml
@@ -419,10 +419,10 @@ followed by
     }
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -433,7 +433,7 @@ followed by
         mf:name    "update with protocol-specified named graphs" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 676
@@ -459,13 +459,13 @@ followed by
     }
     
 #### Response
-
+    
     2xx or 3xx response
 
 followed by
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Accept: application/sparql-results+xml
@@ -485,10 +485,10 @@ followed by
     }
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -499,7 +499,7 @@ followed by
         mf:name    "update with protocol-specified dataset (both named and default graphs)" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
     Content-Length: 779
@@ -531,13 +531,13 @@ followed by
     }
     
 #### Response
-
+    
     2xx or 3xx response
 
 followed by
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Accept: application/sparql-results+xml
@@ -557,10 +557,10 @@ followed by
     }
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
-    
+        
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -571,7 +571,7 @@ followed by
         mf:name    "update via URL-encoded POST" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 16
@@ -580,7 +580,7 @@ followed by
     update=CLEAR+ALL
     
 #### Response
-
+    
     2xx or 3xx response
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -591,7 +591,7 @@ followed by
         mf:name    "update via POST directly" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 9
@@ -600,7 +600,7 @@ followed by
     CLEAR ALL
     
 #### Response
-
+    
     2xx or 3xx response
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -611,7 +611,7 @@ followed by
         mf:name    "test for service-defined BASE URI (\"which MAY be the service endpoint\")" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-update
@@ -621,11 +621,11 @@ followed by
     INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }
     
 #### Response
-
+    
     2xx or 3xx response
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-query
@@ -639,7 +639,7 @@ followed by
     }
 
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml
     
@@ -653,7 +653,7 @@ followed by
         mf:name    "query via POST directly" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 6
@@ -662,10 +662,10 @@ followed by
     ASK {}
     
 #### Response
-
+    
     2xx or 3xx response
     Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
+    
     true
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -676,14 +676,14 @@ followed by
         mf:name    "invoke query operation with a method other than GET or POST" ;
         rdfs:comment """
 #### Request
-
+    
     PUT /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
     Content-Length: 0
     Content-Type: application/x-www-form-urlencoded
     
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -694,11 +694,11 @@ followed by
         mf:name    "invoke query operation with more than one query string" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D HTTP/1.1
-
+    
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -709,7 +709,7 @@ followed by
         mf:name    "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: text/plain
@@ -718,7 +718,7 @@ followed by
     ASK {}
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -729,7 +729,7 @@ followed by
         mf:name    "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 18
@@ -737,7 +737,7 @@ followed by
     query=ASK%20%7B%7D
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -748,7 +748,7 @@ followed by
         mf:name    "invoke query operation with SPARQL body, but without application/sparql-query media type" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 6
@@ -756,7 +756,7 @@ followed by
     ASK {}
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -769,7 +769,7 @@ followed by
 (Content body encoded in utf-16, with a preceding BOM.)
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-query; charset=UTF-16
@@ -778,7 +778,7 @@ followed by
     ASK {}
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -789,11 +789,11 @@ followed by
         mf:name    "invoke query operation with invalid query syntax (4XX result)" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?query=ASK%20%7B HTTP/1.1
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -804,11 +804,11 @@ followed by
         mf:name    "invoke update operation with GET" ;
         rdfs:comment """
 #### Request
-
+    
     GET /sparql/?update=CLEAR%20ALL HTTP/1.1
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -819,7 +819,7 @@ followed by
         mf:name    "invoke update operation with more than one update string" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/x-www-form-urlencoded
@@ -828,7 +828,7 @@ followed by
     update=CLEAR%20NAMED&update=CLEAR%20DEFAULT
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -839,7 +839,7 @@ followed by
         mf:name    "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: text/plain
@@ -848,7 +848,7 @@ followed by
     CLEAR NAMED
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -859,7 +859,7 @@ followed by
         mf:name    "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Length: 20
@@ -867,7 +867,7 @@ followed by
     update=CLEAR%20NAMED
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -880,7 +880,7 @@ followed by
 (Content body encoded in utf-16, with a preceding BOM.)
 
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-update; charset=UTF-16
@@ -889,7 +889,7 @@ followed by
     CLEAR NAMED
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -900,7 +900,7 @@ followed by
         mf:name    "invoke update operation with invalid update syntax" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/x-www-form-urlencoded
@@ -909,7 +909,7 @@ followed by
     update=CLEAR%20XYZ
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
@@ -920,7 +920,7 @@ followed by
         mf:name    "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause" ;
         rdfs:comment """
 #### Request
-
+    
     POST /sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-update
@@ -935,7 +935,7 @@ followed by
     }
 
 #### Response
-
+    
     4xx
         """ ;
         dawgt:approval dawgt:Approved ;
