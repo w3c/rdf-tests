@@ -92,12 +92,13 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 337
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 123
+    Content-Type: application/sparql-query
     
-    query=ASK+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+%3Ftype+.+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+%3Ftype+.+%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
+    ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type . <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type . }
+    
     
 #### Response
 
@@ -115,12 +116,13 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 369
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 147
+    Content-Type: application/sparql-query
     
-    query=ASK+%7B+GRAPH+%3Fg1+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+%3Ftype+%7D+GRAPH+%3Fg2+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+%3Ftype+%7D+%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
+    ASK { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }
+    
     
 #### Response
 
@@ -157,12 +159,16 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 547
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 209
+    Content-Type: application/sparql-query
     
-    query=ASK+%7B%0A%09%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+a+%3Ftype%0A%09GRAPH+%3Fg1+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+%3Ftype+%7D%0A%09GRAPH+%3Fg2+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+%3Ftype+%7D%0A%7D%0A&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
+    ASK {
+      <http://kasei.us/2009/09/sparql/data/data3.rdf> a ?type
+      GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type }
+      GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type }
+    }
     
 #### Response
 
@@ -180,12 +186,12 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 442
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 200
+    Content-Type: application/sparql-query
     
-    query=ASK+FROM+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+%7B+GRAPH+%3Fg1+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+%3Ftype+%7D+GRAPH+%3Fg2+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+%3Ftype+%7D+%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf
+    ASK FROM <http://kasei.us/2009/09/sparql/data/data3.rdf> { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }
     
 #### Response
 
@@ -222,12 +228,12 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 115
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 23
+    Content-Type: application/sparql-query
     
-    query=SELECT+(1+AS+%3Fvalue)+%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf
+    SELECT (1 AS ?value) {}
     
 #### Response
 
@@ -243,12 +249,12 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 96
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 5
+    Content-Type: application/sparql-query
     
-    query=ASK+%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf
+    ASK {}
     
 #### Response
 
@@ -264,12 +270,12 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 128
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 30
+    Content-Type: application/sparql-query
     
-    query=DESCRIBE+%3Chttp%3A%2F%2Fexample.org%2F%3E&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf
+    DESCRIBE <http://example.org/>
     
 #### Response
 
@@ -285,12 +291,12 @@
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 134
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 32
+    Content-Type: application/sparql-query
     
-    query=CONSTRUCT+%7B+%3Cs%3E+%3Cp%3E+1+%7D+WHERE+%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf
+    CONSTRUCT { <s> <p> 1 } WHERE {}
     
 #### Response
 
@@ -308,10 +314,25 @@
 
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 554
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 399
+    Content-Type: application/sparql-update
     
-    update=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ACLEAR+ALL+%3B%0AINSERT+DATA+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+%7B%0A%09%09%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+foaf%3ADocument%0A%09%7D%0A%7D+%3B%0AINSERT+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-test%2F%3E+%7B%0A%09%09%3Fs+a+dc%3ABibliographicResource%0A%09%7D%0A%7D%0AWHERE+%7B%0A%09%3Fs+a+foaf%3ADocument%0A%7D%0A
+    PREFIX dc: <http://purl.org/dc/terms/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    CLEAR ALL ;
+    INSERT DATA {
+        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> {
+            <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document
+        }
+    } ;
+    INSERT {
+        GRAPH <http://example.org/protocol-update-dataset-test/> {
+            ?s a dc:BibliographicResource
+        }
+    }
+    WHERE {
+        ?s a foaf:Document
+    }
     
 #### Response
 
@@ -351,10 +372,25 @@ followed by
 
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 893
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 645
+    Content-Type: application/sparql-update
     
-    update=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP+ALL+%3B%0AINSERT+DATA+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+a+foaf%3ADocument+%7D%0A%7D+%3B%0AINSERT+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-graphs-test%2F%3E+%7B%0A%09%09%3Fs+a+dc%3ABibliographicResource%0A%09%7D%0A%7D%0AWHERE+%7B%0A%09%3Fs+a+foaf%3ADocument%0A%7D%0A
+    PREFIX dc: <http://purl.org/dc/terms/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    DROP ALL ;
+    INSERT DATA {
+        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }
+    } ;
+    INSERT {
+        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {
+            ?s a dc:BibliographicResource
+        }
+    }
+    WHERE {
+        ?s a foaf:Document
+    }
     
 #### Response
 
@@ -400,10 +436,27 @@ followed by
 
     POST /sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 931
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 676
+    Content-Type: application/sparql-update
     
-    update=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP+ALL+%3B%0AINSERT+DATA+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+a+foaf%3ADocument+%7D%0A%7D+%3B%0AINSERT+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-named-graphs-test%2F%3E+%7B%0A%09%09%3Fs+a+dc%3ABibliographicResource%0A%09%7D%0A%7D%0AWHERE+%7B%0A%09GRAPH+%3Fg+%7B%0A%09%09%3Fs+a+foaf%3ADocument%0A%09%7D%0A%7D%0A
+    PREFIX dc: <http://purl.org/dc/terms/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    DROP ALL ;
+    INSERT DATA {
+        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }
+    } ;
+    INSERT {
+        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {
+            ?s a dc:BibliographicResource
+        }
+    }
+    WHERE {
+        GRAPH ?g {
+            ?s a foaf:Document
+        }
+    }
     
 #### Response
 
@@ -449,10 +502,33 @@ followed by
 
     POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
     Host: www.example
-    Content-Length: 1071
-    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 779
+    Content-Type: application/sparql-update
     
-    update=PREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0ADROP+ALL+%3B%0AINSERT+DATA+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E+a+foaf%3ADocument+%7D%0A%09GRAPH+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+%7B+%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf%3E+a+foaf%3ADocument+%7D%0A%7D+%3B%0AINSERT+%7B%0A%09GRAPH+%3Chttp%3A%2F%2Fexample.org%2Fprotocol-update-dataset-full-test%2F%3E+%7B%0A%09%09%3Fs+%3Chttp%3A%2F%2Fexample.org%2Fin%3E+%3Fin%0A%09%7D%0A%7D%0AWHERE+%7B%0A%09%7B%0A%09%09GRAPH+%3Fg+%7B+%3Fs+a+foaf%3ADocument+%7D%0A%09%09BIND(%3Fg+AS+%3Fin)%0A%09%7D%0A%09UNION%0A%09%7B%0A%09%09%3Fs+a+foaf%3ADocument+.%0A%09%09BIND(%22default%22+AS+%3Fin)%0A%09%7D%0A%7D%0A
+    PREFIX dc: <http://purl.org/dc/terms/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    DROP ALL ;
+    INSERT DATA {
+        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }
+        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }
+    } ;
+    INSERT {
+        GRAPH <http://example.org/protocol-update-dataset-full-test/> {
+            ?s <http://example.org/in> ?in
+        }
+    }
+    WHERE {
+        {
+            GRAPH ?g { ?s a foaf:Document }
+            BIND(?g AS ?in)
+        }
+        UNION
+        {
+            ?s a foaf:Document .
+            BIND("default" AS ?in)
+        }
+    }
     
 #### Response
 
@@ -845,12 +921,18 @@ followed by
         rdfs:comment """
 #### Request
 
-    POST /sparql/ HTTP/1.1
+    POST /sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople HTTP/1.1
     Host: www.example
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 418
+    Content-Type: application/sparql-update
+    Content-Length: 203
 
-    using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople&update=%09%09PREFIX%20foaf%3A%20%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0A%09%09WITH%20%3Chttp%3A%2F%2Fexample%2Faddresses%3E%0A%09%09DELETE%20%7B%20%3Fperson%20foaf%3AgivenName%20%27Bill%27%20%7D%0A%09%09INSERT%20%7B%20%3Fperson%20foaf%3AgivenName%20%27William%27%20%7D%0A%09%09WHERE%20%7B%0A%09%09%09%3Fperson%20foaf%3AgivenName%20%27Bill%27%0A%09%09%7D%0A
+    PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+    WITH <http://example/addresses>
+    DELETE { ?person foaf:givenName 'Bill' }
+    INSERT { ?person foaf:givenName 'William' }
+    WHERE {
+        ?person foaf:givenName 'Bill'
+    }
 
 #### Response
 
