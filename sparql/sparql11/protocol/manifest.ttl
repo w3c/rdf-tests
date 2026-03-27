@@ -4,8 +4,10 @@
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
-@prefix cnt: <http://www.w3.org/2011/content#> .
-@prefix ht: <http://www.w3.org/2011/http#> .
+@prefix cnt:    <http://www.w3.org/2011/content#> .
+@prefix ht:     <http://www.w3.org/2011/http#> .
+@prefix sd:     <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
 
 <>  rdf:type mf:Manifest ;
     rdfs:label "SPARQL Protocol" ;
@@ -100,6 +102,8 @@
 
 :query_dataset_default_graphs_get rdf:type mf:ProtocolTest ;
         mf:name    "GET query with protocol-specified default graph" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
@@ -136,6 +140,8 @@
 
 :query_dataset_default_graphs_post rdf:type mf:ProtocolTest ;
         mf:name    "POST query with protocol-specified default graphs" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
@@ -188,6 +194,8 @@
 
 :query_dataset_named_graphs_post rdf:type mf:ProtocolTest ;
         mf:name    "POST query with protocol-specified named graphs" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
@@ -240,6 +248,8 @@
 
 :query_dataset_named_graphs_get rdf:type mf:ProtocolTest ;
         mf:name    "GET query with protocol-specified named graphs" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
@@ -276,6 +286,9 @@
 
 :query_dataset_full rdf:type mf:ProtocolTest ;
         mf:name    "query with protocol-specified dataset (both named and default graphs)" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
+        ut:graphData [ ut:graph <data3.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data3.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
@@ -335,6 +348,9 @@
 
 :query_multiple_dataset rdf:type mf:ProtocolTest ;
         mf:name    "query specifying dataset in both query string and protocol; test for use of protocol-specified dataset" ;
+        ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
+        ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
+        ut:graphData [ ut:graph <data3.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data3.rdf" ] ;
         mf:action [
             a ht:Request ;
             ht:connectionAuthority "www.example" ;
