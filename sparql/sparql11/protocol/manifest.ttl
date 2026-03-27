@@ -52,7 +52,7 @@
 :query_post_form rdf:type mf:ProtocolTest ;
         mf:name    "query via URL-encoded POST" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -105,7 +105,7 @@
         ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -143,7 +143,7 @@
         ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -197,7 +197,7 @@
         ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -251,7 +251,7 @@
         ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -290,7 +290,7 @@
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         ut:graphData [ ut:graph <data3.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data3.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -352,7 +352,7 @@
         ut:graphData [ ut:graph <data2.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data2.rdf" ] ;
         ut:graphData [ ut:graph <data3.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data3.rdf" ] ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -403,7 +403,7 @@
 :query_get rdf:type mf:ProtocolTest ;
         mf:name    "query via GET" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -439,7 +439,7 @@
 :query_content_type_select rdf:type mf:ProtocolTest ;
         mf:name    "query appropriate content type (expect one of: XML, JSON, CSV, TSV)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -487,7 +487,7 @@
 :query_content_type_ask rdf:type mf:ProtocolTest ;
         mf:name    "query appropriate content type (expect one of: XML, JSON)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -535,7 +535,7 @@
 :query_content_type_describe rdf:type mf:ProtocolTest ;
         mf:name    "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -583,7 +583,7 @@
 :query_content_type_construct rdf:type mf:ProtocolTest ;
         mf:name    "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -631,7 +631,7 @@
 :update_dataset_default_graph rdf:type mf:ProtocolTest ;
         mf:name    "update with protocol-specified default graph" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -756,7 +756,7 @@ followed by
 :update_dataset_default_graphs rdf:type mf:ProtocolTest ;
         mf:name    "update with protocol-specified default graphs" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -893,7 +893,7 @@ followed by
 :update_dataset_named_graphs rdf:type mf:ProtocolTest ;
         mf:name    "update with protocol-specified named graphs" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1034,7 +1034,7 @@ followed by
 :update_dataset_full rdf:type mf:ProtocolTest ;
         mf:name    "update with protocol-specified dataset (both named and default graphs)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1187,7 +1187,7 @@ followed by
 :update_post_form rdf:type mf:ProtocolTest ;
         mf:name    "update via URL-encoded POST" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1233,7 +1233,7 @@ followed by
 :update_post_direct rdf:type mf:ProtocolTest ;
         mf:name    "update via POST directly" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1279,7 +1279,7 @@ followed by
 :update_base_uri rdf:type mf:ProtocolTest ;
         mf:name    "test for service-defined BASE URI (\"which MAY be the service endpoint\")" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1376,7 +1376,7 @@ followed by
 :query_post_direct rdf:type mf:ProtocolTest ;
         mf:name    "query via POST directly" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1427,7 +1427,7 @@ followed by
 :bad_query_method rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with a method other than GET or POST" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1466,7 +1466,7 @@ followed by
 :bad_multiple_queries rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with more than one query string" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1496,7 +1496,7 @@ followed by
 :bad_query_wrong_media_type rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1542,7 +1542,7 @@ followed by
 :bad_query_missing_form_type rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1581,7 +1581,7 @@ followed by
 :bad_query_missing_direct_type rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with SPARQL body, but without application/sparql-query media type" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1620,7 +1620,7 @@ followed by
 :bad_query_non_utf8 rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1668,7 +1668,7 @@ followed by
 :bad_query_syntax rdf:type mf:ProtocolTest ;
         mf:name    "invoke query operation with invalid query syntax (4XX result)" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1698,7 +1698,7 @@ followed by
 :bad_update_get rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with GET" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1728,7 +1728,7 @@ followed by
 :bad_multiple_updates rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with more than one update string" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1774,7 +1774,7 @@ followed by
 :bad_update_wrong_media_type rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1820,7 +1820,7 @@ followed by
 :bad_update_missing_form_type rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1859,7 +1859,7 @@ followed by
 :bad_update_non_utf8 rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with direct POST, but with a non-UTF8 encoding" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1907,7 +1907,7 @@ followed by
 :bad_update_syntax rdf:type mf:ProtocolTest ;
         mf:name    "invoke update operation with invalid update syntax" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
@@ -1953,7 +1953,7 @@ followed by
 :bad_update_dataset_conflict rdf:type mf:ProtocolTest ;
         mf:name    "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause" ;
         mf:action [
-            a ht:Request ;
+            a ht:Connection ;
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
