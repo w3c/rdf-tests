@@ -1287,7 +1287,7 @@ followed by
                     ht:body [
                         a cnt:ContentAsText ;
                         cnt:characterEncoding "UTF-8" ;
-                        cnt:chars """CLEAR GRAPH <http://example.org/protocol-base-test/> ;
+                        cnt:chars """CLEAR SILENT GRAPH <http://example.org/protocol-base-test/> ;
 INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }"""
                 ] ;
                 ht:headers ([
