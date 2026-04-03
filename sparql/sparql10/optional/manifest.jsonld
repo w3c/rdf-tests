@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "__GENERATED__": "from:_manifest.ttl__do_not_edit_directly",
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/optional/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "OPTIONAL",
+  "comment": "OPTIONAL test cases",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-001",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "One optional clause",
+      "comment": "One optional clause",
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-1.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "result-opt-1.ttl",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0006"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-002",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Two optional clauses",
+      "comment": "One optional clause",
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-2.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "result-opt-2.ttl",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0006"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-union-001",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Union is not optional",
+      "comment": "Union is not optional",
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-3.rq"
+        },
+        "mq:data": {
+          "@id": "data.ttl"
+        }
+      },
+      "result": "result-opt-3.ttl",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/0006"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-complex-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Complex optional semantics: 1",
+      "comment": "Complex optional: LeftJoin(LeftJoin(BGP(..),{..}),Join(BGP(..),Union(..,..)))",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-complex-1.rq"
+        },
+        "mq:data": {
+          "@id": "complex-data-1.ttl"
+        }
+      },
+      "result": "result-opt-complex-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-complex-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Complex optional semantics: 2",
+      "comment": "Complex optional: LeftJoin(Join(BGP(..),Graph(var,{..})),Union(..,..))",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-complex-2.rq"
+        },
+        "mq:graphData": {
+          "@id": "complex-data-1.ttl"
+        },
+        "mq:data": {
+          "@id": "complex-data-2.ttl"
+        }
+      },
+      "result": "result-opt-complex-2.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-complex-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Complex optional semantics: 3",
+      "comment": "Complex optional: LeftJoin(Join(BGP(..),Graph(var,{..})),LeftJoin(BGP(..),{..}))",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-complex-3.rq"
+        },
+        "mq:graphData": {
+          "@id": "complex-data-1.ttl"
+        },
+        "mq:data": {
+          "@id": "complex-data-2.ttl"
+        }
+      },
+      "result": "result-opt-complex-3.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/optional/manifest#dawg-optional-complex-4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Complex optional semantics: 4",
+      "comment": "Complex optional: LeftJoin(Join(BGP(..),Union(..,..)),Join(BGP(..),Graph(varOrIRI,{..})))",
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval": {
+        "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved"
+      },
+      "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approvedBy": {
+        "@id": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html"
+      },
+      "action": {
+        "mq:query": {
+          "@id": "q-opt-complex-4.rq"
+        },
+        "mq:graphData": {
+          "@id": "complex-data-1.ttl"
+        },
+        "mq:data": {
+          "@id": "complex-data-2.ttl"
+        }
+      },
+      "result": "result-opt-complex-4.ttl"
+    }
+  ]
+}
