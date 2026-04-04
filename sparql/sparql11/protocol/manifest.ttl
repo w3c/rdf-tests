@@ -11,6 +11,31 @@
 
 <>  rdf:type mf:Manifest ;
     rdfs:label "SPARQL Protocol" ;
+    rdfs:comment """
+    	This manifest encodes tests for the SPARQL Protocol. Each test record
+    	has one or more ht:Requests that must be run in order to produce the
+    	expected results.
+    	
+    	Expected results are encoded in the ht:Response using one of four new
+    	terms:
+    	
+    	* `mf:expectedStatus` - Expected HTTP status code (pointing to values
+    	      like `ht:StatusCode2xx`);
+    	* `mf:expectedBoolean` - Expected results for ASK queries.
+    	* `mf:expectedFormat` - Expected serialization format of the results;
+    	      the range here is one of the literals: `"boolean"`, `"tabular"`,
+    	      or `"RDF"`
+    	* `mf:expectation` - A textual description of the expected results for
+    	      the single test `update_base_uri` where modeling the expectation
+    	      would have been prohibitive.
+
+    	Each request has a ht:absolutePath value that starts with `/sparql/`.
+    	A program using this manifest data to run the tests must replace this
+    	value with whatever path prefix is appropriate for the endpoint being
+    	tested. Every ht:absolutePath value in this manifest starts with
+    	`/sparql/`, but and endpoint being tested may require different
+    	endpoints to be used for Query and Update requests.
+    """ ;
     mf:entries
     (
         :query_post_form
