@@ -356,7 +356,7 @@
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
-                    ht:absolutePath "/sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf" ;
+                    ht:absolutePath "/sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf" ;
                     ht:body [
                         a cnt:ContentAsText ;
                         cnt:characterEncoding "UTF-8" ;
