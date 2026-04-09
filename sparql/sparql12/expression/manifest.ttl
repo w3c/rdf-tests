@@ -25,7 +25,7 @@
 
 :triple rdf:type mf:QueryEvaluationTest ;
     mf:name "triple";
-    rdfs:comment    "EValuation of TRIPLE builtin" ;
+    rdfs:comment    "Evaluation of TRIPLE builtin" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <triple.rq> ] ;
