@@ -8,8 +8,9 @@
 <>  rdf:type mf:Manifest ;
     rdfs:label "Expression" ;
     mf:entries
-    ( 
+    (
     :not-not
+    :triple
     ) .
 
 
@@ -20,4 +21,13 @@
     mf:action
          [ qt:query  <not-not.rq> ] ;
     mf:result  <not-not.srx>
+    .
+
+:triple rdf:type mf:QueryEvaluationTest ;
+    mf:name "triple";
+    rdfs:comment    "EValuation of TRIPLE builtin" ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <triple.rq> ] ;
+    mf:result  <triple.srj>
     .
