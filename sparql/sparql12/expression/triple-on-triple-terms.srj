@@ -42,33 +42,29 @@
             },
             {
                 "subject": {
-                    "value": "http://example/a",
-                    "type": "uri"
+                    "value": {
+                        "subject": {
+                            "value": "http://example/x",
+                            "type": "uri"
+                        },
+                        "predicate": {
+                            "value": "http://example/y",
+                            "type": "uri"
+                        },
+                        "object": {
+                            "value": "http://example/z",
+                            "type": "uri"
+                        }
+                    },
+                    "type": "triple"
                 },
                 "predicate": {
                     "value": "http://example/b",
                     "type": "uri"
                 },
                 "object": {
-                    "value": "c",
-                    "type": "literal"
-                },
-                "triple": {
-                    "value": {
-                        "subject": {
-                            "value": "http://example/a",
-                            "type": "uri"
-                        },
-                        "predicate": {
-                            "value": "http://example/b",
-                            "type": "uri"
-                        },
-                        "object": {
-                            "value": "c",
-                            "type": "literal"
-                        }
-                    },
-                    "type": "triple"
+                    "value": "http://example/c",
+                    "type": "uri"
                 }
             },
             {
@@ -77,64 +73,25 @@
                     "type": "uri"
                 },
                 "predicate": {
-                    "value": "http://example/b",
-                    "type": "uri"
-                },
-                "object": {
-                    "value": "3",
-                    "type": "literal",
-                    "datatype": "http://www.w3.org/2001/XMLSchema#integer"
-                },
-                "triple": {
                     "value": {
                         "subject": {
-                            "value": "http://example/a",
+                            "value": "http://example/x",
                             "type": "uri"
                         },
                         "predicate": {
-                            "value": "http://example/b",
+                            "value": "http://example/y",
                             "type": "uri"
                         },
                         "object": {
-                            "value": "3",
-                            "type": "literal",
-                            "datatype": "http://www.w3.org/2001/XMLSchema#integer"
+                            "value": "http://example/z",
+                            "type": "uri"
                         }
                     },
                     "type": "triple"
-                }
-            },
-            {
-                "subject": {
-                    "value": "http://example/a",
-                    "type": "uri"
-                },
-                "predicate": {
-                    "value": "http://example/b",
-                    "type": "uri"
                 },
                 "object": {
-                    "value": "true",
-                    "type": "literal",
-                    "datatype": "http://www.w3.org/2001/XMLSchema#boolean"
-                },
-                "triple": {
-                    "value": {
-                        "subject": {
-                            "value": "http://example/a",
-                            "type": "uri"
-                        },
-                        "predicate": {
-                            "value": "http://example/b",
-                            "type": "uri"
-                        },
-                        "object": {
-                            "value": "true",
-                            "type": "literal",
-                            "datatype": "http://www.w3.org/2001/XMLSchema#boolean"
-                        }
-                    },
-                    "type": "triple"
+                    "value": "http://example/c",
+                    "type": "uri"
                 }
             },
             {
@@ -192,6 +149,60 @@
                         }
                     },
                     "type": "triple"
+                }
+            },
+            {
+                "subject": {
+                    "value": {
+                        "subject": {
+                            "value": "http://example/x",
+                            "type": "uri"
+                        },
+                        "predicate": {
+                            "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "type": "uri"
+                        },
+                        "object": {
+                            "value": "http://example/z",
+                            "type": "uri"
+                        }
+                    },
+                    "type": "triple"
+                },
+                "predicate": {
+                    "value": "http://example/b",
+                    "type": "uri"
+                },
+                "object": {
+                    "value": "http://example/c",
+                    "type": "uri"
+                }
+            },
+            {
+                "subject": {
+                    "value": "http://example/a",
+                    "type": "uri"
+                },
+                "predicate": {
+                    "value": {
+                        "subject": {
+                            "value": "http://example/x",
+                            "type": "uri"
+                        },
+                        "predicate": {
+                            "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "type": "uri"
+                        },
+                        "object": {
+                            "value": "http://example/z",
+                            "type": "uri"
+                        }
+                    },
+                    "type": "triple"
+                },
+                "object": {
+                    "value": "http://example/c",
+                    "type": "uri"
                 }
             },
             {
