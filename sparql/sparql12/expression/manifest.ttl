@@ -26,17 +26,8 @@
     mf:result  <not-not.srx>
     .
 
-:triple rdf:type mf:QueryEvaluationTest ;
-    mf:name "triple";
-    rdfs:comment    "Evaluation of TRIPLE builtin" ;
-    dawgt:approval dawgt:Proposed ;
-    mf:action
-         [ qt:query  <triple.rq> ] ;
-    mf:result  <triple.srj>
-    .
-
 :triple-on-literals rdf:type mf:QueryEvaluationTest ;
-    mf:name "triple";
+    mf:name "triple on literals";
     rdfs:comment    "Evaluation of TRIPLE builtin on literals" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
@@ -45,7 +36,7 @@
     .
 
 :triple-on-str-literals rdf:type mf:QueryEvaluationTest ;
-    mf:name "triple";
+    mf:name "triple on string literals";
     rdfs:comment    "Evaluation of TRIPLE builtin on string literals" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
@@ -54,7 +45,7 @@
     .
 
 :triple-on-triple-terms rdf:type mf:QueryEvaluationTest ;
-    mf:name "triple";
+    mf:name "triple on triple terms";
     rdfs:comment    "Evaluation of TRIPLE builtin on triple terms" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
@@ -63,7 +54,7 @@
     .
 
 :triple-on-undefs rdf:type mf:QueryEvaluationTest ;
-    mf:name "triple";
+    mf:name "triple on undefs";
     rdfs:comment    "Evaluation of TRIPLE builtin on UNDEFs" ;
     dawgt:approval dawgt:Proposed ;
     mf:action
