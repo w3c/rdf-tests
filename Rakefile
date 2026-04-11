@@ -127,27 +127,16 @@ MANIFESTS.each do |ttl|
   file jsonld => [ttl, frame_path] do
     puts "Generate #{jsonld}"
     frame = JSON.parse(File.read(frame_path))
-    ctx = {"__GENERATED__"=>"from:_manifest.ttl__do_not_edit_directly", "@base"=>base}
+    ctx = {"@base" => base}
     frame["@context"] = ctx.merge(frame["@context"]) # insert pseudo-comment and base at the top of the context
 
     RDF::Reader.open(ttl, base_uri: base) do |reader|
       out = JSON::LD::Writer.buffer(frame: frame, base_uri: base, simple_compact_iris: true) do |writer|
         writer << reader
       end
-      File.open(jsonld, "w") do |f|
-        f.write(out)
-      end
-    end
-  end
 
-  if template_path
-    CLOBBER.include(html)
-    desc "Build #{html}"
-    file html => [jsonld, template_path, 'test-map.json'] do
-      puts "Generate #{html}"
-      template, man = File.read(template_path), nil
-
-      man = JSON.parse(File.read(jsonld))
+      # We do some normalization
+      man = JSON.parse(out)
       if man.key?('@graph')
         Kernel.abort "Expected #{jsonld} to not have a single @graph entry"
       end
@@ -167,6 +156,24 @@ MANIFESTS.each do |ttl|
             entry.delete("mf:#{p}")
           end
         end
+      end
+
+      File.open(jsonld, "w") do |f|
+        f.write(JSON::LD::API.serializer(man))
+      end
+    end
+  end
+
+  if template_path
+    CLOBBER.include(html)
+    desc "Build #{html}"
+    file html => [jsonld, template_path, 'test-map.json'] do
+      puts "Generate #{html}"
+      template, man = File.read(template_path), nil
+
+      man = JSON.parse(File.read(jsonld))
+      if man.key?('@graph')
+        Kernel.abort "Expected #{jsonld} to not have a single @graph entry"
       end
 
       haml_runner = if Haml::VERSION >= "6"
