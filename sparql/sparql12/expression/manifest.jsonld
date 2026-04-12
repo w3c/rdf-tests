@@ -112,6 +112,50 @@
         "query": "not-not.rq"
       },
       "result": "not-not.srx"
+    },
+    {
+      "@id": "manifest#triple-on-literals",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "triple on literals",
+      "comment": "Evaluation of TRIPLE builtin on literals",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "triple-on-literals.rq"
+      },
+      "result": "triple-on-literals.srj"
+    },
+    {
+      "@id": "manifest#triple-on-str-literals",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "triple on string literals",
+      "comment": "Evaluation of TRIPLE builtin on string literals",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "triple-on-str-literals.rq"
+      },
+      "result": "triple-on-str-literals.srj"
+    },
+    {
+      "@id": "manifest#triple-on-triple-terms",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "triple on triple terms",
+      "comment": "Evaluation of TRIPLE builtin on triple terms",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "triple-on-triple-terms.rq"
+      },
+      "result": "triple-on-triple-terms.srj"
+    },
+    {
+      "@id": "manifest#triple-on-undefs",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "triple on undefs",
+      "comment": "Evaluation of TRIPLE builtin on UNDEFs",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "triple-on-undefs.rq"
+      },
+      "result": "triple-on-undefs.srj"
     }
   ]
 }
