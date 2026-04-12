@@ -106,10 +106,9 @@ task index: MANIFESTS.
   select {|m| File.exist?(m)}.
   map {|m| m.sub(/manifest(.*)\.ttl$/, 'index\1.html')}
 
-CLOBBER.include(MANIFESTS.map {|ttl| ttl.sub(/manifest(.*)\.ttl$/, 'index\1.html')})
-
 MANIFESTS.each do |ttl|
   html = ttl.sub(/manifest(.*)\.ttl$/, 'index\1.html')
+  jsonld = ttl.sub(/\.ttl$/, '.jsonld')
   base = 'https://w3c.github.io/rdf-tests/' + ttl.sub('manifest.ttl', '')
 
   # Find frame closest to file
@@ -123,41 +122,58 @@ MANIFESTS.each do |ttl|
   end
   frame_path ||= 'manifest-frame.jsonld'
 
-  if template_path
-    desc "Build #{html}"
-    file html => [ttl, frame_path, template_path, 'test-map.json'] do
-      puts "Generate #{html}"
-      frame, template, man = File.read(frame_path), File.read(template_path), nil
+  CLOBBER.include(jsonld)
+  desc "Build #{jsonld}"
+  file jsonld => [ttl, frame_path] do
+    puts "Generate #{jsonld}"
+    frame = JSON.parse(File.read(frame_path))
+    ctx = {"@base" => base}
+    frame["@context"] = ctx.merge(frame["@context"]) # insert pseudo-comment and base at the top of the context
 
-      ttl_path, ttl_file = File.dirname(ttl), File.basename(ttl)
-      Dir.chdir(ttl_path) do
-        RDF::Reader.open(ttl_file, base_uri: base) do |reader|
-          out = JSON::LD::Writer.buffer(frame: JSON.parse(frame), base_uri: base, simple_compact_iris: true) do |writer|
-            writer << reader
-          end
+    RDF::Reader.open(ttl, base_uri: base) do |reader|
+      out = JSON::LD::Writer.buffer(frame: frame, base_uri: base, simple_compact_iris: true) do |writer|
+        writer << reader
+      end
 
-          man = JSON.parse(out)
-          if man.key?('@graph')
-            Kernel.abort "Expected manifest to not have a single @graph entry"
-          end
+      # We do some normalization
+      man = JSON.parse(out)
+      if man.key?('@graph')
+        Kernel.abort "Expected #{jsonld} to not have a single @graph entry"
+      end
 
-          # Fix up test entries
-          Array(man['entries']).each do |entry|
-            # Fix results which aren't IRIs
-            if res = entry['mf:result'] && entry['mf:result']['@value']
-              entry.delete('mf:result')
-              entry['result'] = res == 'true'
-            end
+      # Fix up test entries
+      Array(man['entries']).each do |entry|
+        # Fix results which aren't IRIs
+        if res = entry['mf:result'] && entry['mf:result']['@value']
+          entry.delete('mf:result')
+          entry['result'] = res == 'true'
+        end
 
-            # Fix some empty arrays (rdf-mt)
-            %w(recognizedDatatypes unrecognizedDatatypes).each do |p|
-              if entry["mf:#{p}"].is_a?(Hash) && entry["mf:#{p}"]['@list'] == []
-                entry[p] = []
-                entry.delete("mf:#{p}")
-              end
-            end
+        # Fix some empty arrays (rdf-mt)
+        %w(recognizedDatatypes unrecognizedDatatypes).each do |p|
+          if entry["mf:#{p}"].is_a?(Hash) && entry["mf:#{p}"]['@list'] == []
+            entry[p] = []
+            entry.delete("mf:#{p}")
           end
         end
+      end
+
+      File.open(jsonld, "w") do |f|
+        f.write(JSON::LD::API.serializer(man))
+      end
+    end
+  end
+
+  if template_path
+    CLOBBER.include(html)
+    desc "Build #{html}"
+    file html => [jsonld, template_path, 'test-map.json'] do
+      puts "Generate #{html}"
+      template, man = File.read(template_path), nil
+
+      man = JSON.parse(File.read(jsonld))
+      if man.key?('@graph')
+        Kernel.abort "Expected #{jsonld} to not have a single @graph entry"
       end
 
       haml_runner = if Haml::VERSION >= "6"
