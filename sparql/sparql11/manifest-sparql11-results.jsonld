@@ -1,0 +1,138 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/manifest-sparql11-results.ttl",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "manifest-sparql11-results.ttl",
+  "@type": "mf:Manifest",
+  "label": "SPARQL 1.1 tests - Results Formats",
+  "include": [
+    "csv-tsv-res/manifest.ttl",
+    "json-res/manifest.ttl"
+  ],
+  "mf:includedSpecifications": {
+    "@list": [
+      {
+        "@id": "http://www.w3.org/TR/sparql11-results-csv-tsv/",
+        "label": "SPARQL 1.1 Query Results CSV and TSV Formats",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "csv-tsv-res/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-results-json/",
+        "label": "SPARQL 1.1 Query Results JSON Format",
+        "mf:conformanceRequirement": {
+          "@list": [
+            {
+              "@id": "json-res/manifest.ttl"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "http://www.w3.org/TR/sparql11-http-rdf-update/"
+      }
+    ]
+  },
+  "mf:entries": null
+}

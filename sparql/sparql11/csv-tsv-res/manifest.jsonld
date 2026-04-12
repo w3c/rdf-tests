@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/csv-tsv-res/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "CSV/TSV Result Format",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv01",
+      "@type": "mf:CSVResultFormatTest",
+      "name": "csv01 - CSV Result Format",
+      "comment": "SELECT * WHERE { ?S ?P ?O }",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv01.rq",
+        "data": "data.ttl"
+      },
+      "result": "csvtsv01.csv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#tsv01",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "tsv01 - TSV Result Format",
+      "comment": "SELECT * WHERE { ?S ?P ?O }",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv01.rq",
+        "data": "data.ttl"
+      },
+      "result": "csvtsv01.tsv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv02",
+      "@type": "mf:CSVResultFormatTest",
+      "name": "cvs02 - CSV Result Format",
+      "comment": "SELECT with OPTIONAL (i.e. not all vars bound in all results)",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv02.rq",
+        "data": "data.ttl"
+      },
+      "result": "csvtsv02.csv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#tsv02",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "tsv02 - TSV Result Format",
+      "comment": "SELECT with OPTIONAL (i.e. not all vars bound in all results)",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv02.rq",
+        "data": "data.ttl"
+      },
+      "result": "csvtsv02.tsv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv03",
+      "@type": "mf:CSVResultFormatTest",
+      "name": "csv03 - CSV Result Format",
+      "comment": "SELECT * WHERE { ?S ?P ?O } with some corner cases of typed literals",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv01.rq",
+        "data": "data2.ttl"
+      },
+      "result": "csvtsv03.csv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#tsv03",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "tsv03 - TSV Result Format",
+      "comment": "SELECT * WHERE { ?S ?P ?O } with some corner cases of typed literals",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2011-08-16#resolution_3",
+      "action": {
+        "query": "csvtsv01.rq",
+        "data": "data2.ttl"
+      },
+      "result": "csvtsv03.tsv"
+    }
+  ]
+}

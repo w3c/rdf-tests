@@ -1,0 +1,311 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/expr-ops/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "XPath operators",
+  "comment": "SPARQL tests - XPath operators in FILTERs",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#ge-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Greater-than or equals",
+      "comment": ">= in FILTER expressions",
+      "action": {
+        "query": "query-ge-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-ge-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#le-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Less-than or equals",
+      "comment": "<= in FILTER expressions",
+      "action": {
+        "query": "query-le-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-le-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#mul-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Multiplication",
+      "comment": "A * B in FILTER expressions",
+      "action": {
+        "query": "query-mul-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-mul-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#plus-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Addition",
+      "comment": "A + B in FILTER expressions",
+      "action": {
+        "query": "query-plus-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-plus-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#minus-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Subtraction",
+      "comment": "A - B in FILTER expressions",
+      "action": {
+        "query": "query-minus-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-minus-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Unary Plusn",
+      "comment": "+A in FILTER expressions",
+      "action": {
+        "query": "query-unplus-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-unplus-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0087/14-dawg-minutes.html",
+      "name": "Unary Minus",
+      "comment": "-A in FILTER expressions",
+      "action": {
+        "query": "query-unminus-1.rq",
+        "data": "data.ttl"
+      },
+      "result": "result-unminus-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#dateTime-le-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "DateTime Less-than or equals",
+      "comment": "<= in FILTER expressions",
+      "action": {
+        "query": "query-le-2.rq",
+        "data": "data-dateTime.ttl"
+      },
+      "result": "result-dateTime-le-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#dateTime-ge-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "DateTime Greater-than or equals",
+      "comment": "<= in FILTER expressions",
+      "action": {
+        "query": "query-ge-2.rq",
+        "data": "data-dateTime.ttl"
+      },
+      "result": "result-dateTime-ge-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#dateTime-lt-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "DateTime Less-than",
+      "comment": "< in FILTER expressions",
+      "action": {
+        "query": "query-lt-2.rq",
+        "data": "data-dateTime.ttl"
+      },
+      "result": "result-dateTime-lt-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#dateTime-gt-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "DateTime Greater-than",
+      "comment": "> in FILTER expressions",
+      "action": {
+        "query": "query-gt-2.rq",
+        "data": "data-dateTime.ttl"
+      },
+      "result": "result-dateTime-gt-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#add-numbers-cast",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "+ operator on number mixed datatypes",
+      "action": {
+        "query": "query-add-numbers-cast.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-add-numbers-cast.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#subtract-numbers-cast",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "- operator on number mixed datatypes",
+      "action": {
+        "query": "query-subtract-numbers-cast.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-subtract-numbers-cast.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#multiply-numbers-cast",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "* operator on number mixed datatypes",
+      "action": {
+        "query": "query-multiply-numbers-cast.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-multiply-numbers-cast.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#divide-numbers-cast",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "/ operator on number mixed datatypes",
+      "action": {
+        "query": "query-divide-numbers-cast.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-divide-numbers-cast.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unplus-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Unary Plus with various datatype",
+      "action": {
+        "query": "query-unplus-2.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-unplus-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#unminus-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Unary Minus with various datatype",
+      "action": {
+        "query": "query-unminus-2.rq",
+        "data": "data-numbers.ttl"
+      },
+      "result": "result-unminus-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-ops/manifest#add-literals",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Add literal numbers with + and - prefixes",
+      "action": {
+        "query": "query-add-literals.rq"
+      },
+      "result": "result-add-literals.srx"
+    }
+  ]
+}

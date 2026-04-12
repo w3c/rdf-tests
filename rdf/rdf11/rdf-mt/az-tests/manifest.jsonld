@@ -1,0 +1,238 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-mt/az-tests/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "rdft:approval",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Unapproved RDF Semantics tests",
+  "entries": [
+    {
+      "@id": "#horst-complete-rules",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "horst-complete-rules",
+      "comment": "\r\n    Entailment that was not captured by the rules in RDF 1.0 Semantics.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [],
+      "unrecognizedDatatypes": [],
+      "action": "horst-complete-rules001.ttl",
+      "result": "horst-complete-rules002.ttl"
+    },
+    {
+      "@id": "#ill-formed-string",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "ill-formed-string",
+      "comment": "\r\n    XSD Strings do not allow the null code point U+0000.\r\n  ",
+      "entailmentRegime": "simple",
+      "recognizedDatatypes": [
+        "xsd:string"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "ill-formed-string.ttl",
+      "result": false
+    },
+    {
+      "@id": "#inconsistent-recognizing-integer",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "inconsistent-recognizing-integer",
+      "comment": "\r\n    If everything is an integer and another datatype is recognized (such as xsd:string)\r\n\tthen there is an inconsistency.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:integer",
+        "xsd:string"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "inconsistent-recognizing-integer.ttl",
+      "result": false
+    },
+    {
+      "@id": "#langstring-disjoint-string",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "langstring-disjoint-string",
+      "comment": "\r\n    langStrings are not strings.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:string",
+        "rdf:langString"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "langstring-disjoint-string.ttl",
+      "result": false
+    },
+    {
+      "@id": "#langstring-not-subclassof-string",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "langstring-not-subclassof-string",
+      "comment": "\r\n    rdf:langString not a subclass of xsd:string.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:string",
+        "rdf:langString"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "langstring-not-subclassof-string.ttl",
+      "result": false
+    },
+    {
+      "@id": "#langstring",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "langstring",
+      "comment": "\r\n    Language-tagged strings are now typed with rdf:langString.\r\n  ",
+      "entailmentRegime": "RDF",
+      "recognizedDatatypes": [
+        "rdf:langString"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "langstring001.ttl",
+      "result": "langstring002.ttl"
+    },
+    {
+      "@id": "#only-one-class",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "only-one-class",
+      "comment": "\r\n    This forces all interpretations to have only one class, which has strange consequences.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:nonNegativeInteger",
+        "xsd:nonPositiveInteger"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "only-one-class.ttl",
+      "result": false
+    },
+    {
+      "@id": "#only-one-property",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "only-one-property",
+      "comment": "\r\n    This forces all interpretations to have only one property, which has strange consequences.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:nonNegativeInteger",
+        "xsd:nonPositiveInteger"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "only-one-property.ttl",
+      "result": false
+    },
+    {
+      "@id": "#rdf11-tautology",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "rdf11-tautology",
+      "comment": "\r\n    In RDF 1.1, all IRIs denote.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [],
+      "unrecognizedDatatypes": [],
+      "action": "empty.nt",
+      "result": "rdf11-tautology.ttl"
+    },
+    {
+      "@id": "#resource-is-literal",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "resource-is-literal",
+      "comment": "\r\n    In RDF 1.1, all IRIs denote, so if something applies to all resources, it applies to all IRIs.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [],
+      "unrecognizedDatatypes": [],
+      "action": "resource-is-literal001.ttl",
+      "result": "resource-is-literal002.ttl"
+    },
+    {
+      "@id": "#same-as-one",
+      "@type": "mf:PositiveEntailmentTest",
+      "name": "same-as-one",
+      "comment": "\r\n    This forces two names to denote the number 1, so everything that applies to one name applies to the other.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:nonNegativeInteger",
+        "xsd:nonPositiveInteger"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "same-as-one001.nt",
+      "result": "same-as-one002.nt"
+    },
+    {
+      "@id": "#unrecognized-datatype001",
+      "@type": "mf:NegativeEntailmentTest",
+      "name": "unrecognized-datatype001",
+      "comment": "\r\n    Literals typed with unrecognized datatypes may denote anything, including another datatype's value.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [
+        "xsd:integer"
+      ],
+      "unrecognizedDatatypes": [
+        "https://example.org/dt"
+      ],
+      "action": "unrecognized-datatype001.ttl",
+      "result": false
+    },
+    {
+      "@id": "#unrecognized-datatype002",
+      "@type": "mf:NegativeEntailmentTest",
+      "name": "unrecognized-datatype002",
+      "comment": "\r\n    Unrecognized datatypes may denote anything.\r\n\tLiterals typed with unrecognized datatypes will not be inferred to be\r\n\tmember of the datatype.\r\n  ",
+      "entailmentRegime": "RDFS",
+      "recognizedDatatypes": [],
+      "unrecognizedDatatypes": [
+        "https://example.org/dt"
+      ],
+      "action": "unrecognized-datatype002.ttl",
+      "result": "unrecognized-datatype003.ttl"
+    },
+    {
+      "@id": "#well-formed-html",
+      "@type": "mf:NegativeEntailmentTest",
+      "name": "well-formed-html",
+      "comment": "\r\n    rdf:HTML does allow the null code point U+0000.\r\n  ",
+      "entailmentRegime": "simple",
+      "recognizedDatatypes": [
+        "rdf:HTML"
+      ],
+      "unrecognizedDatatypes": [],
+      "action": "well-formed-html.ttl",
+      "result": false
+    }
+  ]
+}

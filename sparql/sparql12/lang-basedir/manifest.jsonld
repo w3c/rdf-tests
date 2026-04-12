@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Language and base direction",
+  "entries": [
+    {
+      "@id": "manifest#haslang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "hasLANG",
+      "comment": "Function hasLANG",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "haslang.rq",
+        "data": "data-lang.ttl"
+      },
+      "result": "haslang.srj"
+    },
+    {
+      "@id": "manifest#haslangdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "hasLANGDIR",
+      "comment": "Function hasLANGDIR",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "haslangdir.rq",
+        "data": "data-lang.ttl"
+      },
+      "result": "haslangdir.srj"
+    },
+    {
+      "@id": "manifest#lang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANG",
+      "comment": "Function LANG",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "lang.rq",
+        "data": "data-lang.ttl"
+      },
+      "result": "lang.srj"
+    },
+    {
+      "@id": "manifest#langdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANGDIR",
+      "comment": "Function LANGDIR",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "langdir.rq",
+        "data": "data-lang.ttl"
+      },
+      "result": "langdir.srj"
+    },
+    {
+      "@id": "manifest#langdir-literal",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "LANGDIR with inline literals",
+      "comment": "Function LANGDIR",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "langdir-literal.rq"
+      },
+      "result": "langdir-literal.srj"
+    },
+    {
+      "@id": "manifest#langdir-literal-invalid",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "Literal with invalid base direction",
+      "comment": "Invalid base direction in a literal",
+      "action": "langdir-literal-invalid.rq"
+    },
+    {
+      "@id": "manifest#strlang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "STRLANG",
+      "comment": "Function STRLANG",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "strlang.rq"
+      },
+      "result": "strlang.srj"
+    },
+    {
+      "@id": "manifest#strlangdir",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "STRLANGDIR",
+      "comment": "Function STRLANGDIR",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "strlangdir.rq"
+      },
+      "result": "strlangdir.srj"
+    },
+    {
+      "@id": "manifest#datatype",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "DATATYPE and rdf:dirLangString",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "datatype.rq"
+      },
+      "result": "datatype.srj"
+    },
+    {
+      "@id": "manifest#concat",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "CONCAT and rdf:dirLangString",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "concat.rq"
+      },
+      "result": "concat.srj"
+    },
+    {
+      "@id": "manifest#contains",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "CONTAINS and rdf:dirLangString",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "contains.rq"
+      },
+      "result": "contains.srj"
+    }
+  ]
+}

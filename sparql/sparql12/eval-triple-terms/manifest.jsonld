@@ -1,0 +1,560 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "Evaluation Triple Terms",
+  "comment": "Evaluation tests for triple terms in SPARQL 1.2",
+  "entries": [
+    {
+      "@id": "manifest#results-tripleterms-1j",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Triple terms - all graph triples (JSON results)",
+      "action": {
+        "query": "results-1.rq",
+        "data": "data-0-tripleterms.ttl"
+      },
+      "result": "results-tripleterms-1.srj"
+    },
+    {
+      "@id": "manifest#results-tripleterms-1x",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Triple terms - all graph triples (XML results)",
+      "action": {
+        "query": "results-1.rq",
+        "data": "data-0-tripleterms.ttl"
+      },
+      "result": "results-tripleterms-1.srx"
+    },
+    {
+      "@id": "manifest#results-reifiedtriples-1j",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - all graph triples (JSON results)",
+      "action": {
+        "query": "results-1.rq",
+        "data": "data-0-reifiedtriples.ttl"
+      },
+      "result": "results-reifiedtriples-1.srj"
+    },
+    {
+      "@id": "manifest#results-reifiedtriples-1x",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - all graph triples (XML results)",
+      "action": {
+        "query": "results-1.rq",
+        "data": "data-0-reifiedtriples.ttl"
+      },
+      "result": "results-reifiedtriples-1.srx"
+    },
+    {
+      "@id": "manifest#basic-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - match constant reified triple",
+      "action": {
+        "query": "basic-2.rq",
+        "data": "data-1.ttl"
+      },
+      "result": "basic-2.srj"
+    },
+    {
+      "@id": "manifest#basic-3",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - match reified triple, var subject",
+      "action": {
+        "query": "basic-3.rq",
+        "data": "data-1.ttl"
+      },
+      "result": "basic-3.srj"
+    },
+    {
+      "@id": "manifest#basic-4",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - match reified triple, var predicate",
+      "action": {
+        "query": "basic-4.rq",
+        "data": "data-1.ttl"
+      },
+      "result": "basic-4.srj"
+    },
+    {
+      "@id": "manifest#basic-5",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - match reified triple, var object",
+      "action": {
+        "query": "basic-5.rq",
+        "data": "data-1.ttl"
+      },
+      "result": "basic-5.srj"
+    },
+    {
+      "@id": "manifest#basic-6",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - no match of reified triple",
+      "action": {
+        "query": "basic-6.rq",
+        "data": "data-1.ttl"
+      },
+      "result": "basic-6.srj"
+    },
+    {
+      "@id": "manifest#basic-7",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Annotated triple - match constant reified triple",
+      "action": {
+        "query": "basic-7.rq",
+        "data": "data-8.ttl"
+      },
+      "result": "basic-7.srj"
+    },
+    {
+      "@id": "manifest#basic-8",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Triple terms - in VALUES",
+      "action": {
+        "query": "basic-8.rq",
+        "data": "data-10.ttl"
+      },
+      "result": "basic-8.srj"
+    },
+    {
+      "@id": "manifest#basic-9",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Triple terms - in expressions and equality",
+      "action": {
+        "query": "basic-9.rq",
+        "data": "data-10.ttl"
+      },
+      "result": "basic-9.srj"
+    },
+    {
+      "@id": "manifest#pattern-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Asserted and reified triple",
+      "action": {
+        "query": "pattern-01.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-01.srj"
+    },
+    {
+      "@id": "manifest#pattern-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Asserted and reified triple",
+      "action": {
+        "query": "pattern-02.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-02.srj"
+    },
+    {
+      "@id": "manifest#pattern-3",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Variable for reified triple reifier",
+      "action": {
+        "query": "pattern-03.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-03.srj"
+    },
+    {
+      "@id": "manifest#pattern-3-nomatch",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Variable for reified triple",
+      "action": {
+        "query": "pattern-03-nomatch.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-03-nomatch.srj"
+    },
+    {
+      "@id": "manifest#pattern-4",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - No match",
+      "action": {
+        "query": "pattern-04.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-04.srj"
+    },
+    {
+      "@id": "manifest#pattern-5",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - match variables in triple terms",
+      "action": {
+        "query": "pattern-05.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-05.srj"
+    },
+    {
+      "@id": "manifest#pattern-6",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Nesting 1",
+      "action": {
+        "query": "pattern-06.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-06.srj"
+    },
+    {
+      "@id": "manifest#pattern-7",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Nesting 2",
+      "action": {
+        "query": "pattern-07.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-07.srj"
+    },
+    {
+      "@id": "manifest#pattern-8",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Match and nesting",
+      "action": {
+        "query": "pattern-08.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-08.srj"
+    },
+    {
+      "@id": "manifest#pattern-8-nomatch",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Match for non-equal reifier and nesting",
+      "action": {
+        "query": "pattern-08-nomatch.rq",
+        "data": "data-2.ttl"
+      },
+      "result": "pattern-08-nomatch.srj"
+    },
+    {
+      "@id": "manifest#pattern-9",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Pattern - Same variable",
+      "action": {
+        "query": "pattern-09.rq",
+        "data": "data-5.ttl"
+      },
+      "result": "pattern-09.srj"
+    },
+    {
+      "@id": "manifest#pattern-10",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Reified triples - Pattern - literals or triple terms",
+      "action": {
+        "query": "pattern-10.rq",
+        "data": "data-9.ttl"
+      },
+      "result": "pattern-10.srj"
+    },
+    {
+      "@id": "manifest#pattern-11",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Triple terms - Pattern - literals or triple terms",
+      "action": {
+        "query": "pattern-11.rq",
+        "data": "data-10.ttl"
+      },
+      "result": "pattern-11.srj"
+    },
+    {
+      "@id": "manifest#construct-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - CONSTRUCT with constant template",
+      "action": {
+        "query": "construct-1.rq",
+        "data": "data-3.ttl"
+      },
+      "result": "construct-1.ttl"
+    },
+    {
+      "@id": "manifest#construct-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - CONSTRUCT WHERE with constant template",
+      "action": {
+        "query": "construct-2.rq",
+        "data": "data-3.ttl"
+      },
+      "result": "construct-2.ttl"
+    },
+    {
+      "@id": "manifest#construct-3",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - CONSTRUCT - about every triple",
+      "action": {
+        "query": "construct-3.rq",
+        "data": "data-3.ttl"
+      },
+      "result": "construct-3.ttl"
+    },
+    {
+      "@id": "manifest#construct-4",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - CONSTRUCT with annotation syntax",
+      "action": {
+        "query": "construct-4.rq",
+        "data": "data-3.ttl"
+      },
+      "result": "construct-4.ttl"
+    },
+    {
+      "@id": "manifest#construct-5",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - CONSTRUCT WHERE with annotation syntax",
+      "action": {
+        "query": "construct-5.rq",
+        "data": "data-3.ttl"
+      },
+      "result": "construct-5.ttl"
+    },
+    {
+      "@id": "manifest#graphs-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - GRAPH",
+      "action": {
+        "query": "graphs-1.rq",
+        "data": "data-4.trig"
+      },
+      "result": "graphs-1.srj"
+    },
+    {
+      "@id": "manifest#graphs-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - GRAPHs with blank node",
+      "action": {
+        "query": "graphs-2.rq",
+        "data": "data-4.trig"
+      },
+      "result": "graphs-2.srj"
+    },
+    {
+      "@id": "manifest#expr-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - BIND - CONSTRUCT",
+      "action": {
+        "query": "expr-01.rq",
+        "data": "data-4.trig"
+      },
+      "result": "expr-01.ttl"
+    },
+    {
+      "@id": "manifest#expr-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - Functions",
+      "action": {
+        "query": "expr-02.rq",
+        "data": "empty.nq"
+      },
+      "result": "expr-02.srj"
+    },
+    {
+      "@id": "manifest#op-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - sameTerm",
+      "action": {
+        "query": "op-1.rq",
+        "data": "data-7.ttl"
+      },
+      "result": "op-1.srj"
+    },
+    {
+      "@id": "manifest#op-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - value-equality",
+      "action": {
+        "query": "op-2.rq",
+        "data": "data-7.ttl"
+      },
+      "result": "op-2.srj"
+    },
+    {
+      "@id": "manifest#order-1",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - ORDER BY",
+      "action": {
+        "query": "order-by.rq",
+        "data": "data-order-kind.ttl"
+      },
+      "result": "order-1.srj"
+    },
+    {
+      "@id": "manifest#order-2",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Embedded triple - ordering",
+      "action": {
+        "query": "order-by.rq",
+        "data": "data-order.ttl"
+      },
+      "result": "order-2.srj"
+    },
+    {
+      "@id": "manifest#update-1",
+      "@type": "mf:UpdateEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Update",
+      "action": {
+        "ut:request": "update-1.ru",
+        "ut:data": "data-6.trig"
+      },
+      "result": {
+        "ut:data": "update-result-1.trig"
+      }
+    },
+    {
+      "@id": "manifest#update-2",
+      "@type": "mf:UpdateEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Update - annotation",
+      "action": {
+        "ut:request": "update-2.ru",
+        "ut:data": "data-6.trig"
+      },
+      "result": {
+        "ut:data": "update-result-2.trig"
+      }
+    },
+    {
+      "@id": "manifest#update-3",
+      "@type": "mf:UpdateEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "Reified triples - Update - data",
+      "action": {
+        "ut:request": "update-3.ru",
+        "ut:data": "empty.nq"
+      },
+      "result": {
+        "ut:data": "update-result-3.trig"
+      }
+    }
+  ]
+}

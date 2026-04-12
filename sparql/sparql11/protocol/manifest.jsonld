@@ -1,0 +1,1813 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/protocol/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "SPARQL Protocol",
+  "comment": "\n    \tThis manifest encodes tests for the SPARQL Protocol. Each test record\n    \thas one or more ht:Requests that must be run in order to produce the\n    \texpected results.\n    \t\n    \tExpected results are encoded in the ht:Response using one of four new\n    \tterms:\n    \t\n    \t* `mf:expectedStatus` - Expected HTTP status code (pointing to values\n    \t      like `ht:StatusCode2xx`);\n    \t* `mf:expectedBoolean` - Expected results for ASK queries.\n    \t* `mf:expectedFormat` - Expected serialization format of the results;\n    \t      the range here is one of the literals: `\"boolean\"`, `\"tabular\"`,\n    \t      or `\"RDF\"`\n    \t* `mf:expectation` - A textual description of the expected results for\n    \t      the single test `update_base_uri` where modeling the expectation\n    \t      would have been prohibitive.\n\n    \tEach request has a ht:absolutePath value that starts with `/sparql/`.\n    \tA program using this manifest data to run the tests must replace this\n    \tvalue with whatever path prefix is appropriate for the endpoint being\n    \ttested. Every ht:absolutePath value in this manifest starts with\n    \t`/sparql/`, but and endpoint being tested may require different\n    \tendpoints to be used for Query and Update requests.\n    ",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form",
+      "@type": "mf:ProtocolTest",
+      "name": "query via URL-encoded POST",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "query=ASK%20%7B%7D"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/x-www-form-urlencoded"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 18\n    \n    query=ASK%20%7B%7D\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get",
+      "@type": "mf:ProtocolTest",
+      "name": "GET query with protocol-specified default graph",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post",
+      "@type": "mf:ProtocolTest",
+      "name": "POST query with protocol-specified default graphs",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type . <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type . }"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 123\n    Content-Type: application/sparql-query\n    \n    ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type . <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type . }\n    \n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post",
+      "@type": "mf:ProtocolTest",
+      "name": "POST query with protocol-specified named graphs",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 147\n    Content-Type: application/sparql-query\n    \n    ASK { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }\n    \n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get",
+      "@type": "mf:ProtocolTest",
+      "name": "GET query with protocol-specified named graphs",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full",
+      "@type": "mf:ProtocolTest",
+      "name": "query with protocol-specified dataset (both named and default graphs)",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        },
+        {
+          "ut:graph": "data3.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data3.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {\n  <http://kasei.us/2009/09/sparql/data/data3.rdf> a ?type\n  GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type }\n  GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 209\n    Content-Type: application/sparql-query\n    \n    ASK {\n      <http://kasei.us/2009/09/sparql/data/data3.rdf> a ?type\n      GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type }\n      GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset",
+      "@type": "mf:ProtocolTest",
+      "name": "query specifying dataset in both query string and protocol; test for use of protocol-specified dataset",
+      "ut:graphData": [
+        {
+          "ut:graph": "data1.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data1.rdf"
+        },
+        {
+          "ut:graph": "data2.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data2.rdf"
+        },
+        {
+          "ut:graph": "data3.nt",
+          "label": "http://kasei.us/2009/09/sparql/data/data3.rdf"
+        }
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK FROM <http://kasei.us/2009/09/sparql/data/data3.rdf> { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 200\n    Content-Type: application/sparql-query\n    \n    ASK FROM <http://kasei.us/2009/09/sparql/data/data3.rdf> { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get",
+      "@type": "mf:ProtocolTest",
+      "name": "query via GET",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select",
+      "@type": "mf:ProtocolTest",
+      "name": "query appropriate content type (expect one of: XML, JSON, CSV, TSV)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "SELECT (1 AS ?value) {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedFormat": "tabular",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 23\n    Content-Type: application/sparql-query\n    \n    SELECT (1 AS ?value) {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, text/csv, or any other valid media type for tabular SPARQL results\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask",
+      "@type": "mf:ProtocolTest",
+      "name": "query appropriate content type (expect one of: XML, JSON)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 5\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe",
+      "@type": "mf:ProtocolTest",
+      "name": "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "DESCRIBE <http://example.org/>"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedFormat": "RDF",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 30\n    Content-Type: application/sparql-query\n    \n    DESCRIBE <http://example.org/>\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct",
+      "@type": "mf:ProtocolTest",
+      "name": "query appropriate content type (expect one of: RDF/XML, Turtle, N-Triples, RDFa)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "CONSTRUCT { <s> <p> 1 } WHERE {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedFormat": "RDF",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 32\n    Content-Type: application/sparql-query\n    \n    CONSTRUCT { <s> <p> 1 } WHERE {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph",
+      "@type": "mf:ProtocolTest",
+      "name": "update with protocol-specified default graph",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "PREFIX dc: <http://purl.org/dc/terms/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nCLEAR ALL ;\nINSERT DATA {\n    GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> {\n        <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document\n    }\n} ;\nINSERT {\n    GRAPH <http://example.org/protocol-update-dataset-test/> {\n        ?s a dc:BibliographicResource\n    }\n}\nWHERE {\n    ?s a foaf:Document\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {\n    GRAPH <http://example.org/protocol-update-dataset-test/> {\n        <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource>\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 399\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    CLEAR ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document\n        }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        ?s a foaf:Document\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 172\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource>\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs",
+      "@type": "mf:ProtocolTest",
+      "name": "update with protocol-specified default graphs",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "PREFIX dc: <http://purl.org/dc/terms/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nDROP ALL ;\nINSERT DATA {\n    GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n} ;\nINSERT {\n    GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n        ?s a dc:BibliographicResource\n    }\n}\nWHERE {\n    ?s a foaf:Document\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {\n    GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n        <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n    }\n    FILTER NOT EXISTS {\n        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 645\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        ?s a foaf:Document\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 484\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs",
+      "@type": "mf:ProtocolTest",
+      "name": "update with protocol-specified named graphs",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "PREFIX dc: <http://purl.org/dc/terms/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nDROP ALL ;\nINSERT DATA {\n    GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n} ;\nINSERT {\n    GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n        ?s a dc:BibliographicResource\n    }\n}\nWHERE {\n    GRAPH ?g {\n        ?s a foaf:Document\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {\n    GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n        <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n    }\n    FILTER NOT EXISTS {\n        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 676\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        GRAPH ?g {\n            ?s a foaf:Document\n        }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 496\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full",
+      "@type": "mf:ProtocolTest",
+      "name": "update with protocol-specified dataset (both named and default graphs)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "PREFIX dc: <http://purl.org/dc/terms/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nDROP ALL ;\nINSERT DATA {\n    GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n    GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n} ;\nINSERT {\n    GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n        ?s <http://example.org/in> ?in\n    }\n}\nWHERE {\n    {\n        GRAPH ?g { ?s a foaf:Document }\n        BIND(?g AS ?in)\n    }\n    UNION\n    {\n        ?s a foaf:Document .\n        BIND(\"default\" AS ?in)\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {\n    GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n        <http://kasei.us/2009/09/sparql/data/data1.rdf> <http://example.org/in> \"default\" .\n        <http://kasei.us/2009/09/sparql/data/data2.rdf> <http://example.org/in> <http://kasei.us/2009/09/sparql/data/data2.rdf> .\n    }\n    FILTER NOT EXISTS {\n        GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n            <http://kasei.us/2009/09/sparql/data/data3.rdf> ?p ?o\n        }\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 779\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n            ?s <http://example.org/in> ?in\n        }\n    }\n    WHERE {\n        {\n            GRAPH ?g { ?s a foaf:Document }\n            BIND(?g AS ?in)\n        }\n        UNION\n        {\n            ?s a foaf:Document .\n            BIND(\"default\" AS ?in)\n        }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 437\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> <http://example.org/in> \"default\" .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> <http://example.org/in> <http://kasei.us/2009/09/sparql/data/data2.rdf> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> ?p ?o\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form",
+      "@type": "mf:ProtocolTest",
+      "name": "update via URL-encoded POST",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "update=CLEAR+ALL"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/x-www-form-urlencoded"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 16\n    Content-Type: application/x-www-form-urlencoded\n    \n    update=CLEAR+ALL\n    \n#### Response\n    \n    2xx or 3xx response\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct",
+      "@type": "mf:ProtocolTest",
+      "name": "update via POST directly",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "CLEAR ALL"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 9\n    Content-Type: application/sparql-update\n    \n    CLEAR ALL\n    \n#### Response\n    \n    2xx or 3xx response\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri",
+      "@type": "mf:ProtocolTest",
+      "name": "test for service-defined BASE URI (\"which MAY be the service endpoint\")",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "CLEAR SILENT GRAPH <http://example.org/protocol-base-test/> ;\nINSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "SELECT ?o WHERE {\n    GRAPH <http://example.org/protocol-base-test/> {\n        <http://example.org/s> <http://example.org/p> ?o\n    }\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectation": "one result with `?o` bound to an IRI that is _not_ `<test>`",
+                "mf:expectedFormat": "tabular",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update\n    Content-Length: 174\n\n    CLEAR GRAPH <http://example.org/protocol-base-test/> ;\n    INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-query\n    Content-Length: 123\n\n    SELECT ?o WHERE {\n        GRAPH <http://example.org/protocol-base-test/> {\n            <http://example.org/s> <http://example.org/p> ?o\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for tabular SPARQL results\n    \n    one result with `?o` bound to an IRI that is _not_ `<test>`\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct",
+      "@type": "mf:ProtocolTest",
+      "name": "query via POST directly",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedBoolean": {
+                  "@type": "xsd:boolean",
+                  "@value": "true"
+                },
+                "mf:expectedFormat": "boolean",
+                "mf:expectedStatus": [
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                  },
+                  {
+                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with a method other than GET or POST",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf",
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/x-www-form-urlencoded"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "PUT",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    PUT /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 0\n    Content-Type: application/x-www-form-urlencoded\n    \n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with more than one query string",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D HTTP/1.1\n    \n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with a POST with media type that's not url-encoded or application/sparql-query",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "text/plain"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: text/plain\n    Content-Length: 6\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with url-encoded body, but without application/x-www-form-urlencoded media type",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "query=ASK%20%7B%7D"
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 18\n\n    query=ASK%20%7B%7D\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with SPARQL body, but without application/sparql-query media type",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "ASK {}"
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with direct POST, but with a non-UTF8 encoding (UTF-16)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-16",
+                "http://www.w3.org/2011/content#chars": "ASK {}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-query; charset=UTF-16"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n(Content body encoded in utf-16, with a preceding BOM.)\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-query; charset=UTF-16\n    Content-Length: 14\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke query operation with invalid query syntax (4XX result)",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?query=ASK%20%7B",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B HTTP/1.1\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with GET",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?update=CLEAR%20ALL",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    GET /sparql/?update=CLEAR%20ALL HTTP/1.1\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with more than one update string",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "update=CLEAR%20NAMED&update=CLEAR%20DEFAULT"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/x-www-form-urlencoded"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 43\n\n    update=CLEAR%20NAMED&update=CLEAR%20DEFAULT\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with a POST with media type that's not url-encoded or application/sparql-update",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "CLEAR NAMED"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "text/plain"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: text/plain\n    Content-Length: 11\n\n    CLEAR NAMED\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with url-encoded body, but without application/x-www-form-urlencoded media type",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "update=CLEAR%20NAMED"
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 20\n\n    update=CLEAR%20NAMED\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with direct POST, but with a non-UTF8 encoding",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-16",
+                "http://www.w3.org/2011/content#chars": "CLEAR NAMED"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update; charset=UTF-16"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n(Content body encoded in utf-16, with a preceding BOM.)\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update; charset=UTF-16\n    Content-Length: 24\n\n    CLEAR NAMED\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update operation with invalid update syntax",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "update=CLEAR%20XYZ"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/x-www-form-urlencoded"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 18\n\n    update=CLEAR%20XYZ\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict",
+      "@type": "mf:ProtocolTest",
+      "name": "invoke update with both using-graph-uri/using-named-graph-uri parameter and USING/WITH clause",
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople",
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "PREFIX foaf:  <http://xmlns.com/foaf/0.1/>\nWITH <http://example/addresses>\nDELETE { ?person foaf:givenName 'Bill' }\nINSERT { ?person foaf:givenName 'William' }\nWHERE {\n    ?person foaf:givenName 'Bill'\n}"
+              },
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "application/sparql-update"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "POST",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "comment": "\n#### Request\n    \n    POST /sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update\n    Content-Length: 203\n\n    PREFIX foaf:  <http://xmlns.com/foaf/0.1/>\n    WITH <http://example/addresses>\n    DELETE { ?person foaf:givenName 'Bill' }\n    INSERT { ?person foaf:givenName 'William' }\n    WHERE {\n        ?person foaf:givenName 'Bill'\n    }\n\n#### Response\n    \n    4xx\n        ",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql10/sort/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "SORT",
+  "comment": "Sorting test cases.",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-1",
+      "comment": "Alphabetic sort (ascending) on untyped literals",
+      "action": {
+        "query": "query-sort-1.rq",
+        "data": "data-sort-1.ttl"
+      },
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "result": "result-sort-1.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-2",
+      "comment": "Alphabetic sort (descending) on untyped literals",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-2.rq",
+        "data": "data-sort-1.ttl"
+      },
+      "result": "result-sort-2.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-3",
+      "comment": "Sort on (possibly unbound) URIs",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-3.rq",
+        "data": "data-sort-3.ttl"
+      },
+      "result": "result-sort-3.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-4",
+      "comment": "Sort on datatyped (integer) literals",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-4.rq",
+        "data": "data-sort-4.ttl"
+      },
+      "result": "result-sort-4.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-5",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-5",
+      "comment": "Sort first on untyped literals (ascending), then on datatyped (integer) literals (descending",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-5.rq",
+        "data": "data-sort-4.ttl"
+      },
+      "result": "result-sort-5.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-6",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-6",
+      "comment": "Sort on mixed result of uris and literals.",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-6.rq",
+        "data": "data-sort-6.ttl"
+      },
+      "result": "result-sort-6.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-7",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-7",
+      "comment": "Sort on comparable mixed typed literals (integer and float)",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-4.rq",
+        "data": "data-sort-7.ttl"
+      },
+      "result": "result-sort-7.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-8",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-8",
+      "comment": "Sort on several mixed values (bnode, uri, literal)",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-4.rq",
+        "data": "data-sort-8.ttl"
+      },
+      "result": "result-sort-8.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-9",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-9",
+      "comment": "Alphabetic sort (ascending) on datatyped (string) literals",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-9.rq",
+        "data": "data-sort-9.ttl"
+      },
+      "result": "result-sort-9.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-10",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort-10",
+      "comment": "Alphabetic sort (descending) on datatyped (string) literals",
+      "approvedBy": "http://www.w3.org/2007/06/26-dawg-minutes",
+      "approval": "dawgt:Approved",
+      "action": {
+        "query": "query-sort-10.rq",
+        "data": "data-sort-9.ttl"
+      },
+      "result": "result-sort-10.rdf"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-numbers",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Expression sort",
+      "comment": "Sort by a bracketted expression",
+      "action": {
+        "query": "query-sort-numbers.rq",
+        "data": "data-sort-numbers.ttl"
+      },
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html",
+      "approval": "dawgt:Approved",
+      "result": "result-sort-numbers.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-builtin",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Builtin sort",
+      "comment": "Sort by a builtin operator",
+      "action": {
+        "query": "query-sort-builtin.rq",
+        "data": "data-sort-builtin.ttl"
+      },
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html",
+      "approval": "dawgt:Approved",
+      "result": "result-sort-builtin.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#dawg-sort-function",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Function sort",
+      "comment": "Sort by function invocation",
+      "action": {
+        "query": "query-sort-function.rq",
+        "data": "data-sort-function.ttl"
+      },
+      "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0096/21-dawg-minutes.html",
+      "approval": "dawgt:Approved",
+      "result": "result-sort-function.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/sort/manifest#sort-not-projected",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sort on a non-projected variable",
+      "comment": "ORDER BY is applied before the projection so can access non-projected variables",
+      "action": {
+        "query": "sort-not-projected.rq",
+        "data": "data-sort-not-projected.ttl"
+      },
+      "result": "result-sort-not-projected.ttl"
+    }
+  ]
+}

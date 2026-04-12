@@ -1,0 +1,254 @@
+{
+  "@context": {
+    "@base": "https://w3c.github.io/rdf-tests/sparql/sparql11/service/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "mq": "http://www.w3.org/2001/sw/DataAccess/tests/test-query#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "dawgt": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#",
+    "ut": "http://www.w3.org/2009/sparql/tests/test-update#",
+    "action": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "entries": {
+      "@id": "mf:entries",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "include": {
+      "@id": "mf:include",
+      "@container": "@list",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
+    "name": "mf:name",
+    "result": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "entailmentRegime": {
+      "@id": "mf:entailmentRegime"
+    },
+    "recognizedDatatypes": {
+      "@id": "mf:recognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "unrecognizedDatatypes": {
+      "@id": "mf:unrecognizedDatatypes",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "approval": {
+      "@id": "dawgt:approval",
+      "@type": "@id"
+    },
+    "approvedBy": {
+      "@id": "dawgt:approvedBy",
+      "@type": "@id"
+    },
+    "data": {
+      "@id": "mq:data",
+      "@type": "@id"
+    },
+    "feature": {
+      "@id": "mf:feature",
+      "@type": "@vocab"
+    },
+    "graphData": {
+      "@id": "mq:graphData",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "notable": {
+      "@id": "mf:notable",
+      "@type": "@vocab"
+    },
+    "query": {
+      "@id": "mq:query",
+      "@type": "@id"
+    },
+    "queryForm": {
+      "@id": "mq:queryForm",
+      "@type": "@vocab"
+    },
+    "requires": {
+      "@id": "mf:requires",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ut:data": {
+      "@id": "ut:data",
+      "@type": "@id"
+    },
+    "ut:graphData": {
+      "@id": "ut:graphData",
+      "@container": "@set"
+    },
+    "ut:graph": {
+      "@id": "ut:graph",
+      "@type": "@id"
+    },
+    "ut:request": {
+      "@id": "ut:request",
+      "@type": "@id"
+    }
+  },
+  "@id": "./",
+  "@type": "mf:Manifest",
+  "label": "SPARQL Service",
+  "entries": [
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 1",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service01.rq",
+        "data": "data01.ttl",
+        "mq:serviceData": {
+          "mq:endpoint": {
+            "@id": "http://example.org/sparql"
+          },
+          "data": "data01endpoint.ttl"
+        }
+      },
+      "result": "service01.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 2",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service02.rq",
+        "mq:serviceData": [
+          {
+            "mq:endpoint": {
+              "@id": "http://example1.org/sparql"
+            },
+            "data": "data02endpoint1.ttl"
+          },
+          {
+            "mq:endpoint": {
+              "@id": "http://example2.org/sparql"
+            },
+            "data": "data02endpoint2.ttl"
+          }
+        ]
+      },
+      "result": "service02.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 3",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service03.rq",
+        "mq:serviceData": [
+          {
+            "mq:endpoint": {
+              "@id": "http://example1.org/sparql"
+            },
+            "data": "data03endpoint1.ttl"
+          },
+          {
+            "mq:endpoint": {
+              "@id": "http://example2.org/sparql"
+            },
+            "data": "data03endpoint2.ttl"
+          }
+        ]
+      },
+      "result": "service03.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service4a",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 4a with VALUES clause",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-08-07#resolution_4",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service04a.rq",
+        "data": "data04.ttl",
+        "mq:serviceData": {
+          "mq:endpoint": {
+            "@id": "http://example.org/sparql"
+          },
+          "data": "data04endpoint.ttl"
+        }
+      },
+      "result": "service04.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service5",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 5",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service05.rq",
+        "data": "data05.ttl",
+        "mq:serviceData": [
+          {
+            "mq:endpoint": {
+              "@id": "http://example1.org/sparql"
+            },
+            "data": "data05endpoint1.ttl"
+          },
+          {
+            "mq:endpoint": {
+              "@id": "http://example2.org/sparql"
+            },
+            "data": "data05endpoint2.ttl"
+          }
+        ]
+      },
+      "result": "service05.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service6",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 6",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service06.rq",
+        "mq:serviceData": {
+          "mq:endpoint": {
+            "@id": "http://example1.org/sparql"
+          },
+          "data": "data06endpoint1.ttl"
+        }
+      },
+      "result": "service06.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/service/manifest#service7",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "SERVICE test 7",
+      "approval": "dawgt:Approved",
+      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2",
+      "feature": "http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery",
+      "action": {
+        "query": "service07.rq",
+        "data": "data07.ttl"
+      },
+      "result": "service07.srx"
+    }
+  ]
+}
