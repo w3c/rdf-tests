@@ -46,5 +46,6 @@ jobs:
           bundle install
           bundle exec rake
           git add --force '**/*.html'
+          git add --force '**/*.jsonld'
           git diff-index --quiet HEAD || git commit -m "Regenerate website"
           git push
