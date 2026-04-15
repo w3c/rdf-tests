@@ -55,6 +55,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-reified-triples-annotation-01
         trs:turtle12-reified-triples-annotation-02
         trs:turtle12-reified-triples-annotation-03
+        trs:turtle12-surrogates-01
+        trs:turtle12-surrogates-02
     ) .
 
 trs:turtle12-rt-01 rdf:type rdft:TestTurtleEval ;
@@ -231,3 +233,14 @@ trs:turtle12-reified-triples-annotation-03 rdf:type rdft:TestTurtleEval ;
    mf:result    <turtle12-eval-reified-triples-annotation-03.nt> ;
    .
 
+trs:turtle12-surrogates-01 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Surrogate pair" ;
+   mf:action    <turtle12-eval-surrogate-pair-01.ttl> ;
+   mf:result    <turtle12-eval-surrogate-pair-01.nt> ;
+   .
+
+trs:turtle12-surrogates-02 rdf:type rdft:TestTurtleEval ;
+   mf:name      "Turtle 1.2 - Surrogate pair (alt)" ;
+   mf:action    <turtle12-eval-surrogate-pair-02.ttl> ;
+   mf:result    <turtle12-eval-surrogate-pair-02.nt> ;
+   .
