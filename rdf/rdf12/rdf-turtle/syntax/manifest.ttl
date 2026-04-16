@@ -113,6 +113,16 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:turtle12-version-bad-04
         trs:turtle12-version-bad-05
         trs:turtle12-version-bad-06
+
+## Surrogate handling
+        trs:turtle12-surrogates-01
+        trs:turtle12-surrogates-02
+        
+        trs:turtle12-surrogates-bad-01
+        trs:turtle12-surrogates-bad-02
+        trs:turtle12-surrogates-bad-03
+        trs:turtle12-surrogates-bad-04
+        trs:turtle12-surrogates-bad-05
     ) .
 
 ## Good Syntax
@@ -411,7 +421,7 @@ trs:turtle12-version-02 rdf:type rdft:TestTurtlePositiveSyntax ;
    .
 
 trs:turtle12-version-03 rdf:type rdft:TestTurtlePositiveSyntax ;
-   mf:name      "Turtle 1.2 - VERSION in data " ;
+   mf:name      "Turtle 1.2 - VERSION in data" ;
    mf:action    <turtle12-version-03.ttl> ;
    .
 
@@ -470,3 +480,40 @@ trs:turtle12-version-bad-06 rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:action    <turtle12-version-bad-06.ttl> ;
    .
 
+## Surrogates
+
+
+trs:turtle12-surrogates-01 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - Surrogates via numeric escape sequence" ;
+   mf:action    <turtle12-surrogates-01.ttl>
+   .
+   
+trs:turtle12-surrogates-02 rdf:type rdft:TestTurtlePositiveSyntax ;
+   mf:name      "Turtle 1.2 - Surrogates via numeric escape sequence" ;
+   mf:action    <turtle12-surrogates-02.ttl>
+   .
+
+trs:turtle12-surrogates-bad-01 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - Bad surrogates - wrong order" ;
+   mf:action    <turtle12-surrogates-bad-01.ttl>;
+   .
+
+trs:turtle12-surrogates-bad-02 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - Bad surrogates - high-high" ;
+   mf:action    <turtle12-surrogates-bad-02.ttl>;
+   .
+
+trs:turtle12-surrogates-bad-03 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - Bad surrogates - low-low" ;
+   mf:action    <turtle12-surrogates-bad-03.ttl>;
+   .
+
+trs:turtle12-surrogates-bad-04 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - Bad surrogates - lone high surrogate" ;
+   mf:action    <turtle12-surrogates-bad-04.ttl>;
+   .
+
+trs:turtle12-surrogates-bad-05 rdf:type rdft:TestTurtleNegativeSyntax ;
+   mf:name      "Turtle 1.2 - Bad surrogates - lone low surrogate" ;
+   mf:action    <turtle12-surrogates-bad-05.ttl>;
+   .
