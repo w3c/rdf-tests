@@ -151,14 +151,6 @@
       "comment": "\n#### Request\n\n    GET $GRAPHSTORE$?default HTTP/1.1\n    Host: $HOST$\n    Accept: text/turtle\n\n#### Response\n\n    200 OK\n    Content-Type: text/turtle; charset=utf-8\n    Content-Length: ...\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    []  a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:given-name \"Alice\"\n        ] .\n    "
     },
     {
-      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put__mismatched_payload",
-      "@type": "mf:GraphStoreProtocolTest",
-      "approval": "dawgt:Approved",
-      "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3",
-      "name": "PUT - mismatched payload",
-      "comment": "\n#### Request\n\n    PUT $GRAPHSTORE$/person/1.ttl HTTP/1.1\n    Host: $HOST$\n    Content-Type: text/turtle; charset=utf-8\n\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n\n    <http://$HOST$/$GRAPHSTORE$/person/1> a foaf:Person;\n        foaf:businessCard [\n            a v:VCard;\n            v:fn \"Jane Doe\"\n        ].\n\n#### Response\n\n    400 Bad Request\n    "
-    },
-    {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#delete__existing_graph",
       "@type": "mf:GraphStoreProtocolTest",
       "approval": "dawgt:Approved",
