@@ -9,8 +9,12 @@
     rdfs:label "Syntax" ;
     mf:entries
     (
-    :nested-aggregate-functions
-    :duplicated-values-variable
+      :nested-aggregate-functions
+      :duplicated-values-variable
+      :group-by-scope-1
+      :group-by-scope-bad-1
+      :group-by-scope-bad-2
+      :group-by-scope-bad-3
     ) .
 
 :nested-aggregate-functions rdf:type mf:NegativeSyntaxTest ;
@@ -21,3 +25,19 @@
 :duplicated-values-variable rdf:type mf:NegativeSyntaxTest ;
     mf:name "Duplicated variable in a VALUES clause" ;
     mf:action <duplicated-values-variable.rq> .
+
+:group-by-scope-1 rdf:type mf:PositiveSyntaxTest ;
+    mf:name "GROUP BY in-scope" ;
+    mf:action <group-by-scope-1.rq> .
+    
+:group-by-scope-bad-1 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "GROUP BY variable in-scope (1)" ;
+    mf:action <group-by-scope-bad-1.rq> .
+
+:group-by-scope-bad-2 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "GROUP BY variable in-scope (2)" ;
+    mf:action <group-by-scope-bad-2.rq> .
+
+:group-by-scope-bad-3 rdf:type mf:NegativeSyntaxTest ;
+    mf:name "GROUP BY expression in-scope" ;
+    mf:action <group-by-scope-bad-3.rq> .
