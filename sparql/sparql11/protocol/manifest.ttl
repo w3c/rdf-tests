@@ -10,31 +10,40 @@
 @prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
 
 <>  rdf:type mf:Manifest ;
-    rdfs:label "SPARQL 1.2 Protocol" ;
+    rdfs:label "SPARQL 1.1 Protocol" ;
     rdfs:comment """
-    	This manifest encodes tests for the SPARQL Protocol. Each test record
-    	has one or more ht:Requests that must be run in order to produce the
-    	expected results.
-    	
-    	Expected results are encoded in the ht:Response using one of four new
-    	terms:
-    	
-    	* `mf:expectedStatus` - Expected HTTP status code (pointing to values
-    	      like `ht:StatusCode2xx`);
-    	* `mf:expectedBoolean` - Expected results for ASK queries.
-    	* `mf:expectedFormat` - Expected serialization format of the results;
-    	      the range here is one of the literals: `"boolean"`, `"tabular"`,
-    	      or `"RDF"`
-    	* `mf:expectation` - A textual description of the expected results for
-    	      the single test `update_base_uri` where modeling the expectation
-    	      would have been prohibitive.
+        This manifest contains the SPARQL 1.1 Protocol tests, as inherited
+        by SPARQL 1.2. A conformant SPARQL 1.2 service must satisfy both
+        this manifest and the sibling SPARQL 1.2-specific manifest at
+        `../../sparql12/protocol/manifest.ttl` (which adds tests for the
+        `version` announcement mechanism introduced in SPARQL 1.2).
 
-    	Each request has a ht:absolutePath value that starts with `/sparql/`.
-    	A program using this manifest data to run the tests must replace this
-    	value with whatever path prefix is appropriate for the endpoint being
-    	tested. Every ht:absolutePath value in this manifest starts with
-    	`/sparql/`, but and endpoint being tested may require different
-    	endpoints to be used for Query and Update requests.
+        Each test record has one or more `ht:Requests` that must be run in
+        order to produce the expected results. Expected results are
+        encoded in the `ht:Response` using:
+
+        * `mf:expectedStatus` - Expected HTTP status code (pointing to
+          values like `ht:StatusCode2xx`);
+        * `ht:statusCodeValue` - Expected status pattern ("2XX","3XX","4XX");
+        * `mf:expectedBoolean` - Expected results for ASK queries;
+        * `mf:expectedFormat` - Expected serialization format of the
+          results; one of the literals "boolean", "tabular", or "RDF";
+        * `mf:expectation` - A textual description of the expected
+          results where modeling the expectation would have been
+          prohibitive (legacy form, retained on one test).
+
+        Each request's `ht:absolutePath` value starts with `/sparql`.
+        A program using this manifest must replace this prefix with
+        whatever path is appropriate for the endpoint being tested.
+        An endpoint being tested may require different endpoints to be
+        used for Query and Update requests.
+
+        Each test has an `rdfs:comment` of the form `"Tests REQ-…"`
+        linking it to the SPARQL 1.1 Protocol Requirements document
+        in this directory (`requirements.md`). For the 1.2-specific
+        additions and their tests, see
+        `../../sparql12/protocol/requirements.md` and
+        `../../sparql12/protocol/manifest.ttl`.
     """ ;
     mf:entries
     (
@@ -45,7 +54,6 @@
         :bad_query_method
         :bad_query_missing_direct_type
         :bad_query_missing_form_type
-        :bad_query_multiple_versions
         :bad_query_non_utf8
         :bad_query_syntax
         :bad_query_wrong_media_type
@@ -53,7 +61,6 @@
         :bad_update_form_body_missing
         :bad_update_get
         :bad_update_missing_form_type
-        :bad_update_multiple_versions
         :bad_update_non_utf8
         :bad_update_syntax
         :bad_update_wrong_media_type
@@ -71,10 +78,8 @@
         :query_dataset_named_graphs_get
         :query_dataset_named_graphs_post
         :query_get
-        :query_get_with_version
         :query_multiple_dataset
         :query_post_direct
-        :query_post_direct_with_version_param
         :query_post_form
         :query_post_form_dataset
         :update_base_uri
@@ -83,9 +88,7 @@
         :update_dataset_full
         :update_dataset_named_graphs
         :update_post_direct
-        :update_post_direct_with_version_param
         :update_post_form
-        :update_post_form_with_version
     ) .
 
 :query_post_form rdf:type mf:ProtocolTest ;
@@ -2242,28 +2245,6 @@ WHERE {
   dawgt:approval dawgt:NotClassified;
         .
 
-:bad_query_multiple_versions rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-3.1.3a" ;
-        rdfs:comment "Rec §2.2" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql?query=ASK%20%7B%7D&version=1.1&version=1.2&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf";
-        ht:httpVersion "1.1";
-        ht:methodName "GET";
-        ht:resp [
-          a ht:Response;
-          ht:statusCodeValue "4XX"
-        ]
-      ])
-  ];
-  mf:name "query with more than one version parameter";
-  dawgt:approval dawgt:NotClassified;
-        .
-
 :bad_update_form_body_missing rdf:type mf:ProtocolTest ;
         rdfs:comment "Tests REQ-4.2.2" ;
         rdfs:comment "Rec §2.3.1" ;
@@ -2292,42 +2273,6 @@ WHERE {
       ])
   ];
   mf:name "invoke update operation via URL-encoded POST with update parameter in query string instead of request body";
-  dawgt:approval dawgt:NotClassified;
-        .
-
-:bad_update_multiple_versions rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-4.1.3a" ;
-        rdfs:comment "Rec §2.3" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql";
-        ht:body [
-          a cnt:ContentAsText;
-          cnt:characterEncoding "UTF-8";
-          cnt:chars "update=CLEAR%20ALL&version=1.1&version=1.2"
-        ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
-        ht:httpVersion "1.1";
-        ht:methodName "POST";
-        ht:resp [
-          a ht:Response;
-          ht:statusCodeValue "4XX"
-        ]
-      ])
-  ];
-  mf:name "update with more than one version parameter";
   dawgt:approval dawgt:NotClassified;
         .
 
@@ -2604,170 +2549,3 @@ the same absolute IRIs used in the INSERT DATA, and the ASK returns true.
   dawgt:approval dawgt:NotClassified;
    .
 
-:query_get_with_version rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-2.1.2, REQ-3.1.3" ;
-        rdfs:comment "Rec §2.1, §2.2" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql?query=ASK%20%7B%7D&version=1.2&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf";
-        ht:httpVersion "1.1";
-        ht:methodName "GET";
-        ht:resp [
-          a ht:Response;
-          ht:headers ([
-              a ht:RequestHeader;
-              ht:fieldName "Accept";
-              ht:fieldValue "application/sparql-results+xml, application/sparql-results+json";
-              ht:headerElements ([
-                  a ht:HeaderElement;
-                  ht:elementName "application/sparql-results+xml"
-                ] [
-                  a ht:HeaderElement;
-                  ht:elementName "application/sparql-results+json"
-                ])
-            ]);
-          ht:statusCodeValue "2XX",
-            "3XX"
-        ]
-      ])
-  ];
-  mf:name "query via GET with version parameter";
-  dawgt:approval dawgt:NotClassified;
-        .
-
-:query_post_direct_with_version_param rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-2.1.3" ;
-        rdfs:comment "Rec §2.2.3, §2.3.2" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf";
-        ht:body [
-          a cnt:ContentAsText;
-          cnt:characterEncoding "UTF-8";
-          cnt:chars "ASK {}"
-        ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/sparql-query; version=1.2";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/sparql-query";
-                ht:params ([
-                    a ht:Parameter;
-                    ht:paramName "version";
-                    ht:paramValue "1.2"
-                  ])
-              ])
-          ]);
-        ht:httpVersion "1.1";
-        ht:methodName "POST";
-        ht:resp [
-          a ht:Response;
-          ht:headers ([
-              a ht:RequestHeader;
-              ht:fieldName "Content-Type";
-              ht:fieldValue "application/sparql-results+xml, application/sparql-results+json";
-              ht:headerElements ([
-                  a ht:HeaderElement;
-                  ht:elementName "application/sparql-results+xml"
-                ] [
-                  a ht:HeaderElement;
-                  ht:elementName "application/sparql-results+json"
-                ])
-            ]);
-          ht:statusCodeValue "2XX",
-            "3XX"
-        ]
-      ])
-  ];
-  mf:name "query via direct POST with version media-type parameter";
-  dawgt:approval dawgt:NotClassified;
-        .
-
-:update_post_direct_with_version_param rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-2.1.3, REQ-4.3.3" ;
-        rdfs:comment "Rec §2.2.3, §2.3.2" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql";
-        ht:body [
-          a cnt:ContentAsText;
-          cnt:characterEncoding "UTF-8";
-          cnt:chars "CLEAR ALL"
-        ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/sparql-update; version=1.2";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/sparql-update";
-                ht:params ([
-                    a ht:Parameter;
-                    ht:paramName "version";
-                    ht:paramValue "1.2"
-                  ])
-              ])
-          ]);
-        ht:httpVersion "1.1";
-        ht:methodName "POST";
-        ht:resp [
-          a ht:Response;
-          ht:statusCodeValue "2XX",
-            "3XX"
-        ]
-      ])
-  ];
-  mf:name "update via direct POST with version media-type parameter";
-  dawgt:approval dawgt:NotClassified;
-        .
-
-:update_post_form_with_version rdf:type mf:ProtocolTest ;
-        rdfs:comment "Tests REQ-4.1.3, REQ-2.1.2" ;
-        rdfs:comment "Rec §2.3, §2.1" ;
-  ut:graphData [ ut:graph <data1.nt> ; rdfs:label "http://kasei.us/2009/09/sparql/data/data1.rdf" ] ;
-  mf:action [
-    a ht:Connection;
-    ht:connectionAuthority "www.example";
-    ht:requests ([
-        a ht:Request;
-        ht:absolutePath "/sparql";
-        ht:body [
-          a cnt:ContentAsText;
-          cnt:characterEncoding "UTF-8";
-          cnt:chars "update=CLEAR%20ALL&version=1.2"
-        ];
-        ht:headers ([
-            a ht:RequestHeader;
-            ht:fieldName "Content-Type";
-            ht:fieldValue "application/x-www-form-urlencoded";
-            ht:headerElements ([
-                a ht:HeaderElement;
-                ht:elementName "application/x-www-form-urlencoded"
-              ])
-          ]);
-        ht:httpVersion "1.1";
-        ht:methodName "POST";
-        ht:resp [
-          a ht:Response;
-          ht:statusCodeValue "2XX",
-            "3XX"
-        ]
-      ])
-  ];
-  mf:name "update via URL-encoded POST with version parameter";
-  dawgt:approval dawgt:NotClassified;
-        .
