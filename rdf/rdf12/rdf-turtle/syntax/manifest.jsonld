@@ -416,7 +416,7 @@
     {
       "@id": "../syntax#turtle12-version-03",
       "@type": "rdft:TestTurtlePositiveSyntax",
-      "name": "Turtle 1.2 - VERSION in data ",
+      "name": "Turtle 1.2 - VERSION in data",
       "action": "turtle12-version-03.ttl"
     },
     {
@@ -484,6 +484,48 @@
       "@type": "rdft:TestTurtleNegativeSyntax",
       "name": "Turtle 1.2 - @version - triple-\"-quoted string",
       "action": "turtle12-version-bad-06.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogate-pair-bad-01",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogate pair numeric escape sequence",
+      "action": "turtle12-surrogates-pair-bad-01.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogate-pair-bad-02",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogate pair via numeric escape sequence",
+      "action": "turtle12-surrogates-pair-bad-02.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogates-bad-01",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogates - wrong order",
+      "action": "turtle12-surrogates-bad-01.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogates-bad-02",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogates - high-high",
+      "action": "turtle12-surrogates-bad-02.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogates-bad-03",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogates - low-low",
+      "action": "turtle12-surrogates-bad-03.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogates-bad-04",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogates - lone high surrogate",
+      "action": "turtle12-surrogates-bad-04.ttl"
+    },
+    {
+      "@id": "../syntax#turtle12-surrogates-bad-05",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "Turtle 1.2 - Bad - Surrogates - lone low surrogate",
+      "action": "turtle12-surrogates-bad-05.ttl"
     }
   ]
 }
