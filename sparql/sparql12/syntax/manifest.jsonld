@@ -114,6 +114,30 @@
       "@type": "mf:NegativeSyntaxTest",
       "name": "Duplicated variable in a VALUES clause",
       "action": "duplicated-values-variable.rq"
+    },
+    {
+      "@id": "manifest#group-by-scope-1",
+      "@type": "mf:PositiveSyntaxTest",
+      "name": "GROUP BY in-scope",
+      "action": "group-by-scope-1.rq"
+    },
+    {
+      "@id": "manifest#group-by-scope-bad-1",
+      "@type": "mf:NegativeSyntaxTest",
+      "name": "GROUP BY variable in-scope (1)",
+      "action": "group-by-scope-bad-1.rq"
+    },
+    {
+      "@id": "manifest#group-by-scope-bad-2",
+      "@type": "mf:NegativeSyntaxTest",
+      "name": "GROUP BY variable in-scope (2)",
+      "action": "group-by-scope-bad-2.rq"
+    },
+    {
+      "@id": "manifest#group-by-scope-bad-3",
+      "@type": "mf:NegativeSyntaxTest",
+      "name": "GROUP BY expression in-scope",
+      "action": "group-by-scope-bad-3.rq"
     }
   ]
 }
