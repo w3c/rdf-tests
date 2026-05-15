@@ -5,6 +5,6 @@ PREFIX : <http://example.org/>
 SELECT ?s ?o1 ?o2
 {
   ?s ?p ?o1 .
-  SERVICE SILENT <http://invalid.endpoint.org/sparql> {
+  SERVICE SILENT <http://invalid.endpoint.orgv/sparql> {
     ?s ?p2 ?o2 }
 }
