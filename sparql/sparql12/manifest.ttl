@@ -32,6 +32,7 @@ trs:manifest  rdf:type mf:Manifest ;
     with the relevant SPARQL 1.1 tests.
   """;
   mf:include (
+    <../sparql11/manifest.ttl>
     <grouping/manifest.ttl>
     <codepoint-escapes/manifest.ttl>
     <syntax-triple-terms-negative/manifest.ttl>
