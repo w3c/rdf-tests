@@ -637,7 +637,7 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 5\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        ",
+      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
