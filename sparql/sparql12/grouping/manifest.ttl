@@ -26,7 +26,7 @@
     .
 
 :select-variable-reuse rdf:type mf:QueryEvaluationTest ;
-    mf:name "Reuse of SELECT variable";
+    mf:name "Reuse of SELECT variable in an aggregating query";
     mf:action
          [ qt:query  <select-variable-reuse.rq> ] ;
     mf:result  <select-variable-reuse.srx>
