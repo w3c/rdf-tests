@@ -1315,29 +1315,30 @@ followed by
                         cnt:characterEncoding "UTF-8" ;
                         cnt:chars """CLEAR SILENT GRAPH <http://example.org/protocol-base-test/> ;
 INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }"""
-                ] ;
-                ht:headers ([
-                        a ht:RequestHeader ;
-                        ht:fieldName "content-type" ;
-                        ht:fieldValue "application/sparql-update"
+                    ] ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "content-type" ;
+                            ht:fieldValue "application/sparql-update"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "POST" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
-                ) ;
-                ht:httpVersion "1.1" ;
-                ht:methodName "POST" ;
-                ht:resp [
-                    a ht:Response ;
-                    mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                 ]
-            ]
-            [
-                a ht:Request ;
-                ht:absolutePath "/sparql/" ;
-                ht:body [
-                    a cnt:ContentAsText ;
-                    cnt:characterEncoding "UTF-8" ;
-                    cnt:chars """SELECT ?o WHERE {
+                [
+                    a ht:Request ;
+                    ht:absolutePath "/sparql/" ;
+                    ht:body [
+                        a cnt:ContentAsText ;
+                        cnt:characterEncoding "UTF-8" ;
+                        cnt:chars """ASK {
     GRAPH <http://example.org/protocol-base-test/> {
         <http://example.org/s> <http://example.org/p> ?o
+        FILTER (isIRI(?o) && STR(?o) != "test")
     }
 }"""
                     ] ;
@@ -1351,8 +1352,8 @@ INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.o
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectation """one result with `?o` bound to an IRI that is _not_ `<test>`""" ;
-                        mf:expectedFormat "tabular" ;
+                        mf:expectedBoolean true ;
+                        mf:expectedFormat "boolean" ;
                         mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
@@ -1375,25 +1376,22 @@ INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.o
 
 followed by
 
-#### Request
-    
+#### Request 2 (verify)
+
     POST /sparql/ HTTP/1.1
     Host: www.example
     Content-Type: application/sparql-query
-    Content-Length: 123
 
-    SELECT ?o WHERE {
-        GRAPH <http://example.org/protocol-base-test/> {
-            <http://example.org/s> <http://example.org/p> ?o
-        }
+    ASK {
+      GRAPH <http://example.org/protocol-base-test/> {
+          <http://example.org/s> <http://example.org/p> ?o
+          FILTER (isIRI(?o) && STR(?o) != "test")
+      }
     }
 
-#### Response
-    
-    2xx or 3xx response
-    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for tabular SPARQL results
-    
-    one result with `?o` bound to an IRI that is _not_ `<test>`
+#### Response 2
+
+    2xx or 3xx — true
         """ ;
         dawgt:approval dawgt:Approved ;
         dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
