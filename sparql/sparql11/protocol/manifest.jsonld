@@ -101,7 +101,7 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "SPARQL Protocol",
-  "comment": "\n    \tThis manifest encodes tests for the SPARQL Protocol. Each test record\n    \thas one or more ht:Requests that must be run in order to produce the\n    \texpected results.\n    \t\n    \tExpected results are encoded in the ht:Response using one of four new\n    \tterms:\n    \t\n    \t* `mf:expectedStatus` - Expected HTTP status code (pointing to values\n    \t      like `ht:StatusCode2xx`);\n    \t* `mf:expectedBoolean` - Expected results for ASK queries.\n    \t* `mf:expectedFormat` - Expected serialization format of the results;\n    \t      the range here is one of the literals: `\"boolean\"`, `\"tabular\"`,\n    \t      or `\"RDF\"`\n    \t* `mf:expectation` - A textual description of the expected results for\n    \t      the single test `update_base_uri` where modeling the expectation\n    \t      would have been prohibitive.\n\n    \tEach request has a ht:absolutePath value that starts with `/sparql/`.\n    \tA program using this manifest data to run the tests must replace this\n    \tvalue with whatever path prefix is appropriate for the endpoint being\n    \ttested. Every ht:absolutePath value in this manifest starts with\n    \t`/sparql/`, but and endpoint being tested may require different\n    \tendpoints to be used for Query and Update requests.\n    ",
+  "comment": "\n    \tThis manifest encodes tests for the SPARQL Protocol. Each test record\n    \thas one or more ht:Requests that must be run in order to produce the\n    \texpected results.\n    \t\n    \tExpected results are encoded in the ht:Response using one of four new\n    \tterms:\n    \t\n    \t* `mf:expectedStatus` - Expected HTTP status code (pointing to values\n    \t      like `hts:StatusCode2xx`);\n    \t* `mf:expectedBoolean` - Expected results for ASK queries.\n    \t* `mf:expectedFormat` - Expected serialization format of the results;\n    \t      the range here is one of the literals: `\"boolean\"`, `\"tabular\"`,\n    \t      or `\"RDF\"`\n    \t* `mf:expectation` - A textual description of the expected results for\n    \t      the single test `update_base_uri` where modeling the expectation\n    \t      would have been prohibitive.\n\n    \tEach request has a ht:absolutePath value that starts with `/sparql/`.\n    \tA program using this manifest data to run the tests must replace this\n    \tvalue with whatever path prefix is appropriate for the endpoint being\n    \ttested. Every ht:absolutePath value in this manifest starts with\n    \t`/sparql/`, but and endpoint being tested may require different\n    \tendpoints to be used for Query and Update requests.\n    ",
   "entries": [
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form",
@@ -140,10 +140,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -188,10 +188,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -250,10 +250,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -312,10 +312,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -360,10 +360,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -426,10 +426,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -492,10 +492,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -530,10 +530,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -578,10 +578,10 @@
                 "mf:expectedFormat": "tabular",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -626,10 +626,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -674,10 +674,10 @@
                 "mf:expectedFormat": "RDF",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -722,10 +722,10 @@
                 "mf:expectedFormat": "RDF",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -769,10 +769,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -805,10 +805,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -852,10 +852,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -888,10 +888,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -935,10 +935,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -971,10 +971,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1018,10 +1018,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1054,10 +1054,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1101,10 +1101,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1148,10 +1148,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1195,10 +1195,10 @@
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1228,10 +1228,10 @@
                 "mf:expectedFormat": "tabular",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1280,10 +1280,10 @@
                 "mf:expectedFormat": "boolean",
                 "mf:expectedStatus": [
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode2xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode2xx"
                   },
                   {
-                    "@id": "http://www.w3.org/2011/http#StatusCode3xx"
+                    "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode3xx"
                   }
                 ]
               }
@@ -1321,7 +1321,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1349,7 +1349,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1391,7 +1391,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1424,7 +1424,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1457,7 +1457,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1499,7 +1499,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1527,7 +1527,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1555,7 +1555,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1597,7 +1597,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1639,7 +1639,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1672,7 +1672,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1714,7 +1714,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1756,7 +1756,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
@@ -1798,7 +1798,7 @@
               "http://www.w3.org/2011/http#resp": {
                 "@type": "http://www.w3.org/2011/http#Response",
                 "mf:expectedStatus": {
-                  "@id": "http://www.w3.org/2011/http#StatusCode4xx"
+                  "@id": "http://www.w3.org/2011/http-statusCodes#StatusCode4xx"
                 }
               }
             }
