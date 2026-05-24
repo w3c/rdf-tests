@@ -6,6 +6,7 @@
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 @prefix cnt:    <http://www.w3.org/2011/content#> .
 @prefix ht:     <http://www.w3.org/2011/http#> .
+@prefix hts:    <http://www.w3.org/2011/http-statusCodes#> .
 @prefix sd:     <http://www.w3.org/ns/sparql-service-description#> .
 @prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
 
@@ -20,7 +21,7 @@
     	terms:
     	
     	* `mf:expectedStatus` - Expected HTTP status code (pointing to values
-    	      like `ht:StatusCode2xx`);
+    	      like `hts:StatusCode2xx`);
     	* `mf:expectedBoolean` - Expected results for ASK queries.
     	* `mf:expectedFormat` - Expected serialization format of the results;
     	      the range here is one of the literals: `"boolean"`, `"tabular"`,
@@ -99,7 +100,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -141,7 +142,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -190,7 +191,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -244,7 +245,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -287,7 +288,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -341,7 +342,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -399,7 +400,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -439,7 +440,7 @@
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -485,7 +486,7 @@
                     ht:resp [
                         a ht:Response ;
                         mf:expectedFormat "tabular" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -533,7 +534,7 @@
                     ht:resp [
                         a ht:Response ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -581,7 +582,7 @@
                     ht:resp [
                         a ht:Response ;
                         mf:expectedFormat "RDF" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -629,7 +630,7 @@
                     ht:resp [
                         a ht:Response ;
                         mf:expectedFormat "RDF" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -691,7 +692,7 @@ WHERE {
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
                 [
@@ -718,7 +719,7 @@ WHERE {
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -816,7 +817,7 @@ WHERE {
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
                 [
@@ -849,7 +850,7 @@ WHERE {
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -955,7 +956,7 @@ WHERE {
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
                 [
@@ -988,7 +989,7 @@ WHERE {
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1102,7 +1103,7 @@ WHERE {
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
                 [
@@ -1135,7 +1136,7 @@ WHERE {
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1232,7 +1233,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1278,7 +1279,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1325,7 +1326,7 @@ INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.o
                 ht:methodName "POST" ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                    mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                 ]
             ]
             [
@@ -1352,7 +1353,7 @@ INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.o
                         a ht:Response ;
                         mf:expectation """one result with `?o` bound to an IRI that is _not_ `<test>`""" ;
                         mf:expectedFormat "tabular" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1423,7 +1424,7 @@ followed by
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus ht:StatusCode2xx, ht:StatusCode3xx
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -1467,7 +1468,7 @@ followed by
                     ht:methodName "PUT" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1500,7 +1501,7 @@ followed by
                     ht:methodName "GET" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1541,7 +1542,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1581,7 +1582,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1620,7 +1621,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1665,7 +1666,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1702,7 +1703,7 @@ followed by
                     ht:methodName "GET" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1732,7 +1733,7 @@ followed by
                     ht:methodName "GET" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1773,7 +1774,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1819,7 +1820,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1859,7 +1860,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1904,7 +1905,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -1952,7 +1953,7 @@ followed by
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
@@ -2004,7 +2005,7 @@ WHERE {
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectedStatus ht:StatusCode4xx
+                        mf:expectedStatus hts:StatusCode4xx
                     ]
                 ]
             )
