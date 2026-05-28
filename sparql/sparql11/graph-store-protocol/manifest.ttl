@@ -220,7 +220,7 @@ gsp:put_get_default rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:Created
+                    mf:expectedStatus hts:Created, hts:NoContent
                 ]
             ]
             [
@@ -295,7 +295,7 @@ gsp:put_delete_get_delete rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:Created
+                    mf:expectedStatus hts:Created, hts:NoContent
                 ]
             ]
             [
@@ -565,6 +565,8 @@ gsp:head_existing rdf:type mf:GraphStoreProtocolTest ;
         ht:connectionAuthority "www.example" ;
         ht:requests ([
                 a ht:Request ;
+                ht:methodName "PUT" ;
+                ht:httpVersion "1.1" ;
                 ht:absolutePath "/gsp/person/1.ttl" ;
                 ht:headers ([
                         a ht:RequestHeader ;
@@ -586,11 +588,9 @@ gsp:head_existing rdf:type mf:GraphStoreProtocolTest ;
                             ].
                     """
                 ] ;
-                ht:httpVersion "1.1" ;
-                ht:methodName "PUT" ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:Created
+                    mf:expectedStatus hts:Created, hts:NoContent
                 ]
             ]
             [
