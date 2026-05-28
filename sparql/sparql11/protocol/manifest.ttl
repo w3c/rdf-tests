@@ -26,9 +26,6 @@
     	* `mf:expectedFormat` - Expected serialization format of the results;
     	      the range here is one of the literals: `"boolean"`, `"tabular"`,
     	      or `"RDF"`
-    	* `mf:expectation` - A textual description of the expected results for
-    	      the single test `update_base_uri` where modeling the expectation
-    	      would have been prohibitive.
 
     	Each request has a ht:absolutePath value that starts with `/sparql/`.
     	A program using this manifest data to run the tests must replace this
@@ -865,29 +862,30 @@ WHERE {
                         cnt:characterEncoding "UTF-8" ;
                         cnt:chars """CLEAR SILENT GRAPH <http://example.org/protocol-base-test/> ;
 INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }"""
-                ] ;
-                ht:headers ([
-                        a ht:RequestHeader ;
-                        ht:fieldName "content-type" ;
-                        ht:fieldValue "application/sparql-update"
+                    ] ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "content-type" ;
+                            ht:fieldValue "application/sparql-update"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "POST" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
-                ) ;
-                ht:httpVersion "1.1" ;
-                ht:methodName "POST" ;
-                ht:resp [
-                    a ht:Response ;
-                    mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                 ]
-            ]
-            [
-                a ht:Request ;
-                ht:absolutePath "/sparql/" ;
-                ht:body [
-                    a cnt:ContentAsText ;
-                    cnt:characterEncoding "UTF-8" ;
-                    cnt:chars """SELECT ?o WHERE {
+                [
+                    a ht:Request ;
+                    ht:absolutePath "/sparql/" ;
+                    ht:body [
+                        a cnt:ContentAsText ;
+                        cnt:characterEncoding "UTF-8" ;
+                        cnt:chars """ASK {
     GRAPH <http://example.org/protocol-base-test/> {
         <http://example.org/s> <http://example.org/p> ?o
+        FILTER (isIRI(?o) && STR(?o) != "test")
     }
 }"""
                     ] ;
@@ -901,8 +899,8 @@ INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.o
                     ht:methodName "POST" ;
                     ht:resp [
                         a ht:Response ;
-                        mf:expectation """one result with `?o` bound to an IRI that is _not_ `<test>`""" ;
-                        mf:expectedFormat "tabular" ;
+                        mf:expectedBoolean true ;
+                        mf:expectedFormat "boolean" ;
                         mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
