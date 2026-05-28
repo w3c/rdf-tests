@@ -116,6 +116,15 @@
       "requires": [
         "mf:NoCanonicalizationOfNumerics"
       ]
+    },
+    {
+      "@id": "manifest#select-variable-reuse",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Reuse of SELECT variable in an aggregating query",
+      "action": {
+        "query": "select-variable-reuse.rq"
+      },
+      "result": "select-variable-reuse.srx"
     }
   ]
 }
