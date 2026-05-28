@@ -151,7 +151,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 18\n    \n    query=ASK%20%7B%7D\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -199,7 +198,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -261,7 +259,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 123\n    Content-Type: application/sparql-query\n    \n    ASK { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type . <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type . }\n    \n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -323,7 +320,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 147\n    Content-Type: application/sparql-query\n    \n    ASK { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }\n    \n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -371,7 +367,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -437,7 +432,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 209\n    Content-Type: application/sparql-query\n    \n    ASK {\n      <http://kasei.us/2009/09/sparql/data/data3.rdf> a ?type\n      GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type }\n      GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -503,7 +497,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 200\n    Content-Type: application/sparql-query\n    \n    ASK FROM <http://kasei.us/2009/09/sparql/data/data3.rdf> { GRAPH ?g1 { <http://kasei.us/2009/09/sparql/data/data1.rdf> a ?type } GRAPH ?g2 { <http://kasei.us/2009/09/sparql/data/data2.rdf> a ?type } }\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -541,7 +534,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -589,7 +581,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 23\n    Content-Type: application/sparql-query\n    \n    SELECT (1 AS ?value) {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, text/csv, or any other valid media type for tabular SPARQL results\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -637,7 +628,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -685,7 +675,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 30\n    Content-Type: application/sparql-query\n    \n    DESCRIBE <http://example.org/>\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -733,7 +722,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 32\n    Content-Type: application/sparql-query\n    \n    CONSTRUCT { <s> <p> 1 } WHERE {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -816,7 +804,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 399\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    CLEAR ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document\n        }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        ?s a foaf:Document\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 172\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource>\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -899,7 +886,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 645\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        ?s a foaf:Document\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 484\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-graphs-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -982,7 +968,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 676\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n            ?s a dc:BibliographicResource\n        }\n    }\n    WHERE {\n        GRAPH ?g {\n            ?s a foaf:Document\n        }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 496\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-named-graphs-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> a <http://purl.org/dc/terms/BibliographicResource> .\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1065,7 +1050,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 779\n    Content-Type: application/sparql-update\n    \n    PREFIX dc: <http://purl.org/dc/terms/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    DROP ALL ;\n    INSERT DATA {\n        GRAPH <http://kasei.us/2009/09/sparql/data/data1.rdf> { <http://kasei.us/2009/09/sparql/data/data1.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data2.rdf> { <http://kasei.us/2009/09/sparql/data/data2.rdf> a foaf:Document }\n        GRAPH <http://kasei.us/2009/09/sparql/data/data3.rdf> { <http://kasei.us/2009/09/sparql/data/data3.rdf> a foaf:Document }\n    } ;\n    INSERT {\n        GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n            ?s <http://example.org/in> ?in\n        }\n    }\n    WHERE {\n        {\n            GRAPH ?g { ?s a foaf:Document }\n            BIND(?g AS ?in)\n        }\n        UNION\n        {\n            ?s a foaf:Document .\n            BIND(\"default\" AS ?in)\n        }\n    }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 437\n    Content-Type: application/sparql-query\n    \n    ASK {\n        GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n            <http://kasei.us/2009/09/sparql/data/data1.rdf> <http://example.org/in> \"default\" .\n            <http://kasei.us/2009/09/sparql/data/data2.rdf> <http://example.org/in> <http://kasei.us/2009/09/sparql/data/data2.rdf> .\n        }\n        FILTER NOT EXISTS {\n            GRAPH <http://example.org/protocol-update-dataset-full-test/> {\n                <http://kasei.us/2009/09/sparql/data/data3.rdf> ?p ?o\n            }\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n        \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1112,7 +1096,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 16\n    Content-Type: application/x-www-form-urlencoded\n    \n    update=CLEAR+ALL\n    \n#### Response\n    \n    2xx or 3xx response\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1159,7 +1142,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 9\n    Content-Type: application/sparql-update\n    \n    CLEAR ALL\n    \n#### Response\n    \n    2xx or 3xx response\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1239,7 +1221,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update\n    Content-Length: 174\n\n    CLEAR GRAPH <http://example.org/protocol-base-test/> ;\n    INSERT DATA { GRAPH <http://example.org/protocol-base-test/> { <http://example.org/s> <http://example.org/p> <test> } }\n    \n#### Response\n    \n    2xx or 3xx response\n\nfollowed by\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-query\n    Content-Length: 123\n\n    SELECT ?o WHERE {\n        GRAPH <http://example.org/protocol-base-test/> {\n            <http://example.org/s> <http://example.org/p> ?o\n        }\n    }\n\n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for tabular SPARQL results\n    \n    one result with `?o` bound to an IRI that is _not_ `<test>`\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1291,7 +1272,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n    Content-Type: application/sparql-query\n    \n    ASK {}\n    \n#### Response\n    \n    2xx or 3xx response\n    Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results\n    \n    true\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1328,7 +1308,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    PUT /sparql/?query=ASK%20%7B%7D&default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1\n    Host: www.example\n    Content-Length: 0\n    Content-Type: application/x-www-form-urlencoded\n    \n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1356,7 +1335,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B%7D&query=SELECT%20%2A%20%7B%7D HTTP/1.1\n    \n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1398,7 +1376,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: text/plain\n    Content-Length: 6\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1431,7 +1408,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 18\n\n    query=ASK%20%7B%7D\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1464,7 +1440,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 6\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1506,7 +1481,6 @@
           ]
         }
       },
-      "comment": "\n(Content body encoded in utf-16, with a preceding BOM.)\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-query; charset=UTF-16\n    Content-Length: 14\n\n    ASK {}\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1534,7 +1508,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?query=ASK%20%7B HTTP/1.1\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1562,7 +1535,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    GET /sparql/?update=CLEAR%20ALL HTTP/1.1\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1604,7 +1576,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 43\n\n    update=CLEAR%20NAMED&update=CLEAR%20DEFAULT\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1646,7 +1617,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: text/plain\n    Content-Length: 11\n\n    CLEAR NAMED\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1679,7 +1649,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Length: 20\n\n    update=CLEAR%20NAMED\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1721,7 +1690,6 @@
           ]
         }
       },
-      "comment": "\n(Content body encoded in utf-16, with a preceding BOM.)\n\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update; charset=UTF-16\n    Content-Length: 24\n\n    CLEAR NAMED\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1763,7 +1731,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/ HTTP/1.1\n    Host: www.example\n    Content-Type: application/x-www-form-urlencoded\n    Content-Length: 18\n\n    update=CLEAR%20XYZ\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     },
@@ -1805,7 +1772,6 @@
           ]
         }
       },
-      "comment": "\n#### Request\n    \n    POST /sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople HTTP/1.1\n    Host: www.example\n    Content-Type: application/sparql-update\n    Content-Length: 203\n\n    PREFIX foaf:  <http://xmlns.com/foaf/0.1/>\n    WITH <http://example/addresses>\n    DELETE { ?person foaf:givenName 'Bill' }\n    INSERT { ?person foaf:givenName 'William' }\n    WHERE {\n        ?person foaf:givenName 'Bill'\n    }\n\n#### Response\n    \n    4xx\n        ",
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3"
     }

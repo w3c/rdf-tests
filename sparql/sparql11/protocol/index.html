@@ -118,20 +118,6 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_form' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 18
-
-query=ASK%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -157,16 +143,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?query=ASK%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20.%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20.%20%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -192,20 +168,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_default_graphs_post' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 123
-Content-Type: application/sparql-query
-
-ASK { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a ?type . &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a ?type . }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -231,20 +193,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_post' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 147
-Content-Type: application/sparql-query
-
-ASK { GRAPH ?g1 { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a ?type } GRAPH ?g2 { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a ?type } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -270,16 +218,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_named_graphs_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?query=ASK%20%7B%20GRAPH%20%3Fg1%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%3E%20a%20%3Ftype%20%7D%20GRAPH%20%3Fg2%20%7B%20%3Chttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf%3E%20a%20%3Ftype%20%7D%20%7D&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -305,24 +243,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_dataset_full' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata3.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 209
-Content-Type: application/sparql-query
-
-ASK {
-  &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a ?type
-  GRAPH ?g1 { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a ?type }
-  GRAPH ?g2 { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a ?type }
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -348,20 +268,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_multiple_dataset' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf%26named-graph-uri%3Dhttp%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 200
-Content-Type: application/sparql-query
-
-ASK FROM &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { GRAPH ?g1 { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a ?type } GRAPH ?g2 { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a ?type } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -387,16 +293,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -422,18 +318,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_select' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Length: 23
-Content-Type: application/sparql-query
-
-SELECT (1 AS ?value) {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, text/tab-separated-values, text/csv, or any other valid media type for tabular SPARQL results
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -459,18 +343,6 @@ Content-Type: application/sparql-results+xml, application/sparql-results+json, t
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_ask' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Length: 6
-Content-Type: application/sparql-query
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -496,18 +368,6 @@ Content-Type: application/sparql-results+xml, application/sparql-results+json, o
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_describe' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Length: 30
-Content-Type: application/sparql-query
-
-DESCRIBE &lt;http://example.org/&gt;
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -533,18 +393,6 @@ Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any oth
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_content_type_construct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Length: 32
-Content-Type: application/sparql-query
-
-CONSTRUCT { &lt;s&gt; &lt;p&gt; 1 } WHERE {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any other valid media type for RDF results
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -570,51 +418,6 @@ Content-Type: application/rdf+xml, application/rdf+json, text/turtle, or any oth
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graph' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf HTTP/1.1
-Host: www.example
-Content-Length: 399
-Content-Type: application/sparql-update
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-CLEAR ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document
-    }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    ?s a foaf:Document
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 172
-Content-Type: application/sparql-query
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt;
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -640,57 +443,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_default_graphs' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 645
-Content-Type: application/sparql-update
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-DROP ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    ?s a foaf:Document
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 484
-Content-Type: application/sparql-query
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-graphs-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -716,59 +468,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_named_graphs' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 676
-Content-Type: application/sparql-update
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-DROP ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-        ?s a dc:BibliographicResource
-    }
-}
-WHERE {
-    GRAPH ?g {
-        ?s a foaf:Document
-    }
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 496
-Content-Type: application/sparql-query
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-named-graphs-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a &lt;http://purl.org/dc/terms/BibliographicResource&gt; .
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -794,65 +493,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_dataset_full' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?using-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata1.rdf&amp;using-named-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata2.rdf HTTP/1.1
-Host: www.example
-Content-Length: 779
-Content-Type: application/sparql-update
-
-PREFIX dc: &lt;http://purl.org/dc/terms/&gt;
-PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-DROP ALL ;
-INSERT DATA {
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; a foaf:Document }
-    GRAPH &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; { &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; a foaf:Document }
-} ;
-INSERT {
-    GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-        ?s &lt;http://example.org/in&gt; ?in
-    }
-}
-WHERE {
-    {
-        GRAPH ?g { ?s a foaf:Document }
-        BIND(?g AS ?in)
-    }
-    UNION
-    {
-        ?s a foaf:Document .
-        BIND("default" AS ?in)
-    }
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 437
-Content-Type: application/sparql-query
-
-ASK {
-    GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-        &lt;http://kasei.us/2009/09/sparql/data/data1.rdf&gt; &lt;http://example.org/in&gt; "default" .
-        &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; &lt;http://example.org/in&gt; &lt;http://kasei.us/2009/09/sparql/data/data2.rdf&gt; .
-    }
-    FILTER NOT EXISTS {
-        GRAPH &lt;http://example.org/protocol-update-dataset-full-test/&gt; {
-            &lt;http://kasei.us/2009/09/sparql/data/data3.rdf&gt; ?p ?o
-        }
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-    
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -878,17 +518,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_form' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 16
-Content-Type: application/x-www-form-urlencoded
-
-update=CLEAR+ALL
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -914,17 +543,6 @@ update=CLEAR+ALL
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 9
-Content-Type: application/sparql-update
-
-CLEAR ALL
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -950,37 +568,6 @@ CLEAR ALL
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#update_base_uri' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/sparql-update
-Content-Length: 174
-
-CLEAR GRAPH &lt;http://example.org/protocol-base-test/&gt; ;
-INSERT DATA { GRAPH &lt;http://example.org/protocol-base-test/&gt; { &lt;http://example.org/s&gt; &lt;http://example.org/p&gt; &lt;test&gt; } }
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-</code></pre>
-            <p>followed by</p>
-            <h4 id="request-1">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/sparql-query
-Content-Length: 123
-
-SELECT ?o WHERE {
-    GRAPH &lt;http://example.org/protocol-base-test/&gt; {
-        &lt;http://example.org/s&gt; &lt;http://example.org/p&gt; ?o
-    }
-}
-</code></pre>
-            <h4 id="response-1">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for tabular SPARQL results
-
-one result with `?o` bound to an IRI that is _not_ `&lt;test&gt;`
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1006,20 +593,6 @@ one result with `?o` bound to an IRI that is _not_ `&lt;test&gt;`
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#query_post_direct' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 6
-Content-Type: application/sparql-query
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>2xx or 3xx response
-Content-Type: application/sparql-results+xml, application/sparql-results+json, or any other valid media type for boolean SPARQL results
-
-true
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1045,15 +618,6 @@ true
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_method' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>PUT /sparql/?query=ASK%20%7B%7D&amp;default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf HTTP/1.1
-Host: www.example
-Content-Length: 0
-Content-Type: application/x-www-form-urlencoded
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1079,12 +643,6 @@ Content-Type: application/x-www-form-urlencoded
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_queries' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?query=ASK%20%7B%7D&amp;query=SELECT%20%2A%20%7B%7D HTTP/1.1
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1110,17 +668,6 @@ Content-Type: application/x-www-form-urlencoded
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_wrong_media_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: text/plain
-Content-Length: 6
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1146,16 +693,6 @@ ASK {}
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 18
-
-query=ASK%20%7B%7D
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1181,16 +718,6 @@ query=ASK%20%7B%7D
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_missing_direct_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 6
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1216,18 +743,6 @@ ASK {}
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_non_utf8' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <p>(Content body encoded in utf-16, with a preceding BOM.)</p>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/sparql-query; charset=UTF-16
-Content-Length: 14
-
-ASK {}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1253,12 +768,6 @@ ASK {}
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_query_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?query=ASK%20%7B HTTP/1.1
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1284,12 +793,6 @@ ASK {}
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_get' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>GET /sparql/?update=CLEAR%20ALL HTTP/1.1
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1315,17 +818,6 @@ ASK {}
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_multiple_updates' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 43
-
-update=CLEAR%20NAMED&amp;update=CLEAR%20DEFAULT
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1351,17 +843,6 @@ update=CLEAR%20NAMED&amp;update=CLEAR%20DEFAULT
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_wrong_media_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: text/plain
-Content-Length: 11
-
-CLEAR NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1387,16 +868,6 @@ CLEAR NAMED
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_missing_form_type' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Length: 20
-
-update=CLEAR%20NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1422,18 +893,6 @@ update=CLEAR%20NAMED
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_non_utf8' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <p>(Content body encoded in utf-16, with a preceding BOM.)</p>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/sparql-update; charset=UTF-16
-Content-Length: 24
-
-CLEAR NAMED
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1459,17 +918,6 @@ CLEAR NAMED
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_syntax' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/ HTTP/1.1
-Host: www.example
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 18
-
-update=CLEAR%20XYZ
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1495,23 +943,6 @@ update=CLEAR%20XYZ
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/protocol/manifest#bad_update_dataset_conflict' typeof='mf:ProtocolTest'>
           <div property='rdfs:comment'>
-            <h4 id="request">Request</h4>
-            <pre><code>POST /sparql/?using-named-graph-uri=http%3A%2F%2Fexample%2Fpeople HTTP/1.1
-Host: www.example
-Content-Type: application/sparql-update
-Content-Length: 203
-
-PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
-WITH &lt;http://example/addresses&gt;
-DELETE { ?person foaf:givenName 'Bill' }
-INSERT { ?person foaf:givenName 'William' }
-WHERE {
-    ?person foaf:givenName 'Bill'
-}
-</code></pre>
-            <h4 id="response">Response</h4>
-            <pre><code>4xx
-</code></pre>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
