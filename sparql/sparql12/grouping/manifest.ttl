@@ -10,6 +10,7 @@
     mf:entries
     ( 
     :group01
+    :select-variable-reuse
     ) .
 
 
@@ -22,4 +23,11 @@
            qt:data   <group-data-1.ttl> ] ;
     mf:result  <group01.srx> ;
     mf:requires mf:NoCanonicalizationOfNumerics
+    .
+
+:select-variable-reuse rdf:type mf:QueryEvaluationTest ;
+    mf:name "Reuse of SELECT variable in an aggregating query";
+    mf:action
+         [ qt:query  <select-variable-reuse.rq> ] ;
+    mf:result  <select-variable-reuse.srx>
     .
