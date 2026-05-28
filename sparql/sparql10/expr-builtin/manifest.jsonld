@@ -405,6 +405,17 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
       "result": "result-sameTerm-not-eq.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/expr-builtin/manifest#case-insensitive-booleans",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "case-insensitive booleans",
+      "comment": "Boolean keywords are case insensitive, and produce valid boolean literals",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "case-insensitive-booleans.rq"
+      },
+      "result": "case-insensitive-booleans.srx"
     }
   ]
 }

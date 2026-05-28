@@ -156,17 +156,6 @@
         "query": "triple-on-undefs.rq"
       },
       "result": "triple-on-undefs.srj"
-    },
-    {
-      "@id": "manifest#case-insensitive-booleans",
-      "@type": "mf:QueryEvaluationTest",
-      "name": "case-insensitive booleans",
-      "comment": "Boolean keywords are case insensitive, and produce valid boolean literals",
-      "approval": "dawgt:Proposed",
-      "action": {
-        "query": "case-insensitive-booleans.rq"
-      },
-      "result": "case-insensitive-booleans.srj"
     }
   ]
 }
