@@ -145,7 +145,7 @@ gsp:put_get_repeat rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:NoContent ;
+                    mf:expectedStatus hts:OK, hts:NoContent ;
                 ]
             ]
             [
@@ -220,7 +220,7 @@ gsp:put_get_default rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:NoContent
+                    mf:expectedStatus hts:OK, hts:NoContent
                 ]
             ]
             [
@@ -295,7 +295,7 @@ gsp:put_delete_get_delete rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:Created, hts:NoContent
+                    mf:expectedStatus hts:Created, hts:OK, hts:NoContent
                 ]
             ]
             [
@@ -365,7 +365,7 @@ gsp:post_get_post_get rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:NoContent, hts:OK
+                    mf:expectedStatus hts:OK, hts:NoContent
                 ]
             ]
             [
@@ -437,7 +437,7 @@ Content-Type: text/turtle; charset=utf-8\r
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:NoContent, hts:OK
+                    mf:expectedStatus hts:OK, hts:NoContent
                 ]
             ]
             [
@@ -590,7 +590,7 @@ gsp:head_existing rdf:type mf:GraphStoreProtocolTest ;
                 ] ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:Created, hts:NoContent
+                    mf:expectedStatus hts:OK, hts:Created, hts:NoContent
                 ]
             ]
             [
