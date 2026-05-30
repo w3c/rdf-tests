@@ -16,6 +16,12 @@
         :codepoint-esc-05
         :codepoint-esc-06
         :codepoint-esc-07
+
+        :surrogate-esc-01-bad
+        :surrogate-esc-02-bad
+        :surrogate-esc-03-bad
+        :surrogate-esc-04-bad
+        :surrogate-esc-05-bad
     ) .
 
 
@@ -58,5 +64,37 @@
 :codepoint-esc-07 rdf:type   mf:PositiveSyntaxTest ;
    dawgt:approval dawgt:Proposed ;
    mf:name        "codepoint-esc-07.rq" ;
-   rdfs:comment   "Codepoint escape in string - singe quoted string" ;
+   rdfs:comment   "Codepoint escape in string - single quoted string" ;
    mf:action      <codepoint-esc-07.rq> .
+
+
+:surrogate-esc-01-bad rdf:type   mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "surrogate-esc-01-bad.rq" ;
+   rdfs:comment   "Surrogate pair - not accepted" ;
+   mf:action      <surrogate-esc-01-bad.rq> .
+
+:surrogate-esc-02-bad rdf:type   mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "surrogate-esc-02-bad.rq" ;
+   rdfs:comment   "Surrogate - low-high - not accepted" ;
+   mf:action      <surrogate-esc-02-bad.rq> .
+
+
+:surrogate-esc-03-bad rdf:type   mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "surrogate-esc-03-bad.rq" ;
+   rdfs:comment   "Surrogate - lone high escape sequence" ;
+   mf:action      <surrogate-esc-03-bad.rq> .
+   
+:surrogate-esc-04-bad rdf:type   mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "surrogate-esc-04-bad.rq" ;
+   rdfs:comment   "Surrogate - lone low escape sequence" ;
+   mf:action      <surrogate-esc-04-bad.rq> .
+
+:surrogate-esc-05-bad rdf:type   mf:NegativeSyntaxTest ;
+   dawgt:approval dawgt:Proposed ;
+   mf:name        "surrogate-esc-05-bad.rq" ;
+   rdfs:comment   "Surrogate pair - IRI" ;
+   mf:action      <surrogate-esc-05-bad.rq> .
