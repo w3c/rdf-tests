@@ -29,7 +29,8 @@
                  gsp:head_on_a_nonexisting_graph ) .
 
 gsp:put__initial_state a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "PUT - Initial state" ;
     rdfs:comment """
@@ -55,7 +56,8 @@ gsp:put__initial_state a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_put__initial_state a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of PUT - Initial state" ;
     rdfs:comment """
@@ -82,7 +84,8 @@ gsp:get_of_put__initial_state a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:put__graph_already_in_store a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "PUT - graph already in store" ;
     rdfs:comment """
@@ -107,7 +110,8 @@ gsp:put__graph_already_in_store a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_put__graph_already_in_store a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of PUT - graph already in store" ;
     rdfs:comment """
@@ -134,7 +138,8 @@ gsp:get_of_put__graph_already_in_store a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:put__default_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "PUT - default graph" ;
     rdfs:comment """
@@ -159,7 +164,8 @@ gsp:put__default_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_put__default_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of PUT - default graph" ;
     rdfs:comment """
@@ -186,7 +192,8 @@ gsp:get_of_put__default_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:delete__existing_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "DELETE - existing graph" ;
     rdfs:comment """
@@ -201,7 +208,8 @@ gsp:delete__existing_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_delete__existing_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of DELETE - existing graph" ;
     rdfs:comment """
@@ -216,7 +224,8 @@ gsp:get_of_delete__existing_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:delete__nonexistent_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "DELETE - non-existent graph" ;
     rdfs:comment """
@@ -231,7 +240,8 @@ gsp:delete__nonexistent_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:post__existing_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "POST - existing graph" ;
     rdfs:comment """
@@ -251,7 +261,8 @@ gsp:post__existing_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_post__existing_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of POST - existing graph" ;
     rdfs:comment """
@@ -278,7 +289,8 @@ gsp:get_of_post__existing_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:post__multipart_formdata a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "POST - multipart/form-data" ;
     rdfs:comment """
@@ -310,7 +322,8 @@ gsp:post__multipart_formdata a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_post__multipart_formdata a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of POST - multipart/form-data" ;
     rdfs:comment """
@@ -339,7 +352,8 @@ gsp:get_of_post__multipart_formdata a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:post__create__new_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "POST - create new graph" ;
     rdfs:comment """
@@ -365,7 +379,8 @@ gsp:post__create__new_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_post__create__new_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of POST - create new graph" ;
     rdfs:comment """
@@ -392,7 +407,8 @@ gsp:get_of_post__create__new_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:get_of_post__after_noop a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "GET of POST - after noop" ;
     rdfs:comment """
@@ -419,7 +435,8 @@ gsp:get_of_post__after_noop a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:head_on_an_existing_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "HEAD on an existing graph" ;
     rdfs:comment """
@@ -436,7 +453,8 @@ gsp:head_on_an_existing_graph a mf:GraphStoreProtocolTest;
     """ .
 
 gsp:head_on_a_nonexisting_graph a mf:GraphStoreProtocolTest;
-    dawg:approval dawg:Approved;
+    dawg:approval dawg:Deprecated;
+    rdfs:comment "This test is deprecated in favor of the tests in ../graph-store-protocol/manifest.ttl" ;
     dawg:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-27#resolution_3>;
     mf:name "HEAD on a non-existing graph" ;
     rdfs:comment """
