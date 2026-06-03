@@ -135,7 +135,7 @@
     "syntax-fed/manifest.ttl",
     "service-description/manifest.ttl",
     "protocol/manifest.ttl",
-    "http-rdf-update/manifest.ttl"
+    "graph-store-protocol/manifest.ttl"
   ],
   "mf:includedSpecifications": {
     "@list": [
@@ -308,7 +308,7 @@
         "mf:conformanceRequirement": {
           "@list": [
             {
-              "@id": "http-rdf-update/manifest.ttl"
+              "@id": "graph-store-protocol/manifest.ttl"
             }
           ]
         }
