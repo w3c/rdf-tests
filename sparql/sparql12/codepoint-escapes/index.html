@@ -78,56 +78,15 @@
         Test Descriptions
       </h2>
       <dl class='test-description'>
-        <dt id='codepoint-esc-01'>
-          <a class='testlink' href='#codepoint-esc-01'>
-            codepoint-esc-01:
+        <dt id='codepoint-esc-01-bad'>
+          <a class='testlink' href='#codepoint-esc-01-bad'>
+            codepoint-esc-01-bad:
           </a>
-          <span about='manifest#codepoint-esc-01' property='mf:name'>codepoint-esc-01.rq</span>
+          <span about='manifest#codepoint-esc-01-bad' property='mf:name'>codepoint-esc-01-bad.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-01' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-01-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
-            <dt>action</dt>
-            <dd>
-              <a href='codepoint-esc-01.rq' property='mf:action'>codepoint-esc-01.rq</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='codepoint-esc-02'>
-          <a class='testlink' href='#codepoint-esc-02'>
-            codepoint-esc-02:
-          </a>
-          <span about='manifest#codepoint-esc-02' property='mf:name'>codepoint-esc-02.rq</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-02' typeof='mf:PositiveSyntaxTest'>
-          <div property='rdfs:comment'>
-            <p>codepoint escape for the backslash of a PN_LOCAL_ESC in the PN_LOCAL part of a PrefixedName</p>
-          </div>
-          <dl class='test-detail'>
-            <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
-            <dt>approval</dt>
-            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
-            <dt>action</dt>
-            <dd>
-              <a href='codepoint-esc-02.rq' property='mf:action'>codepoint-esc-02.rq</a>
-            </dd>
-          </dl>
-        </dd>
-        <dt id='codepoint-esc-bad-03'>
-          <a class='testlink' href='#codepoint-esc-bad-03'>
-            codepoint-esc-bad-03:
-          </a>
-          <span about='manifest#codepoint-esc-bad-03' property='mf:name'>codepoint-esc-bad-03.rq</span>
-        </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-bad-03' typeof='mf:NegativeSyntaxTest'>
-          <div property='rdfs:comment'>
-            <p>codepoint escape that results in an invalid backslash escape (requires handling codepoint escaping before backslash escaping)</p>
+            <p>Whole query in codepoint escapes</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -136,28 +95,70 @@
             <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-bad-03.rq' property='mf:action'>codepoint-esc-bad-03.rq</a>
+              <a href='codepoint-esc-01-bad.rq' property='mf:action'>codepoint-esc-01-bad.rq</a>
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-04'>
-          <a class='testlink' href='#codepoint-esc-04'>
-            codepoint-esc-04:
+        <dt id='codepoint-esc-02-bad'>
+          <a class='testlink' href='#codepoint-esc-02-bad'>
+            codepoint-esc-02-bad:
           </a>
-          <span about='manifest#codepoint-esc-04' property='mf:name'>codepoint-esc-04.rq</span>
+          <span about='manifest#codepoint-esc-02-bad' property='mf:name'>codepoint-esc-02-bad.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-04' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-02-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape that results in a valid backslash escape</p>
+            <p>Codepoint escape in PNAME_NS of a prefixed name</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
+            <dd>mf:NegativeSyntaxTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-04.rq' property='mf:action'>codepoint-esc-04.rq</a>
+              <a href='codepoint-esc-02-bad.rq' property='mf:action'>codepoint-esc-02-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='codepoint-esc-03-bad'>
+          <a class='testlink' href='#codepoint-esc-03-bad'>
+            codepoint-esc-03-bad:
+          </a>
+          <span about='manifest#codepoint-esc-03-bad' property='mf:name'>codepoint-esc-03-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-03-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Codepoint escape in PN_LOCAL of a prefixed name</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='codepoint-esc-03-bad.rq' property='mf:action'>codepoint-esc-03-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='codepoint-esc-04-bad'>
+          <a class='testlink' href='#codepoint-esc-04-bad'>
+            codepoint-esc-04-bad:
+          </a>
+          <span about='manifest#codepoint-esc-04-bad' property='mf:name'>codepoint-esc-04-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-04-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Codepoint escape in variable</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='codepoint-esc-04-bad.rq' property='mf:action'>codepoint-esc-04-bad.rq</a>
             </dd>
           </dl>
         </dd>
@@ -169,6 +170,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-05' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
+            <p>Codepoint escape in IRI</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -189,7 +191,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-06' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape for the percent sign in the PL_LOCAL part of a PrefixedName</p>
+            <p>Codepoint escape in string - double quoted string</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -210,7 +212,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-07' typeof='mf:PositiveSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape for whitespace separating the projection tokens: SELECT * WHERE</p>
+            <p>Codepoint escape in string - single quoted string</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -223,24 +225,108 @@
             </dd>
           </dl>
         </dd>
-        <dt id='codepoint-esc-08'>
-          <a class='testlink' href='#codepoint-esc-08'>
-            codepoint-esc-08:
+        <dt id='surrogate-esc-01-bad'>
+          <a class='testlink' href='#surrogate-esc-01-bad'>
+            surrogate-esc-01-bad:
           </a>
-          <span about='manifest#codepoint-esc-08' property='mf:name'>codepoint-esc-08.rq</span>
+          <span about='manifest#surrogate-esc-01-bad' property='mf:name'>surrogate-esc-01-bad.rq</span>
         </dt>
-        <dd inlist='true' property='mf:entry' resource='manifest#codepoint-esc-08' typeof='mf:PositiveSyntaxTest'>
+        <dd inlist='true' property='mf:entry' resource='manifest#surrogate-esc-01-bad' typeof='mf:NegativeSyntaxTest'>
           <div property='rdfs:comment'>
-            <p>codepoint escape for the starting double-quote of a literal</p>
+            <p>Surrogate pair - not accepted</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
-            <dd>mf:PositiveSyntaxTest</dd>
+            <dd>mf:NegativeSyntaxTest</dd>
             <dt>approval</dt>
             <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
             <dt>action</dt>
             <dd>
-              <a href='codepoint-esc-08.rq' property='mf:action'>codepoint-esc-08.rq</a>
+              <a href='surrogate-esc-01-bad.rq' property='mf:action'>surrogate-esc-01-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='surrogate-esc-02-bad'>
+          <a class='testlink' href='#surrogate-esc-02-bad'>
+            surrogate-esc-02-bad:
+          </a>
+          <span about='manifest#surrogate-esc-02-bad' property='mf:name'>surrogate-esc-02-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#surrogate-esc-02-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Surrogate - low-high - not accepted</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='surrogate-esc-02-bad.rq' property='mf:action'>surrogate-esc-02-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='surrogate-esc-03-bad'>
+          <a class='testlink' href='#surrogate-esc-03-bad'>
+            surrogate-esc-03-bad:
+          </a>
+          <span about='manifest#surrogate-esc-03-bad' property='mf:name'>surrogate-esc-03-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#surrogate-esc-03-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Surrogate - lone high escape sequence</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='surrogate-esc-03-bad.rq' property='mf:action'>surrogate-esc-03-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='surrogate-esc-04-bad'>
+          <a class='testlink' href='#surrogate-esc-04-bad'>
+            surrogate-esc-04-bad:
+          </a>
+          <span about='manifest#surrogate-esc-04-bad' property='mf:name'>surrogate-esc-04-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#surrogate-esc-04-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Surrogate - lone low escape sequence</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='surrogate-esc-04-bad.rq' property='mf:action'>surrogate-esc-04-bad.rq</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='surrogate-esc-05-bad'>
+          <a class='testlink' href='#surrogate-esc-05-bad'>
+            surrogate-esc-05-bad:
+          </a>
+          <span about='manifest#surrogate-esc-05-bad' property='mf:name'>surrogate-esc-05-bad.rq</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#surrogate-esc-05-bad' typeof='mf:NegativeSyntaxTest'>
+          <div property='rdfs:comment'>
+            <p>Surrogate pair - IRI</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:NegativeSyntaxTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <a href='surrogate-esc-05-bad.rq' property='mf:action'>surrogate-esc-05-bad.rq</a>
             </dd>
           </dl>
         </dd>

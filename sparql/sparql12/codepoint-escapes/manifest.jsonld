@@ -103,41 +103,43 @@
   "label": "SPARQL Codepoint-Escaping Tests",
   "entries": [
     {
-      "@id": "manifest#codepoint-esc-01",
-      "@type": "mf:PositiveSyntaxTest",
-      "approval": "dawgt:Proposed",
-      "name": "codepoint-esc-01.rq",
-      "action": "codepoint-esc-01.rq"
-    },
-    {
-      "@id": "manifest#codepoint-esc-02",
-      "@type": "mf:PositiveSyntaxTest",
-      "approval": "dawgt:Proposed",
-      "name": "codepoint-esc-02.rq",
-      "comment": "codepoint escape for the backslash of a PN_LOCAL_ESC in the PN_LOCAL part of a PrefixedName",
-      "action": "codepoint-esc-02.rq"
-    },
-    {
-      "@id": "manifest#codepoint-esc-bad-03",
+      "@id": "manifest#codepoint-esc-01-bad",
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
-      "name": "codepoint-esc-bad-03.rq",
-      "comment": "codepoint escape that results in an invalid backslash escape (requires handling codepoint escaping before backslash escaping)",
-      "action": "codepoint-esc-bad-03.rq"
+      "name": "codepoint-esc-01-bad.rq",
+      "comment": "Whole query in codepoint escapes",
+      "action": "codepoint-esc-01-bad.rq"
     },
     {
-      "@id": "manifest#codepoint-esc-04",
-      "@type": "mf:PositiveSyntaxTest",
+      "@id": "manifest#codepoint-esc-02-bad",
+      "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
-      "name": "codepoint-esc-04.rq",
-      "comment": "codepoint escape that results in a valid backslash escape",
-      "action": "codepoint-esc-04.rq"
+      "name": "codepoint-esc-02-bad.rq",
+      "comment": "Codepoint escape in PNAME_NS of a prefixed name",
+      "action": "codepoint-esc-02-bad.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-03-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "codepoint-esc-03-bad.rq",
+      "comment": "Codepoint escape in PN_LOCAL of a prefixed name",
+      "action": "codepoint-esc-03-bad.rq"
+    },
+    {
+      "@id": "manifest#codepoint-esc-04-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "codepoint-esc-04-bad.rq",
+      "comment": "Codepoint escape in variable",
+      "action": "codepoint-esc-04-bad.rq"
     },
     {
       "@id": "manifest#codepoint-esc-05",
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-05.rq",
+      "comment": "Codepoint escape in IRI",
       "action": "codepoint-esc-05.rq"
     },
     {
@@ -145,7 +147,7 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-06.rq",
-      "comment": "codepoint escape for the percent sign in the PL_LOCAL part of a PrefixedName",
+      "comment": "Codepoint escape in string - double quoted string",
       "action": "codepoint-esc-06.rq"
     },
     {
@@ -153,16 +155,48 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-07.rq",
-      "comment": "codepoint escape for whitespace separating the projection tokens: SELECT * WHERE",
+      "comment": "Codepoint escape in string - single quoted string",
       "action": "codepoint-esc-07.rq"
     },
     {
-      "@id": "manifest#codepoint-esc-08",
-      "@type": "mf:PositiveSyntaxTest",
+      "@id": "manifest#surrogate-esc-01-bad",
+      "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
-      "name": "codepoint-esc-08.rq",
-      "comment": "codepoint escape for the starting double-quote of a literal",
-      "action": "codepoint-esc-08.rq"
+      "name": "surrogate-esc-01-bad.rq",
+      "comment": "Surrogate pair - not accepted",
+      "action": "surrogate-esc-01-bad.rq"
+    },
+    {
+      "@id": "manifest#surrogate-esc-02-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "surrogate-esc-02-bad.rq",
+      "comment": "Surrogate - low-high - not accepted",
+      "action": "surrogate-esc-02-bad.rq"
+    },
+    {
+      "@id": "manifest#surrogate-esc-03-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "surrogate-esc-03-bad.rq",
+      "comment": "Surrogate - lone high escape sequence",
+      "action": "surrogate-esc-03-bad.rq"
+    },
+    {
+      "@id": "manifest#surrogate-esc-04-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "surrogate-esc-04-bad.rq",
+      "comment": "Surrogate - lone low escape sequence",
+      "action": "surrogate-esc-04-bad.rq"
+    },
+    {
+      "@id": "manifest#surrogate-esc-05-bad",
+      "@type": "mf:NegativeSyntaxTest",
+      "approval": "dawgt:Proposed",
+      "name": "surrogate-esc-05-bad.rq",
+      "comment": "Surrogate pair - IRI",
+      "action": "surrogate-esc-05-bad.rq"
     }
   ]
 }
