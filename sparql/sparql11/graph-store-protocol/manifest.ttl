@@ -389,7 +389,7 @@ gsp:put_get_default rdf:type mf:GraphStoreProtocolTest ;
                 ) ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:OK, hts:NoContent
+                    mf:expectedStatus hts:OK, hts:Created, hts:NoContent
                 ]
             ]
             [
