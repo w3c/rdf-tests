@@ -3,7 +3,7 @@
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href='manifest.ttl' rel='alternate' type='text/turtle'>
+    <link href='manifest-direct.ttl' rel='alternate' type='text/turtle'>
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' type='text/css'>
     <style>
       body {background-image: none;}
@@ -31,7 +31,7 @@
       footer {text-align: center;}
     </style>
     <title>
-      SPARQL Graph Store Protocol
+      SPARQL Graph Store Protocol - Direct Graph Identification
     </title>
     <style>
       em.rfc2119 {
@@ -51,19 +51,18 @@
       .error {color: red;}
     </style>
   </head>
-  <body resource='./' typeof='mf:Manifest'>
+  <body resource='manifest-direct.ttl' typeof='mf:Manifest'>
     <p>
       <a href='http://www.w3.org/'>
         <img alt='W3C' height='48' src='http://www.w3.org/Icons/w3c_home' width='72'>
       </a>
     </p>
-    <h1 property='rdfs:label'>SPARQL Graph Store Protocol</h1>
+    <h1 property='rdfs:label'>SPARQL Graph Store Protocol - Direct Graph Identification</h1>
     <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
     <hr title='Separator for header'>
     <div>
       <h2 id='abstract'>Abstract</h2>
       <p property='rdfs:comment'>
-        This manifests included here encode tests for the SPARQL Graph Store Protocol. Each test record has one or more ht:Requests that must be run in order to produce the expected results. Expected results are encoded in the ht:Response. The ht:Response may have a `mf:expectedStatus` property, describing the expected HTTP status code or class of status code (pointing to values like `hts:Created` or `hts:StatusCode2xx`); The ht:Response may have a `mf:expectedLocation` property whose value is a literal. In the presence of this property, the current response must have a `Location` header field value. Futher, the literal value must be used as a template variable and replaced in subsequent requests with the header field value (replacement occurring in the request URI as well as the request bodies). The ht:Response may include expected RDF response content, described by `ht:headers` and `ht:body`. When present, the graph resulting from parsing the ht:body content appropriately for the RDF format described by the Content-Type header must be graph isomorphic to the one in the response to the Graph Store Protocol request. Each request has a ht:absolutePath value that starts with `/gsp`. A program using this manifest data to run the tests must replace this value with whatever path prefix is appropriate for the Graph Store Protocol endpoint being tested. Each test uses the `mf:requires` property to indicate that the test requires the Graph Store Protocol endpoint being tested to support the listed features in order for the test to run: * mf:DirectGraphIdentification Direct identification of graphs using a request path whose prefix matches the endpoint (e.g. &lt;/gsp/person/1.ttl&gt;). * mf:IndirectGraphIdentification Indirect identification of graphs using a request query parameter with encoded graph URI (e.g. &lt;/gsp?graph=http%3A%2F%2Fwww.example%2Fgsp%2Fperson%2F1.ttl&gt;). * mf:requires mf:POSTGraphCreation Support for a POST request to the endpoint (e.g. &lt;/gsp&gt;) causing the Graph Store to create a new graph, and return its IRI in the response&#39;s Location header.
       </p>
       <p>This page describes W3C SPARQL Working Group's SPARQL 1.1 test suite.</p>
       <h3 id='contributing-tests'>Contributing Tests</h3>
@@ -76,16 +75,94 @@
     </div>
     <div>
       <h2>
-        Referenced Manifests
+        Test Descriptions
       </h2>
-      <ul>
-        <li>
-          <a href='index-direct.html' inlist='true' property='mf:include'>index-direct.html</a>
-        </li>
-        <li>
-          <a href='index-indirect.html' inlist='true' property='mf:include'>index-indirect.html</a>
-        </li>
-      </ul>
+      <dl class='test-description'>
+        <dt id='put_get_repeat_direct'>
+          <a class='testlink' href='#put_get_repeat_direct'>
+            put_get_repeat_direct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put_get_repeat_direct' property='mf:name'>PUT/GET repetition on same graph using varying graph identification  (direct graph identification)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put_get_repeat_direct' typeof='mf:GraphStoreProtocolTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:GraphStoreProtocolTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='put_delete_get_delete_direct'>
+          <a class='testlink' href='#put_delete_get_delete_direct'>
+            put_delete_get_delete_direct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put_delete_get_delete_direct' property='mf:name'>PUT initialization, then DELETE/GET/DELETE (direct graph identification)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put_delete_get_delete_direct' typeof='mf:GraphStoreProtocolTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:GraphStoreProtocolTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='post_get_post_get_direct'>
+          <a class='testlink' href='#post_get_post_get_direct'>
+            post_get_post_get_direct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post_get_post_get_direct' property='mf:name'>Two iterations os POST/GET, with the second using multipart/form-data (direct graph identification)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#post_get_post_get_direct' typeof='mf:GraphStoreProtocolTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:GraphStoreProtocolTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='head_existing_direct'>
+          <a class='testlink' href='#head_existing_direct'>
+            head_existing_direct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_existing_direct' property='mf:name'>PUT initialization, then HEAD on existing graph (direct graph identification)</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#head_existing_direct' typeof='mf:GraphStoreProtocolTest'>
+          <div property='rdfs:comment'>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:GraphStoreProtocolTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+              </dl>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
     </div>
     <footer>
       <p><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright ©</a> 2015 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C® <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
