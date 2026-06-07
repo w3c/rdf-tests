@@ -2,7 +2,7 @@
 
 SELECT ?v {
   VALUES ?v {
-    ## \t\n\r\b\f\"\'\\
+    ## a\t\n\r\b\f\"\'\\a
     "a\u0009\u000A\u000D\u0008\u000B\u000C\u0022\u0027\u005Ca"
   }
 }
