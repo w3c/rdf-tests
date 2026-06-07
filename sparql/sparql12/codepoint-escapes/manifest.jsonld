@@ -136,27 +136,58 @@
     },
     {
       "@id": "manifest#codepoint-esc-05",
-      "@type": "mf:PositiveSyntaxTest",
+      "@type": "mf:QueryEvaluationTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-05.rq",
       "comment": "Codepoint escape in IRI",
-      "action": "codepoint-esc-05.rq"
+      "action": {
+        "query": "codepoint-esc-05.rq"
+      },
+      "result": "codepoint-esc-05.srx"
     },
     {
       "@id": "manifest#codepoint-esc-06",
-      "@type": "mf:PositiveSyntaxTest",
+      "@type": "mf:QueryEvaluationTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-06.rq",
       "comment": "Codepoint escape in string - double quoted string",
-      "action": "codepoint-esc-06.rq"
+      "action": {
+        "query": "codepoint-esc-06.rq"
+      },
+      "result": "codepoint-esc-06.srx"
     },
     {
       "@id": "manifest#codepoint-esc-07",
-      "@type": "mf:PositiveSyntaxTest",
+      "@type": "mf:QueryEvaluationTest",
       "approval": "dawgt:Proposed",
       "name": "codepoint-esc-07.rq",
       "comment": "Codepoint escape in string - single quoted string",
-      "action": "codepoint-esc-07.rq"
+      "action": {
+        "query": "codepoint-esc-07.rq"
+      },
+      "result": "codepoint-esc-07.srx"
+    },
+    {
+      "@id": "manifest#codepoint-esc-08",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "codepoint-esc-08.rq",
+      "comment": "Codepoint escape in string - special characters",
+      "action": {
+        "query": "codepoint-esc-08.rq"
+      },
+      "result": "codepoint-esc-08.nt"
+    },
+    {
+      "@id": "manifest#codepoint-esc-09",
+      "@type": "mf:QueryEvaluationTest",
+      "approval": "dawgt:Proposed",
+      "name": "codepoint-esc-09.rq",
+      "comment": "Codepoint escape in string - parsing rules",
+      "action": {
+        "query": "codepoint-esc-09.rq"
+      },
+      "result": "codepoint-esc-09.srx"
     },
     {
       "@id": "manifest#surrogate-esc-01-bad",
