@@ -429,8 +429,8 @@
     mf:action
          [ qt:query     <agg-empty-group-count-graph.rq> ;
            qt:data      <empty.ttl> ;
-           qt:graphData <empty.ttl> ;
-           qt:graphData <singleton.ttl> ] ;
+           qt:graphData <singleton.ttl> ;
+           qt:graphData <pair.ttl> ] ;
     mf:result  <agg-empty-group-count-graph.ttl>
     .
 
