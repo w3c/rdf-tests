@@ -425,7 +425,7 @@
 
 :agg-empty-group-count-graph  rdf:type mf:QueryEvaluationTest ;
 	mf:name "COUNT: no GROUP BY inside of GRAPH" ;
-    rdfs:comment "counting no results without grouping always returns a single result per named graph." ;
+    rdfs:comment "counting without grouping always returns a single result per named graph." ;
     mf:action
          [ qt:query     <agg-empty-group-count-graph.rq> ;
            qt:data      <empty.ttl> ;
