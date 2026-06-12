@@ -772,6 +772,83 @@
           ]
         }
       }
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#put_get_uri_pct_encoded_indirect",
+      "@type": "mf:GraphStoreProtocolTest",
+      "name": "PUT/GET (indirect graph identification; using varying percent-encoding for the same graph IRI)",
+      "requires": [
+        "mf:IndirectGraphIdentification"
+      ],
+      "action": {
+        "@type": "http://www.w3.org/2011/http#Connection",
+        "http://www.w3.org/2011/http#connectionAuthority": "www.example",
+        "http://www.w3.org/2011/http#requests": {
+          "@list": [
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#absolutePath": "/gsp?graph=http%3A%2F%2Fwww.example%2Fgsp%2Fperson%2F1.ttl",
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "content-type",
+                    "http://www.w3.org/2011/http#fieldValue": "text/turtle; charset=utf-8"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#body": {
+                "@type": "http://www.w3.org/2011/content#ContentAsText",
+                "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                "http://www.w3.org/2011/content#chars": "\n                        @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n                        @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n                        \n                        <http://www.example/gsp/person/1> a foaf:Person;\n                            foaf:businessCard [\n                                a v:VCard;\n                                v:fn \"John Doe\"\n                            ].\n                    "
+              },
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#methodName": "PUT",
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http-statusCodes#Created"
+                }
+              }
+            },
+            {
+              "@type": "http://www.w3.org/2011/http#Request",
+              "http://www.w3.org/2011/http#methodName": "GET",
+              "http://www.w3.org/2011/http#httpVersion": "1.1",
+              "http://www.w3.org/2011/http#absolutePath": "/gsp?graph=http://www.example/gsp/person/1.ttl",
+              "http://www.w3.org/2011/http#headers": {
+                "@list": [
+                  {
+                    "@type": "http://www.w3.org/2011/http#RequestHeader",
+                    "http://www.w3.org/2011/http#fieldName": "accept",
+                    "http://www.w3.org/2011/http#fieldValue": "text/turtle"
+                  }
+                ]
+              },
+              "http://www.w3.org/2011/http#resp": {
+                "@type": "http://www.w3.org/2011/http#Response",
+                "mf:expectedStatus": {
+                  "@id": "http://www.w3.org/2011/http-statusCodes#OK"
+                },
+                "http://www.w3.org/2011/http#headers": {
+                  "@list": [
+                    {
+                      "@type": "http://www.w3.org/2011/http#ResponseHeader",
+                      "http://www.w3.org/2011/http#fieldName": "content-type",
+                      "http://www.w3.org/2011/http#fieldValue": "text/turtle; charset=utf-8"
+                    }
+                  ]
+                },
+                "http://www.w3.org/2011/http#body": {
+                  "@type": "http://www.w3.org/2011/content#ContentAsText",
+                  "http://www.w3.org/2011/content#characterEncoding": "UTF-8",
+                  "http://www.w3.org/2011/content#chars": "\n                            @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n                            @prefix v: <http://www.w3.org/2006/vcard/ns#> .\n                        \n                            <http://www.example/gsp/person/1> a foaf:Person;\n                               foaf:businessCard [\n                                    a v:VCard;\n                                    v:fn \"John Doe\"\n                               ].\n                        "
+                }
+              }
+            }
+          ]
+        }
+      }
     }
   ]
 }
