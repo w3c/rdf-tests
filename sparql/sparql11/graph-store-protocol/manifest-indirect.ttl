@@ -701,7 +701,7 @@ gsp:put_get_uri_pct_encoded_indirect rdf:type mf:GraphStoreProtocolTest ;
     .
 
 gsp:put_get_uri_pct_encoded_twice rdf:type mf:GraphStoreProtocolTest ;
-    mf:name    "PUT/GET/GET (indirect graph identification; checking that we decode percent-encoding only once (for the request URL query) and not twice)" ;
+    mf:name    "PUT/GET/GET (indirect graph identification; checking that we decode percent-encoding only once  — for the request URL query — and not twice)" ;
 	mf:requires mf:IndirectGraphIdentification ;
     mf:action [
         a ht:Connection ;
