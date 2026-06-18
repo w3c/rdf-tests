@@ -2472,28 +2472,28 @@
    mf:result    <turtle-subm-27.nt> ;
    .
 
-<#turtle-eval-bad-01> rdf:type rdft:TestTurtleNegativeEval ;
+<#turtle-eval-bad-01> rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name    "turtle-eval-bad-01" ;
-   rdfs:comment "Bad IRI : good escape, bad charcater (negative evaluation test)" ;
+   rdfs:comment "Bad IRI : good escape, bad character (negative evaluation test)" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-eval-bad-01.ttl> ;
    .
 
-<#turtle-eval-bad-02> rdf:type rdft:TestTurtleNegativeEval ;
+<#turtle-eval-bad-02> rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name    "turtle-eval-bad-02" ;
    rdfs:comment "Bad IRI : hex 3C is < (negative evaluation test)" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-eval-bad-02.ttl> ;
    .
 
-<#turtle-eval-bad-03> rdf:type rdft:TestTurtleNegativeEval ;
+<#turtle-eval-bad-03> rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name    "turtle-eval-bad-03" ;
    rdfs:comment "Bad IRI : hex 3E is  (negative evaluation test)" ;
    rdft:approval rdft:Approved ;
    mf:action    <turtle-eval-bad-03.ttl> ;
    .
 
-<#turtle-eval-bad-04> rdf:type rdft:TestTurtleNegativeEval ;
+<#turtle-eval-bad-04> rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name    "turtle-eval-bad-04" ;
    rdfs:comment "Bad IRI : {abc} (negative evaluation test)" ;
    rdft:approval rdft:Approved ;
