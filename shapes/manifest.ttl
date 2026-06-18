@@ -1,40 +1,368 @@
 # SHACL shapes for tests
 
+PREFIX dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#>
+PREFIX qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#>
 PREFIX mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdft: <http://www.w3.org/ns/rdftest#>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX ut: <http://www.w3.org/2009/sparql/tests/test-update#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-[
-    a sh:NodeShape ;
+[] a sh:NodeShape ;
     sh:targetClass mf:Manifest ;
-    sh:property [
-        sh:path mf:include ;
-        sh:maxCount 1
-    ] ;
-    sh:property [
-        sh:path mf:entries ;
-        sh:maxCount 1
-    ]
-] .
+    sh:property
+        [
+            sh:path mf:include ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path mf:entries ;
+            sh:maxCount 1
+        ] .
 
-[
-    a sh:NodeShape ;
+[] a sh:NodeShape ;
     sh:targetClass rdft:Test ;
+    sh:property
+        [
+            sh:path mf:name ;
+            sh:nodeKind sh:Literal ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path rdfs:comment ;
+            sh:nodeKind sh:Literal
+        ] ,
+        [
+            sh:path rdft:approval ;
+            sh:in ( rdft:Approved rdft:Proposed rdft:Rejected rdft:NotClassified ) ; # TODO: rdft:NotClassified is not in the vocabulary but used
+            sh:maxCount 1
+        ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass rdft:TestSyntax ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type mf:name rdfs:comment rdft:approval ) ;
     sh:property [
         sh:path mf:action ;
         sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
         sh:maxCount 1
-    ] ;
-    sh:property [
-        sh:path mf:result ;
-        sh:or ( [ sh:nodeKind sh:IRI ] [ sh:hasValue false ] ) ;
-        sh:maxCount 1
-    ] ;
-    sh:property [
-        sh:path rdft:approval ;
-        sh:nodeKind sh:IRI ;
-        sh:in (rdft:Approved rdft:Proposed rdft:Rejected rdft:NotClassified) ; # TODO: rdft:NotClassified is not in the vocabulary but used
-        sh:maxCount 1
-    ]
-] .
+    ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass rdft:TestEval ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type mf:name rdfs:comment rdft:approval ) ;
+    sh:property
+        [
+            sh:path mf:action ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path mf:result ;
+            sh:nodeKind sh:IRI ;
+            # TODO TestTurtleNegativeEval sh:minCount 1 ; #352
+            sh:maxCount 1
+        ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass rdft:TestNTriplesPositiveC14N ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type mf:name rdfs:comment rdft:approval ) ;
+    sh:property
+        [
+            sh:path mf:action ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path mf:result ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass mf:PositiveSyntaxTest , mf:PositiveSyntaxTest11 , mf:NegativeSyntaxTest , mf:NegativeSyntaxTest11 ,
+                   mf:PositiveUpdateSyntaxTest , mf:PositiveUpdateSyntaxTest11 , mf:NegativeUpdateSyntaxTest , mf:NegativeUpdateSyntaxTest11 ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property
+        [
+            sh:path mf:name ;
+            sh:nodeKind sh:Literal ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path rdfs:comment ;
+            sh:nodeKind sh:Literal
+        ] ,
+        [
+            sh:path dawgt:approval ;
+            sh:in ( dawgt:NotClassified dawgt:Approved dawgt:Rejected dawgt:Obsoleted dawgt:Withdrawn dawgt:Proposed ) ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path dawgt:approvedBy ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path mf:action ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path mf:specVersion ;
+            sh:nodeKind sh:Literal ;
+            sh:maxCount 1 ;
+            sh:in ( "sparql-1.1" "sparql-1.2" )
+        ] ,
+        [
+            sh:path mf:feature ;
+            sh:nodeKind sh:IRI ;
+        ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass mf:QueryEvaluationTest ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdfs:seeAlso ) ;
+    sh:property
+        [
+            sh:path mf:name ;
+            sh:nodeKind sh:Literal ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path rdfs:comment ;
+            sh:nodeKind sh:Literal
+        ] ,
+        [
+            sh:path dawgt:approval ;
+            sh:in ( dawgt:NotClassified dawgt:Approved dawgt:Rejected dawgt:Obsoleted dawgt:Withdrawn dawgt:Proposed ) ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path dawgt:approvedBy ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path mf:action ;
+            sh:nodeKind sh:BlankNode ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:node [
+                sh:closed true ;
+                sh:ignoredProperties ( sd:EntailmentProfile sd:entailmentRegime ) ; # TODO: validate
+                sh:property
+                    [
+                        sh:path qt:query ;
+                        sh:nodeKind sh:IRI ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path qt:data ;
+                        sh:nodeKind sh:IRI ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path qt:graphData ;
+                        sh:nodeKind sh:IRI ;
+                    ] ,
+                    [
+                        sh:path qt:serviceData ;
+                        sh:nodeKind sh:BlankNode ;
+                        sh:node [
+                            sh:closed true ;
+                            sh:property
+                                [
+                                    sh:path qt:endpoint ;
+                                    sh:nodeKind sh:IRI ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ] ,
+                                [
+                                    sh:path qt:data ;
+                                    sh:nodeKind sh:IRI ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ]
+                        ]
+                    ]
+            ]
+        ] ,
+        [
+            sh:path mf:result ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path mf:specVersion ;
+            sh:nodeKind sh:Literal ;
+            sh:maxCount 1 ;
+            sh:in ( "sparql-1.1" "sparql-1.2" )
+        ] ,
+        [
+            sh:path mf:feature ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path mf:requires ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path qt:queryForm ;
+            sh:in ( qt:QueryAsk qt:QueryConstruct qt:QueryDescribe qt:QuerySelect )
+        ] ,
+        [
+            sh:path  mf:resultCardinality ;
+            sh:in ( mf:LaxCardinality )
+        ] ,
+        [
+            sh:path mf:notable ;
+            sh:in ( mf:IllFormedLiteral )
+        ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass mf:UpdateEvaluationTest ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdfs:seeAlso ) ;
+    sh:property
+        [
+            sh:path mf:name ;
+            sh:nodeKind sh:Literal ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path rdfs:comment ;
+            sh:nodeKind sh:Literal
+        ] ,
+        [
+            sh:path dawgt:approval ;
+            sh:in ( dawgt:NotClassified dawgt:Approved dawgt:Rejected dawgt:Obsoleted dawgt:Withdrawn dawgt:Proposed ) ;
+            sh:maxCount 1
+        ] ,
+        [
+            sh:path dawgt:approvedBy ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path mf:action ;
+            sh:nodeKind sh:BlankNode ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:node [
+                sh:closed true ;
+                sh:ignoredProperties ( sd:EntailmentProfile sd:entailmentRegime ) ; # TODO: validate
+                sh:property
+                    [
+                        sh:path ut:request ;
+                        sh:nodeKind sh:IRI ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path ut:data ;
+                        sh:nodeKind sh:IRI ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path ut:graphData ;
+                        sh:nodeKind sh:BlankNode ;
+                        sh:node [
+                            sh:closed true ;
+                            sh:property
+                                [
+                                    sh:path ut:graph ;
+                                    sh:nodeKind sh:IRI ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ] ,
+                                [
+                                    sh:path rdfs:label ;
+                                    sh:datatype xsd:string ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ]
+                        ]
+                    ]
+            ]
+        ] ,
+        [
+            sh:path mf:result ;
+            sh:nodeKind sh:BlankNode ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:node [
+                sh:closed true ;
+                sh:property
+                    [
+                        sh:path ut:result ;
+                        sh:in ( ut:success ) ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path ut:data ;
+                        sh:nodeKind sh:IRI ;
+                        sh:maxCount 1
+                    ] ,
+                    [
+                        sh:path ut:graphData ;
+                        sh:nodeKind sh:BlankNode ;
+                        sh:node [
+                            sh:closed true ;
+                            sh:property
+                                [
+                                    sh:path ut:graph ;
+                                    sh:nodeKind sh:IRI ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ] ,
+                                [
+                                    sh:path rdfs:label ;
+                                    sh:datatype xsd:string ;
+                                    sh:minCount 1 ;
+                                    sh:maxCount 1
+                                ]
+                        ]
+                    ]
+            ]
+        ] ,
+        [
+            sh:path mf:specVersion ;
+            sh:nodeKind sh:Literal ;
+            sh:maxCount 1 ;
+            sh:in ( "sparql-1.1" "sparql-1.2" )
+        ] ,
+        [
+            sh:path mf:feature ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path mf:requires ;
+            sh:nodeKind sh:IRI
+        ] ,
+        [
+            sh:path qt:queryForm ;
+            sh:in ( qt:QueryAsk qt:QueryConstruct qt:QueryDescribe qt:QuerySelect )
+        ] ,
+        [
+            sh:path  mf:resultCardinality ;
+            sh:in ( mf:LaxCardinality )
+        ] ,
+        [
+            sh:path mf:notable ;
+            sh:in ( mf:IllFormedLiteral )
+        ] .

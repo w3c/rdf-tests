@@ -77,7 +77,7 @@
     # rdfs:range   ?? ;
     .	
 
-:result rdf:type rdf:Property ;
+:status rdf:type rdf:Property ;
     rdfs:comment "The test status" ;
     rdfs:domain	 :ManifestEntry ;
     rdfs:range   :TestStatus ;

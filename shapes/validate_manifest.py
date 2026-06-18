@@ -9,11 +9,14 @@ Small Python script to validate manifest files
 
 import os
 from pathlib import Path
+
+from rdflib import Graph
 from pyshacl import validate
 
 repository_root = Path(__file__).parent.parent
 shape_path = repository_root / "shapes" / "manifest.ttl"
 vocab_path = repository_root / "ns" / "rdftest.ttl"
+sparql_vocab_path = repository_root / "ns" / "test-manifest.ttl"
 
 
 def log_line(message: str, level: str, file: Path | None = None) -> None:
@@ -24,6 +27,8 @@ def log_line(message: str, level: str, file: Path | None = None) -> None:
     else:
         print(message)
 
+shacl_graph = Graph().parse(str(shape_path))
+ont_graph = Graph().parse(str(vocab_path)).parse(str(sparql_vocab_path))
 
 failure_counter = 0
 total_counter = 0
@@ -31,8 +36,8 @@ for manifest_path in repository_root.rglob("manifest*.ttl"):
     try:
         (conforms, _, results_text) = validate(
             str(manifest_path),
-            shacl_graph=str(shape_path),
-            ont_graph=str(vocab_path),
+            shacl_graph=shacl_graph,
+            ont_graph=ont_graph,
             inference="rdfs",
         )
     except SyntaxError as e:
