@@ -62,14 +62,16 @@
     mf:result  <group05.srx>
     .
 
-:group06 rdf:type  mf:NegativeSyntaxTest11;
+:group06 rdf:type  mf:NegativeSyntaxTest ;
+    mf:specVersion "sparql-1.1";
     mf:name    "Group-6" ;
     rdfs:comment "projection of ungrouped variable";
     dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_3> ;
     mf:action <group06.rq> .
 
-:group07 rdf:type  mf:NegativeSyntaxTest11;
+:group07 rdf:type  mf:NegativeSyntaxTest ;
+    mf:specVersion "sparql-1.1";
     mf:name    "Group-7" ;
     rdfs:comment "projection of ungrouped variable, more complex example than Group-6";
     dawgt:approval dawgt:Approved ;

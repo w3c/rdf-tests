@@ -61,14 +61,16 @@
     mf:result  <constructwhere04result.ttl>
     .
 
-:constructwhere05 rdf:type mf:NegativeSyntaxTest11 ;
+:constructwhere05 rdf:type mf:NegativeSyntaxTest ;
+   mf:specVersion "sparql-1.1" ;
     mf:name    "constructwhere05 - CONSTRUCT WHERE" ;
     rdfs:comment "CONSTRUCT WHERE  with FILTER";
     dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3> ;
     mf:action <constructwhere05.rq> .
 
-:constructwhere06 rdf:type mf:NegativeSyntaxTest11 ;
+:constructwhere06 rdf:type mf:NegativeSyntaxTest ;
+   mf:specVersion "sparql-1.1" ;
     mf:name    "constructwhere06 - CONSTRUCT WHERE" ;
     mf:description "CONSTRUCT WHERE  with GRAPH";
     dawgt:approval dawgt:Approved ;
