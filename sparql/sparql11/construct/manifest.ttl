@@ -70,7 +70,7 @@
 
 :constructwhere06 rdf:type mf:NegativeSyntaxTest11 ;
     mf:name    "constructwhere06 - CONSTRUCT WHERE" ;
-    mf:description "CONSTRUCT WHERE  with GRAPH";
+    rdfs:comment "CONSTRUCT WHERE  with GRAPH";
     dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2011-02-01#resolution_3> ;
     mf:action <constructwhere06.rq> .
