@@ -19,7 +19,7 @@
 
 :nested-aggregate-functions rdf:type mf:NegativeSyntaxTest ;
     mf:name "Nested aggregate functions" ;
-    mf:comment "The expression argument of an aggregate function can not contain an aggregate function." ;
+    rdfs:comment "The expression argument of an aggregate function can not contain an aggregate function." ;
     mf:action <nested-aggregate-functions.rq> .
 
 :duplicated-values-variable rdf:type mf:NegativeSyntaxTest ;
