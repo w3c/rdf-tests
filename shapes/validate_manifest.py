@@ -14,7 +14,7 @@ from rdflib import Graph
 from pyshacl import validate
 
 repository_root = Path(__file__).parent.parent
-shape_path = repository_root / "shapes" / "manifest.ttl"
+shape_path = repository_root / "shapes" / "shapes.ttl"
 vocab_path = repository_root / "ns" / "rdftest.ttl"
 sparql_vocab_path = repository_root / "ns" / "test-manifest.ttl"
 
