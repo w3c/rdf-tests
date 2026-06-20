@@ -106,7 +106,7 @@
       "@id": "manifest#nested-aggregate-functions",
       "@type": "mf:NegativeSyntaxTest",
       "name": "Nested aggregate functions",
-      "mf:comment": "The expression argument of an aggregate function can not contain an aggregate function.",
+      "comment": "The expression argument of an aggregate function can not contain an aggregate function.",
       "action": "nested-aggregate-functions.rq"
     },
     {
