@@ -121,7 +121,7 @@
 
 :PositiveUpdateSyntaxTest11 rdf:type rdfs:Class ;
       rdfs:label "Positive Syntax Test for SPARQL 1.1 Update" ;
-      rdfs:comment "A type of test specifically for syntax testing of SPARQL 1.1 Update. Syntax tests are not required to have an associated result, only an action." ;
+      rdfs:comment "A type of test specifically for syntax testing of SPARQL 1.1 Update. Syntax tests do not have an associated result, only an action." ;
       owl:deprecated true ;
       rdfs:subClassOf :PositiveUpdateSyntaxTest .
 
