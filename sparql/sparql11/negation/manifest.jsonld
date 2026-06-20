@@ -236,7 +236,7 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/negation/manifest#graph-minus",
       "@type": "mf:QueryEvaluationTest",
       "name": "outer GRAPH operator does not affect MINUS disjointness",
-      "mf:description": "The outer GRAPH operator variable is not implied when checking that sides of the MINUS are disjoint.",
+      "comment": "The outer GRAPH operator variable is not implied when checking that sides of the MINUS are disjoint.",
       "action": {
         "query": "graph-minus.rq",
         "graphData": [

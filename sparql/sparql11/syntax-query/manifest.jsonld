@@ -803,7 +803,7 @@
       "@type": "mf:NegativeSyntaxTest11",
       "approval": "dawgt:Proposed",
       "name": "Invalid multi-pass codepoint escaping (\\u then \\U)",
-      "mf:description": "Unescaping one escape sequence must not produce content that is used in another escape sequence",
+      "comment": "Unescaping one escape sequence must not produce content that is used in another escape sequence",
       "action": "syn-codepoint-escape-bad-04.rq"
     },
     {
@@ -811,7 +811,7 @@
       "@type": "mf:NegativeSyntaxTest11",
       "approval": "dawgt:Proposed",
       "name": "Invalid multi-pass codepoint escaping (\\U then \\u)",
-      "mf:description": "Unescaping one escape sequence must not produce content that is used in another escape sequence",
+      "comment": "Unescaping one escape sequence must not produce content that is used in another escape sequence",
       "action": "syn-codepoint-escape-bad-05.rq"
     },
     {
@@ -833,7 +833,7 @@
       "@type": "mf:NegativeSyntaxTest11",
       "approval": "dawgt:Proposed",
       "name": "\\u unicode codepoint escaping in literal using partial surrogate pair",
-      "mf:description": "Using a codepoint that is half of a surrogate pair (in the range U+D800–U+DFFF) without a corresponding codepoint is illegal",
+      "comment": "Using a codepoint that is half of a surrogate pair (in the range U+D800–U+DFFF) without a corresponding codepoint is illegal",
       "action": "syn-invalid-codepoint-escaped-bad-01.rq"
     },
     {
