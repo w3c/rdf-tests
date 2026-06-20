@@ -62,6 +62,7 @@
     .
 
 :constructwhere05 rdf:type mf:NegativeSyntaxTest11 ;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "constructwhere05 - CONSTRUCT WHERE" ;
     rdfs:comment "CONSTRUCT WHERE  with FILTER";
     dawgt:approval dawgt:Approved ;
@@ -69,6 +70,7 @@
     mf:action <constructwhere05.rq> .
 
 :constructwhere06 rdf:type mf:NegativeSyntaxTest11 ;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "constructwhere06 - CONSTRUCT WHERE" ;
     mf:description "CONSTRUCT WHERE  with GRAPH";
     dawgt:approval dawgt:Approved ;
