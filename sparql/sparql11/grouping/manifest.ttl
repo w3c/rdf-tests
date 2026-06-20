@@ -63,6 +63,7 @@
     .
 
 :group06 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "Group-6" ;
     rdfs:comment "projection of ungrouped variable";
     dawgt:approval dawgt:Approved ;
@@ -70,6 +71,7 @@
     mf:action <group06.rq> .
 
 :group07 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "Group-7" ;
     rdfs:comment "projection of ungrouped variable, more complex example than Group-6";
     dawgt:approval dawgt:Approved ;
