@@ -63,21 +63,21 @@
     rdfs:comment "Optional name of this entry" ;
     rdfs:domain	 :ManifestEntry ;
     rdfs:range   rdfs:Literal ;
-    .	
-    
+    .
+
 :action rdf:type rdf:Property ;
     rdfs:comment "Action to perform" ;
     rdfs:domain	 :ManifestEntry ;
     # rdfs:range   ?? ;
-    .	
+    .
 
 :result rdf:type rdf:Property ;
     rdfs:comment "The expected outcome" ;
     rdfs:domain	 :ManifestEntry ;
     # rdfs:range   ?? ;
-    .	
+    .
 
-:result rdf:type rdf:Property ;
+:status rdf:type rdf:Property ;
     rdfs:comment "The test status" ;
     rdfs:domain	 :ManifestEntry ;
     rdfs:range   :TestStatus ;
@@ -175,13 +175,13 @@
 
 :XsdDateOperations	rdf:type :Requirement ;
     rdfs:comment "Tests that require xsd:date operations" .
-	
+
 :StringSimpleLiteralCmp	rdf:type :Requirement ;
     rdfs:comment "Tests that require simple literal is the same value as an xsd:string of the same lexicial form" .
-    
+
 :KnownTypesDefault2Neq	rdf:type :Requirement ;
     rdfs:comment "Values in disjoint value spaces are not equal" .
-    
+
 :LangTagAwareness	rdf:type :Requirement ;
     rdfs:comment "Tests that require langauge tag handling in FILTERs" .
     
@@ -207,4 +207,3 @@ with each solution in the expected results appearing at least once and
 no more than the number of times it appears in the expected results. Of 
 course, there must also be no results produced that are not in the 
 expected results.""" .
-
