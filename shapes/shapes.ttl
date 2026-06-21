@@ -16,11 +16,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property
         [
             sh:path mf:include ;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:memberShape [
+                sh:nodeKind sh:IRI
+            ] ;
+            sh:uniqueMembers true
         ] ,
         [
             sh:path mf:entries ;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:memberShape [
+                sh:nodeKind sh:IRI
+                # TODO: enforce that one of the test shape is used
+            ] ;
+            sh:uniqueMembers true
         ] .
 
 [] a sh:NodeShape ;
