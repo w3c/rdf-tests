@@ -18,6 +18,7 @@
                  gsp:head_existing_indirect
                  gsp:head_non_existing_indirect
                  gsp:put_get_uri_pct_encoded_indirect
+                 gsp:put_get_uri_pct_encoded_twice
                ) .
 
 gsp:put_get_repeat_indirect rdf:type mf:GraphStoreProtocolTest ;
@@ -700,3 +701,144 @@ gsp:put_get_uri_pct_encoded_indirect rdf:type mf:GraphStoreProtocolTest ;
     ] ;
     .
 
+gsp:put_get_uri_pct_encoded_twice rdf:type mf:GraphStoreProtocolTest ;
+    mf:name    "PUT/PUT/GET/GET (indirect graph identification; checking that we decode percent-encoding only once  — for the request URL query — and not twice)" ;
+	mf:requires mf:IndirectGraphIdentification ;
+    mf:action [
+        a ht:Connection ;
+        ht:connectionAuthority "www.example" ;
+        ht:requests ([
+                a ht:Request ;
+                ht:absolutePath "/gsp?graph=http://www.example/gsp/person/%31.ttl" ;
+                ht:headers ([
+                        a ht:RequestHeader ;
+                        ht:fieldName "content-type" ;
+                        ht:fieldValue "text/turtle; charset=utf-8"
+                    ]
+                ) ;
+                ht:body [
+                    a cnt:ContentAsText ;
+                    cnt:characterEncoding "UTF-8" ;
+                    cnt:chars """
+                        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+                        @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+                        <http://www.example/gsp/person/1> a foaf:Person;
+                            foaf:businessCard [
+                                a v:VCard;
+                                v:fn "John Doe"
+                            ].
+                    """
+                ] ;
+                ht:httpVersion "1.1" ;
+                ht:methodName "PUT" ;
+                ht:resp [
+                    a ht:Response ;
+                    mf:expectedStatus hts:Created
+                ]
+            ]
+            [
+                a ht:Request ;
+                ht:absolutePath "/gsp?graph=http://www.example/gsp/person/%2531.ttl" ;
+                ht:headers ([
+                        a ht:RequestHeader ;
+                        ht:fieldName "content-type" ;
+                        ht:fieldValue "text/turtle; charset=utf-8"
+                    ]
+                ) ;
+                ht:body [
+                    a cnt:ContentAsText ;
+                    cnt:characterEncoding "UTF-8" ;
+                    cnt:chars """
+                        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+                        @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+                        <http://www.example/gsp/person/2> a foaf:Person;
+                            foaf:businessCard [
+                                a v:VCard;
+                                v:fn "Jane Doe"
+                            ].
+                    """
+                ] ;
+                ht:httpVersion "1.1" ;
+                ht:methodName "PUT" ;
+                ht:resp [
+                    a ht:Response ;
+                    mf:expectedStatus hts:Created
+                ]
+            ]
+            [
+                a ht:Request ;
+                ht:methodName "GET" ;
+                ht:httpVersion "1.1" ;
+                ht:absolutePath "/gsp?graph=http://www.example/gsp/person/%31.ttl" ;
+                ht:headers ([
+                        a ht:RequestHeader ;
+                        ht:fieldName "accept" ;
+                        ht:fieldValue "text/turtle"
+                    ]
+                ) ;
+                ht:resp [
+                    a ht:Response ;
+                    mf:expectedStatus hts:OK ;
+                    ht:headers ([
+                            a ht:ResponseHeader ;
+                            ht:fieldName "content-type" ;
+                            ht:fieldValue "text/turtle; charset=utf-8"
+                        ]
+                    ) ;
+                    ht:body [
+                        a cnt:ContentAsText ;
+                        cnt:characterEncoding "UTF-8" ;
+                        cnt:chars """
+                            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+                            @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+                            <http://www.example/gsp/person/1> a foaf:Person;
+                               foaf:businessCard [
+                                    a v:VCard;
+                                    v:fn "John Doe"
+                               ].
+                        """
+                    ] ;
+                ]
+            ]
+            [
+                a ht:Request ;
+                ht:methodName "GET" ;
+                ht:httpVersion "1.1" ;
+                ht:absolutePath "/gsp?graph=http://www.example/gsp/person/%2531.ttl" ;
+                ht:headers ([
+                        a ht:RequestHeader ;
+                        ht:fieldName "accept" ;
+                        ht:fieldValue "text/turtle"
+                    ]
+                ) ;
+                ht:resp [
+                    a ht:Response ;
+                    mf:expectedStatus hts:OK ;
+                    ht:headers ([
+                            a ht:ResponseHeader ;
+                            ht:fieldName "content-type" ;
+                            ht:fieldValue "text/turtle; charset=utf-8"
+                        ]
+                    ) ;
+                    ht:body [
+                        a cnt:ContentAsText ;
+                        cnt:characterEncoding "UTF-8" ;
+                        cnt:chars """
+                            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+                            @prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+                            <http://www.example/gsp/person/2> a foaf:Person;
+                                foaf:businessCard [
+                                    a v:VCard;
+                                    v:fn "Jane Doe"
+                                ].
+                        """
+                    ] ;
+                ]
+            ]
+        )
+    ] ;
+    .
