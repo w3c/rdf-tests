@@ -2574,91 +2574,104 @@
     rdfs:comment "Blank node label must not end in dot" ;
     mf:name "turtle-syntax-bad-blank-label-dot-end" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-blank-label-dot-end.ttl> .
+    mf:action <turtle-syntax-bad-blank-label-dot-end.ttl> ;
+    .
 
 <#turtle-syntax-bad-number-dot-in-anon>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Dot delimeter may not appear in anonymous nodes" ;
     mf:name "turtle-syntax-bad-number-dot-in-anon" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-number-dot-in-anon.ttl> .
+    mf:action <turtle-syntax-bad-number-dot-in-anon.ttl> ;
+    .
 
 <#turtle-syntax-bad-ln-dash-start>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Local name must not begin with dash" ;
     mf:name "turtle-syntax-bad-ln-dash-start" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-ln-dash-start.ttl> .
+    mf:action <turtle-syntax-bad-ln-dash-start.ttl> ;
+    .
 
 <#turtle-syntax-bad-ln-escape>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Bad hex escape in local name" ;
     mf:name "turtle-syntax-bad-ln-escape" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-ln-escape.ttl> .
+    mf:action <turtle-syntax-bad-ln-escape.ttl> ;
+    .
 
 <#turtle-syntax-bad-ln-escape-start>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Bad hex escape at start of local name" ;
     mf:name "turtle-syntax-bad-ln-escape-start" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-ln-escape-start.ttl> .
+    mf:action <turtle-syntax-bad-ln-escape-start.ttl> ;
+    .
 
 <#turtle-syntax-bad-ns-dot-end>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Prefix must not end in dot" ;
     mf:name "turtle-syntax-bad-ns-dot-end" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-ns-dot-end.ttl> .
+    mf:action <turtle-syntax-bad-ns-dot-end.ttl> ;
+    .
 
 <#turtle-syntax-bad-ns-dot-start>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Prefix must not start with dot" ;
     mf:name "turtle-syntax-bad-ns-dot-start" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-ns-dot-start.ttl> .
+    mf:action <turtle-syntax-bad-ns-dot-start.ttl> ;
+    .
 
 <#turtle-syntax-bad-missing-ns-dot-end>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Prefix must not end in dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end)" ;
     mf:name "turtle-syntax-bad-missing-ns-dot-end" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-missing-ns-dot-end.ttl> .
+    mf:action <turtle-syntax-bad-missing-ns-dot-end.ttl> ;
+    .
 
 <#turtle-syntax-bad-missing-ns-dot-start>
     rdf:type rdft:TestTurtleNegativeSyntax ;
     rdfs:comment "Prefix must not start with dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end)" ;
     mf:name "turtle-syntax-bad-missing-ns-dot-start" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-bad-missing-ns-dot-start.ttl> .
+    mf:action <turtle-syntax-bad-missing-ns-dot-start.ttl> ;
+    .
 
 <#turtle-syntax-ln-dots>
     rdf:type rdft:TestTurtlePositiveSyntax ;
     rdfs:comment "Dots in pname local names" ;
     mf:name "turtle-syntax-ln-dots" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-ln-dots.ttl> .
+    mf:action <turtle-syntax-ln-dots.ttl> ;
+    .
 
 <#turtle-syntax-ln-colons>
     rdf:type rdft:TestTurtlePositiveSyntax ;
     rdfs:comment "Colons in pname local names" ;
     mf:name "turtle-syntax-ln-colons" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-ln-colons.ttl> .
+    mf:action <turtle-syntax-ln-colons.ttl> ;
+    .
 
 <#turtle-syntax-ns-dots>
     rdf:type rdft:TestTurtlePositiveSyntax ;
     rdfs:comment "Dots in namespace names" ;
     mf:name "turtle-syntax-ns-dots" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-ns-dots.ttl> .
+    mf:action <turtle-syntax-ns-dots.ttl> ;
+    .
 
 <#turtle-syntax-blank-label>
     rdf:type rdft:TestTurtlePositiveSyntax ;
     rdfs:comment "Characters allowed in blank node labels" ;
     mf:name "turtle-syntax-blank-label" ;
     rdft:approval rdft:Approved ;
-    mf:action <turtle-syntax-blank-label.ttl> .
+    mf:action <turtle-syntax-blank-label.ttl> ;
+    .
 
 # IRI resolution tests
 <#IRI-resolution-01>
@@ -2667,7 +2680,8 @@
     mf:name "IRI-resolution-01" ;
     rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-01.ttl> ;
-    mf:result <IRI-resolution-01.nt> .
+    mf:result <IRI-resolution-01.nt> ;
+    .
 
 <#IRI-resolution-02>
     rdf:type rdft:TestTurtleEval ;
@@ -2675,7 +2689,8 @@
     mf:name "IRI-resolution-02" ;
     rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-02.ttl> ;
-    mf:result <IRI-resolution-02.nt> .
+    mf:result <IRI-resolution-02.nt> ;
+    .
 
 <#IRI-resolution-07>
     rdf:type rdft:TestTurtleEval ;
@@ -2683,7 +2698,8 @@
     mf:name "IRI-resolution-07" ;
     rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-07.ttl> ;
-    mf:result <IRI-resolution-07.nt> .
+    mf:result <IRI-resolution-07.nt> ;
+    .
 
 <#IRI-resolution-08>
     rdf:type rdft:TestTurtleEval ;
@@ -2691,4 +2707,5 @@
     mf:name "IRI-resolution-08" ;
     rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-08.ttl> ;
-    mf:result <IRI-resolution-08.nt> .
+    mf:result <IRI-resolution-08.nt> ;
+    .

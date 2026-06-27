@@ -426,6 +426,7 @@
    mf:action    <labeled_blank_node_graph.trig> ;
    mf:result    <labeled_blank_node_graph.nq> ;
    .
+
 <#alternating_iri_graphs> rdf:type rdft:TestTrigEval ;
    mf:name      "alternating_iri_graphs" ;
    rdfs:comment "alternating graphs with IRI names" ;
@@ -490,6 +491,7 @@
    rdft:approval rdft:Approved ;
    mf:action    <trig-syntax-minimal-whitespace-01.trig> ;
    .
+
 # Original Turtle tests
 # atomic tests
 <#IRI_subject> rdf:type rdft:TestTrigEval ;
@@ -2681,70 +2683,79 @@
    rdfs:comment "Blank node label must not end in dot" ;
    mf:name "trig-syntax-bad-blank-label-dot-end" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-blank-label-dot-end.trig> .
+   mf:action <trig-syntax-bad-blank-label-dot-end.trig> ;
+   .
 
 <#trig-syntax-bad-number-dot-in-anon>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Dot delimeter may not appear in anonymous nodes" ;
    mf:name "trig-syntax-bad-number-dot-in-anon" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-number-dot-in-anon.trig> .
+   mf:action <trig-syntax-bad-number-dot-in-anon.trig> ;
+   .
 
 <#trig-syntax-bad-ln-dash-start>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Local name must not begin with dash" ;
    mf:name "trig-syntax-bad-ln-dash-start" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-ln-dash-start.trig> .
+   mf:action <trig-syntax-bad-ln-dash-start.trig> ;
+   .
 
 <#trig-syntax-bad-ln-escape>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Bad hex escape in local name" ;
    mf:name "trig-syntax-bad-ln-escape" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-ln-escape.trig> .
+   mf:action <trig-syntax-bad-ln-escape.trig> ;
+   .
 
 <#trig-syntax-bad-ln-escape-start>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Bad hex escape at start of local name" ;
    mf:name "trig-syntax-bad-ln-escape-start" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-ln-escape-start.trig> .
+   mf:action <trig-syntax-bad-ln-escape-start.trig> ;
+   .
 
 <#trig-syntax-bad-ns-dot-end>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Prefix must not end in dot" ;
    mf:name "trig-syntax-bad-ns-dot-end" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-ns-dot-end.trig> .
+   mf:action <trig-syntax-bad-ns-dot-end.trig> ;
+   .
 
 <#trig-syntax-bad-ns-dot-start>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Prefix must not start with dot" ;
    mf:name "trig-syntax-bad-ns-dot-start" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-ns-dot-start.trig> .
+   mf:action <trig-syntax-bad-ns-dot-start.trig> ;
+   .
 
 <#trig-syntax-bad-missing-ns-dot-end>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Prefix must not end in dot (error in triple, not prefix directive like trig-syntax-bad-ns-dot-end)" ;
    mf:name "trig-syntax-bad-missing-ns-dot-end" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-missing-ns-dot-end.trig> .
+   mf:action <trig-syntax-bad-missing-ns-dot-end.trig> ;
+   .
 
 <#trig-syntax-bad-missing-ns-dot-start>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Prefix must not start with dot (error in triple, not prefix directive like trig-syntax-bad-ns-dot-end)" ;
    mf:name "trig-syntax-bad-missing-ns-dot-start" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-missing-ns-dot-start.trig> .
+   mf:action <trig-syntax-bad-missing-ns-dot-start.trig> ;
+   .
 
 <#trig-syntax-bad-list-01>
    rdf:type rdft:TestTrigNegativeSyntax ;
    rdfs:comment "Free-standing list outside {} : bad syntax" ;
    mf:name "trig-syntax-bad-list-01" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-list-01.trig>
+   mf:action <trig-syntax-bad-list-01.trig> ;
    .
 
 <#trig-syntax-bad-list-02>
@@ -2752,7 +2763,7 @@
    rdfs:comment "Free-standing list of zero-elements outside {} : bad syntax" ;
    mf:name "trig-syntax-bad-list-02" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-list-02.trig>
+   mf:action <trig-syntax-bad-list-02.trig> ;
    .
 
 <#trig-syntax-bad-list-03>
@@ -2760,7 +2771,7 @@
    rdfs:comment "Free-standing list inside {} : bad syntax" ;
    mf:name "trig-syntax-bad-list-03" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-list-03.trig>
+   mf:action <trig-syntax-bad-list-03.trig> ;
    .
 
 <#trig-syntax-bad-list-04>
@@ -2768,7 +2779,7 @@
    rdfs:comment "Free-standing list of zero elements : bad syntax" ;
    mf:name "trig-syntax-bad-list-04" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-bad-list-04.trig>
+   mf:action <trig-syntax-bad-list-04.trig> ;
    .
 
 <#trig-syntax-ln-dots>
@@ -2776,28 +2787,32 @@
    rdfs:comment "Dots in pname local names" ;
    mf:name "trig-syntax-ln-dots" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-ln-dots.trig> .
+   mf:action <trig-syntax-ln-dots.trig> ;
+   .
 
 <#trig-syntax-ln-colons>
    rdf:type rdft:TestTrigPositiveSyntax ;
    rdfs:comment "Colons in pname local names" ;
    mf:name "trig-syntax-ln-colons" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-ln-colons.trig> .
+   mf:action <trig-syntax-ln-colons.trig> ;
+   .
 
 <#trig-syntax-ns-dots>
    rdf:type rdft:TestTrigPositiveSyntax ;
    rdfs:comment "Dots in namespace names" ;
    mf:name "trig-syntax-ns-dots" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-ns-dots.trig> .
+   mf:action <trig-syntax-ns-dots.trig> ;
+   .
 
 <#trig-syntax-blank-label>
    rdf:type rdft:TestTrigPositiveSyntax ;
    rdfs:comment "Characters allowed in blank node labels" ;
    mf:name "trig-syntax-blank-label" ;
    rdft:approval rdft:Approved ;
-   mf:action <trig-syntax-blank-label.trig> .
+   mf:action <trig-syntax-blank-label.trig> ;
+   .
 
 # tests for bnode graph names, optional GRAPH keyword and
 # triples outside {}
@@ -3033,7 +3048,8 @@
    mf:name "IRI-resolution-01" ;
    rdft:approval rdft:Proposed ;
    mf:action <IRI-resolution-01.trig> ;
-   mf:result <IRI-resolution-01.nq> .
+   mf:result <IRI-resolution-01.nq> ;
+   .
 
 <#IRI-resolution-02>
    rdf:type rdft:TestTrigEval ;
@@ -3041,7 +3057,8 @@
    mf:name "IRI-resolution-02" ;
    rdft:approval rdft:Proposed ;
    mf:action <IRI-resolution-02.trig> ;
-   mf:result <IRI-resolution-02.nq> .
+   mf:result <IRI-resolution-02.nq> ;
+   .
 
 <#IRI-resolution-07>
    rdf:type rdft:TestTrigEval ;
@@ -3049,7 +3066,8 @@
    mf:name "IRI-resolution-07" ;
    rdft:approval rdft:Proposed ;
    mf:action <IRI-resolution-07.trig> ;
-   mf:result <IRI-resolution-07.nq> .
+   mf:result <IRI-resolution-07.nq> ;
+   .
 
 <#IRI-resolution-08>
    rdf:type rdft:TestTrigEval ;
@@ -3057,4 +3075,5 @@
    mf:name "IRI-resolution-08" ;
    rdft:approval rdft:Proposed ;
    mf:action <IRI-resolution-08.trig> ;
-   mf:result <IRI-resolution-08.nq> .
+   mf:result <IRI-resolution-08.nq> ;
+   .
