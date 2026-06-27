@@ -1748,6 +1748,38 @@
       "action": "trig-syntax-bad-uri-05.trig"
     },
     {
+      "@id": "#trig-syntax-bad-uri-escape-01",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "trig-syntax-bad-uri-escape-01",
+      "comment": "Bad IRI : good escape, bad character (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "trig-syntax-bad-uri-escape-01.trig"
+    },
+    {
+      "@id": "#trig-syntax-bad-uri-escape-02",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "trig-syntax-bad-uri-escape-02",
+      "comment": "Bad IRI : hex 3C is < (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "trig-syntax-bad-uri-escape-02.trig"
+    },
+    {
+      "@id": "#trig-syntax-bad-uri-escape-03",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "trig-syntax-bad-uri-escape-03",
+      "comment": "Bad IRI : hex 3E is  (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "trig-syntax-bad-uri-escape-03.trig"
+    },
+    {
+      "@id": "#trig-syntax-bad-uri-escape-04",
+      "@type": "rdft:TestTrigNegativeSyntax",
+      "name": "trig-syntax-bad-uri-escape-04",
+      "comment": "Bad IRI : {abc} (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "trig-syntax-bad-uri-escape-04.trig"
+    },
+    {
       "@id": "#trig-syntax-bad-prefix-01",
       "@type": "rdft:TestTrigNegativeSyntax",
       "name": "trig-syntax-bad-prefix-01",
@@ -2581,38 +2613,6 @@
       "approval": "rdft:Approved",
       "action": "trig-subm-27.trig",
       "result": "trig-subm-27.nq"
-    },
-    {
-      "@id": "#trig-eval-bad-01",
-      "@type": "rdft:TestTrigNegativeEval",
-      "name": "trig-eval-bad-01",
-      "comment": "Bad IRI : good escape, bad charcater (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "trig-eval-bad-01.trig"
-    },
-    {
-      "@id": "#trig-eval-bad-02",
-      "@type": "rdft:TestTrigNegativeEval",
-      "name": "trig-eval-bad-02",
-      "comment": "Bad IRI : hex 3C is < (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "trig-eval-bad-02.trig"
-    },
-    {
-      "@id": "#trig-eval-bad-03",
-      "@type": "rdft:TestTrigNegativeEval",
-      "name": "trig-eval-bad-03",
-      "comment": "Bad IRI : hex 3E is  (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "trig-eval-bad-03.trig"
-    },
-    {
-      "@id": "#trig-eval-bad-04",
-      "@type": "rdft:TestTrigNegativeEval",
-      "name": "trig-eval-bad-04",
-      "comment": "Bad IRI : {abc} (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "trig-eval-bad-04.trig"
     },
     {
       "@id": "#trig-syntax-bad-blank-label-dot-end",

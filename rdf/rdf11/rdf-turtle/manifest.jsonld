@@ -1670,6 +1670,38 @@
       "action": "turtle-syntax-bad-uri-05.ttl"
     },
     {
+      "@id": "#turtle-syntax-bad-uri-escape-01",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "turtle-syntax-bad-uri-escape-01",
+      "comment": "Bad IRI : good escape, bad character (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "turtle-syntax-bad-uri-escape-01.ttl"
+    },
+    {
+      "@id": "#turtle-syntax-bad-uri-escape-02",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "turtle-syntax-bad-uri-escape-02",
+      "comment": "Bad IRI : hex 3C is < (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "turtle-syntax-bad-uri-escape-02.ttl"
+    },
+    {
+      "@id": "#turtle-syntax-bad-uri-escape-03",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "turtle-syntax-bad-uri-escape-03",
+      "comment": "Bad IRI : hex 3E is  (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "turtle-syntax-bad-uri-escape-03.ttl"
+    },
+    {
+      "@id": "#turtle-syntax-bad-uri-escape-04",
+      "@type": "rdft:TestTurtleNegativeSyntax",
+      "name": "turtle-syntax-bad-uri-escape-04",
+      "comment": "Bad IRI : {abc} (negative evaluation test)",
+      "approval": "rdft:Approved",
+      "action": "turtle-syntax-bad-uri-escape-04.ttl"
+    },
+    {
       "@id": "#turtle-syntax-bad-prefix-01",
       "@type": "rdft:TestTurtleNegativeSyntax",
       "name": "turtle-syntax-bad-prefix-01",
@@ -2527,38 +2559,6 @@
       "approval": "rdft:Approved",
       "action": "turtle-subm-27.ttl",
       "result": "turtle-subm-27.nt"
-    },
-    {
-      "@id": "#turtle-eval-bad-01",
-      "@type": "rdft:TestTurtleNegativeEval",
-      "name": "turtle-eval-bad-01",
-      "comment": "Bad IRI : good escape, bad charcater (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "turtle-eval-bad-01.ttl"
-    },
-    {
-      "@id": "#turtle-eval-bad-02",
-      "@type": "rdft:TestTurtleNegativeEval",
-      "name": "turtle-eval-bad-02",
-      "comment": "Bad IRI : hex 3C is < (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "turtle-eval-bad-02.ttl"
-    },
-    {
-      "@id": "#turtle-eval-bad-03",
-      "@type": "rdft:TestTurtleNegativeEval",
-      "name": "turtle-eval-bad-03",
-      "comment": "Bad IRI : hex 3E is  (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "turtle-eval-bad-03.ttl"
-    },
-    {
-      "@id": "#turtle-eval-bad-04",
-      "@type": "rdft:TestTurtleNegativeEval",
-      "name": "turtle-eval-bad-04",
-      "comment": "Bad IRI : {abc} (negative evaluation test)",
-      "approval": "rdft:Approved",
-      "action": "turtle-eval-bad-04.ttl"
     },
     {
       "@id": "#turtle-syntax-bad-blank-label-dot-end",
