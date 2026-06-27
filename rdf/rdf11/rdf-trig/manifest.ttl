@@ -229,6 +229,10 @@
     <#trig-syntax-bad-uri-03>
     <#trig-syntax-bad-uri-04>
     <#trig-syntax-bad-uri-05>
+    <#trig-syntax-bad-uri-escape-01>
+    <#trig-syntax-bad-uri-escape-02>
+    <#trig-syntax-bad-uri-escape-03>
+    <#trig-syntax-bad-uri-escape-04>
     <#trig-syntax-bad-prefix-01>
     <#trig-syntax-bad-prefix-02>
     <#trig-syntax-bad-prefix-03>
@@ -330,10 +334,6 @@
     <#trig-subm-25>
     <#trig-subm-26>
     <#trig-subm-27>
-    <#trig-eval-bad-01>
-    <#trig-eval-bad-02>
-    <#trig-eval-bad-03>
-    <#trig-eval-bad-04>
 
     # tests from David Robillard
     # http://www.w3.org/2011/rdf-wg/wiki/Turtle_Candidate_Recommendation_Comments#c21
@@ -1332,6 +1332,34 @@
    rdfs:comment "Legal IRIs" ;
    rdft:approval rdft:Approved ;
    mf:action    <trig-syntax-uri-04.trig> ;
+   .
+
+<#trig-syntax-bad-uri-escape-01> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-uri-escape-01" ;
+   rdfs:comment "Bad IRI : good escape, bad character (negative evaluation test)" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-uri-escape-01.trig> ;
+   .
+
+<#trig-syntax-bad-uri-escape-02> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-uri-escape-02" ;
+   rdfs:comment "Bad IRI : hex 3C is < (negative evaluation test)" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-uri-escape-02.trig> ;
+   .
+
+<#trig-syntax-bad-uri-escape-03> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-uri-escape-03" ;
+   rdfs:comment "Bad IRI : hex 3E is  (negative evaluation test)" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-uri-escape-03.trig> ;
+   .
+
+<#trig-syntax-bad-uri-escape-04> rdf:type rdft:TestTrigNegativeSyntax ;
+   mf:name    "trig-syntax-bad-uri-escape-04" ;
+   rdfs:comment "Bad IRI : {abc} (negative evaluation test)" ;
+   rdft:approval rdft:Approved ;
+   mf:action    <trig-syntax-bad-uri-escape-04.trig> ;
    .
 
 <#trig-syntax-base-01> rdf:type rdft:TestTrigPositiveSyntax ;
@@ -2577,34 +2605,6 @@
    rdft:approval rdft:Approved ;
    mf:action    <trig-subm-27.trig> ;
    mf:result    <trig-subm-27.nq> ;
-   .
-
-<#trig-eval-bad-01> rdf:type rdft:TestTrigNegativeEval ;
-   mf:name    "trig-eval-bad-01" ;
-   rdfs:comment "Bad IRI : good escape, bad charcater (negative evaluation test)" ;
-   rdft:approval rdft:Approved ;
-   mf:action    <trig-eval-bad-01.trig> ;
-   .
-
-<#trig-eval-bad-02> rdf:type rdft:TestTrigNegativeEval ;
-   mf:name    "trig-eval-bad-02" ;
-   rdfs:comment "Bad IRI : hex 3C is < (negative evaluation test)" ;
-   rdft:approval rdft:Approved ;
-   mf:action    <trig-eval-bad-02.trig> ;
-   .
-
-<#trig-eval-bad-03> rdf:type rdft:TestTrigNegativeEval ;
-   mf:name    "trig-eval-bad-03" ;
-   rdfs:comment "Bad IRI : hex 3E is  (negative evaluation test)" ;
-   rdft:approval rdft:Approved ;
-   mf:action    <trig-eval-bad-03.trig> ;
-   .
-
-<#trig-eval-bad-04> rdf:type rdft:TestTrigNegativeEval ;
-   mf:name    "trig-eval-bad-04" ;
-   rdfs:comment "Bad IRI : {abc} (negative evaluation test)" ;
-   rdft:approval rdft:Approved ;
-   mf:action    <trig-eval-bad-04.trig> ;
    .
 
 # tests requested by Jeremy Carroll
