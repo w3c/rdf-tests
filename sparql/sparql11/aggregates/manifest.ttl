@@ -146,6 +146,7 @@
     .
 
 :agg08 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "COUNT 8" ;
 	mf:feature sparql:count ;
     rdfs:comment "grouping by expression, done wrong";
@@ -165,6 +166,7 @@
     mf:result  <agg08b.srx> .
 
 :agg09 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "COUNT 9" ;
 	mf:feature sparql:count ;
     rdfs:comment "Projection of an ungrouped variable (not appearing in the GROUP BY expression)";
@@ -173,6 +175,7 @@
     mf:action  <agg09.rq> .
 
 :agg10 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "COUNT 10" ;
 	mf:feature sparql:count ;
     rdfs:comment "Projection of an ungrouped variable (no GROUP BY expression at all)";
@@ -181,6 +184,7 @@
     mf:action  <agg10.rq> .
 
 :agg11 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "COUNT 11" ;
 	mf:feature sparql:count ;
     rdfs:comment "Use of an ungrouped variable in a project expression";
@@ -189,6 +193,7 @@
     mf:action  <agg11.rq> .
 
 :agg12 rdf:type  mf:NegativeSyntaxTest11;
+    mf:specVersion "sparql-1.1" ;
     mf:name    "COUNT 12" ;
 	mf:feature sparql:count ;
     rdfs:comment "Use of an ungrouped variable in a project expression, where the variable appears in a GROUP BY expression";
