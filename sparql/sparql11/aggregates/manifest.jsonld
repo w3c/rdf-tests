@@ -538,13 +538,13 @@
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-graph",
       "@type": "mf:QueryEvaluationTest",
       "name": "COUNT: no GROUP BY inside of GRAPH",
-      "comment": "counting no results without grouping always returns a single result per named graph.",
+      "comment": "counting without grouping always returns a single result per named graph.",
       "action": {
         "query": "agg-empty-group-count-graph.rq",
         "data": "empty.ttl",
         "graphData": [
-          "empty.ttl",
-          "singleton.ttl"
+          "singleton.ttl",
+          "pair.ttl"
         ]
       },
       "result": "agg-empty-group-count-graph.ttl"

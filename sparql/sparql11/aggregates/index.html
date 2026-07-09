@@ -1287,7 +1287,7 @@
         </dt>
         <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/aggregates/manifest#agg-empty-group-count-graph' typeof='mf:QueryEvaluationTest'>
           <div property='rdfs:comment'>
-            <p>counting no results without grouping always returns a single result per named graph.</p>
+            <p>counting without grouping always returns a single result per named graph.</p>
           </div>
           <dl class='test-detail'>
             <dt>type</dt>
@@ -1308,14 +1308,14 @@
                 <dt>graphData</dt>
                 <dd>
                   <table class='test-detail'>
-                    <tr property='qt:graphData' resource='empty.ttl'>
-                      <td>
-                        <a href='empty.ttl' property='qt:graphData'>empty.ttl</a>
-                      </td>
-                    </tr>
                     <tr property='qt:graphData' resource='singleton.ttl'>
                       <td>
                         <a href='singleton.ttl' property='qt:graphData'>singleton.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='pair.ttl'>
+                      <td>
+                        <a href='pair.ttl' property='qt:graphData'>pair.ttl</a>
                       </td>
                     </tr>
                   </table>
