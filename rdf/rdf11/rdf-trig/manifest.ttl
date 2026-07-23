@@ -370,6 +370,7 @@
       <#trig-kw-graph-09>
 
       <#trig-kw-graph-10>
+      <#trig-kw-graph-11>
 
       <#trig-graph-bad-01>
       <#trig-graph-bad-02>
@@ -2886,6 +2887,12 @@
     rdft:approval rdft:Approved ;
     mf:action    <trig-kw-graph-10.trig> ;
     .
+
+<#trig-kw-graph-11> rdf:type rdft:TestTrigPositiveSyntax ;
+   mf:name      "trig-kw-graph-11" ;
+   rdfs:comment "Named graph with IRI and empty graph" ;
+   mf:action    <trig-kw-graph-11.trig> ;
+   .
 
 <#trig-graph-bad-01> rdf:type rdft:TestTrigNegativeSyntax ;
     mf:name      "trig-graph-bad-01" ;
