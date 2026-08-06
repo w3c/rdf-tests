@@ -7,9 +7,11 @@
 @prefix hts:    <http://www.w3.org/2011/http-statusCodes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
 
 <> a mf:Manifest;
     rdfs:label "SPARQL Graph Store Protocol";
+    mf:specVersion sparql:version-1.1 ;
     rdfs:comment """
         This manifests included here encode tests for the SPARQL Graph Store Protocol.
         Each test record has one or more ht:Requests that must be run in order

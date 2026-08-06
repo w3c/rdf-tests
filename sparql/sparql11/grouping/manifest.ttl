@@ -4,9 +4,11 @@
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
 
 <>  rdf:type mf:Manifest ;
     rdfs:label "Grouping" ;
+    mf:specVersion sparql:version-1.1 ;
     mf:entries
     ( 
     :group01
@@ -63,7 +65,6 @@
     .
 
 :group06 rdf:type  mf:NegativeSyntaxTest11;
-    mf:specVersion "sparql-1.1" ;
     mf:name    "Group-6" ;
     rdfs:comment "projection of ungrouped variable";
     dawgt:approval dawgt:Approved ;
@@ -71,7 +72,6 @@
     mf:action <group06.rq> .
 
 :group07 rdf:type  mf:NegativeSyntaxTest11;
-    mf:specVersion "sparql-1.1" ;
     mf:name    "Group-7" ;
     rdfs:comment "projection of ungrouped variable, more complex example than Group-6";
     dawgt:approval dawgt:Approved ;
