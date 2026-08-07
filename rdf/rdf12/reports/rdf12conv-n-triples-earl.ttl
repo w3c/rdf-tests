@@ -1,0 +1,1570 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix earl: <http://www.w3.org/ns/earl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a foaf:Document ;
+    dc:issued "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    dc:source <https://github.com/w3c/rdf-tests/commit/851911047ab1f01daca51498227cbf231e7d6705> ;
+    dc:conformsTo <https://www.w3.org/TR/EARL10-Schema/> ;
+    dc:title "rdf12conv 0.3.0 W3C N-Triples EARL Report" ;
+    dc:description "140 passed, 0 failed, 140 total" ;
+    rdfs:seeAlso <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/manifest.ttl> ;
+    foaf:maker <https://github.com/domel#me> ;
+    foaf:primaryTopic <https://pypi.org/project/rdf12conv/0.3.0/> .
+
+<https://pypi.org/project/rdf12conv/0.3.0/> a earl:Software, earl:TestSubject, doap:Project ;
+    doap:name "rdf12conv" ;
+    dc:title "rdf12conv" ;
+    doap:homepage <https://github.com/domel/rdf12conv> ;
+    doap:license <https://opensource.org/license/mit> ;
+    doap:programming-language "Python" ;
+    doap:download-page <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    doap:bug-database <https://github.com/domel/rdf12conv/issues> ;
+    doap:developer <https://github.com/domel#me> .
+
+<https://github.com/domel#me> a earl:Assertor, foaf:Person ;
+    foaf:name "Dominik Tomaszuk" ;
+    foaf:homepage <https://github.com/domel> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-1> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-1> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-1> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-2> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-2> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-2> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-3> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-3> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-3> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-4> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-4> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-4> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-5> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-5> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-5> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-6> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-6> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-6> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-7> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-7> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-7> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-8> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-8> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-8> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-9> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-9> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-9> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-10> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-10> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-10> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-11> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-11> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-11> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-12> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-12> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-12> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-13> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-13> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-13> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-14> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-14> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-14> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-15> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-15> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-15> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-16> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-16> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-16> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-17> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-17> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-17> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-18> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-18> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-18> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-19> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-19> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-19> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-20> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-20> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-20> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-21> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-21> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-21> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-22> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-22> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-22> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-23> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-23> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-23> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-24> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-24> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-24> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-25> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-25> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-25> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-26> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-26> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-26> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-27> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-27> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-27> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-28> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-28> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-28> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-29> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-29> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-29> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-30> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-30> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-30> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-31> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-31> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-31> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-32> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-32> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-32> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-33> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-33> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-33> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-34> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-34> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-34> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-35> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-35> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-35> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-36> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-36> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-36> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-37> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-37> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-37> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-38> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-38> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-38> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-39> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-39> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-39> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-40> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-40> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-40> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-41> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-41> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-41> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-42> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-42> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-42> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-43> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-43> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-43> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-44> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-44> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-44> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-45> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-45> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-45> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-46> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-46> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-nested-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-46> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-47> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-47> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-47> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-48> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-48> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-48> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-49> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-49> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-49> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-50> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-50> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-50> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-51> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-51> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-51> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-52> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-52> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-52> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-53> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-53> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-53> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-54> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-54> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-06> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-54> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-55> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-55> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-55> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-56> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-56> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-08> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-56> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-57> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-57> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-57> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-58> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-58> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-10> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-58> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-59> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-59> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-59> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-60> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-60> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-60> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-61> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-61> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-61> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-62> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-62> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-3> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-62> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-63> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-63> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-63> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-64> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-64> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-64> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-65> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-65> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-65> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-66> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-66> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-1> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-66> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-67> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-67> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-67> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-68> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-68> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-3> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-68> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-69> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-69> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-69> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-70> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-70> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-5> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-70> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-71> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-71> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-file-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-71> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-72> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-72> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-file-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-72> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-73> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-73> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-file-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-73> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-74> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-74> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-uri-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-74> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-75> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-75> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-uri-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-75> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-76> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-76> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-uri-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-76> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-77> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-77> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-uri-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-77> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-78> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-78> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-string-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-78> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-79> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-79> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-string-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-79> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-80> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-80> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-string-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-80> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-81> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-81> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-str-esc-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-81> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-82> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-82> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-str-esc-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-82> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-83> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-83> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-str-esc-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-83> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-84> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-84> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bnode-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-84> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-85> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-85> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bnode-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-85> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-86> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-86> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bnode-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-86> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-87> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-87> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-datatypes-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-87> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-88> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-88> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-datatypes-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-88> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-89> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-89> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-89> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-90> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-90> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-90> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-91> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-91> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-91> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-92> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-92> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-92> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-93> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-93> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-05> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-93> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-94> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-94> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-06> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-94> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-95> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-95> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-07> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-95> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-96> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-96> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-08> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-96> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-97> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-97> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-uri-09> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-97> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-98> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-98> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-prefix-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-98> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-99> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-99> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-base-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-99> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-100> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-100> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-bnode-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-100> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-101> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-101> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-bnode-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-101> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-102> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-102> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-struct-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-102> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-103> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-103> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-struct-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-103> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-104> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-104> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-lang-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-104> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-105> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-105> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-esc-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-105> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-106> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-106> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-esc-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-106> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-107> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-107> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-esc-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-107> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-108> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-108> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-108> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-109> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-109> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-109> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-110> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-110> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-110> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-111> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-111> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-04> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-111> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-112> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-112> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-05> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-112> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-113> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-113> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-06> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-113> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-114> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-114> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-string-07> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-114> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-115> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-115> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-num-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-115> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-116> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-116> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-num-02> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-116> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-117> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-117> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-bad-num-03> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-117> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-118> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-118> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#nt-syntax-subm-01> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-118> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-119> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-119> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#comment_following_triple> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-119> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-120> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-120> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-120> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-121> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-121> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_all_controls> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-121> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-122> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-122> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_all_punctuation> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-122> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-123> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-123> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_ascii_boundaries> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-123> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-124> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-124> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_2_dquotes> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-124> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-125> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-125> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_2_squotes> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-125> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-126> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-126> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_BACKSPACE> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-126> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-127> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-127> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_CARRIAGE_RETURN> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-127> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-128> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-128> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_CHARACTER_TABULATION> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-128> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-129> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-129> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_dquote> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-129> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-130> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-130> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_FORM_FEED> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-130> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-131> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-131> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_LINE_FEED> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-131> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-132> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-132> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_numeric_escape4> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-132> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-133> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-133> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_numeric_escape8> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-133> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-134> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-134> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_REVERSE_SOLIDUS> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-134> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-135> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-135> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_REVERSE_SOLIDUS2> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-135> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-136> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-136> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_squote> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-136> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-137> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-137> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#literal_with_UTF8_boundaries> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-137> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-138> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-138> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#langtagged_string> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-138> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-139> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-139> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#lantag_with_subtag> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-139> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#assertion-140> a earl:Assertion ;
+    earl:assertedBy <https://github.com/domel#me> ;
+    earl:mode earl:automatic ;
+    earl:result <urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-140> ;
+    earl:subject <https://pypi.org/project/rdf12conv/0.3.0/> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf11/rdf-n-triples/manifest.ttl#minimal_whitespace> .
+
+<urn:uuid:0af08f8f-4060-5509-901b-64d11d068c39#result-140> a earl:TestResult ;
+    dc:date "2026-06-22T08:49:27+00:00"^^xsd:dateTime ;
+    earl:outcome earl:passed .
