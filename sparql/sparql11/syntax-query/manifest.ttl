@@ -4,9 +4,11 @@
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
 
 <>  rdf:type mf:Manifest ;
     rdfs:label "Syntax Query" ;
+    mf:specVersion sparql:version-1.1 ;
     rdfs:comment "Syntax tests Syntax SPARQL 1.1" ;
     mf:entries
     ( 
@@ -458,13 +460,13 @@
    mf:action  <syntax-BINDscope6.rq> ;.
 
 :test_61a rdf:type   mf:NegativeSyntaxTest11 ;
-    dawgt:approval dawgt:Approved ;
+   dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-09-25#resolution_2> ;
     mf:name    "syntax-BINDscope7.rq" ;
     mf:action  <syntax-BINDscope7.rq> ;.
 
 :test_62a rdf:type   mf:NegativeSyntaxTest11 ;
-    dawgt:approval dawgt:Approved ;
+   dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-09-25#resolution_2> ;
     mf:name    "syntax-BINDscope8.rq" ;
     mf:action  <syntax-BINDscope8.rq> ;.
@@ -666,9 +668,9 @@
    mf:action  <syn-invalid-codepoint-escaped-bad-01.rq> ;.
 
 :test_bad_values_too_many rdf:type mf:NegativeSyntaxTest11 ;
-    mf:name "Too many values in a VALUE clause compared to the number of variables" ;
-    mf:action <syn-bad-values-too-many.rq> .
+   mf:name "Too many values in a VALUE clause compared to the number of variables" ;
+   mf:action <syn-bad-values-too-many.rq> .
 
 :test_bad_values_too_few rdf:type mf:NegativeSyntaxTest11 ;
-    mf:name "Too few values in a VALUE clause compared to the number of variables" ;
-    mf:action <syn-bad-values-too-few.rq> .
+   mf:name "Too few values in a VALUE clause compared to the number of variables" ;
+   mf:action <syn-bad-values-too-few.rq> .
