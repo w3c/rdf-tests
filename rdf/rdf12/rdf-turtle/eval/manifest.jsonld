@@ -143,6 +143,13 @@
       "result": "turtle12-eval-rt-08.nt"
     },
     {
+      "@id": "../eval#turtle12-rt-09",
+      "@type": "rdft:TestTurtleEval",
+      "name": "Turtle 1.2 - literals in object position",
+      "action": "turtle12-eval-rt-09.ttl",
+      "result": "turtle12-eval-rt-09.nt"
+    },
+    {
       "@id": "../eval#turtle12-bnode-01",
       "@type": "rdft:TestTurtleEval",
       "name": "Turtle 1.2 - blank node label",
@@ -183,6 +190,13 @@
       "name": "Turtle 1.2 - Nested object term",
       "action": "turtle12-eval-tt-04.ttl",
       "result": "turtle12-eval-tt-04.nt"
+    },
+    {
+      "@id": "../eval#turtle12-tt-05",
+      "@type": "rdft:TestTurtleEval",
+      "name": "Turtle 1.2 - literals in object position",
+      "action": "turtle12-eval-tt-05.ttl",
+      "result": "turtle12-eval-tt-05.nt"
     },
     {
       "@id": "../eval#turtle12-annotation-01",
@@ -267,6 +281,13 @@
       "name": "Turtle 1.2 - Annotation form with alternating reifiers and annotation blocks",
       "action": "turtle12-eval-annotation-12.ttl",
       "result": "turtle12-eval-annotation-12.nt"
+    },
+    {
+      "@id": "../eval#turtle12-annotation-13",
+      "@type": "rdft:TestTurtleEval",
+      "name": "Turtle 1.2 - Annotation form with IRI refier",
+      "action": "turtle12-eval-annotation-13.ttl",
+      "result": "turtle12-eval-annotation-13.nt"
     },
     {
       "@id": "../eval#turtle12-reified-triples-annotation-01",
