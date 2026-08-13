@@ -1,0 +1,62 @@
+require 'bundler/setup'
+task default: :test
+
+desc "Test examples in spec files"
+task :test do
+  sh %(wget https://w3c.github.io/json-ld-wg/common/extract-examples.rb)
+  sh %(bundle exec extract-examples.rb index.html)
+end
+
+desc "Extract Examples"
+task :examples  do
+  sh %(rm -rf examples yaml)
+  sh %(wget https://w3c.github.io/json-ld-wg/common/extract-examples.rb)
+  sh %(bundle exec extract-examples.rb --example-dir examples --yaml-dir yaml index.html)
+end
+
+desc "Check HTML"
+task :check_html do
+  require 'nokogiri'
+  doc = ::Nokogiri::HTML5(File.open("index.html"), max_parse_errors: 1000)
+  unless doc.errors.empty?
+    STDERR.puts "Errors found parsing index.html:"
+    doc.errors.each {|e| STDERR.puts "  #{e}"}
+    exit(1)
+  end
+end
+
+desc "Create concatenated test manifests for reporting"
+file "reports/manifests.ttl" do
+  require 'rdf'
+  require 'json/ld'
+  require 'linkeddata'
+  require 'rdf/turtle'
+
+  MF_INCLUDE = RDF::URI("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#include")
+
+  graph = RDF::Graph.new
+  visited = Set.new
+  queue = %w(
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/manifest.ttl
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/manifest.ttl
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-semantics/manifest.ttl
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/manifest.ttl
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/manifest.ttl
+    https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/manifest.ttl
+  )
+  until queue.empty?
+    url = queue.shift
+    next if visited.include?(url)
+    visited << url
+    puts "load #{url}"
+    graph.load(url, base_uri: url, unique_bnodes: true)
+    # Scan all mf:include lists loaded so far and enqueue any new manifest URLs
+    graph.query([nil, MF_INCLUDE, nil]).each do |stmt|
+      RDF::List.new(subject: stmt.object, graph: graph).each do |item|
+        queue << item.to_s if item.uri? && !visited.include?(item.to_s)
+      end
+    end
+  end
+  puts "write"
+  RDF::Turtle::Writer.open("reports/manifests.ttl", unique_bnodes: true) {|w| w << graph}
+end
