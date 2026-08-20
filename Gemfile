@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby "3.4.3"
 
 gem 'rake'
+gem 'earl-report',    '~> 0.9'
 gem 'json-ld'
 gem 'rdf-turtle'
 gem 'haml',           '~> 6.3'
