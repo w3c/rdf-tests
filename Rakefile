@@ -7,9 +7,20 @@ require 'nokogiri'
 require 'rake/clean'
 require 'pathname'
 
-task default: :index
+# Test data and reports are UTF-8. Without this, a build running under a POSIX
+# locale reads them as US-ASCII and dies on the first non-ASCII byte.
+Encoding.default_external = Encoding::UTF_8
 
-MANIFESTS = Dir.glob("**/manifest*.ttl").reject {|f| f.include?('-az')}
+task default: [:index, :reports]
+
+BASE_URI = 'https://w3c.github.io/rdf-tests/'
+
+RDF12_REPORT_DIR = 'rdf/rdf12/reports'
+
+# The report directory holds EARL reports and their rollup, not test manifests,
+# so nothing in it gets an HTML/JSON-LD rendering.
+MANIFESTS = Dir.glob("**/manifest*.ttl").
+  reject {|f| f.include?('-az') || f.start_with?("#{RDF12_REPORT_DIR}/")}
 
 SPECS = {
   "rdf-concepts/spec/index.html"  => "FIXME",
@@ -195,3 +206,82 @@ MANIFESTS.each do |ttl|
     end
   end
 end
+
+# The RDF 1.2 implementation report rolls up the individual EARL reports found
+# in rdf/rdf12/reports/ against a concatenation of all RDF 1.2 test manifests.
+RDF12_REPORT_MANIFESTS  = "#{RDF12_REPORT_DIR}/manifests.ttl"
+RDF12_REPORT_EARL       = "#{RDF12_REPORT_DIR}/earl.jsonld"
+RDF12_REPORT_HTML       = "#{RDF12_REPORT_DIR}/index.html"
+RDF12_REPORT_TEMPLATE   = "#{RDF12_REPORT_DIR}/template.haml"
+RDF12_REPORT_ASSERTIONS = Dir.glob("#{RDF12_REPORT_DIR}/*.ttl").
+  reject {|f| f == RDF12_REPORT_MANIFESTS}.sort
+RDF12_REPORT_ROOTS = %w(
+  rdf-n-quads
+  rdf-n-triples
+  rdf-semantics
+  rdf-trig
+  rdf-turtle
+  rdf-xml
+).map {|dir| "#{BASE_URI}rdf/rdf12/#{dir}/manifest.ttl"}
+
+CLOBBER.include(RDF12_REPORT_MANIFESTS)
+desc "Build #{RDF12_REPORT_MANIFESTS}"
+file RDF12_REPORT_MANIFESTS => MANIFESTS.grep(%r{^rdf/rdf12/}) do
+  puts "Generate #{RDF12_REPORT_MANIFESTS}"
+  mf_include = RDF::URI("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#include")
+
+  graph = RDF::Graph.new
+  visited, queue = Set.new, RDF12_REPORT_ROOTS.dup
+  until queue.empty?
+    url = queue.shift
+    next unless visited.add?(url)
+    # Read from the working tree, but keep the published URL as base so that
+    # test IRIs match the ones the individual EARL reports assert against.
+    manifest = RDF::Graph.load(url.sub(BASE_URI, ''), base_uri: url, unique_bnodes: true)
+
+    # Follow this manifest's mf:include lists to find any nested manifests
+    manifest.query([nil, mf_include, nil]).each do |stmt|
+      RDF::List.new(subject: stmt.object, graph: manifest).each do |item|
+        queue << item.to_s if item.uri?
+      end
+    end
+    graph.insert(manifest)
+  end
+
+  # Stream rather than pretty-print: ordering 10k statements for nested bnode
+  # syntax takes minutes, and nothing reads this file by hand.
+  RDF::Turtle::Writer.open(RDF12_REPORT_MANIFESTS, stream: true, unique_bnodes: true) do |w|
+    w << graph
+  end
+end
+
+CLOBBER.include(RDF12_REPORT_EARL)
+desc "Build #{RDF12_REPORT_EARL}"
+file RDF12_REPORT_EARL => [RDF12_REPORT_MANIFESTS] + RDF12_REPORT_ASSERTIONS do
+  require 'earl_report'
+  puts "Generate #{RDF12_REPORT_EARL}"
+  # Run from the report directory so that the report links to its sources
+  # relative to where they are published.
+  Dir.chdir(RDF12_REPORT_DIR) do
+    earl = EarlReport.new(*RDF12_REPORT_ASSERTIONS.map {|f| File.basename(f)},
+                          manifest: [File.basename(RDF12_REPORT_MANIFESTS)],
+                          name: "RDF 1.2")
+    File.open(File.basename(RDF12_REPORT_EARL), "w") {|f| earl.generate(format: :json, io: f)}
+  end
+end
+
+CLOBBER.include(RDF12_REPORT_HTML)
+desc "Build #{RDF12_REPORT_HTML}"
+file RDF12_REPORT_HTML => [RDF12_REPORT_EARL, RDF12_REPORT_TEMPLATE] do
+  require 'earl_report'
+  puts "Generate #{RDF12_REPORT_HTML}"
+  earl = EarlReport.new(RDF12_REPORT_EARL, json: true)
+  File.open(RDF12_REPORT_TEMPLATE) do |template|
+    File.open(RDF12_REPORT_HTML, "w") do |f|
+      earl.generate(format: :html, template: template, io: f)
+    end
+  end
+end
+
+desc "Build implementation reports"
+task reports: RDF12_REPORT_HTML

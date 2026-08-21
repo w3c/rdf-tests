@@ -27,12 +27,17 @@ def log_line(message: str, level: str, file: Path | None = None) -> None:
     else:
         print(message)
 
+# Generated rollups of test manifests, not test manifests themselves
+excluded_dirs = {repository_root / "rdf" / "rdf12" / "reports"}
+
 shacl_graph = Graph().parse(str(shape_path))
 ont_graph = Graph().parse(str(vocab_path)).parse(str(sparql_vocab_path))
 
 failure_counter = 0
 total_counter = 0
 for manifest_path in repository_root.rglob("manifest*.ttl"):
+    if manifest_path.parent in excluded_dirs:
+        continue
     try:
         (conforms, _, results_text) = validate(
             str(manifest_path),
