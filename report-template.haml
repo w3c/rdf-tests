@@ -1,7 +1,10 @@
 -# This template is used for generating a rollup EARL report. It expects to be
--# called with a single _tests_ local with the following structure
+-# called with a single _tests_ local with the following structure.
+-# It is shared by all test suites, which it names after the report itself, so
+-# keep anything added here suite-agnostic.
 - require 'cgi'
 - require 'digest'
+- suite = tests['name']
 - editors = [{ name: "Ruben Taelman", url: "https://www.rubensworks.net/"}]
 - foaf = {name: "Ruben Taelman", url: "https://www.rubensworks.net/#me" }
 - manifest_title = lambda {|m| t = m['title'] || m['rdfs:label']; t.is_a?(Hash) ? t['@value'].to_s : t.to_s }
@@ -16,7 +19,7 @@
     - tests['assertions'].each do |file|
       %link{rel: "related", href: file}
     %title
-      RDF 1.2 Conformance
+      = "#{suite} Conformance"
     :css
       span[property='dc:description rdfs:comment'] { display: none; }
       td.PASS { color: green; }
@@ -92,9 +95,9 @@
         %a{href: "http://www.w3.org/"}
           %img{width: 72, height: 48, src: "https://www.w3.org/Icons/w3c_home", alt: "W3C"}
       %h1.title.p-name#title{property: "dc:title"}
-        RDF 1.2 Conformance
+        = "#{suite} Conformance"
       %h2.subtitle
-        EARL results from the RDF 1.2 Test Suites
+        = "EARL results from the #{suite} Test Suites"
       %h2#w3c-document-28-october-2015
         %time.dt-published{property: "dc:issued", datetime: Time.now.strftime('%Y-%m-%d')}
           = Time.now.strftime("%d %B %Y")
@@ -108,7 +111,7 @@
                 = ed[:name]
       %p
         This document is also available in these non-normative formats:
-        %a{re: "alternate", href: "earl.jsonld"}="RDF 1.2"
+        %a{re: "alternate", href: "earl.jsonld"}= suite
         = "."
       %p.copyright
         %a{href: "http://www.w3.org/Consortium/Legal/ipr-notice#Copyright"}
@@ -139,7 +142,7 @@
       %h2="Abstract"
       %p
         This document report test subject conformance for and related specifications for
-        %span{property: "doap:name"}<="RDF 1.2 Specifications Test Suites"
+        %span{property: "doap:name"}<= "#{suite} Specifications Test Suites"
         according to the requirements of the Evaluation and Report Language (EARL) 1.0 Schema
         [
         %a{href: "https://www.w3.org/TR/EARL10-Schema/"}<>="EARL10-SCHEMA"
@@ -209,7 +212,7 @@
       :markdown
         ## Introduction
 
-        This implementation report covers the implementations of the RDF 1.2
+        This implementation report covers the implementations of the #{suite}
         specifications which have submitted test results. It is intended to be
         maintained by the [RDF Tests Community Group](https://www.w3.org/community/rdf-tests/),
         or a RDF & SPARQL Working Group if one is active.
@@ -222,7 +225,7 @@
         2. To catalog the known, conforming implementations and which features
           each supports.
 
-        There may be other RDF 1.2 which are not listed in this
+        There may be other #{suite} implementations which are not listed in this
         report, either due to not submitting tests or by not being intended as
         direct implementations of the specification, but instead layering on
         top of such libraries.
@@ -321,7 +324,7 @@
                     = "Test #{test['@id'].split("#").last}: #{CGI.escapeHTML test['title'].to_s}"
                   - other = []
                   - if option['https://w3c.github.io/json-ld-api/tests/vocab#specVersion'] == 'json-ld-1.1'
-                    - other << "new in RDF 1.2"
+                    - other << "new in #{suite}"
                   - if option['https://w3c.github.io/json-ld-api/tests/vocab#processorFeature']
                     - other << "feature: #{option['https://w3c.github.io/json-ld-api/tests/vocab#processorFeature']}"
                   - if !normative

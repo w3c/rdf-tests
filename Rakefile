@@ -15,12 +15,13 @@ task default: [:index, :reports]
 
 BASE_URI = 'https://w3c.github.io/rdf-tests/'
 
-RDF12_REPORT_DIR = 'rdf/rdf12/reports'
+# Shared by every implementation report; see `implementation_report` below.
+REPORT_TEMPLATE = 'report-template.haml'
 
-# The report directory holds EARL reports and their rollup, not test manifests,
-# so nothing in it gets an HTML/JSON-LD rendering.
+# A reports directory holds EARL reports and their rollup, not test manifests,
+# so nothing in one gets an HTML/JSON-LD rendering.
 MANIFESTS = Dir.glob("**/manifest*.ttl").
-  reject {|f| f.include?('-az') || f.start_with?("#{RDF12_REPORT_DIR}/")}
+  reject {|f| f.include?('-az') || f.split('/').include?('reports')}
 
 SPECS = {
   "rdf-concepts/spec/index.html"  => "FIXME",
@@ -207,81 +208,78 @@ MANIFESTS.each do |ttl|
   end
 end
 
-# The RDF 1.2 implementation report rolls up the individual EARL reports found
-# in rdf/rdf12/reports/ against a concatenation of all RDF 1.2 test manifests.
-RDF12_REPORT_MANIFESTS  = "#{RDF12_REPORT_DIR}/manifests.ttl"
-RDF12_REPORT_EARL       = "#{RDF12_REPORT_DIR}/earl.jsonld"
-RDF12_REPORT_HTML       = "#{RDF12_REPORT_DIR}/index.html"
-RDF12_REPORT_TEMPLATE   = "#{RDF12_REPORT_DIR}/template.haml"
-RDF12_REPORT_ASSERTIONS = Dir.glob("#{RDF12_REPORT_DIR}/*.ttl").
-  reject {|f| f == RDF12_REPORT_MANIFESTS}.sort
-RDF12_REPORT_ROOTS = %w(
-  rdf-n-quads
-  rdf-n-triples
-  rdf-semantics
-  rdf-trig
-  rdf-turtle
-  rdf-xml
-).map {|dir| "#{BASE_URI}rdf/rdf12/#{dir}/manifest.ttl"}
+MF_INCLUDE = RDF::URI("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#include")
 
-CLOBBER.include(RDF12_REPORT_MANIFESTS)
-desc "Build #{RDF12_REPORT_MANIFESTS}"
-file RDF12_REPORT_MANIFESTS => MANIFESTS.grep(%r{^rdf/rdf12/}) do
-  puts "Generate #{RDF12_REPORT_MANIFESTS}"
-  mf_include = RDF::URI("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#include")
+# Defines the tasks rolling the individual EARL reports in a report directory up
+# into one implementation report, covering every test manifest reachable from
+# the suite's top-level manifest. Returns the report to build.
+def implementation_report(dir, suite)
+  suite_dir  = File.dirname(dir)
+  manifests  = "#{dir}/manifests.ttl"
+  earl       = "#{dir}/earl.jsonld"
+  html       = "#{dir}/index.html"
+  assertions = Dir.glob("#{dir}/*.ttl").reject {|f| f == manifests}.sort
 
-  graph = RDF::Graph.new
-  visited, queue = Set.new, RDF12_REPORT_ROOTS.dup
-  until queue.empty?
-    url = queue.shift
-    next unless visited.add?(url)
-    # Read from the working tree, but keep the published URL as base so that
-    # test IRIs match the ones the individual EARL reports assert against.
-    manifest = RDF::Graph.load(url.sub(BASE_URI, ''), base_uri: url, unique_bnodes: true)
+  CLOBBER.include(manifests)
+  desc "Build #{manifests}"
+  file manifests => MANIFESTS.grep(%r{^#{suite_dir}/}) do
+    puts "Generate #{manifests}"
+    graph = RDF::Graph.new
+    visited, queue = Set.new, ["#{BASE_URI}#{suite_dir}/manifest.ttl"]
+    until queue.empty?
+      url = queue.shift
+      next unless visited.add?(url)
+      # Read from the working tree, but keep the published URL as base so that
+      # test IRIs match the ones the individual EARL reports assert against.
+      manifest = RDF::Graph.load(url.sub(BASE_URI, ''), base_uri: url, unique_bnodes: true)
 
-    # Follow this manifest's mf:include lists to find any nested manifests
-    manifest.query([nil, mf_include, nil]).each do |stmt|
-      RDF::List.new(subject: stmt.object, graph: manifest).each do |item|
-        queue << item.to_s if item.uri?
+      # Follow this manifest's mf:include lists to find any nested manifests
+      manifest.query([nil, MF_INCLUDE, nil]).each do |stmt|
+        RDF::List.new(subject: stmt.object, graph: manifest).each do |item|
+          queue << item.to_s if item.uri?
+        end
       end
+      graph.insert(manifest)
     end
-    graph.insert(manifest)
+
+    # Stream rather than pretty-print: ordering 10k statements for nested bnode
+    # syntax takes minutes, and nothing reads this file by hand.
+    RDF::Turtle::Writer.open(manifests, stream: true, unique_bnodes: true) {|w| w << graph}
   end
 
-  # Stream rather than pretty-print: ordering 10k statements for nested bnode
-  # syntax takes minutes, and nothing reads this file by hand.
-  RDF::Turtle::Writer.open(RDF12_REPORT_MANIFESTS, stream: true, unique_bnodes: true) do |w|
-    w << graph
-  end
-end
-
-CLOBBER.include(RDF12_REPORT_EARL)
-desc "Build #{RDF12_REPORT_EARL}"
-file RDF12_REPORT_EARL => [RDF12_REPORT_MANIFESTS] + RDF12_REPORT_ASSERTIONS do
-  require 'earl_report'
-  puts "Generate #{RDF12_REPORT_EARL}"
-  # Run from the report directory so that the report links to its sources
-  # relative to where they are published.
-  Dir.chdir(RDF12_REPORT_DIR) do
-    earl = EarlReport.new(*RDF12_REPORT_ASSERTIONS.map {|f| File.basename(f)},
-                          manifest: [File.basename(RDF12_REPORT_MANIFESTS)],
-                          name: "RDF 1.2")
-    File.open(File.basename(RDF12_REPORT_EARL), "w") {|f| earl.generate(format: :json, io: f)}
-  end
-end
-
-CLOBBER.include(RDF12_REPORT_HTML)
-desc "Build #{RDF12_REPORT_HTML}"
-file RDF12_REPORT_HTML => [RDF12_REPORT_EARL, RDF12_REPORT_TEMPLATE] do
-  require 'earl_report'
-  puts "Generate #{RDF12_REPORT_HTML}"
-  earl = EarlReport.new(RDF12_REPORT_EARL, json: true)
-  File.open(RDF12_REPORT_TEMPLATE) do |template|
-    File.open(RDF12_REPORT_HTML, "w") do |f|
-      earl.generate(format: :html, template: template, io: f)
+  CLOBBER.include(earl)
+  desc "Build #{earl}"
+  file earl => [manifests] + assertions do
+    require 'earl_report'
+    puts "Generate #{earl}"
+    # Run from the report directory so that the report links to its sources
+    # relative to where they are published.
+    Dir.chdir(dir) do
+      report = EarlReport.new(*assertions.map {|f| File.basename(f)},
+                              manifest: [File.basename(manifests)],
+                              name: suite)
+      File.open(File.basename(earl), "w") {|f| report.generate(format: :json, io: f)}
     end
   end
+
+  CLOBBER.include(html)
+  desc "Build #{html}"
+  file html => [earl, REPORT_TEMPLATE] do
+    require 'earl_report'
+    puts "Generate #{html}"
+    report = EarlReport.new(earl, json: true)
+    File.open(REPORT_TEMPLATE) do |template|
+      File.open(html, "w") {|f| report.generate(format: :html, template: template, io: f)}
+    end
+  end
+
+  html
 end
+
+REPORTS = {
+  'rdf/rdf12/reports'       => 'RDF 1.2',
+  'sparql/sparql12/reports' => 'SPARQL 1.2',
+}.map {|dir, suite| implementation_report(dir, suite)}
 
 desc "Build implementation reports"
-task reports: RDF12_REPORT_HTML
+task reports: REPORTS
