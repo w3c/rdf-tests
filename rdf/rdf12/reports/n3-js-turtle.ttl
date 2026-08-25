@@ -1,0 +1,1069 @@
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix earl: <http://www.w3.org/ns/earl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdft: <http://www.w3.org/ns/rdftest#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<> foaf:primaryTopic <https://www.npmjs.com/package/n3/>;
+    dc:issued "2026-08-25T11:52:02.519Z"^^xsd:dateTime;
+    foaf:maker <https://ruben.verborgh.org/>.
+<https://www.npmjs.com/package/n3/> a earl:Software, earl:TestSubject, doap:Project;
+    doap:name "n3";
+    dc:title "n3";
+    doap:homepage <https://github.com/rdfjs/N3.js>;
+    doap:license <http://opensource.org/licenses/MIT>;
+    doap:programming-language "JavaScript";
+    doap:implements <https://www.w3.org/TR/turtle/>, <https://www.w3.org/TR/trig/>, <https://www.w3.org/TR/n-triples/>, <https://www.w3.org/TR/n-quads/>;
+    doap:category <http://dbpedia.org/resource/Resource_Description_Framework>;
+    doap:download-page <https://npmjs.org/package/n3>;
+    doap:bug-database <https://github.com/rdfjs/N3.js/issues>;
+    doap:blog <https://ruben.verborgh.org/blog/>;
+    doap:developer <https://ruben.verborgh.org/>;
+    doap:maintainer <https://ruben.verborgh.org/>;
+    doap:documenter <https://ruben.verborgh.org/>;
+    doap:maker <https://ruben.verborgh.org/>;
+    dc:creator <https://ruben.verborgh.org/>;
+    dc:description "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library."@en;
+    doap:description "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library."@en.
+<https://ruben.verborgh.org/> a foaf:Person, earl:Assertor;
+    foaf:name "Ruben Verborgh <ruben.verborgh@gmail.com>".
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - subject reified triple";
+    earl:assertions _:assertions0.
+_:assertions0 rdf:first _:assertion0;
+    rdf:rest rdf:nil.
+_:assertion0 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result0.
+_:result0 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - object reified triple";
+    earl:assertions _:assertions1.
+_:assertions1 rdf:first _:assertion1;
+    rdf:rest rdf:nil.
+_:assertion1 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result1.
+_:result1 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - triple term object";
+    earl:assertions _:assertions2.
+_:assertions2 rdf:first _:assertion2;
+    rdf:rest rdf:nil.
+_:assertion2 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result2.
+_:result2 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple outside triple";
+    earl:assertions _:assertions3.
+_:assertions3 rdf:first _:assertion3;
+    rdf:rest rdf:nil.
+_:assertion3 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result3.
+_:result3 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-5> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple with literal object";
+    earl:assertions _:assertions4.
+_:assertions4 rdf:first _:assertion4;
+    rdf:rest rdf:nil.
+_:assertion4 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-5>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result4.
+_:result4 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-6> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple with keyword object";
+    earl:assertions _:assertions5.
+_:assertions5 rdf:first _:assertion5;
+    rdf:rest rdf:nil.
+_:assertion5 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-6>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result5.
+_:result5 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-7> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - triple term with literal object";
+    earl:assertions _:assertions6.
+_:assertions6 rdf:first _:assertion6;
+    rdf:rest rdf:nil.
+_:assertion6 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-7>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result6.
+_:result6 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-8> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - triple term with keyword object";
+    earl:assertions _:assertions7.
+_:assertions7 rdf:first _:assertion7;
+    rdf:rest rdf:nil.
+_:assertion7 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-8>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result7.
+_:result7 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple inside blankNodePropertyList";
+    earl:assertions _:assertions8.
+_:assertions8 rdf:first _:assertion8;
+    rdf:rest rdf:nil.
+_:assertion8 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result8.
+_:result8 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple inside collection";
+    earl:assertions _:assertions9.
+_:assertions9 rdf:first _:assertion9;
+    rdf:rest rdf:nil.
+_:assertion9 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result9.
+_:result9 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple with IRI identifier";
+    earl:assertions _:assertions10.
+_:assertions10 rdf:first _:assertion10;
+    rdf:rest rdf:nil.
+_:assertion10 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result10.
+_:result10 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - reified triple with blank node identifier";
+    earl:assertions _:assertions11.
+_:assertions11 rdf:first _:assertion11;
+    rdf:rest rdf:nil.
+_:assertion11 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result11.
+_:result11 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - nested reified triple, subject position";
+    earl:assertions _:assertions12.
+_:assertions12 rdf:first _:assertion12;
+    rdf:rest rdf:nil.
+_:assertion12 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result12.
+_:result12 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - nested reified triple, object position";
+    earl:assertions _:assertions13.
+_:assertions13 rdf:first _:assertion13;
+    rdf:rest rdf:nil.
+_:assertion13 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result13.
+_:result13 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-compound-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - compound forms";
+    earl:assertions _:assertions14.
+_:assertions14 rdf:first _:assertion14;
+    rdf:rest rdf:nil.
+_:assertion14 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-compound-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result14.
+_:result14 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - blank node subject";
+    earl:assertions _:assertions15.
+_:assertions15 rdf:first _:assertion15;
+    rdf:rest rdf:nil.
+_:assertion15 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result15.
+_:result15 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - blank node object";
+    earl:assertions _:assertions16.
+_:assertions16 rdf:first _:assertion16;
+    rdf:rest rdf:nil.
+_:assertion16 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result16.
+_:result16 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - blank node";
+    earl:assertions _:assertions17.
+_:assertions17 rdf:first _:assertion17;
+    rdf:rest rdf:nil.
+_:assertion17 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result17.
+_:result17 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - reified triple as predicate";
+    earl:assertions _:assertions18.
+_:assertions18 rdf:first _:assertion18;
+    rdf:rest rdf:nil.
+_:assertion18 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result18.
+_:result18 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - literal in subject position of reified triple";
+    earl:assertions _:assertions19.
+_:assertions19 rdf:first _:assertion19;
+    rdf:rest rdf:nil.
+_:assertion19 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result19.
+_:result19 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - blank node  as predicate in reified triple";
+    earl:assertions _:assertions20.
+_:assertions20 rdf:first _:assertion20;
+    rdf:rest rdf:nil.
+_:assertion20 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result20.
+_:result20 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - incomplete reified triple";
+    earl:assertions _:assertions21.
+_:assertions21 rdf:first _:assertion21;
+    rdf:rest rdf:nil.
+_:assertion21 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result21.
+_:result21 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-5> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - over-long reified triple";
+    earl:assertions _:assertions22.
+_:assertions22 rdf:first _:assertion22;
+    rdf:rest rdf:nil.
+_:assertion22 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-5>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result22.
+_:result22 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-6> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - reified with list object";
+    earl:assertions _:assertions23.
+_:assertions23 rdf:first _:assertion23;
+    rdf:rest rdf:nil.
+_:assertion23 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-6>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result23.
+_:result23 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-7> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - compound blank node expression";
+    earl:assertions _:assertions24.
+_:assertions24 rdf:first _:assertion24;
+    rdf:rest rdf:nil.
+_:assertion24 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-7>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result24.
+_:result24 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Annotation form";
+    earl:assertions _:assertions25.
+_:assertions25 rdf:first _:assertion25;
+    rdf:rest rdf:nil.
+_:assertion25 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result25.
+_:result25 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Annotation example";
+    earl:assertions _:assertions26.
+_:assertions26 rdf:first _:assertion26;
+    rdf:rest rdf:nil.
+_:assertion26 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result26.
+_:result26 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Annotation predicateObjecetList";
+    earl:assertions _:assertions27.
+_:assertions27 rdf:first _:assertion27;
+    rdf:rest rdf:nil.
+_:assertion27 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result27.
+_:result27 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Annotation followed by predicate/object";
+    earl:assertions _:assertions28.
+_:assertions28 rdf:first _:assertion28;
+    rdf:rest rdf:nil.
+_:assertion28 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result28.
+_:result28 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-5> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Reifier without annotation block";
+    earl:assertions _:assertions29.
+_:assertions29 rdf:first _:assertion29;
+    rdf:rest rdf:nil.
+_:assertion29 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-5>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result29.
+_:result29 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-6> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Empty reifier without annotation block";
+    earl:assertions _:assertions30.
+_:assertions30 rdf:first _:assertion30;
+    rdf:rest rdf:nil.
+_:assertion30 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-6>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result30.
+_:result30 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-7> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Reifier with annotation block";
+    earl:assertions _:assertions31.
+_:assertions31 rdf:first _:assertion31;
+    rdf:rest rdf:nil.
+_:assertion31 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-7>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result31.
+_:result31 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-8> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Empty reifier with annotation block";
+    earl:assertions _:assertions32.
+_:assertions32 rdf:first _:assertion32;
+    rdf:rest rdf:nil.
+_:assertion32 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-8>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result32.
+_:result32 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - empty annotation";
+    earl:assertions _:assertions33.
+_:assertions33 rdf:first _:assertion33;
+    rdf:rest rdf:nil.
+_:assertion33 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result33.
+_:result33 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - bad - triple as annotation";
+    earl:assertions _:assertions34.
+_:assertions34 rdf:first _:assertion34;
+    rdf:rest rdf:nil.
+_:assertion34 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result34.
+_:result34 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - triple term";
+    earl:assertions _:assertions35.
+_:assertions35 rdf:first _:assertion35;
+    rdf:rest rdf:nil.
+_:assertion35 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result35.
+_:result35 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - whitespace and terms";
+    earl:assertions _:assertions36.
+_:assertions36 rdf:first _:assertion36;
+    rdf:rest rdf:nil.
+_:assertion36 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result36.
+_:result36 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Nested, no whitespace";
+    earl:assertions _:assertions37.
+_:assertions37 rdf:first _:assertion37;
+    rdf:rest rdf:nil.
+_:assertion37 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result37.
+_:result37 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bnode-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Blank node object";
+    earl:assertions _:assertions38.
+_:assertions38 rdf:first _:assertion38;
+    rdf:rest rdf:nil.
+_:assertion38 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bnode-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result38.
+_:result38 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-nested-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Nested subject term";
+    earl:assertions _:assertions39.
+_:assertions39 rdf:first _:assertion39;
+    rdf:rest rdf:nil.
+_:assertion39 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-nested-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result39.
+_:result39 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - base direction ltr";
+    earl:assertions _:assertions40.
+_:assertions40 rdf:first _:assertion40;
+    rdf:rest rdf:nil.
+_:assertion40 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result40.
+_:result40 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - base direction ltr";
+    earl:assertions _:assertions41.
+_:assertions41 rdf:first _:assertion41;
+    rdf:rest rdf:nil.
+_:assertion41 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result41.
+_:result41 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - undefined base direction";
+    earl:assertions _:assertions42.
+_:assertions42 rdf:first _:assertion42;
+    rdf:rest rdf:nil.
+_:assertion42 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result42.
+_:result42 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - upper case LTR";
+    earl:assertions _:assertions43.
+_:assertions43 rdf:first _:assertion43;
+    rdf:rest rdf:nil.
+_:assertion43 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result43.
+_:result43 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-01> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - triple term as predicate";
+    earl:assertions _:assertions44.
+_:assertions44 rdf:first _:assertion44;
+    rdf:rest rdf:nil.
+_:assertion44 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-01>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result44.
+_:result44 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-02> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - triple term, literal subject";
+    earl:assertions _:assertions45.
+_:assertions45 rdf:first _:assertion45;
+    rdf:rest rdf:nil.
+_:assertion45 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-02>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result45.
+_:result45 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-03> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - triple term, literal predicate";
+    earl:assertions _:assertions46.
+_:assertions46 rdf:first _:assertion46;
+    rdf:rest rdf:nil.
+_:assertion46 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-03>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result46.
+_:result46 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-04> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - triple term, blank node predicate";
+    earl:assertions _:assertions47.
+_:assertions47 rdf:first _:assertion47;
+    rdf:rest rdf:nil.
+_:assertion47 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-04>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result47.
+_:result47 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-05> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - triple term as subject";
+    earl:assertions _:assertions48.
+_:assertions48 rdf:first _:assertion48;
+    rdf:rest rdf:nil.
+_:assertion48 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-05>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result48.
+_:result48 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-06> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple as predicate";
+    earl:assertions _:assertions49.
+_:assertions49 rdf:first _:assertion49;
+    rdf:rest rdf:nil.
+_:assertion49 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-06>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result49.
+_:result49 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-07> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal subject";
+    earl:assertions _:assertions50.
+_:assertions50 rdf:first _:assertion50;
+    rdf:rest rdf:nil.
+_:assertion50 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-07>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result50.
+_:result50 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-08> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, literal predicate";
+    earl:assertions _:assertions51.
+_:assertions51 rdf:first _:assertion51;
+    rdf:rest rdf:nil.
+_:assertion51 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-08>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result51.
+_:result51 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-09> a earl:TestCriterion, earl:TestCase;
+    dc:title "N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, blank node predicate";
+    earl:assertions _:assertions52.
+_:assertions52 rdf:first _:assertion52;
+    rdf:rest rdf:nil.
+_:assertion52 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-09>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result52.
+_:result52 a earl:TestResult;
+    earl:outcome earl:failed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-01> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION";
+    earl:assertions _:assertions53.
+_:assertions53 rdf:first _:assertion53;
+    rdf:rest rdf:nil.
+_:assertion53 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-01>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result53.
+_:result53 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-02> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version";
+    earl:assertions _:assertions54.
+_:assertions54 rdf:first _:assertion54;
+    rdf:rest rdf:nil.
+_:assertion54 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-02>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result54.
+_:result54 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-03> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION in data";
+    earl:assertions _:assertions55.
+_:assertions55 rdf:first _:assertion55;
+    rdf:rest rdf:nil.
+_:assertion55 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-03>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result55.
+_:result55 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-04> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version in data";
+    earl:assertions _:assertions56.
+_:assertions56 rdf:first _:assertion56;
+    rdf:rest rdf:nil.
+_:assertion56 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-04>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result56.
+_:result56 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-05> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION other version string";
+    earl:assertions _:assertions57.
+_:assertions57 rdf:first _:assertion57;
+    rdf:rest rdf:nil.
+_:assertion57 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-05>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result57.
+_:result57 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-06> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version other version string";
+    earl:assertions _:assertions58.
+_:assertions58 rdf:first _:assertion58;
+    rdf:rest rdf:nil.
+_:assertion58 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-06>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result58.
+_:result58 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-07> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - mixed versions";
+    earl:assertions _:assertions59.
+_:assertions59 rdf:first _:assertion59;
+    rdf:rest rdf:nil.
+_:assertion59 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-07>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result59.
+_:result59 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-08> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - many versions";
+    earl:assertions _:assertions60.
+_:assertions60 rdf:first _:assertion60;
+    rdf:rest rdf:nil.
+_:assertion60 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-08>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result60.
+_:result60 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-01> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION - not string";
+    earl:assertions _:assertions61.
+_:assertions61 rdf:first _:assertion61;
+    rdf:rest rdf:nil.
+_:assertion61 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-01>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result61.
+_:result61 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-02> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION - triple-'-quoted string";
+    earl:assertions _:assertions62.
+_:assertions62 rdf:first _:assertion62;
+    rdf:rest rdf:nil.
+_:assertion62 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-02>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result62.
+_:result62 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-03> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - VERSION - triple-\"-quoted string";
+    earl:assertions _:assertions63.
+_:assertions63 rdf:first _:assertion63;
+    rdf:rest rdf:nil.
+_:assertion63 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-03>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result63.
+_:result63 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-04> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version - not string";
+    earl:assertions _:assertions64.
+_:assertions64 rdf:first _:assertion64;
+    rdf:rest rdf:nil.
+_:assertion64 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-04>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result64.
+_:result64 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-05> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version - triple-'-quoted string";
+    earl:assertions _:assertions65.
+_:assertions65 rdf:first _:assertion65;
+    rdf:rest rdf:nil.
+_:assertion65 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-05>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result65.
+_:result65 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-06> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - @version - triple-\"-quoted string";
+    earl:assertions _:assertions66.
+_:assertions66 rdf:first _:assertion66;
+    rdf:rest rdf:nil.
+_:assertion66 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-06>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result66.
+_:result66 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-01> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogate pair numeric escape sequence";
+    earl:assertions _:assertions67.
+_:assertions67 rdf:first _:assertion67;
+    rdf:rest rdf:nil.
+_:assertion67 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-01>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result67.
+_:result67 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-02> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogate pair via numeric escape sequence";
+    earl:assertions _:assertions68.
+_:assertions68 rdf:first _:assertion68;
+    rdf:rest rdf:nil.
+_:assertion68 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-02>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result68.
+_:result68 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-01> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogates - wrong order";
+    earl:assertions _:assertions69.
+_:assertions69 rdf:first _:assertion69;
+    rdf:rest rdf:nil.
+_:assertion69 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-01>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result69.
+_:result69 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-02> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogates - high-high";
+    earl:assertions _:assertions70.
+_:assertions70 rdf:first _:assertion70;
+    rdf:rest rdf:nil.
+_:assertion70 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-02>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result70.
+_:result70 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-03> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogates - low-low";
+    earl:assertions _:assertions71.
+_:assertions71 rdf:first _:assertion71;
+    rdf:rest rdf:nil.
+_:assertion71 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-03>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result71.
+_:result71 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-04> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogates - lone high surrogate";
+    earl:assertions _:assertions72.
+_:assertions72 rdf:first _:assertion72;
+    rdf:rest rdf:nil.
+_:assertion72 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-04>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result72.
+_:result72 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-05> a earl:TestCriterion, earl:TestCase;
+    dc:title "Turtle 1.2 - Bad - Surrogates - lone low surrogate";
+    earl:assertions _:assertions73.
+_:assertions73 rdf:first _:assertion73;
+    rdf:rest rdf:nil.
+_:assertion73 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-05>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result73.
+_:result73 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:02.519Z"^^xsd:dateTime.

@@ -1,0 +1,523 @@
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix earl: <http://www.w3.org/ns/earl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdft: <http://www.w3.org/ns/rdftest#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<> foaf:primaryTopic <https://www.npmjs.com/package/n3/>;
+    dc:issued "2026-08-25T11:52:04.647Z"^^xsd:dateTime;
+    foaf:maker <https://ruben.verborgh.org/>.
+<https://www.npmjs.com/package/n3/> a earl:Software, earl:TestSubject, doap:Project;
+    doap:name "n3";
+    dc:title "n3";
+    doap:homepage <https://github.com/rdfjs/N3.js>;
+    doap:license <http://opensource.org/licenses/MIT>;
+    doap:programming-language "JavaScript";
+    doap:implements <https://www.w3.org/TR/turtle/>, <https://www.w3.org/TR/trig/>, <https://www.w3.org/TR/n-triples/>, <https://www.w3.org/TR/n-quads/>;
+    doap:category <http://dbpedia.org/resource/Resource_Description_Framework>;
+    doap:download-page <https://npmjs.org/package/n3>;
+    doap:bug-database <https://github.com/rdfjs/N3.js/issues>;
+    doap:blog <https://ruben.verborgh.org/blog/>;
+    doap:developer <https://ruben.verborgh.org/>;
+    doap:maintainer <https://ruben.verborgh.org/>;
+    doap:documenter <https://ruben.verborgh.org/>;
+    doap:maker <https://ruben.verborgh.org/>;
+    dc:creator <https://ruben.verborgh.org/>;
+    dc:description "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library."@en;
+    doap:description "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library."@en.
+<https://ruben.verborgh.org/> a foaf:Person, earl:Assertor;
+    foaf:name "Ruben Verborgh <ruben.verborgh@gmail.com>".
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - subject reified triple";
+    earl:assertions _:assertions0.
+_:assertions0 rdf:first _:assertion0;
+    rdf:rest rdf:nil.
+_:assertion0 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result0.
+_:result0 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - object reified triple";
+    earl:assertions _:assertions1.
+_:assertions1 rdf:first _:assertion1;
+    rdf:rest rdf:nil.
+_:assertion1 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result1.
+_:result1 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - triple term object";
+    earl:assertions _:assertions2.
+_:assertions2 rdf:first _:assertion2;
+    rdf:rest rdf:nil.
+_:assertion2 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result2.
+_:result2 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - reified triple outside triple";
+    earl:assertions _:assertions3.
+_:assertions3 rdf:first _:assertion3;
+    rdf:rest rdf:nil.
+_:assertion3 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result3.
+_:result3 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - reified triple inside blankNodePropertyList";
+    earl:assertions _:assertions4.
+_:assertions4 rdf:first _:assertion4;
+    rdf:rest rdf:nil.
+_:assertion4 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result4.
+_:result4 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - reified triple inside collection";
+    earl:assertions _:assertions5.
+_:assertions5 rdf:first _:assertion5;
+    rdf:rest rdf:nil.
+_:assertion5 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result5.
+_:result5 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - reified triple with IRI identifier";
+    earl:assertions _:assertions6.
+_:assertions6 rdf:first _:assertion6;
+    rdf:rest rdf:nil.
+_:assertion6 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result6.
+_:result6 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - reified triple with blank node identifier";
+    earl:assertions _:assertions7.
+_:assertions7 rdf:first _:assertion7;
+    rdf:rest rdf:nil.
+_:assertion7 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result7.
+_:result7 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - nested quoted triple, subject position";
+    earl:assertions _:assertions8.
+_:assertions8 rdf:first _:assertion8;
+    rdf:rest rdf:nil.
+_:assertion8 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result8.
+_:result8 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - nested quoted triple, object position";
+    earl:assertions _:assertions9.
+_:assertions9 rdf:first _:assertion9;
+    rdf:rest rdf:nil.
+_:assertion9 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result9.
+_:result9 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - compound forms";
+    earl:assertions _:assertions10.
+_:assertions10 rdf:first _:assertion10;
+    rdf:rest rdf:nil.
+_:assertion10 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result10.
+_:result10 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - blank node subject";
+    earl:assertions _:assertions11.
+_:assertions11 rdf:first _:assertion11;
+    rdf:rest rdf:nil.
+_:assertion11 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result11.
+_:result11 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - blank node object";
+    earl:assertions _:assertions12.
+_:assertions12 rdf:first _:assertion12;
+    rdf:rest rdf:nil.
+_:assertion12 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result12.
+_:result12 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - blank node";
+    earl:assertions _:assertions13.
+_:assertions13 rdf:first _:assertion13;
+    rdf:rest rdf:nil.
+_:assertion13 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result13.
+_:result13 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - reified triple as predicate";
+    earl:assertions _:assertions14.
+_:assertions14 rdf:first _:assertion14;
+    rdf:rest rdf:nil.
+_:assertion14 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result14.
+_:result14 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - literal in subject position of reified triple";
+    earl:assertions _:assertions15.
+_:assertions15 rdf:first _:assertion15;
+    rdf:rest rdf:nil.
+_:assertion15 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result15.
+_:result15 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - blank node  as predicate in reified triple";
+    earl:assertions _:assertions16.
+_:assertions16 rdf:first _:assertion16;
+    rdf:rest rdf:nil.
+_:assertion16 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result16.
+_:result16 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - incomplete reified triple";
+    earl:assertions _:assertions17.
+_:assertions17 rdf:first _:assertion17;
+    rdf:rest rdf:nil.
+_:assertion17 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result17.
+_:result17 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - over-long reified triple";
+    earl:assertions _:assertions18.
+_:assertions18 rdf:first _:assertion18;
+    rdf:rest rdf:nil.
+_:assertion18 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result18.
+_:result18 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - reified with list object";
+    earl:assertions _:assertions19.
+_:assertions19 rdf:first _:assertion19;
+    rdf:rest rdf:nil.
+_:assertion19 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result19.
+_:result19 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - compound blank node expression";
+    earl:assertions _:assertions20.
+_:assertions20 rdf:first _:assertion20;
+    rdf:rest rdf:nil.
+_:assertion20 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result20.
+_:result20 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Annotation form";
+    earl:assertions _:assertions21.
+_:assertions21 rdf:first _:assertion21;
+    rdf:rest rdf:nil.
+_:assertion21 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result21.
+_:result21 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Annotation example";
+    earl:assertions _:assertions22.
+_:assertions22 rdf:first _:assertion22;
+    rdf:rest rdf:nil.
+_:assertion22 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result22.
+_:result22 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Annotation predicateObjecetList";
+    earl:assertions _:assertions23.
+_:assertions23 rdf:first _:assertion23;
+    rdf:rest rdf:nil.
+_:assertion23 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result23.
+_:result23 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Annotation followed by predicate/object";
+    earl:assertions _:assertions24.
+_:assertions24 rdf:first _:assertion24;
+    rdf:rest rdf:nil.
+_:assertion24 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result24.
+_:result24 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Reifier without annotation block";
+    earl:assertions _:assertions25.
+_:assertions25 rdf:first _:assertion25;
+    rdf:rest rdf:nil.
+_:assertion25 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result25.
+_:result25 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Empty reifier without annotation block";
+    earl:assertions _:assertions26.
+_:assertions26 rdf:first _:assertion26;
+    rdf:rest rdf:nil.
+_:assertion26 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result26.
+_:result26 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Reifier with annotation block";
+    earl:assertions _:assertions27.
+_:assertions27 rdf:first _:assertion27;
+    rdf:rest rdf:nil.
+_:assertion27 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result27.
+_:result27 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - Empty reifier with annotation block";
+    earl:assertions _:assertions28.
+_:assertions28 rdf:first _:assertion28;
+    rdf:rest rdf:nil.
+_:assertion28 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result28.
+_:result28 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - empty annotation";
+    earl:assertions _:assertions29.
+_:assertions29 rdf:first _:assertion29;
+    rdf:rest rdf:nil.
+_:assertion29 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result29.
+_:result29 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "TriG 1.2 - bad - triple as annotation";
+    earl:assertions _:assertions30.
+_:assertions30 rdf:first _:assertion30;
+    rdf:rest rdf:nil.
+_:assertion30 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result30.
+_:result30 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "base direction ltr";
+    earl:assertions _:assertions31.
+_:assertions31 rdf:first _:assertion31;
+    rdf:rest rdf:nil.
+_:assertion31 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result31.
+_:result31 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "base direction ltr";
+    earl:assertions _:assertions32.
+_:assertions32 rdf:first _:assertion32;
+    rdf:rest rdf:nil.
+_:assertion32 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result32.
+_:result32 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1> a earl:TestCriterion, earl:TestCase;
+    dc:title "undefined base direction";
+    earl:assertions _:assertions33.
+_:assertions33 rdf:first _:assertion33;
+    rdf:rest rdf:nil.
+_:assertion33 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result33.
+_:result33 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
+<https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2> a earl:TestCriterion, earl:TestCase;
+    dc:title "upper case LTR";
+    earl:assertions _:assertions34.
+_:assertions34 rdf:first _:assertion34;
+    rdf:rest rdf:nil.
+_:assertion34 a earl:Assertion;
+    earl:assertedBy <https://ruben.verborgh.org/>;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2>;
+    earl:subject <https://www.npmjs.com/package/n3/>;
+    earl:mode earl:automatic;
+    earl:result _:result34.
+_:result34 a earl:TestResult;
+    earl:outcome earl:passed;
+    dc:date "2026-08-25T11:52:04.647Z"^^xsd:dateTime.
