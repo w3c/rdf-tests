@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
+    <link href='earl.jsonld' rel='alternate' />
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' />
+    <link href='comunica.ttl' rel='related' />
+    <title>
+      SPARQL 1.2 Conformance
+    </title>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        span[property='dc:description rdfs:comment'] { display: none; }
+        td.PASS { color: green; }
+        td.FAIL { color: red; }
+        table.report {
+          border-width: 1px;
+          border-spacing: 2px;
+          border-style: outset;
+          border-color: gray;
+          border-collapse: separate;
+          background-color: white;
+        }
+        table.report th {
+          border-width: 1px;
+          padding: 1px;
+          border-style: inset;
+          border-color: gray;
+          background-color: white;
+          -moz-border-radius: ;
+        }
+        table.report td {
+          border-width: 1px;
+          padding: 1px;
+          border-style: inset;
+          border-color: gray;
+          background-color: white;
+          -moz-border-radius: ;
+        }
+        tr.summary {font-weight: bold;}
+        td.passed-all {color: green;}
+        td.passed-most {color: darkorange;}
+        td.passed-some {color: red;}
+        em.rfc2119 {
+          text-transform: lowercase;
+          font-variant:   small-caps;
+          font-style:     normal;
+          color:          #900;
+        }
+        a.testlink {
+          color: inherit;
+          text-decoration: none;
+        }
+        a.testlink:hover {
+          text-decoration: underline;
+        }
+        pre > code {
+          color: #C83500;
+        }
+        .non-normative, .non-normative a:visited, .non-normative a:link {
+          color: gray;
+        }
+        #test-manifests .report td:last-child::before {
+          position: absolute;
+          left: 1em;
+          content: "X";
+          color: red;
+          font-weight: bold;
+        }
+        #test-manifests .report tr.summary td:last-child::before,
+        #test-manifests .report .PASS ~ td.PASS:last-child::before,
+        #test-manifests .report .PASS ~ .PASS ~ td:last-child::before {
+          display: none;
+        }
+      /*]]>*/
+    </style>
+  </head>
+  <body prefix='bibo: http://purl.org/ontology/bibo/ earl: http://www.w3.org/ns/earl# doap: http://usefulinc.com/ns/doap# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#' vocab='http://www.w3.org/ns/earl#'>
+    <div class='head' role='contentinfo'>
+      <p>
+        <a href='http://www.w3.org/'>
+          <img alt='W3C' height='48' src='https://www.w3.org/Icons/w3c_home' width='72' />
+        </a>
+      </p>
+      <h1 class='title p-name' id='title' property='dc:title'>
+        SPARQL 1.2 Conformance
+      </h1>
+      <h2 class='subtitle'>
+        EARL results from the SPARQL 1.2 Test Suites
+      </h2>
+      <h2 id='w3c-document-28-october-2015'>
+        <time class='dt-published' datetime='2026-08-25' property='dc:issued'>
+          25 August 2026
+        </time>
+      </h2>
+      <dl>
+        <dt>Editor:</dt>
+        <dd inlist='true' property='bibo:editor'><span typeof='foaf:Person'><meta content='Ruben Taelman' property='foaf:name' /><a href='https://www.rubensworks.net/' property='foaf:homepage'>Ruben Taelman</a></span></dd>
+      </dl>
+      <p>
+        This document is also available in these non-normative formats:
+        <a href='earl.jsonld' re='alternate'>SPARQL 1.2</a>
+        .
+      </p>
+      <p class='copyright'>
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#Copyright'>
+          Copyright
+        </a>
+        © 2010-2019
+        <a href='http://www.w3.org/'>
+          <sup>®</sup>
+        </a>
+        (<a href='http://www.csail.mit.edu/'><abbr title='Massachusetts Institute of Technology'>MIT</abbr></a>, <a href='http://www.ercim.eu/'><abbr title='European Research Consortium for Informatics and Mathematics'>ERCIM</abbr></a>, <a href='http://www.keio.ac.jp/'>Keio</a>, <a href='http://ev.buaa.edu.cn/'>Beihang</a>).
+        <abbr title='World Wide Web Consortium'>W3C</abbr>
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer'>liability</a>
+        ,
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks'>trademark</a>
+        and
+        <a href='http://www.w3.org/Consortium/Legal/copyright-documents' rel='license'>document use</a>
+        rules apply.
+      </p>
+      <hr />
+    </div>
+    <section id='abstract'>
+      <h2>Abstract</h2>
+      <p>
+        This document report test subject conformance for and related specifications for
+        <span property='doap:name'>SPARQL 1.2 Specifications Test Suites</span>
+        according to the requirements of the Evaluation and Report Language (EARL) 1.0 Schema
+        [<a href='https://www.w3.org/TR/EARL10-Schema/'>EARL10-SCHEMA</a>].
+      </p>
+      <p>
+        This report is also available in alternate formats:
+        <a href='earl.jsonld'>
+          JSON-LD
+        </a>
+      </p>
+    </section>
+    <section id='sodt'>
+      <h2 id='h-sotd' resource='#h-sotd'>
+        <span property='xhv:role' resource='xhv:heading'>
+          Status of This Document
+        </span>
+      </h2>
+      <p>
+        This document is merely a
+        <abbr title='World Wide Web Consortium'>W3C</abbr>-internal  document.
+        It has no official standing of any kind and does not represent consensus of the
+        <abbr title='World Wide Web Consortium'>W3C</abbr>
+        Membership.
+      </p>
+      <p>
+        This report describes the state of implementation conformance at the time of publication.
+      </p>
+    </section>
+    <section id='toc'>
+      <h2 class='introductory' id='h-toc' resource='#h-toc'>
+        <span property='xhv:role' resource='xhv:heading'>
+          Table of Contents
+        </span>
+      </h2>
+      <ul class='toc' id='respecContents' role='directory'>
+        <li class='tocline'>
+          <a class='tocxref' href='#introduction'>
+            <span class='secno'>1.</span>
+            Introduction
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#instructions-for-submitting-implementation-reports'>
+            <span class='secno'>2.</span>
+            Instructions for submitting implementation reports
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#test-manifests'>
+            <span class='secno'>3.</span>
+            Test Manifests
+          </a>
+          <ul class='toc'>
+            <li class='tocline'>
+              <span class='secno'>3.1</span>
+              <a class='tocxref' href='#Evaluation-Triple-Terms'>
+                Evaluation Triple Terms
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.2</span>
+              <a class='tocxref' href='#Expression'>
+                Expression
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.3</span>
+              <a class='tocxref' href='#Grouping'>
+                Grouping
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.4</span>
+              <a class='tocxref' href='#Language-and-base-direction'>
+                Language and base direction
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.5</span>
+              <a class='tocxref' href='#Negative-Syntax-Triple-Terms'>
+                Negative Syntax Triple Terms
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.6</span>
+              <a class='tocxref' href='#Positive-Syntax-Triple-Terms'>
+                Positive Syntax Triple Terms
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.7</span>
+              <a class='tocxref' href='#RDF-1.1-literals-handling'>
+                RDF 1.1 literals handling
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.8</span>
+              <a class='tocxref' href='#SPARQL-Codepoint-Escaping-Tests'>
+                SPARQL Codepoint-Escaping Tests
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.9</span>
+              <a class='tocxref' href='#Syntax'>
+                Syntax
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.10</span>
+              <a class='tocxref' href='#Version-announcement'>
+                Version announcement
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#test-subjects'>
+            <span class='secno'>A.</span>
+            Test Subjects
+          </a>
+          <ul class='toc'>
+            <li class='tocline'>
+              <span class='secno'>A.1</span>
+              <a class='tocxref' href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                (JavaScript)
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#individual-test-results'>
+            <span class='secno'>B.</span>
+            Individual Test Results
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#report-generation-software'>
+            <span class='secno'>C.</span>
+            Report Generation Software
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id='introduction'>
+      <h2 id="introduction">Introduction</h2>
+      <p>This implementation report covers the implementations of the SPARQL 1.2
+        specifications which have submitted test results. It is intended to be
+        maintained by the <a href="https://www.w3.org/community/rdf-tests/">RDF Tests Community Group</a>,
+        or a RDF &amp; SPARQL Working Group if one is active.
+        The implementation report serves two purposes:</p>
+      <ol>
+        <li>
+          <p>To demonstrate that there are multiple, independent implementations of
+            the specifications. This is a prerequisite for progression of any
+            standard to Recommendation.</p>
+        </li>
+        <li>
+          <p>To catalog the known, conforming implementations and which features
+            each supports.</p>
+        </li>
+      </ol>
+      <p>There may be other SPARQL 1.2 implementations which are not listed in this
+        report, either due to not submitting tests or by not being intended as
+        direct implementations of the specification, but instead layering on
+        top of such libraries.</p>
+    </section>
+    <section id='instructions-for-submitting-implementation-reports'>
+      <h2 id="instructions-for-submitting-implementation-reports">Instructions for submitting implementation reports</h2>
+      <p>Reports should be submitted in Turtle format to
+        <a href="mailto:public-rdf-star-wg@w3.org">Public RDF &amp; SPARQL WG</a> or via a Pull
+        Request to the <a href="https://github.com/w3c/rdf-tests/pulls">w3c/rdf-tests</a>.</p>
+      <p>Tests should be run using the test manifests defined in the
+        <a href="#test-manifests">Test Manifests</a> Section.</p>
+      <p>The assumed base URI for the tests is <code>&lt;http://example/base/&gt;</code> if needed.</p>
+      <p>Include an <code>earl:Assertion</code> for each test, referencing the test
+        resource from the associated manifest and the test subject being
+        reported upon. See the example below:</p>
+      <pre><code>  [ a earl:Assertion;
+    earl:assertedBy &lt;--your-developer-identifier--&gt;;
+    earl:subject &lt;--your-software-identifier--&gt;;
+    earl:test &lt;--uri-of-test-from-manifest&gt;;
+    earl:result [
+      a earl:TestResult;
+      earl:outcome earl:passed;
+      dc:date "2016-12-26T10:18:04-08:00"^^xsd:dateTime];
+    earl:mode earl:automatic ] .
+</code></pre>
+      <p>The Test Subject should be defined as a <code>doap:Project</code>, including the name,
+        homepage and developer(s) of the software (see <a href="https://github.com/edumbill/doap/wiki">DOAP</a>). Optionally, including the
+        project description and programming language. An example test subject description is the following:</p>
+      <pre><code>  &lt;&gt; foaf:primaryTopic &lt;--your-software-identifier--&gt; ;
+    dc:issued "2016-12-26T10:18:04-08:00"^^xsd:dateTime ;
+    foaf:maker &lt;--your-developer-identifier--&gt; .
+
+  &lt;--your-software-identifier--&gt; a doap:Project, earl:TestSubject, earl:Software ;
+    doap:name          "My Cool Turtle Parser" ;
+    doap:release [
+      doap:name     "--short name wih version number--";
+      doap:revision "--Software version number--" ;
+      doap:created  "2020-02-19"^^xsd:date;
+    ] ;
+    doap:developer     &lt;--your-developer-identifier--&gt; ;
+    doap:homepage      &lt;--your-software-homepace--&gt; ;
+    doap:description   "--your-project-description--"@en ;
+    doap:programming-language "--your-implementation-language--" .
+</code></pre>
+      <p>The software developer, either an organization or one or more individuals SHOULD be
+        referenced from <code>doap:developer</code> using <a href="http://xmlns.com/foaf/spec">FOAF</a>. For example:</p>
+      <pre><code>  &lt;--your-developer-identifier--&gt; a foaf:Person, earl:Assertor;
+    foaf:name "--My Name--";
+    foaf:homepage &lt;--my homepage--&gt; .
+</code></pre>
+    </section>
+    <section id='test-manifests'>
+      <h2>
+        <span class='secno'>3.</span>
+        Test Manifests
+      </h2>
+      <section id='Evaluation-Triple-Terms'>
+        <h2>
+          <span class='secno'>3.1</span>
+          <span>Evaluation Triple Terms</span>
+        </h2>
+        <p>Evaluation tests for triple terms in SPARQL 1.2</p>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1j'>Test results-tripleterms-1j: Triple terms - all graph triples (JSON results)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1x'>Test results-tripleterms-1x: Triple terms - all graph triples (XML results)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1j'>Test results-reifiedtriples-1j: Reified triples - all graph triples (JSON results)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1x'>Test results-reifiedtriples-1x: Reified triples - all graph triples (XML results)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-2'>Test basic-2: Reified triples - match constant reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-3'>Test basic-3: Reified triples - match reified triple, var subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-4'>Test basic-4: Reified triples - match reified triple, var predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-5'>Test basic-5: Reified triples - match reified triple, var object</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-6'>Test basic-6: Reified triples - no match of reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-7'>Test basic-7: Annotated triple - match constant reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-8'>Test basic-8: Triple terms - in VALUES</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-9'>Test basic-9: Triple terms - in expressions and equality</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-1'>Test pattern-1: Reified triples - Asserted and reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-2'>Test pattern-2: Reified triples - Asserted and reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3'>Test pattern-3: Reified triples - Pattern - Variable for reified triple reifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3-nomatch'>Test pattern-3-nomatch: Reified triples - Pattern - Variable for reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-4'>Test pattern-4: Reified triples - Pattern - No match</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-5'>Test pattern-5: Reified triples - Pattern - match variables in triple terms</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-6'>Test pattern-6: Reified triples - Pattern - Nesting 1</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-7'>Test pattern-7: Reified triples - Pattern - Nesting 2</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8'>Test pattern-8: Reified triples - Pattern - Match and nesting</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8-nomatch'>Test pattern-8-nomatch: Reified triples - Pattern - Match for non-equal reifier and nesting</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-9'>Test pattern-9: Reified triples - Pattern - Same variable</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-10'>Test pattern-10: Reified triples - Pattern - literals or triple terms</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-11'>Test pattern-11: Triple terms - Pattern - literals or triple terms</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-1'>Test construct-1: Reified triples - CONSTRUCT with constant template</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-2'>Test construct-2: Reified triples - CONSTRUCT WHERE with constant template</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-3'>Test construct-3: Reified triples - CONSTRUCT - about every triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-4'>Test construct-4: Reified triples - CONSTRUCT with annotation syntax</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-5'>Test construct-5: Reified triples - CONSTRUCT WHERE with annotation syntax</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-1'>Test graphs-1: Reified triples - GRAPH</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-2'>Test graphs-2: Reified triples - GRAPHs with blank node</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-1'>Test expr-1: Reified triples - Embedded triple - BIND - CONSTRUCT</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-2'>Test expr-2: Reified triples - Embedded triple - Functions</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-1'>Test op-1: Reified triples - Embedded triple - sameTerm</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-2'>Test op-2: Reified triples - Embedded triple - value-equality</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-1'>Test order-1: Reified triples - Embedded triple - ORDER BY</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-2'>Test order-2: Reified triples - Embedded triple - ordering</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-1'>Test update-1: Reified triples - Update</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-2'>Test update-2: Reified triples - Update - annotation</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-3'>Test update-3: Reified triples - Update - data</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 41 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Expression'>
+        <h2>
+          <span class='secno'>3.2</span>
+          <span>Expression</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#not-not'>Test not-not: not-not</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-literals'>Test triple-on-literals: triple on literals</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-str-literals'>Test triple-on-str-literals: triple on string literals</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-triple-terms'>Test triple-on-triple-terms: triple on triple terms</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-undefs'>Test triple-on-undefs: triple on undefs</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 5 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Grouping'>
+        <h2>
+          <span class='secno'>3.3</span>
+          <span>Grouping</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#group01'>Test group01: Group-1</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#select-variable-reuse'>Test select-variable-reuse: Reuse of SELECT variable in an aggregating query</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 2 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Language-and-base-direction'>
+        <h2>
+          <span class='secno'>3.4</span>
+          <span>Language and base direction</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslang'>Test haslang: hasLANG</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslangdir'>Test haslangdir: hasLANGDIR</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang'>Test lang: LANG</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir'>Test langdir: LANGDIR</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal'>Test langdir-literal: LANGDIR with inline literals</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal-invalid'>Test langdir-literal-invalid: Literal with invalid base direction</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlang'>Test strlang: STRLANG</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlangdir'>Test strlangdir: STRLANGDIR</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#datatype'>Test datatype: DATATYPE and rdf:dirLangString</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#concat'>Test concat: CONCAT and rdf:dirLangString</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#contains'>Test contains: CONTAINS and rdf:dirLangString</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 11 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Negative-Syntax-Triple-Terms'>
+        <h2>
+          <span class='secno'>3.5</span>
+          <span>Negative Syntax Triple Terms</span>
+        </h2>
+        <p>Negative syntax tests for triple terms in SPARQL 1.2</p>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-anonreifier'>Test alternate-path-anonreifier: alternate-path-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-reifier'>Test alternate-path-reifier: alternate-path-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-tripleterm'>Test alternate-path-tripleterm: alternate-path-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-alternate-path'>Test annotated-anonreifier-alternate-path: annotated-anonreifier-alternate-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-list-predicate'>Test annotated-anonreifier-list-predicate: annotated-anonreifier-list-predicate.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-oneOrMore'>Test annotated-anonreifier-oneOrMore: annotated-anonreifier-oneOrMore.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-optional'>Test annotated-anonreifier-optional: annotated-anonreifier-optional.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path-on-start'>Test annotated-anonreifier-path-on-start: annotated-anonreifier-path-on-start.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path'>Test annotated-anonreifier-path: annotated-anonreifier-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-variable-path'>Test annotated-anonreifier-variable-path: annotated-anonreifier-variable-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-list-predicate'>Test annotated-reifier-list-predicate: annotated-reifier-list-predicate.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-oneOrMore'>Test annotated-reifier-oneOrMore: annotated-reifier-oneOrMore.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-optional'>Test annotated-reifier-optional: annotated-reifier-optional.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path-on-start'>Test annotated-reifier-path-on-start: annotated-reifier-path-on-start.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path'>Test annotated-reifier-path: annotated-reifier-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-reifier-alternate-path'>Test annotated-reifier-reifier-alternate-path: annotated-reifier-reifier-alternate-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-variable-path'>Test annotated-reifier-variable-path: annotated-reifier-variable-path.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-anonreified'>Test bind-anonreified: bind-anonreified.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-reified'>Test bind-reified: bind-reified.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-anonreifier'>Test bindbnode-anonreifier: bindbnode-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-reifier'>Test bindbnode-reifier: bindbnode-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-tripleterm'>Test bindbnode-tripleterm: bindbnode-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-anonreifier'>Test bnode-predicate-anonreifier: bnode-predicate-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-reifier'>Test bnode-predicate-reifier: bnode-predicate-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-tripleterm'>Test bnode-predicate-tripleterm: bnode-predicate-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-01'>Test list-anonreifier-01: list-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-02'>Test list-anonreifier-02: list-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-01'>Test list-reifier-01: list-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-02'>Test list-reifier-02: list-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-01'>Test list-tripleterm-01: list-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-02'>Test list-tripleterm-02: list-tripleterm-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-anonreifier'>Test nested-annotated-path-anonreifier: nested-annotated-path-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-reifier'>Test nested-annotated-path-reifier: nested-annotated-path-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-anonreifier'>Test quoted-list-object-anonreifier: quoted-list-object-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-reifier'>Test quoted-list-object-reifier: quoted-list-object-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-tripleterm'>Test quoted-list-object-tripleterm: quoted-list-object-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-anonreifier'>Test quoted-list-predicate-anonreifier: quoted-list-predicate-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-reifier'>Test quoted-list-predicate-reifier: quoted-list-predicate-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-tripleterm'>Test quoted-list-predicate-tripleterm: quoted-list-predicate-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-anonreifier'>Test quoted-list-subject-anonreifier: quoted-list-subject-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-reifier'>Test quoted-list-subject-reifier: quoted-list-subject-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-tripleterm'>Test quoted-list-subject-tripleterm: quoted-list-subject-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-anonreifier'>Test quoted-path-anonreifier: quoted-path-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-anonreifier'>Test quoted-path-bind-anonreifier: quoted-path-bind-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-reifier'>Test quoted-path-bind-reifier: quoted-path-bind-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-tripleterm'>Test quoted-path-bind-tripleterm: quoted-path-bind-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-reifier'>Test quoted-path-reifier: quoted-path-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-tripleterm'>Test quoted-path-tripleterm: quoted-path-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-anonreifier'>Test quoted-variable-path-anonreifier: quoted-variable-path-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-reifier'>Test quoted-variable-path-reifier: quoted-variable-path-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-tripleterm'>Test quoted-variable-path-tripleterm: quoted-variable-path-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-01'>Test syntax-update-anonreifier-01: syntax-update-anonreifier-01.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-02'>Test syntax-update-anonreifier-02: syntax-update-anonreifier-02.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-01'>Test tripleterm-separate-01: tripleterm-separate-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-02'>Test tripleterm-separate-02: tripleterm-separate-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-03'>Test tripleterm-separate-03: tripleterm-separate-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-04'>Test tripleterm-separate-04: tripleterm-separate-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-05'>Test tripleterm-separate-05: tripleterm-separate-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-06'>Test tripleterm-separate-06: tripleterm-separate-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-01'>Test tripleterm-subject-01: Triple term in the subject position of a triple term (VALUES, simple)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-02'>Test tripleterm-subject-02: Triple term in the subject position of a triple term (VALUES, general)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-03'>Test tripleterm-subject-03: Triple term in the subject position  of a triple term (expression)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-04'>Test tripleterm-subject-04: Literal in the subject position of a triple term (VALUES, simple)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-05'>Test tripleterm-subject-05: Literal in the subject position of a triple term (VALUES, general)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-06'>Test tripleterm-subject-06: Literal in the subject position of a triple term (expression)</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 65 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Positive-Syntax-Triple-Terms'>
+        <h2>
+          <span class='secno'>3.6</span>
+          <span>Positive Syntax Triple Terms</span>
+        </h2>
+        <p>Positive syntax tests for triple terms in SPARQL 1.2</p>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-01'>Test annotation-anonreifier-01: annotation-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-02'>Test annotation-anonreifier-02: annotation-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-03'>Test annotation-anonreifier-03: annotation-anonreifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-04'>Test annotation-anonreifier-04: annotation-anonreifier-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-05'>Test annotation-anonreifier-05: annotation-anonreifier-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-06'>Test annotation-anonreifier-06: annotation-anonreifier-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-07'>Test annotation-anonreifier-07: annotation-anonreifier-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-08'>Test annotation-anonreifier-08: annotation-anonreifier-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-09'>Test annotation-anonreifier-09: annotation-anonreifier-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-01'>Test annotation-anonreifier-multiple-01: annotation-anonreifier-multiple-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-02'>Test annotation-anonreifier-multiple-02: annotation-anonreifier-multiple-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-03'>Test annotation-anonreifier-multiple-03: annotation-anonreifier-multiple-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-04'>Test annotation-anonreifier-multiple-04: annotation-anonreifier-multiple-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-01'>Test annotation-reifier-01: annotation-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-02'>Test annotation-reifier-02: annotation-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-03'>Test annotation-reifier-03: annotation-reifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-04'>Test annotation-reifier-04: annotation-reifier-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-05'>Test annotation-reifier-05: annotation-reifier-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-06'>Test annotation-reifier-06: annotation-reifier-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-07'>Test annotation-reifier-07: annotation-reifier-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-08'>Test annotation-reifier-08: annotation-reifier-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-09'>Test annotation-reifier-09: annotation-reifier-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-01'>Test annotation-reifier-multiple-01: annotation-reifier-multiple-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-02'>Test annotation-reifier-multiple-02: annotation-reifier-multiple-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-03'>Test annotation-reifier-multiple-03: annotation-reifier-multiple-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-04'>Test annotation-reifier-multiple-04: annotation-reifier-multiple-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-05'>Test annotation-reifier-multiple-05: annotation-reifier-multiple-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-06'>Test annotation-reifier-multiple-06: annotation-reifier-multiple-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-07'>Test annotation-reifier-multiple-07: annotation-reifier-multiple-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-08'>Test annotation-reifier-multiple-08: annotation-reifier-multiple-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-09'>Test annotation-reifier-multiple-09: annotation-reifier-multiple-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-10'>Test annotation-reifier-multiple-10: annotation-reifier-multiple-10.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-01'>Test basic-anonreifier-01: basic-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-02'>Test basic-anonreifier-02: basic-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-03'>Test basic-anonreifier-03: basic-anonreifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-04'>Test basic-anonreifier-04: basic-anonreifier-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-06'>Test basic-anonreifier-06: basic-anonreifier-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-07'>Test basic-anonreifier-07: basic-anonreifier-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-08'>Test basic-anonreifier-08: basic-anonreifier-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-09'>Test basic-anonreifier-09: basic-anonreifier-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-10'>Test basic-anonreifier-10: basic-anonreifier-10.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-11'>Test basic-anonreifier-11: basic-anonreifier-11.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-12'>Test basic-anonreifier-12: basic-anonreifier-12.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-13'>Test basic-anonreifier-13: basic-anonreifier-13.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-01'>Test basic-reifier-01: basic-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-02'>Test basic-reifier-02: basic-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-03'>Test basic-reifier-03: basic-reifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-04'>Test basic-reifier-04: basic-reifier-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-06'>Test basic-reifier-06: basic-reifier-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-07'>Test basic-reifier-07: basic-reifier-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-08'>Test basic-reifier-08: basic-reifier-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-09'>Test basic-reifier-09: basic-reifier-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-10'>Test basic-reifier-10: basic-reifier-10.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-11'>Test basic-reifier-11: basic-reifier-11.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-12'>Test basic-reifier-12: basic-reifier-12.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-13'>Test basic-reifier-13: basic-reifier-13.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-01'>Test basic-tripleterm-01: basic-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-02'>Test basic-tripleterm-02: basic-tripleterm-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-03'>Test basic-tripleterm-03: basic-tripleterm-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-04'>Test basic-tripleterm-04: basic-tripleterm-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-05'>Test basic-tripleterm-05: basic-tripleterm-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-06'>Test basic-tripleterm-06: basic-tripleterm-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-07'>Test basic-tripleterm-07: basic-tripleterm-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-01'>Test bnode-anonreifier-01: bnode-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-02'>Test bnode-anonreifier-02: bnode-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-03'>Test bnode-anonreifier-03: bnode-anonreifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-01'>Test bnode-reifier-01: bnode-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-02'>Test bnode-reifier-02: bnode-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-03'>Test bnode-reifier-03: bnode-reifier-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-01'>Test bnode-tripleterm-01: bnode-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-02'>Test bnode-tripleterm-02: bnode-tripleterm-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-03'>Test bnode-tripleterm-03: bnode-tripleterm-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-all'>Test compound-all: compound-all.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-anonreifier'>Test compound-anonreifier: compound-anonreifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-reifier'>Test compound-reifier: compound-reifier.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm'>Test compound-tripleterm: compound-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm-subject'>Test compound-tripleterm-subject: compound-tripleterm-subject.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-01'>Test expr-tripleterm-01: expr-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-03'>Test expr-tripleterm-03: expr-tripleterm-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-04'>Test expr-tripleterm-04: expr-tripleterm-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-05'>Test expr-tripleterm-05: expr-tripleterm-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-06'>Test expr-tripleterm-06: expr-tripleterm-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-01'>Test inside-anonreifier-01: inside-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-02'>Test inside-anonreifier-02: inside-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-01'>Test inside-reifier-01: inside-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-02'>Test inside-reifier-02: inside-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-01'>Test inside-tripleterm-01: inside-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-02'>Test inside-tripleterm-02: inside-tripleterm-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-01'>Test nested-anonreifier-01: nested-anonreifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-02'>Test nested-anonreifier-02: nested-anonreifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-01'>Test nested-reifier-01: nested-reifier-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-02'>Test nested-reifier-02: nested-reifier-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-01'>Test nested-tripleterm-01: nested-tripleterm-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-02'>Test nested-tripleterm-02: nested-tripleterm-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#subject-tripleterm'>Test subject-tripleterm: subject-tripleterm.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-01'>Test update-anonreifier-01: update-anonreifier-01.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-02'>Test update-anonreifier-02: update-anonreifier-02.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-03'>Test update-anonreifier-03: update-anonreifier-03.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-04'>Test update-anonreifier-04: update-anonreifier-04.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-05'>Test update-anonreifier-05: update-anonreifier-05.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-06'>Test update-anonreifier-06: update-anonreifier-06.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-01'>Test update-reifier-01: update-reifier-01.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-02'>Test update-reifier-02: update-reifier-02.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-03'>Test update-reifier-03: update-reifier-03.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-04'>Test update-reifier-04: update-reifier-04.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-05'>Test update-reifier-05: update-reifier-05.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-06'>Test update-reifier-06: update-reifier-06.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-07'>Test update-reifier-07: update-reifier-07.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-08'>Test update-reifier-08: update-reifier-08.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-01'>Test update-tripleterm-01: update-tripleterm-01.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-03'>Test update-tripleterm-03: update-tripleterm-03.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-04'>Test update-tripleterm-04: update-tripleterm-04.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-05'>Test update-tripleterm-05: update-tripleterm-05.ru</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 113 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='RDF-1.1-literals-handling'>
+        <h2>
+          <span class='secno'>3.7</span>
+          <span>RDF 1.1 literals handling</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#langstring-datatype'>Test langstring-datatype: DATATYPE on rdf:langString</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-datatype'>Test plain-string-datatype: DATATYPE on plain string literal</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-same'>Test plain-string-same: xsd:string and plain literals are the same</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 3 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='SPARQL-Codepoint-Escaping-Tests'>
+        <h2>
+          <span class='secno'>3.8</span>
+          <span>SPARQL Codepoint-Escaping Tests</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-01-bad'>Test codepoint-esc-01-bad: codepoint-esc-01-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-02-bad'>Test codepoint-esc-02-bad: codepoint-esc-02-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-03-bad'>Test codepoint-esc-03-bad: codepoint-esc-03-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-04-bad'>Test codepoint-esc-04-bad: codepoint-esc-04-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-05'>Test codepoint-esc-05: codepoint-esc-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-06'>Test codepoint-esc-06: codepoint-esc-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-07'>Test codepoint-esc-07: codepoint-esc-07.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-08'>Test codepoint-esc-08: codepoint-esc-08.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-09'>Test codepoint-esc-09: codepoint-esc-09.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-01-bad'>Test surrogate-esc-01-bad: surrogate-esc-01-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-02-bad'>Test surrogate-esc-02-bad: surrogate-esc-02-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-03-bad'>Test surrogate-esc-03-bad: surrogate-esc-03-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-04-bad'>Test surrogate-esc-04-bad: surrogate-esc-04-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-05-bad'>Test surrogate-esc-05-bad: surrogate-esc-05-bad.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 14 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Syntax'>
+        <h2>
+          <span class='secno'>3.9</span>
+          <span>Syntax</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#nested-aggregate-functions'>Test nested-aggregate-functions: Nested aggregate functions</a>
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#duplicated-values-variable'>Test duplicated-values-variable: Duplicated variable in a VALUES clause</a>
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-1'>Test group-by-scope-1: GROUP BY in-scope</a>
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-1'>Test group-by-scope-bad-1: GROUP BY variable in-scope (1)</a>
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-2'>Test group-by-scope-bad-2: GROUP BY variable in-scope (2)</a>
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-3'>Test group-by-scope-bad-3: GROUP BY expression in-scope</a>
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 6 Tests
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='Version-announcement'>
+        <h2>
+          <span class='secno'>3.10</span>
+          <span>Version announcement</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Comunica_SPARQL_JavaScript'>
+                Comunica SPARQL
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-01'>Test version-01: version-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-02'>Test version-02: version-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-03'>Test version-03: version-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-04'>Test version-04: version-04.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-05'>Test version-05: version-05.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-06'>Test version-06: version-06.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-01'>Test version-bad-01: version-bad-01.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-02'>Test version-bad-02: version-bad-02.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-03'>Test version-bad-03: version-bad-03.rq</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 9 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+    </section>
+    <section class='appendix' id='test-subjects'>
+      <h2>
+        <span class='secno'>A.</span>
+        Test Subjects
+      </h2>
+      <p>
+        This report was tested using the following test subjects:
+      </p>
+      <dl>
+        <dt id='subj_Comunica_SPARQL_JavaScript'>
+          <span class='secno'>A.1</span>
+          <a href='https://www.npmjs.com/package/@comunica/query-sparql'>
+            <span about='https://www.npmjs.com/package/@comunica/query-sparql' property='doap:name'>Comunica SPARQL</span>
+          </a>
+        </dt>
+        <dd>
+          <dl>
+            <dt>Description</dt>
+            <dd lang='en' property='doap:description'>A Comunica engine for SPARQL query evaluation over heterogeneous interfaces</dd>
+            <dt>Release</dt>
+            <dd property='doap:release'><span property='doap:revision'>unknown</span></dd>
+            <dt>Programming Language</dt>
+            <dd property='doap:programming-language'>JavaScript</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='https://comunica.dev/' property='doap:homepage'>
+                https://comunica.dev/
+              </a>
+            </dd>
+            <dt>Developer</dt>
+            <dd rel='doap:developer'>
+              <div>
+                <a href='https://www.rubensworks.net/#me'>
+                  <span property='foaf:name'>Ruben Taelman</span>
+                </a>
+                <a href='https://www.rubensworks.net/' property='foaf:homepage'>
+                  https://www.rubensworks.net/
+                </a>
+              </div>
+            </dd>
+            <dt>
+              Test Suite Compliance
+            </dt>
+            <dd>
+              <table class='report'>
+                <tbody>
+                  <tr>
+                    <td>
+                      Evaluation Triple Terms
+                    </td>
+                    <td class='passed-all'>
+                      41/41 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Expression
+                    </td>
+                    <td class='passed-all'>
+                      5/5 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Grouping
+                    </td>
+                    <td class='passed-all'>
+                      2/2 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Language and base direction
+                    </td>
+                    <td class='passed-all'>
+                      11/11 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Negative Syntax Triple Terms
+                    </td>
+                    <td class='passed-all'>
+                      65/65 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Positive Syntax Triple Terms
+                    </td>
+                    <td class='passed-all'>
+                      113/113 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.1 literals handling
+                    </td>
+                    <td class='passed-all'>
+                      3/3 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      SPARQL Codepoint-Escaping Tests
+                    </td>
+                    <td class='passed-all'>
+                      14/14 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Version announcement
+                    </td>
+                    <td class='passed-all'>
+                      9/9 (100.0%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </section>
+    <section class='appendix' id='individual-test-results' rel='xhv:related earl:assertions'>
+      <h2>
+        <span class='secno'>B.</span>
+        Individual Test Results
+      </h2>
+      <p>
+        Individual test results used to construct this report are available here:
+      </p>
+      <ul>
+        <li>
+          <a class='source' href='comunica.ttl'>comunica.ttl</a>
+        </li>
+      </ul>
+    </section>
+    <section class='appendix' id='report-generation-software' property='earl:generatedBy' resource='https://rubygems.org/gems/earl-report' typeof='Software doap:Project'>
+      <h2>
+        <span class='secno'>C.</span>
+        Report Generation Software
+      </h2>
+      <p>
+        This report generated by
+        <span property='doap:name'><a href='https://rubygems.org/gems/earl-report'>earl-report</a></span>
+        <meta content='Earl Report summary generator' property='doap:shortdesc' />
+        <meta content='EarlReport generates HTML+RDFa rollups of multiple EARL reports' property='doap:description' />
+        version
+        <span property='doap:release' resource='https://github.com/gkellogg/earl-report/tree/0.9.1' typeof='doap:Version'>
+          <span property='doap:revision'>0.9.1</span>
+          <meta content='earl-report-0.9.1' property='doap:name' />
+          <meta content='' datatype='xsd:date' property='doap:created' />
+        </span>
+        is a
+        <span property='doap:programming-language'>Ruby</span>
+        application freely available under the generous terms of the
+        <a href='http://unlicense.org' property='doap:license'>Unlicense</a>.
+        More information is available at
+        <a href='https://github.com/gkellogg/earl-report' property='doap:homepage'>https://github.com/gkellogg/earl-report</a>
+        .
+      </p>
+      <p property='doap:developer' resource='http://greggkellogg.net/foaf#me' typeof='foaf:Person'>
+        This software is provided by
+        <a href='http://greggkellogg.net/' property='foaf:homepage'><span about='http://greggkellogg.net/foaf#me' property='foaf:name'>Gregg Kellogg</span></a>
+        in hopes that it might make the lives of conformance testers easier.
+      </p>
+    </section>
+  </body>
+</html>
