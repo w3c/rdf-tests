@@ -111,7 +111,10 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-01.rq"
+        "query": "dataset-01.rq",
+        "graphData": [
+          "data-g1.ttl"
+        ]
       },
       "result": "dataset-01.ttl"
     },
@@ -123,7 +126,10 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-02.rq"
+        "query": "dataset-02.rq",
+        "graphData": [
+          "data-g1.ttl"
+        ]
       },
       "result": "dataset-02.ttl"
     },
@@ -135,7 +141,10 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-03.rq"
+        "query": "dataset-03.rq",
+        "graphData": [
+          "data-g1.ttl"
+        ]
       },
       "result": "dataset-03.ttl"
     },
@@ -147,7 +156,10 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-04.rq"
+        "query": "dataset-04.rq",
+        "graphData": [
+          "data-g1.ttl"
+        ]
       },
       "result": "dataset-04.ttl"
     },
@@ -159,7 +171,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-05.rq"
+        "query": "dataset-05.rq",
+        "graphData": [
+          "data-g1.ttl",
+          "data-g2.ttl"
+        ]
       },
       "result": "dataset-05.ttl"
     },
@@ -171,7 +187,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-06.rq"
+        "query": "dataset-06.rq",
+        "graphData": [
+          "data-g1.ttl",
+          "data-g2.ttl"
+        ]
       },
       "result": "dataset-06.ttl"
     },
@@ -183,7 +203,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-07.rq"
+        "query": "dataset-07.rq",
+        "graphData": [
+          "data-g1.ttl",
+          "data-g2.ttl"
+        ]
       },
       "result": "dataset-07.ttl"
     },
@@ -195,7 +219,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
-        "query": "dataset-08.rq"
+        "query": "dataset-08.rq",
+        "graphData": [
+          "data-g1.ttl",
+          "data-g2.ttl"
+        ]
       },
       "result": "dataset-08.ttl"
     },
@@ -207,7 +235,13 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html",
       "action": {
-        "query": "dataset-11.rq"
+        "query": "dataset-11.rq",
+        "graphData": [
+          "data-g1.ttl",
+          "data-g2.ttl",
+          "data-g3.ttl",
+          "data-g4.ttl"
+        ]
       },
       "result": "dataset-11.ttl"
     },
@@ -219,7 +253,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2007/10/09-dawg-minutes.html",
       "action": {
-        "query": "dataset-09b.rq"
+        "query": "dataset-09b.rq",
+        "graphData": [
+          "data-g3-dup.ttl",
+          "data-g3.ttl"
+        ]
       },
       "result": "dataset-09.ttl"
     },
@@ -231,7 +269,11 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2007/10/09-dawg-minutes.html",
       "action": {
-        "query": "dataset-10b.rq"
+        "query": "dataset-10b.rq",
+        "graphData": [
+          "data-g3-dup.ttl",
+          "data-g3.ttl"
+        ]
       },
       "result": "dataset-10.ttl"
     },
@@ -243,7 +285,17 @@
       "approval": "dawgt:Approved",
       "approvedBy": "http://www.w3.org/2007/10/09-dawg-minutes.html",
       "action": {
-        "query": "dataset-12b.rq"
+        "query": "dataset-12b.rq",
+        "graphData": [
+          "data-g1-dup.ttl",
+          "data-g2-dup.ttl",
+          "data-g3-dup.ttl",
+          "data-g4-dup.ttl",
+          "data-g1.ttl",
+          "data-g2.ttl",
+          "data-g3.ttl",
+          "data-g4.ttl"
+        ]
       },
       "result": "dataset-12.ttl"
     }
