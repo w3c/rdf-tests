@@ -215,6 +215,7 @@ MF_INCLUDE = RDF::URI("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#
 # the suite's top-level manifest. Returns the report to build.
 def implementation_report(dir, suite)
   suite_dir  = File.dirname(dir)
+  suite_uri  = "#{BASE_URI}#{suite_dir}/"
   manifests  = "#{dir}/manifests.ttl"
   earl       = "#{dir}/earl.jsonld"
   html       = "#{dir}/index.html"
@@ -225,7 +226,7 @@ def implementation_report(dir, suite)
   file manifests => MANIFESTS.grep(%r{^#{suite_dir}/}) do
     puts "Generate #{manifests}"
     graph = RDF::Graph.new
-    visited, queue = Set.new, ["#{BASE_URI}#{suite_dir}/manifest.ttl"]
+    visited, queue = Set.new, ["#{suite_uri}manifest.ttl"]
     until queue.empty?
       url = queue.shift
       next unless visited.add?(url)
@@ -233,10 +234,16 @@ def implementation_report(dir, suite)
       # test IRIs match the ones the individual EARL reports assert against.
       manifest = RDF::Graph.load(url.sub(BASE_URI, ''), base_uri: url, unique_bnodes: true)
 
-      # Follow this manifest's mf:include lists to find any nested manifests
+      # Follow this manifest's mf:include lists to find any nested manifests,
+      # but only those belonging to this suite. Each RDF 1.2 manifest also
+      # includes its RDF 1.1 predecessor, which is out of scope for an RDF 1.2
+      # report. The dangling mf:include triples left behind are harmless:
+      # earl-report finds tests through mf:action/mf:entries and never looks
+      # at mf:include.
       manifest.query([nil, MF_INCLUDE, nil]).each do |stmt|
         RDF::List.new(subject: stmt.object, graph: manifest).each do |item|
-          queue << item.to_s if item.uri?
+          next unless item.uri?
+          queue << item.to_s if item.to_s.start_with?(suite_uri)
         end
       end
       graph.insert(manifest)
