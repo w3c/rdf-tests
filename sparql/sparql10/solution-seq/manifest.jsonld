@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "Solution Sequence",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.0"
+  },
   "entries": [
     {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/solution-seq/manifest#limit-1",

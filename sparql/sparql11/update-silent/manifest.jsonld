@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "SPARQL 1.1 Update test cases for SILENT",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.1"
+  },
   "comment": "The test cases in this manifest comprise cases of erroneous operations which should fail, but succeed because of the keyword SILENT",
   "entries": [
     {

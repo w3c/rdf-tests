@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "OPTIONAL FILTER",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.0"
+  },
   "comment": "OPTIONAL with inner and outer FILTERs",
   "entries": [
     {

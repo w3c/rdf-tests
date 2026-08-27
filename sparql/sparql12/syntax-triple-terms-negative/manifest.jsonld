@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "Negative Syntax Triple Terms",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.2"
+  },
   "comment": "Negative syntax tests for triple terms in SPARQL 1.2",
   "entries": [
     {
@@ -108,7 +111,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "alternate-path-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "alternate-path-anonreifier.rq"
     },
     {
@@ -116,7 +118,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "alternate-path-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "alternate-path-reifier.rq"
     },
     {
@@ -124,7 +125,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "alternate-path-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "alternate-path-tripleterm.rq"
     },
     {
@@ -132,7 +132,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-alternate-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-alternate-path.rq"
     },
     {
@@ -140,7 +139,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-list-predicate.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-list-predicate.rq"
     },
     {
@@ -148,7 +146,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-oneOrMore.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-oneOrMore.rq"
     },
     {
@@ -156,7 +153,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-optional.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-optional.rq"
     },
     {
@@ -164,7 +160,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-path-on-start.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-path-on-start.rq"
     },
     {
@@ -172,7 +167,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-path.rq"
     },
     {
@@ -180,7 +174,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-anonreifier-variable-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-anonreifier-variable-path.rq"
     },
     {
@@ -188,7 +181,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-list-predicate.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-list-predicate.rq"
     },
     {
@@ -196,7 +188,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-oneOrMore.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-oneOrMore.rq"
     },
     {
@@ -204,7 +195,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-optional.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-optional.rq"
     },
     {
@@ -212,7 +202,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-path-on-start.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-path-on-start.rq"
     },
     {
@@ -220,7 +209,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-path.rq"
     },
     {
@@ -228,7 +216,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-reifier-alternate-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-reifier-alternate-path.rq"
     },
     {
@@ -236,7 +223,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotated-reifier-variable-path.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotated-reifier-variable-path.rq"
     },
     {
@@ -244,7 +230,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bind-anonreified.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bind-anonreified.rq"
     },
     {
@@ -252,7 +237,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bind-reified.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bind-reified.rq"
     },
     {
@@ -260,7 +244,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bindbnode-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bindbnode-anonreifier.rq"
     },
     {
@@ -268,7 +251,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bindbnode-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bindbnode-reifier.rq"
     },
     {
@@ -276,7 +258,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bindbnode-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bindbnode-tripleterm.rq"
     },
     {
@@ -284,7 +265,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-predicate-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-predicate-anonreifier.rq"
     },
     {
@@ -292,7 +272,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-predicate-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-predicate-reifier.rq"
     },
     {
@@ -300,7 +279,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-predicate-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-predicate-tripleterm.rq"
     },
     {
@@ -308,7 +286,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-anonreifier-01.rq"
     },
     {
@@ -316,7 +293,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-anonreifier-02.rq"
     },
     {
@@ -324,7 +300,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-reifier-01.rq"
     },
     {
@@ -332,7 +307,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-reifier-02.rq"
     },
     {
@@ -340,7 +314,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-tripleterm-01.rq"
     },
     {
@@ -348,7 +321,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "list-tripleterm-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "list-tripleterm-02.rq"
     },
     {
@@ -356,7 +328,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-annotated-path-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-annotated-path-anonreifier.rq"
     },
     {
@@ -364,7 +335,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-annotated-path-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-annotated-path-reifier.rq"
     },
     {
@@ -372,7 +342,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-object-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-object-anonreifier.rq"
     },
     {
@@ -380,7 +349,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-object-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-object-reifier.rq"
     },
     {
@@ -388,7 +356,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-object-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-object-tripleterm.rq"
     },
     {
@@ -396,7 +363,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-predicate-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-predicate-anonreifier.rq"
     },
     {
@@ -404,7 +370,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-predicate-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-predicate-reifier.rq"
     },
     {
@@ -412,7 +377,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-predicate-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-predicate-tripleterm.rq"
     },
     {
@@ -420,7 +384,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-subject-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-subject-anonreifier.rq"
     },
     {
@@ -428,7 +391,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-subject-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-subject-reifier.rq"
     },
     {
@@ -436,7 +398,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-list-subject-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-list-subject-tripleterm.rq"
     },
     {
@@ -444,7 +405,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-anonreifier.rq"
     },
     {
@@ -452,7 +412,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-bind-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-bind-anonreifier.rq"
     },
     {
@@ -460,7 +419,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-bind-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-bind-reifier.rq"
     },
     {
@@ -468,7 +426,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-bind-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-bind-tripleterm.rq"
     },
     {
@@ -476,7 +433,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-reifier.rq"
     },
     {
@@ -484,7 +440,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-path-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-path-tripleterm.rq"
     },
     {
@@ -492,7 +447,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-variable-path-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-variable-path-anonreifier.rq"
     },
     {
@@ -500,7 +454,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-variable-path-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-variable-path-reifier.rq"
     },
     {
@@ -508,7 +461,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "quoted-variable-path-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "quoted-variable-path-tripleterm.rq"
     },
     {
@@ -516,7 +468,6 @@
       "@type": "mf:NegativeUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "syntax-update-anonreifier-01.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "syntax-update-anonreifier-01.ru"
     },
     {
@@ -524,7 +475,6 @@
       "@type": "mf:NegativeUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "syntax-update-anonreifier-02.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "syntax-update-anonreifier-02.ru"
     },
     {
@@ -532,7 +482,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-01.rq"
     },
     {
@@ -540,7 +489,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-02.rq"
     },
     {
@@ -548,7 +496,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-03.rq"
     },
     {
@@ -556,7 +503,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-04.rq"
     },
     {
@@ -564,7 +510,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-05.rq"
     },
     {
@@ -572,7 +517,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "tripleterm-separate-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-separate-06.rq"
     },
     {
@@ -580,7 +524,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Triple term in the subject position of a triple term (VALUES, simple)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-01.rq"
     },
     {
@@ -588,7 +531,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Triple term in the subject position of a triple term (VALUES, general)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-02.rq"
     },
     {
@@ -596,7 +538,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Triple term in the subject position  of a triple term (expression)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-03.rq"
     },
     {
@@ -604,7 +545,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Literal in the subject position of a triple term (VALUES, simple)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-04.rq"
     },
     {
@@ -612,7 +552,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Literal in the subject position of a triple term (VALUES, general)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-05.rq"
     },
     {
@@ -620,7 +559,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "Literal in the subject position of a triple term (expression)",
-      "mf:specVersion": "sparql-1.2",
       "action": "tripleterm-subject-06.rq"
     }
   ]

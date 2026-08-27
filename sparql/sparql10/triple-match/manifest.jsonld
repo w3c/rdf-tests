@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "Triple Match",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.0"
+  },
   "comment": "Some simple DAWG query evaluation test cases",
   "entries": [
     {

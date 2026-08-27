@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "SPARQL 1.1 tests - engines",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.1"
+  },
   "include": [
     "manifest-sparql11-query.ttl",
     "manifest-sparql11-update.ttl",

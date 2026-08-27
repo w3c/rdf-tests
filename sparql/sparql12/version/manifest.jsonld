@@ -101,13 +101,15 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "Version announcement",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.2"
+  },
   "entries": [
     {
       "@id": "manifest#version-01",
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-01.rq"
     },
     {
@@ -115,7 +117,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-02.rq"
     },
     {
@@ -123,7 +124,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-03.rq"
     },
     {
@@ -131,7 +131,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-04.rq"
     },
     {
@@ -139,7 +138,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-05.rq"
     },
     {
@@ -147,7 +145,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-06.rq"
     },
     {
@@ -155,7 +152,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-bad-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-bad-01.rq"
     },
     {
@@ -163,7 +159,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-bad-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-bad-02.rq"
     },
     {
@@ -171,7 +166,6 @@
       "@type": "mf:NegativeSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "version-bad-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "version-bad-03.rq"
     }
   ]

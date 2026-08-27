@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "SPARQL Query tests",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.0"
+  },
   "include": [
     "basic/manifest.ttl",
     "triple-match/manifest.ttl",

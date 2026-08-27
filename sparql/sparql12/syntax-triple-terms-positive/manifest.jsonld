@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "Positive Syntax Triple Terms",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.2"
+  },
   "comment": "Positive syntax tests for triple terms in SPARQL 1.2",
   "entries": [
     {
@@ -108,7 +111,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-01.rq"
     },
     {
@@ -116,7 +118,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-02.rq"
     },
     {
@@ -124,7 +125,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-03.rq"
     },
     {
@@ -132,7 +132,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-04.rq"
     },
     {
@@ -140,7 +139,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-05.rq"
     },
     {
@@ -148,7 +146,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-06.rq"
     },
     {
@@ -156,7 +153,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-07.rq"
     },
     {
@@ -164,7 +160,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-08.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-08.rq"
     },
     {
@@ -172,7 +167,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-09.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-09.rq"
     },
     {
@@ -180,7 +174,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-multiple-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-multiple-01.rq"
     },
     {
@@ -188,7 +181,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-multiple-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-multiple-02.rq"
     },
     {
@@ -196,7 +188,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-multiple-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-multiple-03.rq"
     },
     {
@@ -204,7 +195,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-anonreifier-multiple-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-anonreifier-multiple-04.rq"
     },
     {
@@ -212,7 +202,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-01.rq"
     },
     {
@@ -220,7 +209,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-02.rq"
     },
     {
@@ -228,7 +216,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-03.rq"
     },
     {
@@ -236,7 +223,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-04.rq"
     },
     {
@@ -244,7 +230,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-05.rq"
     },
     {
@@ -252,7 +237,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-06.rq"
     },
     {
@@ -260,7 +244,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-07.rq"
     },
     {
@@ -268,7 +251,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-08.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-08.rq"
     },
     {
@@ -276,7 +258,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-09.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-09.rq"
     },
     {
@@ -284,7 +265,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-01.rq"
     },
     {
@@ -292,7 +272,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-02.rq"
     },
     {
@@ -300,7 +279,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-03.rq"
     },
     {
@@ -308,7 +286,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-04.rq"
     },
     {
@@ -316,7 +293,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-05.rq"
     },
     {
@@ -324,7 +300,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-06.rq"
     },
     {
@@ -332,7 +307,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-07.rq"
     },
     {
@@ -340,7 +314,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-08.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-08.rq"
     },
     {
@@ -348,7 +321,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-09.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-09.rq"
     },
     {
@@ -356,7 +328,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "annotation-reifier-multiple-10.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "annotation-reifier-multiple-10.rq"
     },
     {
@@ -364,7 +335,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-01.rq"
     },
     {
@@ -372,7 +342,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-02.rq"
     },
     {
@@ -380,7 +349,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-03.rq"
     },
     {
@@ -388,7 +356,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-04.rq"
     },
     {
@@ -396,7 +363,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-06.rq"
     },
     {
@@ -404,7 +370,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-07.rq"
     },
     {
@@ -412,7 +377,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-08.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-08.rq"
     },
     {
@@ -420,7 +384,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-09.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-09.rq"
     },
     {
@@ -428,7 +391,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-10.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-10.rq"
     },
     {
@@ -436,7 +398,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-11.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-11.rq"
     },
     {
@@ -444,7 +405,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-12.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-12.rq"
     },
     {
@@ -452,7 +412,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-anonreifier-13.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-anonreifier-13.rq"
     },
     {
@@ -460,7 +419,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-01.rq"
     },
     {
@@ -468,7 +426,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-02.rq"
     },
     {
@@ -476,7 +433,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-03.rq"
     },
     {
@@ -484,7 +440,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-04.rq"
     },
     {
@@ -492,7 +447,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-06.rq"
     },
     {
@@ -500,7 +454,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-07.rq"
     },
     {
@@ -508,7 +461,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-08.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-08.rq"
     },
     {
@@ -516,7 +468,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-09.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-09.rq"
     },
     {
@@ -524,7 +475,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-10.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-10.rq"
     },
     {
@@ -532,7 +482,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-11.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-11.rq"
     },
     {
@@ -540,7 +489,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-12.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-12.rq"
     },
     {
@@ -548,7 +496,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-reifier-13.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-reifier-13.rq"
     },
     {
@@ -556,7 +503,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-01.rq"
     },
     {
@@ -564,7 +510,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-02.rq"
     },
     {
@@ -572,7 +517,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-03.rq"
     },
     {
@@ -580,7 +524,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-04.rq"
     },
     {
@@ -588,7 +531,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-05.rq"
     },
     {
@@ -596,7 +538,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-06.rq"
     },
     {
@@ -604,7 +545,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "basic-tripleterm-07.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "basic-tripleterm-07.rq"
     },
     {
@@ -612,7 +552,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-anonreifier-01.rq"
     },
     {
@@ -620,7 +559,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-anonreifier-02.rq"
     },
     {
@@ -628,7 +566,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-anonreifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-anonreifier-03.rq"
     },
     {
@@ -636,7 +573,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-reifier-01.rq"
     },
     {
@@ -644,7 +580,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-reifier-02.rq"
     },
     {
@@ -652,7 +587,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-reifier-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-reifier-03.rq"
     },
     {
@@ -660,7 +594,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-tripleterm-01.rq"
     },
     {
@@ -668,7 +601,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-tripleterm-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-tripleterm-02.rq"
     },
     {
@@ -676,7 +608,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "bnode-tripleterm-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "bnode-tripleterm-03.rq"
     },
     {
@@ -684,7 +615,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "compound-all.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "compound-all.rq"
     },
     {
@@ -692,7 +622,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "compound-anonreifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "compound-anonreifier.rq"
     },
     {
@@ -700,7 +629,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "compound-reifier.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "compound-reifier.rq"
     },
     {
@@ -708,7 +636,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "compound-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "compound-tripleterm.rq"
     },
     {
@@ -716,7 +643,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "compound-tripleterm-subject.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "compound-tripleterm-subject.rq"
     },
     {
@@ -724,7 +650,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "expr-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "expr-tripleterm-01.rq"
     },
     {
@@ -732,7 +657,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "expr-tripleterm-03.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "expr-tripleterm-03.rq"
     },
     {
@@ -740,7 +664,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "expr-tripleterm-04.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "expr-tripleterm-04.rq"
     },
     {
@@ -748,7 +671,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "expr-tripleterm-05.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "expr-tripleterm-05.rq"
     },
     {
@@ -756,7 +678,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "expr-tripleterm-06.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "expr-tripleterm-06.rq"
     },
     {
@@ -764,7 +685,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-anonreifier-01.rq"
     },
     {
@@ -772,7 +692,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-anonreifier-02.rq"
     },
     {
@@ -780,7 +699,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-reifier-01.rq"
     },
     {
@@ -788,7 +706,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-reifier-02.rq"
     },
     {
@@ -796,7 +713,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-tripleterm-01.rq"
     },
     {
@@ -804,7 +720,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "inside-tripleterm-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "inside-tripleterm-02.rq"
     },
     {
@@ -812,7 +727,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-anonreifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-anonreifier-01.rq"
     },
     {
@@ -820,7 +734,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-anonreifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-anonreifier-02.rq"
     },
     {
@@ -828,7 +741,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-reifier-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-reifier-01.rq"
     },
     {
@@ -836,7 +748,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-reifier-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-reifier-02.rq"
     },
     {
@@ -844,7 +755,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-tripleterm-01.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-tripleterm-01.rq"
     },
     {
@@ -852,7 +762,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "nested-tripleterm-02.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "nested-tripleterm-02.rq"
     },
     {
@@ -860,7 +769,6 @@
       "@type": "mf:PositiveSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "subject-tripleterm.rq",
-      "mf:specVersion": "sparql-1.2",
       "action": "subject-tripleterm.rq"
     },
     {
@@ -868,7 +776,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-01.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-01.ru"
     },
     {
@@ -876,7 +783,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-02.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-02.ru"
     },
     {
@@ -884,7 +790,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-03.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-03.ru"
     },
     {
@@ -892,7 +797,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-04.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-04.ru"
     },
     {
@@ -900,7 +804,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-05.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-05.ru"
     },
     {
@@ -908,7 +811,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-anonreifier-06.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-anonreifier-06.ru"
     },
     {
@@ -916,7 +818,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-01.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-01.ru"
     },
     {
@@ -924,7 +825,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-02.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-02.ru"
     },
     {
@@ -932,7 +832,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-03.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-03.ru"
     },
     {
@@ -940,7 +839,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-04.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-04.ru"
     },
     {
@@ -948,7 +846,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-05.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-05.ru"
     },
     {
@@ -956,7 +853,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-06.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-06.ru"
     },
     {
@@ -964,7 +860,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-07.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-07.ru"
     },
     {
@@ -972,7 +867,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-reifier-08.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-reifier-08.ru"
     },
     {
@@ -980,7 +874,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-tripleterm-01.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-tripleterm-01.ru"
     },
     {
@@ -988,7 +881,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-tripleterm-03.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-tripleterm-03.ru"
     },
     {
@@ -996,7 +888,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-tripleterm-04.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-tripleterm-04.ru"
     },
     {
@@ -1004,7 +895,6 @@
       "@type": "mf:PositiveUpdateSyntaxTest",
       "approval": "dawgt:Proposed",
       "name": "update-tripleterm-05.ru",
-      "mf:specVersion": "sparql-1.2",
       "action": "update-tripleterm-05.ru"
     }
   ]

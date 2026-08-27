@@ -183,6 +183,9 @@
         "Report"
       ],
       "rdfs:label": "Grouping",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#group01",
@@ -265,6 +268,9 @@
         "Report"
       ],
       "rdfs:label": "SPARQL Codepoint-Escaping Tests",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-01-bad",
@@ -711,6 +717,9 @@
         "Report"
       ],
       "rdfs:label": "Negative Syntax Triple Terms",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "rdfs:comment": "Negative syntax tests for triple terms in SPARQL 1.2",
       "entries": [
         {
@@ -724,7 +733,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "alternate-path-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/alternate-path-anonreifier.rq",
           "assertions": [
             {
@@ -753,7 +761,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "alternate-path-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/alternate-path-reifier.rq",
           "assertions": [
             {
@@ -782,7 +789,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "alternate-path-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/alternate-path-tripleterm.rq",
           "assertions": [
             {
@@ -811,7 +817,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-alternate-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-alternate-path.rq",
           "assertions": [
             {
@@ -840,7 +845,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-list-predicate.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-list-predicate.rq",
           "assertions": [
             {
@@ -869,7 +873,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-oneOrMore.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-oneOrMore.rq",
           "assertions": [
             {
@@ -898,7 +901,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-optional.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-optional.rq",
           "assertions": [
             {
@@ -927,7 +929,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-path-on-start.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-path-on-start.rq",
           "assertions": [
             {
@@ -956,7 +957,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-path.rq",
           "assertions": [
             {
@@ -985,7 +985,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-anonreifier-variable-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-anonreifier-variable-path.rq",
           "assertions": [
             {
@@ -1014,7 +1013,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-list-predicate.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-list-predicate.rq",
           "assertions": [
             {
@@ -1043,7 +1041,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-oneOrMore.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-oneOrMore.rq",
           "assertions": [
             {
@@ -1072,7 +1069,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-optional.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-optional.rq",
           "assertions": [
             {
@@ -1101,7 +1097,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-path-on-start.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-path-on-start.rq",
           "assertions": [
             {
@@ -1130,7 +1125,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-path.rq",
           "assertions": [
             {
@@ -1159,7 +1153,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-reifier-alternate-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-reifier-alternate-path.rq",
           "assertions": [
             {
@@ -1188,7 +1181,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotated-reifier-variable-path.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/annotated-reifier-variable-path.rq",
           "assertions": [
             {
@@ -1217,7 +1209,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bind-anonreified.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bind-anonreified.rq",
           "assertions": [
             {
@@ -1246,7 +1237,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bind-reified.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bind-reified.rq",
           "assertions": [
             {
@@ -1275,7 +1265,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bindbnode-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bindbnode-anonreifier.rq",
           "assertions": [
             {
@@ -1304,7 +1293,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bindbnode-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bindbnode-reifier.rq",
           "assertions": [
             {
@@ -1333,7 +1321,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bindbnode-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bindbnode-tripleterm.rq",
           "assertions": [
             {
@@ -1362,7 +1349,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-predicate-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bnode-predicate-anonreifier.rq",
           "assertions": [
             {
@@ -1391,7 +1377,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-predicate-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bnode-predicate-reifier.rq",
           "assertions": [
             {
@@ -1420,7 +1405,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-predicate-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/bnode-predicate-tripleterm.rq",
           "assertions": [
             {
@@ -1449,7 +1433,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-anonreifier-01.rq",
           "assertions": [
             {
@@ -1478,7 +1461,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-anonreifier-02.rq",
           "assertions": [
             {
@@ -1507,7 +1489,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-reifier-01.rq",
           "assertions": [
             {
@@ -1536,7 +1517,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-reifier-02.rq",
           "assertions": [
             {
@@ -1565,7 +1545,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-tripleterm-01.rq",
           "assertions": [
             {
@@ -1594,7 +1573,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "list-tripleterm-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/list-tripleterm-02.rq",
           "assertions": [
             {
@@ -1623,7 +1601,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-annotated-path-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/nested-annotated-path-anonreifier.rq",
           "assertions": [
             {
@@ -1652,7 +1629,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-annotated-path-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/nested-annotated-path-reifier.rq",
           "assertions": [
             {
@@ -1681,7 +1657,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-object-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-object-anonreifier.rq",
           "assertions": [
             {
@@ -1710,7 +1685,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-object-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-object-reifier.rq",
           "assertions": [
             {
@@ -1739,7 +1713,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-object-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-object-tripleterm.rq",
           "assertions": [
             {
@@ -1768,7 +1741,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-predicate-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-predicate-anonreifier.rq",
           "assertions": [
             {
@@ -1797,7 +1769,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-predicate-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-predicate-reifier.rq",
           "assertions": [
             {
@@ -1826,7 +1797,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-predicate-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-predicate-tripleterm.rq",
           "assertions": [
             {
@@ -1855,7 +1825,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-subject-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-subject-anonreifier.rq",
           "assertions": [
             {
@@ -1884,7 +1853,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-subject-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-subject-reifier.rq",
           "assertions": [
             {
@@ -1913,7 +1881,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-list-subject-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-list-subject-tripleterm.rq",
           "assertions": [
             {
@@ -1942,7 +1909,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-anonreifier.rq",
           "assertions": [
             {
@@ -1971,7 +1937,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-bind-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-bind-anonreifier.rq",
           "assertions": [
             {
@@ -2000,7 +1965,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-bind-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-bind-reifier.rq",
           "assertions": [
             {
@@ -2029,7 +1993,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-bind-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-bind-tripleterm.rq",
           "assertions": [
             {
@@ -2058,7 +2021,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-reifier.rq",
           "assertions": [
             {
@@ -2087,7 +2049,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-path-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-path-tripleterm.rq",
           "assertions": [
             {
@@ -2116,7 +2077,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-variable-path-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-variable-path-anonreifier.rq",
           "assertions": [
             {
@@ -2145,7 +2105,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-variable-path-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-variable-path-reifier.rq",
           "assertions": [
             {
@@ -2174,7 +2133,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "quoted-variable-path-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/quoted-variable-path-tripleterm.rq",
           "assertions": [
             {
@@ -2203,7 +2161,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "syntax-update-anonreifier-01.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/syntax-update-anonreifier-01.ru",
           "assertions": [
             {
@@ -2232,7 +2189,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "syntax-update-anonreifier-02.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/syntax-update-anonreifier-02.ru",
           "assertions": [
             {
@@ -2261,7 +2217,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-01.rq",
           "assertions": [
             {
@@ -2290,7 +2245,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-02.rq",
           "assertions": [
             {
@@ -2319,7 +2273,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-03.rq",
           "assertions": [
             {
@@ -2348,7 +2301,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-04.rq",
           "assertions": [
             {
@@ -2377,7 +2329,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-05.rq",
           "assertions": [
             {
@@ -2406,7 +2357,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "tripleterm-separate-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-separate-06.rq",
           "assertions": [
             {
@@ -2435,7 +2385,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Triple term in the subject position of a triple term (VALUES, simple)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-01.rq",
           "assertions": [
             {
@@ -2464,7 +2413,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Triple term in the subject position of a triple term (VALUES, general)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-02.rq",
           "assertions": [
             {
@@ -2493,7 +2441,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Triple term in the subject position  of a triple term (expression)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-03.rq",
           "assertions": [
             {
@@ -2522,7 +2469,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Literal in the subject position of a triple term (VALUES, simple)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-04.rq",
           "assertions": [
             {
@@ -2551,7 +2497,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Literal in the subject position of a triple term (VALUES, general)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-05.rq",
           "assertions": [
             {
@@ -2580,7 +2525,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "Literal in the subject position of a triple term (expression)",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/tripleterm-subject-06.rq",
           "assertions": [
             {
@@ -2607,6 +2551,9 @@
         "Report"
       ],
       "rdfs:label": "Positive Syntax Triple Terms",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "rdfs:comment": "Positive syntax tests for triple terms in SPARQL 1.2",
       "entries": [
         {
@@ -2620,7 +2567,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-01.rq",
           "assertions": [
             {
@@ -2649,7 +2595,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-02.rq",
           "assertions": [
             {
@@ -2678,7 +2623,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-03.rq",
           "assertions": [
             {
@@ -2707,7 +2651,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-04.rq",
           "assertions": [
             {
@@ -2736,7 +2679,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-05.rq",
           "assertions": [
             {
@@ -2765,7 +2707,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-06.rq",
           "assertions": [
             {
@@ -2794,7 +2735,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-07.rq",
           "assertions": [
             {
@@ -2823,7 +2763,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-08.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-08.rq",
           "assertions": [
             {
@@ -2852,7 +2791,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-09.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-09.rq",
           "assertions": [
             {
@@ -2881,7 +2819,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-multiple-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-multiple-01.rq",
           "assertions": [
             {
@@ -2910,7 +2847,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-multiple-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-multiple-02.rq",
           "assertions": [
             {
@@ -2939,7 +2875,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-multiple-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-multiple-03.rq",
           "assertions": [
             {
@@ -2968,7 +2903,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-anonreifier-multiple-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-anonreifier-multiple-04.rq",
           "assertions": [
             {
@@ -2997,7 +2931,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-01.rq",
           "assertions": [
             {
@@ -3026,7 +2959,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-02.rq",
           "assertions": [
             {
@@ -3055,7 +2987,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-03.rq",
           "assertions": [
             {
@@ -3084,7 +3015,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-04.rq",
           "assertions": [
             {
@@ -3113,7 +3043,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-05.rq",
           "assertions": [
             {
@@ -3142,7 +3071,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-06.rq",
           "assertions": [
             {
@@ -3171,7 +3099,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-07.rq",
           "assertions": [
             {
@@ -3200,7 +3127,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-08.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-08.rq",
           "assertions": [
             {
@@ -3229,7 +3155,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-09.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-09.rq",
           "assertions": [
             {
@@ -3258,7 +3183,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-01.rq",
           "assertions": [
             {
@@ -3287,7 +3211,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-02.rq",
           "assertions": [
             {
@@ -3316,7 +3239,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-03.rq",
           "assertions": [
             {
@@ -3345,7 +3267,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-04.rq",
           "assertions": [
             {
@@ -3374,7 +3295,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-05.rq",
           "assertions": [
             {
@@ -3403,7 +3323,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-06.rq",
           "assertions": [
             {
@@ -3432,7 +3351,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-07.rq",
           "assertions": [
             {
@@ -3461,7 +3379,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-08.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-08.rq",
           "assertions": [
             {
@@ -3490,7 +3407,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-09.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-09.rq",
           "assertions": [
             {
@@ -3519,7 +3435,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "annotation-reifier-multiple-10.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/annotation-reifier-multiple-10.rq",
           "assertions": [
             {
@@ -3548,7 +3463,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-01.rq",
           "assertions": [
             {
@@ -3577,7 +3491,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-02.rq",
           "assertions": [
             {
@@ -3606,7 +3519,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-03.rq",
           "assertions": [
             {
@@ -3635,7 +3547,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-04.rq",
           "assertions": [
             {
@@ -3664,7 +3575,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-06.rq",
           "assertions": [
             {
@@ -3693,7 +3603,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-07.rq",
           "assertions": [
             {
@@ -3722,7 +3631,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-08.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-08.rq",
           "assertions": [
             {
@@ -3751,7 +3659,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-09.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-09.rq",
           "assertions": [
             {
@@ -3780,7 +3687,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-10.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-10.rq",
           "assertions": [
             {
@@ -3809,7 +3715,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-11.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-11.rq",
           "assertions": [
             {
@@ -3838,7 +3743,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-12.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-12.rq",
           "assertions": [
             {
@@ -3867,7 +3771,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-anonreifier-13.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-anonreifier-13.rq",
           "assertions": [
             {
@@ -3896,7 +3799,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-01.rq",
           "assertions": [
             {
@@ -3925,7 +3827,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-02.rq",
           "assertions": [
             {
@@ -3954,7 +3855,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-03.rq",
           "assertions": [
             {
@@ -3983,7 +3883,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-04.rq",
           "assertions": [
             {
@@ -4012,7 +3911,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-06.rq",
           "assertions": [
             {
@@ -4041,7 +3939,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-07.rq",
           "assertions": [
             {
@@ -4070,7 +3967,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-08.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-08.rq",
           "assertions": [
             {
@@ -4099,7 +3995,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-09.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-09.rq",
           "assertions": [
             {
@@ -4128,7 +4023,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-10.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-10.rq",
           "assertions": [
             {
@@ -4157,7 +4051,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-11.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-11.rq",
           "assertions": [
             {
@@ -4186,7 +4079,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-12.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-12.rq",
           "assertions": [
             {
@@ -4215,7 +4107,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-reifier-13.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-reifier-13.rq",
           "assertions": [
             {
@@ -4244,7 +4135,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-01.rq",
           "assertions": [
             {
@@ -4273,7 +4163,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-02.rq",
           "assertions": [
             {
@@ -4302,7 +4191,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-03.rq",
           "assertions": [
             {
@@ -4331,7 +4219,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-04.rq",
           "assertions": [
             {
@@ -4360,7 +4247,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-05.rq",
           "assertions": [
             {
@@ -4389,7 +4275,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-06.rq",
           "assertions": [
             {
@@ -4418,7 +4303,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "basic-tripleterm-07.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/basic-tripleterm-07.rq",
           "assertions": [
             {
@@ -4447,7 +4331,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-anonreifier-01.rq",
           "assertions": [
             {
@@ -4476,7 +4359,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-anonreifier-02.rq",
           "assertions": [
             {
@@ -4505,7 +4387,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-anonreifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-anonreifier-03.rq",
           "assertions": [
             {
@@ -4534,7 +4415,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-reifier-01.rq",
           "assertions": [
             {
@@ -4563,7 +4443,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-reifier-02.rq",
           "assertions": [
             {
@@ -4592,7 +4471,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-reifier-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-reifier-03.rq",
           "assertions": [
             {
@@ -4621,7 +4499,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-tripleterm-01.rq",
           "assertions": [
             {
@@ -4650,7 +4527,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-tripleterm-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-tripleterm-02.rq",
           "assertions": [
             {
@@ -4679,7 +4555,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "bnode-tripleterm-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/bnode-tripleterm-03.rq",
           "assertions": [
             {
@@ -4708,7 +4583,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "compound-all.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/compound-all.rq",
           "assertions": [
             {
@@ -4737,7 +4611,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "compound-anonreifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/compound-anonreifier.rq",
           "assertions": [
             {
@@ -4766,7 +4639,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "compound-reifier.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/compound-reifier.rq",
           "assertions": [
             {
@@ -4795,7 +4667,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "compound-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/compound-tripleterm.rq",
           "assertions": [
             {
@@ -4824,7 +4695,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "compound-tripleterm-subject.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/compound-tripleterm-subject.rq",
           "assertions": [
             {
@@ -4853,7 +4723,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "expr-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/expr-tripleterm-01.rq",
           "assertions": [
             {
@@ -4882,7 +4751,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "expr-tripleterm-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/expr-tripleterm-03.rq",
           "assertions": [
             {
@@ -4911,7 +4779,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "expr-tripleterm-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/expr-tripleterm-04.rq",
           "assertions": [
             {
@@ -4940,7 +4807,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "expr-tripleterm-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/expr-tripleterm-05.rq",
           "assertions": [
             {
@@ -4969,7 +4835,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "expr-tripleterm-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/expr-tripleterm-06.rq",
           "assertions": [
             {
@@ -4998,7 +4863,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-anonreifier-01.rq",
           "assertions": [
             {
@@ -5027,7 +4891,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-anonreifier-02.rq",
           "assertions": [
             {
@@ -5056,7 +4919,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-reifier-01.rq",
           "assertions": [
             {
@@ -5085,7 +4947,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-reifier-02.rq",
           "assertions": [
             {
@@ -5114,7 +4975,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-tripleterm-01.rq",
           "assertions": [
             {
@@ -5143,7 +5003,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "inside-tripleterm-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/inside-tripleterm-02.rq",
           "assertions": [
             {
@@ -5172,7 +5031,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-anonreifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-anonreifier-01.rq",
           "assertions": [
             {
@@ -5201,7 +5059,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-anonreifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-anonreifier-02.rq",
           "assertions": [
             {
@@ -5230,7 +5087,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-reifier-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-reifier-01.rq",
           "assertions": [
             {
@@ -5259,7 +5115,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-reifier-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-reifier-02.rq",
           "assertions": [
             {
@@ -5288,7 +5143,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-tripleterm-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-tripleterm-01.rq",
           "assertions": [
             {
@@ -5317,7 +5171,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "nested-tripleterm-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/nested-tripleterm-02.rq",
           "assertions": [
             {
@@ -5346,7 +5199,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "subject-tripleterm.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/subject-tripleterm.rq",
           "assertions": [
             {
@@ -5375,7 +5227,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-01.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-01.ru",
           "assertions": [
             {
@@ -5404,7 +5255,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-02.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-02.ru",
           "assertions": [
             {
@@ -5433,7 +5283,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-03.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-03.ru",
           "assertions": [
             {
@@ -5462,7 +5311,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-04.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-04.ru",
           "assertions": [
             {
@@ -5491,7 +5339,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-05.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-05.ru",
           "assertions": [
             {
@@ -5520,7 +5367,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-anonreifier-06.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-anonreifier-06.ru",
           "assertions": [
             {
@@ -5549,7 +5395,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-01.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-01.ru",
           "assertions": [
             {
@@ -5578,7 +5423,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-02.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-02.ru",
           "assertions": [
             {
@@ -5607,7 +5451,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-03.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-03.ru",
           "assertions": [
             {
@@ -5636,7 +5479,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-04.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-04.ru",
           "assertions": [
             {
@@ -5665,7 +5507,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-05.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-05.ru",
           "assertions": [
             {
@@ -5694,7 +5535,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-06.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-06.ru",
           "assertions": [
             {
@@ -5723,7 +5563,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-07.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-07.ru",
           "assertions": [
             {
@@ -5752,7 +5591,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-reifier-08.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-reifier-08.ru",
           "assertions": [
             {
@@ -5781,7 +5619,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-tripleterm-01.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-tripleterm-01.ru",
           "assertions": [
             {
@@ -5810,7 +5647,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-tripleterm-03.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-tripleterm-03.ru",
           "assertions": [
             {
@@ -5839,7 +5675,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-tripleterm-04.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-tripleterm-04.ru",
           "assertions": [
             {
@@ -5868,7 +5703,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "update-tripleterm-05.ru",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/update-tripleterm-05.ru",
           "assertions": [
             {
@@ -5895,6 +5729,9 @@
         "Report"
       ],
       "rdfs:label": "Evaluation Triple Terms",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "rdfs:comment": "Evaluation tests for triple terms in SPARQL 1.2",
       "entries": [
         {
@@ -7426,6 +7263,9 @@
         "Report"
       ],
       "rdfs:label": "Expression",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#not-not",
@@ -7611,6 +7451,9 @@
         "Report"
       ],
       "rdfs:label": "Language and base direction",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslang",
@@ -8009,6 +7852,9 @@
         "Report"
       ],
       "rdfs:label": "RDF 1.1 literals handling",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#langstring-datatype",
@@ -8124,6 +7970,9 @@
         "Report"
       ],
       "rdfs:label": "Version announcement",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-01",
@@ -8136,7 +7985,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-01.rq",
           "assertions": [
             {
@@ -8165,7 +8013,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-02.rq",
           "assertions": [
             {
@@ -8194,7 +8041,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-03.rq",
           "assertions": [
             {
@@ -8223,7 +8069,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-04.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-04.rq",
           "assertions": [
             {
@@ -8252,7 +8097,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-05.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-05.rq",
           "assertions": [
             {
@@ -8281,7 +8125,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-06.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-06.rq",
           "assertions": [
             {
@@ -8310,7 +8153,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-bad-01.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-bad-01.rq",
           "assertions": [
             {
@@ -8339,7 +8181,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-bad-02.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-bad-02.rq",
           "assertions": [
             {
@@ -8368,7 +8209,6 @@
             "@id": "http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Proposed"
           },
           "title": "version-bad-03.rq",
-          "mf:specVersion": "sparql-1.2",
           "testAction": "https://w3c.github.io/rdf-tests/sparql/sparql12/version/version-bad-03.rq",
           "assertions": [
             {
@@ -8395,6 +8235,9 @@
         "Report"
       ],
       "rdfs:label": "Syntax",
+      "mf:specVersion": {
+        "@id": "http://www.w3.org/ns/sparql#version-1.2"
+      },
       "entries": [
         {
           "@id": "https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#nested-aggregate-functions",

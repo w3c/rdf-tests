@@ -101,6 +101,9 @@
   "@id": "./",
   "@type": "mf:Manifest",
   "label": "BIND",
+  "mf:specVersion": {
+    "@id": "http://www.w3.org/ns/sparql#version-1.1"
+  },
   "entries": [
     {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bind/manifest#bind01",
