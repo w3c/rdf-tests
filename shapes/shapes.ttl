@@ -10,6 +10,7 @@ PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX ut: <http://www.w3.org/2009/sparql/tests/test-update#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sparql: <http://www.w3.org/ns/sparql#>
 
 [] a sh:NodeShape ;
     sh:targetClass mf:Manifest ;
@@ -30,6 +31,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 # TODO: enforce that one of the test shape is used
             ] ;
             sh:uniqueMembers true
+        ] ,
+        [
+            sh:path mf:specVersion ;
+            sh:nodeKind sh:IRI ;
+            sh:maxCount 1 ;
+            sh:in ( sparql:version-1.0 sparql:version-1.1 sparql:version-1.2 ) ;
         ] .
 
 [] a sh:NodeShape ;
@@ -130,12 +137,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:maxCount 1
         ] ,
         [
-            sh:path mf:specVersion ;
-            sh:nodeKind sh:Literal ;
-            sh:maxCount 1 ;
-            sh:in ( "sparql-1.1" "sparql-1.2" )
-        ] ,
-        [
             sh:path mf:feature ;
             sh:nodeKind sh:IRI ;
         ] .
@@ -215,12 +216,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:nodeKind sh:IRI ;
             sh:minCount 1 ;
             sh:maxCount 1
-        ] ,
-        [
-            sh:path mf:specVersion ;
-            sh:nodeKind sh:Literal ;
-            sh:maxCount 1 ;
-            sh:in ( "sparql-1.1" "sparql-1.2" )
         ] ,
         [
             sh:path mf:feature ;
@@ -348,12 +343,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                         ]
                     ]
             ]
-        ] ,
-        [
-            sh:path mf:specVersion ;
-            sh:nodeKind sh:Literal ;
-            sh:maxCount 1 ;
-            sh:in ( "sparql-1.1" "sparql-1.2" )
         ] ,
         [
             sh:path mf:feature ;
