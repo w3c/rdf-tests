@@ -5,6 +5,7 @@
     <link href='earl.jsonld' rel='alternate' />
     <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' />
     <link href='n3-js-turtle.ttl' rel='related' />
+    <link href='rdf12conv-turtle-earl.ttl' rel='related' />
     <link href='rdfxml-streaming-parser-js.ttl' rel='related' />
     <title>
       RDF 1.2 Conformance
@@ -249,13 +250,20 @@
           <ul class='toc'>
             <li class='tocline'>
               <span class='secno'>A.1</span>
+              <a class='tocxref' href='#subj_rdf12conv_Python'>
+                rdf12conv
+                (Python)
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>A.2</span>
               <a class='tocxref' href='#subj_n3_JavaScript'>
                 n3
                 (JavaScript)
               </a>
             </li>
             <li class='tocline'>
-              <span class='secno'>A.2</span>
+              <span class='secno'>A.3</span>
               <a class='tocxref' href='#subj_rdfxml_streaming_parser_JavaScript'>
                 rdfxml-streaming-parser
                 (JavaScript)
@@ -362,215 +370,348 @@
             <th>
               Test
             </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#comment_following_triple'>Test comment_following_triple: C14N comment_following_triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-01'>Test extra_whitespace-01: C14N extra_whitespace-01</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-02'>Test extra_whitespace-02: C14N extra_whitespace-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-03'>Test extra_whitespace-03: C14N extra_whitespace-03</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-04'>Test extra_whitespace-04: C14N extra_whitespace-04</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#langtagged_string'>Test langtagged_string: C14N langtagged_string</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#dirlangtagged_string'>Test dirlangtagged_string: C14N literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_all_controls'>Test literal_all_controls: C14N literal_all_controls</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_all_punctuation'>Test literal_all_punctuation: C14N literal_all_punctuation</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_ascii_boundaries'>Test literal_ascii_boundaries: C14N literal_ascii_boundaries</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_2_dquotes'>Test literal_with_2_dquotes: C14N literal_with_2_dquotes</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_2_squotes'>Test literal_with_2_squotes: C14N literal_with_2_squotes</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_BACKSPACE'>Test literal_with_BACKSPACE: C14N literal_with_BACKSPACE</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_CARRIAGE_RETURN'>Test literal_with_CARRIAGE_RETURN: C14N literal_with_CARRIAGE_RETURN</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_CHARACTER_TABULATION'>Test literal_with_CHARACTER_TABULATION: C14N literal_with_CHARACTER_TABULATION</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_dquote'>Test literal_with_dquote: C14N literal_with_dquote</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_FORM_FEED'>Test literal_with_FORM_FEED: C14N literal_with_FORM_FEED</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_LINE_FEED'>Test literal_with_LINE_FEED: C14N literal_with_LINE_FEED</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_numeric_escape4'>Test literal_with_numeric_escape4: C14N literal_with_numeric_escape4</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_numeric_escape8'>Test literal_with_numeric_escape8: C14N literal_with_numeric_escape8</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_REVERSE_SOLIDUS'>Test literal_with_REVERSE_SOLIDUS: C14N literal_with_REVERSE_SOLIDUS</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_REVERSE_SOLIDUS2'>Test literal_with_REVERSE_SOLIDUS2: C14N literal_with_REVERSE_SOLIDUS2</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_squote'>Test literal_with_squote: C14N literal_with_squote</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_string_dt'>Test literal_with_string_dt: C14N literal_with_string_dt</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_extra_whitespace'>Test literal_with_extra_whitespace: C14N literal_with_extra_whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_UTF8_boundaries'>Test literal_with_UTF8_boundaries: C14N literal_with_UTF8_boundaries</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#minimal_whitespace-01'>Test minimal_whitespace-01: C14N minimal_whitespace-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#minimal_whitespace-02'>Test minimal_whitespace-02: C14N minimal_whitespace-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-01'>Test triple-term-01: C14N triple-term-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-02'>Test triple-term-02: C14N triple-term-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-03'>Test triple-term-03: C14N triple-term-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-04'>Test triple-term-04: C14N triple-term-03</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-01'>Test nq-syntax-uri-01: C14N nq-syntax-uri-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-02'>Test nq-syntax-uri-02: C14N nq-syntax-uri-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-03'>Test nq-syntax-uri-03: C14N nq-syntax-uri-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-04'>Test nq-syntax-uri-04: C14N nq-syntax-uri-04</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-01'>Test nq-syntax-str-esc-01: C14N nq-syntax-str-esc-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-02'>Test nq-syntax-str-esc-02: C14N nq-syntax-str-esc-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-03'>Test nq-syntax-str-esc-03: C14N nq-syntax-str-esc-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_needing_uchar_escaping-01'>Test literal_needing_uchar_escaping-01: C14N literal_needing_uchar_escaping-01</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_needing_uchar_escaping-02'>Test literal_needing_uchar_escaping-02: C14N literal_needing_uchar_escaping-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 41 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
           </tr>
         </table>
@@ -584,6 +725,13 @@
           <tr>
             <th>
               Test
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
             </th>
             <th>
               <a href='#subj_n3_JavaScript'>
@@ -600,10 +748,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-02'>Test nquads12-02: N-Quads-12 - object triple term, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -616,10 +770,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bnode-1'>Test nquads12-bnode-1: N-Quads-12 - Blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -632,10 +792,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-1'>Test nquads-langdir-1: N-Quads literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -648,10 +814,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-01'>Test nquads12-bad-01: N-Quads-12 - Bad - reified triple as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -664,10 +836,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-03'>Test nquads12-bad-03: N-Quads-12 - Bad - reified triple, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -680,10 +858,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-05'>Test nquads12-bad-05: N-Quads-12 - Bad - triple term as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -696,10 +880,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-07'>Test nquads12-bad-07: N-Quads-12 - Bad - triple term, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -712,10 +902,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-09'>Test nquads12-bad-09: N-Quads-12 - Bad - reified triple object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -728,10 +924,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-1'>Test nquads12-bad-reified-1: N-Quads-12 - Bad - subject reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -744,10 +946,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-3'>Test nquads12-bad-reified-3: N-Quads-12 - Bad - subject and object reified triples</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -760,10 +968,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bnode-bad-annotated-syntax-1'>Test nquads12-bnode-bad-annotated-syntax-1: N-Quads-12 - Bad - annotated triple, blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -776,10 +990,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-nested-bad-annotated-syntax-1'>Test nquads12-nested-bad-annotated-syntax-1: N-Quads-12 - Bad - annotated triple, nested subject term</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -792,10 +1012,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-1'>Test nquads-langdir-bad-1: N-Quads literal- Bad - undefined base direction</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -808,10 +1034,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 27 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
             <td class='passed-all'>
               100.0%
@@ -829,215 +1061,348 @@
             <th>
               Test
             </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple'>Test comment_following_triple: C14N comment_following_triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01'>Test extra_whitespace-01: C14N extra_whitespace-01</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02'>Test extra_whitespace-02: C14N extra_whitespace-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03'>Test extra_whitespace-03: C14N extra_whitespace-03</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04'>Test extra_whitespace-04: C14N extra_whitespace-04</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string'>Test langtagged_string: C14N langtagged_string</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string'>Test dirlangtagged_string: C14N literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls'>Test literal_all_controls: C14N literal_all_controls</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation'>Test literal_all_punctuation: C14N literal_all_punctuation</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries'>Test literal_ascii_boundaries: C14N literal_ascii_boundaries</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes'>Test literal_with_2_dquotes: C14N literal_with_2_dquotes</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes'>Test literal_with_2_squotes: C14N literal_with_2_squotes</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE'>Test literal_with_BACKSPACE: C14N literal_with_BACKSPACE</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN'>Test literal_with_CARRIAGE_RETURN: C14N literal_with_CARRIAGE_RETURN</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION'>Test literal_with_CHARACTER_TABULATION: C14N literal_with_CHARACTER_TABULATION</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote'>Test literal_with_dquote: C14N literal_with_dquote</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED'>Test literal_with_FORM_FEED: C14N literal_with_FORM_FEED</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED'>Test literal_with_LINE_FEED: C14N literal_with_LINE_FEED</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4'>Test literal_with_numeric_escape4: C14N literal_with_numeric_escape4</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8'>Test literal_with_numeric_escape8: C14N literal_with_numeric_escape8</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS'>Test literal_with_REVERSE_SOLIDUS: C14N literal_with_REVERSE_SOLIDUS</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2'>Test literal_with_REVERSE_SOLIDUS2: C14N literal_with_REVERSE_SOLIDUS2</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote'>Test literal_with_squote: C14N literal_with_squote</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt'>Test literal_with_string_dt: C14N literal_with_string_dt</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace'>Test literal_with_extra_whitespace: C14N literal_with_extra_whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries'>Test literal_with_UTF8_boundaries: C14N literal_with_UTF8_boundaries</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01'>Test minimal_whitespace-01: C14N minimal_whitespace-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02'>Test minimal_whitespace-02: C14N minimal_whitespace-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01'>Test triple-term-01: C14N triple-term-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02'>Test triple-term-02: C14N triple-term-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03'>Test triple-term-03: C14N triple-term-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04'>Test triple-term-04: C14N triple-term-04</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01'>Test nt-syntax-uri-01: C14N nt-syntax-uri-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02'>Test nt-syntax-uri-02: C14N nt-syntax-uri-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03'>Test nt-syntax-uri-03: C14N nt-syntax-uri-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04'>Test nt-syntax-uri-04: C14N nt-syntax-uri-04</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01'>Test nt-syntax-str-esc-01: C14N nt-syntax-str-esc-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02'>Test nt-syntax-str-esc-02: C14N nt-syntax-str-esc-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03'>Test nt-syntax-str-esc-03: C14N nt-syntax-str-esc-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01'>Test literal_needing_uchar_escaping-01: C14N literal_needing_uchar_escaping-01</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02'>Test literal_needing_uchar_escaping-02: C14N literal_needing_uchar_escaping-02</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 41 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
           </tr>
         </table>
@@ -1051,6 +1416,13 @@
           <tr>
             <th>
               Test
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
             </th>
             <th>
               <a href='#subj_n3_JavaScript'>
@@ -1067,10 +1439,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02'>Test ntriples12-02: N-Triples-12 - object triple term, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1083,10 +1461,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1'>Test ntriples12-bnode-1: N-Triples-12 - Blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1099,10 +1483,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1'>Test ntriples-langdir-1: N-Triples literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1115,10 +1505,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01'>Test ntriples12-bad-01: N-Triples-12 - Bad - reified triple as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1131,10 +1527,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03'>Test ntriples12-bad-03: N-Triples-12 - Bad - reified triple, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1147,10 +1549,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05'>Test ntriples12-bad-05: N-Triples-12 - Bad - triple term as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1163,10 +1571,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07'>Test ntriples12-bad-07: N-Triples-12 - Bad - triple term, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1179,10 +1593,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09'>Test ntriples12-bad-09: N-Triples-12 - Bad - reified triple object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1195,10 +1615,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1'>Test ntriples12-bad-iri-1: N-Triples - Bad - invalid IRI</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1211,10 +1637,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2'>Test ntriples12-bad-reified-2: N-Triples-12 - Bad - object reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1227,10 +1659,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4'>Test ntriples12-bad-reified-4: N-Triples-12 - Bad - predicate reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1243,10 +1681,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2'>Test ntriples12-bnode-bad-annotated-syntax-2: N-Triples-12 - Bad - annotated triple, blank node object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1259,10 +1703,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2'>Test ntriples-langdir-bad-2: N-Triples literal- Bad - upper case LTR</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1275,10 +1725,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4'>Test ntriples-langdir-bad-4: N-Triples - Bad - literal with bad language tag</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1291,10 +1747,16 @@
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 29 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
             <td class='passed-all'>
               100.0%
@@ -1485,140 +1947,228 @@ along with the relevant RDF 1.1 tests.
             <th>
               Test
             </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-01'>Test trig12-rt-01: TriG 1.2 - subject reification</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-02'>Test trig12-rt-02: TriG 1.2 - object reification</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-03'>Test trig12-rt-03: TriG 1.2 - subject reification with identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-04'>Test trig12-rt-04: TriG 1.2 - object reification with identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-05'>Test trig12-rt-05: TriG 1.2 - subject reification with bnode identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-06'>Test trig12-rt-06: TriG 1.2 - object reification with bnode identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-07'>Test trig12-rt-07: TriG 1.2 - subject reification with empty identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-08'>Test trig12-rt-08: TriG 1.2 - object reification with empty identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-1'>Test trig12-bnode-1: TriG 1.2 - blank node label</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-2'>Test trig12-bnode-2: TriG 1.2 - blank node labels</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-01'>Test trig12-annotation-01: TriG 1.2 - Annotation form</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-02'>Test trig12-annotation-02: TriG 1.2 - Annotation example</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-03'>Test trig12-annotation-03: TriG 1.2 - Annotation - predicate and object lists</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-04'>Test trig12-annotation-04: TriG 1.2 - Annotation - nested</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-05'>Test trig12-annotation-05: TriG 1.2 - Annotation object list</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-06'>Test trig12-annotation-06: TriG 1.2 - Annotation with identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-07'>Test trig12-annotation-07: TriG 1.2 - Different annotations have different default identifiers</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-08'>Test trig12-annotation-08: TriG 1.2 - Annotation form with explicit identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-09'>Test trig12-annotation-09: TriG 1.2 - Annotation form with multiple reifiers</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-10'>Test trig12-annotation-10: TriG 1.2 - Annotation form with multiple annotation blocks</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-11'>Test trig12-annotation-11: TriG 1.2 - Annotation form with annotation block followed by reifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-12'>Test trig12-annotation-12: TriG 1.2 - Annotation form with alternating reifiers and annotation blocks</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-13'>Test trig12-annotation-13: TriG 1.2 - Annotation form with IRI reifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-01'>Test trig12-reified-triples-annotation-01: TriG 1.2 - Annotation with reified triples</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-02'>Test trig12-reified-triples-annotation-02: TriG 1.2 - Annotation on triple with reified triple subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-03'>Test trig12-reified-triples-annotation-03: TriG 1.2 - Annotation on triple with reified triple object</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 26 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
           </tr>
         </table>
@@ -1632,6 +2182,13 @@ along with the relevant RDF 1.1 tests.
           <tr>
             <th>
               Test
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
             </th>
             <th>
               <a href='#subj_n3_JavaScript'>
@@ -1648,10 +2205,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2'>Test trig12-2: TriG 1.2 - object reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1664,10 +2227,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4'>Test trig12-4: TriG 1.2 - reified triple outside triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1680,10 +2249,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2'>Test trig12-inside-2: TriG 1.2 - reified triple inside collection</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1696,10 +2271,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4'>Test trig12-inside-4: TriG 1.2 - reified triple with blank node identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1712,10 +2293,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2'>Test trig12-nested-2: TriG 1.2 - nested quoted triple, object position</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1728,10 +2315,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1'>Test trig12-bnode-1: TriG 1.2 - blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1744,10 +2337,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3'>Test trig12-bnode-3: TriG 1.2 - blank node</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1760,10 +2359,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2'>Test trig12-bad-2: TriG 1.2 - bad - literal in subject position of reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1776,10 +2381,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4'>Test trig12-bad-4: TriG 1.2 - bad - incomplete reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1792,10 +2403,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6'>Test trig12-bad-6: TriG 1.2 - bad - reified with list object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1808,10 +2425,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1'>Test trig12-ann-1: TriG 1.2 - Annotation form</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1824,10 +2447,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3'>Test trig12-ann-3: TriG 1.2 - Annotation predicateObjecetList</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1840,10 +2469,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5'>Test trig12-ann-5: TriG 1.2 - Reifier without annotation block</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1856,10 +2491,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7'>Test trig12-ann-7: TriG 1.2 - Reifier with annotation block</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1872,10 +2513,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1'>Test trig12-bad-ann-1: TriG 1.2 - bad - empty annotation</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1888,10 +2535,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1'>Test trig12-base-1: base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1904,10 +2557,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1'>Test trig12-base-bad-1: undefined base direction</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -1920,10 +2579,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 35 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
             <td class='passed-all'>
               100.0%
@@ -1941,170 +2606,276 @@ along with the relevant RDF 1.1 tests.
             <th>
               Test
             </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-01'>Test turtle12-rt-01: Turtle 1.2 - subject reification</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-02'>Test turtle12-rt-02: Turtle 1.2 - object reification</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-03'>Test turtle12-rt-03: Turtle 1.2 - subject reification with identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-04'>Test turtle12-rt-04: Turtle 1.2 - object reification with identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-05'>Test turtle12-rt-05: Turtle 1.2 - subject reification with bnode identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-06'>Test turtle12-rt-06: Turtle 1.2 - object reification with bnode identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-07'>Test turtle12-rt-07: Turtle 1.2 - subject reification with empty identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-08'>Test turtle12-rt-08: Turtle 1.2 - object reification with empty identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-09'>Test turtle12-rt-09: Turtle 1.2 - literals in object position</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-bnode-01'>Test turtle12-bnode-01: Turtle 1.2 - blank node label</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-bnode-02'>Test turtle12-bnode-02: Turtle 1.2 - blank node labels</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-01'>Test turtle12-tt-01: Turtle 1.2 - object triple term</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-02'>Test turtle12-tt-02: Turtle 1.2 - object triple term, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-03'>Test turtle12-tt-03: Turtle 1.2 - Nested, no whitespace</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-04'>Test turtle12-tt-04: Turtle 1.2 - Nested object term</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-05'>Test turtle12-tt-05: Turtle 1.2 - literals in object position</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-01'>Test turtle12-annotation-01: Turtle 1.2 - Annotation form</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-02'>Test turtle12-annotation-02: Turtle 1.2 - Annotation example</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-03'>Test turtle12-annotation-03: Turtle 1.2 - Annotation - predicate and object lists</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-04'>Test turtle12-annotation-04: Turtle 1.2 - Annotation - nested</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-05'>Test turtle12-annotation-05: Turtle 1.2 - Annotation object list</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-06'>Test turtle12-annotation-06: Turtle 1.2 - Annotation with identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-07'>Test turtle12-annotation-07: Turtle 1.2 - Different annotations have different default identifiers</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-08'>Test turtle12-annotation-08: Turtle 1.2 - Annotation form with explicit identifier</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-09'>Test turtle12-annotation-09: Turtle 1.2 - Annotation form with multiple reifiers</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-10'>Test turtle12-annotation-10: Turtle 1.2 - Annotation form with multiple annotation blocks</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-11'>Test turtle12-annotation-11: Turtle 1.2 - Annotation form with annotation block followed by reifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-12'>Test turtle12-annotation-12: Turtle 1.2 - Annotation form with alternating reifiers and annotation blocks</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-13'>Test turtle12-annotation-13: Turtle 1.2 - Annotation form with IRI refier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-01'>Test turtle12-reified-triples-annotation-01: Turtle 1.2 - Annotation with reified triples</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-02'>Test turtle12-reified-triples-annotation-02: Turtle 1.2 - Annotation on triple with reified triple subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-03'>Test turtle12-reified-triples-annotation-03: Turtle 1.2 - Annotation on triple with reified triple object</a>
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 32 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
             </td>
           </tr>
         </table>
@@ -2118,6 +2889,13 @@ along with the relevant RDF 1.1 tests.
           <tr>
             <th>
               Test
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
             </th>
             <th>
               <a href='#subj_n3_JavaScript'>
@@ -2134,10 +2912,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-2'>Test turtle12-2: Turtle 1.2 - object reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2150,10 +2934,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-4'>Test turtle12-4: Turtle 1.2 - reified triple outside triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2166,10 +2956,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-6'>Test turtle12-6: Turtle 1.2 - reified triple with keyword object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2182,10 +2978,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-8'>Test turtle12-8: Turtle 1.2 - triple term with keyword object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2198,10 +3000,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-2'>Test turtle12-inside-2: Turtle 1.2 - reified triple inside collection</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2214,10 +3022,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-4'>Test turtle12-inside-4: Turtle 1.2 - reified triple with blank node identifier</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2230,10 +3044,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-2'>Test turtle12-nested-2: Turtle 1.2 - nested reified triple, object position</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2246,10 +3066,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-1'>Test turtle12-bnode-1: Turtle 1.2 - blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2262,10 +3088,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-3'>Test turtle12-bnode-3: Turtle 1.2 - blank node</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2278,10 +3110,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-2'>Test turtle12-bad-2: Turtle 1.2 - bad - literal in subject position of reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2294,10 +3132,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-4'>Test turtle12-bad-4: Turtle 1.2 - bad - incomplete reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2310,10 +3154,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-6'>Test turtle12-bad-6: Turtle 1.2 - bad - reified with list object</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2326,10 +3176,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-1'>Test turtle12-ann-1: Turtle 1.2 - Annotation form</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2342,10 +3198,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-3'>Test turtle12-ann-3: Turtle 1.2 - Annotation predicateObjecetList</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2358,10 +3220,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-5'>Test turtle12-ann-5: Turtle 1.2 - Reifier without annotation block</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2374,10 +3242,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-7'>Test turtle12-ann-7: Turtle 1.2 - Reifier with annotation block</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2390,10 +3264,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-1'>Test turtle12-bad-ann-1: Turtle 1.2 - bad - empty annotation</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2406,10 +3286,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-1'>Test nt-ttl12-1: N-Triples 1.2 as Turtle 1.2 - triple term</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2422,10 +3308,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-3'>Test nt-ttl12-3: N-Triples 1.2 as Turtle 1.2 - Nested, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2438,10 +3330,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-nested-1'>Test nt-ttl12-nested-1: N-Triples 1.2 as Turtle 1.2 - Nested subject term</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2454,10 +3352,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-2'>Test nt-ttl12-langdir-2: N-Triples 1.2 as Turtle 1.2 - base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2470,10 +3374,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-2'>Test nt-ttl12-langdir-bad-2: N-Triples 1.2 as Turtle 1.2 - upper case LTR</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2486,10 +3396,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-02'>Test nt-ttl12-bad-02: N-Triples 1.2 as Turtle 1.2 - Bad - triple term, literal subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2502,10 +3418,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-04'>Test nt-ttl12-bad-04: N-Triples 1.2 as Turtle 1.2 - Bad - triple term, blank node predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2518,10 +3440,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-06'>Test nt-ttl12-bad-06: N-Triples 1.2 as Turtle 1.2 - Bad - reified triple as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2534,6 +3462,9 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
@@ -2542,10 +3473,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-09'>Test nt-ttl12-bad-09: N-Triples 1.2 as Turtle 1.2 - Bad - reified triple, blank node predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='FAIL'>
               FAIL
@@ -2558,10 +3495,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-02'>Test turtle12-version-02: Turtle 1.2 - @version</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2574,10 +3517,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-04'>Test turtle12-version-04: Turtle 1.2 - @version in data</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2590,10 +3539,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-06'>Test turtle12-version-06: Turtle 1.2 - @version other version string</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2606,10 +3561,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-08'>Test turtle12-version-08: Turtle 1.2 - many versions</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2622,10 +3583,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-02'>Test turtle12-version-bad-02: Turtle 1.2 - VERSION - triple-&amp;#39;-quoted string</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2638,10 +3605,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-04'>Test turtle12-version-bad-04: Turtle 1.2 - @version - not string</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2654,10 +3627,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-06'>Test turtle12-version-bad-06: Turtle 1.2 - @version - triple-&amp;quot;-quoted string</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2667,6 +3646,9 @@ along with the relevant RDF 1.1 tests.
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-01'>Test turtle12-surrogate-pair-bad-01: Turtle 1.2 - Bad - Surrogate pair numeric escape sequence</a>
             </td>
+            <td class='FAIL'>
+              FAIL
+            </td>
             <td class='PASS'>
               PASS
             </td>
@@ -2674,6 +3656,9 @@ along with the relevant RDF 1.1 tests.
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-02'>Test turtle12-surrogate-pair-bad-02: Turtle 1.2 - Bad - Surrogate pair via numeric escape sequence</a>
+            </td>
+            <td class='FAIL'>
+              FAIL
             </td>
             <td class='PASS'>
               PASS
@@ -2686,10 +3671,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-02'>Test turtle12-surrogates-bad-02: Turtle 1.2 - Bad - Surrogates - high-high</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2702,10 +3693,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='normative'>
             <td>
               <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-04'>Test turtle12-surrogates-bad-04: Turtle 1.2 - Bad - Surrogates - lone high surrogate</a>
+            </td>
+            <td class='PASS'>
+              PASS
             </td>
             <td class='PASS'>
               PASS
@@ -2718,10 +3715,16 @@ along with the relevant RDF 1.1 tests.
             <td class='PASS'>
               PASS
             </td>
+            <td class='PASS'>
+              PASS
+            </td>
           </tr>
           <tr class='summary'>
             <td>
               Percentage passed out of 74 Tests
+            </td>
+            <td class='passed-most'>
+              97.3%
             </td>
             <td class='passed-most'>
               98.6%
@@ -3015,8 +4018,112 @@ along with the relevant RDF 1.1 tests.
         This report was tested using the following test subjects:
       </p>
       <dl>
-        <dt id='subj_n3_JavaScript'>
+        <dt id='subj_rdf12conv_Python'>
           <span class='secno'>A.1</span>
+          <a href='https://pypi.org/project/rdf12conv/0.3.0/'>
+            <span about='https://pypi.org/project/rdf12conv/0.3.0/' property='doap:name'>rdf12conv</span>
+          </a>
+        </dt>
+        <dd>
+          <dl>
+            <dt>Release</dt>
+            <dd property='doap:release'><span property='doap:revision'>unknown</span></dd>
+            <dt>Programming Language</dt>
+            <dd property='doap:programming-language'>Python</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='https://github.com/domel/rdf12conv' property='doap:homepage'>
+                https://github.com/domel/rdf12conv
+              </a>
+            </dd>
+            <dt>Developer</dt>
+            <dd rel='doap:developer'>
+              <div>
+                <a href='https://github.com/domel#me'>
+                  <span property='foaf:name'>Dominik Tomaszuk</span>
+                </a>
+                <a href='https://github.com/domel' property='foaf:homepage'>
+                  https://github.com/domel
+                </a>
+              </div>
+            </dd>
+            <dt>
+              Test Suite Compliance
+            </dt>
+            <dd>
+              <table class='report'>
+                <tbody>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Canonicalization Test Suite
+                    </td>
+                    <td class='passed-all'>
+                      41/41 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Syntax Tests
+                    </td>
+                    <td class='passed-all'>
+                      27/27 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Triples Canonicalization Test Suite
+                    </td>
+                    <td class='passed-all'>
+                      41/41 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Triples Syntax Tests
+                    </td>
+                    <td class='passed-all'>
+                      29/29 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 TriG Evaluation Tests
+                    </td>
+                    <td class='passed-all'>
+                      26/26 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 TriG Syntax Tests
+                    </td>
+                    <td class='passed-all'>
+                      35/35 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 Turtle Evaluation Tests
+                    </td>
+                    <td class='passed-all'>
+                      32/32 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 Turtle Syntax Tests
+                    </td>
+                    <td class='passed-most'>
+                      72/74 (97.3%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='subj_n3_JavaScript'>
+          <span class='secno'>A.2</span>
           <a href='https://www.npmjs.com/package/n3/'>
             <span about='https://www.npmjs.com/package/n3/' property='doap:name'>n3</span>
           </a>
@@ -3087,7 +4194,7 @@ along with the relevant RDF 1.1 tests.
           </dl>
         </dd>
         <dt id='subj_rdfxml_streaming_parser_JavaScript'>
-          <span class='secno'>A.2</span>
+          <span class='secno'>A.3</span>
           <a href='https://www.npmjs.com/package/rdfxml-streaming-parser/'>
             <span about='https://www.npmjs.com/package/rdfxml-streaming-parser/' property='doap:name'>rdfxml-streaming-parser</span>
           </a>
@@ -3149,6 +4256,9 @@ along with the relevant RDF 1.1 tests.
       <ul>
         <li>
           <a class='source' href='n3-js-turtle.ttl'>n3-js-turtle.ttl</a>
+        </li>
+        <li>
+          <a class='source' href='rdf12conv-turtle-earl.ttl'>rdf12conv-turtle-earl.ttl</a>
         </li>
         <li>
           <a class='source' href='rdfxml-streaming-parser-js.ttl'>rdfxml-streaming-parser-js.ttl</a>
