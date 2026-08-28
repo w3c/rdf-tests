@@ -115,8 +115,10 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
         "query": "dataset-01.rq",
+        "data": "data-g3.ttl",
         "graphData": [
-          "data-g1.ttl"
+          "data-g1.ttl",
+          "data-g2.ttl"
         ]
       },
       "result": "dataset-01.ttl"
@@ -130,6 +132,7 @@
       "approvedBy": "http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0047/31-dawg-minutes",
       "action": {
         "query": "dataset-02.rq",
+        "data": "data-g3.ttl",
         "graphData": [
           "data-g1.ttl"
         ]
@@ -146,7 +149,8 @@
       "action": {
         "query": "dataset-03.rq",
         "graphData": [
-          "data-g1.ttl"
+          "data-g1.ttl",
+          "data-g2.ttl"
         ]
       },
       "result": "dataset-03.ttl"
