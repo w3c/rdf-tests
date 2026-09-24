@@ -320,7 +320,6 @@
 :base-prefix-6 rdf:type mf:QueryEvaluationTest ;
     mf:name    "Basic - Prefix/Base 6" ;
     rdfs:comment "Relative IRI references (<>, <def>, <#ghi>, <./jkl>, <../mno>, </pqr>) resolved against a base IRI whose path does not end in '/'. Each reference is matched in its own OPTIONAL, so an unbound variable identifies the reference that was resolved incorrectly." ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <base-prefix-6.rq> ;
            qt:data   <data-base-relative.ttl> ] ;
