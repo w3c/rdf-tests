@@ -186,7 +186,7 @@
 
 :subquery16 rdf:type mf:QueryEvaluationTest ;
     mf:name    "sq16 - Subquery with ORDER BY/OFFSET/LIMIT inside GRAPH" ;
-    rdfs:comment "ORDER BY, OFFSET and LIMIT of the subquery apply separately to each named graph" ;
+    rdfs:comment "ORDER BY, OFFSET, and LIMIT of the subquery apply separately to each named graph" ;
     mf:action
          [ qt:query  <sq16.rq> ;
            qt:graphData   <sq16-g1.ttl> ;
