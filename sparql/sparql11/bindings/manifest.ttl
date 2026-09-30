@@ -156,7 +156,7 @@
 
 :graph-from-named-1 rdf:type mf:QueryEvaluationTest ;
     mf:name    "VALUES inside GRAPH binding the graph name variable, with FROM NAMED" ;
-    rdfs:comment "Only graphs named by FROM NAMED are iterated: rows binding the graph variable to a graph excluded by FROM NAMED (ex:g2) or to an IRI that is no graph name at all (ex:unknown) are removed" ;
+    rdfs:comment "Only graphs named by FROM NAMED are iterated; rows binding the graph variable to a graph excluded by FROM NAMED (ex:g2) or to an IRI that is no graph name at all (ex:unknown) are removed" ;
     mf:action
     [
         qt:query  <graph-from-named-1.rq> ;
