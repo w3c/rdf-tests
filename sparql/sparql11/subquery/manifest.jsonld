@@ -288,6 +288,35 @@
         "data": "sq14.ttl"
       },
       "result": "sq14-out.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery15",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sq15 - Subquery with OFFSET/LIMIT over VALUES inside GRAPH",
+      "comment": "The subquery is evaluated once per named graph, even though it does not depend on the graph",
+      "action": {
+        "query": "sq15.rq",
+        "graphData": [
+          "sq15-g1.ttl",
+          "sq15-g2.ttl"
+        ]
+      },
+      "result": "sq15.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery16",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "sq16 - Subquery with ORDER BY/OFFSET/LIMIT inside GRAPH",
+      "comment": "ORDER BY, OFFSET, and LIMIT of the subquery apply separately to each named graph",
+      "action": {
+        "query": "sq16.rq",
+        "graphData": [
+          "sq16-g1.ttl",
+          "sq16-g2.ttl",
+          "sq16-g3.ttl"
+        ]
+      },
+      "result": "sq16.srx"
     }
   ]
 }

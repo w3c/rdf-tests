@@ -639,6 +639,101 @@
             </dd>
           </dl>
         </dd>
+        <dt id='subquery15'>
+          <a class='testlink' href='#subquery15'>
+            subquery15:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery15' property='mf:name'>sq15 - Subquery with OFFSET/LIMIT over VALUES inside GRAPH</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery15' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The subquery is evaluated once per named graph, even though it does not depend on the graph</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='sq15.rq' property='qt:query'>sq15.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='sq15-g1.ttl'>
+                      <td>
+                        <a href='sq15-g1.ttl' property='qt:graphData'>sq15-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='sq15-g2.ttl'>
+                      <td>
+                        <a href='sq15-g2.ttl' property='qt:graphData'>sq15-g2.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='sq15.srx' property='mf:result'>sq15.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='subquery16'>
+          <a class='testlink' href='#subquery16'>
+            subquery16:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery16' property='mf:name'>sq16 - Subquery with ORDER BY/OFFSET/LIMIT inside GRAPH</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#subquery16' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>ORDER BY, OFFSET, and LIMIT of the subquery apply separately to each named graph</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='sq16.rq' property='qt:query'>sq16.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='sq16-g1.ttl'>
+                      <td>
+                        <a href='sq16-g1.ttl' property='qt:graphData'>sq16-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='sq16-g2.ttl'>
+                      <td>
+                        <a href='sq16-g2.ttl' property='qt:graphData'>sq16-g2.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='sq16-g3.ttl'>
+                      <td>
+                        <a href='sq16-g3.ttl' property='qt:graphData'>sq16-g3.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='sq16.srx' property='mf:result'>sq16.srx</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>
