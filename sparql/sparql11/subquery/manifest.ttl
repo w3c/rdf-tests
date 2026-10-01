@@ -25,6 +25,8 @@
     :subquery12
     :subquery13
     :subquery14
+    :subquery15
+    :subquery16
    ) .
 
 
@@ -171,3 +173,24 @@
            qt:data   <sq14.ttl> ] ;
     mf:result  <sq14-out.ttl>
     . 
+
+:subquery15 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "sq15 - Subquery with OFFSET/LIMIT over VALUES inside GRAPH" ;
+    rdfs:comment "The subquery is evaluated once per named graph, even though it does not depend on the graph" ;
+    mf:action
+         [ qt:query  <sq15.rq> ;
+           qt:graphData   <sq15-g1.ttl> ;
+           qt:graphData   <sq15-g2.ttl> ] ;
+    mf:result  <sq15.srx>
+    .
+
+:subquery16 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "sq16 - Subquery with ORDER BY/OFFSET/LIMIT inside GRAPH" ;
+    rdfs:comment "ORDER BY, OFFSET, and LIMIT of the subquery apply separately to each named graph" ;
+    mf:action
+         [ qt:query  <sq16.rq> ;
+           qt:graphData   <sq16-g1.ttl> ;
+           qt:graphData   <sq16-g2.ttl> ;
+           qt:graphData   <sq16-g3.ttl> ] ;
+    mf:result  <sq16.srx>
+    .
