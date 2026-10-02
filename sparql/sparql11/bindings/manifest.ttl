@@ -22,6 +22,7 @@
         :inline1
         :inline2
         :graph
+        :graph-no-var
     ).
 
 
@@ -148,4 +149,14 @@
     ] ;
     mf:result  <graph.ttl> .
 
-
+:graph-no-var rdf:type mf:QueryEvaluationTest ;
+    mf:name    "VALUES inside GRAPH not mentioning the graph name variable" ;
+    rdfs:comment "Each VALUES row is joined with every named graph" ;
+    mf:action
+    [
+        qt:query  <graph-no-var.rq> ;
+        qt:data   <empty.ttl> ;
+        qt:graphData   <data01.ttl> ;
+        qt:graphData   <data02.ttl>
+    ] ;
+    mf:result  <graph-no-var.ttl> .
