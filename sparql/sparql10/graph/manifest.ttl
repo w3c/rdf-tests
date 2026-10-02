@@ -29,6 +29,10 @@
 	:graph-variable-scope
 	:graph-variable-join
 	:graph-optional
+	:graph-nested-1
+	:graph-nested-2
+	:graph-nested-3
+	:graph-nested-4
    ).
 
 :dawg-graph-01  rdf:type mf:QueryEvaluationTest ;
@@ -239,4 +243,52 @@
               qt:graphData    <data-g1.ttl>
             ] ;
     mf:result  <graph-optional.ttl> ;
+    .
+
+:graph-nested-1 rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-nested-1" ;
+    rdfs:comment  "GRAPH ?g nested in GRAPH ?g (same variable)" ;
+    rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset; the shared variable restricts the result to matching graph names" ;
+    mf:action
+            [ qt:query        <graph-nested-1.rq> ;
+              qt:graphData    <data-nested-g1.ttl> ;
+              qt:graphData    <data-nested-g2.ttl>
+            ] ;
+    mf:result  <graph-nested-1.ttl> ;
+    .
+
+:graph-nested-2 rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-nested-2" ;
+    rdfs:comment  "GRAPH ?g0 nested in GRAPH ?g1 (different variables)" ;
+    rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset, independently of the outer graph name" ;
+    mf:action
+            [ qt:query        <graph-nested-2.rq> ;
+              qt:graphData    <data-nested-g1.ttl> ;
+              qt:graphData    <data-nested-g2.ttl>
+            ] ;
+    mf:result  <graph-nested-2.ttl> ;
+    .
+
+:graph-nested-3 rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-nested-3" ;
+    rdfs:comment  "GRAPH <iri> nested in GRAPH ?g" ;
+    rdfs:comment  "The inner GRAPH selects a fixed named graph, independently of the outer graph name" ;
+    mf:action
+            [ qt:query        <graph-nested-3.rq> ;
+              qt:graphData    <data-nested-g1.ttl> ;
+              qt:graphData    <data-nested-g2.ttl>
+            ] ;
+    mf:result  <graph-nested-3.ttl> ;
+    .
+
+:graph-nested-4 rdf:type mf:QueryEvaluationTest ;
+    mf:name "graph-nested-4" ;
+    rdfs:comment  "GRAPH ?g nested in GRAPH <iri>" ;
+    rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset, not only the one selected by the outer GRAPH" ;
+    mf:action
+            [ qt:query        <graph-nested-4.rq> ;
+              qt:graphData    <data-nested-g1.ttl> ;
+              qt:graphData    <data-nested-g2.ttl>
+            ] ;
+    mf:result  <graph-nested-4.ttl> ;
     .
