@@ -167,6 +167,17 @@
       "result": "base-prefix-5.srx"
     },
     {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/basic/manifest#base-prefix-6",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Basic - Prefix/Base 6",
+      "comment": "Relative IRI references (<>, <def>, <#ghi>, <./jkl>, <../mno>, </pqr>) resolved against a base IRI whose path does not end in '/'. Each reference is matched in its own OPTIONAL, so an unbound variable identifies the reference that was resolved incorrectly.",
+      "action": {
+        "query": "base-prefix-6.rq",
+        "data": "data-base-relative.ttl"
+      },
+      "result": "base-prefix-6.srx"
+    },
+    {
       "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/basic/manifest#list-1",
       "@type": "mf:QueryEvaluationTest",
       "name": "Basic - List 1",

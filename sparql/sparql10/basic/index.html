@@ -264,6 +264,40 @@
             </dd>
           </dl>
         </dd>
+        <dt id='base-prefix-6'>
+          <a class='testlink' href='#base-prefix-6'>
+            base-prefix-6:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/basic/manifest#base-prefix-6' property='mf:name'>Basic - Prefix/Base 6</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/basic/manifest#base-prefix-6' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Relative IRI references (&lt;&gt;, <def>, &lt;#ghi&gt;, &lt;./jkl&gt;, &lt;../mno&gt;, &lt;/pqr&gt;) resolved against a base IRI whose path does not end in '/'. Each reference is matched in its own OPTIONAL, so an unbound variable identifies the reference that was resolved incorrectly.</def></p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='base-prefix-6.rq' property='qt:query'>base-prefix-6.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-base-relative.ttl' property='qt:data'>data-base-relative.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='base-prefix-6.srx' property='mf:result'>base-prefix-6.srx</a>
+            </dd>
+          </dl>
+        </dd>
         <dt id='list-1'>
           <a class='testlink' href='#list-1'>
             list-1:
