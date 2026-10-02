@@ -241,6 +241,21 @@
         ]
       },
       "result": "graph.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-no-var",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "VALUES inside GRAPH not mentioning the graph name variable",
+      "comment": "Each VALUES row is joined with every named graph",
+      "action": {
+        "query": "graph-no-var.rq",
+        "data": "empty.ttl",
+        "graphData": [
+          "data01.ttl",
+          "data02.ttl"
+        ]
+      },
+      "result": "graph-no-var.ttl"
     }
   ]
 }

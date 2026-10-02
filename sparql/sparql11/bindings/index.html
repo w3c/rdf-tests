@@ -496,6 +496,55 @@
             </dd>
           </dl>
         </dd>
+        <dt id='graph-no-var'>
+          <a class='testlink' href='#graph-no-var'>
+            graph-no-var:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-no-var' property='mf:name'>VALUES inside GRAPH not mentioning the graph name variable</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-no-var' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Each VALUES row is joined with every named graph</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-no-var.rq' property='qt:query'>graph-no-var.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='empty.ttl' property='qt:data'>empty.ttl</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='data01.ttl'>
+                      <td>
+                        <a href='data01.ttl' property='qt:graphData'>data01.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='data02.ttl'>
+                      <td>
+                        <a href='data02.ttl' property='qt:graphData'>data02.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-no-var.ttl' property='mf:result'>graph-no-var.ttl</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>
