@@ -22,6 +22,7 @@
         :inline1
         :inline2
         :graph
+        :graph-no-var
         :graph-from-named-1
         :graph-from-named-2
         :graph-from-named-3
@@ -151,8 +152,17 @@
     ] ;
     mf:result  <graph.ttl> .
 
-
-
+:graph-no-var rdf:type mf:QueryEvaluationTest ;
+    mf:name    "VALUES inside GRAPH not mentioning the graph name variable" ;
+    rdfs:comment "Each VALUES row is joined with every named graph" ;
+    mf:action
+    [
+        qt:query  <graph-no-var.rq> ;
+        qt:data   <empty.ttl> ;
+        qt:graphData   <data01.ttl> ;
+        qt:graphData   <data02.ttl>
+    ] ;
+    mf:result  <graph-no-var.ttl> .
 
 :graph-from-named-1 rdf:type mf:QueryEvaluationTest ;
     mf:name    "VALUES inside GRAPH binding the graph name variable, with FROM NAMED" ;
