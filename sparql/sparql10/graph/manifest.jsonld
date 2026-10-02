@@ -364,6 +364,74 @@
         ]
       },
       "result": "graph-optional.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-nested-1",
+      "comment": [
+        "GRAPH ?g nested in GRAPH ?g (same variable)",
+        "The inner GRAPH is evaluated against all named graphs of the dataset; the shared variable restricts the result to matching graph names"
+      ],
+      "action": {
+        "query": "graph-nested-1.rq",
+        "graphData": [
+          "data-nested-g1.ttl",
+          "data-nested-g2.ttl"
+        ]
+      },
+      "result": "graph-nested-1.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-nested-2",
+      "comment": [
+        "GRAPH ?g0 nested in GRAPH ?g1 (different variables)",
+        "The inner GRAPH is evaluated against all named graphs of the dataset, independently of the outer graph name"
+      ],
+      "action": {
+        "query": "graph-nested-2.rq",
+        "graphData": [
+          "data-nested-g1.ttl",
+          "data-nested-g2.ttl"
+        ]
+      },
+      "result": "graph-nested-2.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-nested-3",
+      "comment": [
+        "GRAPH <iri> nested in GRAPH ?g",
+        "The inner GRAPH selects a fixed named graph, independently of the outer graph name"
+      ],
+      "action": {
+        "query": "graph-nested-3.rq",
+        "graphData": [
+          "data-nested-g1.ttl",
+          "data-nested-g2.ttl"
+        ]
+      },
+      "result": "graph-nested-3.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-4",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "graph-nested-4",
+      "comment": [
+        "GRAPH ?g nested in GRAPH <iri>",
+        "The inner GRAPH is evaluated against all named graphs of the dataset, not only the one selected by the outer GRAPH"
+      ],
+      "action": {
+        "query": "graph-nested-4.rq",
+        "graphData": [
+          "data-nested-g1.ttl",
+          "data-nested-g2.ttl"
+        ]
+      },
+      "result": "graph-nested-4.ttl"
     }
   ]
 }

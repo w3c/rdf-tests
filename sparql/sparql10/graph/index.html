@@ -880,6 +880,186 @@
             </dd>
           </dl>
         </dd>
+        <dt id='graph-nested-1'>
+          <a class='testlink' href='#graph-nested-1'>
+            graph-nested-1:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-1' property='mf:name'>graph-nested-1</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH ?g nested in GRAPH ?g (same variable) The inner GRAPH is evaluated against all named graphs of the dataset; the shared variable restricts the result to matching graph names</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-nested-1.rq' property='qt:query'>graph-nested-1.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='data-nested-g1.ttl'>
+                      <td>
+                        <a href='data-nested-g1.ttl' property='qt:graphData'>data-nested-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='data-nested-g2.ttl'>
+                      <td>
+                        <a href='data-nested-g2.ttl' property='qt:graphData'>data-nested-g2.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-nested-1.ttl' property='mf:result'>graph-nested-1.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-nested-2'>
+          <a class='testlink' href='#graph-nested-2'>
+            graph-nested-2:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-2' property='mf:name'>graph-nested-2</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH ?g0 nested in GRAPH ?g1 (different variables) The inner GRAPH is evaluated against all named graphs of the dataset, independently of the outer graph name</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-nested-2.rq' property='qt:query'>graph-nested-2.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='data-nested-g1.ttl'>
+                      <td>
+                        <a href='data-nested-g1.ttl' property='qt:graphData'>data-nested-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='data-nested-g2.ttl'>
+                      <td>
+                        <a href='data-nested-g2.ttl' property='qt:graphData'>data-nested-g2.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-nested-2.ttl' property='mf:result'>graph-nested-2.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-nested-3'>
+          <a class='testlink' href='#graph-nested-3'>
+            graph-nested-3:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-3' property='mf:name'>graph-nested-3</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH <iri> nested in GRAPH ?g The inner GRAPH selects a fixed named graph, independently of the outer graph name</iri></p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-nested-3.rq' property='qt:query'>graph-nested-3.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='data-nested-g1.ttl'>
+                      <td>
+                        <a href='data-nested-g1.ttl' property='qt:graphData'>data-nested-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='data-nested-g2.ttl'>
+                      <td>
+                        <a href='data-nested-g2.ttl' property='qt:graphData'>data-nested-g2.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-nested-3.ttl' property='mf:result'>graph-nested-3.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-nested-4'>
+          <a class='testlink' href='#graph-nested-4'>
+            graph-nested-4:
+          </a>
+          <span about='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-4' property='mf:name'>graph-nested-4</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2001/sw/DataAccess/tests/data-r2/graph/manifest#graph-nested-4' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH ?g nested in GRAPH <iri> The inner GRAPH is evaluated against all named graphs of the dataset, not only the one selected by the outer GRAPH</iri></p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail'>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-nested-4.rq' property='qt:query'>graph-nested-4.rq</a>
+                </dd>
+                <dt>graphData</dt>
+                <dd>
+                  <table class='test-detail'>
+                    <tr property='qt:graphData' resource='data-nested-g1.ttl'>
+                      <td>
+                        <a href='data-nested-g1.ttl' property='qt:graphData'>data-nested-g1.ttl</a>
+                      </td>
+                    </tr>
+                    <tr property='qt:graphData' resource='data-nested-g2.ttl'>
+                      <td>
+                        <a href='data-nested-g2.ttl' property='qt:graphData'>data-nested-g2.ttl</a>
+                      </td>
+                    </tr>
+                  </table>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-nested-4.ttl' property='mf:result'>graph-nested-4.ttl</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>
