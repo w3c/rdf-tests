@@ -1,0 +1,41 @@
+{
+  "head": {
+    "vars": [
+      "x",
+      "left",
+      "right"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "x": {
+          "type": "literal",
+          "value": "a"
+        },
+        "left": {
+          "type": "bnode",
+          "value": "a-left"
+        },
+        "right": {
+          "type": "bnode",
+          "value": "a-right"
+        }
+      },
+      {
+        "x": {
+          "type": "literal",
+          "value": "b"
+        },
+        "left": {
+          "type": "bnode",
+          "value": "b-left"
+        },
+        "right": {
+          "type": "bnode",
+          "value": "b-right"
+        }
+      }
+    ]
+  }
+}

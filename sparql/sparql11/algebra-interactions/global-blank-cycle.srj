@@ -1,0 +1,32 @@
+{
+  "head": {
+    "vars": [
+      "from",
+      "to"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "from": {
+          "type": "bnode",
+          "value": "a"
+        },
+        "to": {
+          "type": "bnode",
+          "value": "b"
+        }
+      },
+      {
+        "from": {
+          "type": "bnode",
+          "value": "b"
+        },
+        "to": {
+          "type": "bnode",
+          "value": "a"
+        }
+      }
+    ]
+  }
+}

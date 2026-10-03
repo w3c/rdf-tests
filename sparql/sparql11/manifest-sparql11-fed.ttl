@@ -6,6 +6,7 @@
 <> a mf:Manifest ;
 	rdfs:label "SPARQL 1.1 Federation Extensions" ;
 	mf:include (
+    <service-identity/manifest.ttl>
 		<syntax-fed/manifest.ttl>
 		<service/manifest.ttl>
 	) .

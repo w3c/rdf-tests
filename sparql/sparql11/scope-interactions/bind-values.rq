@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Blackcat Informatics Inc. <paudley@blackcatinformatics.ca>
+# SPDX-License-Identifier: MIT OR Apache-2.0 OR MulanPSL-2.0
+
+PREFIX ex: <http://example.org/>
+SELECT ?o ?copy WHERE { VALUES ?s { ex:s ex:s } ?s (ex:p|ex:q)/ex:r ?o BIND(?o AS ?copy) }

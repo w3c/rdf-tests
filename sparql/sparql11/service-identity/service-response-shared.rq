@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Blackcat Informatics Inc. <paudley@blackcatinformatics.ca>
+# SPDX-License-Identifier: MIT OR Apache-2.0 OR MulanPSL-2.0
+
+PREFIX ex: <http://example.org/>
+SELECT ?remote ?copy ?tag WHERE {
+  SERVICE <http://example.org/service/a> {
+    ?remote ex:p ex:o ; ex:tag ?tag .
+    BIND(?remote AS ?copy)
+  }
+  FILTER(sameTerm(?remote, ?copy))
+}

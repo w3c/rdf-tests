@@ -1,0 +1,50 @@
+{
+  "head": {
+    "vars": [
+      "x",
+      "first",
+      "again",
+      "fresh"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "x": {
+          "type": "literal",
+          "value": "a"
+        },
+        "first": {
+          "type": "bnode",
+          "value": "a-memo"
+        },
+        "again": {
+          "type": "bnode",
+          "value": "a-memo"
+        },
+        "fresh": {
+          "type": "bnode",
+          "value": "a-fresh"
+        }
+      },
+      {
+        "x": {
+          "type": "literal",
+          "value": "b"
+        },
+        "first": {
+          "type": "bnode",
+          "value": "b-memo"
+        },
+        "again": {
+          "type": "bnode",
+          "value": "b-memo"
+        },
+        "fresh": {
+          "type": "bnode",
+          "value": "b-fresh"
+        }
+      }
+    ]
+  }
+}
