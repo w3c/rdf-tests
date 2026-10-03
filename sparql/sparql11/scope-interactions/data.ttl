@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Blackcat Informatics Inc. <paudley@blackcatinformatics.ca>
+# SPDX-License-Identifier: MIT OR Apache-2.0 OR MulanPSL-2.0
+
+@prefix ex: <http://example.org/> .
+ex:s ex:p ex:a, ex:b ; ex:q ex:a ; ex:marker ex:yes .
+ex:a ex:r ex:o ; ex:tag ex:yes .
+ex:b ex:r ex:o .
+ex:lonely ex:p ex:dead .
+ex:wrong ex:r ex:other .
