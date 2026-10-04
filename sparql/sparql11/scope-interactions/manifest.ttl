@@ -1,7 +1,6 @@
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 @prefix sparql: <http://www.w3.org/ns/sparql#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 
@@ -32,7 +31,6 @@
 
 <#alternative-sequence> a mf:QueryEvaluationTest ;
     mf:name "alternative-sequence" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The p arm has witnesses a and b; the q arm has witness a. All three reach o. The disconnected wrong-to-other edge cannot join." ;
     mf:action [ qt:query <alternative-sequence.rq> ;
         qt:data <data.ttl> ] ;
@@ -40,7 +38,6 @@
 
 <#repeated-alternatives> a mf:QueryEvaluationTest ;
     mf:name "repeated-alternatives" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Each of two p witnesses matches two identical first arms and two identical second arms: 2 x 2 x 2 = 8 copies of o." ;
     mf:action [ qt:query <repeated-alternatives.rq> ;
         qt:data <data.ttl> ] ;
@@ -48,7 +45,6 @@
 
 <#inverse-sequence> a mf:QueryEvaluationTest ;
     mf:name "inverse-sequence" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Inverting the three legal derivations from s to o reverses the endpoints and preserves their three derivations." ;
     mf:action [ qt:query <inverse-sequence.rq> ;
         qt:data <data.ttl> ] ;
@@ -56,7 +52,6 @@
 
 <#optional> a mf:QueryEvaluationTest ;
     mf:name "optional" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "s has three compatible right solutions. lonely has none and survives once with o unbound." ;
     mf:action [ qt:query <optional.rq> ;
         qt:data <data.ttl> ] ;
@@ -64,7 +59,6 @@
 
 <#minus-correlated> a mf:QueryEvaluationTest ;
     mf:name "minus-correlated" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The right side shares s and removes s through compatibility; it has no row for lonely." ;
     mf:action [ qt:query <minus-correlated.rq> ;
         qt:data <data.ttl> ] ;
@@ -72,7 +66,6 @@
 
 <#minus-disjoint> a mf:QueryEvaluationTest ;
     mf:name "minus-disjoint" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The right relation is nonempty but shares no distinguished variable with the left. MINUS preserves all three left rows." ;
     mf:action [ qt:query <minus-disjoint.rq> ;
         qt:data <data.ttl> ] ;
@@ -80,7 +73,6 @@
 
 <#exists> a mf:QueryEvaluationTest ;
     mf:name "exists" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "EXISTS tests presence once per outer row; three s witnesses do not multiply the single s row." ;
     mf:action [ qt:query <exists.rq> ;
         qt:data <data.ttl> ] ;
@@ -88,7 +80,6 @@
 
 <#not-exists> a mf:QueryEvaluationTest ;
     mf:name "not-exists" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "s has a compatible witness and is rejected; lonely has no witness and remains." ;
     mf:action [ qt:query <not-exists.rq> ;
         qt:data <data.ttl> ] ;
@@ -96,7 +87,6 @@
 
 <#subquery-hidden-name> a mf:QueryEvaluationTest ;
     mf:name "subquery-hidden-name" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The inner s is not projected, so it cannot join the outer s=lonely binding. The inner query independently emits three o rows." ;
     mf:action [ qt:query <subquery-hidden-name.rq> ;
         qt:data <data.ttl> ] ;
@@ -104,7 +94,6 @@
 
 <#bind-values> a mf:QueryEvaluationTest ;
     mf:name "bind-values" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Two identical VALUES rows each join three witnesses. BIND copies o into a distinguished column without changing the six-row bag." ;
     mf:action [ qt:query <bind-values.rq> ;
         qt:data <data.ttl> ] ;
@@ -112,7 +101,6 @@
 
 <#source-blank-connection> a mf:QueryEvaluationTest ;
     mf:name "source-blank-connection" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The same existential in one BGP connects its path endpoint to marker=yes, selecting only s and its three derivations. FILTER does not split the BGP." ;
     mf:action [ qt:query <source-blank-connection.rq> ;
         qt:data <data.ttl> ] ;
@@ -120,7 +108,6 @@
 
 <#independent-union-blanks> a mf:QueryEvaluationTest ;
     mf:name "independent-union-blanks" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Distinct existential labels in the two BGPs are legal and independent. p contributes a, b, dead; q contributes a. UNION preserves both copies of a." ;
     mf:action [ qt:query <independent-union-blanks.rq> ;
         qt:data <data.ttl> ] ;
@@ -128,7 +115,6 @@
 
 <#caller-lookalikes> a mf:QueryEvaluationTest ;
     mf:name "caller-lookalikes" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Both legal user variable spellings remain distinguished and retain their literals for each of three path witnesses; translator names cannot capture them." ;
     mf:action [ qt:query <caller-lookalikes.rq> ;
         qt:data <data.ttl> ] ;
@@ -136,7 +122,6 @@
 
 <#zero-visible> a mf:QueryEvaluationTest ;
     mf:name "zero-visible" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "Both endpoints are ground. Projecting all hidden witnesses leaves three copies of the empty solution, not one." ;
     mf:action [ qt:query <zero-visible.rq> ;
         qt:data <data.ttl> ] ;
@@ -144,7 +129,6 @@
 
 <#distinct-zero-visible> a mf:QueryEvaluationTest ;
     mf:name "distinct-zero-visible" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The three projected empty solutions compare equal, so DISTINCT yields one empty row." ;
     mf:action [ qt:query <distinct-zero-visible.rq> ;
         qt:data <data.ttl> ] ;
@@ -152,7 +136,6 @@
 
 <#distinct-visible> a mf:QueryEvaluationTest ;
     mf:name "distinct-visible" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "All three witnesses project to the same o binding and DISTINCT yields one row." ;
     mf:action [ qt:query <distinct-visible.rq> ;
         qt:data <data.ttl> ] ;
@@ -160,18 +143,15 @@
 
 <#illegal-union-label> a mf:NegativeSyntaxTest11 ;
     mf:name "illegal-union-label" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "A blank label occurs in two separate basic graph patterns; the source query must be rejected before execution." ;
     mf:action <illegal-union-label.rq> .
 
 <#illegal-optional-label> a mf:NegativeSyntaxTest11 ;
     mf:name "illegal-optional-label" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "A blank label occurs in two separate basic graph patterns; the source query must be rejected before execution." ;
     mf:action <illegal-optional-label.rq> .
 
 <#illegal-subquery-label> a mf:NegativeSyntaxTest11 ;
     mf:name "illegal-subquery-label" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "A blank label occurs in two separate basic graph patterns; the source query must be rejected before execution." ;
     mf:action <illegal-subquery-label.rq> .

@@ -1,7 +1,6 @@
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
 @prefix sparql: <http://www.w3.org/ns/sparql#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 
@@ -14,7 +13,6 @@
 
 <#quoted-pattern-blank> a mf:QueryEvaluationTest ;
     mf:name "quoted-pattern-blank" ;
-    dawgt:approval dawgt:Proposed ;
     rdfs:comment "The existential inside the triple term denotes the same matched node as the outside r edge. There is one reported triple term, whose object is o." ;
     mf:action [ qt:query <quoted-pattern-blank.rq> ;
         qt:data <quoted.ttl> ] ;
