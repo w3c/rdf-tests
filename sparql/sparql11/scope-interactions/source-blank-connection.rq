@@ -1,5 +1,2 @@
-# SPDX-FileCopyrightText: 2026 Blackcat Informatics Inc. <paudley@blackcatinformatics.ca>
-# SPDX-License-Identifier: MIT OR Apache-2.0 OR MulanPSL-2.0
-
 PREFIX ex: <http://example.org/>
 SELECT ?o WHERE { _:same (ex:p|ex:q)/ex:r ?o . FILTER(true) _:same ex:marker ex:yes }
