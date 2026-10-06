@@ -182,6 +182,18 @@
       "result": "strlang03-rdf11.srx"
     },
     {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/functions/manifest#strlang04",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "STRLANG() with language tags differing in case",
+      "comment": "STRLANG(\"abc\", \"en\") = STRLANG(\"abc\", \"EN\") and STRLANG(\"abc\", \"EN\") = \"abc\"@en are both true",
+      "feature": "http://www.w3.org/ns/sparql#strlang",
+      "action": {
+        "query": "strlang04.rq",
+        "data": "data-empty.nt"
+      },
+      "result": "strlang04.srx"
+    },
+    {
       "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/functions/manifest#isnumeric01",
       "@type": "mf:QueryEvaluationTest",
       "name": "isNumeric()",
