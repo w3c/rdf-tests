@@ -22,6 +22,8 @@
     :datatype
     :concat
     :contains
+    :lang-case-match
+    :lang-case-strlang
     ) .
 
 
@@ -120,4 +122,22 @@
     mf:action
          [ qt:query  <contains.rq> ] ;
     mf:result  <contains.srj> ;
+    .
+
+:lang-case-match rdf:type mf:QueryEvaluationTest ;
+    mf:name "Language tags differing in case: graph pattern match" ;
+    rdfs:comment "\"abc\"@en and \"abc\"@EN are the same literal, so they match the same variable" ;
+    mf:action
+         [ qt:query  <lang-case-match.rq> ;
+           qt:data   <data-lang-case.ttl> ] ;
+    mf:result  <lang-case-match.srj> ;
+    .
+
+:lang-case-strlang rdf:type mf:QueryEvaluationTest ;
+    mf:name "Language tags differing in case: STRLANG" ;
+    rdfs:comment "Literals built at query time with STRLANG are the same term as data literals whose language tags differ only in case" ;
+    mf:action
+         [ qt:query  <lang-case-strlang.rq> ;
+           qt:data   <data-lang-case.ttl> ] ;
+    mf:result  <lang-case-strlang.srj> ;
     .
