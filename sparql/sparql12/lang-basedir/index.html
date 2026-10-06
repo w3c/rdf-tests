@@ -412,6 +412,74 @@
             </dd>
           </dl>
         </dd>
+        <dt id='lang-case-match'>
+          <a class='testlink' href='#lang-case-match'>
+            lang-case-match:
+          </a>
+          <span about='manifest#lang-case-match' property='mf:name'>Language tags differing in case: graph pattern match</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#lang-case-match' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>"abc"@en and "abc"@EN are the same literal, so they match the same variable</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='lang-case-match.rq' property='qt:query'>lang-case-match.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-lang-case.ttl' property='qt:data'>data-lang-case.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='lang-case-match.srj' property='mf:result'>lang-case-match.srj</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='lang-case-strlang'>
+          <a class='testlink' href='#lang-case-strlang'>
+            lang-case-strlang:
+          </a>
+          <span about='manifest#lang-case-strlang' property='mf:name'>Language tags differing in case: STRLANG</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='manifest#lang-case-strlang' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Literals built at query time with STRLANG are the same term as data literals whose language tags differ only in case</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='lang-case-strlang.rq' property='qt:query'>lang-case-strlang.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-lang-case.ttl' property='qt:data'>data-lang-case.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='lang-case-strlang.srj' property='mf:result'>lang-case-strlang.srj</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>

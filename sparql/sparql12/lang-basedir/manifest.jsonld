@@ -223,6 +223,28 @@
         "query": "contains.rq"
       },
       "result": "contains.srj"
+    },
+    {
+      "@id": "manifest#lang-case-match",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Language tags differing in case: graph pattern match",
+      "comment": "\"abc\"@en and \"abc\"@EN are the same literal, so they match the same variable",
+      "action": {
+        "query": "lang-case-match.rq",
+        "data": "data-lang-case.ttl"
+      },
+      "result": "lang-case-match.srj"
+    },
+    {
+      "@id": "manifest#lang-case-strlang",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Language tags differing in case: STRLANG",
+      "comment": "Literals built at query time with STRLANG are the same term as data literals whose language tags differ only in case",
+      "action": {
+        "query": "lang-case-strlang.rq",
+        "data": "data-lang-case.ttl"
+      },
+      "result": "lang-case-strlang.srj"
     }
   ]
 }
