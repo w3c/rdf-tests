@@ -545,6 +545,108 @@
             </dd>
           </dl>
         </dd>
+        <dt id='graph-from-named-1'>
+          <a class='testlink' href='#graph-from-named-1'>
+            graph-from-named-1:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-1' property='mf:name'>VALUES inside GRAPH binding the graph name variable, with FROM NAMED</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-1' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>Only graphs named by FROM NAMED are iterated; rows binding the graph variable to a graph excluded by FROM NAMED (ex:g2) or to an IRI that is no graph name at all (ex:unknown) are removed</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-from-named-1.rq' property='qt:query'>graph-from-named-1.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='graph-from-named.trig' property='qt:data'>graph-from-named.trig</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-from-named-1.srx' property='mf:result'>graph-from-named-1.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-from-named-2'>
+          <a class='testlink' href='#graph-from-named-2'>
+            graph-from-named-2:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-2' property='mf:name'>Graph name variable bound outside GRAPH to graphs outside the dataset, with FROM NAMED</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-2' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH ?g does not produce solutions for graph names outside the dataset, even if they are bound by a joined pattern and the inner pattern contains no triple patterns</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-from-named-2.rq' property='qt:query'>graph-from-named-2.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='graph-from-named.trig' property='qt:data'>graph-from-named.trig</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-from-named-2.srx' property='mf:result'>graph-from-named-2.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='graph-from-named-3'>
+          <a class='testlink' href='#graph-from-named-3'>
+            graph-from-named-3:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-3' property='mf:name'>GRAPH with a fixed IRI outside the dataset around VALUES, with FROM NAMED</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-3' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>GRAPH <iri> evaluates to the empty multiset if <iri> is not a graph name of the dataset, even if the inner pattern contains no triple patterns</iri></iri></p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='graph-from-named-3.rq' property='qt:query'>graph-from-named-3.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='graph-from-named.trig' property='qt:data'>graph-from-named.trig</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='graph-from-named-3.srx' property='mf:result'>graph-from-named-3.srx</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>

@@ -256,6 +256,39 @@
         ]
       },
       "result": "graph-no-var.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-1",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "VALUES inside GRAPH binding the graph name variable, with FROM NAMED",
+      "comment": "Only graphs named by FROM NAMED are iterated; rows binding the graph variable to a graph excluded by FROM NAMED (ex:g2) or to an IRI that is no graph name at all (ex:unknown) are removed",
+      "action": {
+        "query": "graph-from-named-1.rq",
+        "data": "graph-from-named.trig"
+      },
+      "result": "graph-from-named-1.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-2",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Graph name variable bound outside GRAPH to graphs outside the dataset, with FROM NAMED",
+      "comment": "GRAPH ?g does not produce solutions for graph names outside the dataset, even if they are bound by a joined pattern and the inner pattern contains no triple patterns",
+      "action": {
+        "query": "graph-from-named-2.rq",
+        "data": "graph-from-named.trig"
+      },
+      "result": "graph-from-named-2.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#graph-from-named-3",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "GRAPH with a fixed IRI outside the dataset around VALUES, with FROM NAMED",
+      "comment": "GRAPH <iri> evaluates to the empty multiset if <iri> is not a graph name of the dataset, even if the inner pattern contains no triple patterns",
+      "action": {
+        "query": "graph-from-named-3.rq",
+        "data": "graph-from-named.trig"
+      },
+      "result": "graph-from-named-3.srx"
     }
   ]
 }
