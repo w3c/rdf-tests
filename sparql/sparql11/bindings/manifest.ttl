@@ -23,6 +23,9 @@
         :inline2
         :graph
         :graph-no-var
+        :graph-from-named-1
+        :graph-from-named-2
+        :graph-from-named-3
     ).
 
 
@@ -160,3 +163,33 @@
         qt:graphData   <data02.ttl>
     ] ;
     mf:result  <graph-no-var.ttl> .
+
+:graph-from-named-1 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "VALUES inside GRAPH binding the graph name variable, with FROM NAMED" ;
+    rdfs:comment "Only graphs named by FROM NAMED are iterated; rows binding the graph variable to a graph excluded by FROM NAMED (ex:g2) or to an IRI that is no graph name at all (ex:unknown) are removed" ;
+    mf:action
+    [
+        qt:query  <graph-from-named-1.rq> ;
+        qt:data   <graph-from-named.trig>
+    ] ;
+    mf:result  <graph-from-named-1.srx> .
+
+:graph-from-named-2 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Graph name variable bound outside GRAPH to graphs outside the dataset, with FROM NAMED" ;
+    rdfs:comment "GRAPH ?g does not produce solutions for graph names outside the dataset, even if they are bound by a joined pattern and the inner pattern contains no triple patterns" ;
+    mf:action
+    [
+        qt:query  <graph-from-named-2.rq> ;
+        qt:data   <graph-from-named.trig>
+    ] ;
+    mf:result  <graph-from-named-2.srx> .
+
+:graph-from-named-3 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "GRAPH with a fixed IRI outside the dataset around VALUES, with FROM NAMED" ;
+    rdfs:comment "GRAPH <iri> evaluates to the empty multiset if <iri> is not a graph name of the dataset, even if the inner pattern contains no triple patterns" ;
+    mf:action
+    [
+        qt:query  <graph-from-named-3.rq> ;
+        qt:data   <graph-from-named.trig>
+    ] ;
+    mf:result  <graph-from-named-3.srx> .
