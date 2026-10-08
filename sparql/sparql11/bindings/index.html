@@ -647,6 +647,516 @@
             </dd>
           </dl>
         </dd>
+        <dt id='values-order-by'>
+          <a class='testlink' href='#values-order-by'>
+            values-order-by:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-order-by' property='mf:name'>Post-query VALUES with ORDER BY</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-order-by' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>ORDER BY sorts by a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-order-by.rq' property='qt:query'>values-order-by.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-order-by.srx' property='mf:result'>values-order-by.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-offset-limit'>
+          <a class='testlink' href='#values-offset-limit'>
+            values-offset-limit:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-offset-limit' property='mf:name'>Post-query VALUES with OFFSET and LIMIT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-offset-limit' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>OFFSET and LIMIT apply after the join with the trailing VALUES clause</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-offset-limit.rq' property='qt:query'>values-offset-limit.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-offset-limit.srx' property='mf:result'>values-offset-limit.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-distinct'>
+          <a class='testlink' href='#values-distinct'>
+            values-distinct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-distinct' property='mf:name'>Post-query VALUES with DISTINCT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-distinct' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>DISTINCT applies after the join with the trailing VALUES clause, which duplicates each solution</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-distinct.rq' property='qt:query'>values-distinct.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-distinct.srx' property='mf:result'>values-distinct.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-group-order-by'>
+          <a class='testlink' href='#values-group-order-by'>
+            values-group-order-by:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-order-by' property='mf:name'>Post-query VALUES with GROUP BY and ORDER BY</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-order-by' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined after grouping, so ORDER BY can use an expression over a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-group-order-by.rq' property='qt:query'>values-group-order-by.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-group-order-by.srx' property='mf:result'>values-group-order-by.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-select-star'>
+          <a class='testlink' href='#values-select-star'>
+            values-select-star:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-select-star' property='mf:name'>Post-query VALUES with SELECT *</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-select-star' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>SELECT * includes the variables of the trailing VALUES clause</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-select-star.rq' property='qt:query'>values-select-star.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-select-star.srx' property='mf:result'>values-select-star.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-no-vars-no-rows'>
+          <a class='testlink' href='#values-no-vars-no-rows'>
+            values-no-vars-no-rows:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-no-rows' property='mf:name'>Post-query VALUES without variables and without rows</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-no-rows' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>A trailing VALUES clause without rows makes the result empty</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-no-vars-no-rows.rq' property='qt:query'>values-no-vars-no-rows.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-no-vars-no-rows.srx' property='mf:result'>values-no-vars-no-rows.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-no-vars-two-rows'>
+          <a class='testlink' href='#values-no-vars-two-rows'>
+            values-no-vars-two-rows:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-two-rows' property='mf:name'>Post-query VALUES without variables and with two rows</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-two-rows' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>A trailing VALUES clause with two empty rows duplicates each solution</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-no-vars-two-rows.rq' property='qt:query'>values-no-vars-two-rows.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-no-vars-two-rows.srx' property='mf:result'>values-no-vars-two-rows.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-subquery-offset-limit'>
+          <a class='testlink' href='#values-subquery-offset-limit'>
+            values-subquery-offset-limit:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-subquery-offset-limit' property='mf:name'>Post-subquery VALUES with OFFSET and LIMIT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-subquery-offset-limit' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>OFFSET and LIMIT of the subquery apply after the join with its trailing VALUES clause</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-subquery-offset-limit.rq' property='qt:query'>values-subquery-offset-limit.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-subquery-offset-limit.srx' property='mf:result'>values-subquery-offset-limit.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-ask'>
+          <a class='testlink' href='#values-ask'>
+            values-ask:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-ask' property='mf:name'>Post-query VALUES with ASK</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-ask' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause removes all solutions, so the answer is false</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-ask.rq' property='qt:query'>values-ask.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-ask.srx' property='mf:result'>values-ask.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-construct'>
+          <a class='testlink' href='#values-construct'>
+            values-construct:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct' property='mf:name'>Post-query VALUES with CONSTRUCT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The template uses a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-construct.rq' property='qt:query'>values-construct.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-construct.ttl' property='mf:result'>values-construct.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-construct-group-by'>
+          <a class='testlink' href='#values-construct-group-by'>
+            values-construct-group-by:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-group-by' property='mf:name'>Post-query VALUES with CONSTRUCT and GROUP BY</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-group-by' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined after grouping, so the template can use a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-construct-group-by.rq' property='qt:query'>values-construct-group-by.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-construct-group-by.ttl' property='mf:result'>values-construct-group-by.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-construct-limit'>
+          <a class='testlink' href='#values-construct-limit'>
+            values-construct-limit:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-limit' property='mf:name'>Post-query VALUES with CONSTRUCT and LIMIT</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-limit' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined before LIMIT. The template has a single triple, so LIMIT gives the same result whether it applies to the solutions or to the constructed triples</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-construct-limit.rq' property='qt:query'>values-construct-limit.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-construct-limit.ttl' property='mf:result'>values-construct-limit.ttl</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-group-by-projection'>
+          <a class='testlink' href='#values-group-by-projection'>
+            values-group-by-projection:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-projection' property='mf:name'>Post-query VALUES with GROUP BY and projected VALUES variable</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-projection' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined after grouping, so the projection can use a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-group-by-projection.rq' property='qt:query'>values-group-by-projection.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-group-by-projection.srx' property='mf:result'>values-group-by-projection.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-group-by-select-expression'>
+          <a class='testlink' href='#values-group-by-select-expression'>
+            values-group-by-select-expression:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-select-expression' property='mf:name'>Post-query VALUES with GROUP BY and VALUES variable in SELECT expression</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-select-expression' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined after grouping, so a SELECT expression can use a variable that only the trailing VALUES clause binds</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-group-by-select-expression.rq' property='qt:query'>values-group-by-select-expression.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-group-by-select-expression.srx' property='mf:result'>values-group-by-select-expression.srx</a>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='values-group-by-join'>
+          <a class='testlink' href='#values-group-by-join'>
+            values-group-by-join:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-join' property='mf:name'>Post-query VALUES with GROUP BY joined on the grouping variable</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-join' typeof='mf:QueryEvaluationTest'>
+          <div property='rdfs:comment'>
+            <p>The trailing VALUES clause is joined with the grouped solutions on the grouping variable</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:QueryEvaluationTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource=''></dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='values-group-by-join.rq' property='qt:query'>values-group-by-join.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data-modifiers.ttl' property='qt:data'>data-modifiers.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='values-group-by-join.srx' property='mf:result'>values-group-by-join.srx</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>

@@ -850,6 +850,24 @@
       "@type": "mf:NegativeSyntaxTest11",
       "name": "Too many values in a VALUE clause compared to the number of variables",
       "action": "syn-bad-values-too-many.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-query/manifest#test_group_by_values_scope_01",
+      "@type": "mf:PositiveSyntaxTest11",
+      "name": "GROUP BY with trailing VALUES variable in projection",
+      "action": "syn-group-by-values-scope-01.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-query/manifest#test_group_by_values_scope_02",
+      "@type": "mf:PositiveSyntaxTest11",
+      "name": "GROUP BY with trailing VALUES variable in SELECT expression",
+      "action": "syn-group-by-values-scope-02.rq"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-query/manifest#test_group_by_values_scope_03",
+      "@type": "mf:NegativeSyntaxTest11",
+      "name": "GROUP BY with trailing VALUES variable reassigned by SELECT expression",
+      "action": "syn-group-by-values-scope-03.rq"
     }
   ]
 }

@@ -289,6 +289,171 @@
         "data": "graph-from-named.trig"
       },
       "result": "graph-from-named-3.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-order-by",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with ORDER BY",
+      "comment": "ORDER BY sorts by a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-order-by.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-order-by.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-offset-limit",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with OFFSET and LIMIT",
+      "comment": "OFFSET and LIMIT apply after the join with the trailing VALUES clause",
+      "action": {
+        "query": "values-offset-limit.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-offset-limit.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-distinct",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with DISTINCT",
+      "comment": "DISTINCT applies after the join with the trailing VALUES clause, which duplicates each solution",
+      "action": {
+        "query": "values-distinct.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-distinct.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-order-by",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with GROUP BY and ORDER BY",
+      "comment": "The trailing VALUES clause is joined after grouping, so ORDER BY can use an expression over a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-group-order-by.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-group-order-by.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-select-star",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with SELECT *",
+      "comment": "SELECT * includes the variables of the trailing VALUES clause",
+      "action": {
+        "query": "values-select-star.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-select-star.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-no-rows",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES without variables and without rows",
+      "comment": "A trailing VALUES clause without rows makes the result empty",
+      "action": {
+        "query": "values-no-vars-no-rows.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-no-vars-no-rows.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-no-vars-two-rows",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES without variables and with two rows",
+      "comment": "A trailing VALUES clause with two empty rows duplicates each solution",
+      "action": {
+        "query": "values-no-vars-two-rows.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-no-vars-two-rows.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-subquery-offset-limit",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-subquery VALUES with OFFSET and LIMIT",
+      "comment": "OFFSET and LIMIT of the subquery apply after the join with its trailing VALUES clause",
+      "action": {
+        "query": "values-subquery-offset-limit.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-subquery-offset-limit.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-ask",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with ASK",
+      "comment": "The trailing VALUES clause removes all solutions, so the answer is false",
+      "action": {
+        "query": "values-ask.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-ask.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with CONSTRUCT",
+      "comment": "The template uses a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-construct.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-construct.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-group-by",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with CONSTRUCT and GROUP BY",
+      "comment": "The trailing VALUES clause is joined after grouping, so the template can use a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-construct-group-by.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-construct-group-by.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-construct-limit",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with CONSTRUCT and LIMIT",
+      "comment": "The trailing VALUES clause is joined before LIMIT. The template has a single triple, so LIMIT gives the same result whether it applies to the solutions or to the constructed triples",
+      "action": {
+        "query": "values-construct-limit.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-construct-limit.ttl"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-projection",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with GROUP BY and projected VALUES variable",
+      "comment": "The trailing VALUES clause is joined after grouping, so the projection can use a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-group-by-projection.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-group-by-projection.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-select-expression",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with GROUP BY and VALUES variable in SELECT expression",
+      "comment": "The trailing VALUES clause is joined after grouping, so a SELECT expression can use a variable that only the trailing VALUES clause binds",
+      "action": {
+        "query": "values-group-by-select-expression.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-group-by-select-expression.srx"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/bindings/manifest#values-group-by-join",
+      "@type": "mf:QueryEvaluationTest",
+      "name": "Post-query VALUES with GROUP BY joined on the grouping variable",
+      "comment": "The trailing VALUES clause is joined with the grouped solutions on the grouping variable",
+      "action": {
+        "query": "values-group-by-join.rq",
+        "data": "data-modifiers.ttl"
+      },
+      "result": "values-group-by-join.srx"
     }
   ]
 }
