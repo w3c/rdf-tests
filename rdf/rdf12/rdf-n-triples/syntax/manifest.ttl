@@ -14,15 +14,14 @@ PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 
 trs:manifest  rdf:type mf:Manifest ;
-   rdfs:label "RDF 1.2 N-Triples Syntax Tests"@en ;
-   skos:prefLabel "La suite des tests pour RDF 1.2 N-Triples"@fr;
-   skos:prefLabel "Conjunto de pruebas para RDF 1.2 N-Triples"@es;
-   mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/> ;
-   dct:issued "2023-07-20"^^xsd:date ;
-   dct:modified "2023-07-20"^^xsd:date ;
-   dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
-   dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
-   rdfs:seeAlso <README>;
+    rdfs:label "RDF 1.2 N-Triples Syntax Tests"@en ;
+    skos:prefLabel "La suite des tests pour RDF 1.2 N-Triples"@fr;
+    skos:prefLabel "Conjunto de pruebas para RDF 1.2 N-Triples"@es;
+    mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/> ;
+    dct:issued "2023-07-20"^^xsd:date ;
+    dct:modified "2023-07-20"^^xsd:date ;
+    dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
+    dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
     mf:entries
     (
         trs:ntriples12-01
@@ -35,6 +34,8 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:ntriples-langdir-1
         trs:ntriples-langdir-2
+
+        trs:ntriples-version-1
 
         trs:ntriples12-bad-01
         trs:ntriples12-bad-02
@@ -62,6 +63,12 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:ntriples-langdir-bad-3
         trs:ntriples-langdir-bad-4
         trs:ntriples-langdir-bad-5
+
+        trs:ntriples-version-bad-1
+        trs:ntriples-version-bad-2
+        trs:ntriples-version-bad-3
+        trs:ntriples-version-bad-4
+
     ) .
 
 trs:ntriples12-01 rdf:type rdft:TestNTriplesPositiveSyntax ;
@@ -102,6 +109,12 @@ trs:ntriples-langdir-2 rdf:type rdft:TestNTriplesPositiveSyntax ;
   mf:name       "N-Triples literal with base direction rtl" ;
   mf:action     <ntriples-langdir-2.nt> ;
   .
+
+trs:ntriples-version-1 rdf:type rdft:TestNTriplesPositiveSyntax ;
+  mf:name       "N-Triples with version announcement" ;
+  mf:action     <ntriples-version-1.nt> ;
+  .
+
 
 ## Bad syntax
 
@@ -218,3 +231,24 @@ trs:ntriples-langdir-bad-5 rdf:type rdft:TestNTriplesNegativeSyntax ;
   mf:name       "N-Triples - Bad - literal with missing language tag and direction" ;
   mf:action     <ntriples-langdir-bad-5.nt> ;
   .
+
+trs:ntriples-version-bad-1 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples with version announcement with wrong case" ;
+  mf:action     <ntriples-version-bad-1.nt> ;
+  .
+
+trs:ntriples-version-bad-2 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples with version announcement with non-string (numeric)" ;
+  mf:action     <ntriples-version-bad-2.nt> ;
+  .
+
+trs:ntriples-version-bad-3 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples with version announcement with non-string (IRI)" ;
+  mf:action     <ntriples-version-bad-3.nt> ;
+  .
+
+trs:ntriples-version-bad-4 rdf:type rdft:TestNTriplesNegativeSyntax ;
+  mf:name       "N-Triples with turtle-style version announcement" ;
+  mf:action     <ntriples-version-bad-4.nt> ;
+  .
+
