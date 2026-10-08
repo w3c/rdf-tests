@@ -26,6 +26,21 @@
         :graph-from-named-1
         :graph-from-named-2
         :graph-from-named-3
+        :values-order-by
+        :values-offset-limit
+        :values-distinct
+        :values-group-order-by
+        :values-select-star
+        :values-no-vars-no-rows
+        :values-no-vars-two-rows
+        :values-subquery-offset-limit
+        :values-ask
+        :values-construct
+        :values-construct-group-by
+        :values-construct-limit
+        :values-group-by-projection
+        :values-group-by-select-expression
+        :values-group-by-join
     ).
 
 
@@ -193,3 +208,153 @@
         qt:data   <graph-from-named.trig>
     ] ;
     mf:result  <graph-from-named-3.srx> .
+
+:values-order-by rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with ORDER BY" ;
+    rdfs:comment "ORDER BY sorts by a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-order-by.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-order-by.srx> .
+
+:values-offset-limit rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with OFFSET and LIMIT" ;
+    rdfs:comment "OFFSET and LIMIT apply after the join with the trailing VALUES clause" ;
+    mf:action
+    [
+        qt:query  <values-offset-limit.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-offset-limit.srx> .
+
+:values-distinct rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with DISTINCT" ;
+    rdfs:comment "DISTINCT applies after the join with the trailing VALUES clause, which duplicates each solution" ;
+    mf:action
+    [
+        qt:query  <values-distinct.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-distinct.srx> .
+
+:values-group-order-by rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with GROUP BY and ORDER BY" ;
+    rdfs:comment "The trailing VALUES clause is joined after grouping, so ORDER BY can use an expression over a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-group-order-by.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-group-order-by.srx> .
+
+:values-select-star rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with SELECT *" ;
+    rdfs:comment "SELECT * includes the variables of the trailing VALUES clause" ;
+    mf:action
+    [
+        qt:query  <values-select-star.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-select-star.srx> .
+
+:values-no-vars-no-rows rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES without variables and without rows" ;
+    rdfs:comment "A trailing VALUES clause without rows makes the result empty" ;
+    mf:action
+    [
+        qt:query  <values-no-vars-no-rows.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-no-vars-no-rows.srx> .
+
+:values-no-vars-two-rows rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES without variables and with two rows" ;
+    rdfs:comment "A trailing VALUES clause with two empty rows duplicates each solution" ;
+    mf:action
+    [
+        qt:query  <values-no-vars-two-rows.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-no-vars-two-rows.srx> .
+
+:values-subquery-offset-limit rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-subquery VALUES with OFFSET and LIMIT" ;
+    rdfs:comment "OFFSET and LIMIT of the subquery apply after the join with its trailing VALUES clause" ;
+    mf:action
+    [
+        qt:query  <values-subquery-offset-limit.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-subquery-offset-limit.srx> .
+
+:values-ask rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with ASK" ;
+    rdfs:comment "The trailing VALUES clause removes all solutions, so the answer is false" ;
+    mf:action
+    [
+        qt:query  <values-ask.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-ask.srx> .
+
+:values-construct rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with CONSTRUCT" ;
+    rdfs:comment "The template uses a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-construct.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-construct.ttl> .
+
+:values-construct-group-by rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with CONSTRUCT and GROUP BY" ;
+    rdfs:comment "The trailing VALUES clause is joined after grouping, so the template can use a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-construct-group-by.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-construct-group-by.ttl> .
+
+:values-construct-limit rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with CONSTRUCT and LIMIT" ;
+    rdfs:comment "The trailing VALUES clause is joined before LIMIT. The template has a single triple, so LIMIT gives the same result whether it applies to the solutions or to the constructed triples" ;
+    mf:action
+    [
+        qt:query  <values-construct-limit.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-construct-limit.ttl> .
+
+:values-group-by-projection rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with GROUP BY and projected VALUES variable" ;
+    rdfs:comment "The trailing VALUES clause is joined after grouping, so the projection can use a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-group-by-projection.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-group-by-projection.srx> .
+
+:values-group-by-select-expression rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with GROUP BY and VALUES variable in SELECT expression" ;
+    rdfs:comment "The trailing VALUES clause is joined after grouping, so a SELECT expression can use a variable that only the trailing VALUES clause binds" ;
+    mf:action
+    [
+        qt:query  <values-group-by-select-expression.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-group-by-select-expression.srx> .
+
+:values-group-by-join rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Post-query VALUES with GROUP BY joined on the grouping variable" ;
+    rdfs:comment "The trailing VALUES clause is joined with the grouped solutions on the grouping variable" ;
+    mf:action
+    [
+        qt:query  <values-group-by-join.rq> ;
+        qt:data   <data-modifiers.ttl>
+    ] ;
+    mf:result  <values-group-by-join.srx> .
