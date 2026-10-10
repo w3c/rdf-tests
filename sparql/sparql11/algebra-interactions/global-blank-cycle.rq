@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?from ?to WHERE { ?from ex:link ?to }

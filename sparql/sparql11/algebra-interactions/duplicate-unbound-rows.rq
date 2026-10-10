@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?a ?b WHERE { VALUES (?a ?b) { (UNDEF UNDEF) (UNDEF UNDEF) } }

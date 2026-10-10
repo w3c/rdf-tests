@@ -1,0 +1,83 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+
+<> a mf:Manifest ;
+    rdfs:label "Algebra Interactions" ;
+    mf:specVersion sparql:version-1.1 ;
+    mf:entries (
+        <#mixed-predicate-inverse-sequence>
+        <#mixed-equivalent-union>
+        <#mixed-permuted-union>
+        <#mixed-overlapping-arm>
+        <#all-unbound-visible-rows>
+        <#duplicate-unbound-rows>
+        <#bnode-fresh-per-call>
+        <#bnode-string-memo>
+        <#global-blank-cycle>
+    ) .
+
+<#mixed-predicate-inverse-sequence> a mf:QueryEvaluationTest ;
+    mf:name "mixed-predicate-inverse-sequence" ;
+    rdfs:comment "There is one direct t edge, one inverse q edge, and two p/r derivations through a and b. Each yields o, for exactly four copies. The wrong/r/other edge has no predecessor from s and cannot contribute. UNION and reordering basic patterns preserve this multiset; the middle witnesses are not projected." ;
+    mf:action [ qt:query <mixed-predicate-inverse-sequence.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <mixed-predicate-inverse-sequence.srj> .
+
+<#mixed-equivalent-union> a mf:QueryEvaluationTest ;
+    mf:name "mixed-equivalent-union" ;
+    rdfs:comment "There is one direct t edge, one inverse q edge, and two p/r derivations through a and b. Each yields o, for exactly four copies. The wrong/r/other edge has no predecessor from s and cannot contribute. UNION and reordering basic patterns preserve this multiset; the middle witnesses are not projected." ;
+    mf:action [ qt:query <mixed-equivalent-union.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <mixed-equivalent-union.srj> .
+
+<#mixed-permuted-union> a mf:QueryEvaluationTest ;
+    mf:name "mixed-permuted-union" ;
+    rdfs:comment "There is one direct t edge, one inverse q edge, and two p/r derivations through a and b. Each yields o, for exactly four copies. The wrong/r/other edge has no predecessor from s and cannot contribute. UNION and reordering basic patterns preserve this multiset; the middle witnesses are not projected." ;
+    mf:action [ qt:query <mixed-permuted-union.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <mixed-permuted-union.srj> .
+
+<#mixed-overlapping-arm> a mf:QueryEvaluationTest ;
+    mf:name "mixed-overlapping-arm" ;
+    rdfs:comment "The direct t and inverse q arms each yield one o. Both identical p/r arms yield two o. Alternative translation is UNION, so all six derivations remain; duplicate arms are not deduplicated." ;
+    mf:action [ qt:query <mixed-overlapping-arm.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <mixed-overlapping-arm.srj> .
+
+<#all-unbound-visible-rows> a mf:QueryEvaluationTest ;
+    mf:name "all-unbound-visible-rows" ;
+    rdfs:comment "VALUES supplies two distinct local mappings. Projection names never, which is unbound in both; both empty visible bindings remain, and the declared never column remains even though no cell binds." ;
+    mf:action [ qt:query <all-unbound-visible-rows.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <all-unbound-visible-rows.srj> .
+
+<#duplicate-unbound-rows> a mf:QueryEvaluationTest ;
+    mf:name "duplicate-unbound-rows" ;
+    rdfs:comment "The VALUES table contains two empty mappings. Bag cardinality is two and both declared columns are unbound. A grader that creates only edges for bound values would erase both rows and is invalid." ;
+    mf:action [ qt:query <duplicate-unbound-rows.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <duplicate-unbound-rows.srj> .
+
+<#bnode-fresh-per-call> a mf:QueryEvaluationTest ;
+    mf:name "bnode-fresh-per-call" ;
+    rdfs:comment "Every argument-free BNODE invocation creates a fresh node. Two calls for each of two mappings produce four pairwise distinct blanks. The visible a/b keys identify each mapping, so independent per-row blank renaming cannot excuse cross-row aliasing." ;
+    mf:action [ qt:query <bnode-fresh-per-call.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <bnode-fresh-per-call.srj> .
+
+<#bnode-string-memo> a mf:QueryEvaluationTest ;
+    mf:name "bnode-string-memo" ;
+    rdfs:comment "In one solution mapping equal simple-literal BNODE arguments yield the same blank, so first equals again. Different literal a/b arguments and fresh argument-free calls produce four distinct identities across the two mappings. Equality must hold globally across the entire result bag, including repeated occurrences." ;
+    mf:action [ qt:query <bnode-string-memo.rq> ;
+        qt:data <data.ttl> ] ;
+    mf:result <bnode-string-memo.srj> .
+
+<#global-blank-cycle> a mf:QueryEvaluationTest ;
+    mf:name "global-blank-cycle" ;
+    rdfs:comment "The source graph has two distinct blanks linked in both directions. There are exactly two rows and one global bijection: the from of one row is the to of the other. Four independently renamed nodes across the two rows are not equivalent." ;
+    mf:action [ qt:query <global-blank-cycle.rq> ;
+        qt:data <blank-cycle.ttl> ] ;
+    mf:result <global-blank-cycle.srj> .

@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?o WHERE { _:same ex:p ?o OPTIONAL { _:same ex:q ?x } }

@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?o WHERE { { _:same ex:p ?o } UNION { _:same ex:q ?o } }

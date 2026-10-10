@@ -1,0 +1,5 @@
+SELECT ?a ?b WHERE {
+  SERVICE <http://example.org/service/a> {
+    SELECT ?a ?b WHERE { VALUES (?a ?b) { (UNDEF UNDEF) (UNDEF UNDEF) } }
+  }
+}

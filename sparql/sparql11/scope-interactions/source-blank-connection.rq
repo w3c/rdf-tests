@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?o WHERE { _:same (ex:p|ex:q)/ex:r ?o . FILTER(true) _:same ex:marker ex:yes }

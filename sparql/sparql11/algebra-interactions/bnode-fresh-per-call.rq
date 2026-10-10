@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?x ?left ?right WHERE { VALUES ?x { "a" "b" } BIND(BNODE() AS ?left) BIND(BNODE() AS ?right) }

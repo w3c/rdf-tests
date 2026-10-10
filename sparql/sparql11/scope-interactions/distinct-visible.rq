@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT DISTINCT ?o WHERE { ex:s (ex:p|ex:q)/ex:r ?o }
