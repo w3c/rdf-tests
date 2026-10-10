@@ -74,9 +74,6 @@
     },
     "http://xmlns.com/foaf/0.1/name": "W3C RDF & SPARQL Working Group"
   },
-  "rdfs:seeAlso": {
-    "@id": "README"
-  },
   "entries": [
     {
       "@id": "../syntax#ntriples12-01",
@@ -119,6 +116,12 @@
       "@type": "rdft:TestNTriplesPositiveSyntax",
       "name": "N-Triples literal with base direction rtl",
       "action": "ntriples-langdir-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-version-1",
+      "@type": "rdft:TestNTriplesPositiveSyntax",
+      "name": "N-Triples with version announcement",
+      "action": "ntriples-version-1.nt"
     },
     {
       "@id": "../syntax#ntriples12-bad-01",
@@ -251,6 +254,30 @@
       "@type": "rdft:TestNTriplesNegativeSyntax",
       "name": "N-Triples - Bad - literal with missing language tag and direction",
       "action": "ntriples-langdir-bad-5.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-version-bad-1",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples with version announcement with wrong case",
+      "action": "ntriples-version-bad-1.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-version-bad-2",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples with version announcement with non-string (numeric)",
+      "action": "ntriples-version-bad-2.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-version-bad-3",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples with version announcement with non-string (IRI)",
+      "action": "ntriples-version-bad-3.nt"
+    },
+    {
+      "@id": "../syntax#ntriples-version-bad-4",
+      "@type": "rdft:TestNTriplesNegativeSyntax",
+      "name": "N-Triples with turtle-style version announcement",
+      "action": "ntriples-version-bad-4.nt"
     }
   ]
 }
