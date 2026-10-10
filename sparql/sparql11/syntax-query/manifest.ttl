@@ -114,6 +114,9 @@
 
 :test_bad_values_too_few
 :test_bad_values_too_many
+:test_group_by_values_scope_01
+:test_group_by_values_scope_02
+:test_group_by_values_scope_03
 ) .
 
 :test_1 rdf:type   mf:PositiveSyntaxTest11 ;
@@ -674,3 +677,15 @@
 :test_bad_values_too_few rdf:type mf:NegativeSyntaxTest11 ;
    mf:name "Too few values in a VALUE clause compared to the number of variables" ;
    mf:action <syn-bad-values-too-few.rq> .
+
+:test_group_by_values_scope_01 rdf:type mf:PositiveSyntaxTest11 ;
+   mf:name "GROUP BY with trailing VALUES variable in projection" ;
+   mf:action <syn-group-by-values-scope-01.rq> .
+
+:test_group_by_values_scope_02 rdf:type mf:PositiveSyntaxTest11 ;
+   mf:name "GROUP BY with trailing VALUES variable in SELECT expression" ;
+   mf:action <syn-group-by-values-scope-02.rq> .
+
+:test_group_by_values_scope_03 rdf:type mf:NegativeSyntaxTest11 ;
+   mf:name "GROUP BY with trailing VALUES variable reassigned by SELECT expression" ;
+   mf:action <syn-group-by-values-scope-03.rq> .
