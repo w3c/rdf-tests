@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?__purrdf_hidden_0 ?__purrdf_path_0 ?o WHERE { VALUES (?__purrdf_hidden_0 ?__purrdf_path_0) { ("caller" "visible") } ex:s (ex:p|ex:q)/ex:r ?o }

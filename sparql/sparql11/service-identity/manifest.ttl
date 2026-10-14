@@ -1,0 +1,59 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+
+<> a mf:Manifest ;
+    rdfs:label "Service Identity" ;
+    mf:specVersion sparql:version-1.1 ;
+    mf:entries (
+        <#service-bnode-distinct>
+        <#service-bnode-collision>
+        <#service-response-shared>
+        <#service-responses-distinct>
+        <#service-all-unbound-duplicates>
+    ) .
+
+<#service-bnode-distinct> a mf:QueryEvaluationTest ;
+    mf:name "service-bnode-distinct" ;
+    rdfs:comment "The endpoint group yields one newly generated remote blank. The local p edge yields one existing blank; one local BNODE() invocation yields a fresh blank. The three identity classes are distinct, so the inequality filter preserves exactly one row with three distinct blanks." ;
+    mf:feature sd:BasicFederatedQuery ;
+    mf:action [ qt:query <service-bnode-distinct.rq> ;
+        qt:data <local.ttl> ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/a> ; qt:data <endpoint-a.ttl> ] ] ;
+    mf:result <service-bnode-distinct.srj> .
+
+<#service-bnode-collision> a mf:QueryEvaluationTest ;
+    mf:name "service-bnode-collision" ;
+    rdfs:comment "The same one candidate mapping has three pairwise distinct blank identities. No equality disjunct holds, so the exact result bag is empty while the existing/local/remote header remains." ;
+    mf:feature sd:BasicFederatedQuery ;
+    mf:action [ qt:query <service-bnode-collision.rq> ;
+        qt:data <local.ttl> ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/a> ; qt:data <endpoint-a.ttl> ] ] ;
+    mf:result <service-bnode-collision.srj> .
+
+<#service-response-shared> a mf:QueryEvaluationTest ;
+    mf:name "service-response-shared" ;
+    rdfs:comment "The endpoint contains one p subject and two distinct tag literals. There are exactly two mappings; both remote and copy denote that one subject in both rows. The result has one global blank class, not one independently renamed class per row." ;
+    mf:feature sd:BasicFederatedQuery ;
+    mf:action [ qt:query <service-response-shared.rq> ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/a> ; qt:data <endpoint-a.ttl> ] ] ;
+    mf:result <service-response-shared.srj> .
+
+<#service-responses-distinct> a mf:QueryEvaluationTest ;
+    mf:name "service-responses-distinct" ;
+    rdfs:comment "The a and b endpoint files are separate RDF source documents independently parsed into distinct endpoint datasets. Each has one p subject. Each independently evaluated subquery yields one mapping; the join yields one pair of distinct source blanks, which passes the inequality filter." ;
+    mf:feature sd:BasicFederatedQuery ;
+    mf:action [ qt:query <service-responses-distinct.rq> ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/a> ; qt:data <endpoint-a.ttl> ] ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/b> ; qt:data <endpoint-b.ttl> ] ] ;
+    mf:result <service-responses-distinct.srj> .
+
+<#service-all-unbound-duplicates> a mf:QueryEvaluationTest ;
+    mf:name "service-all-unbound-duplicates" ;
+    rdfs:comment "The remote explicit SELECT projects a and b over a VALUES multiset containing two empty mappings. Projection preserves both mappings and both unbound header variables. The outer SERVICE join/projection therefore returns exactly two empty binding objects." ;
+    mf:feature sd:BasicFederatedQuery ;
+    mf:action [ qt:query <service-all-unbound-duplicates.rq> ;
+        qt:serviceData [ qt:endpoint <http://example.org/service/a> ; qt:data <endpoint-a.ttl> ] ] ;
+    mf:result <service-all-unbound-duplicates.srj> .

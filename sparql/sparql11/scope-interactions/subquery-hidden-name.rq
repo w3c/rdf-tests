@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?o WHERE { VALUES ?s { ex:lonely } { SELECT ?o WHERE { ?s (ex:p|ex:q)/ex:r ?o } } }
