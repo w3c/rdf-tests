@@ -17,6 +17,7 @@
     :tsv02
     :csv03
     :tsv03
+    :csv04
     ) .
 
 :csv01 rdf:type mf:CSVResultFormatTest ;
@@ -83,4 +84,14 @@
          [ qt:query  <csvtsv01.rq> ;
            qt:data   <data2.ttl> ] ;
     mf:result  <csvtsv03.tsv>
+    .
+
+:csv04 rdf:type mf:CSVResultFormatTest ;
+    mf:name    "csv04 - CSV Result Format with CRLF line endings" ;
+    rdfs:comment "As csv03, with every line of the expected result ending in CRLF, the end-of-line given in SPARQL 1.1 Query Results CSV and TSV Formats, section 2. csv01 to csv03 end lines with LF, which section 2 also asks readers to accept.";
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query  <csvtsv01.rq> ;
+           qt:data   <data2.ttl> ] ;
+    mf:result  <csvtsv04.csv>
     .
