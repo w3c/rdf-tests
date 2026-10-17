@@ -2505,7 +2505,6 @@
 <#comment_following_localName> rdf:type rdft:TestTurtleEval ;
     mf:name      "comment_following_localName" ;
     rdfs:comment "comment following localName" ;
-    rdft:approval rdft:Proposed ;
     mf:action    <comment_following_localName.ttl> ;
     mf:result    <IRI_spo.nt> ;
     .
@@ -2513,7 +2512,6 @@
 <#number_sign_following_localName> rdf:type rdft:TestTurtleEval ;
     mf:name      "number_sign_following_localName" ;
     rdfs:comment "number sign following localName" ;
-    rdft:approval rdft:Proposed ;
     mf:action    <number_sign_following_localName.ttl> ;
     mf:result    <number_sign_following_localName.nt> ;
     .
@@ -2521,7 +2519,6 @@
 <#comment_following_PNAME_NS> rdf:type rdft:TestTurtleEval ;
     mf:name      "comment_following_PNAME_NS" ;
     rdfs:comment "comment following PNAME_NS" ;
-    rdft:approval rdft:Proposed ;
     mf:action    <comment_following_PNAME_NS.ttl> ;
     mf:result    <comment_following_PNAME_NS.nt> ;
     .
@@ -2529,7 +2526,6 @@
 <#number_sign_following_PNAME_NS> rdf:type rdft:TestTurtleEval ;
     mf:name      "number_sign_following_PNAME_NS" ;
     rdfs:comment "number sign following PNAME_NS" ;
-    rdft:approval rdft:Proposed ;
     mf:action    <number_sign_following_PNAME_NS.ttl> ;
     mf:result    <number_sign_following_PNAME_NS.nt> ;
     .
@@ -2678,7 +2674,6 @@
     rdf:type rdft:TestTurtleEval ;
     rdfs:comment "IRI resolution (RFC3986 original cases)" ;
     mf:name "IRI-resolution-01" ;
-    rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-01.ttl> ;
     mf:result <IRI-resolution-01.nt> ;
     .
@@ -2687,7 +2682,6 @@
     rdf:type rdft:TestTurtleEval ;
     rdfs:comment "IRI resolution (RFC3986 using base IRI with trailing slash)" ;
     mf:name "IRI-resolution-02" ;
-    rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-02.ttl> ;
     mf:result <IRI-resolution-02.nt> ;
     .
@@ -2696,7 +2690,6 @@
     rdf:type rdft:TestTurtleEval ;
     rdfs:comment "IRI resolution (RFC3986 using base IRI with file path)" ;
     mf:name "IRI-resolution-07" ;
-    rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-07.ttl> ;
     mf:result <IRI-resolution-07.nt> ;
     .
@@ -2705,7 +2698,6 @@
     rdf:type rdft:TestTurtleEval ;
     rdfs:comment "IRI resolution (miscellaneous cases)" ;
     mf:name "IRI-resolution-08" ;
-    rdft:approval rdft:Proposed ;
     mf:action <IRI-resolution-08.ttl> ;
     mf:result <IRI-resolution-08.nt> ;
     .
