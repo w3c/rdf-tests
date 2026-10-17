@@ -113,14 +113,14 @@ many tests also have a comment (`rdfs:comment`) explaining the purpose of the te
 The `dawgt:approval` predicate relates a test to its official Working Group status (e.g. `dawgt:Approved`).
 Tests are grouped (via their `rdf:type`) as:
 
-- positive SPARQL 1.0 Query syntax tests (`mf:PositiveSyntaxTest`)
-- positive SPARQL 1.1 Query syntax tests (`mf:PositiveSyntaxTest11`)
+- positive SPARQL Query syntax tests (`mf:PositiveSyntaxTest`)
+- positive SPARQL Query syntax tests (`mf:PositiveSyntaxTest11`)
 - positive SPARQL 1.1 Update syntax tests (`mf:PositiveUpdateSyntaxTest11`)
-- negative SPARQL 1.0 Query syntax tests (`mf:NegativeSyntaxTest`)
+- negative SPARQL Query syntax tests (`mf:NegativeSyntaxTest`)
 - negative SPARQL 1.1 Query syntax tests (`mf:NegativeSyntaxTest11`)
 - negative SPARQL 1.1 Update syntax tests (`mf:NegativeUpdateSyntaxTest11`)
-- SPARQL 1.0 and 1.1 Query evaluation tests (`mf:QueryEvaluationTest`)
-- SPARQL 1.1 Update evaluation tests (`mf:UpdateEvaluationTest`)
+- SPARQL Query evaluation tests (`mf:QueryEvaluationTest`)
+- SPARQL Update evaluation tests (`mf:UpdateEvaluationTest`)
 - CSV Result Format tests (`mf:CSVResultFormatTest`)
 - SPARQL 1.1 Service Description tests (`mf:ServiceDescriptionTest`)
 
@@ -163,13 +163,11 @@ The `qt:data` predicate points to a URI that can be dereferenced to yield the de
 The `qt:query` predicate points to a URI that can be dereferenced to yield the query string for the test.
 Query evaluation tests may also use the `qt:graphData` predicate to indicate the named graph components of the test's RDF dataset.
 
-In case the query in the `qt:query` predicate contains `FROM` and `FROM NAMED` clauses and no `qt:data` is present, the graphs comprising the test's RDF dataset are expected to be loaded by dereferencing the respective URIs of the `FROM`/`FROM NAMED` clauses.
-
 Query evaluation tests also contain an `mf:result` which points to a URI that can be dereferenced to yield the expected results of the test query.
 These results are expressed in one of several possible ways:
 
-- The [SPARQL 1.2 Query Results XML Format](https://www.w3.org/TR/sparql12-results-xml/). SELECT or ASK queries.
-- The [SPARQL 1.2 Query Results JSON Format](https://www.w3.org/TR/sparql12-results-json/). SELECT or ASK queries.
+- The [SPARQL Query Results XML Format](https://www.w3.org/TR/sparql12-results-xml/). SELECT or ASK queries.
+- The [SPARQL Query Results JSON Format](https://www.w3.org/TR/sparql12-results-json/). SELECT or ASK queries.
 - The [SPARQL Query Results TSV Format](https://www.w3.org/TR/sparql12-results-csv-tsv/#tsv). SELECT or ASK queries. (As for testing the [SPARQL Query Results CSV Format](https://www.w3.org/TR/sparql12-results-csv-tsv/#csv), see the separate Section within this document on [CSV Result Format Tests](#csv-result-format-tests)).
 - The [DAWG result-set RDF vocabulary](https://www.w3.org/2001/sw/DataAccess/tests/result-set.n3). SELECT or ASK queries.
 - [RDF/XML](https://www.w3.org/TR/rdf12-xml/) or [Turtle](https://www.w3.org/TR/rdf12-turtle/). CONSTRUCT queries.
