@@ -306,6 +306,40 @@
             </dd>
           </dl>
         </dd>
+        <dt id='csv04'>
+          <a class='testlink' href='#csv04'>
+            csv04:
+          </a>
+          <span about='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv04' property='mf:name'>csv04 - CSV Result Format with CRLF line endings</span>
+        </dt>
+        <dd inlist='true' property='mf:entry' resource='http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv04' typeof='mf:CSVResultFormatTest'>
+          <div property='rdfs:comment'>
+            <p>As csv03, with every line of the expected result ending in CRLF, the end-of-line given in SPARQL 1.1 Query Results CSV and TSV Formats, section 2. csv01 to csv03 end lines with LF, which section 2 also asks readers to accept.</p>
+          </div>
+          <dl class='test-detail'>
+            <dt>type</dt>
+            <dd>mf:CSVResultFormatTest</dd>
+            <dt>approval</dt>
+            <dd property='mf:approval' resource='dawgt:Proposed'>dawgt:Proposed</dd>
+            <dt>action</dt>
+            <dd>
+              <dl class='test-detail' property='mf:action' resource=''>
+                <dt>query</dt>
+                <dd>
+                  <a href='csvtsv01.rq' property='qt:query'>csvtsv01.rq</a>
+                </dd>
+                <dt>data</dt>
+                <dd>
+                  <a href='data2.ttl' property='qt:data'>data2.ttl</a>
+                </dd>
+              </dl>
+            </dd>
+            <dt>result</dt>
+            <dd>
+              <a href='csvtsv04.csv' property='mf:result'>csvtsv04.csv</a>
+            </dd>
+          </dl>
+        </dd>
       </dl>
     </div>
     <footer>

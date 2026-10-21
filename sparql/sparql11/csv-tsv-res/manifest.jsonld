@@ -182,6 +182,18 @@
         "data": "data2.ttl"
       },
       "result": "csvtsv03.tsv"
+    },
+    {
+      "@id": "http://www.w3.org/2009/sparql/docs/tests/data-sparql11/csv-tsv-res/manifest#csv04",
+      "@type": "mf:CSVResultFormatTest",
+      "name": "csv04 - CSV Result Format with CRLF line endings",
+      "comment": "As csv03, with every line of the expected result ending in CRLF, the end-of-line given in SPARQL 1.1 Query Results CSV and TSV Formats, section 2. csv01 to csv03 end lines with LF, which section 2 also asks readers to accept.",
+      "approval": "dawgt:Proposed",
+      "action": {
+        "query": "csvtsv01.rq",
+        "data": "data2.ttl"
+      },
+      "result": "csvtsv04.csv"
     }
   ]
 }
