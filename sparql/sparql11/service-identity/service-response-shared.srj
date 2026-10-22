@@ -1,0 +1,41 @@
+{
+  "head": {
+    "vars": [
+      "remote",
+      "copy",
+      "tag"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "remote": {
+          "type": "bnode",
+          "value": "shared"
+        },
+        "copy": {
+          "type": "bnode",
+          "value": "shared"
+        },
+        "tag": {
+          "type": "literal",
+          "value": "one"
+        }
+      },
+      {
+        "remote": {
+          "type": "bnode",
+          "value": "shared"
+        },
+        "copy": {
+          "type": "bnode",
+          "value": "shared"
+        },
+        "tag": {
+          "type": "literal",
+          "value": "two"
+        }
+      }
+    ]
+  }
+}

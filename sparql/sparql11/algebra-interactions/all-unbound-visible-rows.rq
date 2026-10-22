@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?never WHERE { VALUES ?local { ex:a ex:b } }

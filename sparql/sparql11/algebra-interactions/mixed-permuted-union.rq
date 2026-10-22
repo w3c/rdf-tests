@@ -1,0 +1,2 @@
+PREFIX ex: <http://example.org/>
+SELECT ?o WHERE { { ?middle ex:r ?o . ex:s ex:p ?middle } UNION { ?o ex:q ex:s } UNION { ex:s ex:t ?o } }
