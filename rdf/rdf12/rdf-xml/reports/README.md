@@ -1,6 +1,6 @@
 This is a collection of individual
 [EARL reports](https://www.w3.org/TR/EARL10-Schema/) for
-test subjects claiming conformance to RDF 1.2 specifications.
+test subjects claiming conformance to the RDF 1.2 XML specification.
 
 To add your implementation, drop its EARL report as a Turtle file
 in this directory and open a pull request.
