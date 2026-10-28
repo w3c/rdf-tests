@@ -284,8 +284,15 @@ def implementation_report(dir, suite)
 end
 
 REPORTS = {
-  'rdf/rdf12/reports'       => 'RDF 1.2',
-  'sparql/sparql12/reports' => 'SPARQL 1.2',
+  'rdf/rdf12/rdf-n-quads/reports'   => 'RDF 1.2',
+  'rdf/rdf12/rdf-n-triples/reports' => 'RDF 1.2',
+#  'rdf/rdf12/rdf-semantics/reports' => 'RDF 1.2',
+  'rdf/rdf12/rdf-trig/reports'      => 'RDF 1.2',
+  'rdf/rdf12/rdf-turtle/reports'    => 'RDF 1.2',
+  'rdf/rdf12/rdf-xml/reports'       => 'RDF 1.2',
+#  'sparql/sparql10/reports'         => 'SPARQL 1.0',
+#  'sparql/sparql11/reports'         => 'SPARQL 1.1',
+  'sparql/sparql12/reports'         => 'SPARQL 1.2',
 }.map {|dir, suite| implementation_report(dir, suite)}
 
 desc "Build implementation reports"
