@@ -1,0 +1,2744 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix earl: <http://www.w3.org/ns/earl#> .
+
+<http://kasei.us/about/#greg>
+    a <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://kasei.us/about/foaf.ttl> ;
+    <http://xmlns.com/foaf/0.1/account> [
+        a <http://xmlns.com/foaf/0.1/OnlineAccount> ;
+        <http://xmlns.com/foaf/0.1/accountName> "kasei" ;
+        <http://xmlns.com/foaf/0.1/accountServiceHomepage> <http://github.com/>
+    ] ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://kasei.us/> ;
+    <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f80a0f19d2a0897b89f48647b2fb5ca1f0bc1cb8" ;
+    <http://xmlns.com/foaf/0.1/name> "Gregory Todd Williams" .
+
+<http://purl.org/NET/cpan-uri/dist/Attean/v_0-040>
+    a earl:Software .
+
+<urn:uuid:67A01CCD-2C15-5BF6-AD2A-71BAE792A65C>
+    <http://usefulinc.com/ns/doap#revision> "0.040" ;
+    a <http://usefulinc.com/ns/doap#Release> .
+
+<urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477>
+    <http://purl.org/dc/elements/1.1/description> "Configured with QueryPlanner-based evaluation", "Configured with the Memory quadstore" ;
+    <http://purl.org/dc/terms/isPartOf> <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    <http://usefulinc.com/ns/doap#developer> <http://kasei.us/about/#greg> ;
+    <http://usefulinc.com/ns/doap#homepage> <https://github.com/kasei/attean> ;
+    <http://usefulinc.com/ns/doap#license> <http://opensource.org/licenses/Artistic> ;
+    <http://usefulinc.com/ns/doap#name> "Attean" ;
+    <http://usefulinc.com/ns/doap#programming-language> "Perl" ;
+    <http://usefulinc.com/ns/doap#release> <urn:uuid:67A01CCD-2C15-5BF6-AD2A-71BAE792A65C> ;
+    a <http://usefulinc.com/ns/doap#Project> ;
+    <http://www.w3.org/2000/01/rdf-schema#seeAlso> <irc://irc.perl.org/perlrdf> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1j> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1x> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-6> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-7> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-8> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-9> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3-nomatch> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-6> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-7> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8-nomatch> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-9> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-10> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-11> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslang> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslangdir> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal-invalid> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlang> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlangdir> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#datatype> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#concat> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#contains> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang-case-match> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang-case-strlang> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#group01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#select-variable-reuse> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#not-not> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-literals> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-str-literals> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-triple-terms> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-undefs> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#nested-aggregate-functions> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#duplicated-values-variable> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-10> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-10> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-11> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-12> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-13> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-10> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-11> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-12> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-13> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-all> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm-subject> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#subject-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-01-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-02-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-03-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-04-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-01-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-02-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-03-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-04-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-05-bad> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-alternate-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-list-predicate> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-oneOrMore> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-optional> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path-on-start> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-variable-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-list-predicate> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-oneOrMore> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-optional> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path-on-start> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-reifier-alternate-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-variable-path> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-anonreified> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-reified> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-anonreifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-reifier> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-tripleterm> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#langstring-datatype> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-datatype> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-same> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1j> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <urn:uuid:EF8D43F0-D24C-11F1-A0DE-D84BBEF4B477> ;
+    earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1x> .
+
