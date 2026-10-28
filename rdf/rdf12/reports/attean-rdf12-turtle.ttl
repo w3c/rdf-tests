@@ -1,0 +1,1089 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix earl: <http://www.w3.org/ns/earl#> .
+
+<http://kasei.us/about/#greg>
+    a <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://kasei.us/about/foaf.ttl> ;
+    <http://xmlns.com/foaf/0.1/account> [
+        a <http://xmlns.com/foaf/0.1/OnlineAccount> ;
+        <http://xmlns.com/foaf/0.1/accountName> "kasei" ;
+        <http://xmlns.com/foaf/0.1/accountServiceHomepage> <http://github.com/>
+    ] ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://kasei.us/> ;
+    <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f80a0f19d2a0897b89f48647b2fb5ca1f0bc1cb8" ;
+    <http://xmlns.com/foaf/0.1/name> "Gregory Todd Williams" .
+
+<http://purl.org/NET/cpan-uri/dist/Attean/v_0-040>
+    <http://usefulinc.com/ns/doap#developer> <http://kasei.us/about/#greg> ;
+    <http://usefulinc.com/ns/doap#homepage> <https://github.com/kasei/attean> ;
+    <http://usefulinc.com/ns/doap#license> <http://opensource.org/licenses/Artistic> ;
+    <http://usefulinc.com/ns/doap#name> "Attean" ;
+    <http://usefulinc.com/ns/doap#programming-language> "Perl" ;
+    <http://usefulinc.com/ns/doap#release> <urn:uuid:5D225D29-2B76-5C3C-9707-DC593B162116> ;
+    a <http://usefulinc.com/ns/doap#Project> ;
+    <http://www.w3.org/2000/01/rdf-schema#seeAlso> <irc://irc.perl.org/perlrdf> .
+
+<urn:uuid:5D225D29-2B76-5C3C-9707-DC593B162116>
+    <http://usefulinc.com/ns/doap#revision> "0.040" ;
+    a <http://usefulinc.com/ns/doap#Release> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-bnode-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-bnode-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-tt-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-10> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-11> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-12> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-annotation-13> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-reified-triples-annotation-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-6> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-7> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-8> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-inside-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-nested-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-compound-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bnode-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-6> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-7> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-4> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-5> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-6> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-7> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-ann-8> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-bad-ann-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-3> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bnode-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-nested-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-1> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-langdir-bad-2> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#nt-ttl12-bad-09> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-08> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-version-bad-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogate-pair-bad-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax#turtle12-surrogates-bad-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-01> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-02> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-03> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-04> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-05> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-06> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-07> .
+
+[]
+    a earl:Assertion ;
+    earl:assertedBy <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite> ;
+    earl:result [
+        a earl:TestResult ;
+        earl:outcome earl:passed
+    ] ;
+    earl:subject <http://purl.org/NET/cpan-uri/dist/Attean/v_0-040> ;
+    earl:test <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/eval#turtle12-rt-08> .
+
