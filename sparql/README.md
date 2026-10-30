@@ -33,7 +33,7 @@ correct behavior of SPARQL systems. Below is a description of the tests, their o
 - [Federated Query Tests](#federated-query-tests)
 - [Protocol Tests](#protocol-tests)
 - [Service Description Tests](#service-description-tests)
-- [Graph Store HTTP Protocol Tests](#graph-store-http-protocol-tests)
+- [Graph Store Protocol Tests](#graph-store-protocol-tests)
 - [Test annotations](#test-annotations)
 - [How to run the Test Cases](#how-to-run-the-test-cases)
 
@@ -104,6 +104,7 @@ All examples below use these prefix bindings (specified in [turtle](https://www.
 @prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
 @prefix ent:     <http://www.w3.org/ns/entailment/RDF> .
 @prefix rs:      <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix cnt:    <http://www.w3.org/2011/content#> .
 @prefix ht:     <http://www.w3.org/2011/http#> .
 @prefix hts:    <http://www.w3.org/2011/http-statusCodes#> .
 ```
@@ -329,12 +330,14 @@ An example definition of a Federated Query test is:
 
 ## Protocol Tests
 
-SPARQL Protocol test are defined as instance of `mf:ProtocolTest`.
-These tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/) to define
-one or more HTTP requests, and expected aspects of the corresponding responses.
+SPARQL Protocol tests are defined as instance of `mf:ProtocolTest`.
+These tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/)
+and [Representing Content in RDF 1.0](https://www.w3.org/TR/Content-in-RDF/) vocabularies
+to define one or more HTTP requests, and expected aspects of the corresponding responses.
 
 Each SPARQL Protocol test has an `mf:action`, the object of which is a `ht:Connection`.
 The `ht:Connection`'s `ht:connectionAuthority` property value should be replaced when running tests with the URI authority of the SPARQL Service being tested.
+If the URL path of the SPARQL Service being tested does not match `/sparql`, the prefix of `ht:absolutePath` values should also be updated as appropriate.
 
 The expected result of each `ht:Request` is modeled as properties of the request's `ht:resp` `ht:Response` object.
 Depending on the test, different aspects of the response may be present and need validation. These include:
@@ -389,15 +392,40 @@ An example Protocol test is:
 
 This test sends a URL-encoded SPARQL query in the body of a POST request, and expects an HTTP 2xx or 3xx response containing a `true` boolean SPARQL query result.
 
+## Graph Store Protocol Tests
+
+Graph Store Protocol tests are defined as instance of `mf:GraphStoreProtocolTest`.
+Like the [Protocol Tests](#protocol-tests), these tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/) to define
+one or more HTTP requests, and expected aspects of the corresponding responses. See the description above for more details.
+
+As with Protocol tests, the `ht:Connection`'s `ht:connectionAuthority` and `ht:absolutePath` property values should be replaced as appropriate to correctly identify the Graph Store being tested.
+
+In many of these tests, the sequence of more than once `ht:Request` in the `ht:Connection` test action is semantically important. For example, a graph created by a `PUT` is subsequently retrieved with a `GET` and expected to match the original graph, and both of these requests are part of a single test.
+
+For `ht:Request`s that return RDF content, the `ht:Response` describes a serialized RDF graph that is expected to be [graph isomorphic](https://www.w3.org/TR/rdf12-concepts/#graph-isomorphism) to the RDF content returned by the Graph Store being tested.
+
+In these tests, the object of `mf:expectedStatus` is a `ht:StatusCode` (e.g. `hts:OK` or `hts:NoContent`).
+
+The Graph Store Protocol tests are split into two manifests:
+
+* [Indirect Graph Identification](https://www.w3.org/TR/sparql12-graph-store-protocol/#indirect-graph-identification) Tests
+* [Direct Graph Identification](https://www.w3.org/TR/sparql12-graph-store-protocol/#direct-graph-identification) Tests
+
+### Direct Graph Identification Tests
+
+Direct Graph Identification Tests rely on the graph store being tested being able to identify graphs that have the graph store's endpoint URL as a prefix.
+As described above, `ht:connectionAuthority` and `ht:absolutePath` values must be updated to construct graph IRIs that the Graph Store being tested supports.
+
+### Indirect Graph Identification Tests
+
+Some Indirect Graph Identification tests validate a Graph Store's ability to create new graphs upon a POST to the Graph Store's URI itself.
+These tests add a new `mf:expectedLocation` property on the `ht:Response`, whose literal value indicates a template variable name which will need to be substituted with the value of the response's `Location` HTTP header field in subsequent `ht:Request`s (e.g. in the `ht:absolutePath` value to indirectly identify the new graph IRI in a subsequent GET request).
+
 ## Service Description Tests
 
 A testing service for SPARQL 1.1 Protocol implementations supporting [SPARQL 1.1 Service Descriptions](https://www.w3.org/TR/sparql11-service-description/) has been set up at [`http://www.w3.org/2009/sparql/sdvalidator`](https://www.w3.org/2009/sparql/sdvalidator).
 The service performs a number of tests to verify that a submitted endpoint returns RDF that conforms to the service description vocabulary specification.
 Using content negotiation to request RDF (supporting both Turtle and RDF/XML), the service can be used to generate an [EARL implementation report](https://www.w3.org/2001/sw/DataAccess/tests/earl).
-
-## Graph Store HTTP Protocol Tests
-
-A number of test cases for the [SPARQL 1.1 Graph Store HTTP Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/) consisting of HTTP requests and expected responses are described in a [separate document](https://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/).
 
 ## Test annotations
 
