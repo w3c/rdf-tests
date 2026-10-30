@@ -104,6 +104,8 @@ All examples below use these prefix bindings (specified in [turtle](https://www.
 @prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
 @prefix ent:     <http://www.w3.org/ns/entailment/RDF> .
 @prefix rs:      <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ht:     <http://www.w3.org/2011/http#> .
+@prefix hts:    <http://www.w3.org/2011/http-statusCodes#> .
 ```
 
 ## Manifest Structure
@@ -327,8 +329,65 @@ An example definition of a Federated Query test is:
 
 ## Protocol Tests
 
-A testing service for [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/) implementations has been set up at [`http://www.w3.org/2009/sparql/protocol_validator`](https://www.w3.org/2009/sparql/protocol_validator).
-The service and tests performed by this service are described in a [separate document](https://github.com/kasei/sparql11-protocolvalidator).
+SPARQL Protocol test are defined as instance of `mf:ProtocolTest`.
+These tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/) to define
+one or more HTTP requests, and expected aspects of the corresponding responses.
+
+Each SPARQL Protocol test has an `mf:action`, the object of which is a `ht:Connection`.
+The `ht:Connection`'s `ht:connectionAuthority` property value should be replaced when running tests with the URI authority of the SPARQL Service being tested.
+
+The expected result of each `ht:Request` is modeled as properties of the request's `ht:resp` `ht:Response` object.
+Depending on the test, different aspects of the response may be present and need validation. These include:
+
+* `mf:expectedStatus` - with an `rdfs:Class` object indicating one or more expected HTTP response codes. The expected classes are defined by the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/):
+  * `hts:StatusCode2xx`
+  * `hts:StatusCode3xx`
+  * `hts:StatusCode4xx`
+* `mf:expectedFormat` - with a literal object indicating the type of expected result. The expected values are:
+  * `"tabular"` for a SPARQL Query Result response to a `SELECT` query
+  * `"boolean"` for a boolean SPARQL Query Result response to an `ASK` query (with optional `mf:expectedBoolean` property)
+  * `"RDF"` for an RDF graph response to a `CONSTRUCT` or `DESCRIBE` query
+* `mf:expectedBoolean` - with a `xsd:boolean` object value indicating the boolean response for an `ASK` query
+
+An example Protocol test is:
+
+```turtle
+:query_post_form rdf:type mf:ProtocolTest ;
+        mf:name    "query via URL-encoded POST" ;
+        mf:action [
+            a ht:Connection ;
+            ht:connectionAuthority "www.example" ;
+            ht:requests ([
+                    a ht:Request ;
+                    ht:absolutePath "/sparql/?default-graph-uri=http%3A%2F%2Fkasei.us%2F2009%2F09%2Fsparql%2Fdata%2Fdata0.rdf" ;
+                    ht:body [
+                        a cnt:ContentAsText ;
+                        cnt:characterEncoding "UTF-8" ;
+                        cnt:chars "query=ASK%20%7B%7D"
+                    ] ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "content-type" ;
+                            ht:fieldValue "application/x-www-form-urlencoded"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "POST" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedBoolean true ;
+                        mf:expectedFormat "boolean" ;
+                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
+                    ]
+                ]
+            )
+        ] ;
+        dawgt:approval dawgt:Approved ;
+        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-11-20#resolution_3> ;
+        .
+```
+
+This test sends a URL-encoded SPARQL query in the body of a POST request, and expects an HTTP 2xx or 3xx response containing a `true` boolean SPARQL query result.
 
 ## Service Description Tests
 
