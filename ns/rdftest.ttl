@@ -1,8 +1,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdft: <http://www.w3.org/ns/rdftest#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdft:    <http://www.w3.org/ns/rdftest#> .
+@prefix format:  <http://www.w3.org/ns/formats/> .
+@prefix mf:      <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 
 <http://www.w3.org/ns/rdftest> a owl:Ontology;
    rdfs:label "The RDF 1.1 Test Vocabulary"@en;
@@ -57,26 +59,37 @@ rdft:TestC14N a rdfs:Class;
 rdft:TestNQuadsNegativeSyntax a rdfs:Class;
    rdfs:label "N-Quads Negative Syntax"@en;
    rdfs:comment "A negative N-Quads syntax test."@en;
+   rdft:syntaxFormat format:N-Quads ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestNQuadsPositiveSyntax a rdfs:Class;
    rdfs:label "N-Quads Positive Syntax"@en;
    rdfs:comment "A positive N-Quads syntax test."@en;
+   rdft:syntaxFormat format:N-Quads ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestNTriplesNegativeSyntax a rdfs:Class;
    rdfs:label "N-Triples Negative Syntax"@en;
    rdfs:comment "A negative N-Triples syntax test."@en;
+   rdft:syntaxFormat format:N-Triples ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestNTriplesPositiveSyntax a rdfs:Class;
    rdfs:label "N-Triples Positive Syntax"@en;
    rdfs:comment "A positive N-Triples syntax test."@en;
+   rdft:syntaxFormat format:N-Triples ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestNTriplesPositiveC14N a rdfs:Class;
    rdfs:label "N-Triples Positive Canonicalization"@en;
    rdfs:comment "A positive N-Triples canonicalization test."@en;
+   rdft:syntaxFormat format:N-Triples ;
+   rdfs:subClassOf rdft:TestC14N .
+
+rdft:TestNQuadsPositiveC14N a rdfs:Class;
+   rdfs:label "N-Quads Positive Canonicalization"@en;
+   rdfs:comment "A positive N-Quads canonicalization test."@en;
+   rdft:syntaxFormat format:N-Quads ;
    rdfs:subClassOf rdft:TestC14N .
 
 rdft:TestSyntax a rdfs:Class;
@@ -87,41 +100,49 @@ rdft:TestSyntax a rdfs:Class;
 rdft:TestTriGNegativeSyntax a rdfs:Class;
    rdfs:label "TriG Negative Syntax"@en;
    rdfs:comment "A negative TriG syntax test."@en;
+   rdft:syntaxFormat format:TriG ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestTriGPositiveSyntax a rdfs:Class;
    rdfs:label "TriG Positive Syntax"@en;
    rdfs:comment "A positive TriG syntax test."@en;
+   rdft:syntaxFormat format:TriG ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestTrigEval a rdfs:Class;
    rdfs:label "TriG Positive Evaluation"@en;
    rdfs:comment "A positive TriG evaluation test."@en ;
+   rdft:syntaxFormat format:TriG ;
    rdfs:subClassOf rdft:TestEval .
 
 rdft:TestTurtleEval a rdfs:Class;
    rdfs:label "Turtle Positive Evaluation"@en;
    rdfs:comment "A positive Turtle evaluation test."@en;
+   rdft:syntaxFormat format:Turtle ;
    rdfs:subClassOf rdft:TestEval .
 
 rdft:TestTurtleNegativeSyntax a rdfs:Class;
    rdfs:label "Turtle Negative Syntax"@en;
    rdfs:comment "A negative Turtle syntax test."@en;
+   rdft:syntaxFormat format:Turtle ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestTurtlePositiveSyntax a rdfs:Class;
    rdfs:label "Turtle Positive Syntax"@en;
    rdfs:comment "A positive Turtle syntax test."@en;
+   rdft:syntaxFormat format:Turtle ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:TestXMLNegativeSyntax a rdfs:Class;
    rdfs:label "RDF/XML Negative Syntax"@en;
    rdfs:comment "A negative RDF/XML syntax test."@en ;
+   rdft:syntaxFormat format:RDF_XML ;
    rdfs:subClassOf rdft:TestSyntax .
 
 rdft:XMLEval a rdfs:Class;
    rdfs:label "RDF/XML Evaluation"@en;
    rdfs:comment "A positive RDF/XML evaluation test."@en;
+   rdft:syntaxFormat format:RDF_XML ;
    rdfs:subClassOf rdft:TestEval .
 
 rdft:approval a rdf:Property;
@@ -129,3 +150,9 @@ rdft:approval a rdf:Property;
    rdfs:comment "Approval status of a test."@en;
    rdfs:domain rdft:Test;
    rdfs:range rdft:Approval .
+
+rdft:syntaxFormat a rdfs:Property ;
+   rdfs:label "syntax format"@en;
+   rdfs:comment "Format of the file being tested"@en;
+   rdfs:domain rdft:Test;
+   rdfs:range format:Format .
