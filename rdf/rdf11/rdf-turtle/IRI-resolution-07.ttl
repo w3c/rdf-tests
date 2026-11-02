@@ -1,11 +1,17 @@
 @base <file:///a/bb/ccc/d;p?q>.
 
+# These are examples provided for reference resolution in RFC3986.
+# Two of the tests are commented out below because conformant RDF
+# implementations need not produce the "expected" result if they
+# follow scheme-specific rules and reject ill-formed values.
+
 <urn:ex:s253> <urn:ex:p> <g:h>.
 <urn:ex:s254> <urn:ex:p> <g>.
 <urn:ex:s255> <urn:ex:p> <./g>.
 <urn:ex:s256> <urn:ex:p> <g/>.
 <urn:ex:s257> <urn:ex:p> </g>.
-<urn:ex:s258> <urn:ex:p> <//g>.
+# Removed because <file://g> is ill-formed for the file: scheme
+# <urn:ex:s258> <urn:ex:p> <//g>.
 <urn:ex:s259> <urn:ex:p> <?y>.
 <urn:ex:s260> <urn:ex:p> <g?y>.
 <urn:ex:s261> <urn:ex:p> <#s>.
@@ -42,4 +48,5 @@
 <urn:ex:s291> <urn:ex:p> <g?y/../x>.
 <urn:ex:s292> <urn:ex:p> <g#s/./x>.
 <urn:ex:s293> <urn:ex:p> <g#s/../x>.
-<urn:ex:s294> <urn:ex:p> <http:g>.
+# Removed because <http:g> is ill-formed for the http: scheme
+# <urn:ex:s294> <urn:ex:p> <http:g>.
