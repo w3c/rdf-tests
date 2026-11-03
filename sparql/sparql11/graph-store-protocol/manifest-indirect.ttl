@@ -281,7 +281,7 @@ gsp:put_delete_get_delete_indirect rdf:type mf:GraphStoreProtocolTest ;
                 ht:absolutePath "/gsp?graph=http%3A%2F%2Fwww.example%2Fgsp%2Fperson%2F2.ttl" ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:OK, hts:NoContent ;
+                    mf:expectedStatus hts:OK, hts:NoContent, hts:Accepted ;
                 ]
             ]
             [
@@ -301,7 +301,7 @@ gsp:put_delete_get_delete_indirect rdf:type mf:GraphStoreProtocolTest ;
                 ht:absolutePath "/gsp?graph=http%3A%2F%2Fwww.example%2Fgsp%2Fperson%2F2.ttl" ;
                 ht:resp [
                     a ht:Response ;
-                    mf:expectedStatus hts:NotFound, hts:OK, hts:NoContent ;
+                    mf:expectedStatus hts:NotFound, hts:OK, hts:NoContent, hts:Accepted ;
                 ]
             ]
         )

@@ -404,7 +404,7 @@ In many of these tests, the sequence of more than once `ht:Request` in the `ht:C
 
 For `ht:Request`s that return RDF content, the `ht:Response` describes a serialized RDF graph that is expected to be [graph isomorphic](https://www.w3.org/TR/rdf12-concepts/#graph-isomorphism) to the RDF content returned by the Graph Store being tested.
 
-In these tests, the object of `mf:expectedStatus` is a `ht:StatusCode` (e.g. `hts:OK` or `hts:NoContent`).
+In these tests, the object of `mf:expectedStatus` is a `ht:StatusCode` (e.g. `hts:OK` or `hts:NoContent`). Note that some tests include a `DELETE` request for which an HTTP 202 Accepted response is acceptable. In those cases, any subsequent requests for that test that try to validate the success of the deletion may assume that the "Accepted" operation has actually occurred by the time the next request is made.
 
 The Graph Store Protocol tests are split into two manifests:
 
