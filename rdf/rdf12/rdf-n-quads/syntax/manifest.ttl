@@ -50,6 +50,8 @@ trs:manifest  rdf:type mf:Manifest ;
         trs:nquads12-bad-reified-3
         trs:nquads12-bad-reified-4
 
+        trs:nquads12-bad-iri-1
+
         trs:nquads12-bnode-bad-annotated-syntax-1
         trs:nquads12-bnode-bad-annotated-syntax-2
         trs:nquads12-nested-bad-annotated-syntax-1
@@ -57,6 +59,9 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:nquads-langdir-bad-1
         trs:nquads-langdir-bad-2
+        trs:nquads-langdir-bad-3
+        trs:nquads-langdir-bad-4
+        trs:nquads-langdir-bad-5
     ) .
 
 trs:nquads12-01 rdf:type rdft:TestNQuadsPositiveSyntax ;
@@ -150,6 +155,11 @@ trs:nquads12-bad-10 rdf:type rdft:TestNQuadsNegativeSyntax ;
     mf:action    <nquads12-bad-syntax-10.nq> ;
     .
 
+trs:nquads12-bad-iri-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
+  mf:name       "N-Quads - Bad - invalid IRI" ;
+  mf:action     <nquads12-bad-iri-1.nq> ;
+  .
+
 trs:nquads12-bad-reified-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
    mf:name      "N-Quads-12 - Bad - subject reified triple" ;
    mf:action    <nquads12-bad-reified-syntax-1.nq> ;
@@ -202,4 +212,19 @@ trs:nquads-langdir-bad-1 rdf:type rdft:TestNQuadsNegativeSyntax ;
 trs:nquads-langdir-bad-2 rdf:type rdft:TestNQuadsNegativeSyntax ;
   mf:name       "N-Quads literal- Bad - upper case LTR" ;
   mf:action     <nquads-langdir-bad-2.nq> ;
+  .
+
+trs:nquads-langdir-bad-3 rdf:type rdft:TestNQuadsNegativeSyntax ;
+  mf:name       "N-Quads - Bad - literal with missing language tag" ;
+  mf:action     <nquads-langdir-bad-3.nq> ;
+  .
+
+trs:nquads-langdir-bad-4 rdf:type rdft:TestNQuadsNegativeSyntax ;
+  mf:name       "N-Quads - Bad - literal with bad language tag" ;
+  mf:action     <nquads-langdir-bad-4.nq> ;
+  .
+
+trs:nquads-langdir-bad-5 rdf:type rdft:TestNQuadsNegativeSyntax ;
+  mf:name       "N-Quads - Bad - literal with missing language tag and direction" ;
+  mf:action     <nquads-langdir-bad-5.nq> ;
   .
