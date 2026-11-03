@@ -7,6 +7,7 @@
 <> a mf:Manifest ;
 	rdfs:label "RDF tests" ;
 	mf:include (
+         # The RDF 1.1 tests cover RDF 1.0.
          <rdf11/manifest.ttl>
          <rdf12/manifest.ttl>
 	) .
