@@ -2,8 +2,8 @@ This README is for the W3C RDF & SPARQL Working Group's TrigG test suite.
 This test suite contains three kinds of tests:
 
 *  Positive evaluation (`rdft:TestTrigEval`) — a pair of an input TriG file and referenced N-Quads file..
-*  Positive syntax (`rdft:TestTriGPositiveSyntax`) — an input TriG file with no syntax errors.
-*  Negative syntax (`rdft:TestTriGNegativeSyntax`) — an input TriG file with at least one syntax error.
+*  Positive syntax (`rdft:TestTrigPositiveSyntax`) — an input TriG file with no syntax errors.
+*  Negative syntax (`rdft:TestTrigNegativeSyntax`) — an input TriG file with at least one syntax error.
 
 The `manifest.ttl` files in this directory lists tests in the RDF-star WG's TriG test suite.
 All tests have a name (`mf:name`) and an input (`mf:action`).
