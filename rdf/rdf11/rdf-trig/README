@@ -1,13 +1,13 @@
 This README is for the W3C RDF 1.1 Working Group's TriG test suite.
 This test suite contains three kinds of tests:
 
-  Evaluation (rdft:TestTriGEval) - a pair of an input trig file
+  Evaluation (rdft:TestTrigEval) - a pair of an input trig file
   and referenced nquads file.
 
-  Positive syntax (rdft:TestTriGPositiveSyntax) - an input trig
+  Positive syntax (rdft:TestTrigPositiveSyntax) - an input trig
   file with no syntax errors.
 
-  Negative syntax (rdft:TestTriGNegativeSyntax) - an input trig
+  Negative syntax (rdft:TestTrigNegativeSyntax) - an input trig
   file with at least one syntax error.
 
 The manifest.ttl file in this directory lists all of the tests in the

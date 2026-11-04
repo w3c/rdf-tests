@@ -69,6 +69,9 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:trig12-base-bad-1
         trs:trig12-base-bad-2
+        trs:trig12-base-bad-3
+        trs:trig12-base-bad-4
+        trs:trig12-base-bad-5
     ) .
 
 ## Good Syntax
@@ -255,3 +258,19 @@ trs:trig12-base-bad-2 rdf:type rdft:TestTrigNegativeSyntax ;
    mf:name      "upper case LTR" ;
    mf:action    <trig12-base-bad-2.trig> ;
    .
+
+trs:trig12-base-bad-3 rdf:type rdft:TestTrigNegativeSyntax ;
+  mf:name       "TriG 1.2 - Bad - literal with missing language tag" ;
+  mf:action     <trig12-base-bad-3.trig> ;
+  .
+
+trs:trig12-base-bad-4 rdf:type rdft:TestTrigNegativeSyntax ;
+  mf:name       "TriG 1.2 - Bad - literal with bad language tag" ;
+  mf:action     <trig12-base-bad-4.trig> ;
+  .
+
+trs:trig12-base-bad-5 rdf:type rdft:TestTrigNegativeSyntax ;
+  mf:name       "TriG 1.2 - Bad - literal with missing language tag and direction" ;
+  mf:action     <trig12-base-bad-5.trig> ;
+  .
+
