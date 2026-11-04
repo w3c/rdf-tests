@@ -14,12 +14,13 @@ PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 
 trs:manifest  rdf:type mf:Manifest ;
-   rdfs:label "RDF 1.2 Turtle Syntax Tests"@en ;
-   skos:prefLabel "La suite des tests pour la syntaxe RDF 1.2 Turtle"@fr ;
-   skos:prefLabel "Conjunto de pruebas para la sintaxis RDF 1.2 Turtle"@es ;
-   mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax/> ;
-   dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
-   dct:creator [ foaf:homepage <https://w3c.github.io/rdf12-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
+    rdfs:label "RDF 1.2 Turtle Syntax Tests"@en ;
+    skos:prefLabel "La suite des tests pour la syntaxe RDF 1.2 Turtle"@fr ;
+    skos:prefLabel "Conjunto de pruebas para la sintaxis RDF 1.2 Turtle"@es ;
+    mf:assumedTestBase <https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-turtle/syntax/> ;
+    rdfs:seeAlso <https://w3c.github.io/rdf-tests/> ;
+    dct:licence <https://www.w3.org/Consortium/Legal/2008/03-bsd-license> ;
+    dct:creator [ foaf:homepage <https://w3c.github.io/rdf-star-wg/> ; foaf:name "W3C RDF & SPARQL Working Group" ] ;
     mf:entries
     (
         trs:turtle12-1
@@ -83,7 +84,9 @@ trs:manifest  rdf:type mf:Manifest ;
 
         trs:nt-ttl12-langdir-bad-1
         trs:nt-ttl12-langdir-bad-2
-
+        trs:nt-ttl12-langdir-bad-3
+        trs:nt-ttl12-langdir-bad-4
+        trs:nt-ttl12-langdir-bad-5
         trs:nt-ttl12-bad-01
         trs:nt-ttl12-bad-02
         trs:nt-ttl12-bad-03
@@ -404,6 +407,21 @@ trs:nt-ttl12-langdir-bad-2 rdf:type rdft:TestTurtleNegativeSyntax ;
    mf:name      "N-Triples 1.2 as Turtle 1.2 - upper case LTR" ;
    mf:action    <nt-ttl12-langdir-bad-2.ttl> ;
    .
+
+trs:nt-ttl12-langdir-bad-3 rdf:type rdft:TestTurtleNegativeSyntax ;
+  mf:name       "Turtle 1.2 - Bad - literal with missing language tag" ;
+  mf:action     <nt-ttl12-langdir-bad-3.ttl> ;
+  .
+
+trs:nt-ttl12-langdir-bad-4 rdf:type rdft:TestTurtleNegativeSyntax ;
+  mf:name       "Turtle 1.2 - Bad - literal with bad language tag" ;
+  mf:action     <nt-ttl12-langdir-bad-4.ttl> ;
+  .
+
+trs:nt-ttl12-langdir-bad-5 rdf:type rdft:TestTurtleNegativeSyntax ;
+  mf:name       "Turtle 1.2 - Bad - literal with missing language tag and direction" ;
+  mf:action     <nt-ttl12-langdir-bad-5.ttl> ;
+  .
 
 ## Version
 
