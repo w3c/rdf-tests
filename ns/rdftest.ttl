@@ -97,13 +97,13 @@ rdft:TestSyntax a rdfs:Class;
    rdfs:comment "Superclass of all RDF Syntax Tests."@en;
    rdfs:subClassOf rdft:Test .
 
-rdft:TestTriGNegativeSyntax a rdfs:Class;
+rdft:TestTrigNegativeSyntax a rdfs:Class;
    rdfs:label "TriG Negative Syntax"@en;
    rdfs:comment "A negative TriG syntax test."@en;
    rdft:syntaxFormat format:TriG ;
    rdfs:subClassOf rdft:TestSyntax .
 
-rdft:TestTriGPositiveSyntax a rdfs:Class;
+rdft:TestTrigPositiveSyntax a rdfs:Class;
    rdfs:label "TriG Positive Syntax"@en;
    rdfs:comment "A positive TriG syntax test."@en;
    rdft:syntaxFormat format:TriG ;
@@ -139,7 +139,7 @@ rdft:TestXMLNegativeSyntax a rdfs:Class;
    rdft:syntaxFormat format:RDF_XML ;
    rdfs:subClassOf rdft:TestSyntax .
 
-rdft:XMLEval a rdfs:Class;
+rdft:TestXMLEval a rdfs:Class;
    rdfs:label "RDF/XML Evaluation"@en;
    rdfs:comment "A positive RDF/XML evaluation test."@en;
    rdft:syntaxFormat format:RDF_XML ;
