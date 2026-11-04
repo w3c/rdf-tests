@@ -15,7 +15,7 @@
     (
       :open-eq-01 :open-eq-02 :open-eq-03 :open-eq-04 :open-eq-05 :open-eq-06
       :open-eq-07 :open-eq-08 :open-eq-09 :open-eq-10 :open-eq-11 :open-eq-12
-      :date-1 :date-2 :date-3 :date-4
+      :date-4
       :open-cmp-01 :open-cmp-02
     ) .
 
@@ -152,43 +152,6 @@
     mf:notable mf:IllFormedLiteral ;
     mf:requires mf:KnownTypesDefault2Neq ;
     mf:requires mf:LangTagAwareness ;
-    dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html> .
-
-:date-1 a mf:QueryEvaluationTest ;
-    mf:name    "date-1" ;
-    rdfs:comment    "Added type : xsd:date '='" ;
-    mf:action
-              [ qt:query  <date-1.rq> ;
-                qt:data   <data-3.ttl> ] ;
-    mf:result  <date-1-result.srx> ;
-    mf:requires mf:XsdDateOperations ;
-    .
-
-    # Fixed test (was wrong) - needs reapproving 
-    # Decision at http://lists.w3.org/Archives/Public/public-rdf-dawg/2007JulSep/att-0118/04-dawg-minutes.html to leave test not approved
-##         dawgt:approval dawgt:Approved ;
-##     dawgt:approvedBy <http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html> .
-
-:date-2 a mf:QueryEvaluationTest ;
-    mf:name    "date-2" ;
-    rdfs:comment    "Added type : xsd:date '!='" ;
-    mf:action
-              [ qt:query  <date-2.rq> ;
-                qt:data   <data-3.ttl> ] ;
-    mf:result  <date-2-result.srx> ;
-    mf:requires mf:XsdDateOperations ;
-    dawgt:approval dawgt:Approved ;
-    dawgt:approvedBy <http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html> .
-
-:date-3 a mf:QueryEvaluationTest ;
-    mf:name    "date-3" ;
-    rdfs:comment    "Added type : xsd:date '>'" ;
-    mf:action
-             [ qt:query  <date-3.rq> ;
-               qt:data   <data-3.ttl> ] ;
-    mf:result  <date-3-result.srx> ;
-    mf:requires mf:XsdDateOperations ;
     dawgt:approval dawgt:Approved ;
     dawgt:approvedBy <http://lists.w3.org/Archives/Public/public-rdf-dawg/2007AprJun/att-0082/2007-06-12-dawg-minutes.html> .
 
