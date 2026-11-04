@@ -3,7 +3,8 @@
 <urn:ex:s255> <urn:ex:p> <file:///a/bb/ccc/g> .
 <urn:ex:s256> <urn:ex:p> <file:///a/bb/ccc/g/> .
 <urn:ex:s257> <urn:ex:p> <file:///g> .
-<urn:ex:s258> <urn:ex:p> <file://g> .
+# Removed because <file://g> is ill-formed for the file: scheme
+# <urn:ex:s258> <urn:ex:p> <file://g> .
 <urn:ex:s259> <urn:ex:p> <file:///a/bb/ccc/d;p?y> .
 <urn:ex:s260> <urn:ex:p> <file:///a/bb/ccc/g?y> .
 <urn:ex:s261> <urn:ex:p> <file:///a/bb/ccc/d;p?q#s> .
@@ -39,4 +40,5 @@
 <urn:ex:s291> <urn:ex:p> <file:///a/bb/ccc/g?y/../x> .
 <urn:ex:s292> <urn:ex:p> <file:///a/bb/ccc/g#s/./x> .
 <urn:ex:s293> <urn:ex:p> <file:///a/bb/ccc/g#s/../x> .
-<urn:ex:s294> <urn:ex:p> <http:g> .
+# Removed because <http:g> is ill-formed for the http: scheme
+# <urn:ex:s294> <urn:ex:p> <http:g> .
