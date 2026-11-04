@@ -1,0 +1,4176 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://www.w3.org/ns/earl#",
+    "foaf:homepage": {
+      "@type": "@id"
+    },
+    "dc": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "earl": "http://www.w3.org/ns/earl#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "assertedBy": {
+      "@type": "@id"
+    },
+    "assertions": {
+      "@id": "mf:report",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "bibRef": {
+      "@id": "dc:bibliographicCitation"
+    },
+    "created": {
+      "@id": "doap:created",
+      "@type": "xsd:date"
+    },
+    "description": {
+      "@id": "rdfs:comment",
+      "@language": "en"
+    },
+    "developer": {
+      "@id": "doap:developer",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "doapDesc": {
+      "@id": "doap:description",
+      "@language": "en"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@type": "@id",
+      "@container": "@list",
+      "@context": {
+        "assertions": {
+          "@reverse": "earl:test",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    },
+    "generatedBy": {
+      "@type": "@id"
+    },
+    "homepage": {
+      "@id": "doap:homepage",
+      "@type": "@id"
+    },
+    "language": {
+      "@id": "doap:programming-language"
+    },
+    "license": {
+      "@id": "doap:license",
+      "@type": "@id"
+    },
+    "mode": {
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "doap:name"
+    },
+    "outcome": {
+      "@type": "@id"
+    },
+    "release": {
+      "@id": "doap:release",
+      "@type": "@id"
+    },
+    "revision": {
+      "@id": "doap:revision"
+    },
+    "shortdesc": {
+      "@id": "doap:shortdesc",
+      "@language": "en"
+    },
+    "subject": {
+      "@type": "@id"
+    },
+    "test": {
+      "@type": "@id"
+    },
+    "testAction": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "testResult": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "title": {
+      "@id": "mf:name"
+    },
+    "testSubjects": {
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "xsd": {
+      "@id": "http://www.w3.org/2001/XMLSchema#"
+    }
+  },
+  "@id": "",
+  "@type": [
+    "Software",
+    "doap:Project"
+  ],
+  "name": "RDF 1.2",
+  "bibRef": "Unknown reference",
+  "generatedBy": {
+    "@id": "https://rubygems.org/gems/earl-report",
+    "@type": [
+      "Software",
+      "doap:Project"
+    ],
+    "name": "earl-report",
+    "shortdesc": "Earl Report summary generator",
+    "doapDesc": "EarlReport generates HTML+RDFa rollups of multiple EARL reports",
+    "homepage": "https://github.com/gkellogg/earl-report",
+    "language": "Ruby",
+    "license": "http://unlicense.org",
+    "release": {
+      "@id": "https://github.com/gkellogg/earl-report/tree/0.9.1",
+      "@type": "doap:Version",
+      "name": "earl-report-0.9.1",
+      "doap:created": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-04"
+      },
+      "revision": "0.9.1"
+    },
+    "developer": [
+      "https://greggkellogg.net/foaf#me"
+    ]
+  },
+  "assertions": [
+    "attean-rdf12-ntriples.ttl",
+    "n3-js-ntriples.ttl",
+    "rdf12conv-n-triples-earl.ttl"
+  ],
+  "testSubjects": [
+    {
+      "@id": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "Attean",
+      "developer": [
+        {
+          "@id": "http://kasei.us/about/#greg",
+          "@type": "foaf:Person",
+          "foaf:name": "Gregory Todd Williams",
+          "foaf:homepage": "http://kasei.us/"
+        }
+      ],
+      "homepage": "https://github.com/kasei/attean",
+      "language": "Perl",
+      "release": {
+        "@id": "urn:uuid:5D225D29-2B76-5C3C-9707-DC593B162116",
+        "revision": "0.040"
+      }
+    },
+    {
+      "@id": "https://pypi.org/project/rdf12conv/0.3.0/",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "rdf12conv",
+      "developer": [
+        {
+          "@id": "https://github.com/domel#me",
+          "@type": [
+            "Assertor",
+            "foaf:Person"
+          ],
+          "foaf:name": "Dominik Tomaszuk",
+          "foaf:homepage": "https://github.com/domel"
+        }
+      ],
+      "homepage": "https://github.com/domel/rdf12conv",
+      "language": "Python",
+      "release": {
+        "@id": "_:b129",
+        "revision": "unknown"
+      }
+    },
+    {
+      "@id": "https://www.npmjs.com/package/n3/",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "n3",
+      "developer": [
+        {
+          "@id": "https://ruben.verborgh.org/",
+          "@type": [
+            "foaf:Person",
+            "Assertor"
+          ],
+          "foaf:name": "Ruben Verborgh <ruben.verborgh@gmail.com>"
+        }
+      ],
+      "homepage": "https://github.com/rdfjs/N3.js",
+      "doapDesc": "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library.",
+      "language": "JavaScript",
+      "release": {
+        "@id": "_:b70",
+        "revision": "unknown"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#manifest",
+      "@type": [
+        "mf:Manifest",
+        "Report"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RDF 1.2 N-Triples Canonicalization Test Suite"
+      },
+      "description": "Tests the generation of canonical N-Triples.",
+      "mf:assumedTestBase": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/README.md"
+      },
+      "entries": [
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N comment_following_triple",
+          "rdfs:comment": "Tests canonicalization of triples including comments",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/comment_following_triple.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/comment_following_triple-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b270",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple",
+              "result": {
+                "@id": "_:b271",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b130",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b131",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b272",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#comment_following_triple",
+              "result": {
+                "@id": "_:b273",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N extra_whitespace-01",
+          "rdfs:comment": "Tests canonicalization of triples with extra whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b366",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01",
+              "result": {
+                "@id": "_:b367",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b132",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b133",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b368",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-01",
+              "result": {
+                "@id": "_:b369",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N extra_whitespace-02",
+          "rdfs:comment": "Tests canonicalization of triples with extra whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-02-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b370",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02",
+              "result": {
+                "@id": "_:b371",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b134",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b135",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b372",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-02",
+              "result": {
+                "@id": "_:b373",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N extra_whitespace-03",
+          "rdfs:comment": "Tests canonicalization of triples with extra whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-03.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-03-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b374",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03",
+              "result": {
+                "@id": "_:b375",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b136",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b137",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b376",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-03",
+              "result": {
+                "@id": "_:b377",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N extra_whitespace-04",
+          "rdfs:comment": "Tests canonicalization of triples with extra whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-04.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/extra_whitespace-04-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b378",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04",
+              "result": {
+                "@id": "_:b379",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b138",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b139",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b380",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#extra_whitespace-04",
+              "result": {
+                "@id": "_:b381",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N langtagged_string",
+          "rdfs:comment": "Tests canonicalization of triples including language-tagged string",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/langtagged_string.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/langtagged_string-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b274",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string",
+              "result": {
+                "@id": "_:b275",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b140",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b141",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b276",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#langtagged_string",
+              "result": {
+                "@id": "_:b277",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal with base direction ltr",
+          "rdfs:comment": "Tests canonicalization of triples including directional language-tagged string",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/dirlangtagged_string.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/dirlangtagged_string-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b278",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string",
+              "result": {
+                "@id": "_:b279",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b142",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b143",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b280",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#dirlangtagged_string",
+              "result": {
+                "@id": "_:b281",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_all_controls",
+          "rdfs:comment": "Tests canonicalization of literals with control characters",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_all_controls.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_all_controls-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b282",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls",
+              "result": {
+                "@id": "_:b283",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b144",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b145",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b284",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_controls",
+              "result": {
+                "@id": "_:b285",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_all_punctuation",
+          "rdfs:comment": "Tests canonicalization of literals with punctuation characters",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_all_punctuation.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_all_punctuation-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b286",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation",
+              "result": {
+                "@id": "_:b287",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b146",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b147",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b288",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_all_punctuation",
+              "result": {
+                "@id": "_:b289",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_ascii_boundaries",
+          "rdfs:comment": "Tests canonicalization of literal_ascii_boundaries '\\x00\\x26\\x28...'",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_ascii_boundaries.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_ascii_boundaries-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b290",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries",
+              "result": {
+                "@id": "_:b291",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b148",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b149",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b292",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_ascii_boundaries",
+              "result": {
+                "@id": "_:b293",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_2_dquotes",
+          "rdfs:comment": "Tests canonicalization of literal with 2 dquotes \"\"\"a\"\"b\"\"\"",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_2_dquotes.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_2_dquotes-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b294",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes",
+              "result": {
+                "@id": "_:b295",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b150",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b151",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b296",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_dquotes",
+              "result": {
+                "@id": "_:b297",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_2_squotes",
+          "rdfs:comment": "Tests canonicalization of literal with 2 squotes \"x''y\"",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_2_squotes.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_2_squotes-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b298",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes",
+              "result": {
+                "@id": "_:b299",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b152",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b153",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b300",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_2_squotes",
+              "result": {
+                "@id": "_:b301",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_BACKSPACE",
+          "rdfs:comment": "Tests canonicalization of literals with backspace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_BACKSPACE.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_BACKSPACE-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b302",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE",
+              "result": {
+                "@id": "_:b303",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b154",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b155",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b304",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_BACKSPACE",
+              "result": {
+                "@id": "_:b305",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_CARRIAGE_RETURN",
+          "rdfs:comment": "Tests canonicalization of literals with carriage return",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_CARRIAGE_RETURN.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_CARRIAGE_RETURN-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b306",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN",
+              "result": {
+                "@id": "_:b307",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b156",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b157",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b308",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CARRIAGE_RETURN",
+              "result": {
+                "@id": "_:b309",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_CHARACTER_TABULATION",
+          "rdfs:comment": "Tests canonicalization of literals with character tabulation",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_CHARACTER_TABULATION.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_CHARACTER_TABULATION-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b310",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION",
+              "result": {
+                "@id": "_:b311",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b158",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b159",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b312",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_CHARACTER_TABULATION",
+              "result": {
+                "@id": "_:b313",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_dquote",
+          "rdfs:comment": "Tests canonicalization of literals with double quote",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_dquote.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_dquote-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b314",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote",
+              "result": {
+                "@id": "_:b315",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b160",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b161",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b316",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_dquote",
+              "result": {
+                "@id": "_:b317",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_FORM_FEED",
+          "rdfs:comment": "Tests canonicalization of literals with form feed",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_FORM_FEED.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_FORM_FEED-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b318",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED",
+              "result": {
+                "@id": "_:b319",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b162",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b163",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b320",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_FORM_FEED",
+              "result": {
+                "@id": "_:b321",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_LINE_FEED",
+          "rdfs:comment": "Tests canonicalization of literals with line feed",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_LINE_FEED.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_LINE_FEED-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b322",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED",
+              "result": {
+                "@id": "_:b323",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b164",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b165",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b324",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_LINE_FEED",
+              "result": {
+                "@id": "_:b325",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_numeric_escape4",
+          "rdfs:comment": "Tests canonicalization of literals with numeric escapes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_numeric_escape4.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_numeric_escape4-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b326",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4",
+              "result": {
+                "@id": "_:b327",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b166",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b167",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b328",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape4",
+              "result": {
+                "@id": "_:b329",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_numeric_escape8",
+          "rdfs:comment": "Tests canonicalization of literals with numeric escapes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_numeric_escape8.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_numeric_escape8-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b330",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8",
+              "result": {
+                "@id": "_:b331",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b168",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b169",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b332",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_numeric_escape8",
+              "result": {
+                "@id": "_:b333",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_REVERSE_SOLIDUS",
+          "rdfs:comment": "Tests canonicalization of literals with reverse solidus",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_REVERSE_SOLIDUS.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_REVERSE_SOLIDUS-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b334",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS",
+              "result": {
+                "@id": "_:b335",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b170",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b171",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b336",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS",
+              "result": {
+                "@id": "_:b337",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_REVERSE_SOLIDUS2",
+          "rdfs:comment": "Tests canonicalization of literals with reverse solidus",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_REVERSE_SOLIDUS2.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_REVERSE_SOLIDUS2-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b338",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2",
+              "result": {
+                "@id": "_:b339",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b172",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b173",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b340",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_REVERSE_SOLIDUS2",
+              "result": {
+                "@id": "_:b341",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_squote",
+          "rdfs:comment": "Tests canonicalization of literals with single quotes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_squote.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_squote-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b342",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote",
+              "result": {
+                "@id": "_:b343",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b174",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b175",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b344",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_squote",
+              "result": {
+                "@id": "_:b345",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_string_dt",
+          "rdfs:comment": "Tests canonicalization of literal with explicit xsd:string",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_string_dt.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_string_dt-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b346",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt",
+              "result": {
+                "@id": "_:b347",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b176",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b177",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b348",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_string_dt",
+              "result": {
+                "@id": "_:b349",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_extra_whitespace",
+          "rdfs:comment": "Tests canonicalization of triples with literals having extra whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_extra_whitespace.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_extra_whitespace-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b354",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace",
+              "result": {
+                "@id": "_:b355",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b178",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b179",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b356",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_extra_whitespace",
+              "result": {
+                "@id": "_:b357",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_with_UTF8_boundaries",
+          "rdfs:comment": "Tests canonicalization of literals with UTF8 boundaries",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_UTF8_boundaries.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_with_UTF8_boundaries-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b350",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries",
+              "result": {
+                "@id": "_:b351",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b180",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b181",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b352",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_with_UTF8_boundaries",
+              "result": {
+                "@id": "_:b353",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N minimal_whitespace-01",
+          "rdfs:comment": "Tests canonicalization of triples without optional whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/minimal_whitespace-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/minimal_whitespace-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b358",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01",
+              "result": {
+                "@id": "_:b359",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b182",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b183",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b360",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-01",
+              "result": {
+                "@id": "_:b361",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N minimal_whitespace-02",
+          "rdfs:comment": "Tests canonicalization of triples without optional whitespace",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/minimal_whitespace-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/minimal_whitespace-02-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b362",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02",
+              "result": {
+                "@id": "_:b363",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b184",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b185",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b364",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#minimal_whitespace-02",
+              "result": {
+                "@id": "_:b365",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N triple-term-01",
+          "rdfs:comment": "Tests canonicalization of triple terms with iri subject and object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b382",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01",
+              "result": {
+                "@id": "_:b383",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b186",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b187",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b384",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-01",
+              "result": {
+                "@id": "_:b385",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N triple-term-02",
+          "rdfs:comment": "Tests canonicalization of triple terms with iri subject and bnode object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-02-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b386",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02",
+              "result": {
+                "@id": "_:b387",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b188",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b189",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b388",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-02",
+              "result": {
+                "@id": "_:b389",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N triple-term-03",
+          "rdfs:comment": "Tests canonicalization of triple terms with iri subject and literal object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-03.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-03-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b390",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03",
+              "result": {
+                "@id": "_:b391",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b190",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b191",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b392",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-03",
+              "result": {
+                "@id": "_:b393",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N triple-term-04",
+          "rdfs:comment": "Tests canonicalization of triple terms with triple term object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-04.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/triple-term-04-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b394",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04",
+              "result": {
+                "@id": "_:b395",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b192",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b193",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b396",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#triple-term-04",
+              "result": {
+                "@id": "_:b397",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-uri-01",
+          "rdfs:comment": "Tests canonicalization of IRIs",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b398",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01",
+              "result": {
+                "@id": "_:b399",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b194",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b195",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b400",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-01",
+              "result": {
+                "@id": "_:b401",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-uri-02",
+          "rdfs:comment": "Tests canonicalization of IRIs",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-02-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b402",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02",
+              "result": {
+                "@id": "_:b403",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b196",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b197",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b404",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-02",
+              "result": {
+                "@id": "_:b405",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-uri-03",
+          "rdfs:comment": "Tests canonicalization of IRIs",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-03.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-03-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b406",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03",
+              "result": {
+                "@id": "_:b407",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b198",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b199",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b408",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-03",
+              "result": {
+                "@id": "_:b409",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-uri-04",
+          "rdfs:comment": "Tests canonicalization of IRIs",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-04.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-uri-04-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b410",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04",
+              "result": {
+                "@id": "_:b411",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b200",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b201",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b412",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-uri-04",
+              "result": {
+                "@id": "_:b413",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-str-esc-01",
+          "rdfs:comment": "Tests canonicalization of string escapes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b414",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01",
+              "result": {
+                "@id": "_:b415",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b202",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b203",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b416",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-01",
+              "result": {
+                "@id": "_:b417",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-str-esc-02",
+          "rdfs:comment": "Tests canonicalization of string escapes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-02-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b418",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02",
+              "result": {
+                "@id": "_:b419",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b204",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b205",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b420",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-02",
+              "result": {
+                "@id": "_:b421",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N nt-syntax-str-esc-03",
+          "rdfs:comment": "Tests canonicalization of string escapes",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-03.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/nt-syntax-str-esc-03-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b422",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03",
+              "result": {
+                "@id": "_:b423",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b206",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b207",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b424",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#nt-syntax-str-esc-03",
+              "result": {
+                "@id": "_:b425",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_needing_uchar_escaping-01",
+          "rdfs:comment": "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using raw UTF-8 data",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_needing_uchar_escaping-01.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_needing_uchar_escaping-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b426",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01",
+              "result": {
+                "@id": "_:b427",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b208",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b209",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b428",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-01",
+              "result": {
+                "@id": "_:b429",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveC14N",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "C14N literal_needing_uchar_escaping-02",
+          "rdfs:comment": "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using \\U escaping",
+          "http://www.w3.org/ns/rdftest#approval": {
+            "@id": "http://www.w3.org/ns/rdftest#Proposed"
+          },
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_needing_uchar_escaping-02.nt",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n/literal_needing_uchar_escaping-01-c14n.nt",
+          "assertions": [
+            {
+              "@id": "_:b430",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02",
+              "result": {
+                "@id": "_:b431",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b210",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b211",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b432",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/c14n#literal_needing_uchar_escaping-02",
+              "result": {
+                "@id": "_:b433",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#manifest",
+      "@type": [
+        "mf:Manifest",
+        "Report"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RDF 1.2 N-Triples Syntax Tests"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "La suite des tests pour RDF 1.2 N-Triples"
+        },
+        {
+          "@language": "es",
+          "@value": "Conjunto de pruebas para RDF 1.2 N-Triples"
+        }
+      ],
+      "mf:assumedTestBase": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/"
+      },
+      "dc:licence": {
+        "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+      },
+      "dc:creator": {
+        "@id": "_:b1",
+        "foaf:homepage": "https://w3c.github.io/rdf-star-wg/",
+        "foaf:name": "W3C RDF & SPARQL Working Group"
+      },
+      "entries": [
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - object triple term",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-syntax-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b2",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-01",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b3",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b212",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b213",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b71",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-01",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b72",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - object triple term, no whitespace",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-syntax-02.nt",
+          "assertions": [
+            {
+              "@id": "_:b4",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b5",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b214",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b215",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b73",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-02",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b74",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Nested, no whitespace",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-syntax-03.nt",
+          "assertions": [
+            {
+              "@id": "_:b6",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-03",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b7",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b216",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b217",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b75",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-03",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b76",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Blank node subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bnode-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b8",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b9",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b218",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b219",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b77",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b78",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-nested-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Nested object term",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-nested-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b10",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-nested-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b11",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b220",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-nested-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b221",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b79",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-nested-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b80",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples literal with base direction ltr",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b12",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b13",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b222",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b223",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b81",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b82",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples literal with base direction rtl",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-2.nt",
+          "assertions": [
+            {
+              "@id": "_:b14",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b15",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b224",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b225",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b83",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b84",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples with version announcement",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-version-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b16",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b17",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b436",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-1",
+              "result": {
+                "@id": "_:b437",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b434",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-1",
+              "result": {
+                "@id": "_:b435",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - reified triple as predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b18",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b19",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b226",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b227",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b85",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-01",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b86",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - reified triple, literal subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-02.nt",
+          "assertions": [
+            {
+              "@id": "_:b20",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-02",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b21",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b228",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b229",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b87",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-02",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b88",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - reified triple, literal predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-03.nt",
+          "assertions": [
+            {
+              "@id": "_:b22",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b23",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b230",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b231",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b89",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-03",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b90",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - reified triple, blank node predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-04.nt",
+          "assertions": [
+            {
+              "@id": "_:b24",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-04",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b25",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b232",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b233",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b91",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-04",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b92",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - triple term as predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-05.nt",
+          "assertions": [
+            {
+              "@id": "_:b26",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b27",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b234",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b235",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b93",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-05",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b94",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - triple term, literal subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-06.nt",
+          "assertions": [
+            {
+              "@id": "_:b28",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-06",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b29",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b236",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-06",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b237",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b95",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-06",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b96",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - triple term, literal predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-07.nt",
+          "assertions": [
+            {
+              "@id": "_:b30",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b31",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b238",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b239",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b97",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-07",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b98",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-08",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - triple term, blank node predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-08.nt",
+          "assertions": [
+            {
+              "@id": "_:b32",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-08",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b33",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b240",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-08",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b241",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b99",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-08",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b100",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - reified triple object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-09.nt",
+          "assertions": [
+            {
+              "@id": "_:b34",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b35",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b242",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b243",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b101",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-09",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b102",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-10",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - triple term as subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-syntax-10.nt",
+          "assertions": [
+            {
+              "@id": "_:b36",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-10",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b37",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b244",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-10",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b245",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b103",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-10",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b104",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples - Bad - invalid IRI",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-iri-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b38",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b39",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b246",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b247",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b105",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-iri-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b106",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - subject reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-reified-syntax-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b40",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b41",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b248",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b249",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b107",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b108",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - object reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-reified-syntax-2.nt",
+          "assertions": [
+            {
+              "@id": "_:b42",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b43",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b250",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b251",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b109",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b110",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - subject and object reified triples",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-reified-syntax-3.nt",
+          "assertions": [
+            {
+              "@id": "_:b44",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b45",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b252",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b253",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b111",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b112",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - predicate reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bad-reified-syntax-4.nt",
+          "assertions": [
+            {
+              "@id": "_:b46",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b47",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b254",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b255",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b113",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bad-reified-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b114",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - annotated triple, blank node subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bnode-bad-annotated-syntax-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b48",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b49",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b256",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b257",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b115",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b116",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples-12 - Bad - annotated triple, blank node object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples12-bnode-bad-annotated-syntax-2.nt",
+          "assertions": [
+            {
+              "@id": "_:b50",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b51",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b258",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b259",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b117",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples12-bnode-bad-annotated-syntax-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b118",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples literal- Bad - undefined base direction",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-bad-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b52",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b53",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b260",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b261",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b119",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b120",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples literal- Bad - upper case LTR",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-bad-2.nt",
+          "assertions": [
+            {
+              "@id": "_:b54",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b55",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b262",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b263",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b121",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b122",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples - Bad - literal with missing language tag",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-bad-3.nt",
+          "assertions": [
+            {
+              "@id": "_:b56",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b57",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b264",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b265",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b123",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b124",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples - Bad - literal with bad language tag",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-bad-4.nt",
+          "assertions": [
+            {
+              "@id": "_:b58",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b59",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b266",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b267",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b125",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b126",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-5",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples - Bad - literal with missing language tag and direction",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-langdir-bad-5.nt",
+          "assertions": [
+            {
+              "@id": "_:b60",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-5",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b61",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b268",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-5",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b269",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b127",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-langdir-bad-5",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b128",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples with version announcement with wrong case",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-version-bad-1.nt",
+          "assertions": [
+            {
+              "@id": "_:b62",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b63",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b440",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-1",
+              "result": {
+                "@id": "_:b441",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b438",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-1",
+              "result": {
+                "@id": "_:b439",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples with version announcement with non-string (numeric)",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-version-bad-2.nt",
+          "assertions": [
+            {
+              "@id": "_:b64",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b65",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b444",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-2",
+              "result": {
+                "@id": "_:b445",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b442",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-2",
+              "result": {
+                "@id": "_:b443",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples with version announcement with non-string (IRI)",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-version-bad-3.nt",
+          "assertions": [
+            {
+              "@id": "_:b66",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b67",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b448",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-3",
+              "result": {
+                "@id": "_:b449",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b446",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-3",
+              "result": {
+                "@id": "_:b447",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestNTriplesNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "N-Triples with turtle-style version announcement",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax/ntriples-version-bad-4.nt",
+          "assertions": [
+            {
+              "@id": "_:b68",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b69",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b452",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-4",
+              "result": {
+                "@id": "_:b453",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b450",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-triples/syntax#ntriples-version-bad-4",
+              "result": {
+                "@id": "_:b451",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3498 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://www.w3.org/ns/earl#",
+    "foaf:homepage": {
+      "@type": "@id"
+    },
+    "dc": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "earl": "http://www.w3.org/ns/earl#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "assertedBy": {
+      "@type": "@id"
+    },
+    "assertions": {
+      "@id": "mf:report",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "bibRef": {
+      "@id": "dc:bibliographicCitation"
+    },
+    "created": {
+      "@id": "doap:created",
+      "@type": "xsd:date"
+    },
+    "description": {
+      "@id": "rdfs:comment",
+      "@language": "en"
+    },
+    "developer": {
+      "@id": "doap:developer",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "doapDesc": {
+      "@id": "doap:description",
+      "@language": "en"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@type": "@id",
+      "@container": "@list",
+      "@context": {
+        "assertions": {
+          "@reverse": "earl:test",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    },
+    "generatedBy": {
+      "@type": "@id"
+    },
+    "homepage": {
+      "@id": "doap:homepage",
+      "@type": "@id"
+    },
+    "language": {
+      "@id": "doap:programming-language"
+    },
+    "license": {
+      "@id": "doap:license",
+      "@type": "@id"
+    },
+    "mode": {
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "doap:name"
+    },
+    "outcome": {
+      "@type": "@id"
+    },
+    "release": {
+      "@id": "doap:release",
+      "@type": "@id"
+    },
+    "revision": {
+      "@id": "doap:revision"
+    },
+    "shortdesc": {
+      "@id": "doap:shortdesc",
+      "@language": "en"
+    },
+    "subject": {
+      "@type": "@id"
+    },
+    "test": {
+      "@type": "@id"
+    },
+    "testAction": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "testResult": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "title": {
+      "@id": "mf:name"
+    },
+    "testSubjects": {
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "xsd": {
+      "@id": "http://www.w3.org/2001/XMLSchema#"
+    }
+  },
+  "@id": "",
+  "@type": [
+    "Software",
+    "doap:Project"
+  ],
+  "name": "RDF 1.2",
+  "bibRef": "Unknown reference",
+  "generatedBy": {
+    "@id": "https://rubygems.org/gems/earl-report",
+    "@type": [
+      "Software",
+      "doap:Project"
+    ],
+    "name": "earl-report",
+    "shortdesc": "Earl Report summary generator",
+    "doapDesc": "EarlReport generates HTML+RDFa rollups of multiple EARL reports",
+    "homepage": "https://github.com/gkellogg/earl-report",
+    "language": "Ruby",
+    "license": "http://unlicense.org",
+    "release": {
+      "@id": "https://github.com/gkellogg/earl-report/tree/0.9.1",
+      "@type": "doap:Version",
+      "name": "earl-report-0.9.1",
+      "doap:created": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-04"
+      },
+      "revision": "0.9.1"
+    },
+    "developer": [
+      "https://greggkellogg.net/foaf#me"
+    ]
+  },
+  "assertions": [
+    "attean-rdf12-trig.ttl",
+    "n3-js-trig.ttl",
+    "rdf12conv-trig-earl.ttl"
+  ],
+  "testSubjects": [
+    {
+      "@id": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "Attean",
+      "developer": [
+        {
+          "@id": "http://kasei.us/about/#greg",
+          "@type": "foaf:Person",
+          "foaf:name": "Gregory Todd Williams",
+          "foaf:homepage": "http://kasei.us/"
+        }
+      ],
+      "homepage": "https://github.com/kasei/attean",
+      "language": "Perl",
+      "release": {
+        "@id": "urn:uuid:5D225D29-2B76-5C3C-9707-DC593B162116",
+        "revision": "0.040"
+      }
+    },
+    {
+      "@id": "https://pypi.org/project/rdf12conv/0.3.0/",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "rdf12conv",
+      "developer": [
+        {
+          "@id": "https://github.com/domel#me",
+          "@type": [
+            "Assertor",
+            "foaf:Person"
+          ],
+          "foaf:name": "Dominik Tomaszuk",
+          "foaf:homepage": "https://github.com/domel"
+        }
+      ],
+      "homepage": "https://github.com/domel/rdf12conv",
+      "language": "Python",
+      "release": {
+        "@id": "_:b196",
+        "revision": "unknown"
+      }
+    },
+    {
+      "@id": "https://www.npmjs.com/package/n3/",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "n3",
+      "developer": [
+        {
+          "@id": "https://ruben.verborgh.org/",
+          "@type": [
+            "foaf:Person",
+            "Assertor"
+          ],
+          "foaf:name": "Ruben Verborgh <ruben.verborgh@gmail.com>"
+        }
+      ],
+      "homepage": "https://github.com/rdfjs/N3.js",
+      "doapDesc": "Lightning fast, asynchronous, streaming Turtle / N3 / RDF library.",
+      "language": "JavaScript",
+      "release": {
+        "@id": "_:b125",
+        "revision": "unknown"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#manifest",
+      "@type": [
+        "mf:Manifest",
+        "Report"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RDF 1.2 TriG Evaluation Tests"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "La suite des tests pour évaluation de RDF 1.2 TriG"
+        },
+        {
+          "@language": "es",
+          "@value": "Conjunto de pruebas para evaluar RDF 1.2 TriG"
+        }
+      ],
+      "mf:assumedTestBase": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://w3c.github.io/rdf-tests/"
+      },
+      "dc:licence": {
+        "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+      },
+      "dc:creator": {
+        "@id": "_:b1",
+        "foaf:homepage": "https://w3c.github.io/rdf-star-wg/",
+        "foaf:name": "W3C RDF & SPARQL Working Group"
+      },
+      "entries": [
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - subject reification",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-01.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-01.nq",
+          "assertions": [
+            {
+              "@id": "_:b73",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-01",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b74",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b233",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b234",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b319",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-01",
+              "result": {
+                "@id": "_:b320",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - object reification",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-02.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-02.nq",
+          "assertions": [
+            {
+              "@id": "_:b75",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-02",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b76",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b235",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b236",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b321",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-02",
+              "result": {
+                "@id": "_:b322",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - subject reification with identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-03.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-03.nq",
+          "assertions": [
+            {
+              "@id": "_:b77",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-03",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b78",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b237",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b238",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b323",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-03",
+              "result": {
+                "@id": "_:b324",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - object reification with identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-04.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-04.nq",
+          "assertions": [
+            {
+              "@id": "_:b79",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-04",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b80",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b239",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b240",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b325",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-04",
+              "result": {
+                "@id": "_:b326",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - subject reification with bnode identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-05.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-05.nq",
+          "assertions": [
+            {
+              "@id": "_:b81",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-05",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b82",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b241",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-05",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b242",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b327",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-05",
+              "result": {
+                "@id": "_:b328",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - object reification with bnode identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-06.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-06.nq",
+          "assertions": [
+            {
+              "@id": "_:b83",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-06",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b84",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b243",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-06",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b244",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b329",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-06",
+              "result": {
+                "@id": "_:b330",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-07",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - subject reification with empty identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-07.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-07.nq",
+          "assertions": [
+            {
+              "@id": "_:b85",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-07",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b86",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b245",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-07",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b246",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b331",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-07",
+              "result": {
+                "@id": "_:b332",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-08",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - object reification with empty identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-08.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-rt-08.nq",
+          "assertions": [
+            {
+              "@id": "_:b87",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-08",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b88",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b247",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-08",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b248",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b333",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-rt-08",
+              "result": {
+                "@id": "_:b334",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - blank node label",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-bnode-1.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-bnode-1.nq",
+          "assertions": [
+            {
+              "@id": "_:b89",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b90",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b223",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b224",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b335",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-1",
+              "result": {
+                "@id": "_:b336",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - blank node labels",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-bnode-2.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-bnode-2.nq",
+          "assertions": [
+            {
+              "@id": "_:b91",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b92",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b225",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b226",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b337",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-bnode-2",
+              "result": {
+                "@id": "_:b338",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-01.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-01.nq",
+          "assertions": [
+            {
+              "@id": "_:b93",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-01",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b94",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b197",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b198",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b339",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-01",
+              "result": {
+                "@id": "_:b340",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation example",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-02.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-02.nq",
+          "assertions": [
+            {
+              "@id": "_:b95",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-02",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b96",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b199",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b200",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b341",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-02",
+              "result": {
+                "@id": "_:b342",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation - predicate and object lists",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-03.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-03.nq",
+          "assertions": [
+            {
+              "@id": "_:b97",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-03",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b98",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b201",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b202",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b343",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-03",
+              "result": {
+                "@id": "_:b344",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation - nested",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-04.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-04.nq",
+          "assertions": [
+            {
+              "@id": "_:b99",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-04",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b100",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b203",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-04",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b204",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b345",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-04",
+              "result": {
+                "@id": "_:b346",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation object list",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-05.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-05.nq",
+          "assertions": [
+            {
+              "@id": "_:b101",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-05",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b102",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b205",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-05",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b206",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b347",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-05",
+              "result": {
+                "@id": "_:b348",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation with identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-06.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-06.nq",
+          "assertions": [
+            {
+              "@id": "_:b103",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-06",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b104",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b207",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-06",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b208",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b349",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-06",
+              "result": {
+                "@id": "_:b350",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-07",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Different annotations have different default identifiers",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-07.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-07.nq",
+          "assertions": [
+            {
+              "@id": "_:b105",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-07",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b106",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b209",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-07",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b210",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b351",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-07",
+              "result": {
+                "@id": "_:b352",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-08",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with explicit identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-08.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-08.nq",
+          "assertions": [
+            {
+              "@id": "_:b107",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-08",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b108",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b211",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-08",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b212",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b353",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-08",
+              "result": {
+                "@id": "_:b354",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-09",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with multiple reifiers",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-09.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-09.nq",
+          "assertions": [
+            {
+              "@id": "_:b109",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-09",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b110",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b213",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-09",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b214",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b355",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-09",
+              "result": {
+                "@id": "_:b356",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-10",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with multiple annotation blocks",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-10.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-10.nq",
+          "assertions": [
+            {
+              "@id": "_:b111",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-10",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b112",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b215",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-10",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b216",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b357",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-10",
+              "result": {
+                "@id": "_:b358",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-11",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with annotation block followed by reifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-11.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-11.nq",
+          "assertions": [
+            {
+              "@id": "_:b113",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-11",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b114",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b217",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-11",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b218",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b359",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-11",
+              "result": {
+                "@id": "_:b360",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-12",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with alternating reifiers and annotation blocks",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-12.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-12.nq",
+          "assertions": [
+            {
+              "@id": "_:b115",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-12",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b116",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b219",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-12",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b220",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b361",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-12",
+              "result": {
+                "@id": "_:b362",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-13",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form with IRI reifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-13.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-annotation-13.nq",
+          "assertions": [
+            {
+              "@id": "_:b117",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-13",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b118",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b221",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-13",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b222",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b363",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-annotation-13",
+              "result": {
+                "@id": "_:b364",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation with reified triples",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-01.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-01.nq",
+          "assertions": [
+            {
+              "@id": "_:b119",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-01",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b120",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b227",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-01",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b228",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b365",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-01",
+              "result": {
+                "@id": "_:b366",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation on triple with reified triple subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-02.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-02.nq",
+          "assertions": [
+            {
+              "@id": "_:b121",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-02",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b122",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b229",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-02",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b230",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b367",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-02",
+              "result": {
+                "@id": "_:b368",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation on triple with reified triple object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-03.trig",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval/trig12-eval-reified-triples-annotation-03.nq",
+          "assertions": [
+            {
+              "@id": "_:b123",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-03",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b124",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b231",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-03",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b232",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b369",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/eval#trig12-reified-triples-annotation-03",
+              "result": {
+                "@id": "_:b370",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#manifest",
+      "@type": [
+        "mf:Manifest",
+        "Report"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RDF 1.2 TriG Syntax Tests"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "La suite des tests pour la syntaxe de RDF 1.2 TriG"
+        },
+        {
+          "@language": "es",
+          "@value": "Conjunto de pruebas para la sintaxis de RDF 1.2 TriG"
+        }
+      ],
+      "mf:assumedTestBase": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://w3c.github.io/rdf-tests/"
+      },
+      "dc:licence": {
+        "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+      },
+      "dc:creator": {
+        "@id": "_:b2",
+        "foaf:homepage": "https://w3c.github.io/rdf-star-wg/",
+        "foaf:name": "W3C RDF & SPARQL Working Group"
+      },
+      "entries": [
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - subject reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-basic-01.trig",
+          "assertions": [
+            {
+              "@id": "_:b3",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b4",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b249",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b250",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b126",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b127",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - object reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-basic-02.trig",
+          "assertions": [
+            {
+              "@id": "_:b5",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b6",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b251",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b252",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b128",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b129",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - triple term object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-basic-03.trig",
+          "assertions": [
+            {
+              "@id": "_:b7",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b8",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b253",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b254",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b130",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b131",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - reified triple outside triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-basic-04.trig",
+          "assertions": [
+            {
+              "@id": "_:b9",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b10",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b255",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b256",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b132",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b133",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - reified triple inside blankNodePropertyList",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-inside-01.trig",
+          "assertions": [
+            {
+              "@id": "_:b11",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b12",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b307",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b308",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b134",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b135",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - reified triple inside collection",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-inside-02.trig",
+          "assertions": [
+            {
+              "@id": "_:b13",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b14",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b309",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b310",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b136",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b137",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - reified triple with IRI identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-inside-03.trig",
+          "assertions": [
+            {
+              "@id": "_:b15",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b16",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b311",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b312",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b138",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b139",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - reified triple with blank node identifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-inside-04.trig",
+          "assertions": [
+            {
+              "@id": "_:b17",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b18",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b313",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b314",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b140",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-inside-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b141",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - nested quoted triple, subject position",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-nested-01.trig",
+          "assertions": [
+            {
+              "@id": "_:b19",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b20",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b315",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b316",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b142",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b143",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - nested quoted triple, object position",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-nested-02.trig",
+          "assertions": [
+            {
+              "@id": "_:b21",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b22",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b317",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b318",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b144",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-nested-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b145",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - compound forms",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-compound.trig",
+          "assertions": [
+            {
+              "@id": "_:b23",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b24",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b305",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b306",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b146",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-compound-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b147",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - blank node subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bnode-01.trig",
+          "assertions": [
+            {
+              "@id": "_:b25",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b26",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b299",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b300",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b148",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b149",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - blank node object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bnode-02.trig",
+          "assertions": [
+            {
+              "@id": "_:b27",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b28",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b301",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b302",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b150",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b151",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - blank node",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bnode-03.trig",
+          "assertions": [
+            {
+              "@id": "_:b29",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b30",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b303",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b304",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b152",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bnode-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b153",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - reified triple as predicate",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-01.trig",
+          "assertions": [
+            {
+              "@id": "_:b31",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b32",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b273",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b274",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b154",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b155",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - literal in subject position of reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-02.trig",
+          "assertions": [
+            {
+              "@id": "_:b33",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b34",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b275",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b276",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b156",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b157",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - blank node  as predicate in reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-03.trig",
+          "assertions": [
+            {
+              "@id": "_:b35",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b36",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b277",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b278",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b158",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b159",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - incomplete reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-04.trig",
+          "assertions": [
+            {
+              "@id": "_:b37",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b38",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b279",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b280",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b160",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b161",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - over-long reified triple",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-05.trig",
+          "assertions": [
+            {
+              "@id": "_:b39",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b40",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b281",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b282",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b162",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-5",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b163",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - reified with list object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-06.trig",
+          "assertions": [
+            {
+              "@id": "_:b41",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b42",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b283",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b284",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b164",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-6",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b165",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - compound blank node expression",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-07.trig",
+          "assertions": [
+            {
+              "@id": "_:b43",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b44",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b285",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b286",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b166",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-7",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b167",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation form",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-1.trig",
+          "assertions": [
+            {
+              "@id": "_:b45",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b46",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b257",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b258",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b168",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b169",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation example",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-2.trig",
+          "assertions": [
+            {
+              "@id": "_:b47",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b48",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b259",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b260",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b170",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b171",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation predicateObjecetList",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-3.trig",
+          "assertions": [
+            {
+              "@id": "_:b49",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b50",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b261",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b262",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b172",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-3",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b173",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Annotation followed by predicate/object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-4.trig",
+          "assertions": [
+            {
+              "@id": "_:b51",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b52",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b263",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b264",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b174",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-4",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b175",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Reifier without annotation block",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-5.trig",
+          "assertions": [
+            {
+              "@id": "_:b53",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b54",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b265",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b266",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b176",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-5",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b177",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Empty reifier without annotation block",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-6.trig",
+          "assertions": [
+            {
+              "@id": "_:b55",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b56",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b267",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b268",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b178",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-6",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b179",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Reifier with annotation block",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-7.trig",
+          "assertions": [
+            {
+              "@id": "_:b57",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b58",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b269",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b270",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b180",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-7",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b181",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Empty reifier with annotation block",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-annotation-8.trig",
+          "assertions": [
+            {
+              "@id": "_:b59",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b60",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b271",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b272",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b182",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-ann-8",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b183",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - empty annotation",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-ann-1.trig",
+          "assertions": [
+            {
+              "@id": "_:b61",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b62",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b287",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b288",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b184",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b185",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - bad - triple as annotation",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-syntax-bad-ann-2.trig",
+          "assertions": [
+            {
+              "@id": "_:b63",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b64",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b289",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b290",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b186",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-bad-ann-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b187",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "base direction ltr",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-1.trig",
+          "assertions": [
+            {
+              "@id": "_:b65",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b66",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b291",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b292",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b188",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b189",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigPositiveSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "base direction ltr",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-2.trig",
+          "assertions": [
+            {
+              "@id": "_:b67",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b68",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b293",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b294",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b190",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b191",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "undefined base direction",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-bad-1.trig",
+          "assertions": [
+            {
+              "@id": "_:b69",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b70",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b295",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b296",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b192",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-1",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b193",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "upper case LTR",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-bad-2.trig",
+          "assertions": [
+            {
+              "@id": "_:b71",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2",
+              "assertedBy": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040#Test-Attean-SPARQLSuite",
+              "result": {
+                "@id": "_:b72",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b297",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2",
+              "assertedBy": "https://github.com/domel#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b298",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            },
+            {
+              "@id": "_:b194",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-2",
+              "assertedBy": "https://ruben.verborgh.org/",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b195",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-3",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Bad - literal with missing language tag",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-bad-3.trig",
+          "assertions": [
+            {
+              "@id": "_:b371",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-3",
+              "result": {
+                "@id": "_:b372",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b375",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-3",
+              "result": {
+                "@id": "_:b376",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b373",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-3",
+              "result": {
+                "@id": "_:b374",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-4",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Bad - literal with bad language tag",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-bad-4.trig",
+          "assertions": [
+            {
+              "@id": "_:b377",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-4",
+              "result": {
+                "@id": "_:b378",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b381",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-4",
+              "result": {
+                "@id": "_:b382",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b379",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-4",
+              "result": {
+                "@id": "_:b380",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-5",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestTrigNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "TriG 1.2 - Bad - literal with missing language tag and direction",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax/trig12-base-bad-5.trig",
+          "assertions": [
+            {
+              "@id": "_:b383",
+              "@type": "Assertion",
+              "subject": "http://purl.org/NET/cpan-uri/dist/Attean/v_0-040",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-5",
+              "result": {
+                "@id": "_:b384",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b387",
+              "@type": "Assertion",
+              "subject": "https://pypi.org/project/rdf12conv/0.3.0/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-5",
+              "result": {
+                "@id": "_:b388",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            },
+            {
+              "@id": "_:b385",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/n3/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-trig/syntax#trig12-base-bad-5",
+              "result": {
+                "@id": "_:b386",
+                "@type": "TestResult",
+                "outcome": "earl:untested"
+              },
+              "assertedBy": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

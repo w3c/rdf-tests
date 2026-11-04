@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
+    <link href='earl.jsonld' rel='alternate' />
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' />
+    <link href='attean-rdf12-nquads.ttl' rel='related' />
+    <link href='n3-js-nquads.ttl' rel='related' />
+    <link href='rdf12conv-n-quads-earl.ttl' rel='related' />
+    <title>
+      RDF 1.2 Conformance
+    </title>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        span[property='dc:description rdfs:comment'] { display: none; }
+        td.PASS { color: green; }
+        td.FAIL { color: red; }
+        table.report {
+          border-width: 1px;
+          border-spacing: 2px;
+          border-style: outset;
+          border-color: gray;
+          border-collapse: separate;
+          background-color: white;
+        }
+        table.report th {
+          border-width: 1px;
+          padding: 1px;
+          border-style: inset;
+          border-color: gray;
+          background-color: white;
+          -moz-border-radius: ;
+        }
+        table.report td {
+          border-width: 1px;
+          padding: 1px;
+          border-style: inset;
+          border-color: gray;
+          background-color: white;
+          -moz-border-radius: ;
+        }
+        tr.summary {font-weight: bold;}
+        td.passed-all {color: green;}
+        td.passed-most {color: darkorange;}
+        td.passed-some {color: red;}
+        em.rfc2119 {
+          text-transform: lowercase;
+          font-variant:   small-caps;
+          font-style:     normal;
+          color:          #900;
+        }
+        a.testlink {
+          color: inherit;
+          text-decoration: none;
+        }
+        a.testlink:hover {
+          text-decoration: underline;
+        }
+        pre > code {
+          color: #C83500;
+        }
+        .non-normative, .non-normative a:visited, .non-normative a:link {
+          color: gray;
+        }
+        #test-manifests .report td:last-child::before {
+          position: absolute;
+          left: 1em;
+          content: "X";
+          color: red;
+          font-weight: bold;
+        }
+        #test-manifests .report tr.summary td:last-child::before,
+        #test-manifests .report .PASS ~ td.PASS:last-child::before,
+        #test-manifests .report .PASS ~ .PASS ~ td:last-child::before {
+          display: none;
+        }
+      /*]]>*/
+    </style>
+  </head>
+  <body prefix='bibo: http://purl.org/ontology/bibo/ earl: http://www.w3.org/ns/earl# doap: http://usefulinc.com/ns/doap# mf: http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#' vocab='http://www.w3.org/ns/earl#'>
+    <div class='head' role='contentinfo'>
+      <p>
+        <a href='http://www.w3.org/'>
+          <img alt='W3C' height='48' src='https://www.w3.org/Icons/w3c_home' width='72' />
+        </a>
+      </p>
+      <h1 class='title p-name' id='title' property='dc:title'>
+        RDF 1.2 Conformance
+      </h1>
+      <h2 class='subtitle'>
+        EARL results from the RDF 1.2 Test Suites
+      </h2>
+      <h2 id='w3c-document-28-october-2015'>
+        <time class='dt-published' datetime='2026-11-04' property='dc:issued'>
+          04 November 2026
+        </time>
+      </h2>
+      <dl>
+        <dt>Editor:</dt>
+        <dd inlist='true' property='bibo:editor'><span typeof='foaf:Person'><meta content='Ruben Taelman' property='foaf:name' /><a href='https://www.rubensworks.net/' property='foaf:homepage'>Ruben Taelman</a></span></dd>
+      </dl>
+      <p>
+        This document is also available in these non-normative formats:
+        <a href='earl.jsonld' re='alternate'>RDF 1.2</a>
+        .
+      </p>
+      <p class='copyright'>
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#Copyright'>
+          Copyright
+        </a>
+        © 2010-2019
+        <a href='http://www.w3.org/'>
+          <sup>®</sup>
+        </a>
+        (<a href='http://www.csail.mit.edu/'><abbr title='Massachusetts Institute of Technology'>MIT</abbr></a>, <a href='http://www.ercim.eu/'><abbr title='European Research Consortium for Informatics and Mathematics'>ERCIM</abbr></a>, <a href='http://www.keio.ac.jp/'>Keio</a>, <a href='http://ev.buaa.edu.cn/'>Beihang</a>).
+        <abbr title='World Wide Web Consortium'>W3C</abbr>
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer'>liability</a>
+        ,
+        <a href='http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks'>trademark</a>
+        and
+        <a href='http://www.w3.org/Consortium/Legal/copyright-documents' rel='license'>document use</a>
+        rules apply.
+      </p>
+      <hr />
+    </div>
+    <section id='abstract'>
+      <h2>Abstract</h2>
+      <p>
+        This document report test subject conformance for and related specifications for
+        <span property='doap:name'>RDF 1.2 Specifications Test Suites</span>
+        according to the requirements of the Evaluation and Report Language (EARL) 1.0 Schema
+        [<a href='https://www.w3.org/TR/EARL10-Schema/'>EARL10-SCHEMA</a>].
+      </p>
+      <p>
+        This report is also available in alternate formats:
+        <a href='earl.jsonld'>
+          JSON-LD
+        </a>
+      </p>
+    </section>
+    <section id='sodt'>
+      <h2 id='h-sotd' resource='#h-sotd'>
+        <span property='xhv:role' resource='xhv:heading'>
+          Status of This Document
+        </span>
+      </h2>
+      <p>
+        This document is merely a
+        <abbr title='World Wide Web Consortium'>W3C</abbr>-internal  document.
+        It has no official standing of any kind and does not represent consensus of the
+        <abbr title='World Wide Web Consortium'>W3C</abbr>
+        Membership.
+      </p>
+      <p>
+        This report describes the state of implementation conformance at the time of publication.
+      </p>
+    </section>
+    <section id='toc'>
+      <h2 class='introductory' id='h-toc' resource='#h-toc'>
+        <span property='xhv:role' resource='xhv:heading'>
+          Table of Contents
+        </span>
+      </h2>
+      <ul class='toc' id='respecContents' role='directory'>
+        <li class='tocline'>
+          <a class='tocxref' href='#introduction'>
+            <span class='secno'>1.</span>
+            Introduction
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#instructions-for-submitting-implementation-reports'>
+            <span class='secno'>2.</span>
+            Instructions for submitting implementation reports
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#test-manifests'>
+            <span class='secno'>3.</span>
+            Test Manifests
+          </a>
+          <ul class='toc'>
+            <li class='tocline'>
+              <span class='secno'>3.1</span>
+              <a class='tocxref' href='#RDF-1.2-N-Quads-Canonicalization-Test-Suite'>
+                RDF 1.2 N-Quads Canonicalization Test Suite
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>3.2</span>
+              <a class='tocxref' href='#RDF-1.2-N-Quads-Syntax-Tests'>
+                RDF 1.2 N-Quads Syntax Tests
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#test-subjects'>
+            <span class='secno'>A.</span>
+            Test Subjects
+          </a>
+          <ul class='toc'>
+            <li class='tocline'>
+              <span class='secno'>A.1</span>
+              <a class='tocxref' href='#subj_Attean_Perl'>
+                Attean
+                (Perl)
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>A.2</span>
+              <a class='tocxref' href='#subj_rdf12conv_Python'>
+                rdf12conv
+                (Python)
+              </a>
+            </li>
+            <li class='tocline'>
+              <span class='secno'>A.3</span>
+              <a class='tocxref' href='#subj_n3_JavaScript'>
+                n3
+                (JavaScript)
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#individual-test-results'>
+            <span class='secno'>B.</span>
+            Individual Test Results
+          </a>
+        </li>
+        <li class='tocline'>
+          <a class='tocxref' href='#report-generation-software'>
+            <span class='secno'>C.</span>
+            Report Generation Software
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id='introduction'>
+      <h2 id="introduction">Introduction</h2>
+      <p>This implementation report covers the implementations of the RDF 1.2
+        specifications which have submitted test results. It is intended to be
+        maintained by the <a href="https://www.w3.org/community/rdf-tests/">RDF Tests Community Group</a>,
+        or a RDF &amp; SPARQL Working Group if one is active.
+        The implementation report serves two purposes:</p>
+      <ol>
+        <li>
+          <p>To demonstrate that there are multiple, independent implementations of
+            the specifications. This is a prerequisite for progression of any
+            standard to Recommendation.</p>
+        </li>
+        <li>
+          <p>To catalog the known, conforming implementations and which features
+            each supports.</p>
+        </li>
+      </ol>
+      <p>There may be other RDF 1.2 implementations which are not listed in this
+        report, either due to not submitting tests or by not being intended as
+        direct implementations of the specification, but instead layering on
+        top of such libraries.</p>
+    </section>
+    <section id='instructions-for-submitting-implementation-reports'>
+      <h2 id="instructions-for-submitting-implementation-reports">Instructions for submitting implementation reports</h2>
+      <p>Reports should be submitted in Turtle format to
+        <a href="mailto:public-rdf-star-wg@w3.org">Public RDF &amp; SPARQL WG</a> or via a Pull
+        Request to the <a href="https://github.com/w3c/rdf-tests/pulls">w3c/rdf-tests</a>.</p>
+      <p>Tests should be run using the test manifests defined in the
+        <a href="#test-manifests">Test Manifests</a> Section.</p>
+      <p>The assumed base URI for the tests is <code>&lt;http://example/base/&gt;</code> if needed.</p>
+      <p>Include an <code>earl:Assertion</code> for each test, referencing the test
+        resource from the associated manifest and the test subject being
+        reported upon. See the example below:</p>
+      <pre><code>  [ a earl:Assertion;
+    earl:assertedBy &lt;--your-developer-identifier--&gt;;
+    earl:subject &lt;--your-software-identifier--&gt;;
+    earl:test &lt;--uri-of-test-from-manifest&gt;;
+    earl:result [
+      a earl:TestResult;
+      earl:outcome earl:passed;
+      dc:date "2016-12-26T10:18:04-08:00"^^xsd:dateTime];
+    earl:mode earl:automatic ] .
+</code></pre>
+      <p>The Test Subject should be defined as a <code>doap:Project</code>, including the name,
+        homepage and developer(s) of the software (see <a href="https://github.com/edumbill/doap/wiki">DOAP</a>). Optionally, including the
+        project description and programming language. An example test subject description is the following:</p>
+      <pre><code>  &lt;&gt; foaf:primaryTopic &lt;--your-software-identifier--&gt; ;
+    dc:issued "2016-12-26T10:18:04-08:00"^^xsd:dateTime ;
+    foaf:maker &lt;--your-developer-identifier--&gt; .
+
+  &lt;--your-software-identifier--&gt; a doap:Project, earl:TestSubject, earl:Software ;
+    doap:name          "My Cool Turtle Parser" ;
+    doap:release [
+      doap:name     "--short name wih version number--";
+      doap:revision "--Software version number--" ;
+      doap:created  "2020-02-19"^^xsd:date;
+    ] ;
+    doap:developer     &lt;--your-developer-identifier--&gt; ;
+    doap:homepage      &lt;--your-software-homepace--&gt; ;
+    doap:description   "--your-project-description--"@en ;
+    doap:programming-language "--your-implementation-language--" .
+</code></pre>
+      <p>The software developer, either an organization or one or more individuals SHOULD be
+        referenced from <code>doap:developer</code> using <a href="http://xmlns.com/foaf/spec">FOAF</a>. For example:</p>
+      <pre><code>  &lt;--your-developer-identifier--&gt; a foaf:Person, earl:Assertor;
+    foaf:name "--My Name--";
+    foaf:homepage &lt;--my homepage--&gt; .
+</code></pre>
+    </section>
+    <section id='test-manifests'>
+      <h2>
+        <span class='secno'>3.</span>
+        Test Manifests
+      </h2>
+      <section id='RDF-1.2-N-Quads-Canonicalization-Test-Suite'>
+        <h2>
+          <span class='secno'>3.1</span>
+          <span>RDF 1.2 N-Quads Canonicalization Test Suite</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#comment_following_triple'>Test comment_following_triple: C14N comment_following_triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-01'>Test extra_whitespace-01: C14N extra_whitespace-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-02'>Test extra_whitespace-02: C14N extra_whitespace-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-03'>Test extra_whitespace-03: C14N extra_whitespace-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#extra_whitespace-04'>Test extra_whitespace-04: C14N extra_whitespace-04</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#langtagged_string'>Test langtagged_string: C14N langtagged_string</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#dirlangtagged_string'>Test dirlangtagged_string: C14N literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_all_controls'>Test literal_all_controls: C14N literal_all_controls</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_all_punctuation'>Test literal_all_punctuation: C14N literal_all_punctuation</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_ascii_boundaries'>Test literal_ascii_boundaries: C14N literal_ascii_boundaries</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_2_dquotes'>Test literal_with_2_dquotes: C14N literal_with_2_dquotes</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_2_squotes'>Test literal_with_2_squotes: C14N literal_with_2_squotes</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_BACKSPACE'>Test literal_with_BACKSPACE: C14N literal_with_BACKSPACE</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_CARRIAGE_RETURN'>Test literal_with_CARRIAGE_RETURN: C14N literal_with_CARRIAGE_RETURN</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_CHARACTER_TABULATION'>Test literal_with_CHARACTER_TABULATION: C14N literal_with_CHARACTER_TABULATION</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_dquote'>Test literal_with_dquote: C14N literal_with_dquote</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_FORM_FEED'>Test literal_with_FORM_FEED: C14N literal_with_FORM_FEED</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_LINE_FEED'>Test literal_with_LINE_FEED: C14N literal_with_LINE_FEED</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_numeric_escape4'>Test literal_with_numeric_escape4: C14N literal_with_numeric_escape4</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_numeric_escape8'>Test literal_with_numeric_escape8: C14N literal_with_numeric_escape8</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_REVERSE_SOLIDUS'>Test literal_with_REVERSE_SOLIDUS: C14N literal_with_REVERSE_SOLIDUS</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_REVERSE_SOLIDUS2'>Test literal_with_REVERSE_SOLIDUS2: C14N literal_with_REVERSE_SOLIDUS2</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_squote'>Test literal_with_squote: C14N literal_with_squote</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_string_dt'>Test literal_with_string_dt: C14N literal_with_string_dt</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_extra_whitespace'>Test literal_with_extra_whitespace: C14N literal_with_extra_whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_with_UTF8_boundaries'>Test literal_with_UTF8_boundaries: C14N literal_with_UTF8_boundaries</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#minimal_whitespace-01'>Test minimal_whitespace-01: C14N minimal_whitespace-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#minimal_whitespace-02'>Test minimal_whitespace-02: C14N minimal_whitespace-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-01'>Test triple-term-01: C14N triple-term-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-02'>Test triple-term-02: C14N triple-term-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-03'>Test triple-term-03: C14N triple-term-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#triple-term-04'>Test triple-term-04: C14N triple-term-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-01'>Test nq-syntax-uri-01: C14N nq-syntax-uri-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-02'>Test nq-syntax-uri-02: C14N nq-syntax-uri-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-03'>Test nq-syntax-uri-03: C14N nq-syntax-uri-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-uri-04'>Test nq-syntax-uri-04: C14N nq-syntax-uri-04</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-01'>Test nq-syntax-str-esc-01: C14N nq-syntax-str-esc-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-02'>Test nq-syntax-str-esc-02: C14N nq-syntax-str-esc-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#nq-syntax-str-esc-03'>Test nq-syntax-str-esc-03: C14N nq-syntax-str-esc-03</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_needing_uchar_escaping-01'>Test literal_needing_uchar_escaping-01: C14N literal_needing_uchar_escaping-01</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/c14n#literal_needing_uchar_escaping-02'>Test literal_needing_uchar_escaping-02: C14N literal_needing_uchar_escaping-02</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 41 Tests
+            </td>
+            <td class='passed-all'>
+              100.0%
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id='RDF-1.2-N-Quads-Syntax-Tests'>
+        <h2>
+          <span class='secno'>3.2</span>
+          <span>RDF 1.2 N-Quads Syntax Tests</span>
+        </h2>
+        <table class='report'>
+          <tr>
+            <th>
+              Test
+            </th>
+            <th>
+              <a href='#subj_Attean_Perl'>
+                Attean
+                <br />
+                (Perl)
+              </a>
+            </th>
+            <th>
+              <a href='#subj_rdf12conv_Python'>
+                rdf12conv
+                <br />
+                (Python)
+              </a>
+            </th>
+            <th>
+              <a href='#subj_n3_JavaScript'>
+                n3
+                <br />
+                (JavaScript)
+              </a>
+            </th>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-01'>Test nquads12-01: N-Quads-12 - object triple term</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-02'>Test nquads12-02: N-Quads-12 - object triple term, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-03'>Test nquads12-03: N-Quads-12 - Nested, no whitespace</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bnode-1'>Test nquads12-bnode-1: N-Quads-12 - Blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-nested-1'>Test nquads12-nested-1: N-Quads-12 - Nested object term</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-1'>Test nquads-langdir-1: N-Quads literal with base direction ltr</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-2'>Test nquads-langdir-2: N-Quads literal with base direction rtl</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-01'>Test nquads12-bad-01: N-Quads-12 - Bad - reified triple as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-02'>Test nquads12-bad-02: N-Quads-12 - Bad - reified triple, literal subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-03'>Test nquads12-bad-03: N-Quads-12 - Bad - reified triple, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-04'>Test nquads12-bad-04: N-Quads-12 - Bad - reified triple, blank node predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-05'>Test nquads12-bad-05: N-Quads-12 - Bad - triple term as predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-06'>Test nquads12-bad-06: N-Quads-12 - Bad - triple term, literal subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-07'>Test nquads12-bad-07: N-Quads-12 - Bad - triple term, literal predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-08'>Test nquads12-bad-08: N-Quads-12 - Bad - triple term, blank node predicate</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-09'>Test nquads12-bad-09: N-Quads-12 - Bad - reified triple object</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-10'>Test nquads12-bad-10: N-Quads-12 - Bad - triple term as subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-1'>Test nquads12-bad-reified-1: N-Quads-12 - Bad - subject reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-2'>Test nquads12-bad-reified-2: N-Quads-12 - Bad - object reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-3'>Test nquads12-bad-reified-3: N-Quads-12 - Bad - subject and object reified triples</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-reified-4'>Test nquads12-bad-reified-4: N-Quads-12 - Bad - predicate reified triple</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bad-iri-1'>Test nquads12-bad-iri-1: N-Quads - Bad - invalid IRI</a>
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bnode-bad-annotated-syntax-1'>Test nquads12-bnode-bad-annotated-syntax-1: N-Quads-12 - Bad - annotated triple, blank node subject</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-bnode-bad-annotated-syntax-2'>Test nquads12-bnode-bad-annotated-syntax-2: N-Quads-12 - Bad - annotated triple, blank node object</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-nested-bad-annotated-syntax-1'>Test nquads12-nested-bad-annotated-syntax-1: N-Quads-12 - Bad - annotated triple, nested subject term</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads12-nested-bad-annotated-syntax-2'>Test nquads12-nested-bad-annotated-syntax-2: N-Quads-12 - Bad - annotated triple, nested object term</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-1'>Test nquads-langdir-bad-1: N-Quads literal- Bad - undefined base direction</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-2'>Test nquads-langdir-bad-2: N-Quads literal- Bad - upper case LTR</a>
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+            <td class='PASS'>
+              PASS
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-3'>Test nquads-langdir-bad-3: N-Quads - Bad - literal with missing language tag</a>
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-4'>Test nquads-langdir-bad-4: N-Quads - Bad - literal with bad language tag</a>
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+          </tr>
+          <tr class='normative'>
+            <td>
+              <a href='https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-n-quads/syntax#nquads-langdir-bad-5'>Test nquads-langdir-bad-5: N-Quads - Bad - literal with missing language tag and direction</a>
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+            <td class='UNTESTED'>
+              UNTESTED
+            </td>
+          </tr>
+          <tr class='summary'>
+            <td>
+              Percentage passed out of 31 Tests
+            </td>
+            <td class='passed-some'>
+              87.1%
+            </td>
+            <td class='passed-some'>
+              87.1%
+            </td>
+            <td class='passed-some'>
+              87.1%
+            </td>
+          </tr>
+        </table>
+      </section>
+    </section>
+    <section class='appendix' id='test-subjects'>
+      <h2>
+        <span class='secno'>A.</span>
+        Test Subjects
+      </h2>
+      <p>
+        This report was tested using the following test subjects:
+      </p>
+      <dl>
+        <dt id='subj_Attean_Perl'>
+          <span class='secno'>A.1</span>
+          <a href='http://purl.org/NET/cpan-uri/dist/Attean/v_0-040'>
+            <span about='http://purl.org/NET/cpan-uri/dist/Attean/v_0-040' property='doap:name'>Attean</span>
+          </a>
+        </dt>
+        <dd>
+          <dl>
+            <dt>Release</dt>
+            <dd property='doap:release'><span property='doap:revision'>0.040</span></dd>
+            <dt>Programming Language</dt>
+            <dd property='doap:programming-language'>Perl</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='https://github.com/kasei/attean' property='doap:homepage'>
+                https://github.com/kasei/attean
+              </a>
+            </dd>
+            <dt>Developer</dt>
+            <dd rel='doap:developer'>
+              <div>
+                <a href='http://kasei.us/about/#greg'>
+                  <span property='foaf:name'>Gregory Todd Williams</span>
+                </a>
+                <a href='http://kasei.us/' property='foaf:homepage'>
+                  http://kasei.us/
+                </a>
+              </div>
+            </dd>
+            <dt>
+              Test Suite Compliance
+            </dt>
+            <dd>
+              <table class='report'>
+                <tbody>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Syntax Tests
+                    </td>
+                    <td class='passed-most'>
+                      27/31 (87.1%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='subj_rdf12conv_Python'>
+          <span class='secno'>A.2</span>
+          <a href='https://pypi.org/project/rdf12conv/0.3.0/'>
+            <span about='https://pypi.org/project/rdf12conv/0.3.0/' property='doap:name'>rdf12conv</span>
+          </a>
+        </dt>
+        <dd>
+          <dl>
+            <dt>Release</dt>
+            <dd property='doap:release'><span property='doap:revision'>unknown</span></dd>
+            <dt>Programming Language</dt>
+            <dd property='doap:programming-language'>Python</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='https://github.com/domel/rdf12conv' property='doap:homepage'>
+                https://github.com/domel/rdf12conv
+              </a>
+            </dd>
+            <dt>Developer</dt>
+            <dd rel='doap:developer'>
+              <div>
+                <a href='https://github.com/domel#me'>
+                  <span property='foaf:name'>Dominik Tomaszuk</span>
+                </a>
+                <a href='https://github.com/domel' property='foaf:homepage'>
+                  https://github.com/domel
+                </a>
+              </div>
+            </dd>
+            <dt>
+              Test Suite Compliance
+            </dt>
+            <dd>
+              <table class='report'>
+                <tbody>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Canonicalization Test Suite
+                    </td>
+                    <td class='passed-all'>
+                      41/41 (100.0%)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Syntax Tests
+                    </td>
+                    <td class='passed-most'>
+                      27/31 (87.1%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+          </dl>
+        </dd>
+        <dt id='subj_n3_JavaScript'>
+          <span class='secno'>A.3</span>
+          <a href='https://www.npmjs.com/package/n3/'>
+            <span about='https://www.npmjs.com/package/n3/' property='doap:name'>n3</span>
+          </a>
+        </dt>
+        <dd>
+          <dl>
+            <dt>Description</dt>
+            <dd lang='en' property='doap:description'>Lightning fast, asynchronous, streaming Turtle / N3 / RDF library.</dd>
+            <dt>Release</dt>
+            <dd property='doap:release'><span property='doap:revision'>unknown</span></dd>
+            <dt>Programming Language</dt>
+            <dd property='doap:programming-language'>JavaScript</dd>
+            <dt>Home Page</dt>
+            <dd>
+              <a href='https://github.com/rdfjs/N3.js' property='doap:homepage'>
+                https://github.com/rdfjs/N3.js
+              </a>
+            </dd>
+            <dt>Developer</dt>
+            <dd rel='doap:developer'>
+              <div>
+                <a href='https://ruben.verborgh.org/'>
+                  <span property='foaf:name'>Ruben Verborgh &amp;lt;ruben.verborgh@gmail.com&amp;gt;</span>
+                </a>
+              </div>
+            </dd>
+            <dt>
+              Test Suite Compliance
+            </dt>
+            <dd>
+              <table class='report'>
+                <tbody>
+                  <tr>
+                    <td>
+                      RDF 1.2 N-Quads Syntax Tests
+                    </td>
+                    <td class='passed-most'>
+                      27/31 (87.1%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </section>
+    <section class='appendix' id='individual-test-results' rel='xhv:related earl:assertions'>
+      <h2>
+        <span class='secno'>B.</span>
+        Individual Test Results
+      </h2>
+      <p>
+        Individual test results used to construct this report are available here:
+      </p>
+      <ul>
+        <li>
+          <a class='source' href='attean-rdf12-nquads.ttl'>attean-rdf12-nquads.ttl</a>
+        </li>
+        <li>
+          <a class='source' href='n3-js-nquads.ttl'>n3-js-nquads.ttl</a>
+        </li>
+        <li>
+          <a class='source' href='rdf12conv-n-quads-earl.ttl'>rdf12conv-n-quads-earl.ttl</a>
+        </li>
+      </ul>
+    </section>
+    <section class='appendix' id='report-generation-software' property='earl:generatedBy' resource='https://rubygems.org/gems/earl-report' typeof='Software doap:Project'>
+      <h2>
+        <span class='secno'>C.</span>
+        Report Generation Software
+      </h2>
+      <p>
+        This report generated by
+        <span property='doap:name'><a href='https://rubygems.org/gems/earl-report'>earl-report</a></span>
+        <meta content='Earl Report summary generator' property='doap:shortdesc' />
+        <meta content='EarlReport generates HTML+RDFa rollups of multiple EARL reports' property='doap:description' />
+        version
+        <span property='doap:release' resource='https://github.com/gkellogg/earl-report/tree/0.9.1' typeof='doap:Version'>
+          <span property='doap:revision'>0.9.1</span>
+          <meta content='earl-report-0.9.1' property='doap:name' />
+          <meta content='' datatype='xsd:date' property='doap:created' />
+        </span>
+        is a
+        <span property='doap:programming-language'>Ruby</span>
+        application freely available under the generous terms of the
+        <a href='http://unlicense.org' property='doap:license'>Unlicense</a>.
+        More information is available at
+        <a href='https://github.com/gkellogg/earl-report' property='doap:homepage'>https://github.com/gkellogg/earl-report</a>
+        .
+      </p>
+      <p property='doap:developer' resource='http://greggkellogg.net/foaf#me' typeof='foaf:Person'>
+        This software is provided by
+        <a href='http://greggkellogg.net/' property='foaf:homepage'><span about='http://greggkellogg.net/foaf#me' property='foaf:name'>Gregg Kellogg</span></a>
+        in hopes that it might make the lives of conformance testers easier.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1052 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://www.w3.org/ns/earl#",
+    "foaf:homepage": {
+      "@type": "@id"
+    },
+    "dc": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "earl": "http://www.w3.org/ns/earl#",
+    "mf": "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "assertedBy": {
+      "@type": "@id"
+    },
+    "assertions": {
+      "@id": "mf:report",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "bibRef": {
+      "@id": "dc:bibliographicCitation"
+    },
+    "created": {
+      "@id": "doap:created",
+      "@type": "xsd:date"
+    },
+    "description": {
+      "@id": "rdfs:comment",
+      "@language": "en"
+    },
+    "developer": {
+      "@id": "doap:developer",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "doapDesc": {
+      "@id": "doap:description",
+      "@language": "en"
+    },
+    "entries": {
+      "@id": "mf:entries",
+      "@type": "@id",
+      "@container": "@list",
+      "@context": {
+        "assertions": {
+          "@reverse": "earl:test",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    },
+    "generatedBy": {
+      "@type": "@id"
+    },
+    "homepage": {
+      "@id": "doap:homepage",
+      "@type": "@id"
+    },
+    "language": {
+      "@id": "doap:programming-language"
+    },
+    "license": {
+      "@id": "doap:license",
+      "@type": "@id"
+    },
+    "mode": {
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "doap:name"
+    },
+    "outcome": {
+      "@type": "@id"
+    },
+    "release": {
+      "@id": "doap:release",
+      "@type": "@id"
+    },
+    "revision": {
+      "@id": "doap:revision"
+    },
+    "shortdesc": {
+      "@id": "doap:shortdesc",
+      "@language": "en"
+    },
+    "subject": {
+      "@type": "@id"
+    },
+    "test": {
+      "@type": "@id"
+    },
+    "testAction": {
+      "@id": "mf:action",
+      "@type": "@id"
+    },
+    "testResult": {
+      "@id": "mf:result",
+      "@type": "@id"
+    },
+    "title": {
+      "@id": "mf:name"
+    },
+    "testSubjects": {
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "xsd": {
+      "@id": "http://www.w3.org/2001/XMLSchema#"
+    }
+  },
+  "@id": "",
+  "@type": [
+    "Software",
+    "doap:Project"
+  ],
+  "name": "RDF 1.2",
+  "bibRef": "Unknown reference",
+  "generatedBy": {
+    "@id": "https://rubygems.org/gems/earl-report",
+    "@type": [
+      "Software",
+      "doap:Project"
+    ],
+    "name": "earl-report",
+    "shortdesc": "Earl Report summary generator",
+    "doapDesc": "EarlReport generates HTML+RDFa rollups of multiple EARL reports",
+    "homepage": "https://github.com/gkellogg/earl-report",
+    "language": "Ruby",
+    "license": "http://unlicense.org",
+    "release": {
+      "@id": "https://github.com/gkellogg/earl-report/tree/0.9.1",
+      "@type": "doap:Version",
+      "name": "earl-report-0.9.1",
+      "doap:created": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-04"
+      },
+      "revision": "0.9.1"
+    },
+    "developer": [
+      "https://greggkellogg.net/foaf#me"
+    ]
+  },
+  "assertions": [
+    "rdfxml-streaming-parser-js.ttl"
+  ],
+  "testSubjects": [
+    {
+      "@id": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+      "@type": [
+        "doap:Project",
+        "TestSubject",
+        "Software"
+      ],
+      "name": "rdfxml-streaming-parser",
+      "developer": [
+        {
+          "@id": "https://www.rubensworks.net/#me",
+          "@type": [
+            "foaf:Person",
+            "Assertor"
+          ],
+          "foaf:name": "Ruben Taelman <rubensworks@gmail.com>",
+          "foaf:homepage": "https://www.rubensworks.net/"
+        }
+      ],
+      "homepage": "https://github.com/rdfjs/rdfxml-streaming-parser.js#readme",
+      "doapDesc": "Streaming RDF/XML parser",
+      "language": "JavaScript",
+      "release": {
+        "@id": "_:b2",
+        "revision": "unknown"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#manifest",
+      "@type": [
+        "mf:Manifest",
+        "Report"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RDF 1.2 XML Evaluation Tests"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "La suite des tests pour RDF 1.2 XML"
+        },
+        {
+          "@language": "es",
+          "@value": "Conjunto de pruebas para RDF 1.2 XML"
+        }
+      ],
+      "mf:assumedTestBase": {
+        "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://w3c.github.io/rdf-tests/"
+      },
+      "dc:licence": {
+        "@id": "https://www.w3.org/Consortium/Legal/2008/03-bsd-license"
+      },
+      "dc:creator": {
+        "@id": "_:b1",
+        "foaf:homepage": "https://w3c.github.io/rdf-star-wg/",
+        "foaf:name": "W3C RDF & SPARQL Working Group"
+      },
+      "entries": [
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-01",
+          "rdfs:comment": "Language with direction",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-01.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b3",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-01",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b4",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-02",
+          "rdfs:comment": "Language with direction and no RDF version",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-02.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-02.nt",
+          "assertions": [
+            {
+              "@id": "_:b5",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-02",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b6",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-03",
+          "rdfs:comment": "Language with direction and no ITS version",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-03.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-03.nt",
+          "assertions": [
+            {
+              "@id": "_:b7",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-03",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b8",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-04",
+          "rdfs:comment": "Language with direction on element directly",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-04.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-04.nt",
+          "assertions": [
+            {
+              "@id": "_:b9",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-04",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b10",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-05",
+          "rdfs:comment": "Language with version and direction on element directly",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-05.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-05.nt",
+          "assertions": [
+            {
+              "@id": "_:b11",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-05",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b12",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-dir-06",
+          "rdfs:comment": "Direction with no language",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-06.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-dir-06.nt",
+          "assertions": [
+            {
+              "@id": "_:b13",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-dir-06",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b14",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-01",
+          "rdfs:comment": "Ignored triple term",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-01.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b15",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-01",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b16",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-02",
+          "rdfs:comment": "Triple term having IRI subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-02.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-02.nt",
+          "assertions": [
+            {
+              "@id": "_:b17",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-02",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b18",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-03",
+          "rdfs:comment": "Triple term having BNode subject",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-03.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-03.nt",
+          "assertions": [
+            {
+              "@id": "_:b19",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-03",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b20",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-04",
+          "rdfs:comment": "Triple term having a type",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-04.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-04.nt",
+          "assertions": [
+            {
+              "@id": "_:b21",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-04",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b22",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-05",
+          "rdfs:comment": "Triple term having BNode object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-05.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-05.nt",
+          "assertions": [
+            {
+              "@id": "_:b23",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-05",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b24",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-06",
+          "rdfs:comment": "Recursive triple term",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-06.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-06.nt",
+          "assertions": [
+            {
+              "@id": "_:b25",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-06",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b26",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-07",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-07",
+          "rdfs:comment": "Invalid triple term having no predicate or object",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-07.rdf",
+          "assertions": [
+            {
+              "@id": "_:b27",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-07",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b28",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-08",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLNegativeSyntax",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-tt-08",
+          "rdfs:comment": "Invalid triple term having two objects",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-tt-08.rdf",
+          "assertions": [
+            {
+              "@id": "_:b29",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-tt-08",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b30",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-01",
+          "rdfs:comment": "On literal with IRI reifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-01.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b31",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-01",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b32",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-02",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-02",
+          "rdfs:comment": "On literal with BNode reifier",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-02.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-02.nt",
+          "assertions": [
+            {
+              "@id": "_:b33",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-02",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b34",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-03",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-03",
+          "rdfs:comment": "On literal with IRI reifier and annotations",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-03.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-03.nt",
+          "assertions": [
+            {
+              "@id": "_:b35",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-03",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b36",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-04",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-04",
+          "rdfs:comment": "An empty property element just gives an empty literal. Annotate the statement at the same time. (See rdfms-empty-property-elements-test005 in 1.1 test suite)",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-04.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-04.nt",
+          "assertions": [
+            {
+              "@id": "_:b37",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-04",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b38",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-05",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-05",
+          "rdfs:comment": "Here the parseType indicates that we should create a resource. We annotate the statement at the same time. (See rdfms-empty-property-elements-test006 in 1.1 test suite)",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-05.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-05.nt",
+          "assertions": [
+            {
+              "@id": "_:b39",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-05",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b40",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-06",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-06",
+          "rdfs:comment": "rdf:annotation on an empty property element indicates reification. (See rdfms-not-id-and-resource-attr-test001 in 1.1 test suite)",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-06.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-06.nt",
+          "assertions": [
+            {
+              "@id": "_:b41",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-06",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b42",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-07",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-07",
+          "rdfs:comment": "Node with annotation having a type",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-07.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-07.nt",
+          "assertions": [
+            {
+              "@id": "_:b43",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-07",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b44",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-08",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-08",
+          "rdfs:comment": "Node with annotation having an IRI value",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-08.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-08.nt",
+          "assertions": [
+            {
+              "@id": "_:b45",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-08",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b46",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-09",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-09",
+          "rdfs:comment": "Node with annotation having an BNode value",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-09.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-09.nt",
+          "assertions": [
+            {
+              "@id": "_:b47",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-09",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b48",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-10",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-10",
+          "rdfs:comment": "Node with recursive annotation",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-10.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-10.nt",
+          "assertions": [
+            {
+              "@id": "_:b49",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-10",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b50",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-11",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-11",
+          "rdfs:comment": "rdf:annotation and rdf:resource are allowed together on empty property element.",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-11.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-11.nt",
+          "assertions": [
+            {
+              "@id": "_:b51",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-11",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b52",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-12",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-12",
+          "rdfs:comment": "rdf:annotationNodeID and rdf:resource are allowed together on empty property element.",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-12.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-12.nt",
+          "assertions": [
+            {
+              "@id": "_:b53",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-12",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b54",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-13",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-13",
+          "rdfs:comment": "rdf:annotation and parseType=\"Literal\".",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-13.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-13.nt",
+          "assertions": [
+            {
+              "@id": "_:b55",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-13",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b56",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-14",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-14",
+          "rdfs:comment": "rdf:annotationNodeID and parseType=\"Literal\".",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-14.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-14.nt",
+          "assertions": [
+            {
+              "@id": "_:b57",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-14",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b58",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-15",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-15",
+          "rdfs:comment": "rdf:annotation and parseType=\"Collection\".",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-15.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-15.nt",
+          "assertions": [
+            {
+              "@id": "_:b59",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-15",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b60",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-16",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-16",
+          "rdfs:comment": "rdf:annotationNodeID and parseType=\"Collection\".",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-16.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-16.nt",
+          "assertions": [
+            {
+              "@id": "_:b61",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-16",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b62",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-reif-01",
+          "@type": [
+            "http://www.w3.org/ns/rdftest#TestXMLEval",
+            "TestCriterion",
+            "TestCase"
+          ],
+          "title": "rdf12-xml-an-reif-01.rdf",
+          "rdfs:comment": "RDF 1.1 reification and RDF 1.2 annotation",
+          "testAction": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-reif-01.rdf",
+          "testResult": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval/rdf12-xml-an-reif-01.nt",
+          "assertions": [
+            {
+              "@id": "_:b63",
+              "@type": "Assertion",
+              "subject": "https://www.npmjs.com/package/rdfxml-streaming-parser/",
+              "test": "https://w3c.github.io/rdf-tests/rdf/rdf12/rdf-xml/eval#rdf12-xml-an-reif-01",
+              "assertedBy": "https://www.rubensworks.net/#me",
+              "mode": "earl:automatic",
+              "result": {
+                "@id": "_:b64",
+                "@type": "TestResult",
+                "outcome": "earl:passed"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
