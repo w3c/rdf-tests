@@ -32,8 +32,8 @@ correct behavior of SPARQL systems. Below is a description of the tests, their o
 - [Update Evaluation Tests](#update-evaluation-tests)
 - [Federated Query Tests](#federated-query-tests)
 - [Protocol Tests](#protocol-tests)
-- [Service Description Tests](#service-description-tests)
 - [Graph Store Protocol Tests](#graph-store-protocol-tests)
+- [Service Description Tests](#service-description-tests)
 - [Test annotations](#test-annotations)
 - [How to run the Test Cases](#how-to-run-the-test-cases)
 
@@ -342,15 +342,23 @@ If the URL path of the SPARQL Service being tested does not match `/sparql`, the
 The expected result of each `ht:Request` is modeled as properties of the request's `ht:resp` `ht:Response` object.
 Depending on the test, different aspects of the response may be present and need validation. These include:
 
-* `mf:expectedStatus` - with an `rdfs:Class` object indicating one or more expected HTTP response codes. The expected classes are defined by the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/):
-  * `hts:StatusCode2xx`
-  * `hts:StatusCode3xx`
-  * `hts:StatusCode4xx`
+* `mf:expectedBoolean` - with a `xsd:boolean` object value indicating the boolean response for an `ASK` query
 * `mf:expectedFormat` - with a literal object indicating the type of expected result. The expected values are:
   * `"tabular"` for a SPARQL Query Result response to a `SELECT` query
   * `"boolean"` for a boolean SPARQL Query Result response to an `ASK` query (with optional `mf:expectedBoolean` property)
   * `"RDF"` for an RDF graph response to a `CONSTRUCT` or `DESCRIBE` query
-* `mf:expectedBoolean` - with a `xsd:boolean` object value indicating the boolean response for an `ASK` query
+* `mf:expectedSchemaConformance` - with an IRI object identifying an RDFS or OWL schema to which the response's RDF content must conform (this implies that the `ht:Response` has an `mf:expectedFormat` value of `"RDF"`). The details of how conformance is tested here is left to implementations.
+* `mf:expectedSPARQLMatch` - with a literal object containing a SPARQL `ASK` query that is expected to result in a `true` result when evaluated against the `ht:Response`'s RDF content (this implies that the `ht:Response` has an `mf:expectedFormat` value of `"RDF"`).
+* `mf:expectedStatus` - an expected HTTP response code. The expected values are defined by the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/). For example:
+  * `hts:OK`
+  * `hts:Created`
+  * `hts:NotFound`
+* `mf:expectedStatusClass` - a `rdfs:Class` object indicating an expected HTTP response codes. The expected classes are defined by the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/):
+  * `hts:StatusCode2xx`
+  * `hts:StatusCode3xx`
+  * `hts:StatusCode4xx`
+
+Note that some of these properties are not used in Protocol tests, but instead in Graph Store Protocol or Service Description tests (described below), which use the same general modeling of test requests and responses.
 
 An example Protocol test is:
 
@@ -380,7 +388,7 @@ An example Protocol test is:
                         a ht:Response ;
                         mf:expectedBoolean true ;
                         mf:expectedFormat "boolean" ;
-                        mf:expectedStatus hts:StatusCode2xx, hts:StatusCode3xx
+                        mf:expectedStatusClass hts:StatusCode2xx, hts:StatusCode3xx
                     ]
                 ]
             )
@@ -404,7 +412,7 @@ In many of these tests, the sequence of more than once `ht:Request` in the `ht:C
 
 For `ht:Request`s that return RDF content, the `ht:Response` describes a serialized RDF graph that is expected to be [graph isomorphic](https://www.w3.org/TR/rdf12-concepts/#graph-isomorphism) to the RDF content returned by the Graph Store being tested.
 
-In these tests, the object of `mf:expectedStatus` is a `ht:StatusCode` (e.g. `hts:OK` or `hts:NoContent`). Note that some tests include a `DELETE` request for which an HTTP 202 Accepted response is acceptable. In those cases, any subsequent requests for that test that try to validate the success of the deletion may assume that the "Accepted" operation has actually occurred by the time the next request is made.
+Note that some tests include a `DELETE` request for which an HTTP 202 Accepted response is acceptable. In those cases, any subsequent requests for that test that try to validate the success of the deletion may assume that the "Accepted" operation has actually occurred by the time the next request is made.
 
 The Graph Store Protocol tests are split into two manifests:
 
@@ -423,9 +431,9 @@ These tests add a new `mf:expectedLocation` property on the `ht:Response`, whose
 
 ## Service Description Tests
 
-A testing service for SPARQL 1.1 Protocol implementations supporting [SPARQL 1.1 Service Descriptions](https://www.w3.org/TR/sparql11-service-description/) has been set up at [`http://www.w3.org/2009/sparql/sdvalidator`](https://www.w3.org/2009/sparql/sdvalidator).
-The service performs a number of tests to verify that a submitted endpoint returns RDF that conforms to the service description vocabulary specification.
-Using content negotiation to request RDF (supporting both Turtle and RDF/XML), the service can be used to generate an [EARL implementation report](https://www.w3.org/2001/sw/DataAccess/tests/earl).
+Service Description tests are defined as instance of `mf:ServiceDescriptionTest`.
+Like the [Protocol Tests](#protocol-tests), these tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/) to define
+one or more HTTP requests, and expected aspects of the corresponding responses. See the description above for more details.
 
 ## Test annotations
 
