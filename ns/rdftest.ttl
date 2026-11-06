@@ -56,11 +56,16 @@ rdft:TestC14N a rdfs:Class;
    rdfs:comment "Superclass of all RDF Canonicalization Tests."@en;
    rdfs:subClassOf rdft:Test .
 
+rdft:TestNegativeSyntax a rdfs:Class;
+   rdfs:label "Negative Syntax"@en;
+   rdfs:comment "Superclass of all Negative Syntax Tests."@en;
+   rdfs:subClassOf rdft:TestSyntax .
+
 rdft:TestNQuadsNegativeSyntax a rdfs:Class;
    rdfs:label "N-Quads Negative Syntax"@en;
    rdfs:comment "A negative N-Quads syntax test."@en;
    rdft:syntaxFormat format:N-Quads ;
-   rdfs:subClassOf rdft:TestSyntax .
+   rdfs:subClassOf rdft:TestNegativeSyntax .
 
 rdft:TestNQuadsPositiveSyntax a rdfs:Class;
    rdfs:label "N-Quads Positive Syntax"@en;
@@ -72,7 +77,7 @@ rdft:TestNTriplesNegativeSyntax a rdfs:Class;
    rdfs:label "N-Triples Negative Syntax"@en;
    rdfs:comment "A negative N-Triples syntax test."@en;
    rdft:syntaxFormat format:N-Triples ;
-   rdfs:subClassOf rdft:TestSyntax .
+   rdfs:subClassOf rdft:TestNegativeSyntax .
 
 rdft:TestNTriplesPositiveSyntax a rdfs:Class;
    rdfs:label "N-Triples Positive Syntax"@en;
@@ -101,7 +106,7 @@ rdft:TestTrigNegativeSyntax a rdfs:Class;
    rdfs:label "TriG Negative Syntax"@en;
    rdfs:comment "A negative TriG syntax test."@en;
    rdft:syntaxFormat format:TriG ;
-   rdfs:subClassOf rdft:TestSyntax .
+   rdfs:subClassOf rdft:TestNegativeSyntax .
 
 rdft:TestTrigPositiveSyntax a rdfs:Class;
    rdfs:label "TriG Positive Syntax"@en;
@@ -125,7 +130,7 @@ rdft:TestTurtleNegativeSyntax a rdfs:Class;
    rdfs:label "Turtle Negative Syntax"@en;
    rdfs:comment "A negative Turtle syntax test."@en;
    rdft:syntaxFormat format:Turtle ;
-   rdfs:subClassOf rdft:TestSyntax .
+   rdfs:subClassOf rdft:TestNegativeSyntax .
 
 rdft:TestTurtlePositiveSyntax a rdfs:Class;
    rdfs:label "Turtle Positive Syntax"@en;
@@ -137,7 +142,7 @@ rdft:TestXMLNegativeSyntax a rdfs:Class;
    rdfs:label "RDF/XML Negative Syntax"@en;
    rdfs:comment "A negative RDF/XML syntax test."@en ;
    rdft:syntaxFormat format:RDF_XML ;
-   rdfs:subClassOf rdft:TestSyntax .
+   rdfs:subClassOf rdft:TestNegativeSyntax .
 
 rdft:TestXMLEval a rdfs:Class;
    rdfs:label "RDF/XML Evaluation"@en;
