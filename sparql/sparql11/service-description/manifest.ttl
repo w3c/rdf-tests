@@ -4,33 +4,133 @@
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix ht:     <http://www.w3.org/2011/http#> .
+@prefix hts:    <http://www.w3.org/2011/http-statusCodes#> .
 @prefix sd:     <http://www.w3.org/ns/sparql-service-description#> .
 @prefix sparql: <http://www.w3.org/ns/sparql#> .
 
 <>  rdf:type mf:Manifest ;
     rdfs:label "SPARQL Service Description" ;
     mf:specVersion sparql:version-1.1 ;
+    rdfs:comment """
+        This manifest encodes tests for the SPARQL Service Description.
+        Each test record has one ht:Requests that must be run in order to
+        produce the Service Description RDF response.
+        
+        Expected results are encoded in the ht:Response using one of these terms:
+        
+        * `mf:expectedFormat` - Expected serialization format of the results.
+              In these Service Description tests, the expected format is always
+              `"RDF"`
+        * `mf:expectedSPARQLMatch` - A SPARQL ASK query that is expected to
+              return `true` when run against the response's RDF content.
+        * `mf:expectedSchemaConformance` - A schema to which the response's
+              RDF content must conform. In practice, this test has some obvious
+              limits to what is testable, as the Service Description schema
+              is RDFS-based, and so cannot indentify many inconsistencies.
+              The details of how conformance is tested here is left to
+              implementations.
+
+        Each request has a `ht:connectionAuthority` of `www.example` and an
+        `ht:absolutePath` value of `/sparql`. A program using this manifest
+        data to run the tests must replace these values with whatever authority
+        and path is appropriate for the endpoint being tested. Similarly,
+        the endpoint URL `http://www.example/sparql` appears in the
+        `mf:expectedSPARQLMatch` query, and it must also be replaced with the
+        appropriate endpoint being tested.
+    """ ;
     mf:entries
     (
-		:has-endpoint-triple
-		:returns-rdf
-		:conforms-to-schema
-	) .
+        :has-endpoint-triple
+        :returns-rdf
+        :conforms-to-schema
+    ) .
 
 :returns-rdf rdf:type mf:ServiceDescriptionTest ;
-       mf:name    "GET on endpoint returns RDF" ;
-       dawgt:approval dawgt:Approved ;
-       dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
-       .
+        mf:name    "GET on endpoint returns RDF" ;
+        dawgt:approval dawgt:Approved ;
+        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
+        mf:action [
+            a ht:Connection ;
+            ht:connectionAuthority "www.example" ;
+            ht:requests ([
+                    a ht:Request ;
+                    ht:absolutePath "/sparql" ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "accept" ;
+                            ht:fieldValue "text/turtle"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "GET" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedFormat "RDF" ;
+                        mf:expectedStatusClass hts:StatusCode2xx, hts:StatusCode3xx
+                    ]
+                ]
+            )
+        ] ;
+        .
 
 :has-endpoint-triple rdf:type mf:ServiceDescriptionTest ;
-       mf:name    "Service description contains a matching sd:endpoint triple" ;
-       dawgt:approval dawgt:Approved ;
-       dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
-       .
+        mf:name    "Service description contains a matching sd:endpoint triple" ;
+        dawgt:approval dawgt:Approved ;
+        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
+        mf:action [
+            a ht:Connection ;
+            ht:connectionAuthority "www.example" ;
+            ht:requests ([
+                    a ht:Request ;
+                    ht:absolutePath "/sparql" ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "accept" ;
+                            ht:fieldValue "text/turtle"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "GET" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedFormat "RDF" ;
+                        mf:expectedSPARQLMatch """
+                            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                            ASK { ?endpoint sd:endpoint <http://www.example/sparql> }
+                        """ ;
+                        mf:expectedStatusClass hts:StatusCode2xx, hts:StatusCode3xx
+                    ]
+                ]
+            )
+        ] ;
+        .
 
 :conforms-to-schema rdf:type mf:ServiceDescriptionTest ;
-       mf:name    "Service description conforms to schema" ;
-       dawgt:approval dawgt:Approved ;
-       dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
-       .
+        mf:name    "Service description conforms to schema" ;
+        dawgt:approval dawgt:Approved ;
+        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-07-31#resolution_2> ;
+        mf:action [
+            a ht:Connection ;
+            ht:connectionAuthority "www.example" ;
+            ht:requests ([
+                    a ht:Request ;
+                    ht:absolutePath "/sparql" ;
+                    ht:headers ([
+                            a ht:RequestHeader ;
+                            ht:fieldName "accept" ;
+                            ht:fieldValue "text/turtle"
+                        ]
+                    ) ;
+                    ht:httpVersion "1.1" ;
+                    ht:methodName "GET" ;
+                    ht:resp [
+                        a ht:Response ;
+                        mf:expectedFormat "RDF" ;
+                        mf:expectedSchemaConformance <http://www.w3.org/ns/sparql-service-description#> ;
+                        mf:expectedStatusClass hts:StatusCode2xx, hts:StatusCode3xx
+                    ]
+                ]
+            )
+        ] ;
+        .
