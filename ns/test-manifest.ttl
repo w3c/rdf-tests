@@ -196,6 +196,9 @@
 :NoCanonicalizationOfNumerics	rdf:type :Requirement ;
     rdfs:comment "Tests that require that literals with numeric datatypes are not canonicalized during loading" .
 
+:FederatedServiceVariables	rdf:type :Requirement ;
+    rdfs:comment "Tests that require support for evaluating SERVICE ?var patterns" .
+
 ## ---- Notable features ----
 
 :IllFormedLiteral	rdf:type :Notable ;

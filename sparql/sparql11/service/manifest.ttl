@@ -92,6 +92,7 @@
        mf:name    "SERVICE test 5" ;
        dawgt:approval dawgt:Approved ;
        dawgt:approvedBy <http://www.w3.org/2009/sparql/meeting/2012-01-31#resolution_2> ;
+       mf:requires mf:FederatedServiceVariables ;
        mf:feature sd:BasicFederatedQuery ;
        mf:action [
                qt:query  <service05.rq> ;
