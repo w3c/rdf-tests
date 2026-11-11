@@ -295,8 +295,7 @@ expected results.""" .
     .
 
 :expectedBoolean rdf:type rdf:Property ;
-    rdfs:comment "The expected boolean value of the response to a SPARQL ASK query (implies that the response has mf:expectedFormat 'RDF')" ;
-    rdfs:comment "Expected values are: 'RDF', 'tabular', 'boolean'" ;
+    rdfs:comment "The expected boolean value of the response to a SPARQL ASK query (implies that the response has mf:expectedFormat 'boolean')" ;
     rdfs:domain ht:Response ;
     rdfs:range xsd:boolean ;
     .
