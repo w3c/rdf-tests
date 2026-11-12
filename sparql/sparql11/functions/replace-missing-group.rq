@@ -1,0 +1,4 @@
+# XPath fn:replace: when the pattern has no capturing group, $2 (1 <= N <= 9)
+# is replaced by the empty string.
+SELECT (REPLACE("abc", "b", "$2") AS ?replaced)
+WHERE {}

@@ -1,0 +1,3 @@
+# XPath fn:replace: with one capturing group, $10 is group 1 followed by the character 0.
+SELECT (REPLACE("abc", "(b)", "$10") AS ?replaced)
+WHERE {}

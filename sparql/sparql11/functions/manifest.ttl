@@ -31,6 +31,14 @@
         :substring01-non-bmp
         :substring02
         :substring02-non-bmp
+        :substr-negative-start
+        :substr-zero-start
+        :substr-two-arg
+        :substr-middle
+        :substr-start-past-end
+        :substr-zero-length
+        :substr-negative-length
+        :substr-empty-source
         :length01
         :length01-non-bmp
         :ucase01
@@ -40,8 +48,19 @@
         :encode01
         :encode01-non-bmp
         :contains01
+        :contains-different-language
+        :contains-language-plain
         :starts01
+        :strstarts-different-language
+        :strstarts-language-case
         :ends01
+        :strends-different-language
+        :langmatches-eng-en
+        :langmatches-empty-range
+        :langmatches-subtag
+        :langmatches-tag-case
+        :langmatches-equal-case
+        :langmatches-eng-gb
         :plus-1-corrected
         :plus-2-corrected
         :md5-01
@@ -84,6 +103,16 @@
         :replace02
         :replace03
         :replace-case-insensitive
+        :replace-literal-dollar
+        :replace-captured-group
+        :replace-literal-backslash
+        :replace-group-beside-dollar
+        :replace-group-beside-backslash
+        :replace-whole-match
+        :replace-group-and-literal-digit
+        :replace-unmatched-group
+        :replace-missing-group
+        :replace-bare-dollar
         :uuid01
         :uuid02
         :struuid01
@@ -861,6 +890,238 @@
     mf:result  <replace-case-insensitive.srx> ;
     .
 
+:substr-negative-start rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() negative start shortens the result" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-negative-start.rq> ] ;
+    mf:result <substr-negative-start.srx> .
+
+:substr-zero-start rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() zero start shortens the result" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-zero-start.rq> ] ;
+    mf:result <substr-zero-start.srx> .
+
+:substr-two-arg rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() without a length continues through the end" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-two-arg.rq> ] ;
+    mf:result <substr-two-arg.srx> .
+
+:substr-middle rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() returns the requested interior characters" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-middle.rq> ] ;
+    mf:result <substr-middle.srx> .
+
+:substr-start-past-end rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() is empty when the start is past the end" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-start-past-end.rq> ] ;
+    mf:result <substr-start-past-end.srx> .
+
+:substr-zero-length rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() is empty when the rounded length is zero" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-zero-length.rq> ] ;
+    mf:result <substr-zero-length.srx> .
+
+:substr-negative-length rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() is empty when the rounded length is negative" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-negative-length.rq> ] ;
+    mf:result <substr-negative-length.srx> .
+
+:substr-empty-source rdf:type mf:QueryEvaluationTest ;
+    mf:name "SUBSTR() of an empty source is empty" ;
+    mf:feature sparql:substr ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <substr-empty-source.rq> ] ;
+    mf:result <substr-empty-source.srx> .
+
+:langmatches-eng-en rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() rejects a shared prefix that is not a subtag" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-eng-en.rq> ] ;
+    mf:result <langmatches-eng-en.srx> .
+
+:langmatches-empty-range rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() rejects an empty range" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-empty-range.rq> ] ;
+    mf:result <langmatches-empty-range.srx> .
+
+:langmatches-subtag rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() accepts a longer tag at a hyphen boundary" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-subtag.rq> ] ;
+    mf:result <langmatches-subtag.srx> .
+
+:langmatches-tag-case rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() compares a mixed-case tag case-insensitively" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-tag-case.rq> ] ;
+    mf:result <langmatches-tag-case.srx> .
+
+:langmatches-equal-case rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() accepts equal tags ignoring case" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-equal-case.rq> ] ;
+    mf:result <langmatches-equal-case.srx> .
+
+:langmatches-eng-gb rdf:type mf:QueryEvaluationTest ;
+    mf:name "LANGMATCHES() rejects a longer primary subtag" ;
+    mf:feature sparql:langMatches ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <langmatches-eng-gb.rq> ] ;
+    mf:result <langmatches-eng-gb.srx> .
+
+:replace-literal-dollar rdf:type mf:QueryEvaluationTest ;
+    mf:name    "REPLACE() treats \\$ as a literal dollar" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-literal-dollar.rq> ] ;
+    mf:result <replace-literal-dollar.srx> .
+
+:replace-captured-group rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() inserts the first captured group" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-captured-group.rq> ] ;
+    mf:result <replace-captured-group.srx> .
+
+:replace-literal-backslash rdf:type mf:QueryEvaluationTest ;
+    mf:name    "REPLACE() treats \\\\ as one literal backslash" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-literal-backslash.rq> ] ;
+    mf:result <replace-literal-backslash.srx> .
+
+:replace-group-beside-dollar rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() keeps $1 beside a literal dollar" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-group-beside-dollar.rq> ] ;
+    mf:result <replace-group-beside-dollar.srx> .
+
+:replace-group-beside-backslash rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() keeps $1 beside a literal backslash" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-group-beside-backslash.rq> ] ;
+    mf:result <replace-group-beside-backslash.srx> .
+
+:replace-whole-match rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() inserts the whole match for $0" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-whole-match.rq> ] ;
+    mf:result <replace-whole-match.srx> .
+
+:replace-group-and-literal-digit rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() reads $10 as group 1 and a literal 0" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-group-and-literal-digit.rq> ] ;
+    mf:result <replace-group-and-literal-digit.srx> .
+
+:replace-unmatched-group rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() uses the empty string for a group that did not match" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-unmatched-group.rq> ] ;
+    mf:result <replace-unmatched-group.srx> .
+
+:replace-missing-group rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() uses the empty string when $2 names no capturing group" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-missing-group.rq> ] ;
+    mf:result <replace-missing-group.srx> .
+
+:replace-bare-dollar rdf:type mf:QueryEvaluationTest ;
+    mf:name "REPLACE() errors on a bare dollar in the replacement" ;
+    mf:feature sparql:replace ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <replace-bare-dollar.rq> ] ;
+    mf:result <replace-bare-dollar.srx> .
+
+:contains-different-language rdf:type mf:QueryEvaluationTest ;
+    mf:name "CONTAINS() errors when language tags differ" ;
+    mf:feature sparql:contains ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <contains-different-language.rq> ] ;
+    mf:result <contains-different-language.srx> .
+
+:strstarts-different-language rdf:type mf:QueryEvaluationTest ;
+    mf:name "STRSTARTS() errors when language tags differ" ;
+    mf:feature sparql:strstarts ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <strstarts-different-language.rq> ] ;
+    mf:result <strstarts-different-language.srx> .
+
+:strends-different-language rdf:type mf:QueryEvaluationTest ;
+    mf:name "STRENDS() errors when language tags differ" ;
+    mf:feature sparql:strends ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <strends-different-language.rq> ] ;
+    mf:result <strends-different-language.srx> .
+
+:strstarts-language-case rdf:type mf:QueryEvaluationTest ;
+    mf:name "STRSTARTS() treats language tags as equal ignoring case" ;
+    mf:feature sparql:strstarts ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <strstarts-language-case.rq> ] ;
+    mf:result <strstarts-language-case.srx> .
+
+:contains-language-plain rdf:type mf:QueryEvaluationTest ;
+    mf:name "CONTAINS() accepts a plain string beside a language-tagged string" ;
+    mf:feature sparql:contains ;
+    dawgt:approval dawgt:Proposed ;
+    mf:action
+         [ qt:query <contains-language-plain.rq> ] ;
+    mf:result <contains-language-plain.srx> .
+
 :uuid01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "UUID() pattern match" ;
     mf:feature sparql:uuid ;
@@ -905,3 +1166,4 @@
            qt:data   <data-empty.nt> ] ;
     mf:result  <strlang04.srx> ;
     .
+

@@ -1,0 +1,3 @@
+# XPath fn:substring of the empty string is empty, with or without a length.
+SELECT (SUBSTR("", 1) AS ?two_arg) (SUBSTR("", 1, 4) AS ?three_arg)
+WHERE {}

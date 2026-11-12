@@ -1,0 +1,6 @@
+# XPath fn:substring keeps character p when
+# round(start) <= p < round(start) + round(length).
+# A start before 1 shortens the returned length. round(-1) is -1,
+# so only positions 1 and 2 of "motor car" are kept.
+SELECT (SUBSTR("motor car", -1, 4) AS ?substr)
+WHERE {}

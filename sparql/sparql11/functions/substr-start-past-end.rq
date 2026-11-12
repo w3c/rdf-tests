@@ -1,0 +1,4 @@
+# XPath fn:substring returns the empty string when the start is past
+# the end, whether or not a length is given.
+SELECT (SUBSTR("abc", 5) AS ?two_arg) (SUBSTR("abc", 10, 2) AS ?three_arg)
+WHERE {}
