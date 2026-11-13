@@ -1043,7 +1043,7 @@
     mf:result <replace-group-beside-backslash.srx> .
 
 :replace-whole-match rdf:type mf:QueryEvaluationTest ;
-    mf:name "REPLACE() inserts the whole match for $0" ;
+    mf:name "REPLACE() inserts the whole match for $0 inside extra text" ;
     mf:feature sparql:replace ;
     dawgt:approval dawgt:Proposed ;
     mf:action
