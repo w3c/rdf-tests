@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.4.3"
+ruby "~> 3.4.3"
 
 gem 'rake'
 gem 'earl-report',    '~> 0.9'
