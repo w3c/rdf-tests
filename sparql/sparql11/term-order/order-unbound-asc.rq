@@ -1,0 +1,10 @@
+PREFIX : <http://example.org/>
+
+# SPARQL 1.1 Query §15.1, ascending: unbound, then blank nodes,
+# then IRIs, then RDF literals. The four keys are one of each kind.
+SELECT ?s
+WHERE {
+  ?s :p :row .
+  OPTIONAL { ?s :k ?k }
+}
+ORDER BY ASC(?k)

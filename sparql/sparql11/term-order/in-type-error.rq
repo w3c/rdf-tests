@@ -1,0 +1,26 @@
+PREFIX : <http://example.org/>
+
+# A IN (e1, ..., en) is A = e1 || ... || A = en.
+# || is true if either side is true, and an error if one side is an
+# error and the other is not true. A type error therefore fails the
+# whole IN unless some other candidate compares equal.
+# FILTER drops both false and error, so the NOT IN case must be a row
+# that a buggy "type error means no match" implementation would keep.
+SELECT ?s ?flag
+WHERE {
+  {
+    ?s :role :notIn .
+    FILTER(?s NOT IN (1, "a"))
+    BIND(true AS ?flag)
+  }
+  UNION
+  {
+    ?s :role :inError ; :n ?n .
+    BIND((?n IN (1, "a")) AS ?flag)
+  }
+  UNION
+  {
+    ?s :role :inMatch .
+    BIND((1 IN ("a", 1)) AS ?flag)
+  }
+}
