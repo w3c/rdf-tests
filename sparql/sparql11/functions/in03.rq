@@ -1,0 +1,3 @@
+# 2 = 1 is false and 2 = "a" is a type error, so the IN expression is an error.
+SELECT (2 IN (1, "a") AS ?in)
+WHERE {}

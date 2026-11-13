@@ -1,18 +1,17 @@
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/term-order/manifest#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/order/manifest#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix sparql: <http://www.w3.org/ns/sparql#> .
 
 <>  rdf:type mf:Manifest ;
-    rdfs:label "Term order and IN" ;
+    rdfs:label "Order" ;
     mf:specVersion sparql:version-1.1 ;
     mf:entries
     (
         :order-unbound-asc
         :order-unbound-desc
-        :in-type-error
     ) .
 
 :order-unbound-asc rdf:type mf:QueryEvaluationTest ;
@@ -31,15 +30,4 @@
          [ qt:query  <order-unbound-desc.rq> ;
            qt:data   <data-order.ttl> ] ;
     mf:result  <order-unbound-desc.ttl> ;
-    .
-
-:in-type-error rdf:type mf:QueryEvaluationTest ;
-    mf:name    "IN and NOT IN propagate a type error unless another candidate matches" ;
-    mf:feature sparql:in ;
-    mf:feature sparql:not ;
-    rdfs:comment "An IRI NOT IN (1, \"a\") is a type error, so FILTER drops that row. 2 IN (1, \"a\") is an error, so the projected variable stays unbound. 1 IN (\"a\", 1) is true because one candidate compares equal." ;
-    mf:action
-         [ qt:query  <in-type-error.rq> ;
-           qt:data   <data-in.ttl> ] ;
-    mf:result  <in-type-error.srx> ;
     .

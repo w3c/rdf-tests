@@ -1,0 +1,5 @@
+# Both comparisons are type errors, so NOT IN is an error and FILTER drops the solution.
+# An implementation that treats a type error as "not equal" keeps the solution and this ASK is true.
+ASK {
+	FILTER(<http://example.org/s> NOT IN (1, "a"))
+}

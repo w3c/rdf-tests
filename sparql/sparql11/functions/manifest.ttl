@@ -66,8 +66,10 @@
         :bnode02
         :in01
         :in02
+        :in03
         :notin01
         :notin02
+        :notin03
         :now01
         :rand01
         :iri01
@@ -655,6 +657,15 @@
     mf:result  <in02.srx> ;
     .
 
+:in03 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "IN is an error when no candidate compares equal" ;
+    mf:feature sparql:in ;
+    rdfs:comment "2 = 1 is false and 2 = \"a\" is a type error. The IN expression is an error, so the projected variable is unbound. notin02 already covers a comparison that succeeds beside an error." ;
+    mf:action
+         [ qt:query  <in03.rq> ] ;
+    mf:result  <in03.srx> ;
+    .
+
 :notin01 rdf:type mf:QueryEvaluationTest ;
     mf:name    "NOT IN 1" ;
     mf:feature sparql:in ;
@@ -677,6 +688,16 @@
          [ qt:query  <notin02.rq> ;
            qt:data   <data.ttl> ] ;
     mf:result  <notin02.srx> ;
+    .
+
+:notin03 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "NOT IN is an error when every comparison is a type error" ;
+    mf:feature sparql:in ;
+    mf:feature sparql:not ;
+    rdfs:comment "An IRI compared with 1 and \"a\" raises a type error for both candidates, so FILTER drops the solution and the ASK is false. Treating a type error as inequality would keep the solution." ;
+    mf:action
+         [ qt:query  <notin03.rq> ] ;
+    mf:result  <notin03.srx> ;
     .
 
 :now01 rdf:type mf:QueryEvaluationTest ;
