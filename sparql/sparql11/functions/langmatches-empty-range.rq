@@ -1,0 +1,3 @@
+# RFC 4647 basic filtering: an empty range matches nothing.
+SELECT (LANGMATCHES("en", "") AS ?match)
+WHERE {}

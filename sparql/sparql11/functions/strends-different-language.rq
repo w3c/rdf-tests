@@ -1,0 +1,3 @@
+# Different language tags are not argument-compatible.
+SELECT (STRENDS("abc"@en, "bc"@fr) AS ?ends)
+WHERE {}

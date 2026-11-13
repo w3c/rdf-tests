@@ -1,0 +1,3 @@
+# XPath fn:replace: \$ in the replacement is one literal dollar sign.
+SELECT (REPLACE("abc", "b", "\\$") AS ?replaced)
+WHERE {}

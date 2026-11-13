@@ -1,0 +1,3 @@
+# XPath fn:substring selects no character when the rounded length is negative.
+SELECT (SUBSTR("abc", 1, -2) AS ?substr)
+WHERE {}

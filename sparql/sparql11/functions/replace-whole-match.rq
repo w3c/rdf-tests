@@ -1,0 +1,4 @@
+# XPath fn:replace: $0 is the whole match.
+# The brackets are not part of the match, so leaving the input unchanged cannot pass.
+SELECT (REPLACE("abc", "b", "[$0]") AS ?replaced)
+WHERE {}

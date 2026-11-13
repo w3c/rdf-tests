@@ -1,0 +1,3 @@
+# A language-tagged string is compatible with a plain string.
+SELECT (CONTAINS("abc"@en, "b") AS ?contains)
+WHERE {}

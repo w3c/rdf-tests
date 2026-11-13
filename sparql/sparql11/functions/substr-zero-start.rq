@@ -1,0 +1,4 @@
+# XPath fn:substring: round(0) <= p < round(0) + round(3),
+# so only positions 1 and 2 are kept.
+SELECT (SUBSTR("12345", 0, 3) AS ?substr)
+WHERE {}

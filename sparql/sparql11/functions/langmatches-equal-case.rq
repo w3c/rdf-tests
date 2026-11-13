@@ -1,0 +1,3 @@
+# RFC 4647 basic filtering: equal tags match, ignoring ASCII case.
+SELECT (LANGMATCHES("en-GB", "en-gb") AS ?match)
+WHERE {}

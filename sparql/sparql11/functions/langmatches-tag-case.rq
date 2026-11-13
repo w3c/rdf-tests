@@ -1,0 +1,3 @@
+# RFC 4647 basic filtering compares the tag and the range case-insensitively.
+SELECT (LANGMATCHES("EN-gb", "en") AS ?match)
+WHERE {}

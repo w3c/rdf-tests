@@ -1,0 +1,4 @@
+# RFC 4647 basic filtering: a shared prefix is not enough.
+# "eng" does not equal "en", and the next character is not "-".
+SELECT (LANGMATCHES("eng", "en") AS ?match)
+WHERE {}

@@ -1,0 +1,3 @@
+# RFC 4647 basic filtering: "eng-GB" does not have "-" immediately after "en".
+SELECT (LANGMATCHES("eng-GB", "en") AS ?match)
+WHERE {}
