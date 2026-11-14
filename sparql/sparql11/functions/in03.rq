@@ -1,3 +1,6 @@
-# 2 = 1 is false and 2 = "a" is a type error, so the IN expression is an error.
-SELECT (2 IN (1, "a") AS ?in)
+PREFIX ex: <http://example/>
+
+# 2 = 1 is false. 2 = "a"^^ex:undefined is a type error because the datatype
+# is not understood, so the IN expression is an error.
+SELECT (2 IN (1, "a"^^ex:undefined) AS ?in)
 WHERE {}

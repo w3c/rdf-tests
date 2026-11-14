@@ -660,7 +660,7 @@
 :in03 rdf:type mf:QueryEvaluationTest ;
     mf:name    "IN is an error when no candidate compares equal" ;
     mf:feature sparql:in ;
-    rdfs:comment "2 = 1 is false and 2 = \"a\" is a type error. The IN expression is an error, so the projected variable is unbound. notin02 already covers a comparison that succeeds beside an error." ;
+    rdfs:comment "2 = 1 is false and 2 = \"a\"^^ex:undefined is a type error because the datatype is not understood. The IN expression is an error, so the projected variable is unbound. A plain string is not used, because a processor that supports xsd:string can decide that it differs from an integer." ;
     mf:action
          [ qt:query  <in03.rq> ] ;
     mf:result  <in03.srx> ;
@@ -691,10 +691,10 @@
     .
 
 :notin03 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "NOT IN is an error when every comparison is a type error" ;
+    mf:name    "NOT IN is an error when an unknown datatype is compared and nothing matches" ;
     mf:feature sparql:in ;
     mf:feature sparql:not ;
-    rdfs:comment "An IRI compared with 1 and \"a\" raises a type error for both candidates, so FILTER drops the solution and the ASK is false. Treating a type error as inequality would keep the solution." ;
+    rdfs:comment "2 != 1 is true and 2 != \"a\"^^ex:undefined is a type error because the datatype is not understood. NOT IN is an error, so FILTER drops the solution and the ASK is false. The left-hand side is a literal: an IRI compared with a literal is false, not a type error." ;
     mf:action
          [ qt:query  <notin03.rq> ] ;
     mf:result  <notin03.srx> ;
