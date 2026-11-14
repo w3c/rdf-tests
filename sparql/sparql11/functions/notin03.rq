@@ -1,0 +1,7 @@
+PREFIX ex: <http://example/>
+
+# 2 != 1 is true. 2 != "a"^^ex:undefined is a type error because the datatype
+# is not understood, so NOT IN is an error and FILTER drops the solution.
+ASK {
+	FILTER(2 NOT IN (1, "a"^^ex:undefined))
+}

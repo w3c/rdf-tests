@@ -1,0 +1,6 @@
+@prefix : <http://example.org/> .
+
+:unbound :p :row .
+:blank :p :row ; :k _:key .
+:iri :p :row ; :k :value .
+:literal :p :row ; :k "a" .

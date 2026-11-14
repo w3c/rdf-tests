@@ -1,0 +1,33 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/order/manifest#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "Order" ;
+    mf:specVersion sparql:version-1.1 ;
+    mf:entries
+    (
+        :order-unbound-asc
+        :order-unbound-desc
+    ) .
+
+:order-unbound-asc rdf:type mf:QueryEvaluationTest ;
+    mf:name    "ORDER BY ASC mixes unbound, blank node, IRI, and literal" ;
+    rdfs:comment "SPARQL 1.1 Query §15.1 orders ascending solutions unbound, then blank nodes, then IRIs, then RDF literals. The sort key is one of each kind, so no two literals are compared." ;
+    mf:action
+         [ qt:query  <order-unbound-asc.rq> ;
+           qt:data   <data-order.ttl> ] ;
+    mf:result  <order-unbound-asc.ttl> ;
+    .
+
+:order-unbound-desc rdf:type mf:QueryEvaluationTest ;
+    mf:name    "ORDER BY DESC mixes unbound, blank node, IRI, and literal" ;
+    rdfs:comment "DESC reverses the §15.1 order, so an unbound sort key is last, after the literal, the IRI, and the blank node." ;
+    mf:action
+         [ qt:query  <order-unbound-desc.rq> ;
+           qt:data   <data-order.ttl> ] ;
+    mf:result  <order-unbound-desc.ttl> ;
+    .
