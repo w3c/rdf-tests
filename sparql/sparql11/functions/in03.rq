@@ -1,6 +1,6 @@
-PREFIX ex: <http://example/>
+PREFIX ex: <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/functions/in03.rq#>
 
 # 2 = 1 is false. 2 = "a"^^ex:undefined is a type error because the datatype
-# is not understood, so the IN expression is an error.
+# IRI belongs to this test and is not understood, so the IN expression is an error.
 SELECT (2 IN (1, "a"^^ex:undefined) AS ?in)
 WHERE {}
