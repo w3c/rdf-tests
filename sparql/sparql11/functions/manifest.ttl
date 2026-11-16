@@ -691,10 +691,10 @@
     .
 
 :notin03 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "NOT IN is an error when an unknown datatype is compared and nothing matches" ;
+    mf:name    "NOT IN is true when a URI is compared with literals" ;
     mf:feature sparql:in ;
     mf:feature sparql:not ;
-    rdfs:comment "2 != 1 is true and 2 != \"a\"^^ex:undefined is a type error because the datatype is not understood. NOT IN is an error, so FILTER drops the solution and the ASK is false. The left-hand side is a literal: an IRI compared with a literal is false, not a type error." ;
+    rdfs:comment "A URI cannot be equal to a literal, so both comparisons are false and NOT IN is true. The comparisons are not type errors." ;
     mf:action
          [ qt:query  <notin03.rq> ] ;
     mf:result  <notin03.srx> ;
