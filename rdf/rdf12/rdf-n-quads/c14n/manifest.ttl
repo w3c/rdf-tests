@@ -65,7 +65,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :comment_following_triple rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N comment_following_triple" ;
   rdfs:comment "Tests canonicalization of quads including comments" ;
-  rdft:approval rdft:Proposed ;
   mf:action <comment_following_triple.nq>;
   mf:result <comment_following_triple-c14n.nq>;
   .
@@ -73,7 +72,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :langtagged_string rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N langtagged_string" ;
   rdfs:comment "Tests canonicalization of quads including language-tagged string" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <langtagged_string.nq> ;
   mf:result    <langtagged_string-c14n.nq>;
   .
@@ -81,7 +79,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 #:lantag_with_subtag rdf:type rdft:TestNQuadsPositiveC14N ;
 #  mf:name      "C14N lantag_with_subtag" ;
 #  rdfs:comment "Tests canonicalization of quads including language-tagged string with subtag" ;
-#  rdft:approval rdft:Proposed ;
 #  mf:action    <lantag_with_subtag.nq> ;
 #  mf:result    <lantag_with_subtag-c14n.nq>;
 #  .
@@ -89,7 +86,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :dirlangtagged_string rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name       "C14N literal with base direction ltr" ;
   rdfs:comment "Tests canonicalization of quads including directional language-tagged string" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <dirlangtagged_string.nq> ;
   mf:result    <dirlangtagged_string-c14n.nq>;
   .
@@ -97,7 +93,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_all_controls rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_all_controls" ;
   rdfs:comment "Tests canonicalization of literals with control characters" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_all_controls.nq> ;
   mf:result    <literal_all_controls-c14n.nq>;
   .
@@ -105,7 +100,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_all_punctuation rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_all_punctuation" ;
   rdfs:comment "Tests canonicalization of literals with punctuation characters" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_all_punctuation.nq> ;
   mf:result    <literal_all_punctuation-c14n.nq>;
   .
@@ -113,7 +107,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_ascii_boundaries rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_ascii_boundaries" ;
   rdfs:comment "Tests canonicalization of literal_ascii_boundaries '\\x00\\x26\\x28...'" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_ascii_boundaries.nq> ;
   mf:result    <literal_ascii_boundaries-c14n.nq>;
   .
@@ -121,7 +114,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_2_dquotes rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_2_dquotes" ;
   rdfs:comment "Tests canonicalization of literal with 2 dquotes \"\"\"a\"\"b\"\"\"" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_2_dquotes.nq> ;
   mf:result    <literal_with_2_dquotes-c14n.nq>;
   .
@@ -129,7 +121,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_2_squotes rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_2_squotes" ;
   rdfs:comment "Tests canonicalization of literal with 2 squotes \"x''y\"" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_2_squotes.nq> ;
   mf:result    <literal_with_2_squotes-c14n.nq>;
   .
@@ -137,7 +128,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_BACKSPACE rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_BACKSPACE" ;
   rdfs:comment "Tests canonicalization of literals with backspace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_BACKSPACE.nq> ;
   mf:result    <literal_with_BACKSPACE-c14n.nq>;
   .
@@ -145,7 +135,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_CARRIAGE_RETURN rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_CARRIAGE_RETURN" ;
   rdfs:comment "Tests canonicalization of literals with carriage return" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_CARRIAGE_RETURN.nq> ;
   mf:result    <literal_with_CARRIAGE_RETURN-c14n.nq>;
   .
@@ -153,7 +142,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_CHARACTER_TABULATION rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_CHARACTER_TABULATION" ;
   rdfs:comment "Tests canonicalization of literals with character tabulation" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_CHARACTER_TABULATION.nq> ;
   mf:result    <literal_with_CHARACTER_TABULATION-c14n.nq>;
   .
@@ -161,7 +149,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_dquote rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_dquote" ;
   rdfs:comment "Tests canonicalization of literals with double quote" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_dquote.nq> ;
   mf:result    <literal_with_dquote-c14n.nq>;
   .
@@ -169,7 +156,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_FORM_FEED rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_FORM_FEED" ;
   rdfs:comment "Tests canonicalization of literals with form feed" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_FORM_FEED.nq> ;
   mf:result    <literal_with_FORM_FEED-c14n.nq>;
   .
@@ -177,7 +163,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_LINE_FEED rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_LINE_FEED" ;
   rdfs:comment "Tests canonicalization of literals with line feed" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_LINE_FEED.nq> ;
   mf:result    <literal_with_LINE_FEED-c14n.nq>;
   .
@@ -185,7 +170,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_numeric_escape4 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_numeric_escape4" ;
   rdfs:comment "Tests canonicalization of literals with numeric escapes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_numeric_escape4.nq> ;
   mf:result    <literal_with_numeric_escape4-c14n.nq>;
   .
@@ -193,7 +177,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_numeric_escape8 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_numeric_escape8" ;
   rdfs:comment "Tests canonicalization of literals with numeric escapes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_numeric_escape8.nq> ;
   mf:result    <literal_with_numeric_escape8-c14n.nq>;
   .
@@ -201,7 +184,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_REVERSE_SOLIDUS rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_REVERSE_SOLIDUS" ;
   rdfs:comment "Tests canonicalization of literals with reverse solidus" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_REVERSE_SOLIDUS.nq> ;
   mf:result    <literal_with_REVERSE_SOLIDUS-c14n.nq>;
   .
@@ -209,7 +191,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_REVERSE_SOLIDUS2 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_REVERSE_SOLIDUS2" ;
   rdfs:comment "Tests canonicalization of literals with reverse solidus" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_REVERSE_SOLIDUS2.nq> ;
   mf:result    <literal_with_REVERSE_SOLIDUS2-c14n.nq>;
   .
@@ -217,7 +198,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_squote rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_squote" ;
   rdfs:comment "Tests canonicalization of literals with single quotes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_squote.nq> ;
   mf:result    <literal_with_squote-c14n.nq>;
   .
@@ -225,7 +205,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_string_dt rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_string_dt" ;
   rdfs:comment "Tests canonicalization of literal with explicit xsd:string" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_string_dt.nq> ;
   mf:result    <literal_with_string_dt-c14n.nq>;
   .
@@ -233,7 +212,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_UTF8_boundaries rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_UTF8_boundaries" ;
   rdfs:comment "Tests canonicalization of literals with UTF8 boundaries" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_UTF8_boundaries.nq> ;
   mf:result    <literal_with_UTF8_boundaries-c14n.nq>;
   .
@@ -241,7 +219,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_with_extra_whitespace rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_with_extra_whitespace" ;
   rdfs:comment "Tests canonicalization of quads with literals having extra whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_with_extra_whitespace.nq> ;
   mf:result    <literal_with_extra_whitespace-c14n.nq>;
   .
@@ -249,7 +226,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :minimal_whitespace-01 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N minimal_whitespace-01" ;
   rdfs:comment "Tests canonicalization of quads without optional whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <minimal_whitespace-01.nq> ;
   mf:result    <minimal_whitespace-01-c14n.nq>;
   .
@@ -285,7 +261,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :minimal_whitespace-02 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N minimal_whitespace-02" ;
   rdfs:comment "Tests canonicalization of quads without optional whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <minimal_whitespace-02.nq> ;
   mf:result    <minimal_whitespace-02-c14n.nq>;
   .
@@ -293,7 +268,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :extra_whitespace-01 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N extra_whitespace-01" ;
   rdfs:comment "Tests canonicalization of quads with extra whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <extra_whitespace-01.nq> ;
   mf:result    <extra_whitespace-01-c14n.nq>;
   .
@@ -301,7 +275,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :extra_whitespace-02 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N extra_whitespace-02" ;
   rdfs:comment "Tests canonicalization of quads with extra whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <extra_whitespace-02.nq> ;
   mf:result    <extra_whitespace-02-c14n.nq>;
   .
@@ -309,7 +282,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :extra_whitespace-03 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N extra_whitespace-03" ;
   rdfs:comment "Tests canonicalization of quads with extra whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <extra_whitespace-03.nq> ;
   mf:result    <extra_whitespace-03-c14n.nq>;
   .
@@ -317,7 +289,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :extra_whitespace-04 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N extra_whitespace-04" ;
   rdfs:comment "Tests canonicalization of quads with extra whitespace" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <extra_whitespace-04.nq> ;
   mf:result    <extra_whitespace-04-c14n.nq>;
   .
@@ -325,7 +296,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-uri-01 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-uri-01" ;
   rdfs:comment "Tests canonicalization of IRIs" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-uri-01.nq> ;
   mf:result    <nq-syntax-uri-01-c14n.nq>;
   .
@@ -333,7 +303,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-uri-02 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-uri-02" ;
   rdfs:comment "Tests canonicalization of IRIs" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-uri-02.nq> ;
   mf:result    <nq-syntax-uri-02-c14n.nq>;
   .
@@ -341,7 +310,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-uri-03 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-uri-03" ;
   rdfs:comment "Tests canonicalization of IRIs" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-uri-03.nq> ;
   mf:result    <nq-syntax-uri-03-c14n.nq>;
   .
@@ -349,7 +317,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-uri-04 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-uri-04" ;
   rdfs:comment "Tests canonicalization of IRIs" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-uri-04.nq> ;
   mf:result    <nq-syntax-uri-04-c14n.nq>;
   .
@@ -357,7 +324,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-str-esc-01 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-str-esc-01" ;
   rdfs:comment "Tests canonicalization of string escapes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-str-esc-01.nq> ;
   mf:result    <nq-syntax-str-esc-01-c14n.nq>;
   .
@@ -365,7 +331,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-str-esc-02 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-str-esc-02" ;
   rdfs:comment "Tests canonicalization of string escapes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-str-esc-02.nq> ;
   mf:result    <nq-syntax-str-esc-02-c14n.nq>;
   .
@@ -373,7 +338,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :nq-syntax-str-esc-03 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N nq-syntax-str-esc-03" ;
   rdfs:comment "Tests canonicalization of string escapes" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <nq-syntax-str-esc-03.nq> ;
   mf:result    <nq-syntax-str-esc-03-c14n.nq>;
   .
@@ -381,7 +345,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_needing_uchar_escaping-01 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_needing_uchar_escaping-01" ;
   rdfs:comment "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using raw UTF-8 data" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_needing_uchar_escaping-01.nq> ;
   mf:result    <literal_needing_uchar_escaping-01-c14n.nq>;
   .
@@ -389,7 +352,6 @@ PREFIX rdft: <http://www.w3.org/ns/rdftest#>
 :literal_needing_uchar_escaping-02 rdf:type rdft:TestNQuadsPositiveC14N ;
   mf:name      "C14N literal_needing_uchar_escaping-02" ;
   rdfs:comment "Tests canonicalization of strings with codepoints requiring UCHAR escaping, with input using \\U escaping" ;
-  rdft:approval rdft:Proposed ;
   mf:action    <literal_needing_uchar_escaping-02.nq> ;
   mf:result    <literal_needing_uchar_escaping-01-c14n.nq>;
   .
