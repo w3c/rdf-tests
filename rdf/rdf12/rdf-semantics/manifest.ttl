@@ -75,6 +75,7 @@ trs:all-identical-triple-terms-are-the-same a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test001r.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:annotated-asserted a mf:PositiveEntailmentTest;
   rdfs:comment "Annotated triples are asserted.  This is about shorthand expansion, and is not really a semantics test.";
@@ -84,6 +85,7 @@ trs:annotated-asserted a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test007r1.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:annotation a mf:PositiveEntailmentTest;
   rdfs:comment "Annotations are about the reifying triple.  This is about shorthand expansion, and is not really a semantics test.";
@@ -93,6 +95,7 @@ trs:annotation a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test007r2.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:annotation-unfolded a mf:PositiveEntailmentTest;
   rdfs:comment "Annotations are the same as separate assertions.  This is about shorthand expansion, and is not really a semantics test.";
@@ -102,6 +105,7 @@ trs:annotation-unfolded a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test007a.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
   rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
@@ -111,6 +115,7 @@ trs:bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002or.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
   rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
@@ -120,6 +125,7 @@ trs:bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002sr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:bnodes-in-triple-term-subject-and-object a mf:PositiveEntailmentTest;
   rdfs:comment "Terms inside triple terms can be replaced by fresh bnodes.";
@@ -129,6 +135,7 @@ trs:bnodes-in-triple-term-subject-and-object a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002sor.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:bnodes-in-triple-term-subject-and-object-fail a mf:NegativeEntailmentTest;
   rdfs:comment "The same bnode can not match different triple terms.";
@@ -138,6 +145,7 @@ trs:bnodes-in-triple-term-subject-and-object-fail a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002sbr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:constrained-bnodes-in-triple-term-fail a mf:NegativeEntailmentTest;
   rdfs:comment "Quoted bnode identifiers share the same scope as non-quoted ones. A bnode that occurs both inside triple terms and inside asserted triples must satisfy all occurrences at the same time.";
@@ -147,6 +155,7 @@ trs:constrained-bnodes-in-triple-term-fail a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test004fr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:constrained-bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
   rdfs:comment "Terms inside and outside triple terms can be replaced by fresh bnodes.";
@@ -156,6 +165,7 @@ trs:constrained-bnodes-in-triple-term-object a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test004or.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:constrained-bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
   rdfs:comment "Terms inside and outside triple terms can be replaced by fresh bnodes";
@@ -165,6 +175,7 @@ trs:constrained-bnodes-in-triple-term-subject a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test004sr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:constrained-bnodes-on-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Literals inside and outside triple terms can be replaced by fresh bnodes.";
@@ -174,6 +185,7 @@ trs:constrained-bnodes-on-literal a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test006r.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:different-bnodes-same-triple-term a mf:PositiveEntailmentTest;
   rdfs:comment "Different bnodes can match identical triple terms.";
@@ -183,6 +195,7 @@ trs:different-bnodes-same-triple-term a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002sor.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:triple-term-not-asserted a mf:NegativeEntailmentTest;
   rdfs:comment "Triple terms are not asserted.";
@@ -192,6 +205,7 @@ trs:triple-term-not-asserted a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002pgr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:triple-terms-no-spurious a mf:NegativeEntailmentTest;
   rdfs:comment "This test ensures that other entailments are not spurious.";
@@ -201,6 +215,7 @@ trs:triple-terms-no-spurious a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test005.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:malformed-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Malformed literals are allowed in triple terms, but cause inconsistency.";
@@ -210,6 +225,7 @@ trs:malformed-literal a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (xsd:integer);
   mf:result false;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:opaque-iri a mf:PositiveEntailmentTest;
   rdfs:comment "Triple term IRIs are transparent.";
@@ -219,6 +235,7 @@ trs:opaque-iri a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <superman_undesired_entailment.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:opaque-language-string a mf:PositiveEntailmentTest;
   rdfs:comment "Literals within reifying terms (including language strings) are transparent.";
@@ -228,6 +245,7 @@ trs:opaque-language-string a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <uppercase-language-string.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:opaque-dir-language-string a mf:PositiveEntailmentTest;
   rdfs:comment "Literals within reifying terms (including directional language strings) are transparent.";
@@ -237,6 +255,7 @@ trs:opaque-dir-language-string a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <uppercase-dir-language-string.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:opaque-literal a mf:PositiveEntailmentTest;
   rdfs:comment "Literals within triple terms are transparent.";
@@ -246,6 +265,7 @@ trs:opaque-literal a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (xsd:integer);
   mf:result <canonical-literal.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:same-bnode-same-triple-term a mf:PositiveEntailmentTest;
   rdfs:comment "Identical triple term can be replaced by the same fresh bnode multiple times.";
@@ -255,6 +275,7 @@ trs:same-bnode-same-triple-term a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <test002sbr.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-array-ordered a mf:NegativeEntailmentTest;
   rdfs:comment "Arrays are ordered in rdf:JSON.";
@@ -264,6 +285,7 @@ trs:json-array-ordered a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-array-2.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-object-unordered a mf:PositiveEntailmentTest;
   rdfs:comment "Objects are unordered in rdf:JSON.";
@@ -273,6 +295,7 @@ trs:json-object-unordered a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-object-2.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-zero a mf:NegativeEntailmentTest;
   rdfs:comment "Positive zero and negative zero are different in rdf:JSON.";
@@ -282,6 +305,7 @@ trs:json-zero a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-negative-zero.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-zero-array a mf:NegativeEntailmentTest;
   rdfs:comment "Positive zero and negative zero are different in rdf:JSON inside arrays.";
@@ -291,6 +315,7 @@ trs:json-zero-array a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-negative-zero-array.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-round-different a mf:NegativeEntailmentTest;
   rdfs:comment "Rounding to different even rdf:JSON.";
@@ -300,6 +325,7 @@ trs:json-round-different a mf:NegativeEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-9007199254740991-5.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-round-same a mf:PositiveEntailmentTest;
   rdfs:comment "Rounding to same even rdf:JSON.";
@@ -309,6 +335,7 @@ trs:json-round-same a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-9007199254740991-5.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:json-infinity a mf:PositiveEntailmentTest;
   rdfs:comment "Large rdf:JSON number values are infinity.";
@@ -318,6 +345,7 @@ trs:json-infinity a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes (rdf:JSON);
   mf:result <json-e401.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:triple-terms-propositions a mf:PositiveEntailmentTest;
   rdfs:comment "Triple terms denote instances of rdfs:Proposition.";
@@ -327,6 +355,7 @@ trs:triple-terms-propositions a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <triple-terms-propositions.ttl>;
   mf:unrecognizedDatatypes ();
+  .
 
 trs:reifies-range a mf:PositiveEntailmentTest;
   rdfs:comment "Range of rdf:reifies is rdfs:Proposition.";
@@ -336,3 +365,4 @@ trs:reifies-range a mf:PositiveEntailmentTest;
   mf:recognizedDatatypes ();
   mf:result <reifies-ranger.ttl>;
   mf:unrecognizedDatatypes ();
+  .
