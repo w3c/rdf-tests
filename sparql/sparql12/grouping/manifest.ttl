@@ -19,7 +19,6 @@
 :group01 rdf:type mf:QueryEvaluationTest ;
     mf:name "Group-1";
     rdfs:comment    "Grouping with literals" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <group01.rq> ;
            qt:data   <group-data-1.ttl> ] ;
