@@ -21,7 +21,6 @@
 
 :cast-bool rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:boolean cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-bool.rq> ;
           qt:data   <data.ttl>  ] ;
@@ -29,7 +28,6 @@
 
 :cast-int rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:integer cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-int.rq> ;
           qt:data   <data.ttl>  ] ;
@@ -37,7 +35,6 @@
 
 :cast-float rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:float cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-float.rq> ;
           qt:data   <data.ttl>  ] ;
@@ -45,7 +42,6 @@
 
 :cast-double rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:double cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-double.rq> ;
           qt:data   <data.ttl>  ] ;
@@ -53,7 +49,6 @@
 
 :cast-decimal rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:decimal cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-decimal.rq> ;
           qt:data   <data.ttl>  ] ;
@@ -61,7 +56,6 @@
 
 :cast-string rdf:type mf:QueryEvaluationTest ;
     mf:name    "xsd:string cast" ;
-    dawgt:approval dawgt:Proposed ;
      mf:action
         [ qt:query  <cast-string.rq> ;
           qt:data   <data.ttl>  ] ;
