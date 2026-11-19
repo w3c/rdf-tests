@@ -1,0 +1,10 @@
+PREFIX : <http://example.org/>
+
+# SPARQL 1.1 Query §15.1, descending: RDF literals, then IRIs,
+# then blank nodes, then unbound.
+SELECT ?s
+WHERE {
+  ?s :p :row .
+  OPTIONAL { ?s :k ?k }
+}
+ORDER BY DESC(?k)

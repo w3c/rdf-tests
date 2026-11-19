@@ -1,0 +1,4 @@
+# A URI is not equal to a literal, so both comparisons are false and NOT IN is true.
+ASK {
+	FILTER(<http://example.org/s> NOT IN (1, "a"))
+}
