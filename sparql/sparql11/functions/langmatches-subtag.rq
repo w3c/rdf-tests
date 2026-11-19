@@ -1,0 +1,4 @@
+# RFC 4647 basic filtering: the tag may be longer only when
+# the character immediately after the range is "-".
+SELECT (LANGMATCHES("en-GB", "en") AS ?match)
+WHERE {}

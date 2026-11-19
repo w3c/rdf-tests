@@ -1,0 +1,3 @@
+# Different language tags are not argument-compatible.
+SELECT (CONTAINS("abc"@en, "b"@fr) AS ?contains)
+WHERE {}

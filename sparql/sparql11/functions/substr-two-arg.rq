@@ -1,0 +1,4 @@
+# XPath fn:substring with no length keeps
+# round(start) <= p <= fn:string-length. Position 6 of "motor car" is the space.
+SELECT (SUBSTR("motor car", 6) AS ?substr)
+WHERE {}

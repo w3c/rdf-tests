@@ -1,0 +1,3 @@
+# Language tags compare equal ignoring case.
+SELECT (STRSTARTS("abc"@en, "ab"@EN) AS ?starts)
+WHERE {}

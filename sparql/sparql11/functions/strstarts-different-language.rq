@@ -1,0 +1,3 @@
+# Different language tags are not argument-compatible.
+SELECT (STRSTARTS("abc"@en, "ab"@fr) AS ?starts)
+WHERE {}

@@ -1,0 +1,3 @@
+# XPath fn:substring: 4 <= p < 7 keeps "ada" from "metadata".
+SELECT (SUBSTR("metadata", 4, 3) AS ?substr)
+WHERE {}
