@@ -311,3 +311,9 @@ expected results.""" .
     rdfs:comment "An IRI identifying an RDFS or OWL schema to which the response's RDF content must conform (implies that the response has mf:expectedFormat 'RDF')" ;
     rdfs:domain ht:Response ;
     .
+
+:followLinkTypeRedirect rdf:type rdf:Property ;
+    rdfs:comment "An literal identifying the relation type of Link headers to use as a redirect for accessing the intended contents. This is used by the Service Description tests with a value of 'service-desc'." ;
+    rdfs:domain ht:Request ;
+    rdfs:range xsd:string ;
+    .

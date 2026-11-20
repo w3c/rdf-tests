@@ -435,6 +435,29 @@ Service Description tests are defined as instance of `mf:ServiceDescriptionTest`
 Like the [Protocol Tests](#protocol-tests), these tests use the [HTTP Vocabulary in RDF 1.0](https://www.w3.org/TR/HTTP-in-RDF10/) to define
 one or more HTTP requests, and expected aspects of the corresponding responses. See the description above for more details.
 
+Specific to the Service Description tests, `ht:Request`s may have a `mf:followLinkTypeRedirect` property value.
+If the response to the request contains a `Link` header [[RFC8288](https://www.rfc-editor.org/info/rfc8288/)]
+with relation type matching the corresponding literal property value, a GET request to the URL in the Link header value
+should be made, and the corresponding response should be used for subsequent test expectations instead of the response
+to the initial `ht:Request`.
+
+The Service Description tests all use this property with a single Link relation type: `"service-desc"` [[RFC8631](https://www.rfc-editor.org/info/rfc8631/)]:
+
+```
+ht:requests ([
+    a ht:Request ;
+    mf:followLinkTypeRedirect "service-desc" ;
+    ht:absolutePath "/sparql" ;
+    ...
+])
+```
+
+which is used in the handling of responses with a header such as:
+
+```
+Link: </sparql-service-description>; rel="service-desc"
+```
+
 ## Test annotations
 
 @@@ This section might need reconsideration to reflect extensions (like new library functions) that have become standard in SPARQL 1.1 @@@
