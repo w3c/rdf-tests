@@ -1,6 +1,4 @@
-@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#> .
 @prefix dawg: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
-@prefix gsp: <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/http-rdf-update/manifest#> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix cnt:    <http://www.w3.org/2011/content#> .
 @prefix ht:     <http://www.w3.org/2011/http#> .
@@ -19,8 +17,7 @@
         
         Expected results are encoded in the ht:Response. The ht:Response may
         have a `mf:expectedStatus` property, describing the expected HTTP
-        status code or class of status code (pointing to values
-        like `hts:Created` or `hts:StatusCode2xx`);
+        status code (pointing to values like `hts:Created` or `hts:OK`);
         
         The ht:Response may have a `mf:expectedLocation` property whose value
         is a literal. In the presence of this property, the current response

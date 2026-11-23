@@ -115,7 +115,6 @@
 :strdt03-rdf11 rdf:type mf:QueryEvaluationTest ;
     mf:name    "STRDT() TypeErrors (updated for RDF 1.1)" ;
     mf:feature sparql:strdt ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <strdt03.rq> ;
            qt:data   <data.ttl> ] ;
@@ -147,7 +146,6 @@
 :strlang03-rdf11 rdf:type mf:QueryEvaluationTest ;
     mf:name    "STRLANG() TypeErrors (updated for RDF 1.1)" ;
     mf:feature sparql:strlang ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <strlang03.rq> ;
            qt:data   <data.ttl> ] ;
@@ -261,7 +259,6 @@
 :substring01-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "SUBSTR() (3-argument) on non-BMP unicode strings" ;
     mf:feature sparql:substr ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <substring01.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -282,7 +279,6 @@
 :substring02-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "SUBSTR() (2-argument) on non-BMP unicode strings" ;
     mf:feature sparql:substr ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <substring02.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -303,7 +299,6 @@
 :length01-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "STRLEN() on non-BMP unicode strings" ;
     mf:feature sparql:strlen ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <length01.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -324,7 +319,6 @@
 :ucase01-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "UCASE() on non-BMP unicode strings" ;
     mf:feature sparql:ucase ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <ucase01.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -345,7 +339,6 @@
 :lcase01-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "LCASE() on non-BMP unicode strings" ;
     mf:feature sparql:lcase ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <lcase01.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -366,7 +359,6 @@
 :encode01-non-bmp rdf:type mf:QueryEvaluationTest ;
     mf:name    "ENCODE_FOR_URI() on non-BMP unicode strings" ;
     mf:feature sparql:encode_for_uri ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <encode01.rq> ;
            qt:data   <data5.ttl> ] ;
@@ -409,7 +401,6 @@
 :plus-1-corrected a mf:QueryEvaluationTest ;
     mf:name    "plus-1-corrected" ;
     rdfs:comment    "plus operator on ?x + ?y on string and numeric values" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
        [ qt:query  <plus-1-corrected.rq> ;
     qt:data   <data-builtin-3.ttl> ] ;
@@ -419,7 +410,6 @@
 :plus-2-corrected a mf:QueryEvaluationTest ;
     mf:name    "plus-2-corrected" ;
     rdfs:comment    "plus operator in combination with str(), i.e.  str(?x) + str(?y), on string and numeric values" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
        [ qt:query  <plus-2-corrected.rq> ;
     qt:data   <data-builtin-3.ttl> ] ;
@@ -877,7 +867,6 @@
     rdfs:comment "UUID() calls generate results per invocation, not per query" ;
     rdfs:seeAlso <https://github.com/w3c/sparql-12/issues/102> ;
 	mf:feature sparql:uuid ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <uuid02.rq> ;
            qt:data   <data-empty.nt> ] ;

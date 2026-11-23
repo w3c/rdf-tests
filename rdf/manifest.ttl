@@ -1,0 +1,13 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+
+## Top-level manifest for RDF tests.
+
+<> a mf:Manifest ;
+	rdfs:label "RDF tests" ;
+	mf:include (
+         # The RDF 1.1 tests cover RDF 1.0.
+         <rdf11/manifest.ttl>
+         <rdf12/manifest.ttl>
+	) .
