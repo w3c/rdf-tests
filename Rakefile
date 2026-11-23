@@ -21,7 +21,7 @@ REPORT_TEMPLATE = 'report-template.haml'
 # A reports directory holds EARL reports and their rollup, not test manifests,
 # so nothing in one gets an HTML/JSON-LD rendering.
 MANIFESTS = Dir.glob("**/manifest*.ttl").
-  reject {|f| f.include?('-az') || f.split('/').include?('reports')}
+  reject {|f| f.include?('-az') || f.split('/').include?('reports') || f.include?('-all.ttl')}
 
 SPECS = {
   "rdf-concepts/spec/index.html"  => "FIXME",
