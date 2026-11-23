@@ -136,7 +136,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "STRDT() TypeErrors (updated for RDF 1.1)",
       "feature": "http://www.w3.org/ns/sparql#strdt",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "strdt03.rq",
         "data": "data.ttl"
@@ -174,7 +173,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "STRLANG() TypeErrors (updated for RDF 1.1)",
       "feature": "http://www.w3.org/ns/sparql#strlang",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "strlang03.rq",
         "data": "data.ttl"
@@ -324,7 +322,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "SUBSTR() (3-argument) on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#substr",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "substring01.rq",
         "data": "data5.ttl"
@@ -349,7 +346,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "SUBSTR() (2-argument) on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#substr",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "substring02.rq",
         "data": "data5.ttl"
@@ -374,7 +370,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "STRLEN() on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#strlen",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "length01.rq",
         "data": "data5.ttl"
@@ -399,7 +394,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "UCASE() on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#ucase",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "ucase01.rq",
         "data": "data5.ttl"
@@ -424,7 +418,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "LCASE() on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#lcase",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "lcase01.rq",
         "data": "data5.ttl"
@@ -449,7 +442,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "ENCODE_FOR_URI() on non-BMP unicode strings",
       "feature": "http://www.w3.org/ns/sparql#encode_for_uri",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "encode01.rq",
         "data": "data5.ttl"
@@ -500,7 +492,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "plus-1-corrected",
       "comment": "plus operator on ?x + ?y on string and numeric values",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "plus-1-corrected.rq",
         "data": "data-builtin-3.ttl"
@@ -512,7 +503,6 @@
       "@type": "mf:QueryEvaluationTest",
       "name": "plus-2-corrected",
       "comment": "plus operator in combination with str(), i.e.  str(?x) + str(?y), on string and numeric values",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "plus-2-corrected.rq",
         "data": "data-builtin-3.ttl"
@@ -1064,7 +1054,6 @@
         "@id": "https://github.com/w3c/sparql-12/issues/102"
       },
       "feature": "http://www.w3.org/ns/sparql#uuid",
-      "approval": "dawgt:Proposed",
       "action": {
         "query": "uuid02.rq",
         "data": "data-empty.nt"
