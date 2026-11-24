@@ -1,0 +1,3 @@
+# XPath fn:replace: a capturing group that did not participate is the empty string.
+SELECT (REPLACE("a", "(a)|(b)", "[$2]") AS ?replaced)
+WHERE {}
