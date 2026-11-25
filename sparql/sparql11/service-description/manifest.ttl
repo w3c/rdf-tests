@@ -17,6 +17,13 @@
         Each test record has one ht:Requests that must be run in order to
         produce the Service Description RDF response.
         
+        Each `ht:Request` in these tests includes a `mf:followLinkTypeRedirect`
+        property value of `"service-desc"`. This indicates that if the response
+        contains a Link header [RFC8288] with relation type "service-desc", the
+        a GET request to the URL in the Link header value should be made, and
+        the corresponding response should be used instead of the response to
+        the initial `ht:Request`.
+        
         Expected results are encoded in the ht:Response using one of these terms:
         
         * `mf:expectedFormat` - Expected serialization format of the results.
@@ -55,6 +62,7 @@
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
+                    mf:followLinkTypeRedirect "service-desc" ;
                     ht:absolutePath "/sparql" ;
                     ht:headers ([
                             a ht:RequestHeader ;
@@ -83,6 +91,7 @@
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
+                    mf:followLinkTypeRedirect "service-desc" ;
                     ht:absolutePath "/sparql" ;
                     ht:headers ([
                             a ht:RequestHeader ;
@@ -115,6 +124,7 @@
             ht:connectionAuthority "www.example" ;
             ht:requests ([
                     a ht:Request ;
+                    mf:followLinkTypeRedirect "service-desc" ;
                     ht:absolutePath "/sparql" ;
                     ht:headers ([
                             a ht:RequestHeader ;
