@@ -1,0 +1,2192 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix earl: <http://www.w3.org/ns/earl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> foaf:primaryTopic <https://github.com/sparq-org/sparq> ;
+  dc:issued "2026-11-12T18:48:13+00:00"^^xsd:dateTime ;
+  foaf:maker <https://github.com/sparq-org> .
+
+<https://github.com/sparq-org/sparq> a doap:Project, earl:TestSubject, earl:Software ;
+  doap:name "sparq 0.1.8 (commit 79da983)" ;
+  doap:description "sparq, an RDF store and SPARQL 1.1 / 1.2 engine in Rust, built from commit 79da983b51eb6212cf20abba9007dc07613835c7. Run against w3c/rdf-tests at commit 7b5afb91857a9c282c03d2e45d3f76485797c901 with sparq's own suite runner (crates/sparq-conformance, sparq-conformance --earl)." ;
+  doap:release [ doap:name "sparq 0.1.8 (commit 79da983)" ; doap:revision "79da983b51eb6212cf20abba9007dc07613835c7" ] ;
+  doap:homepage <https://sparq-org.github.io/sparq/> ;
+  doap:repository <https://github.com/sparq-org/sparq> ;
+  doap:bug-database <https://github.com/sparq-org/sparq/issues> ;
+  doap:license <https://spdx.org/licenses/MIT> ;
+  doap:programming-language "Rust" ;
+  doap:developer <https://github.com/sparq-org> .
+
+<https://github.com/sparq-org> a earl:Assertor, foaf:Organization ;
+  foaf:name "sparq contributors" ;
+  foaf:homepage <https://github.com/sparq-org> .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-01-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-02-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-03-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-04-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#codepoint-esc-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-01-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-02-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-03-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-04-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/codepoint-escapes/manifest#surrogate-esc-05-bad> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-3> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-4> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-5> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-6> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-7> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-8> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#basic-9> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-3> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-4> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#construct-5> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#expr-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#graphs-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#op-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#order-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-10> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-11> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-3-nomatch> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-4> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-5> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-6> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-7> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-8-nomatch> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#pattern-9> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1j> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-reifiedtriples-1x> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1j> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#results-tripleterms-1x> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/eval-triple-terms/manifest#update-3> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#not-not> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-literals> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-str-literals> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-triple-terms> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/expression/manifest#triple-on-undefs> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#group01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/grouping/manifest#select-variable-reuse> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#concat> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#contains> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#datatype> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslang> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#haslangdir> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang-case-match> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#lang-case-strlang> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#langdir-literal-invalid> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlang> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/lang-basedir/manifest#strlangdir> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#langstring-datatype> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-datatype> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/rdf11/manifest#plain-string-same> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#alternate-path-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-alternate-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-list-predicate> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-oneOrMore> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-optional> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-path-on-start> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-anonreifier-variable-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-list-predicate> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-oneOrMore> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-optional> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-path-on-start> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-reifier-alternate-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#annotated-reifier-variable-path> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-anonreified> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bind-reified> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bindbnode-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#bnode-predicate-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#list-tripleterm-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#nested-annotated-path-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-object-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-predicate-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-list-subject-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-bind-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-path-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#quoted-variable-path-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#syntax-update-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-separate-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-negative/manifest#tripleterm-subject-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-anonreifier-multiple-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#annotation-reifier-multiple-10> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-10> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-11> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-12> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-anonreifier-13> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-09> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-10> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-11> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-12> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-reifier-13> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#basic-tripleterm-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-anonreifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-reifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#bnode-tripleterm-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-all> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-anonreifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-reifier> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#compound-tripleterm-subject> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#expr-tripleterm-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#inside-tripleterm-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#nested-tripleterm-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#subject-tripleterm> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-anonreifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-07> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-reifier-08> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax-triple-terms-positive/manifest#update-tripleterm-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#duplicated-values-variable> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-1> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-2> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#group-by-scope-bad-3> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/syntax/manifest#nested-aggregate-functions> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-04> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-05> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-06> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-01> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-02> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
+
+[ a earl:Assertion ;
+  earl:assertedBy <https://github.com/sparq-org> ;
+  earl:subject <https://github.com/sparq-org/sparq> ;
+  earl:test <https://w3c.github.io/rdf-tests/sparql/sparql12/version/manifest#version-bad-03> ;
+  earl:mode earl:automatic ;
+  earl:result [ a earl:TestResult ; earl:outcome earl:passed ; dc:date "2026-11-12T18:48:13+00:00"^^xsd:dateTime ]
+] .
